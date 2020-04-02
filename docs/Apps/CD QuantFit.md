@@ -18,7 +18,7 @@ We have used Compound Discoverer to set up a node for peak picking on raw data o
 
 Steps to set up a node in the Compound Discoverer:
 
-*   Install the QuantFit Node from the installer [here](https://drive.google.com/file/d/1fal9A6STp_n2gK0YDF_nFaybG7_ntNXR/view).
+*   Install the QuantFit Node from the installer [here](https://cd-polly-test.s3-ap-southeast-1.amazonaws.com/installers/PollyQuant.exe).
 
 ![Screenshot](../img/CDQuantFit/Screenshot (6).png) <!-- <center>**Figure 1.** Demo Data for Polly<sup>TM</sup> FirstView</center> -->
 
@@ -85,7 +85,8 @@ Steps to set up a node in the Compound Discoverer:
 
 *   The processing starts. On completion, you will receive an email on the Polly Email Address used in QuantFit Node. Open the email and click on **Start Quantification**.  
 <br />
-
+Find the detailed documentation for Polly QuantFit [here](https://cd-polly-test.s3-ap-southeast-1.amazonaws.com/QuantFit.pdf)
+<br />
 **QuantFit Metadata Interface**
 
 *   You will be redirected to **QuantFit Metadata Interface** on Polly
