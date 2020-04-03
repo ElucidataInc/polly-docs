@@ -20,7 +20,7 @@ Steps to set up a node in the Compound Discoverer:
 
 *   Install the QuantFit Node from the installer [here](https://cd-polly-test.s3-ap-southeast-1.amazonaws.com/installers/PollyQuant.exe).
 
-![Screenshot](../img/CDQuantFit/Screenshot (6).png) <!-- <center>**Figure 1.** Demo Data for Polly<sup>TM</sup> FirstView</center> -->
+![Screenshot](../img/CDQuantFit/Screenshot6.png) <!-- <center>**Figure 1.** Demo Data for Polly<sup>TM</sup> FirstView</center> -->
 
 **Compound Discoverer**
 
