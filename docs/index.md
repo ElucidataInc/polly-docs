@@ -33,7 +33,7 @@ Once logged in, the user does not get automatically logged out and will have to 
 
 The Polly Landing page provides access to 4 distinct interconnected modules on Polly
 
-<center>![Polly as a platform](../img/Introduction/Capture.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> --></center>
+<center>![Polly as a platform](./img/Introduction/Capture.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> --></center>
 
 *   [Manage Data](./Getting Started/Project Management Dashboard)
 
