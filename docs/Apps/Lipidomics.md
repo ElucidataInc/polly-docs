@@ -116,7 +116,7 @@ Limma t-test helps to identify significant differentially expressed lipid classe
 
 ![](./img/limma_t_test.png) <center>**Figure 15.** Limma t-test results</center>
 
-The *p*-value and log2 fold change cutoff parameters can be changed to alter the volcano plot generated after clicking on *Filter Limma Results* for Volcano Plot as shown in Figure 16.
+The *p*-value and log<sub>2</sub> fold change cutoff parameters can be changed to alter the volcano plot generated after clicking on *Filter Limma Results* for Volcano Plot as shown in Figure 16.
 
 ![](./img/volcano_plot.png) <center>**Figure 16.** Volcano Plot</center>
 
@@ -128,9 +128,4 @@ Principal component analysis (PCA) simplifies the complexity in high-dimensional
 
 # Details about the app
 
-# FAQs
-
-
-```R
-
-```
+# Frequently Asked Questions (FAQs)

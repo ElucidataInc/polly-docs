@@ -58,19 +58,19 @@ Additionally, the public data repositories also consist of publicly available da
 
 Upon opening the Discover portal on Polly, choose a data repository that you would like to explore. The page should look something like this.
 
-<center>![Polly Discover](../img/Discover/image1.png)</center>
+![Polly Discover](../img/Discover/image1.png)
 
 After selecting a repository, you’ll be able to see a dashboard and the Polly Discover app icon. The dashboard will give you an overview of the repository, for instance, the number of data sets in the repository, distribution of tissues, organisms, etc. among the datasets.
 
-<center>![Repository Dashboard](../img/Discover/image2.png)</center>
+![Repository Dashboard](../img/Discover/image2.png)
 
 Click on the below icon to start the discover app.
 
-<center>![Discover App](../img/Discover/image3.png)</center>
+![Discover App](../img/Discover/image3.png)
 
 The app will open and you should see the overview page which contains a brief **description** of the application, it's **scope** and the **usage** as shown below.
 
-<center>![App Description](../img/Discover/image4.png)</center>
+![App Description](../img/Discover/image4.png)
 
 **Exploring the data lake**
 
@@ -95,11 +95,11 @@ Search for relevant datasets by navigating to the *Dataset Search* tab in the na
 *   Year
     
 
-<center>![Search options](../img/Discover/image5.png)</center>
+![Search options](../img/Discover/image5.png)
 
 The search will return all datasets that are associated with your search. The result should look like the image below.
 
-<center>![Search results](../img/Discover/image6.png)</center>
+![Search results](../img/Discover/image6.png)
 
 The table shown above shows very few columns by default. In order to view the other columns in the table, you can select the fields from **Available Columns** and click on *Show!* button. *Download Selected Dataset* button will let you download the dataset that you have selected on your local system. *Export results to CSV* button will let you download the search result table in the form of a CSV file. Once you have narrowed down the relevant datasets, you can analyze one or more datasets on the fly within the app.
 
@@ -107,7 +107,7 @@ The table shown above shows very few columns by default. In order to view the ot
 
 You can analyze a single dataset by selecting the checkbox to the left of the entry in the table. Once you’ve selected the checkbox, click on the *Analyze Data* button below the table description.
 
-<center>![Select a data set](../img/Discover/image7.png)</center>
+![Select a data set](../img/Discover/image7.png)
 
 After clicking the *Analyze Data* button, the app will read the selected dataset and take you to the *Dataset Analysis* tab. Here, you can perform the following analyses:
 
@@ -123,7 +123,7 @@ After clicking the *Analyze Data* button, the app will read the selected dataset
     
 *   GSEA  
 
-<center>![Analyses possible](../img/Discover/image8.png)</center>
+![Analyses possible](../img/Discover/image8.png)
 
 **Analyzing multiple datasets**
 
@@ -131,23 +131,23 @@ It is also possible to analyze multiple datasets simultaneously. If you select m
 
 **Total number of nodes = number of datasets selected (n) X number of algorithms selected (m)**
 
-<center>![Multiple analyses](../img/Discover/image9.png)</center>
+![Multiple analyses](../img/Discover/image9.png)
 
 Upon clicking each node, a pop up with input parameters for each algorithm corresponding to a particular dataset will appear. Adjust these parameters to fit your analysis before executing the algorithms.
 
-<center>![Algorithm input parameters](../img/Discover/image10.png)</center>
+![Algorithm input parameters](../img/Discover/image10.png)
 
 Once you have filled all the parameters, you can verify them in the table formed below. Next, execute the algorithms by clicking on the *Execute Algorithms* button.
 
-<center>![Execute algorithms](../img/Discover/image11.png)</center>
+![Execute algorithms](../img/Discover/image11.png)
 
 After the algorithms have been executed, you’ll be taken to the rules tab, where you can define the rules by which you want to filter the output of the algorithms to get a preliminary hitlist. For instance, after running differential expression, you want to filter by logFC and *p*-value. Along with that you can also add annotations to that hitlist by selecting your source of annotations.
 
-<center>![Rules tab](../img/Discover/image12.png)</center>
+![Rules tab](../img/Discover/image12.png)
 
 Finally, on clicking the *Execute Rules* button, you will be able to get a preliminary hitlist.
 
-<center>![Preliminary hitlist](../img/Discover/image13.png)</center>
+![Preliminary hitlist](../img/Discover/image13.png)
 
 ##Access through Jupyter notebook interface
 
@@ -159,7 +159,7 @@ A data repository is a collection of different files having different file types
 
 A data repository is a collection of different files having different file types. To ensure easy access at a granular level to all datasets a data repository is organised in the following manner. Under this schema, each repository can be considered as a collection of indices which can be used for querying. The discoverPy package can access all indices of a data repository using API endpoints.  
 
-<center>![Structure of a data repository](../img/Discover/discover_data_repository.png)</center>
+![Structure of a data repository](../img/Discover/discover_data_repository.png)
 
 **Usage**
 
@@ -171,13 +171,13 @@ This discover object is used to interact with a dataset repository.
 discover = Discover() 
 discover</code></pre>
 
-<center>![Discover object](../img/Discover/image14.png)</center>
+![Discover object](../img/Discover/image14.png)
 
 2. List all available endpoints for public data repositories along with their index
 
 <pre><code>discover.get_endpoints()</code></pre>
 
-<center>![Endpoints for public data](../img/Discover/image15.png)</center>
+![Endpoints for public data](../img/Discover/image15.png)
 
 3. Add a dataset repository file index
 
@@ -200,7 +200,7 @@ After you’ve added the indices for a repository, you can view the discover obj
 
 <pre><code>discover</code></pre>
 
-<center>![View the discover object](../img/Discover/image16.png)</center>
+![View the discover object](../img/Discover/image16.png)
 
 Note that the ‘annotation\_repo’ index is added automatically for each repository.
 
@@ -212,7 +212,7 @@ To search for datasets, the ‘\_files’ index can be searched using the metada
 
 <pre><code>discover.dataset_repo.get_all_fields()</code></pre>
 
-<center>![Fields present in the index](../img/Discover/image17.png)</center>
+![Fields present in the index](../img/Discover/image17.png)
 
 2. To get a sense of what values are present in each field, one can view the top n entries. Some generic fields are present for each file.
 
@@ -226,13 +226,13 @@ To search for datasets, the ‘\_files’ index can be searched using the metada
 
 <pre><code>discover.dataset_repo.get_top_n_examples(n = 30)</code></pre>
 
-<center>![Values present in each field](../img/Discover/image18.png)</center>
+![Values present in each field](../img/Discover/image18.png)
 
 3. Search for a dataset by keyword in a particular field. Searching for “mll” in the field “description” here.
 
 <pre><code>dataset_query_df = discover.dataset_repo.query_dataset_by_field("description","mll") dataset_query_df</code></pre>
 
-<center>![Search for a dataser](../img/Discover/image19.png)</center>
+![Search for a dataser](../img/Discover/image19.png)
 
 4. Download file for a dataset by key
 
@@ -244,31 +244,31 @@ GCT File Format
 
 The datasets in the public repositories are saved as GCT. This is a file format in which data can be stored along with the sample metadata. The data values in the actual matrix along with features (genes) are indexed in the ‘\_gct\_data’ index of the repository and the sample metadata is index in the ‘\_gct\_metadata’ of the index of the repository.
 
-<center>![GCT file structure](../img/Discover/gct_file.png)</center>
+![GCT file structure](../img/Discover/gct_file.png)
 
 1. Get fields present in the index
 
 <pre><code>discover.sample_repo.get_all_fields()</code></pre>
 
-<center>![Fields present in the index](../img/Discover/image20.png)</center>
+![Fields present in the index](../img/Discover/image20.png)
 
 2. To get a sense of what values are present in each field, one can view the top n entries.
 
 <pre><code>discover.sample_repo.get_top_n_examples(n =30)</code></pre>
 
-<center>![Values present in field](../img/Discover/image21.png)</center>
+![Values present in field](../img/Discover/image21.png)
 
 3. Search for samples by keyword in a particular field. Searching for “M1” in the field “fab\_classification\_ch1” here.
 
 <pre><code>fab_df = discover.sample_repo.query_samples_by_field("fab_classification_ch1", "M1", n = 100) fab_df</code></pre>
 
-<center>![Search for samples using keywords](../img/Discover/image22.png)</center>
+![Search for samples using keywords](../img/Discover/image22.png)
 
 4. Search for samples by keywords in all fields. This can be used if the field to search for is not known beforehand.
 
 <pre><code>fab_all_fields = discover.sample_repo.query_samples_by_all_fields("M1", n = 100) fab_all_fields</code></pre>
 
-<center>![Search for samples using keywords](../img/Discover/image23.png)</center>
+![Search for samples using keywords](../img/Discover/image23.png)
 
 **Querying at the feature level**
 
@@ -278,13 +278,13 @@ The matrix of a GCT file contains the actual values for the different features(g
 
 <pre><code>discover.feature_repo.get_all_fields()</code></pre>
 
-<center>![Fields present in the index](../img/Discover/image24.png)</center>
+![Fields present in the index](../img/Discover/image24.png)
 
 2. To get a sense of what values are present in each field, one can view the top n entries.
 
 <pre><code>discover.feature_repo.get_top_n_examples(n=20)</code></pre>
 
-<center>![Values present in field](../img/Discover/image25.png)</center>
+![Values present in field](../img/Discover/image25.png)
 
 The ‘\_\_index\_\_’ column contains the feature name
 
@@ -292,7 +292,7 @@ The ‘\_\_index\_\_’ column contains the feature name
 
 <pre><code>nras_df =discover.feature_repo.get_feature_values("NRAS", n = 1000) nras_df</code></pre>
 
-<center>![Values for a feature](../img/Discover/image26.png)</center>
+![Values for a feature](../img/Discover/image26.png)
 
 **Access annotation repositories**
 
@@ -302,13 +302,13 @@ The various gene annotation databases can also be accessed through discoverpy. T
 
 <pre><code>discover.annotation_repo.get_annotation_databases()</code></pre>
 
-<center>![Get all annotation databases](../img/Discover/image27.png)</center>
+![Get all annotation databases](../img/Discover/image27.png)
 
 2. Get annotations for a list of genes from a particular database. Getting Reactome pathways for the genes.
 
 <pre><code>discover.annotation_repo.get_feature_annotation('reactome', ['ACTA1', 'AHCTF1', 'AKAP13', 'ATP2C1', 'CDK7'])</code></pre>
 
-<center>![Get annotations for a list of genes](../img/Discover/image28.png)</center>
+![Get annotations for a list of genes](../img/Discover/image28.png)
 
 **Advanced queries**
 
@@ -318,11 +318,11 @@ You can also perform more complex queries on multiple fields combining them with
 
 <pre><code>discover.dataset_repo.query_dataset_by_field_combination(and_fields={"platform":"Microarray", "tissue":"stem cells"}, not_fields={"description":"knockdown"}, n = 50)</code></pre>
 
-<center>![Advanced query example 1](../img/Discover/image29.png)</center>
+![Advanced query example 1](../img/Discover/image29.png)
 
 2\. Get samples containing CD34 cells or mononuclear cells do not include de novo samples
 
 <pre><code>discover.sample_repo.query_samples_by_field_combination(or_fields = {"cell_type_ch1":"CD34","cell_type_ch1":"mononuclear"}, not_fields = {"treatment_protocol_ch1":"de novo"}, n = 300)</code></pre>
 
-<center>![Advanced query example 1](../img/Discover/image30.png)</center>
+![Advanced query example 1](../img/Discover/image30.png)
 
