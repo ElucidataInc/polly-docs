@@ -1,5 +1,3 @@
-#Discover
-
 ##Introduction  
 
 With Polly discover you can access public databases which have been curated and stored in the form of data lakes or make data lakes with your own data. These datalakes can be explored and analysed either through the jupyter notebook interface on Polly or through the Polly Discover application.
