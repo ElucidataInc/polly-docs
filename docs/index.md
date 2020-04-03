@@ -3,13 +3,14 @@
 Polly is an AI-enabled platform for storage, reproducible analysis and integration of high-throughput biomedical data on the cloud. Polly creates a unique, centralized ecosystem that enables a diverse team of biologists, bioinformaticians and scientific leaders to share and collaborate on projects, data and insights.
 
 Polly combines a proprietary platform with optional, on-demand high-value bioinformatics services for biological target identification and validation, pathway elucidation, cellular phenotype analysis, and biomarker identification.
+
 This starter guide provides a broad overview of the platform to get you started on an exciting journey of research and discovery with your data.
 ##Accessing the platform
 *   **Sign up for the platform**
     To sign in to the Polly platform, you must have an account. Account credentials can be generated for both temporary, limited access as well as enterprise accounts. Reach out to our team [polly@elucidata.io](mailto:polly@elucidata.io) for your login credentials.
 *   **Login to the platform**
     You can sign in Polly with the provided credentials: Username and Password, connected to your account, and then click *Sign in*. When logging in for the first time, you will be prompted to reset your password. If you do not sign out when you leave Polly, you will be automatically authenticated for your next visit.
-![Login](../img/Introduction/Login.png)
+![Login](./img/Introduction/Login.png)
 *   **Login through Polly CLI**
     To be able to start using the features of Polly CLI, the first step is to log in to Polly using the Terminal / Command Prompt. Use the following command to log in.
     <pre><code>polly login</code></pre>
