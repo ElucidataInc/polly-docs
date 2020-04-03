@@ -14,7 +14,7 @@ This starter guide provides a broad overview of the platform to get you started 
 *   **Login to the platform**
     You can sign in Polly with the provided credentials: Username and Password, connected to your account, and then click *Sign in*. When logging in for the first time, you will be prompted to reset your password. If you do not sign out when you leave Polly, you will be automatically authenticated for your next visit.
 
-<center>![Login](../img/Introduction/Login.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> --></center>
+<center>![Login](../img/Introduction/Login.png)</center>
 
 *   **Login through Polly CLI**
 
@@ -40,7 +40,7 @@ The Polly Landing page provides access to 4 distinct interconnected modules on P
 
 <center>![Manage](../img/Introduction/Manage1.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> --></center>
 
-*   [Use App & Workflows](../Apps/Introduction)
+*   [Use Apps](../Apps/Introduction)
 
      hosts a suite of apps and production-ready workflows to analyze and process a variety of data with ease. You can build and host your custom workflows from individual components or choose from a suite of ready-to-use workflows on Polly.
 
