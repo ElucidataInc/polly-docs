@@ -14,7 +14,12 @@ This starter guide provides a broad overview of the platform to get you started 
 *   **Login to the platform**
     You can sign in Polly with the provided credentials: Username and Password, connected to your account, and then click *Sign in*. When logging in for the first time, you will be prompted to reset your password. If you do not sign out when you leave Polly, you will be automatically authenticated for your next visit.
 
+<<<<<<< HEAD
 ![Login](../img/Introduction/Login.png)
+=======
+![Login](./img/Introduction/Login.png)
+<center>![Polly Discover](./img/Introduction/Login.png)</center>
+>>>>>>> 75bfb9d68900c3deefffec3e665e7d986c2ef2f4
 
 
 *   **Login through Polly CLI**
@@ -25,7 +30,11 @@ This starter guide provides a broad overview of the platform to get you started 
 
     Polly Username and Password need to be put in when prompted.
 
+<<<<<<< HEAD
 ![PollyCLI](../img/Introduction/PollyCLI.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
+=======
+<center>![PollyCLI](./img/Introduction/PollyCLI.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> --></center>
+>>>>>>> 75bfb9d68900c3deefffec3e665e7d986c2ef2f4
 
 Once logged in, the user does not get automatically logged out and will have to log out manually with the command to log out.
 
@@ -33,31 +42,51 @@ Once logged in, the user does not get automatically logged out and will have to 
 
 The Polly Landing page provides access to 4 distinct interconnected modules on Polly
 
+<<<<<<< HEAD
 ![Polly as a platform](../img/Introduction/Capture.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
+=======
+<center>![Polly as a platform](./img/Introduction/Capture.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> --></center>
+>>>>>>> 75bfb9d68900c3deefffec3e665e7d986c2ef2f4
 
-*   [Manage Data](../Getting Started/Project Management Dashboard)
+*   [Manage Data](./Getting Started/Project Management Dashboard)
 
     Find comprehensive information about your project, including files, notebooks, apps, analyses, and reports. This page also includes information about the creation date, project owner, and collaborators.
 
+<<<<<<< HEAD
 ![Manage](../img/Introduction/Manage1.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
+=======
+<center>![Manage](./img/Introduction/Manage1.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> --></center>
+>>>>>>> 75bfb9d68900c3deefffec3e665e7d986c2ef2f4
 
 *   [Use Apps](../Apps/Introduction)
 
      hosts a suite of apps and production-ready workflows to analyze and process a variety of data with ease. You can build and host your custom workflows from individual components or choose from a suite of ready-to-use workflows on Polly.
 
+<<<<<<< HEAD
 ![Manage](../img/Introduction/Manage2.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
+=======
+<center>![Manage](./img/Introduction/Manage2.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> --></center>
+>>>>>>> 75bfb9d68900c3deefffec3e665e7d986c2ef2f4
 
 *   [Write & Maintain Code](../Compute/Polly Notebooks)
 
     Polly enables coding in a range of computational environments with configurable machine sizes and dockerized environments. 
 
+<<<<<<< HEAD
 ![Code](../img/Introduction/code.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
+=======
+<center>![Code](./img/Introduction/code.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> --></center>
+>>>>>>> 75bfb9d68900c3deefffec3e665e7d986c2ef2f4
 
 *   [Discover Insights](../Discover)
 
     Polly enables access to proprietary, expert-curated, disease-specific data lakes to accelerate your drug discovery programs. Mine data lakes for public and proprietary data that are harmonized across sources on  Polly Discover. 
 
+<<<<<<< HEAD
 ![Discover](../img/Introduction/Discover.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
+=======
+<center>![Discover](./img/Introduction/Discover.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> --></center>
+>>>>>>> 75bfb9d68900c3deefffec3e665e7d986c2ef2f4
  
 ##Getting help on the Platform
 
@@ -67,7 +96,11 @@ We firmly believe that our greatest achievement is to enable customers and their
 
 Our platform uses Intercom as a standard messenger launcher. A text bubble pops up, inquiring if you need help. Polly embeds this support to establish a dedicated customer success manager. Technical support is available from 9 AM to 8 PM EST and CET.
 
+<<<<<<< HEAD
 ![Intercom](../img/Introduction/Intercom.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
+=======
+<center>![Intercom](./img/Introduction/Intercom.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> --></center>
+>>>>>>> 75bfb9d68900c3deefffec3e665e7d986c2ef2f4
 
 ##Email
 
