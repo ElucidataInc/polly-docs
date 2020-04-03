@@ -1,12 +1,6 @@
-#Introduction
+#Overview
 
 The applications on Polly are built to process and visualize experimental data ranging from mass-spec based omics to sequencing-based omics, from dual-mode data visualization to the analysis of CRISPR screening. Though despite the variety and specificity of the apps present on Polly, there are a couple of features common across all apps. These features are built to help you get started with minimal effort, analyze and share results and processed data with your collaborators with ease.
-
-#This is how I write code
-
-    Code line 1
-    Code line 2
-    Code line extremely long. These features are built to help you get started with minimal effort, analyze and share results and processed data with your collaborators with ease.
 
 ##Demo Data
 
