@@ -14,7 +14,7 @@ This starter guide provides a broad overview of the platform to get you started 
 *   **Login to the platform**
     You can sign in Polly with the provided credentials: Username and Password, connected to your account, and then click *Sign in*. When logging in for the first time, you will be prompted to reset your password. If you do not sign out when you leave Polly, you will be automatically authenticated for your next visit.
 
-<center>![Login](./img/Introduction/Login.png)</center>
+![Login](./img/Introduction/Login.png)
 
 
 *   **Login through Polly CLI**
