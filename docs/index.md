@@ -41,7 +41,7 @@ The Polly Landing page provides access to 4 distinct interconnected modules on P
 
 <center>![Manage](./img/Introduction/Manage1.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> --></center>
 
-*   [Use Apps](./Apps/Introduction)
+*   [Use Apps](../Apps/Introduction)
 
      hosts a suite of apps and production-ready workflows to analyze and process a variety of data with ease. You can build and host your custom workflows from individual components or choose from a suite of ready-to-use workflows on Polly.
 
