@@ -11,7 +11,7 @@ We have used Compound Discoverer to set up a node for peak picking on raw data o
 
 *   The user should have Compound Discoverer version 3.1 to be able to use this Node
 *   Compound Discoverer should not be running in the background when you are installing the Polly QuantFit Node
-*   The path for MSConvert installation directory is **C:/Users/UserName/AppData/Local/Apps/Proteowizard**
+*   The path for MSConvert installation directory is **C:/Users/*UserName*/AppData/Local/Apps/Proteowizard/msconvert.exe**
 *   **The user should have an account on Polly**
 
 ##User Guide
@@ -60,7 +60,7 @@ Steps to set up a node in the Compound Discoverer:
 *   The values corresponding to the parameters for conversion and filtering of data have to be entered within this node
 
     *   **MSConvert Parameters**
-        *   **MSConvert Installation Directory:** It is likely to be at a location similar to **C:/Users/UserName/AppData/Local/Apps/Proteowizard**
+        *   **MSConvert Installation Directory:** It is likely to be at a location similar to **C:/Users/*UserName*/AppData/Local/Apps/Proteowizard/msconvert.exe**
         *   **Threshold:** A parameter defined in MSConvert to remove noise from the data.
         *   **Zlib Compression:** The converted files can be compressed to allow processing a larger number of files.  
         <br />
@@ -85,8 +85,11 @@ Steps to set up a node in the Compound Discoverer:
 
 *   The processing starts. On completion, you will receive an email on the Polly Email Address used in QuantFit Node. Open the email and click on **Start Quantification**.  
 <br />
-Find the detailed documentation for Polly QuantFit [here](https://cd-polly-test.s3-ap-southeast-1.amazonaws.com/QuantFit.pdf)
+
+Click [here](/Apps/QuantFit/#metadata-interface) for a detailed documentation about Polly QuantFit.
+
 <br />
+
 **QuantFit Metadata Interface**
 
 *   You will be redirected to **QuantFit Metadata Interface** on Polly
