@@ -86,7 +86,7 @@ Steps to set up a node in the Compound Discoverer:
 *   The processing starts. On completion, you will receive an email on the Polly Email Address used in QuantFit Node. Open the email and click on **Start Quantification**.  
 <br />
 
-Click [here](/Apps/QuantFit/#metadata-interface) for a detailed documentation about Polly QuantFit.
+Click [here](Apps/QuantFit.md/#metadata-interface) for a detailed documentation about Polly QuantFit.
 
 <br />
 
