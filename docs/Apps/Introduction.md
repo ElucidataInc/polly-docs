@@ -63,4 +63,4 @@ The major advantage with our implementation is customization and ease of use. Wi
 
 Currently, custom OCR is integrated in the following apps:
 
-*   [MetScape](/Apps/MetScape/#one-click-reportbeta)
+*   [MetScape](Apps/MetScape.md/#one-click-reportbeta)
