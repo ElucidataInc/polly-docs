@@ -25,7 +25,7 @@ The project management dashboard will update to show the new project.
 
 ##Content within a project
 
-A project contains all your [data](#adding-files-to-your-workspace), [analysis](/Apps/Introduction), [Polly Notebooks](/Compute/Polly Notebooks), and [reports](/Apps/Introduction/#reports). They can be accessed through the top panel.
+A project contains all your [data](#adding-files-to-your-workspace), [analysis](Apps/Introduction.md), [Polly Notebooks](Compute/Polly Notebooks.md), and [reports](Apps/Introduction.md/#reports). They can be accessed through the top panel.
 
 ![Screenshot](../img/ProjectManagementDashboard/ProjectContents.png) <!-- <center>**Figure 1.** Demo Data for Polly<sup>TM</sup> FirstView</center> -->
 
