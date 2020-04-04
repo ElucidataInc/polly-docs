@@ -1,19 +1,19 @@
+#Polly CLI
 
-# Polly Cli
-## What is Polly CLI?
+##What is Polly CLI?
 
 The Polly CLI (Command Line Interface) is an open source tool that enables you to interact with Polly services using commands in your command-line shell. Polly CLI lets you upload data and run jobs on the Polly cloud infrastructure by scaling computation resources as per need. You can start and stop jobs, monitor them and view logs. 
 
 
-## Required System Configurations
+##Required System Configurations
 Polly CLI can work on any Unix based system (Linux and Mac distributions). It does not work on Windows. We will be releasing a Windows version soon. It can be used on local computers as well as cloud instances and servers. 
 
 There are no specific machine configurations required for Polly CLI. It can work on a system with as low as 512 MB RAM and 1 CPU.
 
 
-### How to install? 
+###How to install? 
 
-#### Dependencies Required for Polly CLI
+####Dependencies Required for Polly CLI
 The following dependencies are required to be installed before installing Polly CLI:
 
 * Node and npm :  
@@ -23,7 +23,7 @@ The following dependencies are required to be installed before installing Polly 
     * Mac : For installation on Mac, follow the steps mentioned [here](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-and-create-a-local-development-environment-on-macos).
 
 
-#### Commands to install
+####Commands to install
 
 To install Polly CLI, run the following commands on Terminal / Command prompt :
 
@@ -37,7 +37,7 @@ sudo npm install -g @elucidatainc/pollycli
 npm install -g @elucidatainc/pollycli
 ```
 
-#### Commands to uninstall
+####Commands to uninstall
 
 To uninstall Polly CLI, run the following commands on Terminal / Command prompt :
 
@@ -55,9 +55,9 @@ npm install -g @elucidatainc/pollycli
     * “sudo” might have to be used before every command while accessing Polly CLI on cloud instance or server.
 
 
-### Logging in and out of Polly CLI
+###Logging in and out of Polly CLI
 
-#### Log in
+####Log in
 Open the terminal on the system and execute the following command to log in.
 ```bash
 polly login
@@ -70,7 +70,7 @@ Enter the Polly Username and Password when prompted.
 Once logged in, you will stay logged in the system and won’t need to log in again even if a new terminal is opened or the system is restarted. You will only need to log in again if you manually log out from the system.
 
 
-#### Log out
+####Log out
 Execute the following command to log out
 ```bash
 polly logout
@@ -80,13 +80,13 @@ polly logout
     * Logging out will not stop a running job.
 
 
-### Create and View Polly Workspaces
+###Create and View Polly Workspaces
 
-#### What are Polly Workspaces?
+####What are Polly Workspaces?
 Polly Workspaces are online workspaces that contain data, analyses, code, logs etc for a specific project or experiment. Data is stored and Analysis is performed within a user chosen workspace. More details about workspaces is mentioned here. **< Link to workspaces documentation in the previous section >**
 
 
-#### Creating a new Workspace
+####Creating a new Workspace
 
 To create a new workspace, use the following command.
 
@@ -98,7 +98,7 @@ You will be asked to name the Workspace and provide a description. Once the work
 
 ![Create Workspace](./img/2.png "Create Workspace") <center>**Figure 2:** Create Workspace</center>
 
-#### View Workspaces
+####Workspaces
 
 To view all the existing Workspaces with access, use the following command.
 
@@ -114,12 +114,12 @@ Users will be asked to select which Workspaces to list:
 
 Workspace ID will be required for transferring data and running jobs.   
 
-### Data Transfer
+###Data Transfer
 
 Polly CLI can be used to transfer large data to and from Polly Workspaces. Upto 5 TBs of data can be transferred in one go. 
 
 
-#### Listing the files and folders in a Polly Workspace Directory
+####Listing the files and folders in a Polly Workspace Directory
 Files and folders within any Polly Workspace can be listed using the following command.
 
 ```bash
@@ -136,7 +136,7 @@ polly files list --workspace-id 1234 --workspace-path polly://ABC/
     * This command only shows files and folders just one layer within the directory mentioned (just like the “ls” command on terminal).
 
 
-#### Manually sync data to and from Polly
+####Manually sync data to and from Polly
 
 Polly CLI can be used to sync the data between a Polly Workspace and a local directory. Data can be synced manually both ways using the following command.
 
@@ -161,7 +161,7 @@ polly files sync --workspace-id 1234 --source ./ --destination polly://directory
     * Only files that have been changed or added new will get transferred using the sync command. The files that remained unchanged after the last sync will not get transferred. This command can only be used for folders or directories (not for individual files). To transfer just a single file to or from Polly, use the “copy” command mentioned in the next section.
 
 
-### Copy files to and from Polly
+###Copy files to and from Polly
 
 Files can be copied to and from a Polly Workspace using the following command.
 
@@ -175,12 +175,12 @@ This command will copy an individual file from source to destination. The transf
     * Paths need to be enclosed in double quotes (“ ”) if there are spaces or special characters in the path.
 
 
-### Running Dockerized Jobs
+###Running Dockerized Jobs
 
 Polly CLI can run dockerized jobs on managed Polly infrastructure. Polly infrastructure will scale computational resources with increased usage. All a user needs to do is submit a job and rest is taken care of by Polly. 
 
 
-### Create job description JSON file
+###Create job description JSON file
 
 JSON file is needed to describe the job to be run on Polly. This file should contain the information about the computational resources (machine), docker image, the name of the job and specific commands (if required) to be run after the docker has been run, as keys. Text can be copy pasted from the example below to create the JSON file.
 

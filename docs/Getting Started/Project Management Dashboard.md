@@ -25,7 +25,7 @@ The project management dashboard will update to show the new project.
 
 ##Content within a project
 
-A project contains all your data, analysis, Polly Notebooks, and reports. They can be accessed through the top panel.
+A project contains all your [data](#adding-files-to-your-workspace), [analysis](/Apps/Introduction), [Polly Notebooks](/Compute/Polly Notebooks), and [reports](/Apps/Introduction/#reports). They can be accessed through the top panel.
 
 ![Screenshot](../img/ProjectManagementDashboard/ProjectContents.png) <!-- <center>**Figure 1.** Demo Data for Polly<sup>TM</sup> FirstView</center> -->
 
@@ -39,7 +39,7 @@ New files can be added within a project by clicking on *Upload Files*. This will
 
 *   Using CLI
 
-You can use PollyCLI as well to import your data directly within Polly. This is a more convenient option for uploading large data (more than a few GBs). The steps for the same are detailed [here](/about/PollyCLI) **LINK CLI DOCUMENTATION HERE**. 
+You can use PollyCLI as well to import your data directly within Polly. This is a more convenient option for uploading large data (more than a few GBs). The steps for the same are detailed [here](/Compute/Polly CLI).
 
 ##Creating a new folder
 

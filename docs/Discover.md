@@ -1,6 +1,6 @@
 ##Introduction  
 
-With Polly discover you can access public databases which have been curated and stored in the form of data lakes or make data lakes with your own data. These datalakes can be explored and analysed either through the jupyter notebook interface on Polly or through the Polly Discover application.
+With Polly discover you can access public databases which have been curated and stored in the form of data lakes or make data lakes with your own data. These datalakes can be explored and analyzed either through the Polly Notebook interface on Polly or through the Polly Discover application.
 
 Polly Discover consists of the following major components:
 
@@ -10,7 +10,7 @@ Polly Discover consists of the following major components:
 
 *   Data Lake Exploration: 
 
-    To explore a data lake, Polly provides tools such as Shiny applications and Jupyter notebooks. These tools enable you to find relevant data by searching for keywords associated with the file name, file metadata, or the contents of a file.
+    To explore a data lake, Polly provides tools such as Shiny applications and Polly Notebooks. These tools enable you to find relevant data by searching for keywords associated with the file name, file metadata, or the contents of a file.
 
 *   On-the-fly Analysis: 
 
@@ -101,7 +101,7 @@ The search will return all datasets that are associated with your search. The re
 
 ![Search results](../img/Discover/image6.png)
 
-The table shown above shows very few columns by default. In order to view the other columns in the table, you can select the fields from **Available Columns** and click on *Show!* button. *Download Selected Dataset* button will let you download the dataset that you have selected on your local system. *Export results to CSV* button will let you download the search result table in the form of a CSV file. Once you have narrowed down the relevant datasets, you can analyze one or more datasets on the fly within the app.
+The table shown above shows very few columns by default. In order to view the other columns in the table, you can select the fields from **Available Columns** and click on *Show!* button. *Download Selected Dataset* button will let you download the dataset that you have selected on your local system. *Export results to CSV* button will let you download the search result table in the form of a .csv file. Once you have narrowed down the relevant datasets, you can analyze one or more datasets on the fly within the app.
 
 **Analyzing a single dataset**
 
@@ -149,21 +149,23 @@ Finally, on clicking the *Execute Rules* button, you will be able to get a preli
 
 ![Preliminary hitlist](../img/Discover/image13.png)
 
-##Access through Jupyter notebook interface
+##Access through Polly Notebook interface
 
-The jupyter notebook Dockers on Polly have an **internal** python package called ‘discoverPy’ pre-installed, which can be used to search for datasets in the various data repositories.
+The Polly Notebook Dockers on Polly have an **internal** python package called ‘discoverPy’ pre-installed, which can be used to search for datasets in the various data repositories.
 
 **Structure of a data repository**
 
-A data repository is a collection of different files having different file types. To ensure easy access at a granular level to all datasets a data repository is organised in the following manner. Under this schema, each repository can be considered as a collection of indices which can be used for querying. The discoverPy package can access all indices of a data repository using API endpoints.<!--Structure of a data repository-->
+A data repository is a collection of different files having different file types. To ensure easy access at a granular level to all datasets a data repository is organized in the following manner. Under this schema, each repository can be considered as a collection of indices which can be used for querying. The discoverPy package can access all indices of a data repository using API endpoints.<!--Structure of a data repository-->
 
-A data repository is a collection of different files having different file types. To ensure easy access at a granular level to all datasets a data repository is organised in the following manner. Under this schema, each repository can be considered as a collection of indices which can be used for querying. The discoverPy package can access all indices of a data repository using API endpoints.  
+A data repository is a collection of different files having different file types. To ensure easy access at a granular level to all datasets a data repository is organized in the following manner. Under this schema, each repository can be considered as a collection of indices which can be used for querying. The discoverPy package can access all indices of a data repository using API endpoints.  
 
 ![Structure of a data repository](../img/Discover/discover_data_repository.png)
 
+Click [here](./Compute/Polly Notebook) for a detailed documentation about Polly Notebooks.
+
 **Usage**
 
-1. Initialise a discover object
+1. Initialize a discover object
 
 This discover object is used to interact with a dataset repository.
 
@@ -242,7 +244,7 @@ To search for datasets, the ‘\_files’ index can be searched using the metada
 
 GCT File Format
 
-The datasets in the public repositories are saved as GCT. This is a file format in which data can be stored along with the sample metadata. The data values in the actual matrix along with features (genes) are indexed in the ‘\_gct\_data’ index of the repository and the sample metadata is index in the ‘\_gct\_metadata’ of the index of the repository.
+The datasets in the public repositories are saved as a .gct file. This is a file format in which data can be stored along with the sample metadata. The data values in the actual matrix along with features (genes) are indexed in the ‘\_gct\_data’ index of the repository and the sample metadata is index in the ‘\_gct\_metadata’ of the index of the repository.
 
 ![GCT file structure](../img/Discover/gct_file.png)
 
@@ -272,7 +274,7 @@ The datasets in the public repositories are saved as GCT. This is a file format 
 
 **Querying at the feature level**
 
-The matrix of a GCT file contains the actual values for the different features(genes/metabolites). The ‘\_gct\_index’ index of a repository can be queried for features.
+The matrix of a .gct file contains the actual values for the different features(genes/metabolites). The ‘\_gct\_index’ index of a repository can be queried for features.
 
 1.  Get fields present in the index  
 

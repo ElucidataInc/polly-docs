@@ -10,7 +10,7 @@ This starter guide provides a broad overview of the platform to get you started 
 
 *   **Sign up for the platform**
 
-    To sign in to the Polly platform, you must have an account. Account credentials can be generated for both temporary, limited access as well as enterprise accounts. Reach out to our team [polly@elucidata.io](mailto:polly@elucidata.io) for your login credentials.
+    To sign in to the Polly platform, you must have an account. Account credentials can be generated for both temporary, limited access as well as enterprise accounts. Reach out to our team at [polly@elucidata.io](mailto:polly@elucidata.io) for your login credentials.
 
 *   **Login to the platform**
 
@@ -18,7 +18,7 @@ This starter guide provides a broad overview of the platform to get you started 
 
 ![Login](./img/Introduction/Login.png)
 
-*   **Login through Polly CLI**
+*   **Login through [Polly CLI](./Compute/Polly CLI)**
 
     To be able to start using the features of Polly CLI, the first step is to log in to Polly using the Terminal / Command Prompt. Use the following command to log in.
 
@@ -42,19 +42,19 @@ The Polly Landing page provides access to 4 distinct interconnected modules on P
 
 ![Manage](./img/Introduction/Manage1.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
 
-*   [Use Apps](../Apps/Introduction)
+*   [Use Apps](./Apps/Introduction)
 
      Polly hosts a suite of apps and production-ready workflows to analyze and process a variety of data with ease. You can build and host your custom workflows from individual components or choose from a suite of ready-to-use workflows on Polly.
 
 ![Manage](./img/Introduction/Manage2.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
 
-*   [Write & Maintain Code](../Compute/Polly Notebooks)
+*   [Write & Maintain Code](./Compute/Polly Notebooks)
 
     Polly enables coding in a range of computational environments with configurable machine sizes and dockerized environments. 
 
 ![Code](./img/Introduction/code.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
 
-*   [Discover Insights](../Discover)
+*   [Discover Insights](./Discover)
 
     Polly enables access to proprietary, expert-curated, disease-specific data lakes to accelerate your drug discovery programs. Mine data lakes for public and proprietary data that are harmonized across sources on  Polly Discover. 
 

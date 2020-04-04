@@ -1,7 +1,6 @@
+#Introduction
 
-# Introduction
-
-## Overview
+##Overview
 
 Analysis of lipidomic data involves complex lipidome analysis. Lipidomics analysis across large sample sizes produces large datasets that require dedicated lipid identification, quantification and  lipidome visualization. The wide diversity of native lipids and their modifications make their analyses challenging. Lipidomics Visualization Dashboard allows the user to visualize, process and analyze the lipid species or classes concentration data. The current version supports the output from SCIEX Lipidyzer™ Platform. It can calculate summary statistics, percentages and perform univariate analysis like ANOVA, Limma t-test along with Multivariate analysis like PCA. It helps users to view lipids by their main class, sub class across cohorts.  includes complex lipidome analysis
 
