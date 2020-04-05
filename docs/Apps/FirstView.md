@@ -2,7 +2,7 @@
 
 ##Overview
 
-El-MAVEN, our open source LC-MS data processing engine is optimized for isotopomer labeling and untargeted metabolomic profiling experiments. You can view the mass spectra, align chromatograms, perform peak-feature detection and alignment for labeled and unlabeled MS data. FirstView enables you to have a first look at your data using basic visualizations to get preliminary insights.
+[El-MAVEN](https://github.com/ElucidataInc/ElMaven/wiki), our open source LC-MS data processing engine is optimized for isotopomer labeling and untargeted metabolomic profiling experiments. You can view the mass spectra, align chromatograms, perform peak-feature detection and alignment for labeled and unlabeled MS data. FirstView enables you to have a first look at your data using basic visualizations to get preliminary insights.
 
 ##Scope of the App
 
@@ -76,7 +76,7 @@ The visualization interface provides the data summary (number of samples, groups
 
 **Intensity Plot**
 
-The Intensity Plot displays the intensity values either raw or log2 transformed, for a given metabolite across all samples. For labeled data, the intensity for all isotopologues are displayed in different colors in stacked bar plots as illustrated in Figure 8. below.
+The Intensity Plot displays the intensity values either raw or log<sub>2</sub> transformed, for a given metabolite across all samples. For labeled data, the intensity for all isotopologues are displayed in different colors in stacked bar plots as illustrated in Figure 8. below.
 
 ![Intensity Plot with raw intensities](../img/FirstView/Intensityplot.png) <center>**Figure 8.** Intensity Plot with raw intensities</center>
 

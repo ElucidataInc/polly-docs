@@ -23,7 +23,7 @@ Labeled LC-MS Workflow requires the following two files as input:
 
 **Intensity file**
 
-The intensity file should be in CSV format as shown in Figure 1. The .csv file exported after peak picking in El-MAVEN is the input file.
+The intensity file should be in CSV format as shown in Figure 1. The .csv file exported after peak picking in [El-MAVEN](https://github.com/ElucidataInc/ElMaven/wiki) is the input file.
 
 ![El-MAVEN output file](../img/LabeledLC-MSWorkflow/Outputfile.png) <center>**Figure 2.** El-MAVEN output file</center>
 

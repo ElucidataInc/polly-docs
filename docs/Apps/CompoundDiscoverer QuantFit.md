@@ -9,10 +9,10 @@ We have used Compound Discoverer to set up a node for peak picking on raw data o
 
 ##Pre Requisites
 
-*   The user should have Compound Discoverer version 3.1 to be able to use this Node
+*   You should have Compound Discoverer version 3.1 to be able to use this Node
 *   Compound Discoverer should not be running in the background when you are installing the Polly QuantFit Node
 *   The path for MSConvert installation directory is **C:/Users/*UserName*/AppData/Local/Apps/Proteowizard/msconvert.exe**
-*   **The user should have an account on Polly**
+*   **You should have an account on Polly**
 
 ##User Guide
 
@@ -86,7 +86,7 @@ Steps to set up a node in the Compound Discoverer:
 *   The processing starts. On completion, you will receive an email on the Polly Email Address used in QuantFit Node. Open the email and click on **Start Quantification**.  
 <br />
 
-Click [here](Apps/QuantFit.md/#metadata-interface) for a detailed documentation about Polly QuantFit.
+Click [here](QuantFit.md/#metadata-interface) for a detailed documentation about Polly QuantFit.
 
 <br />
 
