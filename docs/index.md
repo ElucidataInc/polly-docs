@@ -28,7 +28,7 @@ This starter guide provides a broad overview of the platform to get you started 
 
 ![PollyCLI](./img/Introduction/PollyCLI.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
 
-Once logged in, the user does not get automatically logged out and will have to log out manually with the command to log out.
+Once logged in, you do not get automatically logged out and will have to log out manually with the command to log out.
 
 ##Navigating through the platform
 

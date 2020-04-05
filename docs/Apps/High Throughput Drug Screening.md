@@ -116,7 +116,7 @@ Selecting a cell line from the drop down as shown in Figure 13 will display thre
 
 ![IC50 Plot](../img/HTS/Analysis1.png) <center>**Figure 13.** IC<sub>50</sub> Plot</center>
 
-**Lethality:** It offers an indication of the lethal toxicity for a given drug. Basically it provides the degree to which a drug is harmful to a user or how capable it is of causing death.
+**Lethality:** It offers an indication of the lethal toxicity for a given drug. It provides the degree to which a drug is harmful to a user or how capable it is of causing death.
 
 The *Lethality* section provides a chart showing relative lethality of drugs for all the cell lines uploaded.
 

@@ -2,7 +2,7 @@
 
 ##Overview
 
-Calibration refers to the process of quantifying samples of unknown concentrations with known (standard) samples. Mass spec experiments are a crucial component of metabolomics experiments but the output obtained from software like El-MAVEN and MultiQuant are intensities which are unitless. From these intensities, we can calculate fractional enrichment and do relative comparisons. But for some analysis like kinetic flux analysis, we need absolute concentrations of the metabolites. These concentrations have units like M, μM, mM like any other chemical concentration. In order to absolutely quantify these metabolites, experiments are done with standard samples of known concentrations. QuantFit uses these data points to get mathematical mappings from intensities to concentrations which are subsequently used to calculate concentrations of experimental intensities.
+Calibration refers to the process of quantifying samples of unknown concentrations with known (standard) samples. Mass spec experiments are a crucial component of metabolomics experiments but the output obtained from software like [El-MAVEN](https://github.com/ElucidataInc/ElMaven/wiki) and [MultiQuant](https://sciex.com/products/software/multiquant-software) are intensities which are unitless. From these intensities, we can calculate fractional enrichment and do relative comparisons. But for some analysis like kinetic flux analysis, we need absolute concentrations of the metabolites. These concentrations have units like M, μM, mM like any other chemical concentration. In order to absolutely quantify these metabolites, experiments are done with standard samples of known concentrations. QuantFit uses these data points to get mathematical mappings from intensities to concentrations which are subsequently used to calculate concentrations of experimental intensities.
 
 ##Scope of the app
 
@@ -96,7 +96,7 @@ where,
 
 *   *Parent Formula* is the Formula of the parent fragment
 
-##Steps involved for data processing
+##Steps involved in data processing
 
 *   Process MS files using El-MAVEN or MultiQuant
 
@@ -268,13 +268,13 @@ where:
 
 **Errors raised while selecting files for uploading**
 
-*   Number of files error: *Three files are required for quantification*. If the user tries to upload more than two files then this error is thrown by the tool.
+*   Number of files error: *Three files are required for quantification*. If you try to upload more than two files then this error is thrown by the tool.
 
 *   File type error: *Please select the correct file type*. If the selected file and file type do not match, then this error is thrown by the tool.
 
 **File validation errors and warnings**
 
-*   Missing Value warning: It is raised when any column in the uploaded files has missing values. It also specifies the action taken by the tool if the user chooses to continue.
+*   Missing Value warning: It is raised when any column in the uploaded files has missing values. It also specifies the action taken by the tool if you choose to continue.
 
     Example:
 

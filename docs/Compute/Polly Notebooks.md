@@ -1,51 +1,50 @@
-
-# Polly Notebooks
+##Introduction
 
 Polly Notebook is a scalable analytics platform which allows you to perform data analysis remotely in a Jupyter-like notebook. It provides the flexibility to select the compute capacity, the environment according to your need along with the ability to share the analyses with your peers for seamless team collaboration.
 
-Polly Notebook provides a Jupyter-like interface on the cloud. Some of the features of Polly Notebooks over other local hosting options are
+Polly Notebook provides a Jupyter-like interface on the cloud. Some of the features of Polly Notebooks over other local hosting options are:
 
-* **Ready-to-code platform:** Installing and maintaining environments for every notebook can be a frustrating overhead. We provide custom docker environments that come pre-installed with modules commonly used in bioinformatics. You can also add your own custom docker environments.
+*   **Ready-to-code platform:** Installing and maintaining environments for every notebook can be a frustrating overhead. We provide custom docker environments that come pre-installed with modules commonly used in bioinformatics. You can also add your own custom docker environments.
 
-* **Cloud storage:** With Polly Notebooks, you can store your data files and notebooks in a single place that will be ready to run in less than 5 minutes from anywhere in the world. No need to fetch your code from Bitbucket anymore!
+*   **Cloud storage:** With Polly Notebooks, you can store your data files and notebooks in a single place that will be ready to run in less than 5 minutes from anywhere in the world. No need to fetch your code from Bitbucket anymore!
 
-* **Share and collaborate on your projects:** Polly allows sharing of projects so you can review and refer notebooks within your team. 
+*   **Share and collaborate on your projects:** Polly allows sharing of projects so you can review and refer notebooks within your team. 
 
-* **Resource management:** Most biological analyses (like RNAseq) are commonly resource-intensive, whether in terms of RAM or processing power. In such cases, you either have to scramble for bigger resources or compromise on the speed by using less processing power. Polly makes it possible to scale up your resources at any time.
+*   **Resource management:** Most biological analyses (like RNAseq) are commonly resource-intensive, whether in terms of RAM or processing power. In such cases, you either have to scramble for bigger resources or compromise on the speed by using less processing power. Polly makes it possible to scale up your resources at any time.
 
-## Accessing Polly Notebooks
+**Accessing Polly Notebooks**
 
-Navigate to the Polly Workspace **< link to workspaces documentation>** in which the analysis needs to be performed.
+Navigate to the [Polly Workspace](../Getting Started/Project Management Dashboard) in which the analysis needs to be performed.
 
-![Polly Projects](./img/1.png "Polly Projects") <center>**Figure 1:** Polly Projects</center>
+![Polly Projects](../img/Notebooks/1.png "Polly Projects") <center>**Figure 1.** Polly Projects</center>
 
 Further, navigate to the notebook tab to end up to the Polly Notebook page.
 
-![Notebook Tab](./img/2.png "Notebook Tab") <center>**Figure 2:** *Notebook* Tab</center>
+![Notebook Tab](../img/Notebooks/2.png "Notebook Tab") <center>**Figure 2.** Notebook Tab</center>
 
-The user can access Polly Notebooks in three ways:
+You can access Polly Notebooks in three ways:
 
-* **Create a new notebook:** Click on the New Notebook button located on the right side of the search bar to create a new notebook.
+*   **Create a new notebook:** Click on the *New Notebook* button located on the right side of the search bar to create a new notebook.
 
-![New Notebook* button to create a new notebook](./img/3.png "New Notebook button to create a new notebook") <center>**Figure 3:** *New Notebook* button to create a new notebook</center>
+![New Notebook button to create a new notebook](../img/Notebooks/3.png) <center>**Figure 3.** *New Notebook* button to create a new notebook</center>
 
-* **Upload a notebook:** Click on the Upload Notebook button on the right side of the search bar.
+*   **Upload a notebook:** Click on the *Upload Notebook* button on the right side of the search bar.
 
-![Upload Notebook button to upload a notebook](./img/4.png "Upload Notebook button to upload a notebook") <center>**Figure 4:** *Upload Notebook* button to upload a notebook</center>
+![Upload Notebook button to upload a notebook](../img/Notebooks/4.png) <center>**Figure 4.** *Upload Notebook* button to upload a notebook</center>
 
 The notebook can be uploaded from the local system as well as from the various cloud storage services (Dropbox, Google Drive and Box). To upload from local system, files can be dragged and dropped. To upload from various cloud storage services, select the relevant option, login to the service and select the files to be uploaded.
 
-![Window to import notebook from local or other cloud storage services](./img/5.png "Window to import notebook from local or other cloud storage services") <center>**Figure 5:** Window to import notebook from local or other cloud storage services</center>
+![Window to import notebook from local or other cloud storage services](../img/Notebooks/5.png) <center>**Figure 5.** Window to import notebook from local or other cloud storage services</center>
 
-* **Open an existing notebook:** Click on the name of any existing notebook to open it.
+*   **Open an existing notebook:** Click on the name of any existing notebook to open it.
 
-![Opening a notebook](./img/6.png "Opening a notebook") <center>**Figure 6:** Opening a notebook</center>
+![Opening a notebook](../img/Notebooks/6.png) <center>**Figure 6.** Opening a notebook</center>
 
-## Pre-Configured Environments
+##Pre-Configured Environments
 
-Polly supports various notebook environments in the form of dockers to cater to the needs of different users. Each of the dockers is built according to various data analytic needs ranging from basic scripting, processing large data or training and testing of ML models. The menu to select the notebook environments will pop-up whenever the user creates or uploads the notebook and opens it for the first time.
+Polly supports various notebook environments in the form of dockers to cater to the needs of different users. Each of the dockers is built according to various data analytic needs ranging from basic scripting, processing large data or training and testing of ML models. The menu to select the notebook environments will pop-up whenever you create or upload the notebook and opens it for the first time.
 
-![Menu to select various available environments](./img/7.png "Menu to select various available environments") <center>**Figure 7:** Menu to select various available environments</center>
+![Menu to select various available environments](../img/Notebooks/7.png) <center>**Figure 7.** Menu to select various available environments</center>
 
 The various notebook environments supported are as follows:
 
@@ -61,15 +60,15 @@ The various notebook environments supported are as follows:
 | Data Exploration | R and python for general data analysis | All libraries from base R docker | All libraries from base python docker |   |
 | RNA-seq Downstream | Transcriptomics Analysis | <ul><li>All libraries from R docker</li><li>limma</li><li>affy</li><li>DESeq2</li><li>edgeR</li><li>cqn</li><li>sva</li><li>BioMart</li><li>mygene</li><li>amritr</li><li>Boruta</li><li>fgsea</li><li>gsva</li><li>ReactomePA</li><li>xCell</li><li>singleR</li><li>enrichR</li><li>org.Hs.eg.db</li><li>org.Mm.eg.db</li><li>Annotation dbi</li><li>clusterProfiler</li><ul> | All libraries from base python docker |   |
 
-## Computational Machines Available
+**Computational Machines Available**
 
-The size of the data varies from few MBs to hundreds of GBs, and in order to process and analyze this huge data, one would need the computation power from a small machine to a large workstation. Polly Notebook supports configurations having 2 to 72 GB Ram and 1 to 36 CPU cores. The menu to select a machine configuration will pop-up when the user creates a new notebook or uploads a notebook and tries to open it for the first time.
+The size of the data varies from few MBs to hundreds of GBs, and in order to process and analyze this huge data, one would need the computation power from a small machine to a large workstation. Polly Notebook supports configurations having 2 to 72 GB Ram and 1 to 36 CPU cores. The menu to select a machine configuration will pop-up when you creates a new notebook or uploads a notebook and tries to open it for the first time.
 
-![Menu to select various machine configurations](./img/8.png "Menu to select various machine configurations") <center>**Figure 8:** Menu to select various machine configurations</center>
+![Menu to select various machine configurations](../img/Notebooks/8.png) <center>**Figure 8.** Menu to select various machine configurations</center>
 
-Most of the machine configuration are already specified to cover the wide variety of use cases. More machine configuration can also be made available on request (contact us at polly@elucidata.io). The general machine configurations are divided into three broad categories:
+Most of the machine configuration are already specified to cover the wide variety of use cases. More machine configuration can also be made available on request (contact us at [polly@elucidata.io](polly@elucidata.io)). The general machine configurations are divided into three broad categories:
 
-* **General-purpose:** Configurations from 1 to 4 CPU cores and 2 to 16 GB RAM fall under this category. The various configurations are:
+*   **General purpose:** Configurations from 1 to 4 CPU cores and 2 to 16 GB RAM fall under this category. The various configurations are:
 
 | Name          | CPU/Cores | RAM   |
 |---------------|-----------|-------|
@@ -78,199 +77,196 @@ Most of the machine configuration are already specified to cover the wide variet
 | Polly large   | 2         | 8 GB  |
 | Polly x-large | 4         | 16 GB |
 
-* **Compute Intensive:** Configurations from 16 to 36 CPU cores and 32 to 72 GB RAM fall under this category. The various configurations are:
+*   **Compute Intensive:** Configurations from 16 to 36 CPU cores and 32 to 72 GB RAM fall under this category. The various configurations are:
 
 | Name           | CPU/Cores | RAM   |
 |----------------|-----------|-------|
 | Polly 2x-large | 16        | 32 GB |
 | Polly 3x-large | 36        | 72 GB |
 
-* **Memory-Optimized:** Configurations from 4 to 8 CPU cores and 32 to 64 GB RAM fall under this category. The various configurations are:
+*   **Memory-Optimized:** Configurations from 4 to 8 CPU cores and 32 to 64 GB RAM fall under this category. The various configurations are:
 
 | Name           | CPU/Cores | RAM   |
 |----------------|-----------|-------|
 | Polly 2x-large | 4         | 32 GB |
 | Polly 3x-large | 8         | 64 GB |
 
-## Other Useful Features
+**Other Useful Features**
 
 There are few other useful features as well that might come handy when using a Polly Notebook. Cloning or deleting a notebook and changing the machine configuration of an existing notebook are a few of them. The detailed stepwise flow of how to carry out these changes is as follows:
 
-* **Cloning a notebook:** To clone an existing notebook, the steps to be followed are:
+*   **Cloning a notebook:** To clone an existing notebook, the steps to be followed are:
     
-    * Click on the (three dots) menu at the end of the notebook that you want to clone. A menu with various options will open.
+    *   Click on the (three dots) menu at the end of the notebook that you want to clone. A menu with various options will open.
     
-    ![Menu to select the *Clone* option](./img/9.png "Menu to select the Clone option") <center>**Figure 9:** Menu to select the *Clone* option</center>
+    ![Menu to select the *Clone* option](../img/Notebooks/9.png) <center>**Figure 9.** Menu to select the *Clone* option</center>
     
-    * Scroll down in the menu and navigate to the *Clone* option. Click on the Clone option to create a copy of the notebook.
+    *   Scroll down in the menu and navigate to the *Clone* option. Click on the *Clone* option to create a copy of the notebook.
     
-    ![Clone* option in the menu](./img/10.png "Clone option in the menu") <center>**Figure 10:** *Clone* option in the menu</center>
+    ![Clone* option in the menu](../img/Notebooks/10.png) <center>**Figure 10.** *Clone* option in the menu</center>
     
-    * A duplicate/copy of the notebook will be created.
+    *   A duplicate/copy of the notebook will be created.
     
-    ![Cloned notebook](./img/11.png "Cloned notebook") <center>**Figure 11:** Cloned notebook</center>
+    ![Cloned notebook](../img/Notebooks/11.png) <center>**Figure 11.** Cloned notebook</center>
 
-* **Deleting a notebook:** To delete an existing notebook, the steps to be followed are as follows:
+*   **Deleting a notebook:** To delete an existing notebook, the steps to be followed are as follows:
     
-    * Click on the (three dots) menu at the end of the notebook that you want to clone. A menu with various options will open.
+    *   Click on the (three dots) menu at the end of the notebook that you want to clone. A menu with various options will open.
     
-    ![Menu to delete the notebook](./img/12.png "Menu to delete the notebook") <center>**Figure 12:** Menu to delete the notebook</center>
+    ![Menu to delete the notebook](../img/Notebooks/12.png) <center>**Figure 12.** Menu to delete the notebook</center>
     
-    * Scroll down in the menu and navigate to the Delete option. Click on the Delete option to create a copy of the notebook.
-    ![Delete option to delete a notebook](./img/13.png "Delete option to delete a notebook") <center>**Figure 13:** Delete option to delete a notebook</center>
-    
-    * The selected notebook will be deleted.
+    *   Scroll down in the menu and navigate to the Delete option. Click on the *Delete* option to create a copy of the notebook.
 
-* Changing machine configuration: Polly gives the flexibility to change the machine configuration to allow the usage of the notebook according to the computing power required at each step. The user can change the configuration according to the need at each step. The steps to be followed are:
-    * Click on the Edit button located at the end of each notebook entry, right next to the (three dots) menu.
+    ![Delete option to delete a notebook](../img/Notebooks/13.png) <center>**Figure 13.** Delete option to delete a notebook</center>
     
-    ![Edit* button to change machine configuration](./img/14.png "Edit* button to change machine configuration") <center>**Figure 14:** *Edit* button to change machine configuration</center>
+    *   The selected notebook will be deleted.  
+    <br />
 
-    * A menu with the different machine configuration will open, with the various options available will be displayed under the Machine type to run segment. Select the appropriate option to change the configuration.
-    ![Machine configurations options](./img/15.png "Machine configurations options") <center>**Figure 15:** Machine configurations options</center>
+*   **Changing machine configuration:** Polly gives the flexibility to change the machine configuration to allow the usage of the notebook according to the computing power required at each step. You can change the configuration according to the need at each step. The steps to be followed are:
 
-## Getting started with Polly Notebook
+    *   Click on the *Edit* button located at the end of each notebook entry, right next to the (three dots) menu.
+    
+    ![Edit* button to change machine configuration](../img/Notebooks/14.png) <center>**Figure 14.** *Edit* button to change machine configuration</center>
+
+    *   A menu with the different machine configuration will open, with the various options available will be displayed under the *Machine type to run* segment. Select the appropriate option to change the configuration.
+
+    ![Machine configurations options](../img/Notebooks/15.png) <center>**Figure 15.** Machine configurations options</center>
+
+##Getting started with Polly Notebook
 
 Upon selecting a pre-configured docker environment and a computational machine, a Polly Notebook starts launching on a new tab of the browser. Based upon the type of computational machine chosen while launching a Polly Notebook you will see a progress bar which will tell you that your new notebook is opening.
 
-![Progress bar upon launching a Polly Notebook](./img/16.png "Progress bar upon launching a Polly Notebook") <center>**Figure 16:** Progress bar upon launching a Polly Notebook</center>
+![Progress bar upon launching a Polly Notebook](../img/Notebooks/16.png) <center>**Figure 16.** Progress bar upon launching a Polly Notebook</center>
 
 Once the server is ready, you will see the new notebook gets opened on the browser. The interface is very similar to that of a Jupyter notebook.
 
-![Polly Notebook interface](./img/17.png "Polly Notebook interface") <center>**Figure 17:** Polly Notebook interface</center>
+![Polly Notebook interface](../img/Notebooks/17.png) <center>**Figure 17.** Polly Notebook interface</center>
 
 On the top left, you can see a pre-defined name given to the notebook if in case a new notebook was created. Towards the top right, you can see the Polly Project name and below it, you can see the kernel/docker environment selected for opening the notebook.
 
-* **Menu bar:** There are multiple tabs present in the menu bar section which can be used to operate various functions in the notebook. For example, under the File tab, you can select the Rename option to change the name of the current active notebook.
+*   **Menu bar:** There are multiple tabs present in the menu bar section which can be used to operate various functions in the notebook. For example, under the *File* tab, you can select the Rename option to change the name of the current active notebook.
 
-* **Toolbar:**  It contains multiple icons that allow you to perform various operations that are frequently used.
+*   **Toolbar:**  It contains multiple icons that allow you to perform various operations that are frequently used.
 
-## Structure of Polly Notebook
+##Structure of Polly Notebook
 
-The Polly notebook comprises of a sequence of cells. There are three types of cells: markdown cells, raw cells, and code cells. In each of these types, you can input multi-line content and each cell can be executed by pressing Shift+Enter, or by clicking either the Run cells option on Cell tab in the menu bar or the “Play” button in the toolbar.
+The Polly notebook comprises of a sequence of cells. There are three types of cells: **markdown cells**, **raw cells**, and **code cells**. In each of these types, you can input multi-line content and each cell can be executed by pressing *Shift+Enter*, or by clicking either the *Run cells* option on *Cell* tab in the menu bar or the “Play” button in the toolbar.
 
-![Structure of a Polly Notebook](./img/18.png "Structure of a Polly Notebook") <center>**Figure 18:** Structure of a Polly Notebook</center>
+![Structure of a Polly Notebook](../img/Notebooks/18.png) <center>**Figure 18.** Structure of a Polly Notebook</center>
 
-### Markdown cells
-You can record the computational process in a proficient manner using rich text. The Markdown language allows you to define a structure to the notebook by using markdown headings. It gives a basic method to play out text markup, that is, to determine which parts of the text should be stressed (italics), bold, form lists, etc.
+**Markdown cells**
 
+You can record the computational process in a proficient manner using *rich text*. The Markdown language allows you to define a structure to the notebook by using markdown headings. It gives a basic method to play out text markup, that is, to determine which parts of the text should be stressed (italics), bold, form lists, etc.
 
-### Raw cells
-You can write output directly in the raw cells. A raw cell is not evaluated by a notebook meaning anything written in the raw cell goes to the output when that cell is executed.
+**Raw cells**
 
+You can write output directly in the *raw cells*. A raw cell is not evaluated by a notebook meaning anything written in the raw cell goes to the output when that cell is executed.
 
-### Code cells
-A code cell allows you to edit and write a new code. The code cell executes the code written by you based on the kernel selected while launching the notebook. The code cell can include multiple programming languages as well as seen on the bottom right side of the image above. The above example is of a Pollyglot Docker environment which allows you to select multiple programming languages in the same notebook thus, you can select the type of kernel you prefer to code on.
-Once the code cell is executed, the results which are computed by sending the code to the kernel are displayed as an output below the cell. Again to execute a code cell, you can click on the “Run” button and if you want to stop the computation process of a particular code cell, then the “Interrupt” button needs to be selected in the toolbar.
+**Code cells**
 
-![Running a code cell](./img/19.png "Running a code cell") <center>**Figure 19:** Running a code cell</center>
+A *code cell* allows you to edit and write a new code. The *code cell* executes the code written by you based on the kernel selected while launching the notebook. The *code cell* can include multiple programming languages as well as seen on the bottom right side of the image above. The above example is of a Pollyglot Docker environment which allows you to select multiple programming languages in the same notebook thus, you can select the type of kernel you prefer to code on.
 
-## Polly Offerings
+Once the *code cell* is executed, the results which are computed by sending the code to the kernel are displayed as an output below the cell. Again to execute a *code cell*, you can click on the “Run” button and if you want to stop the computation process of a particular *code cell*, then the “Interrupt” button needs to be selected in the toolbar.
 
-Polly Offerings tab in the Menu bar contains the following two options, namely “Terminal” and “File Explorer” which are described below.
+![Running a code cell](../img/Notebooks/19.png) <center>**Figure 19.** Running a code cell</center>
 
-![Polly Offerings tab](./img/20.png "Polly Offerings tab") <center>**Figure 20:** Polly Offerings tab</center>
+##Polly Offerings
 
-### Terminal
+Polly Offerings tab in the Menu bar contains the following two options, namely *Terminal* and *File Explorer* which are described below.
 
-Once the Terminal option is selected, it launches a new tab on the browser and provides access to the command-line interface to execute any sets of commands. You have access to all the file types which are available in the docker environment and those can be managed through the terminal as well. The terminal option also allows you to install Python or R packages (as described later), managing system binaries and system configurations, and helps you working with code repositories hosted on GitHub, Bitbucket, etc.
+![Polly Offerings tab](../img/Notebooks/20.png) <center>**Figure 20.** Polly Offerings tab</center>
 
-![Terminal screen window](./img/21.png "Terminal screen window") <center>**Figure 21:** Terminal screen window</center>
+**Terminal**
 
-### File Explorer
+Once the *Terminal* option is selected, it launches a new tab on the browser and provides access to the command-line interface to execute any sets of commands. You have access to all the file types which are available in the docker environment and those can be managed through the terminal as well. The terminal option also allows you to install Python or R packages (as described later), managing system binaries and system configurations, and helps you working with code repositories hosted on GitHub, Bitbucket, etc.
 
-Similar to the above option, if you select the File Explorer option, a new tab opens up in the browser and you can view different file types and directories present in the docker environment. Under the Files tab, the list of all the files and directories is available to you and any modification such as delete, upload or modifying by opening a file type can be done.
+![Terminal screen window](../img/Notebooks/21.png) <center>**Figure 21.** Terminal screen window</center>
 
-![Demo Data for FirstView](./img/22.png "File Explorer window") <center>**Figure 22:** File Explorer window</center>
+**File Explorer**
 
-Additionally, you can also launch a new notebook by selecting the New button present on the top right corner of the page in File Explorer. The new notebook will open in a new tab and would automatically be made available in the Notebook section of the same Polly Project of the original notebook.
+Similar to the above option, if you select the *File Explorer* option, a new tab opens up in the browser and you can view different file types and directories present in the docker environment. Under the *Files* tab, the list of all the files and directories is available to you and any modification such as delete, upload or modifying by opening a file type can be done.
 
-![Launching a new notebook using File Explorer](./img/23.png "Launching a new notebook using File Explorer") <center>**Figure 23:** Launching a new notebook using *File Explorer* </center>
+![Demo Data for FirstView](../img/Notebooks/22.png) <center>**Figure 22.** File Explorer window</center>
 
-*File Explorer* window also allows you to view, edit or create various file types in an interactive manner. The Text File option in the New button can be used to create a new text file. For viewing or editing a file, you can click on the file and a text editor will open in a new tab of the browser. You can view or edit the file and save the changes made in the file. The text editor also allows you to select a programming language from the Language tab to edit and convert the file format.
+Additionally, you can also launch a new notebook by selecting the *New* button present on the top right corner of the page in *File Explorer*. The new notebook will open in a new tab and would automatically be made available in the Notebook section of the same Polly Project of the original notebook.
 
-![Opening a file using a Text editor](./img/24.png "Opening a file using a Text editor") <center>**Figure 24:** Opening a file using a Text editor</center>
+![Launching a new notebook using File Explorer](../img/Notebooks/23.png) <center>**Figure 23.** Launching a new notebook using *File Explorer*</center>
 
-## Accessing Project files in Notebook
+*File Explorer* window also allows you to view, edit or create various file types in an interactive manner. The *Text File* option in the New button can be used to create a new text file. For viewing or editing a file, you can click on the file and a text editor will open in a new tab of the browser. You can view or edit the file and save the changes made in the file. The text editor also allows you to select a programming language from the Language tab to edit and convert the file format.
 
-### Accessing individual files
+![Opening a file using a Text editor](../img/Notebooks/24.png) <center>**Figure 24.** Opening a file using a Text editor</center>
+
+##Accessing Project files in Notebook
+
+**Accessing individual files**
 
 For carrying on analysis, if you require any input files which are available in Polly Project, those files can be fetched using a set of commands. You can list all the files present in the Project and then select the individual file by the following command
 
-```r
-## Lists all the files present in the project
+<pre><code>## Lists all the files present in the project
 list_project_file()
 ## The file will be downloaded in the current working directory
 download_project_file('sample_file.csv')
-```
+</code></pre>
 
 After finishing the analysis, you can push back the newly generated output files again to the Project using the following command
 
-```r
-## Save the file to the project
+<pre><code>## Save the file to the project
 save_file_to_project('sample_file.csv')
-```
-![Accessing individual files in a notebook](./img/25.png "Accessing individual files in a notebook") <center>**Figure 25:** Accessing individual files in a notebook</center>
+</code></pre>
 
-## Accessing directories
+![Accessing individual files in a notebook](../img/Notebooks/25.png) <center>**Figure 25.** Accessing individual files in a notebook</center>
+
+**Accessing directories**
 
 Similar to individual files, you can fetch directories from the Project. 
 
 The contents of any directory within a Project can be listed using the following command on a notebook terminal.
 
-```
-polly files list --workspace-path "<path/to/the/directory>" -y
-```
+<pre><code>polly files list --workspace-path "<path/to/the/directory>" -y
+</code></pre>
 
-Here the path of the directory has to start with “polly://”. To view the contents within a folder called “Data” in the project, the following command will have to be executed on the notebook terminal.
+Here the path of the directory has to start with “*polly://*”. To view the contents within a folder called “Data” in the project, the following command will have to be executed on the notebook terminal.
 
-```
-polly files list --workspace-path "polly://Data" -y
-```
+<pre><code>polly files list --workspace-path "polly://Data" -y
+</code></pre>
 
 To access the directory in the notebook, the following command will have to be executed on the notebook terminal.
 
-```
-polly files sync -s "<path/to/the/project/directory>" -d "<absolute/path/to/the/notebook/directory>" -y
-```
+<pre><code>polly files sync -s "<path/to/the/project/directory>" -d "<absolute/path/to/the/notebook/directory>" -y
+</code></pre>
 
 If the folder called “Data” is to be accessed from Project in the notebook folder called “Input”, execute the following command.
 
-```
-polly files sync -s "polly://Data" -d "Input" -y
-```
+<pre><code>polly files sync -s "polly://Data" -d "Input" -y
+</code></pre>
 
 To save notebook directories back to Project, keep the source as notebook directory and destination as Polly Project in the same command as mentioned above.
 
-```
-polly files sync -s "<absolute/path/to/the/notebook/directory>" -d "<path/to/the/project/directory>" -y
-```
+<pre><code>polly files sync -s "<absolute/path/to/the/notebook/directory>" -d "<path/to/the/project/directory>" -y
+</code></pre>
 
 To save the folder called “Output” back to Polly Project, use the following command.
 
-```
-polly files sync -s "Output" -d "polly://" -y
-```
+<pre><code>polly files sync -s "Output" -d "polly://" -y
+</code></pre>
 
-### Installing Packages
+##Installing Packages
 
 Although most of the required packages and tools can be made available to you via the customized docker environment, sometimes you might require to install new packages to carry on the analysis. For installing the packages, you can choose two options based on their convenience, you can do it on the Notebook itself or via the terminal.
 
+**Installing packages and system binaries using the Notebook cell**
 
-#### Installing packages and system binaries using the Notebook cell
 You can install the required packages and system binaries by running the usual installation codes on the code cell of a notebook.
 
-* **For Python packages:** You can run the following command in the code cell with Python kernel selected to install the required packages.
+*   **For Python packages:** You can run the following command in the code cell with Python kernel selected to install the required packages.
 
-```
-# for installing packages DON'T forget to use sudo. It will not ask for password.
+<pre><code># for installing packages DON'T forget to use sudo. It will not ask for password.
 !sudo pip install <package-name>
-```
+</code></pre>
  
-* **For R packages:** You can run the following command in the code cell with R kernel selected to install the required packages.
+*   **For R packages:** You can run the following command in the code cell with R kernel selected to install the required packages.
 
-```
-# for installing packages DON'T forget to use sudo. It will not ask for password.
+<pre><code># for installing packages DON'T forget to use sudo. It will not ask for password.
 ## Installing CRAN packages
 !sudo  R -e 'install.packages(c("package-name"), repos="https://cloud.r-project.org/")'
 
@@ -278,39 +274,36 @@ You can install the required packages and system binaries by running the usual i
 !sudo R -e 'BiocManager::install(c("package-name"), update = TRUE, ask = FALSE)'
 # If error finding BiocManager then install it first using the following command and re-run the above command.
 !sudo  R -e 'install.packages(c("BiocManager"), repos="https://cloud.r-project.org/")'
-```
+</code></pre>
 
-![Installing R and Python packages](./img/26.png "Installing R and Python packages") <center>**Figure 26:** Installing R and Python packages</center>
+![Installing R and Python packages](../img/Notebooks/26.png) <center>**Figure 26.** Installing R and Python packages</center>
 
-* **For System binaries:** You can also install the system binaries by running the following command in the code cell selecting the bash kernel.
+*   **For System binaries:** You can also install the system binaries by running the following command in the *code cell* selecting the *bash* kernel.
 
-```
-# System binaries
+<pre><code># System binaries
 sudo apt install <package-name>
  
 # If the above command outputs package not found, You can run this command to update the system package indices
 sudo apt-get update
-```
+</code></pre>
 
-![Installing System binaries using the Notebook code cell](./img/27.png "Installing System binaries using the Notebook code cell") <center>**Figure 27:** Installing System binaries using the Notebook code cell</center>
+![Installing System binaries using the Notebook code cell](../img/Notebooks/27.png) <center>**Figure 27.** Installing System binaries using the Notebook *code cell*</center>
 
-#### Installing packages and system binaries via Terminal
+**Installing packages and system binaries via Terminal**
 
-Another option is also available to install various packages and system binaries using the terminal. You can access the terminal as described in the document above. The commands for installation are almost similar to commands used while installing using a notebook code cell.
+Another option is also available to install various packages and system binaries using the terminal. You can access the terminal as described in the document above. The commands for installation are almost similar to commands used while installing using a notebook *code cell*.
 
-* **For Python packages:** You can run the following command directly on the terminal to install the required packages. Once the package installation is successful, you can import the package in your notebook.
+*   **For Python packages:** You can run the following command directly on the terminal to install the required packages. Once the package installation is successful, you can import the package in your notebook.
 
-```
-# for installing packages DON'T forget to use sudo. It will not ask for password.
+<pre><code># for installing packages DON'T forget to use sudo. It will not ask for password.
 > sudo pip install <package-name>
-```
+</code></pre>
 
-![Installing Python packages using the Terminal](./img/28.png "Installing Python packages using the Terminal") <center>**Figure 28:** Installing Python packages using the Terminal</center>
+![Installing Python packages using the Terminal](../img/Notebooks/28.png) <center>**Figure 28.** Installing Python packages using the Terminal</center>
 
-* **For R packages:** You are required to go to the terminal and open the R Kernel using “sudo R” and then install the required R packages. Once the package installation is successful, you can import the library in your notebook  R kernel as usual.
+*   **For R packages:** You are required to go to the terminal and open the R Kernel using “sudo R” and then install the required R packages. Once the package installation is successful, you can import the library in your notebook  R kernel as usual.
 
-```
-## You can install R package by opening R terminal
+<pre><code>## You can install R package by opening R terminal
 > sudo R
  
 ## Install CRAN packages using the following command
@@ -321,30 +314,27 @@ Another option is also available to install various packages and system binaries
 > BiocManager::install(c("pkg-name"), update = TRUE, ask = FALSE)
 # If error finding BiocManager then install it first using the following command and re-run the above command.
 > install.packages("BiocManager")
-```
+</code></pre>
 
-![Installing R packages using the Terminal](./img/29.png "Installing R packages using the Terminal") <center>**Figure 29:** Installing R packages using the Terminal</center>
+![Installing R packages using the Terminal](../img/Notebooks/29.png) <center>**Figure 29.** Installing R packages using the Terminal</center>
 
-* **For System binaries:** You can also install the system binaries by running the following command directly on the terminal itself.
+*   **For System binaries:** You can also install the system binaries by running the following command directly on the terminal itself.
 
-```
-# System binaries
+<pre><code># System binaries
 > sudo apt install <package-name>
  
 # If the above command outputs package not found, You can run this command to update the system package indices
 > sudo apt-get update
-```
+</code></pre>
 
+![Installing System libraries using the Terminal](../img/Notebooks/30.png) <center>**Figure 30.** Installing System libraries using the Terminal</center>
 
-![Installing System libraries using the Terminal](./img/30.png "Installing System libraries using the Terminal") <center>**Figure 30:** Installing System libraries using the Terminal</center>
+##Reusable Scripts
 
-## Reusable Scripts
+Polly Notebook also allows you to make use of the reusable scripts which are already made available to you in every notebook. The reusable scripts consist of the snippet codes which are required frequently to perform any analysis. The scripts can include data reading, normalization, visualization generic functions/codes and can be added to the notebook *code cell* with just a single click and executed as usual.  The reusable scripts can be found on the left side as a collapsible dialogue box and you can choose the scripts at any time while performing the analysis.
 
-Polly Notebook also allows you to make use of the reusable scripts which are already made available to you in every notebook. The reusable scripts consist of the snippet codes which are required frequently to perform any analysis. The scripts can include data reading, normalization, visualization generic functions/codes and can be added to the notebook code cell with just a single click and executed as usual.  The reusable scripts can be found on the left side as a collapsible dialogue box and you can choose the scripts at any time while performing the analysis.
-
-![Reusable scripts on Polly Notebook](./img/31.png "Reusable scripts on Polly Notebook") <center>**Figure 31:** Reusable scripts on Polly Notebook</center>
+![Reusable scripts on Polly Notebook](../img/Notebooks/31.png) <center>**Figure 31.** Reusable scripts on Polly Notebook</center>
 
 On the right side, another collapsible dialogue box gets opened when you select any reusable script which provides information about the options and usage of that particular reusable script. You can also add your own reusable scripts on the Polly Notebook so as to make use of them in your repeated analysis and save time.
-**(hyperlink to be added by @Jainik Dedhia )**
 
-![Options and Information of Reusable scripts](./img/32.png "Options and Information of Reusable scripts") <center>**Figure 32:** Options and Information of Reusable scripts</center>
+![Options and Information of Reusable scripts](../img/Notebooks/32.png) <center>**Figure 32.** Options and Information of Reusable scripts</center>
