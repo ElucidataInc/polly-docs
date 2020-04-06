@@ -38,11 +38,11 @@ To uninstall Polly CLI, run the following commands on Terminal / Command prompt 
 
 *   Linux: 
 
-    <pre><code>sudo npm install -g @elucidatainc/pollycli</code></pre>
+    <pre><code>sudo npm uninstall -g @elucidatainc/pollycli</code></pre>
 
 *   Mac: 
 
-    <pre><code>npm install -g @elucidatainc/pollycli</code></pre>
+    <pre><code>npm uninstall -g @elucidatainc/pollycli</code></pre>
 
 **Note:**
 
