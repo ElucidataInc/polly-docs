@@ -12,7 +12,7 @@ nav:
         - Labeled LC-MS Workflow: Apps/Metabolomic Data/Labeled LC-MS Workflow.md
         - Labeled LC-MS/MS Workfow: Apps/Metabolomic Data/Labeled LC-MSMS Workflow.md
         - MetScape: Apps/Metabolomic Data/MetScape.md
-        - El-MAVEN Phi Realtive LC-MS: Apps/Metabolomic Data/El-MAVEN Phi Relative LC-MS.md
+        - El-MAVEN Phi Relative LC-MS: Apps/Metabolomic Data/El-MAVEN Phi Relative LC-MS.md
         - FirstView: Apps/Metabolomic Data/FirstView.md
         - Untargeted Pipeline: Apps/Metabolomic Data/Untargeted Pipeline.md
         - QuantFit: Apps/Metabolomic Data/QuantFit.md
@@ -20,9 +20,9 @@ nav:
       - Screening and Sequencing Data: 
         - CRISPR Screening: Apps/Screening & Sequencing Data/CRISPR Screening.md
         - High Throughput Drug Screening: Apps/Screening & Sequencing Data/High Throughput Drug Screening.md
-        - RNA Seq Qorkflow: Apps/Screening & Sequencing Data/RNA Seq Workflow.md
+        - RNA Seq Workflow: Apps/Screening & Sequencing Data/RNA Seq Workflow.md
       - Proteomics Data:
-        - Protoemics Workflow: Apps/Proteomic Data/Proteomics Workflow.md
+        - Proteomics Workflow: Apps/Proteomic Data/Proteomics Workflow.md
       - Lipidomics Data:
         - Lipidomics Visualization Dashboard: Apps/Lipidomics Data/Lipidomics Visualization Dashboard.md
       - Multi-omics Data:
