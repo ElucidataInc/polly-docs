@@ -47,7 +47,7 @@ This is a .csv file wherein the first column presents the samples and would incl
 
 #Tutorial
 
-Select *RNA Seq Qorkflow* from the dashboard under the *Screening and Sequencing Data* tab.
+Select *RNA Seq Workflow* from the dashboard under the *Screening and Sequencing Data* tab.
 
 ![Polly Dashboard](../../img/RNASeq/Screenshot 2020-03-26 at 6.00.19 PM.png) <center>**Figure 4.** Polly Dashboard</center>
 
