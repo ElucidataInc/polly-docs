@@ -19,7 +19,7 @@ CRISPR Screening provides an interactive way to explore and visualize the qualit
 *   Save and share analyses with other collaborators.
 *   Revisit previously performed analyses at any time.
 
-![CRISPR Screening](../img/CRISPR/(1)CRISPRScreeningWF.png) <center>**Figure 1.** CRISPR Screening</center>
+![CRISPR Screening](../../../img/CRISPR/(1)CRISPRScreeningWF.png) <center>**Figure 1.** CRISPR Screening</center>
 
 #Getting Started
 
@@ -63,9 +63,9 @@ CRISPR Screening provides an interactive way to explore and visualize the qualit
 
 Select *CRISPR Screening* from the dashboard under the *Screening and Sequencing Data* Tab as shown in Figure 2. Create a *New Project* to be redirected to CRISPR Screening's upload page.
 
-![Polly Dashboard](../img/CRISPR/(2)Manage.png) <center>**Figure 2.** Dashboard</center>
+![Polly Dashboard](../../../img/CRISPR/(2)Manage.png) <center>**Figure 2.** Dashboard</center>
 
-![CRISPR Screening](../img/CRISPR/(3)Analyze.png) <center>**Figure 3.** CRISPR Screening</center>
+![CRISPR Screening](../../../img/CRISPR/(3)Analyze.png) <center>**Figure 3.** CRISPR Screening</center>
 
 
 ##Upload Files
@@ -75,11 +75,11 @@ Upload the files in their respective tabs​ as indicated by the screenshots bel
 *   Click on *Upload Files* on the *Upload Fastq Files* box to upload the fastq.gz files.
 *   Click on *Upload Files* button on the *Upload sgRNA Files* box to upload the library file in .csv format.
 
-![PollyTM CRISPR Upload Dashboard](../img/CRISPR/(5)upload.png) <center>**Figure 5.** Upload interface</center>
+![PollyTM CRISPR Upload Dashboard](../../../img/CRISPR/(5)upload.png) <center>**Figure 5.** Upload interface</center>
 
 *   Track the status of the upload real-time.
 
-![Real-time tracking](../img/CRISPR/(6)progress.png) <center>**Figure 6.** Real-time tracking</center>
+![Real-time tracking](../../../img/CRISPR/(6)progress.png) <center>**Figure 6.** Real-time tracking</center>
 
 ##Set parameters and process comparisons
 
@@ -93,17 +93,17 @@ Upon successful upload of the files, the next step is to set parameters. All the
     *   **Trim-5':** 23
     *   **sgRNA length:** 19
 
-![Select Pipeline and Parameters Interface](../img/CRISPR/(7)parameter.png) <center>**Figure 7.** Select Pipeline and Parameters Interface </center>
+![Select Pipeline and Parameters Interface](../../../img/CRISPR/(7)parameter.png) <center>**Figure 7.** Select Pipeline and Parameters Interface </center>
 
 ##Give identifier names to the uploaded .fastq samples
 
-![Sample Name Editor](../img/CRISPR/(8)editor.png) <center>**Figure 8.** Sample Name Editor</center>
+![Sample Name Editor](../../../img/CRISPR/(8)editor.png) <center>**Figure 8.** Sample Name Editor</center>
 
 ##Renaming of comparisons and selection of conditions and baseline
 
 Rename the default comparison and select baseline and condition samples for this comparison as indicated in the screenshot. After selecting the baseline & condition samples, select *Start Processing* option.
 
-![Rename comparisons](../img/CRISPR/(9)default.png) <center>**Figure 9.** Rename comparisons</center>
+![Rename comparisons](../../../img/CRISPR/(9)default.png) <center>**Figure 9.** Rename comparisons</center>
 
 Add another comparison by clicking on the button *Add New* button at the right corner of the screen.
 
@@ -122,17 +122,17 @@ After the coffee break, you can go to the working project by following small ste
 
 3.  Click on the project you were working on. Here I have "new_project" as a project name.
 
-![Select Project](../img/CRISPR/(10)Manage.png) <center>**Figure 10.** Select project</center>
+![Select Project](../../../img/CRISPR/(10)Manage.png) <center>**Figure 10.** Select project</center>
 
 **Track the progress of each comparison** with the help of the icons depicted below.
 
-![Track Progress of each comparison](../img/CRISPR/(11)comp.png) <center>**Figure 11.** Track Progress of each comparison</center>
+![Track Progress of each comparison](../../../img/CRISPR/(11)comp.png) <center>**Figure 11.** Track Progress of each comparison</center>
 
 ##Dashboard
 
 After clicking on *Go To Dashboard*, the following screenshot is displayed.
 
-![CRISPR Dashboard](../img/CRISPR/(12)dashboared.png) <center>**Figure 12.** CRISPR Dashboard</center>
+![CRISPR Dashboard](../../../img/CRISPR/(12)dashboared.png) <center>**Figure 12.** CRISPR Dashboard</center>
 
 ##Analysis Table & sgRNA Plot
 
@@ -141,16 +141,16 @@ The table displays the beta score, *p*-value and FDR values for each gene.
 *   *sgRNA Plot:* The sgRNA plot navigates you to visualise the normalised counts of each gene. By clicking the gene name in the table the sgRNA plots changes accordingly. You can download the plots, normalised counts and result table of the analysis by clicking on *Download* button on the top right corner of the page. By default, all sgRNA and Samples are selected and displayed in the sgRNA Read Count Plot.
     *sgRNA Plot Setting:* Under setting, there is an option of select and deselect of sgRNAs or samples of interest.
 
-![sgRNA Plot](../img/CRISPR/(13)sgrna.png) <center>**Figure 13.** sgRNA Plot</center>
+![sgRNA Plot](../../../img/CRISPR/(13)sgrna.png) <center>**Figure 13.** sgRNA Plot</center>
 
 *   *Distribution Plot:*
     *   *CDF Plot:* The cumulative distribution function of *p*-values. Smallest FDR greater or equal to 5% and 25% are displayed.
 
-    ![CDF Plot](../img/CRISPR/(14)cdf.png) <center>**Figure 14.** CDF Plot</center>
+    ![CDF Plot](../../../img/CRISPR/(14)cdf.png) <center>**Figure 14.** CDF Plot</center>
 
     *   *Count Plot:* Histogram of *p*-values. Small *p*-values should be enriched. If a one-sided test is performed, *p*-values toward 1.0 are expected to be enriched as well.
 
-    ![Count Plot](../img/CRISPR/(15)histo.png) <center>**Figure 15.** Count Plot</center>
+    ![Count Plot](../../../img/CRISPR/(15)histo.png) <center>**Figure 15.** Count Plot</center>
 
 **Note:**
 
@@ -183,7 +183,7 @@ By clicking on the tab *Switch Comparison*, you can change the comparison that h
 
 Click on button present at the left of the screen. Following options will pop up:
 
-![Analyze your Data module](../img/CRISPR/(16)analyze.png) <center>**Figure 16.** Analyze your Data module</center>
+![Analyze your Data module](../../../img/CRISPR/(16)analyze.png) <center>**Figure 16.** Analyze your Data module</center>
 
 **Have a look at the QC module**
 
@@ -191,12 +191,12 @@ You can have a look at the QC module by clicking on the button as indicated on t
 
 | **QC TERM** | **DESCRIPTION** | **EXPECTED** | **SCREENSHOT** |
 | --- | --- | --- | --- |
-| GC Content Distribution | Measures GC content across the whole length of each sequencing reads | Similar distribution for all samples from the same library |![(17)1](../img/CRISPR/(17)1GCcontent.png)
-| Base Quality | Measures the base quality distribution of sequencing reads. | Sequencing Reads should have reasonable median value > 25. | ![(17)2](../img/CRISPR/(17)2BaseQuality.png)
-| Sequencing Reads | Gives the total number of sequencing reads. | May vary depending on the sequencing platform. | ![(17)3](../img/CRISPR/(17)3SequencingReads.png)
-| Mapped Reads | Total Number of mapped reads to the sgRNA library. | Good Statistical power of downstream analysis relies on sufficient reads preferred to be over 300. | ![(17)4](../img/CRISPR/(17)4MappedReads.png)
-| Gini Index | Measures the evenness of the sgRNA read counts. It is the log scaled read count distribution. | Gini Index: 1. Plasmid or Control Samples ~ 0.1 2. Negative Selection Samples ~ 0.2 High Gini index in plasmid library, in early time points, or in negative selection experiments may indicate CRISPR oligo-nucleotide synthesis unevenness, low viral transfection efficiency, and over the selection, respectively. | ![(17)5](../img/CRISPR/(17)5GiniIndex.png)
-| Zero Counts | Number of sgRNAs with zero counts. | ~ 1% of total sgRNAs. | ![(17)6](../img/CRISPR/(17)6ZeroCounts.png)
+| GC Content Distribution | Measures GC content across the whole length of each sequencing reads | Similar distribution for all samples from the same library |![(17)1](../../../img/CRISPR/(17)1GCcontent.png)
+| Base Quality | Measures the base quality distribution of sequencing reads. | Sequencing Reads should have reasonable median value > 25. | ![(17)2](../../../img/CRISPR/(17)2BaseQuality.png)
+| Sequencing Reads | Gives the total number of sequencing reads. | May vary depending on the sequencing platform. | ![(17)3](../../../img/CRISPR/(17)3SequencingReads.png)
+| Mapped Reads | Total Number of mapped reads to the sgRNA library. | Good Statistical power of downstream analysis relies on sufficient reads preferred to be over 300. | ![(17)4](../../../img/CRISPR/(17)4MappedReads.png)
+| Gini Index | Measures the evenness of the sgRNA read counts. It is the log scaled read count distribution. | Gini Index: 1. Plasmid or Control Samples ~ 0.1 2. Negative Selection Samples ~ 0.2 High Gini index in plasmid library, in early time points, or in negative selection experiments may indicate CRISPR oligo-nucleotide synthesis unevenness, low viral transfection efficiency, and over the selection, respectively. | ![(17)5](../../../img/CRISPR/(17)5GiniIndex.png)
+| Zero Counts | Number of sgRNAs with zero counts. | ~ 1% of total sgRNAs. | ![(17)6](../../../img/CRISPR/(17)6ZeroCounts.png)
 |
 
 **Visualize sample level QC**
@@ -205,9 +205,9 @@ By selecting the indicated categories. Checks the consistency between samples.
 
 | **QC TERM** | **DESCRIPTION** | **SCREENSHOT** |
 | --- | --- | --- |
-| PCA Clustering | Calculates pairwise Pearson correlations of sample log read counts and draw the samples on the first three components of a Principle Component Analysis (PCA). Samples with similar conditions should cluster together |![(18)1](../img/CRISPR/(18)1PCA.png)
-| Read count CDF || ![(18)2](../img/CRISPR/(18)2Readcount.png)
-|Normalization | Boxplot shows the normalized read count distribution. |![(18)3](../img/CRISPR/(18)3Norm.png)
+| PCA Clustering | Calculates pairwise Pearson correlations of sample log read counts and draw the samples on the first three components of a Principle Component Analysis (PCA). Samples with similar conditions should cluster together |![(18)1](../../../img/CRISPR/(18)1PCA.png)
+| Read count CDF || ![(18)2](../../../img/CRISPR/(18)2Readcount.png)
+|Normalization | Boxplot shows the normalized read count distribution. |![(18)3](../../../img/CRISPR/(18)3Norm.png)
 |
 
 **Explore MAGeCK-VISPR results**
@@ -216,8 +216,8 @@ By clicking on the indicated module and selecting the visualization of interest.
 
 | **CATEGORIES** | **DESCRIPTION** | **SCREENSHOT** |
 | --- | --- | --- |
-| Clustering | *k-* means clustering view over normalized beta scores of all conditions (using Ward variance minimization and Euclidean distance) on top 500 genes. |![(19)1](../img/CRISPR/(19)1Clustering.png)
-| Comparisons | Generates the Venn diagram displaying the overlap of significant genes in different comparisons. When you hover on the intersected area, you get the list of common genes in the analysis. |![(19)2](../img/CRISPR/(19)2Comparision.png)
+| Clustering | *k-* means clustering view over normalized beta scores of all conditions (using Ward variance minimization and Euclidean distance) on top 500 genes. |![(19)1](../../../img/CRISPR/(19)1Clustering.png)
+| Comparisons | Generates the Venn diagram displaying the overlap of significant genes in different comparisons. When you hover on the intersected area, you get the list of common genes in the analysis. |![(19)2](../../../img/CRISPR/(19)2Comparision.png)
 |
 
 ##Multi Comparison
@@ -228,17 +228,17 @@ In Multi Comparison, you can compare the current analysis with the previously pr
 
 *   Select the comparisons you want to compare with your base comparison. Base Comparison is the comparison selected in the current analysis.
 
-![Multi comparisons](../img/CRISPR/(20)Multi.png) <center>**Figure 17.** Multi comparison</center>
+![Multi comparisons](../../../img/CRISPR/(20)Multi.png) <center>**Figure 17.** Multi comparison</center>
 
 *   Once the comparisons are selected, click on the *Save* button on the top right corner of the page. On doing so, the following table is displayed with all the selected comparisons.
 
-![Selected comparisons after save](../img/CRISPR/(21)Tab.png)
+![Selected comparisons after save](../../../img/CRISPR/(21)Tab.png)
 
 *   By default, the table displays values for the negative selection. It can be switched to positive selection by clicking the positive selection option (as shown earlier for a single comparison).
 
 *   The multi-comparison table can show union or intersection of the genes present in all the comparisons. Here, union will show all the genes present in all the comparisons and intersection will only show genes which are common to all the comparisons. by default, union is selected. This can be changed by selecting the intersection option on the top of the screen.
 
-![Multi-comparison](../img/CRISPR/(22).png) <center>**Figure 18.** Multi-comparison</center>
+![Multi-comparison](../../../img/CRISPR/(22).png) <center>**Figure 18.** Multi-comparison</center>
 
 *   sgRNA read count plot for multiple comparisons can be seen together one below the other (two at a time).
 
@@ -246,11 +246,11 @@ In Multi Comparison, you can compare the current analysis with the previously pr
     *   Click on sgRNA Read Count Plot.
     *   Options and Info box opens from the right side of the screen. Select the gene for which the plot is required and click on *Apply Changes*. Once done, plots for two comparisons appear one below the other as shown in the image.
 
-    ![Compare sgRNA Read count plot of a gene of interest in the base and comparisons performed in the previous analysis](../img/CRISPR/(23)sgc.png) <center>**Figure 19.** Compare sgRNA Read count plot of a gene of interest in the base and comparisons performed in the previous analysis</center>
+    ![Compare sgRNA Read count plot of a gene of interest in the base and comparisons performed in the previous analysis](../../../img/CRISPR/(23)sgc.png) <center>**Figure 19.** Compare sgRNA Read count plot of a gene of interest in the base and comparisons performed in the previous analysis</center>
 
     *   The comparisons for which the plots are shown can be changed by clicking on the translucent arrows next to the images.
 
-    ![(24)grp](../img/CRISPR/(24)grp.png)
+    ![(24)grp](../../../img/CRISPR/(24)grp.png)
 
 ##sgRNA Removal
 
@@ -262,19 +262,19 @@ Follow these steps to remove these abruptly high sgRNAs
 
 *   Select the srRNA Removal option from the pop up box on the left hand side
 
-    ![(25)](../img/CRISPR/(25).png)
+    ![(25)](../../../img/CRISPR/(25).png)
 
 *   It will take some time for the sgRNA file to be fetched. Then, a box will open to enter the *Median Multiplier*.
 
-    ![(26)](../img/CRISPR/(26).png)
+    ![(26)](../../../img/CRISPR/(26).png)
 
 *   Enter the desired median multiplier in the box and click *Run*. The number of sgRNAs rejected and remaining will be shown. You can keep changing the multiplier till a satisfied number of sgRNAs are remaining.
 
-    ![(27)](../img/CRISPR/(27).png)
+    ![(27)](../../../img/CRISPR/(27).png)
 
 *   Once you are satisfied with the number of sgRNAs, click *Run MLE. *This will start running a comparison with just the remaining sgRNAs. Once the new comparison starts, a notification appears on the top right of the screen. Once the comparison is processed, it will be available in the list of comparisons in this analysis.
 
-    ![(28)](../img/CRISPR/(28).png)
+    ![(28)](../../../img/CRISPR/(28).png)
 
 ##References
 

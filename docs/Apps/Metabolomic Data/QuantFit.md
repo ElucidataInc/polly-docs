@@ -28,7 +28,7 @@ Calibration refers to the process of quantifying samples of unknown concentratio
 
     *   Assigning weights to the standard samples
 
-![QuantFit](../img/QuantFit/QuantFit.png) <center>**Figure 1.** QuantFit</center>
+![QuantFit](../../img/QuantFit/QuantFit.png) <center>**Figure 1.** QuantFit</center>
 
 #Getting Started
 
@@ -42,7 +42,7 @@ The intensity file is mandatory for both LC-MS and LC-MS/MS data and should be i
 
 The intensity file can be either in the long format.
 
-![Sample intensity file in long format](../img/QuantFit/MetaboliteIntensity.png) <center>**Figure 2.** Sample intensity file in long format</center>
+![Sample intensity file in long format](../../img/QuantFit/MetaboliteIntensity.png) <center>**Figure 2.** Sample intensity file in long format</center>
 
 where,
 
@@ -58,13 +58,13 @@ where,
 
 Or it can be the .csv file exported after peak picking in El-MAVEN.
 
-![Sample intensity file exported from El-MAVEN](../img/QuantFit/metscape_intensity_file.png) <center>**Figure 3.** Sample intensity file exported from El-MAVEN</center>
+![Sample intensity file exported from El-MAVEN](../../img/QuantFit/metscape_intensity_file.png) <center>**Figure 3.** Sample intensity file exported from El-MAVEN</center>
 
 **Metadata standard sample file**
 
 The metadata standard file is mandatory for both LC-MS and LC-MS/MS data and should be in either .csv, .xls, .xlsx, .txt format. This file contains concentration information of the standard samples using which quantification is performed.
 
-![Sample metadata standard file](../img/QuantFit/Metadatastd.png) <center>**Figure 4.** Sample metadata standard file</center>
+![Sample metadata standard file](../../img/QuantFit/Metadatastd.png) <center>**Figure 4.** Sample metadata standard file</center>
 
 where,
 
@@ -82,7 +82,7 @@ where,
 
 The metadata mapping file is optional LC-MS but mandatory for LC-MS/MS data and should be in either .csv, .xls, .xlsx, .txt format. This file is required to map daughter fragments to their parent fragments.
 
-![Sample metadata mapping file](../img/QuantFit/Metadatamq.png) <center>**Figure 5.** Sample metadata mapping file</center>
+![Sample metadata mapping file](../../img/QuantFit/Metadatamq.png) <center>**Figure 5.** Sample metadata mapping file</center>
 
 where,
 
@@ -128,23 +128,23 @@ where,
 
 Select QuantFIt from the dashboard under the *Metabolomics Data* tab. Create a *New Project* to be redirected to QuantFit's upload page.
 
-![Polly Dashboard and Project selection](../img/QuantFit/polly_analyze_apps_tiles.png) <!-- <center>**Figure 1.** Sample metadata mapping file</center> -->
+![Polly Dashboard and Project selection](../../img/QuantFit/polly_analyze_apps_tiles.png) <!-- <center>**Figure 1.** Sample metadata mapping file</center> -->
 
-![Polly Dashboard and Project selection](../img/QuantFit/create_or_choose_project_dialog.png) <center>**Figure 6.** Polly Dashboard and Project selection</center>
+![Polly Dashboard and Project selection](../../img/QuantFit/create_or_choose_project_dialog.png) <center>**Figure 6.** Polly Dashboard and Project selection</center>
 
 Click on *Upload File* and upload the metabolite intensity file.
 
-![Upload page](../img/QuantFit/UploadPage.png) <center>**Figure 7.** Upload page</center>
+![Upload page](../../img/QuantFit/UploadPage.png) <center>**Figure 7.** Upload page</center>
 
 ##Metadata Interface 
 
 After the file have been successfully uploaded you will be redirected to the Metadata interface. This interface provides you the ability to either upload or create your metadata.
 
-![Upload metadata by clicking on Upload Files](../img/QuantFit/MetadataInterface.png) <center>**Figure 8.** Upload metadata by clicking on *Upload Files*</center>
+![Upload metadata by clicking on Upload Files](../../img/QuantFit/MetadataInterface.png) <center>**Figure 8.** Upload metadata by clicking on *Upload Files*</center>
 
-![Create metadata by selecting the standards within the data](../img/QuantFit/MetadataInterfaceCreate.png) <center>**Figure 9.** Create metadata by selecting the standards within the data</center>
+![Create metadata by selecting the standards within the data](../../img/QuantFit/MetadataInterfaceCreate.png) <center>**Figure 9.** Create metadata by selecting the standards within the data</center>
 
-![Enter concentration values for all the standard samples across all metabolites in a few clicks](../img/QuantFit/MetadataInterfaceCreate3.png) <center>**Figure 10.** Enter concentration values for all the standard samples across all metabolites in a few clicks</center>
+![Enter concentration values for all the standard samples across all metabolites in a few clicks](../../img/QuantFit/MetadataInterfaceCreate3.png) <center>**Figure 10.** Enter concentration values for all the standard samples across all metabolites in a few clicks</center>
 
 ##Injection Efficiency Correction
 
@@ -152,37 +152,37 @@ Injection Efficiency Correction is used to normalize the biosamples with respect
 
 To normalize intensities of metabolites present in the sample, by default we calculate a normalizing factor for each sample. This is calculated by dividing each intensity value by the maximum intensity value among the non-outlier samples. Then the intensity values of all metabolites in each sample is divided by the respective normalizing factor. You can also select this highest intensity sample from the list of outlier samples. QuantFit uses [Grubb's test](https://en.wikipedia.org/wiki/Grubbs%27_test_for_outliers) to detect outliers from among the samples.
 
-![Select internal standard metabolite and a sample for injection efficiency correction. ](../img/QuantFit/InjectionEfficiencyCorrection.png) <center>**Figure 11.** Select internal standard metabolite and a sample for injection efficiency correction. </center>
+![Select internal standard metabolite and a sample for injection efficiency correction. ](../../img/QuantFit/InjectionEfficiencyCorrection.png) <center>**Figure 11.** Select internal standard metabolite and a sample for injection efficiency correction. </center>
 
 ##Quantification Dashboard
 
 By default, linear quantification will be performed by the tool after performing the above-mentioned steps. However, you can optimize quantification by changing the curve fit to Polynomial, Exponential, LogLog or Power depending upon your data. In case you feel there is an outlier in your data, click on the sample and then on the “-” sign in the pop-up box as shown in FIgure. 13. Click on *Quantify* to recalculate the curve fit  at the new parameters.
 
-![Quantification Dashboard](../img/QuantFit/QuantficationDashboard.png) <center>**Figure 12.** Quantification Dashboard</center>
+![Quantification Dashboard](../../img/QuantFit/QuantficationDashboard.png) <center>**Figure 12.** Quantification Dashboard</center>
 
 QuantFit plots quantified values and standard values on the calibration curve. You can optimize the curve fit from this interface or view this curve on linear and log axes for better analysis.
 
-![Calibration curve](../img/QuantFit/QuantificationDashboard2.png) <center>**Figure 13.** Calibration curve</center>
+![Calibration curve](../../img/QuantFit/QuantificationDashboard2.png) <center>**Figure 13.** Calibration curve</center>
 
 The *Concentration Plot* gives the concentrations across all biosamples as a barplot. The *Residue Plot* gives the residual error for the curve fit as a barplot. You can toggle between these plots by clicking on their names as shown in Figure 14.
 
-![Residue and Concentration plot](../img/QuantFit/QuantificationDashboard3.png) <center>**Figure 14.** Residue and Concentration plot</center>
+![Residue and Concentration plot](../../img/QuantFit/QuantificationDashboard3.png) <center>**Figure 14.** Residue and Concentration plot</center>
 
 Clicking on *Standard Data* on the *Calibration Curv*e shown in Figure 12. gives information about the standard mappings in the input file.
 
-![Standard data](../img/QuantFit/StandardData.png) <center>**Figure 15.** Standard data</center>
+![Standard data](../../img/QuantFit/StandardData.png) <center>**Figure 15.** Standard data</center>
 
 ##Suggested Fits
 
 The suggested fits option makes it possible for you to save time spent on manually curating data by removing outliers and selecting the best fit. The samples furthest from the default linear curve are removed individually and the curve fit is calculated. Subsequently the fits calcualted with the best r<sup>2</sup> apart from the default linear fit (*Custom FIt*) are displayed as *Suggested Fit 1*, *Suggested Fit 2* and *Suggested Fit 3*. You can select any fit and mark it as the default fit by clicking on *Set Fit as Default*.
 
-![Suggested Fits](../img/QuantFit/SuggestedFits.png) <center>**Figure 16.** Suggested Fits</center>
+![Suggested Fits](../../img/QuantFit/SuggestedFits.png) <center>**Figure 16.** Suggested Fits</center>
 
 #Normalization
 
 You can also normalize the quantified concentration values with respect to an internal standard's concentration values. You can select an internal standard from the list of metabolites for normalization. To normalize the concentration of a given metabolite, concentrations from individual samples are divided by the respective concentration of the internal standard.
 
-![Normalization](../img/QuantFit/Normalization.png) <center>**Figure 17.** Normalization</center>
+![Normalization](../../img/QuantFit/Normalization.png) <center>**Figure 17.** Normalization</center>
 
 ##Logs
 
@@ -198,13 +198,13 @@ It summarizes all the information of each curve fitting performed for every meta
 
     *   Curve Fit Performed: Curve fitting information and Goodness of fit
 
-![Logs](../img/QuantFit/Logs.png) <center>**Figure 18.** Logs</center>
+![Logs](../../img/QuantFit/Logs.png) <center>**Figure 18.** Logs</center>
 
 ##Processed Data
 
 It shows the quantified values of every metabolite in a table. This can be downloaded as a .csv file by clicking on the download icon.
 
-![Processed data](../img/QuantFit/ProcessedData.png) <center>**Figure 19.** Processed data</center>
+![Processed data](../../img/QuantFit/ProcessedData.png) <center>**Figure 19.** Processed data</center>
 
 #Details about the app
 
@@ -214,7 +214,7 @@ The following section describes the formula used for calculating the curve's goo
 
 **Sum of squares about the mean**
 
-![Sum of squares about the mean](../img/QuantFit/SumofSquareAboutMean.png) <!-- <center>**Figure 1.** Processed data</center> -->
+![Sum of squares about the mean](../../img/QuantFit/SumofSquareAboutMean.png) <!-- <center>**Figure 1.** Processed data</center> -->
 
 where:
 
@@ -230,7 +230,7 @@ where:
 
 **Sum of squares of residuals**
 
-![Sum of squares of residuals](../img/QuantFit/SumofSquaresofResiduals.png) <!-- <center>**Figure 1.** Processed data</center> -->
+![Sum of squares of residuals](../../img/QuantFit/SumofSquaresofResiduals.png) <!-- <center>**Figure 1.** Processed data</center> -->
 
 where:
 
@@ -246,7 +246,7 @@ where:
 
 R<sup>2</sup>
 
-![r2](../img/QuantFit/r2.png) <!-- <center>**Figure 1.** Processed data</center> -->
+![r2](../../img/QuantFit/r2.png) <!-- <center>**Figure 1.** Processed data</center> -->
 
 where:
 
@@ -256,7 +256,7 @@ where:
 
 **Root mean square error**
 
-![Root mean square error](../img/QuantFit/RMSE.png) <!-- <center>**Figure 1.** Processed data</center> -->
+![Root mean square error](../../img/QuantFit/RMSE.png) <!-- <center>**Figure 1.** Processed data</center> -->
 
 where:
 

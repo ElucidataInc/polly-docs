@@ -13,9 +13,9 @@ RNA sequencing (RNA-seq) uses next generation sequencing (NGS) to estimate the p
 *   Presents the data in the form of Heatmap, depicting the expression values of each genes corresponding to the number of samples in the data. 
 *   Perform differential expression analysis. 
 *   Perform enrichment analysis of significant genes using Enrichr and X2K anlysis of significant gene set using X2K. 
-*   Use the differentially expressed results with the output of [MetScape](../Apps/MetScape) to integrate multi-omics data in [IntOmix](../Apps/IntOmix).
+*   Use the differentially expressed results with the output of [MetScape](../../Metabolomic Data/MetScape) to integrate multi-omics data in [IntOmix](../../Multi-omic Data/IntOmix).
 
-![RNA Seq Workflow](../img/RNASeq/RNA Seq.png) <center>**Figure 1.** RNA Seq Workflow</center>
+![RNA Seq Workflow](../../img/RNASeq/RNA Seq.png) <center>**Figure 1.** RNA Seq Workflow</center>
 
 #Getting Started
 
@@ -27,13 +27,13 @@ RNA Seq Workflow requires the following two files as input:
 
 This is a .csv file wherein the first column presents the gene ids of the genes you are analyzing your data against followed by subsequent columns containing counts information from each sample
 
-![Feature counts File](../img/RNASeq/Screenshot 2020-03-25 at 3.33.38 PM.png) <center>**Figure 2.** Feature counts file</center>
+![Feature counts File](../../img/RNASeq/Screenshot 2020-03-25 at 3.33.38 PM.png) <center>**Figure 2.** Feature counts file</center>
 
 **Metadata File**
 
 This is a .csv file wherein the first column presents the samples and would include all the samples used under study. The column *Cohort* represents your cohort information in which the samples are segregated. Other columns can be added to the metadata file as per your use case but are optional.
 
-![Metadata File](../img/RNASeq/Screenshot 2020-03-25 at 3.38.56 PM.png) <center>**Figure 3.** Metadata file</center>
+![Metadata File](../../img/RNASeq/Screenshot 2020-03-25 at 3.38.56 PM.png) <center>**Figure 3.** Metadata file</center>
 
 ##Steps involved in data processing
 
@@ -49,17 +49,17 @@ This is a .csv file wherein the first column presents the samples and would incl
 
 Select *RNA Seq Qorkflow* from the dashboard under the *Screening and Sequencing Data* tab.
 
-![Polly Dashboard](../img/RNASeq/Screenshot 2020-03-26 at 6.00.19 PM.png) <center>**Figure 4.** Polly Dashboard</center>
+![Polly Dashboard](../../img/RNASeq/Screenshot 2020-03-26 at 6.00.19 PM.png) <center>**Figure 4.** Polly Dashboard</center>
 
 Create a *New Project* or choose the existing one from the drop down to be redirected to *RNA Seq Workflow*'s upload page
 
-![Project selection](../img/RNASeq/Screenshot 2020-03-26 at 6.00.28 PM.png) <center>**Figure 5.** Project selection</center>
+![Project selection](../../img/RNASeq/Screenshot 2020-03-26 at 6.00.28 PM.png) <center>**Figure 5.** Project selection</center>
 
 ##Uplaod Files
 
 Upload the feature countsa and metadata file using the drop downs as shown in Figure 6.
 
-![Upload interface](../img/RNASeq/image2019-11-28_14-52-13.png) <center>**Figure 6.** Upload interface</center>
+![Upload interface](../../img/RNASeq/image2019-11-28_14-52-13.png) <center>**Figure 6.** Upload interface</center>
 
 ##Pre-processing
 
@@ -82,9 +82,9 @@ Pre-processing tab contains four sub-tabs which allow you to specify parameters 
 
 Select the desired cleaning method (multiple methods can be selected) and specify the species under study. Once the selection is done, click on *Clean Data*. The visual summary along with the boxplot and data table will get updated once the processing is done.
 
-![Data cleaning](../img/RNASeq/Screenshot 2020-03-27 at 12.41.41 PM.png)
+![Data cleaning](../../img/RNASeq/Screenshot 2020-03-27 at 12.41.41 PM.png)
 
-![Data cleaning](../img/RNASeq/Screenshot 2020-03-27 at 12.39.31 PM.png) <center>**Figure 7.** Data cleaning</center>
+![Data cleaning](../../img/RNASeq/Screenshot 2020-03-27 at 12.39.31 PM.png) <center>**Figure 7.** Data cleaning</center>
 
 **Quantification** 
 
@@ -106,9 +106,9 @@ Select the desired cleaning method (multiple methods can be selected) and specif
 
 Select the desired quantification (only a single method can be selected at a time). Once the selection is done, click on *Quantify*. The visual summary along with the boxplot and data table will get updated once the processing is done.
 
-![Quantification interface](../img/RNASeq/Screenshot 2020-03-27 at 12.56.41 PM.png)
+![Quantification interface](../../img/RNASeq/Screenshot 2020-03-27 at 12.56.41 PM.png)
 
-![Quantification interface](../img/RNASeq/Screenshot 2020-03-27 at 12.56.56 PM.png) <center>**Figure 8.** Quantification interface</center>
+![Quantification interface](../../img/RNASeq/Screenshot 2020-03-27 at 12.56.56 PM.png) <center>**Figure 8.** Quantification interface</center>
 
 **Normalization**
 
@@ -120,9 +120,9 @@ The *Normalization* tab allows you to adjust raw data to account for factors tha
 
 Select the desired normalization method (only a single method can be selected at a time). Once the selection is done, click on *Normalize*. The visual summary along with the boxplot and data table will get updated once the processing is done.
 
-![Normalization interface](../img/RNASeq/Screenshot 2020-03-27 at 2.03.19 PM.png)
+![Normalization interface](../../img/RNASeq/Screenshot 2020-03-27 at 2.03.19 PM.png)
 
-![Normalization interface](../img/RNASeq/Screenshot 2020-03-27 at 2.03.31 PM.png) <center>**Figure 9.** Normalization interface</center>
+![Normalization interface](../../img/RNASeq/Screenshot 2020-03-27 at 2.03.31 PM.png) <center>**Figure 9.** Normalization interface</center>
 
 **Batch Correction**
 
@@ -130,21 +130,21 @@ The *Batch Correction* tab allows you to select a condition from metadata on whi
 
 Select the cohort condition from the drop down list (single selection). Once the selection is done, click on *Run Batch Correction*. The visual summary along with the boxplot and data table will get updated once the processing is done.
 
-![Batch correction](../img/RNASeq/Screenshot 2020-03-27 at 2.08.07 PM.png)
+![Batch correction](../../img/RNASeq/Screenshot 2020-03-27 at 2.08.07 PM.png)
 
-![Batch correction](../img/RNASeq/Screenshot 2020-03-27 at 2.08.19 PM.png) <center>**Figure 10.** Batch correction</center>
+![Batch correction](../../img/RNASeq/Screenshot 2020-03-27 at 2.08.19 PM.png) <center>**Figure 10.** Batch correction</center>
 
 ##PCA Plot
 
 PCA plot allows you to understand the clustering pattern between biologically grouped and ungrouped samples. It provides viusalization by selecting the PC values for x- and y- axes. It’s also possible to specify the cohort order for the plots.
 
-![PCA Plot](../img/RNASeq/Screenshot 2020-03-27 at 3.14.07 PM.png) <center>**Figure 11.** PCA Plot</center>
+![PCA Plot](../../img/RNASeq/Screenshot 2020-03-27 at 3.14.07 PM.png) <center>**Figure 11.** PCA Plot</center>
 
 ##Heat map
 
 A heat map is a graphical representation of data where the individual values contained in a matrix are represented on a color scale. Here the heat map represents expression value of each gene corresponding to the number of samples in the data. The filter icon can be used to filter out the desired samples and genes. Once the filter is applied, the heat map containing the selected genes and sample would b generated.
 
-![Heat map](../img/RNASeq/Screenshot 2020-03-27 at 2.21.54 PM.png) <center>**Figure 12.** Heat map</center>
+![Heat map](../../img/RNASeq/Screenshot 2020-03-27 at 2.21.54 PM.png) <center>**Figure 12.** Heat map</center>
 
 ##Differential expression
 
@@ -167,11 +167,11 @@ Select the statistical test, *p*-val correction method, cohort condition and coh
 
 Based on positive or negative log<sub>2</sub>FC values, you can choose to further filter the significant genes and create a gene set of up-regulated or down-regulated genes which can then be relayed to Enrichr. By default it takes into consideration all the significant genes.
 
-![Differential expression](../img/RNASeq/Screenshot 2020-03-27 at 2.17.04 PM.png)
+![Differential expression](../../img/RNASeq/Screenshot 2020-03-27 at 2.17.04 PM.png)
 
-![Differential expression](../img/RNASeq/Screenshot 2020-03-27 at 2.24.22 PM.png)
+![Differential expression](../../img/RNASeq/Screenshot 2020-03-27 at 2.24.22 PM.png)
 
-![Differential expression](../img/RNASeq/Screenshot 2020-03-27 at 2.17.48 PM.png) <center>**Figure 13.** Differential expression</center>
+![Differential expression](../../img/RNASeq/Screenshot 2020-03-27 at 2.17.48 PM.png) <center>**Figure 13.** Differential expression</center>
 
 ##X2K analysis (eXpression2Kinases) 
 
@@ -192,15 +192,15 @@ The input for X2K analysis is a gene set consisting significant genes which is f
 
 On selecting all the options along with the target database, click on the option *Go*. The enrichment results from the Transcription Factor Enrichment Analysis (TFEA), kinase enrichment analysis (KEA) and Expression2Kinase (X2K) can be viewed from the TFEA,KEA and X2K tabs respectively.
 
-![X2K Analysis (TFEA)](../img/RNASeq/Screenshot 2020-03-27 at 2.29.22 PM.png)
+![X2K Analysis (TFEA)](../../img/RNASeq/Screenshot 2020-03-27 at 2.29.22 PM.png)
 
-![X2K Analysis (TFEA)](../img/RNASeq/Screenshot 2020-03-27 at 2.30.25 PM.png) <center>**Figure 14.** X2K Analysis (TFEA)</center>
+![X2K Analysis (TFEA)](../../img/RNASeq/Screenshot 2020-03-27 at 2.30.25 PM.png) <center>**Figure 14.** X2K Analysis (TFEA)</center>
 
-![X2K Analysis (KEA)](../img/RNASeq/Screenshot 2020-03-27 at 2.31.14 PM.png)
+![X2K Analysis (KEA)](../../img/RNASeq/Screenshot 2020-03-27 at 2.31.14 PM.png)
 
-![X2K Analysis (KEA)](../img/RNASeq/Screenshot 2020-03-27 at 2.44.20 PM.png) <center>**Figure 15.** X2K Analysis (KEA)</center>
+![X2K Analysis (KEA)](../../img/RNASeq/Screenshot 2020-03-27 at 2.44.20 PM.png) <center>**Figure 15.** X2K Analysis (KEA)</center>
 
-![X2K Analysis (X2K)](../img/RNASeq/Screenshot 2020-03-27 at 2.37.53 PM.png) <center>**Figure 16.** X2K Analysis (X2K)</center>
+![X2K Analysis (X2K)](../../img/RNASeq/Screenshot 2020-03-27 at 2.37.53 PM.png) <center>**Figure 16.** X2K Analysis (X2K)</center>
 
 ##Enrichr (Enrichment analysis)
 
@@ -208,7 +208,7 @@ Enrichr performs the enrichment analysis on the gene set relayed, either in the 
 
 To perfomr the enrichment analysis, select the desired Enrichr database.
 
-![Enrichr)](../img/RNASeq/Screenshot 2020-03-27 at 2.48.42 PM.png) <center>**Figure 17.** Enrichr</center>
+![Enrichr)](../../img/RNASeq/Screenshot 2020-03-27 at 2.48.42 PM.png) <center>**Figure 17.** Enrichr</center>
 
 ##PGSEA (Parametric Gene Set Enrichment Analysis)
 
@@ -216,9 +216,9 @@ It avails you to do exploratory parametric analysis of gene expression data. Thi
 
 Click on *Pathway Database* option to select the database of interest from the drop down. Clicking on *Run PGSEA* will generate a data table containing the list of genes along with the heat map.
 
-![PGSEA)](../img/RNASeq/Screenshot 2020-03-27 at 2.49.11 PM.png)
+![PGSEA)](../../img/RNASeq/Screenshot 2020-03-27 at 2.49.11 PM.png)
 
-![PGSEA)](../img/RNASeq/Screenshot 2020-03-27 at 2.49.30 PM.png) <center>**Figure 18.** PGSEA</center>
+![PGSEA)](../../img/RNASeq/Screenshot 2020-03-27 at 2.49.30 PM.png) <center>**Figure 18.** PGSEA</center>
 
 #References
 

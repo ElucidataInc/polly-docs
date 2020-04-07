@@ -13,7 +13,7 @@ The recent development of various omics technologies in biology has increased th
 *   Compare results obtained from the same data at different parameters.
 *   Download results as publication-quality figures in various formats such as .png, .jpeg, .pdf or .xgmml.
 
-![Polly™ IntOmix schematic](../img/IntOmix/intomix_workflow_schematic.png) <center>**Figure 1.** IntOmix</center>
+![Polly™ IntOmix schematic](../../../img/IntOmix/intomix_workflow_schematic.png) <center>**Figure 1.** IntOmix</center>
 
 #Getting Started
 
@@ -26,9 +26,9 @@ IntOmix requires two types of .csv input files:
 
 Both the input files consist of information about log<sub>2</sub> Fold Change and the *p*-value of each gene or metabolite. In case of comparisons between multiple cohorts, you can also provide the name of the cohorts in the columns state1 and state2 as shown in Figure 2. You can also use files without the cohort information as shown in Figure 3.
 
-![Sample input files](../img/IntOmix/intomix_sample_input_files.png) <center>**Figure 2.** Sample input files</center>
+![Sample input files](../../../img/IntOmix/intomix_sample_input_files.png) <center>**Figure 2.** Sample input files</center>
 
-![Files without cohort information](../img/IntOmix/intomix_files_wo_cohort_info.png) <center>**Figure 3.** Files without cohort information</center>
+![Files without cohort information](../../../img/IntOmix/intomix_files_wo_cohort_info.png) <center>**Figure 3.** Files without cohort information</center>
 
 ##Steps in data processing
 
@@ -55,15 +55,15 @@ Both the input files consist of information about log<sub>2</sub> Fold Change an
 
 Select *IntOmix* from the dashboard under the *Multi-omic Data* Tab as shown in Figure 4. Create a *New Project* to be redirected to IntOmix's upload page.
 
-![Polly Dashboard and Project selection](../img/IntOmix/intomix_app_tile_page.png)
+![Polly Dashboard and Project selection](../../../img/IntOmix/intomix_app_tile_page.png)
 
-![Polly Dashboard and Project selection](../img/IntOmix/intomix_create_or_select_project_dialog.png) <center>**Figure 4.** Polly Dashboard and Project selection</center>
+![Polly Dashboard and Project selection](../../../img/IntOmix/intomix_create_or_select_project_dialog.png) <center>**Figure 4.** Polly Dashboard and Project selection</center>
 
 ##Upload files
 
 The file upload interface allows you to upload input files to be processed in IntOmix as shown in Figure 5.
 
-![File Upload interface](../img/IntOmix/intomix_uploads_page.png) <center>**Figure 5.** File Upload interface</center>
+![File Upload interface](../../../img/IntOmix/intomix_uploads_page.png) <center>**Figure 5.** File Upload interface</center>
 
 Click on *Upload .csv Files* to upload the differential expression files in the format mentioned above and then click on *Continue to Dashboard.*
 
@@ -79,19 +79,19 @@ This interface allows you to adjust parameters to be used to generate the optimi
 *   Click on any particular keyword to annotate it as the primary keyword. The primary keyword selection can be changed on the next interface as well as we can see in Figure 6.
 *   After specifying all the required parameters, click on *Get Started* to process your data.
 
-![Set parameter interface](../img/IntOmix/intomix_set_parameters.png) <center>**Figure 6.** Set parameter interface</center>
+![Set parameter interface](../../../img/IntOmix/intomix_set_parameters.png) <center>**Figure 6.** Set parameter interface</center>
 
 **Note:**
 
 *   Processing of data requires as much time as specified to optimize the significantly perturbed networks present in the data.
 
-![Optimization and map generation](../img/IntOmix/intomix_optimization_and_map_gen.png) <center>**Figure 7.** Optimization and map generation</center>
+![Optimization and map generation](../../../img/IntOmix/intomix_optimization_and_map_gen.png) <center>**Figure 7.** Optimization and map generation</center>
 
 ##Pathway Dashboard
 
 After data processing, a KEGG map is generated based on the input parameters. The most significantly changing genes and metabolites between the two conditions are captured in the form of a network module. This network module is overlaid on the KEGG pathway to effectively visualize the overall topology of the variations between the two conditions. Hovering on any node or edge will display a dialog box with information about the selected gene or metabolite as shown in Figure 8. You can also zoom in, zoom out, select nodes or edges on the interactive map or download it in one of the several formats available.
 
-![Hovering on metabolites and genes provides further information](../img/IntOmix/intomix_metabs_and_genes_hovering.png) <center>**Figure 8.** Hovering on metabolites and genes provides further information.</center>
+![Hovering on metabolites and genes provides further information](../../img/IntOmix/intomix_metabs_and_genes_hovering.png) <center>**Figure 8.** Hovering on metabolites and genes provides further information.</center>
 
 You can add all metabolites and genes which do not satisfy the parameters specified for the optimized network.
 
@@ -99,7 +99,7 @@ You can add all metabolites and genes which do not satisfy the parameters specif
 
 In the *Option & Information* pop-up window as shown in Figure 9, you can select *All Others* option to add all genes and metabolites in the data to the generated map. The genes and metabolites that satisfy the parameters selected in the parameter interface have color ranging from red-green and the ones that do not are displayed as shades of purple.
 
-![Pathway map containing all metabolites and genes in the input files](../img/IntOmix/intomix_pathway_map_with_all_metabs_genes.png) <center>**Figure 9.** Pathway map containing all metabolites and genes in the input files.</center>
+![Pathway map containing all metabolites and genes in the input files](../../img/IntOmix/intomix_pathway_map_with_all_metabs_genes.png) <center>**Figure 9.** Pathway map containing all metabolites and genes in the input files.</center>
 
 ##Analyze your data
 
@@ -109,19 +109,19 @@ After the KEGG network is created, the predefined set of queries can be selected
 
 This option enables you to find the key pathways that are perturbed in the data. The results of this query are based on two scoring methods; pathway enrichment and topology analysis. Pathway enrichment analysis refers to the quantitative approach based on the concentration of metabolites present. Gene set enrichment analysis is one of the famous algorithms used for enrichment analysis. In Polly™ IntOmix, R packages such as *globaltest* and *GlobalAncova* are used to analyze the pathway enrichment. Similarly, for topology analysis, betweenness centrality and degree centrality are considered as key parameters to find the most influential and important pathways in the whole subnetwork.
 
-![Pathway Enrichment module](../img/IntOmix/intomix_pathway_enrichment_plot.png) <center>**Figure 10.** Pathway Enrichment module</center>
+![Pathway Enrichment module](../../img/IntOmix/intomix_pathway_enrichment_plot.png) <center>**Figure 10.** Pathway Enrichment module</center>
 
 **How do publicly available results correlate with my results?**
 
 This question enables you to select any gene or metabolite that is significantly differentially expressed in their data along with the specified primary keyword. Using both of these as the input, IntOmix will display a list of relevant publications that you can read more to gain insights about their data and generate hypotheses.
 
-![Publication Search module](../img/IntOmix/intomix_literature.jpg) <center>**Figure 11.** Publication Search module.</center>
+![Publication Search module](../../img/IntOmix/intomix_literature.jpg) <center>**Figure 11.** Publication Search module.</center>
 
 **How do my other comparisons compare with my results?**
 
 Using this question you can compare the analysis of the same data using different parameters. The output of this question is displayed as a Venn diagram wherein the intersection contains the common genes and metabolites found in both the set of analyses. This helps you understand how a single parameter or a group of parameters affect their analysis.
 
-![Cross Cohort Comparison](../img/IntOmix/intomix_cohort_comparison.png) <center>**Figure 12.** Cross Cohort Comparison</center>
+![Cross Cohort Comparison](../../img/IntOmix/intomix_cohort_comparison.png) <center>**Figure 12.** Cross Cohort Comparison</center>
 
 #Details about the app
 

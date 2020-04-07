@@ -20,42 +20,42 @@ Steps to set up a node in the Compound Discoverer:
 
 *   Install the QuantFit Node from the installer [here](https://cd-polly-test.s3-ap-southeast-1.amazonaws.com/installers/PollyQuant.exe).
 
-![Screenshot](../img/CDQuantFit/Screenshot6.png) <!-- <center>**Figure 1.** Demo Data for Polly<sup>TM</sup> FirstView</center> -->
+![Screenshot](../../img/CDQuantFit/Screenshot6.png) <!-- <center>**Figure 1.** Demo Data for Polly<sup>TM</sup> FirstView</center> -->
 
 **Compound Discoverer**
 
 *   Open Compound Discoverer 3.1.
 *   Select **New Study and Analysis**
 
-![Screenshot](../img/CDQuantFit/Screen1.png) <!-- <center>**Figure 1.** Demo Data for Polly<sup>TM</sup> FirstView</center> -->
+![Screenshot](../../img/CDQuantFit/Screen1.png) <!-- <center>**Figure 1.** Demo Data for Polly<sup>TM</sup> FirstView</center> -->
 
 *   On **Begin a new Study** page, Click **Next**
 
-![Screenshot](../img/CDQuantFit/Screen2.png) <!-- <center>**Figure 1.** Demo Data for Polly<sup>TM</sup> FirstView</center> -->
+![Screenshot](../../img/CDQuantFit/Screen2.png) <!-- <center>**Figure 1.** Demo Data for Polly<sup>TM</sup> FirstView</center> -->
 
 *   Add a **Study Name**, **Studies Folder** and click **Next**
 
-![Screenshot](../img/CDQuantFit/Screen3.png) <!-- <center>**Figure 1.** Demo Data for Polly<sup>TM</sup> FirstView</center> -->
+![Screenshot](../../img/CDQuantFit/Screen3.png) <!-- <center>**Figure 1.** Demo Data for Polly<sup>TM</sup> FirstView</center> -->
 
 *   Click on **Add files**. Browse to the folder with all the **.raw** files and select them. Click **Finish**.
 
-![Screenshot](../img/CDQuantFit/Screen4.png) <!-- <center>**Figure 1.** Demo Data for Polly<sup>TM</sup> FirstView</center> -->
+![Screenshot](../../img/CDQuantFit/Screen4.png) <!-- <center>**Figure 1.** Demo Data for Polly<sup>TM</sup> FirstView</center> -->
 
 *   Go to **Workflows**
 
-![Screenshot](../img/CDQuantFit/Screen5.png) <!-- <center>**Figure 1.** Demo Data for Polly<sup>TM</sup> FirstView</center> -->
+![Screenshot](../../img/CDQuantFit/Screen5.png) <!-- <center>**Figure 1.** Demo Data for Polly<sup>TM</sup> FirstView</center> -->
 
 *   In **Workflow Tree** drag and drop **Input Files** from **Input/Output** within **Workflow Nodes**
 
-![Screenshot](../img/CDQuantFit/Screen6.png) <!-- <center>**Figure 1.** Demo Data for Polly<sup>TM</sup> FirstView</center> -->
+![Screenshot](../../img/CDQuantFit/Screen6.png) <!-- <center>**Figure 1.** Demo Data for Polly<sup>TM</sup> FirstView</center> -->
 
 *   In **Post Processing Nodes** drag and drop **Polly QuantFit** from **Elucidata Nodes** within **Workflow Nodes**
 
-![Screenshot](../img/CDQuantFit/Screen7.png) <!-- <center>**Figure 1.** Demo Data for Polly<sup>TM</sup> FirstView</center> -->
+![Screenshot](../../img/CDQuantFit/Screen7.png) <!-- <center>**Figure 1.** Demo Data for Polly<sup>TM</sup> FirstView</center> -->
 
 *   Click on **Polly QuantFit** in **Post Processing Nodes**
 
-![Screenshot](../img/CDQuantFit/Screen8.png) <!-- <center>**Figure 1.** Demo Data for Polly<sup>TM</sup> FirstView</center> -->
+![Screenshot](../../img/CDQuantFit/Screen8.png) <!-- <center>**Figure 1.** Demo Data for Polly<sup>TM</sup> FirstView</center> -->
 
 *   The values corresponding to the parameters for conversion and filtering of data have to be entered within this node
 
@@ -81,12 +81,12 @@ Steps to set up a node in the Compound Discoverer:
 
 *   Click on **Run** within **Analysis**
 
-![Screenshot](../img/CDQuantFit/Screen9.png) <!-- <center>**Figure 1.** Demo Data for Polly<sup>TM</sup> FirstView</center> -->
+![Screenshot](../../img/CDQuantFit/Screen9.png) <!-- <center>**Figure 1.** Demo Data for Polly<sup>TM</sup> FirstView</center> -->
 
 *   The processing starts. On completion, you will receive an email on the Polly Email Address used in QuantFit Node. Open the email and click on **Start Quantification**.  
 <br />
 
-Click [here](QuantFit.md/#metadata-interface) for a detailed documentation about Polly QuantFit.
+Click [here](../QuantFit.md/#metadata-interface) for a detailed documentation about Polly QuantFit.
 
 <br />
 
