@@ -62,7 +62,7 @@ The Polly Landing page provides access to 4 distinct interconnected modules on P
 
 ##Getting help on the platform
 
-We firmly believe that our greatest achievement is to enable customers and their success on the platform. The customer success team can be reached anytime on [polly@elucidata.io](mailto:polly@elucidata.io) for queries on the product, data analysis and feature requests.We  also offer a detailed on-boarding plan to get your team up and running on Polly as well as library of resources, videos and publications.
+We firmly believe that our greatest achievement is to enable customers and their success on the platform. The customer success team can be reached anytime on [polly@elucidata.io](mailto:polly@elucidata.io) for queries on the product, data analysis and feature requests. We also offer a detailed on-boarding plan to get your team up and running on Polly as well as library of resources, videos and publications.
 
 ##Live Chat
 
