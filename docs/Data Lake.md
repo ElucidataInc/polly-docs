@@ -1,4 +1,4 @@
-##Introduction  
+#Introduction  
 
 With Polly discover you can access public databases which have been curated and stored in the form of data lakes or make data lakes with your own data. These datalakes can be explored and analyzed either through the Polly Notebook interface on Polly or through the Polly Discover application.
 
@@ -6,17 +6,19 @@ Polly Discover consists of the following major components:
 
 *   Data Lake Curation
 
-    Data lakes are reservoirs of information that contain multi-omics data, annotations from publicly available databases, publications, etc. Reservoirs are further segregated into two parts: public data repositories which are curated by Elucidata using public data sources, and private data repositories, where you can add your proprietary data.
+    Data lakes are reservoirs of information that contain multi-omics data, annotations from publicly available databases, publications, etc. Reservoirs are further segregated into two parts: public data repositories which are curated by Elucidata using public data sources, and private data repositories, where you can add your proprietary data.  
+    <br />
 
 *   Data Lake Exploration: 
 
-    To explore a data lake, Polly provides tools such as Shiny applications and Polly Notebooks. These tools enable you to find relevant data by searching for keywords associated with the file name, file metadata, or the contents of a file.
+    To explore a data lake, Polly provides tools such as Shiny applications and Polly Notebooks. These tools enable you to find relevant data by searching for keywords associated with the file name, file metadata, or the contents of a file.  
+    <br />
 
 *   On-the-fly Analysis: 
 
     Once you have narrowed down relevant omics datasets, you can analyze the dataset(s) on the fly using various statistical analyses, displaying intuitive visualizations and allowing you to create a hitlist while analyzing multiple datasets simultaneously.
 
-**Available public data repositories**
+##Available public data repositories
 
 Public data repositories on Polly consist of processed and curated datasets from various sources. They can be readily used for searching for new datasets or running an analysis on one or more datasets.
 
@@ -52,9 +54,9 @@ Additionally, the public data repositories also consist of publicly available da
 *   GENE\_INFO - General Gene Information from Human Protein Atlas.
 
     
-##Polly Discover App
+#Polly Discover App
 
-**Opening the app**
+##Opening the app
 
 Upon opening the Discover portal on Polly, choose a data repository that you would like to explore. The page should look something like this.
 
@@ -72,7 +74,7 @@ The app will open and you should see the overview page which contains a brief **
 
 ![App Description](../img/Discover/image4.png)
 
-**Exploring the data lake**
+##Exploring the data lake
 
 Search for relevant datasets by navigating to the *Dataset Search* tab in the navigation pane to the left. Keyword search can be applied to the following fields:
 
@@ -103,7 +105,7 @@ The search will return all datasets that are associated with your search. The re
 
 The table shown above shows very few columns by default. In order to view the other columns in the table, you can select the fields from **Available Columns** and click on *Show!* button. *Download Selected Dataset* button will let you download the dataset that you have selected on your local system. *Export results to CSV* button will let you download the search result table in the form of a .csv file. Once you have narrowed down the relevant datasets, you can analyze one or more datasets on the fly within the app.
 
-**Analyzing a single dataset**
+##Analyzing a single dataset
 
 You can analyze a single dataset by selecting the checkbox to the left of the entry in the table. Once you’ve selected the checkbox, click on the *Analyze Data* button below the table description.
 
@@ -125,7 +127,7 @@ After clicking the *Analyze Data* button, the app will read the selected dataset
 
 ![Analyses possible](../img/Discover/image8.png)
 
-**Analyzing multiple datasets**
+##Analyzing multiple datasets
 
 It is also possible to analyze multiple datasets simultaneously. If you select multiple datasets from the search result and click the *Analyze Data* button, you will see a new *Multiple Analyses* Tab, wherein you can select algorithms that you want to run on the selected datasets. While selecting algorithms, a workflow of nodes is formed. These nodes are input blocks for each algorithm for each dataset you selected.
 
@@ -149,11 +151,11 @@ Finally, on clicking the *Execute Rules* button, you will be able to get a preli
 
 ![Preliminary hitlist](../img/Discover/image13.png)
 
-##Access through Polly Notebook interface
+#Access through Polly Notebook interface
 
 The Polly Notebook Dockers on Polly have an **internal** python package called ‘discoverPy’ pre-installed, which can be used to search for datasets in the various data repositories.
 
-**Structure of a data repository**
+##Structure of a data repository
 
 A data repository is a collection of different files having different file types. To ensure easy access at a granular level to all datasets a data repository is organized in the following manner. Under this schema, each repository can be considered as a collection of indices which can be used for querying. The discoverPy package can access all indices of a data repository using API endpoints.<!--Structure of a data repository-->
 
@@ -161,9 +163,9 @@ A data repository is a collection of different files having different file types
 
 ![Structure of a data repository](../img/Discover/discover_data_repository.png)
 
-Click [here](Compute/Polly Notebooks.md) for a detailed documentation about Polly Notebooks.
+Click [here](../../Apps/Polly Notebooks) for a detailed documentation about Polly Notebooks.
 
-**Usage**
+##Usage
 
 1. Initialize a discover object
 
@@ -206,7 +208,7 @@ After you’ve added the indices for a repository, you can view the discover obj
 
 Note that the ‘annotation\_repo’ index is added automatically for each repository.
 
-**Querying at the dataset level**
+##Querying at the dataset level
 
 To search for datasets, the ‘\_files’ index can be searched using the metadata fields present in it.
 
@@ -240,7 +242,7 @@ To search for datasets, the ‘\_files’ index can be searched using the metada
 
 <pre><code>discover.download_file_by_key(dataset_query_df["_source.__key__"][14])</code></pre>
 
-**Querying at the sample level**
+##Querying at the sample level
 
 GCT File Format
 
@@ -272,7 +274,7 @@ The datasets in the public repositories are saved as a .gct file. This is a file
 
 ![Search for samples using keywords](../img/Discover/image23.png)
 
-**Querying at the feature level**
+##Querying at the feature level
 
 The matrix of a .gct file contains the actual values for the different features(genes/metabolites). The ‘\_gct\_index’ index of a repository can be queried for features.
 
@@ -296,7 +298,7 @@ The ‘\_\_index\_\_’ column contains the feature name
 
 ![Values for a feature](../img/Discover/image26.png)
 
-**Access annotation repositories**
+##Access annotation repositories
 
 The various gene annotation databases can also be accessed through discoverpy. These can be used to get information about a particular gene or a set of genes.
 
@@ -312,7 +314,7 @@ The various gene annotation databases can also be accessed through discoverpy. T
 
 ![Get annotations for a list of genes](../img/Discover/image28.png)
 
-**Advanced queries**
+##Advanced queries
 
 You can also perform more complex queries on multiple fields combining them with boolean logic. Some examples are shown here.
 
