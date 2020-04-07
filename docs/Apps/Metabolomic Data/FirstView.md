@@ -2,7 +2,7 @@
 
 ##Overview
 
-[El-MAVEN](https://github.com/ElucidataInc/ElMaven/wiki), our open source LC-MS data processing engine is optimized for isotopomer labeling and untargeted metabolomic profiling experiments. You can view the mass spectra, align chromatograms, perform peak-feature detection and alignment for labeled and unlabeled MS data. FirstView enables you to have a first look at your data using basic visualizations to get preliminary insights.
+[El-MAVEN](https://resources.elucidata.io/elmaven), our open source LC-MS data processing engine is optimized for isotopomer labeling and untargeted metabolomic profiling experiments. You can view the mass spectra, align chromatograms, perform peak-feature detection and alignment for labeled and unlabeled MS data. FirstView enables you to have a first look at your data using basic visualizations to get preliminary insights.
 
 ##Scope of the App
 
@@ -64,7 +64,7 @@ Alternatively, select FirstView from the dashboard under the *Metabolomics Data
 
 Create a *New Project* or choose the existing one from the drop down to be redirected to FirstView's upload page as shown in Figure 6.
 
-![Project selection] (../../img/FirstView/Projectselection.png) <center>**Figure 6.** Project selection</center>
+![Project selection](../../img/FirstView/Projectselection.png) <center>**Figure 6.** Project selection</center>
 
 ![Upload page of FirstView](../../img/FirstView/Uploadpage.png) <center>**Figure 7.** Upload page of FirstView</center>
 

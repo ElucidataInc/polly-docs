@@ -19,7 +19,7 @@ The Labeled LC-MS/MS Workflow tool factors out the contribution from the natural
 
 Labeled LC-MS/MS Workflow requrires three types of input files:
 
-*   [El-MAVEN](https://github.com/ElucidataInc/ElMaven/wiki) Output
+*   [El-MAVEN](https://resources.elucidata.io/elmaven) Output
 
 This file is the .csv output from El-MAVEN in peak detailed format.
 

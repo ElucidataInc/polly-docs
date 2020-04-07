@@ -25,7 +25,7 @@ CRISPR Screening provides an interactive way to explore and visualize the qualit
 
 ##User Input
 
-CRISPR Screening requires the following three files as input:
+CRISPR Screening requires the following two files as input:
 
 **Fastq files**
 
@@ -50,8 +50,6 @@ This is file in .csv format.
 *   **Quality control:** You can check the quality of analysis at the sequence level as well as the sample level. In sequence level quality check, you can find graphs of sequencing reads, GC content, Base quality, Mapped reads, Gini index, and zero counts. Similarly at the sample level there are PCA clustering, Read count CDF and normalization graphs.
 *   **MAGeCK VISPR:** MAGeCK VISPR output consists of sgRNA Read count plot and any gene of interest can be selected in various samples. Similarly, Hierarchical clustering over normalized beta scores (using Ward variance minimization and Euclidean distance) on 500 genes is also provided. You can also analyze the various comparisons and distribution plots.
 *   **Cross-analysis comparison:** In Cross-analysis comparison feature you can select any relevant comparison from previous analysis and compare with the results present analysis.
-
-##Caveats
 
 #Tutorial
 
