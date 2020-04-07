@@ -8,23 +8,23 @@ nav:
       - Introduction: Apps/Introduction.md
       - Notebooks: Apps/Polly Notebooks.md
       - Metabolomics Data:
-        - Dual Mode: Apps/Metabolomic Data/Introduction.md
-        - Labeled LC-MS Workflow: Apps/Metabolomic Data/Introduction.md
-        - Labeled LC-MS/MS Workfow: Apps/Metabolomic Data/Introduction.md
-        - MetScape: Apps/Metabolomic Data/Introduction.md
-        - El-MAVEN Phi Realtive LC-MS: Apps/Metabolomic Data/Introduction.md
-        - FirstView: Apps/Metabolomic Data/Introduction.md
-        - Untargeted Pipeline: Apps/Metabolomic Data/Introduction.md
-        - QuantFit: Apps/Metabolomic Data/Introduction.md
-        - CD-QuantFit: Apps/Metabolomic Data/Introduction.md
+        - Dual Mode: Apps/Metabolomic Data/Dual Mode Visualization.md
+        - Labeled LC-MS Workflow: Apps/Metabolomic Data/Labeled LC-MS Workflow.md
+        - Labeled LC-MS/MS Workfow: Apps/Metabolomic Data/Labeled LC-MSMS Workflow.md
+        - MetScape: Apps/Metabolomic Data/MetScape.md
+        - El-MAVEN Phi Realtive LC-MS: Apps/Metabolomic Data/El-MAVEN Phi Relative LC-MS.md
+        - FirstView: Apps/Metabolomic Data/FirstView.md
+        - Untargeted Pipeline: Apps/Metabolomic Data/Untargeted Pipeline.md
+        - QuantFit: Apps/Metabolomic Data/QuantFit.md
+        - CD-QuantFit: Apps/Metabolomic Data/CompoundDiscoverer QuantFit.md
       - Screening and Sequencing Data: 
-        - CRISPR: Apps/Screening & Sequencing Data/CRISPR Screening.md
+        - CRISPR Screening: Apps/Screening & Sequencing Data/CRISPR Screening.md
         - High Throughput Drug Screening: Apps/Screening & Sequencing Data/High Throughput Drug Screening.md
         - RNA Seq Qorkflow: Apps/Screening & Sequencing Data/RNA Seq Workflow.md
       - Proteomics Data:
-        - Protoemics Workflow: Apps/Proteomics Data/Proteomcis Workflow.md
+        - Protoemics Workflow: Apps/Proteomic Data/Proteomcis Workflow.md
       - Lipidomics Data:
-        - Lipidomics Visualization Dashboard: Apps/Lipidomics Data/Lipidomics Visualziation Dashboard.md
+        - Lipidomics Visualization Dashboard: Apps/Lipidomics Data/Lipidomics Visualization Dashboard.md
       - Multi-omics Data:
         - IntOmix: Apps/Multi-omic Data/IntOmix.md
   - Data Lake: Data Lake.md

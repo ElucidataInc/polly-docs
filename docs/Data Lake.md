@@ -22,36 +22,36 @@ Polly Discover consists of the following major components:
 
 Public data repositories on Polly consist of processed and curated datasets from various sources. They can be readily used for searching for new datasets or running an analysis on one or more datasets.
 
-*   AML - Microarray and RNA Sequencing datasets for Acute Myeloid Leukemia.
+*   AML: Microarray and RNA Sequencing datasets for Acute Myeloid Leukemia.
     
-*   GBM - Microarray and RNA Sequencing datasets for Gliblastoma Multiforme.
+*   GBM: Microarray and RNA Sequencing datasets for Gliblastoma Multiforme.
     
-*   IBD - Microarray and RNA Sequencing datasets for Inflammatory Bowel Disease.
+*   IBD: Microarray and RNA Sequencing datasets for Inflammatory Bowel Disease.
     
-*   GEO - Microarray and RNA Sequencing datasets from Gene Expression Omnbius.
+*   GEO: Microarray and RNA Sequencing datasets from Gene Expression Omnbius.
     
-*   Single cell Atlas - Single cell RNA Sequencing datasets from Gene Expression Omnibus
+*   Single cell Atlas: Single cell RNA Sequencing datasets from Gene Expression Omnibus
     
-*   Single cell kidney - Single cell RNA Sequencing datasets from kidney studies.
+*   Single cell kidney: Single cell RNA Sequencing datasets from kidney studies.
     
-*   GTEX - Normal tissue RNA Sequencing datasets from Genotype-Tissue Expression project
+*   GTEX: Normal tissue RNA Sequencing datasets from Genotype-Tissue Expression project
     
-*   TCGA - Tumor RNA Sequencing datasets from The Cancer Genome Atlas.
+*   TCGA: Tumor RNA Sequencing datasets from The Cancer Genome Atlas.
     
 
 Additionally, the public data repositories also consist of publicly available databases that have been curated for annotations. These publicly available databases are currently part of these repositories.
 
-*   HMDB - Pathway information from Human Metabolome Database.
+*   HMDB: Pathway information from Human Metabolome Database.
     
-*   KEGG - Pathway information from Kyoto Encyclopedia of Genes and Genomes.
+*   KEGG: Pathway information from Kyoto Encyclopedia of Genes and Genomes.
     
-*   Reactome - Pathway information from Reactome
+*   Reactome: Pathway information from Reactome
     
-*   GO - Gene Ontology from GO database.
+*   GO: Gene Ontology from GO database.
     
-*   GWAS - Phenotypic data from Genome-Wide Association Studies Catalogue.
+*   GWAS: Phenotypic data from Genome-Wide Association Studies Catalogue.
     
-*   GENE\_INFO - General Gene Information from Human Protein Atlas.
+*   GENE_INFO: General Gene Information from Human Protein Atlas.
 
     
 #Polly Discover App
@@ -163,11 +163,11 @@ A data repository is a collection of different files having different file types
 
 ![Structure of a data repository](../img/Discover/discover_data_repository.png)
 
-Click [here](../../Apps/Polly Notebooks) for a detailed documentation about Polly Notebooks.
+Click [here](../Apps/Polly Notebooks) for a detailed documentation about Polly Notebooks.
 
 ##Usage
 
-1. Initialize a discover object
+*   Initialize a discover object
 
 This discover object is used to interact with a dataset repository.
 
@@ -177,25 +177,25 @@ discover</code></pre>
 
 ![Discover object](../img/Discover/image14.png)
 
-2. List all available endpoints for public data repositories along with their index
+*   List all available endpoints for public data repositories along with their index
 
 <pre><code>discover.get_endpoints()</code></pre>
 
 ![Endpoints for public data](../img/Discover/image15.png)
 
-3. Add a dataset repository file index
+*   Add a dataset repository file index
 
 This index contains all file names, their paths in the cloud along with any relevant metadata.
 
 <pre><code>discover.set_dataset_repo("aml_files")</code></pre>
 
-4. Add a sample index
+*   Add a sample index
 
 This index contains information at the sample level (columns of a matrix) with any relevant metadata.
 
 <pre><code>discover.set_dataset_repo("aml_gct_metadata")</code></pre>
 
-5. Add a feature index.  
+*   Add a feature index
 This index contains information at the feature level (rows of a matrix). Every data value in the matrix is saved in this repository feature wise.
 
 <pre><code>discover.set_feature_repo("aml_gct_data")</code></pre>
@@ -212,13 +212,13 @@ Note that the ‘annotation\_repo’ index is added automatically for each repos
 
 To search for datasets, the ‘\_files’ index can be searched using the metadata fields present in it.
 
-1. Get fields present in the index
+*   Get fields present in the index
 
 <pre><code>discover.dataset_repo.get_all_fields()</code></pre>
 
 ![Fields present in the index](../img/Discover/image17.png)
 
-2. To get a sense of what values are present in each field, one can view the top n entries. Some generic fields are present for each file.
+*   To get a sense of what values are present in each field, one can view the top n entries. Some generic fields are present for each file.
 
     *   \_\_bucket\_\_: S3 bucket name
     
@@ -232,13 +232,13 @@ To search for datasets, the ‘\_files’ index can be searched using the metada
 
 ![Values present in each field](../img/Discover/image18.png)
 
-3. Search for a dataset by keyword in a particular field. Searching for “mll” in the field “description” here.
+*   Search for a dataset by keyword in a particular field. Searching for “mll” in the field “description” here.
 
 <pre><code>dataset_query_df = discover.dataset_repo.query_dataset_by_field("description","mll") dataset_query_df</code></pre>
 
 ![Search for a dataser](../img/Discover/image19.png)
 
-4. Download file for a dataset by key
+*   Download file for a dataset by key
 
 <pre><code>discover.download_file_by_key(dataset_query_df["_source.__key__"][14])</code></pre>
 
@@ -250,25 +250,25 @@ The datasets in the public repositories are saved as a .gct file. This is a file
 
 ![GCT file structure](../img/Discover/gct_file.png)
 
-1. Get fields present in the index
+*   Get fields present in the index
 
 <pre><code>discover.sample_repo.get_all_fields()</code></pre>
 
 ![Fields present in the index](../img/Discover/image20.png)
 
-2. To get a sense of what values are present in each field, one can view the top n entries.
+*   To get a sense of what values are present in each field, one can view the top n entries.
 
 <pre><code>discover.sample_repo.get_top_n_examples(n =30)</code></pre>
 
 ![Values present in field](../img/Discover/image21.png)
 
-3. Search for samples by keyword in a particular field. Searching for “M1” in the field “fab\_classification\_ch1” here.
+*   Search for samples by keyword in a particular field. Searching for “M1” in the field “fab\_classification\_ch1” here.
 
 <pre><code>fab_df = discover.sample_repo.query_samples_by_field("fab_classification_ch1", "M1", n = 100) fab_df</code></pre>
 
 ![Search for samples using keywords](../img/Discover/image22.png)
 
-4. Search for samples by keywords in all fields. This can be used if the field to search for is not known beforehand.
+*   Search for samples by keywords in all fields. This can be used if the field to search for is not known beforehand.
 
 <pre><code>fab_all_fields = discover.sample_repo.query_samples_by_all_fields("M1", n = 100) fab_all_fields</code></pre>
 
@@ -278,13 +278,13 @@ The datasets in the public repositories are saved as a .gct file. This is a file
 
 The matrix of a .gct file contains the actual values for the different features(genes/metabolites). The ‘\_gct\_index’ index of a repository can be queried for features.
 
-1.  Get fields present in the index  
+*   Get fields present in the index  
 
 <pre><code>discover.feature_repo.get_all_fields()</code></pre>
 
 ![Fields present in the index](../img/Discover/image24.png)
 
-2. To get a sense of what values are present in each field, one can view the top n entries.
+*   To get a sense of what values are present in each field, one can view the top n entries.
 
 <pre><code>discover.feature_repo.get_top_n_examples(n=20)</code></pre>
 
@@ -292,7 +292,7 @@ The matrix of a .gct file contains the actual values for the different features(
 
 The ‘\_\_index\_\_’ column contains the feature name
 
-3. Get values for a particular feature across all samples in all datasets of the repository. Getting values for “NRAS” gene here.
+*   Get values for a particular feature across all samples in all datasets of the repository. Getting values for “NRAS” gene here.
 
 <pre><code>nras_df =discover.feature_repo.get_feature_values("NRAS", n = 1000) nras_df</code></pre>
 
@@ -302,13 +302,13 @@ The ‘\_\_index\_\_’ column contains the feature name
 
 The various gene annotation databases can also be accessed through discoverpy. These can be used to get information about a particular gene or a set of genes.
 
-1. Get all annotation databases
+*   Get all annotation databases
 
 <pre><code>discover.annotation_repo.get_annotation_databases()</code></pre>
 
 ![Get all annotation databases](../img/Discover/image27.png)
 
-2. Get annotations for a list of genes from a particular database. Getting Reactome pathways for the genes.
+*   Get annotations for a list of genes from a particular database. Getting Reactome pathways for the genes.
 
 <pre><code>discover.annotation_repo.get_feature_annotation('reactome', ['ACTA1', 'AHCTF1', 'AKAP13', 'ATP2C1', 'CDK7'])</code></pre>
 
@@ -318,13 +318,13 @@ The various gene annotation databases can also be accessed through discoverpy. T
 
 You can also perform more complex queries on multiple fields combining them with boolean logic. Some examples are shown here.
 
-1.  Get microarray stem cell datasets which did not involve a knockdown experiment
+*   Get microarray stem cell datasets which did not involve a knockdown experiment
 
 <pre><code>discover.dataset_repo.query_dataset_by_field_combination(and_fields={"platform":"Microarray", "tissue":"stem cells"}, not_fields={"description":"knockdown"}, n = 50)</code></pre>
 
 ![Advanced query example 1](../img/Discover/image29.png)
 
-2\. Get samples containing CD34 cells or mononuclear cells do not include de novo samples
+*   Get samples containing CD34 cells or mononuclear cells do not include de novo samples
 
 <pre><code>discover.sample_repo.query_samples_by_field_combination(or_fields = {"cell_type_ch1":"CD34","cell_type_ch1":"mononuclear"}, not_fields = {"treatment_protocol_ch1":"de novo"}, n = 300)</code></pre>
 

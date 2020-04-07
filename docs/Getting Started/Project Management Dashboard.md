@@ -16,7 +16,6 @@ You can create a new project on Polly as described here:
 
 *   A create project interface opens up. Using this interface, you can name your project, add labels to help identify this project in the future as well as add a detailed description.
 
-
 ![Screenshot](../img/ProjectManagementDashboard/CreateProject2.png) <!-- <center>**Figure 1.** Demo Data for Polly<sup>TM</sup> FirstView</center> -->
 
 The project management dashboard will update to show the new project.
@@ -25,7 +24,7 @@ The project management dashboard will update to show the new project.
 
 ##Content within a project
 
-A project contains all your [data](#adding-files-to-your-workspace), [analysis](../../Apps/Introduction.md), [notebooks](../../Apps/Polly Notebooks.md), and [reports](../../Apps/Introduction/#reports). They can be accessed through the top panel.
+A project contains all your [data](#adding-files-to-your-workspace), [analysis](../../Apps/Introduction), [notebooks](../../Apps/Polly Notebooks), and [reports](../../Apps/Introduction/#reports). They can be accessed through the top panel.
 
 ![Screenshot](../img/ProjectManagementDashboard/ProjectContents.png) <!-- <center>**Figure 1.** Demo Data for Polly<sup>TM</sup> FirstView</center> -->
 
@@ -39,7 +38,7 @@ New files can be added within a project by clicking on *Upload Files*. This will
 
 *   Using CLI
 
-You can use PollyCLI as well to import your data directly within Polly. This is a more convenient option for uploading large data (more than a few GBs). The steps for the same are detailed [here](../../Apps/Polly CLI).
+You can use PollyCLI as well to import your data directly within Polly. This is a more convenient option for uploading large data (more than a few GBs). The steps for the same are detailed [here](../../Getting Started/Polly CLI).
 
 ##Creating a new folder
 

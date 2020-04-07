@@ -14,7 +14,7 @@ Polly Notebook provides a Jupyter-like interface on the cloud. Some of the featu
 
 **Accessing Polly Notebooks**
 
-Navigate to the [Polly Workspace](../Getting Started/Project Management Dashboard) in which the analysis needs to be performed.
+Navigate to the [Polly Workspace](../../Getting Started/Project Management Dashboard) in which the analysis needs to be performed.
 
 ![Polly Projects](../img/Notebooks/1.png "Polly Projects") <center>**Figure 1.** Polly Projects</center>
 

@@ -13,7 +13,7 @@ The Labeled LC-MS Workflow factors out the contribution from the Natural Abundan
 *   Plots fractional enrichment, pool total and NA corrected intensity plots for a selected metabolite.
 *   Generates a consolidated Excel workbook of outputs.
 
-![Workflow Schematic](../img/LabeledLC-MSWorkflow/Workflowschematic.png) <center>**Figure 1.** Labeled LC-MS Workflow</center>
+![Workflow Schematic](../../img/LabeledLC-MSWorkflow/Workflowschematic.png) <center>**Figure 1.** Labeled LC-MS Workflow</center>
 
 #Getting Started
 
@@ -25,13 +25,13 @@ Labeled LC-MS Workflow requires the following two files as input:
 
 The intensity file should be in CSV format as shown in Figure 1. The .csv file exported after peak picking in [El-MAVEN](https://github.com/ElucidataInc/ElMaven/wiki) is the input file.
 
-![El-MAVEN output file](../img/LabeledLC-MSWorkflow/Outputfile.png) <center>**Figure 2.** El-MAVEN output file</center>
+![El-MAVEN output file](../../img/LabeledLC-MSWorkflow/Outputfile.png) <center>**Figure 2.** El-MAVEN output file</center>
 
 **Cohort file**
 
 The cohort file is optional and is used for generating visualizations. In case you only want to perform NA correction, you can skip this step. The cohort file should be in .csv format as shown in Figure 3. This file should contain two columns, *Sample* containing sample names along with *Cohort* for its cohort information.
 
-![Cohort file](../img/LabeledLC-MSWorkflow/Cohortfile.png) <center>**Figure 3.** Cohort file</center>
+![Cohort file](../../img/LabeledLC-MSWorkflow/Cohortfile.png) <center>**Figure 3.** Cohort file</center>
 
 
 ##Steps involved in data processing
@@ -57,19 +57,19 @@ The cohort file is optional and is used for generating visualizations. In case y
 
 The *Upload Files* tab allows you to upload the input files required for processing through the app. Once the files have been uploaded, click on *Run.* This will validate and process the uploaded files and give error messages or warnings if the format or data in files are incorrect. You can also run the demo files directly by clicking on *Run Demo Files*.
 
-![Upload interface](../img/LabeledLC-MSWorkflow/Upload.png) <center>**Figure 4.** Upload interface</center>
+![Upload interface](../../img/LabeledLC-MSWorkflow/Upload.png) <center>**Figure 4.** Upload interface</center>
 
 ##Cohort Creation Interface
 
 If you do not wish to create a cohort file, you can utilize the cohort creation interface that allows you to enter the cohort information on the app itself. Upload your intensity file and uncheck *Upload Cohort File* option. Once the intensity file is uploaded, click on *Run* and a cohort creation interface with sample names with input files will open as shown in Figure 4. After entering the cohort information, click on *NA Correction* on the top left side to be taken to the NA correction interface.
 
-![Cohort creation interface](../img/LabeledLC-MSWorkflow/Cohortcreation.png) <center>**Figure 5.** Cohort creation interface</center>
+![Cohort creation interface](../../img/LabeledLC-MSWorkflow/Cohortcreation.png) <center>**Figure 5.** Cohort creation interface</center>
 
 ##NA Correction
 
 Isotopologue identification and quantification of thousands of metabolites in the metabolomic experiments can provide a wealth of data for modeling the flux through metabolic networks. But before isotopologue intensity data can be properly interpreted, the contributions from isotopic natural abundance must be factored out (deisotoped). This is referred to as natural abundance (NA) correction. The various analysis parameters for performing NA Correction shown in Figure 5 are defined below:
 
-![NA Correction Tab](../img/LabeledLC-MSWorkflow/NAcorrection.png) <center>**Figure 6.** NA Correction Tab</center>
+![NA Correction Tab](../../img/LabeledLC-MSWorkflow/NAcorrection.png) <center>**Figure 6.** NA Correction Tab</center>
 
 
 *   *Indistinguishable isotopes*: Indistinguishable isotopes can be corrected for natural abundance by electing either of the following options:
@@ -80,7 +80,7 @@ Isotopologue identification and quantification of thousands of metabolites in th
 
 *   *Edit NA values:* Default NA values used in the tool are taken from CRC Handbook of Chemistry and Physics. You can change these values by clicking on *Edit NA Values*. as shown in Figure 6.
 
-![Edit NA values](../img/LabeledLC-MSWorkflow/Editvalues.png) <center>**Figure 7.** Edit NA values</center>
+![Edit NA values](../../img/LabeledLC-MSWorkflow/Editvalues.png) <center>**Figure 7.** Edit NA values</center>
 
 
 *   *Replace negatives with zero:* Sometimes negative intensities arise which can be replaced with zero. This option is selected by default.
@@ -88,11 +88,11 @@ Isotopologue identification and quantification of thousands of metabolites in th
 
 After all parameters have been decided click on *Perform NA Correction*. Once NA correction has been performed, the output will be displayed in in a tabular format as shown in Figure 7. There are three sections on this interface; *NA Corrected Values*, *Fractional Enrichment* and *Merged Output*. The first two sections only display the NA corrected values and fractional enrichment respectively as shown in Figure 7 and Figure 8 whereas the Third section combines these information to provide you with a single file with the entire information as shown in Figure 9. A detailed description of the merged output file is provided below.
 
-![NA Corrected Values](../img/LabeledLC-MSWorkflow/Correctedvalues.png) <center>**Figure 8.** NA Corrected Values</center>
+![NA Corrected Values](../../img/LabeledLC-MSWorkflow/Correctedvalues.png) <center>**Figure 8.** NA Corrected Values</center>
 
-![Fractional Enrichment](../img/LabeledLC-MSWorkflow/FE.png) <center>**Figure 9.** Fractional Enrichment</center>
+![Fractional Enrichment](../../img/LabeledLC-MSWorkflow/FE.png) <center>**Figure 9.** Fractional Enrichment</center>
 
-![ Merged Output](../img/LabeledLC-MSWorkflow/Mergedoutput.png) <center>**Figure 10.** Merged Output</center>
+![ Merged Output](../../img/LabeledLC-MSWorkflow/Mergedoutput.png) <center>**Figure 10.** Merged Output</center>
 
 where,
 
@@ -113,7 +113,7 @@ where,
 
 The visualization tab provides fractional enrichment, pool total and NA corrected intensity plots that are generated according to the metabolite and quantification type specified before.
 
-![Visualization Interface](../img/LabeledLC-MSWorkflow/Vizinterface.png) <center>**Figure 11.** Visualization Interface</center>
+![Visualization Interface](../../img/LabeledLC-MSWorkflow/Vizinterface.png) <center>**Figure 11.** Visualization Interface</center>
 
 
 To generate visualizations, select a metabolite using the drop down that contains metabolites present in the intensity file uploaded and a quantification type from *Intensity*, *NA Corrected*, *NA Corrected with zero*, *Fractional Enrichment* and *Fractional Enrichment with zero*. After this, click on *Run* to get the selected visualization.
@@ -121,19 +121,19 @@ To generate visualizations, select a metabolite using the drop down that contain
 *   Visualization on the basis of the number of labels shows all the available labels of a metabolite based on the quantification type selected across cohorts.
 
 
-![Fractional enrichment with zero for ATP](../img/LabeledLC-MSWorkflow/FEwithzero.png) <center>**Figure 12.** Fractional enrichment with zero for ATP</center>
+![Fractional enrichment with zero for ATP](../../img/LabeledLC-MSWorkflow/FEwithzero.png) <center>**Figure 12.** Fractional enrichment with zero for ATP</center>
 
 
 *   In case of dual labeled data, plots for each element can be visualized individually as shown in Figure 13 and Figure 14.
 
-![Fractional enrichment with 0 for ATP and label type C](../img/LabeledLC-MSWorkflow/FEwithzero2.png) <center>**Figure 13.** Fractional enrichment with 0 for ATP and label type C</center>
+![Fractional enrichment with 0 for ATP and label type C](../../img/LabeledLC-MSWorkflow/FEwithzero2.png) <center>**Figure 13.** Fractional enrichment with 0 for ATP and label type C</center>
 
 
-![Fractional enrichment with 0 for ATP and label type N](../img/LabeledLC-MSWorkflow/FEwithzero3.png) <center>**Figure 14.** Fractional enrichment with 0 for ATP and label type N</center>
+![Fractional enrichment with 0 for ATP and label type N](../../img/LabeledLC-MSWorkflow/FEwithzero3.png) <center>**Figure 14.** Fractional enrichment with 0 for ATP and label type N</center>
 
 *   Visualization on the basis of pool totals shows the pool totals plot for the selected metabolite.
 
-![Pool Total Plot](../img/LabeledLC-MSWorkflow/Pooltotal.png) <center>**Figure 15.** Pool Total Plot</center>
+![Pool Total Plot](../../img/LabeledLC-MSWorkflow/Pooltotal.png) <center>**Figure 15.** Pool Total Plot</center>
 
 **Note:**
 
@@ -143,13 +143,13 @@ To generate visualizations, select a metabolite using the drop down that contain
 
 This tab allows you to generate the output workbook which consists of the Raw Intensities, Raw Abundances, Fractional Contribution and Corrected Isotopologues in four different worksheets where the metabolites belonging to a particular pathway are grouped together based on the metabolite-pathway mapping provided in the Library File uploaded. The various options available are provided below:
 
-![Generate Output File](../img/LabeledLC-MSWorkflow/Generateoutput.png) <center>***Figure 16.** Generate Output File</center>
+![Generate Output File](../../img/LabeledLC-MSWorkflow/Generateoutput.png) <center>***Figure 16.** Generate Output File</center>
 
 *   *Download Demo Library File:* Clicking on this would download the demo library file containing the metabolite and pathway mapping.
 
 *   *Upload Library File (.xlsx):* The library file contains metabolite to pathway mapping information such as name of metabolite, pathway identifiers as supercategory and subcategory as shown in Figure 16. This file should be in .xlsx format. A detailed description of this file is provided below.
 
-![Library File](../img/LabeledLC-MSWorkflow/Generateoutput.png) <center>**Figure 17.** Library File</center>
+![Library File](../../img/LabeledLC-MSWorkflow/Generateoutput.png) <center>**Figure 17.** Library File</center>
 
 where,
 
@@ -162,7 +162,7 @@ Select whether to proceed with Fractional Enrichment or Fractional Enrichment wi
 
 Clicking on *Run* will generate a workbook that consists of the worksheets *rawIntensities*, *rawAbundances*, *FracContribution*, and *CorrectedIsotopologues* with entries for all the metabolite isotopologues across different samples. Further, all the metabolite isotopologues are grouped based on the pathway they belong to (information provided in the library file).
 
-![Output Workbook](../img/LabeledLC-MSWorkflow/Outputworkbook.png) <center>**Figure 18.** Output Workbook</center>
+![Output Workbook](../../img/LabeledLC-MSWorkflow/Outputworkbook.png) <center>**Figure 18.** Output Workbook</center>
 
 #Details of the App
 
