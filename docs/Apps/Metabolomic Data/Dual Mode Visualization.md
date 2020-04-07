@@ -2,7 +2,7 @@
 
 ##Overview
 
-Metabolomics is one of the key research areas focusing on small molecules present in a tissue or cell. The Dual Mode Data Visualization (Metabolomics App) allows you to perform downstream analysis on single mode (either positive or negative mode) as well as dual mode (both positive and negative mode) targeted, semi-targeted (without retention time) and untargeted metabolomics data along with insightful visualizations. You are provided with the option to upload either the data as a .csv file from [El-MAVEN](https://github.com/ElucidataInc/ElMaven/wiki) in the group summary matrix format along with the cohort mapping file or as a .gct file format, which contains both the data and metadata. The app provides you with a variety of normalization methods, scaling options and data visualization functionalities, thereby allowing an efficient analysis of the data to get actionable insights.
+Metabolomics is one of the key research areas focusing on small molecules present in a tissue or cell. The Dual Mode Data Visualization (Metabolomics App) allows you to perform downstream analysis on single mode (either positive or negative mode) as well as dual mode (both positive and negative mode) targeted, semi-targeted (without retention time) and untargeted metabolomics data along with insightful visualizations. You are provided with the option to upload either the data as a .csv file from [El-MAVEN](https://resources.elucidata.io/elmaven) in the group summary matrix format along with the cohort mapping file or as a .gct file format, which contains both the data and metadata. The app provides you with a variety of normalization methods, scaling options and data visualization functionalities, thereby allowing an efficient analysis of the data to get actionable insights.
 
 ##Scope of the App
 
@@ -291,7 +291,7 @@ Once the parameters are selected, click on *Load Plots* to plot the bar plot for
 
 ##IntOmix Input
 
-This tab allows you to generate the input for [IntOmix](/IntOmix/#tutorial) where you can visualize the significantly altered metabolic network modules between any two experimental conditions.
+This tab allows you to generate the input for [IntOmix](../../Multi-omic Data/IntOmix/#tutorial) where you can visualize the significantly altered metabolic network modules between any two experimental conditions.
 
 ![IntOmix Input Tab options](../../img/DualMode/metab_app_intomix_input_tab.png) <center>**Figure 44.** IntOmix Input Tab options</center>
 

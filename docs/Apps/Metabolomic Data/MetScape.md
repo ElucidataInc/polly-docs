@@ -2,7 +2,7 @@
 
 ##Overview
 
-Metabolomics is one of the key research areas focusing on small molecules present in a tissue or cell. MetScape Workflow allows you to process unlabeled LC-MS targeted, semi-targeted (without retention time) and untargeted data with insightful visualizations. You can directly upload CSV files obtained after peak detection in [El-MAVEN](https://github.com/ElucidataInc/ElMaven/wiki) along with the cohort information. The [Polly Notebook](../../Apps/Polly Notebooks) enables you to use in-built scripts for normalizing, transforming and visualizing data along with the ability to upload and use your custom scripts. The pathway dashboard allows you to track differentially expressed metabolites across cohorts and form hypothesis on not only individual metabolites but on pathways as well.
+Metabolomics is one of the key research areas focusing on small molecules present in a tissue or cell. MetScape Workflow allows you to process unlabeled LC-MS targeted, semi-targeted (without retention time) and untargeted data with insightful visualizations. You can directly upload CSV files obtained after peak detection in [El-MAVEN](https://resources.elucidata.io/elmaven) along with the cohort information. The [Polly Notebook](../../Polly Notebooks) enables you to use in-built scripts for normalizing, transforming and visualizing data along with the ability to upload and use your custom scripts. The pathway dashboard allows you to track differentially expressed metabolites across cohorts and form hypothesis on not only individual metabolites but on pathways as well.
 
 ##Scope of the app
 
@@ -12,7 +12,7 @@ Metabolomics is one of the key research areas focusing on small molecules presen
 *   Perform differential analysis and visualize it using volcano plot and canonical pathways.
 *   Visualize metabolite intensities across different cohorts.
 *   Select specific metabolites to highlight them on the global pathway that allows pathway analysis.
-*   Use the differentially expressed results with the output of [RNA Seq Workflow](../../Screening & Sequencing Data/RNA Seq Workflow) to integrate multi-omics data in [IntOmix](../../Multi-omics Data/IntOmix).
+*   Use the differentially expressed results with the output of [RNA Seq Workflow](../../Screening & Sequencing Data/RNA Seq Workflow) to integrate multi-omics data in [IntOmix](../../Multi-omic Data/IntOmix).
 
 ![MetScape](../../img/MetScape/MetScape.png) <center>**Figure 1.** MetScape</center>
 
@@ -93,7 +93,7 @@ The function of these in-built scripts is mentioned below:
 
 <pre><code>sample_view(mavenData)</code></pre>
 
-Click [here](../Compute/Polly Notebooks) for a detailed documentation about Polly Notebook.
+Click [here](../../Polly Notebooks) for a detailed documentation about Polly Notebook.
     
 **Note:**
 

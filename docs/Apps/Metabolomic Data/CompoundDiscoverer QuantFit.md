@@ -84,22 +84,17 @@ Steps to set up a node in the Compound Discoverer:
 ![Screenshot](../../img/CDQuantFit/Screen9.png) <!-- <center>**Figure 1.** Demo Data for Polly<sup>TM</sup> FirstView</center> -->
 
 *   The processing starts. On completion, you will receive an email on the Polly Email Address used in QuantFit Node. Open the email and click on **Start Quantification**.  
-<br />
 
-Click [here](../QuantFit.md/#metadata-interface) for a detailed documentation about Polly QuantFit.
-
-<br />
+Click [here](../QuantFit/#metadata-interface) for a detailed documentation about Polly QuantFit.
 
 **QuantFit Metadata Interface**
 
 *   You will be redirected to **QuantFit Metadata Interface** on Polly
     *   Upload the **metadata** or create one for your dataset. Watch the demo video [here](https://www.youtube.com/watch?v=A37ra2Lh3yI) to create metadata.  
-    <br />
 
 **Ion Efficiency Correction Interface**
 
 *   This is a normalization method with respect to internal standards in the data. The concentration of biosamples is divided by the concentration of internal standards in the data here. You can also skip this step if you do not have internal standards.  
-<br />
 
 **Quantification Dashboard**
 
@@ -109,7 +104,6 @@ Click [here](../QuantFit.md/#metadata-interface) for a detailed documentation ab
 *   **Removing Standards from data:** You can remove standards from the data to improve the goodness of the fit.
 *   **Suggested Fits:** QuantFit also suggests good fits for your data with other fit types and standard rejection that can be used in further analysis by selecting the suggested fit as a **Default Fit**.
 *   **Scaling:** Neutralize any internal dilution by scaling the data by any factor within the **Processed Data** tab.  
-<br />
 
 **Data Export to Compound Discoverer**
 

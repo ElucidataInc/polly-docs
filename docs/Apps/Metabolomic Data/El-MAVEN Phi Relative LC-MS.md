@@ -2,7 +2,7 @@
 
 ##Overview
 
-Quantification of pathway activity with metabolic flux studies has become an integral part of understanding cellular phenotypes and mechanisms of action. Labeled studies with isotope tracers have emerged as key protocols to gain a deeper understanding of cellular metabolism. Processing and analysis of labeled LC-MS data follows a two-part protocol beginning with peak curation followed by downstream analysis. In this workflow, peak curation is performed using [El-MAVEN](https://github.com/ElucidataInc/ElMaven/wiki). Peaks curated using automated peak picking on El-MAVEN can be pushed directly to Phi Relative LC-MS app using the built-in integration. The Phi Relative Labeled LC-MS app allows you to process labeled LC-MS targeted data with insightful visualizations. The application performs natural abundance (NA) correction and provides fractional enrichment, pool totals and NA corrected intensity visualizations across selected cohorts.
+Quantification of pathway activity with metabolic flux studies has become an integral part of understanding cellular phenotypes and mechanisms of action. Labeled studies with isotope tracers have emerged as key protocols to gain a deeper understanding of cellular metabolism. Processing and analysis of labeled LC-MS data follows a two-part protocol beginning with peak curation followed by downstream analysis. In this workflow, peak curation is performed using [El-MAVEN](https://resources.elucidata.io/elmaven). Peaks curated using automated peak picking on El-MAVEN can be pushed directly to Phi Relative LC-MS app using the built-in integration. The Phi Relative Labeled LC-MS app allows you to process labeled LC-MS targeted data with insightful visualizations. The application performs natural abundance (NA) correction and provides fractional enrichment, pool totals and NA corrected intensity visualizations across selected cohorts.
 
 ##Scope of the App
 
@@ -94,7 +94,9 @@ you has an option to set *Ionization* mode to *Positive, Negative or Neutral* on
 
 The *[m/z]* option scans the groups to find any specific m/z value and plot its corresponding EIC. The *+/-* option to its right is to specify the expected mass resolution error in parts per million (ppm).
 
-![Set m/z value](../../img/EPI/Setmz1.png) (../../img/EPI/Setmz2.png) <center> **Figure 9.** Set m/z value </center>
+![Set m/z value](../../img/EPI/Setmz1.png)
+
+![Set m/z value](../../img/EPI/Setmz2.png) <center> **Figure 9.** Set m/z value </center>
 
 **Alignment**
 
@@ -106,7 +108,7 @@ In the above visualization, each box represents a peak from the selected group a
 
 You can run alignment again with different parameters if required. Alignment settings can be adjusted using the *Align* button. This example was set to OBI-Warp algorithm.
 
-![OBI-Warp Algorithm](.../../img/EPI/ObiWarpAlgo.png) <center> **Figure 11.** OBI-Warp Algorithm </center>
+![OBI-Warp Algorithm](../../img/EPI/ObiWarpAlgo.png) <center> **Figure 11.** OBI-Warp Algorithm </center>
 
 Post-alignment the peaks in the group should appear closer to the median RT of the group.
 
@@ -136,7 +138,7 @@ Once on a compound, El-MAVEN shows the highest ranked group for that m/z. you ca
 
 ![Group filtering dialog](../../img/EPI/GroupFilteringTab.png) <center> **Figure 17.** Group filtering dialog </center>
 
-After setting the parameters, click on Find Peaks. You can read more about the peak detection settings [here](https://github.com/ElucidataInc/ElMaven/wiki/Introduction-to-ElMaven-UI#peak-detection.
+After setting the parameters, click on Find Peaks. You can read more about the peak detection settings [here](https://github.com/ElucidataInc/ElMaven/wiki/Introduction-to-ElMaven-UI#peak-detection).
 
 ##El-MAVEN Phi Relative LC-MS Integration
 
@@ -150,7 +152,7 @@ After curating the detected metabolites, go to option to export the data directl
 
 ![El-MAVEN PollyPhiTM Interface](../../img/EPI/ElMAVENPollyPhiInterface.png) <center> **Figure 19.** El-MAVEN Phi Interface </center>
 
-You can select the peak table and/or create a new project to be pushed to PollyPhiTM for Flux analysis and hit on *‘Upload’.* This will take a while. Click on Start Fluxing. After giving the command to upload, you would receive an email containing the link to the analysis which can be accessed anytime. After clicking on *Start Fluxing*, you will be redirected to the GSheet interface where cohort information has to be entered.
+You can select the peak table and/or create a new project to be pushed to PollyPhi for Flux analysis and hit on *Upload*. This will take a while. Click on Start Fluxing. After giving the command to upload, you would receive an email containing the link to the analysis which can be accessed anytime. After clicking on *Start Fluxing*, you will be redirected to the GSheet interface where cohort information has to be entered.
 
 ![Automated email with analysis link](../../img/EPI/EmailLink.png) <center> **Figure 20.** Automated email with analysis link </center>
 
@@ -165,7 +167,9 @@ After this, you will land on the *Visualization Interface*. This interface allow
 *   You can visualize the position of the metabolite on the metabolism pathway. If HMDB ID is not provided or not detected, you will the see complete central carbon metabolism pathway.
 *   You can select cohorts for visualization by clicking on the *Settings* icon present on the top right corner.
 
-![PollyPhiTM Visualization](../../img/EPI/PollyPhiViz1.png) (../../img/EPI/PollyPhiViz2.png) <center> **Figure 22.** Visualization interface </center>
+![PollyPhiTM Visualization](../../img/EPI/PollyPhiViz1.png)
+
+![PollyPhiTM Visualization](../../img/EPI/PollyPhiViz2.png) <center> **Figure 22.** Visualization interface </center>
 
 **Quality Check Interface**
 
@@ -202,4 +206,4 @@ This interface allows you to visualize the EIC plot and reject metabolites or is
 |7.| **Can I reject any label of a selected metabolite from the analysis?** | As mentioned above, you can use the *Reject Metabolite* option for any specific isotopologue as well.|
 |8.| **Is there any limit on the file size tha can be uploaded on El-MAVEN Phi Relative LC-MS?** | No. You can upload data irrespective of its size.|
 |9.| **How can I edit parameters for natural abundance correction?** | El-MAVEN Phi Relative LC-MS does not allow you to edit the natural abundance correction parameters. To have more flexibility over your analysis, please refer to [Labeled LC-MS Workflow](../Labeled LC-MS Workflow).|
-|10.| **Can the values be normalized based on the external standards I have?** | Yes. To support user specific customizations, you can use [Polly Notebooks](../../Apps/Polly Notebooks).|
+|10.| **Can the values be normalized based on the external standards I have?** | Yes. To support user specific customizations, you can use [Polly Notebooks](../../Polly Notebooks).|

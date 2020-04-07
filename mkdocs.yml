@@ -22,7 +22,7 @@ nav:
         - High Throughput Drug Screening: Apps/Screening & Sequencing Data/High Throughput Drug Screening.md
         - RNA Seq Qorkflow: Apps/Screening & Sequencing Data/RNA Seq Workflow.md
       - Proteomics Data:
-        - Protoemics Workflow: Apps/Proteomic Data/Proteomcis Workflow.md
+        - Protoemics Workflow: Apps/Proteomic Data/Proteomics Workflow.md
       - Lipidomics Data:
         - Lipidomics Visualization Dashboard: Apps/Lipidomics Data/Lipidomics Visualization Dashboard.md
       - Multi-omics Data:
