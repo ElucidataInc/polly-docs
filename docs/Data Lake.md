@@ -60,7 +60,7 @@ Additionally, the public data repositories also consist of publicly available da
 
 Upon opening the Discover portal on Polly, choose a data repository that you would like to explore. The page should look something like this.
 
-![Polly Discover](../img/Discover/image1.png)
+![Polly Discover](../img/Discover/image1.jpg)
 
 After selecting a repository, you’ll be able to see a dashboard and the Polly Discover app icon. The dashboard will give you an overview of the repository, for instance, the number of data sets in the repository, distribution of tissues, organisms, etc. among the datasets.
 
