@@ -58,7 +58,7 @@ The Polly Landing page provides access to 4 distinct interconnected modules on P
 
     Polly enables access to proprietary, expert-curated, disease-specific data lakes to accelerate your drug discovery programs. Mine data lakes for public and proprietary data that are harmonized across sources on  Polly Discover. 
 
-![Discover](./img/Introduction/Discover.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
+![Discover](./img/Introduction/Discover.jpg) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
 
 ##Getting help on the platform
 
