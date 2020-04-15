@@ -19,7 +19,7 @@ CRISPR Screening provides an interactive way to explore and visualize the qualit
 *   Save and share analyses with other collaborators.
 *   Revisit previously performed analyses at any time.
 
-![CRISPR Screening](../../../img/CRISPR/(1)CRISPRScreeningWF.png) <center>**Figure 1.** CRISPR Screening</center>
+![CRISPR Screening](../../../img/CRISPR/CRISPRScreeningWF.png) <center>**Figure 1.** CRISPR Screening</center>
 
 #Getting Started
 
@@ -29,11 +29,48 @@ CRISPR Screening requires the following two files as input:
 
 **Fastq files**
 
-These are files in fast.gz format. 
+Fastq files stores short read data from high throughput sequencing experiments. The sequence and quality scores are usually put into a single line each. These are files in fast.gz format.
+
+A FASTQ record has the following format:
+
+*  A line starting with @, containing the sequence ID.
+
+
+*  One or more lines that contain the sequence.
+
+
+*  A new line starting with the character +, and being either empty or repeating the sequence ID.
+
+
+*  One or more lines that contain the quality scores.
+
+![Fastq file](../../../img/CRISPR/Fastqfile.png) <center>**Figure 2.** Fastq File</center>
+
+The ideal CRISPR sequence length is only ~20 bp nucleotides. If you find your data contains more than ~ 20 nucleotides, there is a high chance there are adapters in the sequence. These experimental adapters need to be trimmed.
+
+![Fastq file showing adapters](../../../img/CRISPR/Fastqfile2.png) <center>**Figure 3.** Fastq File showing adapters</center>
+
+The highlighted sequence is of adapters. You can specify the length of nucleotides to be trimmed in the Trim-5 given under the pipeline and parameter tab.
+
+![Trim-5](../../../img/CRISPR/Trim5.png) <center>**Figure 4.** Trim-5</center> 
 
 **Library file**
 
-This is file in .csv format.
+The library file of CRISPR method stores which sgRNA targets which gene. The file format should be CSV. Each gene associated with multiple sgRNA. 
+
+The file contains three columns:
+
+*  *Id*: contains Unique sgRNA id
+
+*  *gRNA* *sequence*: Consists of gRNA sequence. The sequences are searched in the fastq files by the CRISPR screening algorithm to calculate the read counts.
+
+*  *Gene*: Gene column consists of gene symbol associated with each gRNA sequence
+
+**Note**: The sequence of these columns should be as given in the figure above. It should be maintained as it is before uploading on the Polly CRISPR application.
+
+
+![Library File](../../../img/CRISPR/Libraryfile.png) <center>**Figure 5.** Library File</center>
+
 
 ##Steps involved in data processing
 
@@ -61,9 +98,9 @@ CRISPR Screening provides an interactive way to explore and visualize the qualit
 
 Select *CRISPR Screening* from the dashboard under the *Screening and Sequencing Data* Tab as shown in Figure 2. Create a *New Project* to be redirected to CRISPR Screening's upload page.
 
-![Polly Dashboard](../../../img/CRISPR/(2)Manage.png) <center>**Figure 2.** Dashboard</center>
+![Polly Dashboard](../../../img/CRISPR/(2)Manage.png) <center>**Figure 6.** Dashboard</center>
 
-![CRISPR Screening](../../../img/CRISPR/(3)Analyze.png) <center>**Figure 3.** CRISPR Screening</center>
+![CRISPR Screening](../../../img/CRISPR/(3)Analyze.png) <center>**Figure 7.** CRISPR Screening</center>
 
 
 ##Upload Files
@@ -73,11 +110,11 @@ Upload the files in their respective tabs​ as indicated by the screenshots bel
 *   Click on *Upload Files* on the *Upload Fastq Files* box to upload the fastq.gz files.
 *   Click on *Upload Files* button on the *Upload sgRNA Files* box to upload the library file in .csv format.
 
-![PollyTM CRISPR Upload Dashboard](../../../img/CRISPR/(5)upload.png) <center>**Figure 5.** Upload interface</center>
+![PollyTM CRISPR Upload Dashboard](../../../img/CRISPR/(5)upload.png) <center>**Figure 8.** Upload interface</center>
 
 *   Track the status of the upload real-time.
 
-![Real-time tracking](../../../img/CRISPR/(6)progress.png) <center>**Figure 6.** Real-time tracking</center>
+![Real-time tracking](../../../img/CRISPR/(6)progress.png) <center>**Figure 9.** Real-time tracking</center>
 
 ##Set parameters and process comparisons
 
@@ -91,17 +128,17 @@ Upon successful upload of the files, the next step is to set parameters. All the
     *   **Trim-5':** 23
     *   **sgRNA length:** 19
 
-![Select Pipeline and Parameters Interface](../../../img/CRISPR/(7)parameter.png) <center>**Figure 7.** Select Pipeline and Parameters Interface </center>
+![Select Pipeline and Parameters Interface](../../../img/CRISPR/(7)parameter.png) <center>**Figure 10.** Select Pipeline and Parameters Interface </center>
 
 ##Give identifier names to the uploaded .fastq samples
 
-![Sample Name Editor](../../../img/CRISPR/(8)editor.png) <center>**Figure 8.** Sample Name Editor</center>
+![Sample Name Editor](../../../img/CRISPR/(8)editor.png) <center>**Figure 11.** Sample Name Editor</center>
 
 ##Renaming of comparisons and selection of conditions and baseline
 
 Rename the default comparison and select baseline and condition samples for this comparison as indicated in the screenshot. After selecting the baseline & condition samples, select *Start Processing* option.
 
-![Rename comparisons](../../../img/CRISPR/(9)default.png) <center>**Figure 9.** Rename comparisons</center>
+![Rename comparisons](../../../img/CRISPR/(9)default.png) <center>**Figure 12.** Rename comparisons</center>
 
 Add another comparison by clicking on the button *Add New* button at the right corner of the screen.
 
@@ -120,17 +157,17 @@ After the coffee break, you can go to the working project by following small ste
 
 3.  Click on the project you were working on. Here I have "new_project" as a project name.
 
-![Select Project](../../../img/CRISPR/(10)Manage.png) <center>**Figure 10.** Select project</center>
+![Select Project](../../../img/CRISPR/(10)Manage.png) <center>**Figure 13.** Select project</center>
 
 **Track the progress of each comparison** with the help of the icons depicted below.
 
-![Track Progress of each comparison](../../../img/CRISPR/(11)comp.png) <center>**Figure 11.** Track Progress of each comparison</center>
+![Track Progress of each comparison](../../../img/CRISPR/(11)comp.png) <center>**Figure 14.** Track Progress of each comparison</center>
 
 ##Dashboard
 
 After clicking on *Go To Dashboard*, the following screenshot is displayed.
 
-![CRISPR Dashboard](../../../img/CRISPR/(12)dashboared.png) <center>**Figure 12.** CRISPR Dashboard</center>
+![CRISPR Dashboard](../../../img/CRISPR/(12)dashboared.png) <center>**Figure 15.** CRISPR Dashboard</center>
 
 ##Analysis Table & sgRNA Plot
 
@@ -139,16 +176,16 @@ The table displays the beta score, *p*-value and FDR values for each gene.
 *   *sgRNA Plot:* The sgRNA plot navigates you to visualise the normalised counts of each gene. By clicking the gene name in the table the sgRNA plots changes accordingly. You can download the plots, normalised counts and result table of the analysis by clicking on *Download* button on the top right corner of the page. By default, all sgRNA and Samples are selected and displayed in the sgRNA Read Count Plot.
     *sgRNA Plot Setting:* Under setting, there is an option of select and deselect of sgRNAs or samples of interest.
 
-![sgRNA Plot](../../../img/CRISPR/(13)sgrna.png) <center>**Figure 13.** sgRNA Plot</center>
+![sgRNA Plot](../../../img/CRISPR/(13)sgrna.png) <center>**Figure 16.** sgRNA Plot</center>
 
 *   *Distribution Plot:*
     *   *CDF Plot:* The cumulative distribution function of *p*-values. Smallest FDR greater or equal to 5% and 25% are displayed.
 
-    ![CDF Plot](../../../img/CRISPR/(14)cdf.png) <center>**Figure 14.** CDF Plot</center>
+    ![CDF Plot](../../../img/CRISPR/(14)cdf.png) <center>**Figure 17.** CDF Plot</center>
 
     *   *Count Plot:* Histogram of *p*-values. Small *p*-values should be enriched. If a one-sided test is performed, *p*-values toward 1.0 are expected to be enriched as well.
 
-    ![Count Plot](../../../img/CRISPR/(15)histo.png) <center>**Figure 15.** Count Plot</center>
+    ![Count Plot](../../../img/CRISPR/(15)histo.png) <center>**Figure 18.** Count Plot</center>
 
 **Note:**
 
@@ -181,7 +218,7 @@ By clicking on the tab *Switch Comparison*, you can change the comparison that h
 
 Click on button present at the left of the screen. Following options will pop up:
 
-![Analyze your Data module](../../../img/CRISPR/(16)analyze.png) <center>**Figure 16.** Analyze your Data module</center>
+![Analyze your Data module](../../../img/CRISPR/(16)analyze.png) <center>**Figure 19.** Analyze your Data module</center>
 
 **Have a look at the QC module**
 
@@ -226,7 +263,7 @@ In Multi Comparison, you can compare the current analysis with the previously pr
 
 *   Select the comparisons you want to compare with your base comparison. Base Comparison is the comparison selected in the current analysis.
 
-![Multi comparisons](../../../img/CRISPR/(20)Multi.png) <center>**Figure 17.** Multi comparison</center>
+![Multi comparisons](../../../img/CRISPR/(20)Multi.png) <center>**Figure 20.** Multi comparison</center>
 
 *   Once the comparisons are selected, click on the *Save* button on the top right corner of the page. On doing so, the following table is displayed with all the selected comparisons.
 
@@ -236,7 +273,7 @@ In Multi Comparison, you can compare the current analysis with the previously pr
 
 *   The multi-comparison table can show union or intersection of the genes present in all the comparisons. Here, union will show all the genes present in all the comparisons and intersection will only show genes which are common to all the comparisons. by default, union is selected. This can be changed by selecting the intersection option on the top of the screen.
 
-![Multi-comparison](../../../img/CRISPR/(22).png) <center>**Figure 18.** Multi-comparison</center>
+![Multi-comparison](../../../img/CRISPR/(22).png) <center>**Figure 21.** Multi-comparison</center>
 
 *   sgRNA read count plot for multiple comparisons can be seen together one below the other (two at a time).
 
@@ -244,7 +281,7 @@ In Multi Comparison, you can compare the current analysis with the previously pr
     *   Click on sgRNA Read Count Plot.
     *   Options and Info box opens from the right side of the screen. Select the gene for which the plot is required and click on *Apply Changes*. Once done, plots for two comparisons appear one below the other as shown in the image.
 
-    ![Compare sgRNA Read count plot of a gene of interest in the base and comparisons performed in the previous analysis](../../../img/CRISPR/(23)sgc.png) <center>**Figure 19.** Compare sgRNA Read count plot of a gene of interest in the base and comparisons performed in the previous analysis</center>
+    ![Compare sgRNA Read count plot of a gene of interest in the base and comparisons performed in the previous analysis](../../../img/CRISPR/(23)sgc.png) <center>**Figure 22.** Compare sgRNA Read count plot of a gene of interest in the base and comparisons performed in the previous analysis</center>
 
     *   The comparisons for which the plots are shown can be changed by clicking on the translucent arrows next to the images.
 
