@@ -33,16 +33,16 @@ Fastq files stores short read data from high throughput sequencing experiments. 
 
 A FASTQ record has the following format:
 
-- A line starting with @, containing the sequence ID.
+*  A line starting with @, containing the sequence ID.
 
 
-- One or more lines that contain the sequence.
+*  One or more lines that contain the sequence.
 
 
-- A new line starting with the character +, and being either empty or repeating the sequence ID.
+*  A new line starting with the character +, and being either empty or repeating the sequence ID.
 
 
-- One or more lines that contain the quality scores.
+*  One or more lines that contain the quality scores.
 
 ![Fastq file](../../../img/CRISPR/Fastqfile.png) <center>**Figure 2.** Fastq File</center>
 
@@ -50,7 +50,7 @@ The ideal CRISPR sequence length is only ~20 bp nucleotides. If you find your da
 
 ![Fastq file showing adapters](../../../img/CRISPR/Fastqfile2.png) <center>**Figure 3.** Fastq File showing adapters</center>
 
-The highlighted sequence is of adapters. We can specify the length of nucleotides to be trimmed in the Trim-5 given under the pipeline and parameter tab.
+The highlighted sequence is of adapters. You can specify the length of nucleotides to be trimmed in the Trim-5 given under the pipeline and parameter tab.
 
 ![Trim-5](../../../img/CRISPR/Trim5.png) <center>**Figure 4.** Trim-5</center> 
 
@@ -60,11 +60,11 @@ The library file of CRISPR method stores which sgRNA targets which gene. The fil
 
 The file contains three columns:
 
-- **Id**: contains Unique sgRNA id
+*  *Id*: contains Unique sgRNA id
 
-- **gRNA** **sequence**: Consists of gRNA sequence. The sequences are searched in the fastq files by the CRISPR screening algorithm to calculate the read counts.
+*  *gRNA* *sequence*: Consists of gRNA sequence. The sequences are searched in the fastq files by the CRISPR screening algorithm to calculate the read counts.
 
-- **Gene**: Gene column consists of gene symbol associated with each gRNA sequence
+*  *Gene*: Gene column consists of gene symbol associated with each gRNA sequence
 
 **Note**: The sequence of these columns should be as given in the figure above. It should be maintained as it is before uploading on the Polly CRISPR application.
 Note: The sequence of these columns should be as given in the figure above. It should be maintained as it is before uploading on the Polly CRISPR application.
