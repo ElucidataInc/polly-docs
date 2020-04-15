@@ -29,7 +29,7 @@ CRISPR Screening requires the following two files as input:
 
 **Fastq files**
 
-Fastq files stores short read data from high throughput sequencing experiments. The sequence and quality scores are usually put into a single line each.These are files in fast.gz format.
+Fastq files stores short read data from high throughput sequencing experiments. The sequence and quality scores are usually put into a single line each. These are files in fast.gz format.
 
 A FASTQ record has the following format:
 
@@ -67,7 +67,7 @@ The file contains three columns:
 *  *Gene*: Gene column consists of gene symbol associated with each gRNA sequence
 
 **Note**: The sequence of these columns should be as given in the figure above. It should be maintained as it is before uploading on the Polly CRISPR application.
-Note: The sequence of these columns should be as given in the figure above. It should be maintained as it is before uploading on the Polly CRISPR application.
+
 
 ![Library File](../../../img/CRISPR/Libraryfile.png) <center>**Figure 5.** Library File</center>
 
