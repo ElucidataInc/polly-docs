@@ -4,7 +4,7 @@
 
 Proteomics is a methodical approach used to identify and understand protein expression patterns at a given time in response to a specific stimulus coupled with functional protein networks that exist at the level of the cell, tissue, or whole organism. This has grown into a popular and promising field  for the identification and characterization of cellular gene products (*i.e.* proteins) that are present, absent, or altered under certain environmental, physiological and pathophysiological conditions. With the onset of robust and reliable mass spectrometers which help provide methodical analysis and quantification of complex protein mixtures, it is also important to standardize methods to process this data and perform in-depth analysis resulting in a meaningful outcome. Proteomics Workflow provides a platform to analyze any proteomics data states ranging from pre-processing to in-depth pathway analysis. 
 
-##Scope of the app 
+##Scope of the app  
 
 *   Systematic downstream analysis of Proteomics data with ease of switching interfaces.
 *   Visualize abundance plots for gene(s) against predefined or custom pathway databases.
@@ -51,7 +51,7 @@ Select *Proteomics Workflow* from the dashboard under the *Proteomics Data* tab.
 
 ![Polly Dashboard](../../img/Proteomics/Dashboard1.png)
 
-![Polly Dashboard](../../img/Proteomics/Dashboard2.png) <center>**Figure 4.** Polly Dashboard and Proteomics Workflow</center>
+![Polly Dashboard](../../img/Proteomics/Dashboard.png) <center>**Figure 4.** Polly Dashboard and Proteomics Workflow</center>
 
 Upload the abundance and cohort file in the upload space and click on *Go*.
 
