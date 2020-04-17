@@ -2,11 +2,10 @@ site_name: Polly Documentation
 nav:
   - Home: index.md
   - Getting Started:
-    - Polly CLI: Getting Started/Polly CLI.md
     - Projects: Getting Started/Project Management Dashboard.md
   - Apps:
       - Introduction: Apps/Introduction.md
-      - Notebooks: Apps/Polly Notebooks.md
+      - Host Apps: Apps/Host Apps.md
       - Metabolomics Data:
         - Dual Mode: Apps/Metabolomic Data/Dual Mode Visualization.md
         - Labeled LC-MS Workflow: Apps/Metabolomic Data/Labeled LC-MS Workflow.md
@@ -27,6 +26,9 @@ nav:
         - Lipidomics Visualization Dashboard: Apps/Lipidomics Data/Lipidomics Visualization Dashboard.md
       - Multi-omics Data:
         - IntOmix: Apps/Multi-omic Data/IntOmix.md
+  - Scaling Compute: 
+      - Polly CLI: Scaling compute/Polly CLI.md
+      - Notebooks: Scaling compute/Polly Notebooks.md
   - Data Lake: Data Lake.md
 theme: readthedocs
 site_favicon: img/elucidata.ico
