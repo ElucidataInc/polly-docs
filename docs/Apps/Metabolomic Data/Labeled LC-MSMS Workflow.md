@@ -63,7 +63,7 @@ Select *Labeled LC-MS/MS Workflow* from the dashboard under the *Metabolomics Da
 
 ![Polly Dashboard](../../img/LabeledLC-MS2Workflow/PollyDash.png)
 
-![LabeledLCMSMSWorkflow](../../img/LabeledLC-MS2Workflow/LabeledLCMSMSWorkflow.png) <center>**￼Figure 5.** Polly Dashboard and Labeled LC-MS/MS Workflow</center>
+![LabeledLCMSMSWorkflow](../../img/LabeledLC-MS2Workflow/LabeledLCMSMSWorkflow.png) <center>**Figure 5.** Polly Dashboard and Labeled LC-MS/MS Workflow</center>
 
 ##Upload Files
 
