@@ -96,9 +96,9 @@ CRISPR Screening provides an interactive way to explore and visualize the qualit
 
 *   The public dataset used for the tutorial is extracted from the paper *"A CRISPR Dropout Screen Identifies Genetic Vulnerabilities and Therapeutic Targets in Acute Myeloid Leukemia(Tzelepis et al)".* Genome-wide drop-out screens were performed in 5 Acute Myeloid Leukemia (AML) cell lines and 2 Non-AML cell lines (HT-29 and HT-1080). For our study, we have considered three AML cell lines i.e. OCIAML3, MV411, and MOLM.
 
-Select *CRISPR Screening* from the dashboard under the *Screening and Sequencing Data* Tab as shown in Figure 2. Create a *New Project* to be redirected to CRISPR Screening's upload page.
+Select *CRISPR Screening* from the dashboard under the *Screening and Sequencing Data* Tab as shown in Figure 7. Create a *New Project* to be redirected to CRISPR Screening's upload page.
 
-![Polly Dashboard](../../../img/CRISPR/(2)Manage.png) <center>**Figure 6.** Dashboard</center>
+![Polly Dashboard](../../../img/CRISPR/Dashboard1.png) <center>**Figure 6.** Dashboard</center>
 
 ![CRISPR Screening](../../../img/CRISPR/(3)Analyze.png) <center>**Figure 7.** CRISPR Screening</center>
 
@@ -157,7 +157,7 @@ After the coffee break, you can go to the working project by following small ste
 
 3.  Click on the project you were working on. Here I have "new_project" as a project name.
 
-![Select Project](../../../img/CRISPR/(10)Manage.png) <center>**Figure 13.** Select project</center>
+![Select Project](../../../img/CRISPR/Dashboard2.png) <center>**Figure 13.** Select project</center>
 
 **Track the progress of each comparison** with the help of the icons depicted below.
 
