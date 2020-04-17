@@ -27,8 +27,8 @@ nav:
       - Multi-omics Data:
         - IntOmix: Apps/Multi-omic Data/IntOmix.md
   - Scaling Compute: 
-      - Polly CLI: Getting Started/Polly CLI.md
-      - Notebooks: Apps/Polly Notebooks.md
+      - Polly CLI: Scaling compute/Polly CLI.md
+      - Notebooks: Scaling compute/Polly Notebooks.md
   - Data Lake: Data Lake.md
 theme: readthedocs
 site_favicon: img/elucidata.ico
