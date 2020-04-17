@@ -47,7 +47,7 @@ The cohort file should be in .csv format as shown in Figure 3. This file should 
 
 Go to the dashboard and select Untargeted Pipeline under the *Metabolomcis Data* tab.
 
-![Polly Dashboard](../../img/UntargetedPipeline/Dashboard.png)<center>**Figure 4.** Polly Dashboard</center>
+![Polly Dashboard](../../img/UntargetedPipeline/PollyDash.png)<center>**Figure 4.** Polly Dashboard</center>
 
 ![Untargeted Pipeline](../../img/UntargetedPipeline/UTP_Tab.png)<center>**Figure 5.** Untargeted Pipeline</center>
 

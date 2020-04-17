@@ -61,7 +61,7 @@ The background mapping metadata is a .csv, .xls, .xlsx or .txt file that contain
 
 Select *Labeled LC-MS/MS Workflow* from the dashboard under the *Metabolomics Data* Tab as shown in Figure 5. Create a *New Project* to be redirected to Labeled LC-MS/MS Workflow's upload page.
 
-![Polly Dashboard](../../img/LabeledLC-MS2Workflow/PollyDashboard.png)
+![Polly Dashboard](../../img/LabeledLC-MS2Workflow/PollyDash.png)
 
 ![LabeledLCMSMSWorkflow](../../img/LabeledLC-MS2Workflow/LabeledLCMSMSWorkflow.png) <center>**￼Figure 5.** Polly Dashboard and Labeled LC-MS/MS Workflow</center>
 

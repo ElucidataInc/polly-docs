@@ -40,13 +40,13 @@ The Polly Landing page provides access to 4 distinct interconnected modules on P
 
     Find comprehensive information about your project, including files, notebooks, apps, analyses, and reports. This page also includes information about the creation date, project owner, and collaborators.
 
-![Manage](./img/Introduction/Manage1.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
+![Manage](./img/Introduction/Dashboard.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
 
 *   [Use Apps](./Apps/Introduction)
 
      Polly hosts a suite of apps and production-ready workflows to analyze and process a variety of data with ease. You can build and host your custom workflows from individual components or choose from a suite of ready-to-use workflows on Polly.
 
-![Manage](./img/Introduction/Manage2.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
+![Manage](./img/Introduction/Analyse.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
 
 *   [Write & Maintain Code](./Apps/Polly Notebooks)
 
