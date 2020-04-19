@@ -18,7 +18,7 @@ This starter guide provides a broad overview of the platform to get you started 
 
 ![Login](./img/Introduction/Login.png)
 
-*   **Login through [Polly CLI](./Getting Started/Polly CLI)**
+*   **Login through [Polly CLI](./Scaling compute/Polly CLI)**
 
     To be able to start using the features of Polly CLI, the first step is to log in to Polly using the Terminal / Command Prompt. Use the following command to log in.
 
@@ -48,7 +48,7 @@ The Polly Landing page provides access to 4 distinct interconnected modules on P
 
 ![Manage](./img/Introduction/Analyse.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
 
-*   [Write & Maintain Code](./Apps/Polly Notebooks)
+*   [Write & Maintain Code](./Scaling compute/Polly Notebooks)
 
     Polly enables coding in a range of computational environments with configurable machine sizes and dockerized environments. 
 
