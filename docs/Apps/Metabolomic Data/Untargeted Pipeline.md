@@ -195,7 +195,7 @@ The representative metabolite identification table is again merged to the restru
 
 The results are generated in the MetScape input intensity format and metadata format.
 
-![MetScape internsity file](../../img/UntargetedPipeline/MetScapeIntensity.png)<center>**Figure 18.** MetScape internsity file</center>
+![MetScape intensity file](../../img/UntargetedPipeline/MetScapeIntensity.png)<center>**Figure 18.** MetScape intensity file</center>
 
 ![MetScape cohort file](../../img/UntargetedPipeline/MetScapeCohort.png)<center>**Figure 19.** MetScape cohort file</center>
 

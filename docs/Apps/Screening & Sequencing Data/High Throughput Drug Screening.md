@@ -94,7 +94,7 @@ To analyze the results for a single drug, click on the *Single Drug* present at 
 
 For selecting the drug, move to the bottom of the page to the *Choose drug* option and select the desired drug from the drop down. The plot would get updated as per your drug selection.
 
-![Metabolite selection at single drug interface](../../img/HTS/Singledrug2.png) <center>**Figure 12.** Metabolite selection at single drug interface</center>
+![Single drug selection interface](../../img/HTS/Singledrug2.png) <center>**Figure 12.** Single drug selection interface</center>
 
 ##Post-Processing results
 
@@ -114,21 +114,21 @@ Selecting a cell line from the drop down as shown in Figure 13 will display thre
 *   Drugs with IC<sub>50</sub> values lesser than the tested minimum dosage
 *   Drugs with IC<sub>50</sub> values greater than the tested maximum dosage
 
-![IC50 Plot](../../img/HTS/Analysis1.png) <center>**Figure 13.** IC<sub>50</sub> Plot</center>
+![IC50 Plot](../../img/HTS/Analysis1.png) <center>**Figure 14.** IC<sub>50</sub> Plot</center>
 
 **Lethality:** It offers an indication of the lethal toxicity for a given drug. It provides the degree to which a drug is harmful to a user or how capable it is of causing death.
 
 The *Lethality* section provides a chart showing relative lethality of drugs for all the cell lines uploaded.
 
-![Lethality Plot](../../img/HTS/Lethality.png) <center>**Figure 14.** Lethality Plot</center>
+![Lethality Plot](../../img/HTS/Lethality.png) <center>**Figure 15.** Lethality Plot</center>
 
 **Selectivity:** It refers to a drug’s ability to preferentially produce a particular effect and is related to the structural specificity of drug binding to receptors. Drug selectivity is an important aspect and is used for evaluating the ADRs (Adverse Drug Reaction) of drugs.
 
 The *Selectivity* section provides a percent proliferation difference vs concentration dosage selectivity plot.
 
-![Selectivity Plot](../../img/HTS/Selectivity1.png) <center>**Figure 15.** Selectivity Plot</center>
+![Selectivity Plot](../../img/HTS/Selectivity1.png) <center>**Figure 16.** Selectivity Plot</center>
 
 Select you desired drug as well as the cell lines to get the visualization as shown in Figure 16.
 
-![Cell line selection for Selectivity](../../img/HTS/Selectivity2.png) <center>**Figure 16.** Cell line selection for Selectivity</center>
+![Cell line selection for Selectivity](../../img/HTS/Selectivity2.png) <center>**Figure 17.** Cell line selection for Selectivity</center>
 
