@@ -2,7 +2,7 @@
 
 ##Overview
 
-Metabolomics is one of the key research areas focusing on small molecules present in a tissue or cell. MetScape Workflow allows you to process unlabeled LC-MS targeted, semi-targeted (without retention time) and untargeted data with insightful visualizations. You can directly upload CSV files obtained after peak detection in [El-MAVEN](https://resources.elucidata.io/elmaven) along with the cohort information. The [Polly Notebook](../../Polly Notebooks) enables you to use in-built scripts for normalizing, transforming and visualizing data along with the ability to upload and use your custom scripts. The pathway dashboard allows you to track differentially expressed metabolites across cohorts and form hypothesis on not only individual metabolites but on pathways as well.
+Metabolomics is one of the key research areas focusing on small molecules present in a tissue or cell. MetScape Workflow allows you to process unlabeled LC-MS targeted, semi-targeted (without retention time) and untargeted data with insightful visualizations. You can directly upload CSV files obtained after peak detection in [El-MAVEN](https://resources.elucidata.io/elmaven) along with the cohort information. The [Polly Notebook](../../../Scaling compute/Polly Notebooks) enables you to use in-built scripts for normalizing, transforming and visualizing data along with the ability to upload and use your custom scripts. The pathway dashboard allows you to track differentially expressed metabolites across cohorts and form hypothesis on not only individual metabolites but on pathways as well.
 
 ##Scope of the app
 
@@ -93,7 +93,7 @@ The function of these in-built scripts is mentioned below:
 
 <pre><code>sample_view(mavenData)</code></pre>
 
-Click [here](../../Polly Notebooks) for a detailed documentation about Polly Notebook.
+Click [here](../../../Scaling compute/Polly Notebooks) for a detailed documentation about Polly Notebook.
     
 **Note:**
 

@@ -163,7 +163,7 @@ A data repository is a collection of different files having different file types
 
 ![Structure of a data repository](../img/Discover/discover_data_repository.png)
 
-Click [here](../Apps/Polly Notebooks) for a detailed documentation about Polly Notebooks.
+Click [here](../Scaling compute/Polly Notebooks) for a detailed documentation about Polly Notebooks.
 
 ##Usage
 
