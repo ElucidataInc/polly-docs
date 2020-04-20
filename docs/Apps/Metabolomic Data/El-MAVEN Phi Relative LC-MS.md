@@ -150,7 +150,7 @@ You can push the curated data to the cloud with the Polly Widget for the labeled
 
 After curating the detected metabolites, go to option to export the data directly to *PollyPhi*.
 
-![El-MAVEN PollyPhiTM Interface](../../img/EPI/ElMAVENPollyPhiInterface.png) <center> **Figure 19.** El-MAVEN Phi Interface </center>
+![El-MAVEN PollyPhiTM Interface](../../img/EPI/EPI.png) <center> **Figure 19.** El-MAVEN Phi Interface </center>
 
 You can select the peak table and/or create a new project to be pushed to PollyPhi for Flux analysis and hit on *Upload*. This will take a while. Click on Start Fluxing. After giving the command to upload, you would receive an email containing the link to the analysis which can be accessed anytime. After clicking on *Start Fluxing*, you will be redirected to the GSheet interface where cohort information has to be entered.
 
