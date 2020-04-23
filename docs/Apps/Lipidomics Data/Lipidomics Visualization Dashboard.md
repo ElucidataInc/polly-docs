@@ -109,7 +109,7 @@ Scroll down the page to visualize the respective data-table for individual sampl
 
 ##Limma t-test
 
-Limma t-test helps to identify significant differentially expressed lipid classes/species between two cohorts. The cohorts to be used can be selected from the drop down menu's labeled *Cohort A* and *Cohort B*. There are two methods to perform *p*-value correction; Benjamini-Hochberg and Bonferroni correction. By default Benjamini-Hochberg correction procedure is used however, it is possible to perform either Bonferroni correction procedure or both the methods simultaneously or remove them altogether. Click on *Run Limma*  to perform differential expression and display the results in a tabular format.
+Limma t-test helps to identify significant differentially expressed lipid classes/species between two cohorts. The cohorts to be used can be selected from the drop down menu's labeled *Cohort A* and *Cohort B*. There are two methods to perform *p*-value correction; Benjamini-Hochberg and Bonferroni correction. By default Benjamini-Hochberg correction procedure is used. Click on *Run Limma*  to perform differential expression and display the results in a tabular format.
 
 ![Limma t-test results](../../img/Lipidomics/limma_t_test.png) <center>**Figure 15.** Limma t-test results</center>
 
