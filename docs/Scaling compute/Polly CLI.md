@@ -62,7 +62,7 @@ Enter the Polly Username and Password when prompted.
 
 Once logged in, you will stay logged in the system and won’t need to log in again even if a new terminal is opened or the system is restarted. You will only need to log in again if you manually log out from the system.
 
-When you are in the Polly environment, user can log in to Polly CLI without the need to input credentials. We auto detect the Polly permissions or the user. The following are the ways to auto log in to Polly in different Polly environments :
+When you are in the Polly environment, you can log in to Polly CLI without the need to input credentials. We auto detect the Polly permissions or the user. The following are the ways to auto log in to Polly in different Polly environments :
 
 *   **Notebook :** You are automatically logged in to Polly CLI as the same user as your Polly log in. You can directly start using all the Polly CLI commands as you wish.
 
@@ -300,7 +300,9 @@ To execute the job, execute the following command
 
 On executing this command, you will be asked to enter the id of the workspace where the job should be run and the path to the job description JSON file. With this, the job will be submitted to run and Job ID will be created. This Job ID will be needed to check the status and the logs of the submitted job.
 
-**Note:**   You do not need to create a new Workspace for running a job. You can simply list the older Workspaces and run a job in an already created Workspace.
+**Note:**   
+
+*   You do not need to create a new Workspace for running a job. You can simply list the older Workspaces and run a job in an already created Workspace.
 
 ![Submit Jobs](../img/PollyCLI/4.png "Submit Jobs") <center>**Figure 4** Submit Jobs</center>
 
@@ -326,7 +328,7 @@ A prompt to enter job id will appear which when kept blank gets all the job stat
 
 **Get job logs**
 
-To view the logs of any job, use the following command.
+To view the logs of any job, use the following command:
 
 <pre><code>polly jobs logs --workspace-id <workspace id> --job-id <job id></code></pre>
 
@@ -334,7 +336,9 @@ This will give the logs for the job. In case the job is still running, it will g
 
 ![Job Logs](../img/PollyCLI/7.png "Job Logs") <center>**Figure 7.** Job Logs</center>
 
-**Note** - If you are within a Polly environment while accessing Polly CLI (like notebook or CLI job), workspace id can be auto-detected by passing --yes or -y in the command instead of --workspace-id parameter.
+**Note:**  
+
+*   If you are within a Polly environment while accessing Polly CLI (like notebook or CLI job), workspace id can be auto-detected by passing --yes or -y in the command instead of --workspace-id parameter.
 
 
 ##Polly CLI help
@@ -346,12 +350,12 @@ If help is needed for any command, just type --help at the end of the command an
 
 ## Some useful gists
 
-*   Accessing Polly files in and out of a job : [https://gist.github.com/GeorgeSabu/8a3251e263d93b08413ce2c56d8af45d](https://gist.github.com/GeorgeSabu/8a3251e263d93b08413ce2c56d8af45d "https://gist.github.com/GeorgeSabu/8a3251e263d93b08413ce2c56d8af45d")
+*   [Accessing Polly files in and out of a job](https://gist.github.com/GeorgeSabu/8a3251e263d93b08413ce2c56d8af45d)
 
     
 
-*   Running a cluster of jobs with different parameters : [https://gist.github.com/GeorgeSabu/e89891da1d86fbaa3afa0655a4ede899](https://gist.github.com/GeorgeSabu/e89891da1d86fbaa3afa0655a4ede899 "https://gist.github.com/GeorgeSabu/e89891da1d86fbaa3afa0655a4ede899")
+*   [Running a cluster of jobs with different parameters](https://gist.github.com/GeorgeSabu/e89891da1d86fbaa3afa0655a4ede899)
 
     
 
-*   Bash script to identify when a job finishes : [https://gist.github.com/GeorgeSabu/4fbc359fa9ee2bf4d3cb05df3b60db81](https://gist.github.com/GeorgeSabu/4fbc359fa9ee2bf4d3cb05df3b60db81 "https://gist.github.com/GeorgeSabu/4fbc359fa9ee2bf4d3cb05df3b60db81")
+*   [Bash script to identify when a job finishes](https://gist.github.com/GeorgeSabu/4fbc359fa9ee2bf4d3cb05df3b60db81)
