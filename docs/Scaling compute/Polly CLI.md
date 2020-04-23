@@ -62,6 +62,17 @@ Enter the Polly Username and Password when prompted.
 
 Once logged in, you will stay logged in the system and won’t need to log in again even if a new terminal is opened or the system is restarted. You will only need to log in again if you manually log out from the system.
 
+When you are in the Polly environment, you can log in to Polly CLI without the need to input credentials. We auto detect the Polly permissions or the user. The following are the ways to auto log in to Polly in different Polly environments :
+
+*   **Notebook :** You are automatically logged in to Polly CLI as the same user as your Polly log in. You can directly start using all the Polly CLI commands as you wish.
+
+    
+
+*   **Polly CLI jobs :** If you want to access Polly CLI inside a job, you will have to install Polly CLI in the docker of the job and execute the following command to log in.
+
+<pre><code>polly login --auto</code></pre>
+
+
 **Log out**
 
 Execute the following command to log out
@@ -121,6 +132,10 @@ Workspace ID can be obtained by using the command “*polly workspaces list*” 
 
 *   This command only shows files and folders just one layer within the directory mentioned (just like the “ls” command on terminal).
 
+*   If the path contains space in the folder names or file names, provide the entire path within double quotes (““). 
+
+*   If you are within a Polly environment while accessing Polly CLI (like notebook or CLI job), workspace id can be auto-detected by passing --yes or -y in the command instead of --workspace-id parameter.
+
 
 **Manually sync data to and from Polly**
 
@@ -142,6 +157,10 @@ The following command will sync data from current local directory to Polly Works
 
 *   Only files that have been changed or added new will get transferred using the sync command. The files that remained unchanged after the last sync will not get transferred. This command can only be used for folders or directories (not for individual files). To transfer just a single file to or from Polly, use the “copy” command mentioned in the next section.
 
+*   If the path contains space in the folder names or file names, provide the entire path within double quotes (““). 
+
+*   If you are within a Polly environment while accessing Polly CLI (like notebook or CLI job), workspace id can be auto-detected by passing --yes or -y in the command instead of --workspace-id parameter. 
+
 **Copy files to and from Polly**
 
 Files can be copied to and from a Polly Workspace using the following command.
@@ -152,7 +171,9 @@ This command will copy an individual file from source to destination. The transf
 
 **Note:**
 
-*   Paths need to be enclosed in double quotes (“ ”) if there are spaces or special characters in the path.
+*   If the path contains space in the folder names or file names, provide the entire path within double quotes (““).
+
+*   If you are within a Polly environment while accessing Polly CLI (like notebook or CLI job), workspace id can be auto-detected by passing --yes or -y in the command instead of --workspace-id parameter.
 
 
 ##Running Dockerized Jobs
@@ -268,6 +289,9 @@ While creating a docker to be run on Polly, the following must be taken care of.
  "name": "docker running"
 }</code></pre>
 
+*   [Here](https://gist.github.com/GeorgeSabu/8a3251e263d93b08413ce2c56d8af45d "https://gist.github.com/GeorgeSabu/8a3251e263d93b08413ce2c56d8af45d") is an example gist showing how input data for a job can be taken from and output stored back to Polly Workspaces.
+
+
 ##Execute Job
 
 To execute the job, execute the following command
@@ -276,7 +300,8 @@ To execute the job, execute the following command
 
 On executing this command, you will be asked to enter the id of the workspace where the job should be run and the path to the job description JSON file. With this, the job will be submitted to run and Job ID will be created. This Job ID will be needed to check the status and the logs of the submitted job.
 
-**Note:**
+**Note:**   
+
 *   You do not need to create a new Workspace for running a job. You can simply list the older Workspaces and run a job in an already created Workspace.
 
 ![Submit Jobs](../img/PollyCLI/4.png "Submit Jobs") <center>**Figure 4** Submit Jobs</center>
@@ -299,7 +324,11 @@ A prompt to enter job id will appear which when kept blank gets all the job stat
 
 ![All Job Statuses in a Workspace](../img/PollyCLI/6.png "All Job Statuses in a Workspace") <center>**Figure 6.** All Job Statuses in a Workspace</center>
 
+*   If you are within a Polly environment while accessing Polly CLI (like notebook or CLI job), workspace id can be auto-detected by passing --yes or -y in the command instead of --workspace-id parameter.
+
 **Get job logs**
+
+To view the logs of any job, use the following command:
 
 <pre><code>polly jobs logs --workspace-id <workspace id> --job-id <job id></code></pre>
 
@@ -307,8 +336,26 @@ This will give the logs for the job. In case the job is still running, it will g
 
 ![Job Logs](../img/PollyCLI/7.png "Job Logs") <center>**Figure 7.** Job Logs</center>
 
+**Note:**  
+
+*   If you are within a Polly environment while accessing Polly CLI (like notebook or CLI job), workspace id can be auto-detected by passing --yes or -y in the command instead of --workspace-id parameter.
+
+
 ##Polly CLI help
 
 If help is needed for any command, just type --help at the end of the command and execute.
 
 ![Polly CLI Help](../img/PollyCLI/8.png "Polly CLI Help") <center>**Figure 8.** Polly CLI Help</center>
+
+
+## Some useful gists
+
+*   [Accessing Polly files in and out of a job](https://gist.github.com/GeorgeSabu/8a3251e263d93b08413ce2c56d8af45d)
+
+    
+
+*   [Running a cluster of jobs with different parameters](https://gist.github.com/GeorgeSabu/e89891da1d86fbaa3afa0655a4ede899)
+
+    
+
+*   [Bash script to identify when a job finishes](https://gist.github.com/GeorgeSabu/4fbc359fa9ee2bf4d3cb05df3b60db81)
