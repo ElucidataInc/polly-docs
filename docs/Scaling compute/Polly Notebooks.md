@@ -194,7 +194,7 @@ Additionally, you can also launch a new notebook by selecting the *New* button p
 
 *File Explorer* window also allows you to view, edit or create various file types in an interactive manner. The *Text File* option in the New button can be used to create a new text file. For viewing or editing a file, you can click on the file and a text editor will open in a new tab of the browser. You can view or edit the file and save the changes made in the file. The text editor also allows you to select a programming language from the Language tab to edit and convert the file format.
 
-![Opening a file using a Text editor](../img/Notebooks/24.png) <center>**Figure 24.** Opening a file using a Text editor</center>
+![Opening a file using a Text editor](../img/Notebooks/Languages.jpeg) <center>**Figure 24.** Opening a file using a Text editor</center>
 
 ##Accessing Project files in Notebook
 
