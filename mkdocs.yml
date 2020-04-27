@@ -30,5 +30,6 @@ nav:
       - Polly CLI: Scaling compute/Polly CLI.md
       - Notebooks: Scaling compute/Polly Notebooks.md
   - Data Lake: Data Lake.md
+  - Release Notes: Release Notes.md
 theme: readthedocs
 site_favicon: img/elucidata.ico
