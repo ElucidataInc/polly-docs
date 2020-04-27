@@ -37,6 +37,8 @@ Public data repositories on Polly consist of processed and curated datasets from
 *   GTEX: Normal tissue RNA Sequencing datasets from Genotype-Tissue Expression project
     
 *   TCGA: Tumor RNA Sequencing datasets from The Cancer Genome Atlas.
+
+*   COVID-19: Transcriptional datasets for SARS viruses, viral infections, and therapeutics for novel coronavirus.
     
 
 Additionally, the public data repositories also consist of publicly available databases that have been curated for annotations. These publicly available databases are currently part of these repositories.
