@@ -1,13 +1,13 @@
 #Release Notes
 
 <details open>
-  <summary><font size="+2">April 24th, 2020</font></summary>
+  <summary><font size="+1">April 24th, 2020</font></summary>
   <br>
   <b>Data Lake</b>
   
-   <ul>
+  <ul>
   <li>Added a data lake for COVID-19.</li>
-</ul> 
+  </ul> 
 </details>  
 
 <hr>
