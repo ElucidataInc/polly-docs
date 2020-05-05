@@ -54,6 +54,7 @@ The cohort file should be in .csv format as shown in Figure 3. This file should 
 *   In the case of dual-mode data, the metabolite name should contain the polarity of the metabolite in the format *"MetaboliteName##polarity"*, ie. Glucose##pos or Fructose##neg.
 *   During the identification of significant pathways, if the data consists, where the data consists of duplicates of metabolite features, they are filtered out on the basis of the parameters specified for significance. If at all, there are multiple occurrences of a metabolite, the one with the most significant *p*-value is mapped on the pathway dashboard. You can always revisit the duplicates from the *View Duplicates* option.
 *   Differential expression will be performed on all possible cohort comparisons.
+*   An analysis can not be restored simultaneously using two different tabs.
 
 #Tutorial
 
