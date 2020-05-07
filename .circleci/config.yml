@@ -17,7 +17,7 @@ jobs:
       - run:
           name: Installing all Dependencies
           command: |
-            pip install mkdocs
+            pip install 'mkdocs==1.0.4'
       - run:
           name: convert markdown to html
           command: |
