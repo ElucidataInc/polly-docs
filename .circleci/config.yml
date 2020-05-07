@@ -1,0 +1,90 @@
+version: 2.1
+aliases:
+- &app_workspace_dir  ~/pollyDocs
+
+defaults: &defaults
+  working_directory: *app_workspace_dir
+  docker:
+    - image: python:slim
+      environment:
+        APP_DIR: *app_workspace_dir
+
+jobs:
+  Build: &Build
+    <<: *defaults
+    steps:
+      - checkout
+      - run:
+          name: Installing all Dependencies
+          command: |
+            pip install mkdocs
+      - run:
+          name: convert markdown to html
+          command: |
+            mkdocs build
+      - persist_to_workspace:
+          root: ~/.
+          paths: .
+  Deploy: &Deploy
+    <<: *defaults
+    parameters:
+      AWS_CI_BUCKET:
+        type: string
+        default: TEST_DOC_BUCKET
+    steps:
+      - attach_workspace:
+          at: ~/.
+      - run:
+          name: Installing Dependencies
+          command: |
+            pip install awscli
+      - run:
+          name: Configuring aws Credentials
+          command: |
+            aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID --profile misc
+            aws configure set aws_secret_access_key $AWS_SECRET_KEY --profile misc
+      - run:
+          name: Store to bucket
+          command: |
+            cd site 
+            aws s3 sync . s3://$<< parameters.AWS_CI_BUCKET >> --profile misc 
+
+  testdocs_build:
+    <<: *Build
+  testdocs_deploy:
+    <<: *Deploy
+  docs_build:
+    <<: *Build
+  docs_deploy:
+    <<: *Deploy
+
+workflows:
+  main:
+    jobs:
+      - testdocs_build
+          
+      - testdocs_deploy:
+          context: polly-docs
+          requires:
+            - testdocs_build
+          filters:
+            branches:
+              only:
+                - develop
+
+      - docs_build:
+          filters:
+            branches:
+              only:
+                - master
+          
+      - docs_deploy:
+          AWS_CI_BUCKET: DOC_BUCKET
+          context: polly-docs
+          requires:
+            - docs_build
+          filters:
+            branches:
+              only:
+                - master
+          
