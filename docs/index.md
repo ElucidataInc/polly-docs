@@ -1,6 +1,6 @@
 #Welcome to Polly!
 
-**TEST2**Polly is an AI-enabled platform for storage, reproducible analysis and integration of high-throughput biomedical data on the cloud. Polly creates a unique, centralized ecosystem that enables a diverse team of biologists, bioinformaticians and scientific leaders to share and collaborate on projects, data and insights.
+Polly is an AI-enabled platform for storage, reproducible analysis and integration of high-throughput biomedical data on the cloud. Polly creates a unique, centralized ecosystem that enables a diverse team of biologists, bioinformaticians and scientific leaders to share and collaborate on projects, data and insights.
 
 Polly combines a proprietary platform with optional, on-demand high-value bioinformatics services for biological target identification and validation, pathway elucidation, cellular phenotype analysis, and biomarker identification.
 
