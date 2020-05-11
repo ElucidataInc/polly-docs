@@ -12,6 +12,10 @@
   <li>We now host our Desktop Application,El-MAVEN on Polly.</li>
   </ul>
 
+  <ul>
+  <li>Phi Calculation feature has been added to Labeled LC-MS/MS Workflow.</li>
+  </ul> 
+
 <a href="#" class="w3-button">Improvements</a>
 
 <style>
@@ -32,10 +36,6 @@
 </style>
 
   <b>Apps</b>
-
-    <ul>
-  <li>Phi Calculation feature has been added to Labeled LC-MS/MS Workflow.</li>
-  </ul> 
   
   <ul>
   <li>Changed the optimized color palette in IntOmix from a red-yellow-green scale to a more intuitive red-green scale. All upregulated metabolites or genes are represented by a shade of red and downregulated metabolites or genes as a shade of green.</li>
@@ -48,7 +48,6 @@
 </details>  
 
 <hr>
-
 <br />
 
 <details close>
