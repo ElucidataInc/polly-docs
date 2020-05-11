@@ -16,13 +16,13 @@ To help you get started even if you do not have your own data, every app on Poll
 
 ##Upload Data
 
-All applications built on Angular framework ([El-MAVEN Phi Relative LC-MS](../Metabolomic Data/El-MAVEN Phi Relative LC-MS), [FirstView](../Metabolomic Data/FirstView), [MetScape](../Metabolomic Data/MetScape), [QuantFit](../Metabolomic Data/QuantFit), [CRISPR Screening](../Screening & Sequencing Data/CRISPR Screening) and [IntOmix](../Multi-omic Data/IntOmix)) and Shiny framework ([Dual Mode Data Visualization](../Metabolomic Data/Dual Mode Visualization), [Labeled LC-MS Workflow](../Metabolomic Data/Labeled LC-MS Workflow), [Labeled LC-MSMS Workflow](../Metabolomic Data/Labeled LC-MS/MS Workflow), [Untargeted Pipeline](../Metabolomic Data/Untargeted Pipeline), [High Throughput Drug Screening](../Screening & Sequencing Data/High Throughput Drug Screening), [RNA Seq Workflow](../Screening & Sequencing Data/RNA Seq Workflow), [Proteomics Workflow](../Proteomic Data/Proteomics Workflow) and [Lipidomics Visualization Dashboard](../Lipidomics Data/Lipidomics Visualization Dashboard)) provide you the option to upload from local storage.
+All Polly <!-- ([El-MAVEN Phi Relative LC-MS](../El-MAVEN Phi Relative LC-MS), [FirstView](../FirstView), [MetScape](../MetScape), [QuantFit](../QuantFit), [CRISPR Screening](../CRISPR Screening) and [IntOmix](../IntOmix)) --> applications <!-- ([Dual Mode Data Visualization](../Dual Mode Data Visualization), [Labeled LC-MS Workflow](../Labeled LC-MS  Workflow), [Labeled LC-MS/MS Workflow](../Labeled LC-MS/MS Workflow), [Untargeted Pipeline](../Untargeted Pipeline), [High Throughput Drug Screening](../High Throughput Drug Screening), [RNA Seq Workflow](../RNA Seq Workflow), [Proteomics Workflow](../Proteomics Workflow) and [Lipidomics Visualization Dashboard](../Lipidomics Visualization Dashboard)) --> provide you the option to upload from local storage as shown in Figure 4 and Figure 5.
 
 ![Upload data from local storage for MetScape](../img/GeneralFeatures/UploadDataMetScape.png)<center>**Figure 4.** Upload data from local storage for MetScape</center>
 
 ![Upload data from local storage for Labeled LC-MS app](../img/GeneralFeatures/UploadDataLLCMSLocal.png)<center>**Figure 5.** Upload data from local storage for Labeled LC-MS app</center>
 
-The Shiny applications also provide the ability to uplaod input files from Polly Project Files by using the option *Import from Polly* as shown in Figure 6. This simplifies data processing as well as makes Polly the platform where biological data can be stored and processed conveniently. 
+Some of the Polly applications also provide the ability to uplaod input files from Polly Project Files by using the option *Import from Polly* as shown in Figure 6. This simplifies data processing as well as makes Polly the platform where biological data can be stored and processed conveniently. 
 
 ![Upload data from project files for Labeled LC-MS app](../img/GeneralFeatures/UploadDataLLCMSPolly.png)<center>**Figure 6.** Upload data from project files for Labeled LC-MS app</center>
 
