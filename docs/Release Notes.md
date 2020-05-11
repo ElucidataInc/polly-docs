@@ -1,7 +1,7 @@
 #Release Notes
 
 <details open>
-  <summary><font size="+1">May 8th, 2020</font></summary>
+  <summary><font size="+1"><b>May 8th, 2020</b></font></summary>
   <br>
   <a href="#" class="button">New</a>
   <ul>
@@ -19,7 +19,7 @@
 <hr>
 
 <details>
-  <summary><font size="+1">April 24th, 2020</font></summary>
+  <summary><font size="+1"><b>April 24th, 2020</b></font></summary>
   <br>
 <a href="#" class="button">New</a>
   <ul>
