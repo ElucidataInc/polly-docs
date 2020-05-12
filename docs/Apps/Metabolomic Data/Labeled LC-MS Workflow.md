@@ -149,7 +149,7 @@ This tab allows you to generate the output workbook which consists of the Raw In
 
 *   *Upload Library File (.csv):* The library file contains metabolite to pathway mapping information such as name of metabolite, pathway identifiers as supercategory and subcategory as shown in Figure 16. This file should be in .csv format. A detailed description of this file is provided below.
 
-![Library File](../../img/LabeledLC-MSWorkflow/labeled_lcms_library_file.png) <center>**Figure 17.** Library File</center>
+![Library File](../../img/LabeledLC-MSWorkflow/library_file.png) <center>**Figure 17.** Library File</center>
 
 where,
 
@@ -165,7 +165,7 @@ Select whether to proceed with Fractional Enrichment or Fractional Enrichment wi
 
 Clicking on *Run* will generate a workbook that consists of the worksheets *rawIntensities*, *rawAbundances*, *FracContribution*, and *CorrectedIsotopologues* with entries for all the metabolite isotopologues across different samples. Further, all the metabolite isotopologues are grouped based on the pathway they belong to (information provided in the library file).
 
-![Output Workbook](../../img/LabeledLC-MSWorkflow/Outputworkbook.png) <center>**Figure 18.** Output Workbook</center>
+![Output Workbook](../../img/LabeledLC-MSWorkflow/output_workbook.png) <center>**Figure 18.** Output Workbook</center>
 
 #Details of the App
 

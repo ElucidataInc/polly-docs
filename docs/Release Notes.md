@@ -44,7 +44,7 @@
     display: inline-block;
     font-size: 12px;
     margin: 4px 2px;
-    cursor: pointer;
+    cursor: default;
 }
 </style>
 
@@ -61,6 +61,6 @@
     display: inline-block;
     font-size: 12px;
     margin: 4px 2px;
-    cursor: pointer;
+    cursor: default;
 }
 </style>
