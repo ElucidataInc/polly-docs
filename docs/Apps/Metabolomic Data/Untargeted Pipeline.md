@@ -24,16 +24,11 @@ The intensity file used here is the El-MAVEN output in peak detailed format. Thi
 
 ![El-MAVEN intensity file](../../img/UntargetedPipeline/1.png)<center>**Figure 2.** El-MAVEN intensity file</center>
 
-**Cohort FIle**
-
-The cohort file should be in .csv format as shown in Figure 3. This file should contain two columns, *Sample* containing sample names along with *Cohort* for its cohort information.
-
-![Cohort file](../../img/UntargetedPipeline/2.png)<center>**Figure 3.** Cohort file</center>
 
 ##Steps involved in data processing
 
 *   Process raw data on El-MAVEN using automated feature detection.
-*   Export intensity file in peak detailed format and prepare metadata file.
+*   Export intensity file in peak detailed format.
 *   Annotate adducts, isotopes and fragments in the data.
 *   Perform identification of metabolites.
 *   Perform differential expression using limma visualize results.
@@ -47,15 +42,15 @@ The cohort file should be in .csv format as shown in Figure 3. This file should 
 
 Go to the dashboard and select Untargeted Pipeline under the *Metabolomcis Data* tab.
 
-![Polly Dashboard](../../img/UntargetedPipeline/PollyDash.png)<center>**Figure 4.** Polly Dashboard</center>
+![Polly Dashboard](../../img/UntargetedPipeline/PollyDash.png)<center>**Figure 3.** Polly Dashboard</center>
 
-![Untargeted Pipeline](../../img/UntargetedPipeline/UTP_Tab.png)<center>**Figure 5.** Untargeted Pipeline</center>
+![Untargeted Pipeline](../../img/UntargetedPipeline/UTP_Tab.png)<center>**Figure 4.** Untargeted Pipeline</center>
 
 ##Uplaod Files
 
 The upload data tab allows you to upload El-MAVEN output and the cohort file up to 100MB. Upload the intensity and cohort file using the drop downs shown below, select the polarity of the data and then click on *Load Data* to proceed.
 
-![Upload Files](../../img/UntargetedPipeline/UploadFiles.png)<center>**Figure 6.** Upload files</center>
+![Upload Files](../../img/UntargetedPipeline/UploadFiles1.png)<center>**Figure 5.** Upload files</center>
 
 ##Annotation
 
@@ -69,7 +64,7 @@ CAMERA operates in the following steps:
 *   It then forms groups by correlation inside samples (EIC) or correlation across samples or both
 *   After grouping these features, it annotates the possible isotopes and adducts.
 
-![Annotation](../../img/UntargetedPipeline/Annotation.png)<center>**Figure 7.** Annotation</center>
+![Annotation](../../img/UntargetedPipeline/Annotation1.png)<center>**Figure 6.** Annotation</center>
 
 **Advanced parameters**
 
@@ -89,7 +84,7 @@ The following parameters need to be set before running CAMERA:
 *   **max_peaks:** How much peaks will be calculated in every thread using the parallel mode
 *   **maxcharge:** maximum ion charge
 
-![Advanced parameters](../../img/UntargetedPipeline/AdvancedParameters.png)<center>**Figure 8.** Advanced parameters</center>
+![Advanced parameters](../../img/UntargetedPipeline/AdvancedParameters1.png)<center>**Figure 7.** Advanced parameters</center>
 
 **Select adducts for annotation**
 
@@ -107,7 +102,7 @@ You can select adducts that are needed for annotation.
     *   *quasi:* Every annotation which belongs to one molecule is called annotation group. Examples for these are [M+H] and [M+Na], where M is the same molecule. An annotation group must include at least one ion with quasi set to 1 for this adduct. If an annotation group only includes optional adducts (rule set to 0) then this group is excluded. To disable this reduction, set all rules to 1 or 0.
     *   *ips:* This is the rule score. If a peak is related to more than one annotation group, then the group having a higher score (sum of all annotations) gets picked. This effectively reduces the number of false positives.
 
-![Select adducts for annotation](../../img/UntargetedPipeline/SelectAdducts.png)<center>**Figure 9.** Select adducts for annotation</center>
+![Select adducts for annotation](../../img/UntargetedPipeline/SelectAdducts1.png)<center>**Figure 8.** Select adducts for annotation</center>
 
 **CAMERA output table**
 
@@ -115,7 +110,7 @@ After annotation CAMERA adds three columns i.e. isotopes, adducts and pcgroup. T
 
 The adduct column contains the annotation for the adducts where annotation is in the format of "[adduct] charge basemass" for example [M+H]+ 161.105, [M+K]+ 123.15 etc. The pcgroup column contains the ‘pseudospectra’ which means features are grouped based on rt and correlation (inside and across samples).
 
-![CAMERA output table](../../img/UntargetedPipeline/CAMERAOutputTable.png)<center>**Figure 10.** CAMERA output table</center>
+![CAMERA output table](../../img/UntargetedPipeline/CAMERAOutputTable.png)<center>**Figure 9.** CAMERA output table</center>
 
 **Restructured CAMERA output table**
 
@@ -139,7 +134,7 @@ The following operations are performed to make the restructured CAMERA output:
 
     *   The same *pcgroup* may have more than one feature_group ids if it has more than one molecule.
 
-![Restructured CAMERA ouput table](../../img/UntargetedPipeline/RestructuredCAMERAOuput.png)<center>**Figure 11.** Restructured CAMERA ouput table</center>
+![Restructured CAMERA ouput table](../../img/UntargetedPipeline/RestructuredCAMERAOuput.png)<center>**Figure 10.** Restructured CAMERA ouput table</center>
 
 **Representatiove output table**
 
@@ -155,7 +150,7 @@ The representative feature is defined based on the following assumptions:
 
     *   If the feature group does not have [M+H] (in positive mode) or [M-H] (in negative mode) then that feature will be considered as representative whose sum of intensity across all samples is maximum.
 
-![Representative CAMERA ouput table](../../img/UntargetedPipeline/RepresentativeCAMERAOuput.png)<center>**Figure 12.** Representative CAMERA ouput table</center>
+![Representative CAMERA ouput table](../../img/UntargetedPipeline/RepresentativeCAMERAOuput.png)<center>**Figure 11.** Representative CAMERA ouput table</center>
 
 **Summary of annotation**
 
@@ -163,11 +158,11 @@ The data is summarized on the basis of the number of features within *pcgroup* a
 
 *   Number of features vs counts of *pcgroup*
 
-![Number of features vs counts of pcgroup](../../img/UntargetedPipeline/FeaturesCountsPCGroup.png)<center>**Figure 13.** Number of features vs counts of *pcgroup*</center>
+![Number of features vs counts of pcgroup](../../img/UntargetedPipeline/FeaturesCountsPCGroup.png)<center>**Figure 12.** Number of features vs counts of *pcgroup*</center>
 
 *   Number of features vs counts of feature groups
 
-![Number of features vs counts of feature groups](../../img/UntargetedPipeline/FeaturesCountsFeatureroup.png)<center>**Figure 14.** Number of features vs counts of feature groups</center>
+![Number of features vs counts of feature groups](../../img/UntargetedPipeline/FeaturesCountsFeatureroup.png)<center>**Figure 13.** Number of features vs counts of feature groups</center>
 
 ##Identification
 
@@ -175,53 +170,31 @@ The identification is performed on the representative table only. The representa
 
 It uses the *basemass* instead mZ for mass searching because adducts and isotopes are already filtered in the above steps.
 
-![Identification](../../img/UntargetedPipeline/MI-1.png)<center> <!-- **Figure 8.** Advanced parameters --> </center>
+![Identification](../../img/UntargetedPipeline/Identification1.png)<center> <!-- **Figure 8.** Advanced parameters --> </center>
 
-![Identification](../../img/UntargetedPipeline/MI-2.png)<center>**Figure 15.** Identification</center>
+![Identification](../../img/UntargetedPipeline/Identification2.png)<center>**Figure 14.** Identification</center>
 
 **Representative metabolite identification table**
 
 The representative table is appended by the compound database columns after identification.
 
-![Representative metabolite identification table](../../img/UntargetedPipeline/RepresentativeMetaboliteIdentificationTable.png)<center>**Figure 16.** Representative metabolite identification table</center>
+![Representative metabolite identification table](../../img/UntargetedPipeline/RepresentativeMetaboliteIdentificationTable.png)<center>**Figure 15.** Representative metabolite identification table</center>
 
 **Overall metabolite identification table**
 
 The representative metabolite identification table is again merged to the restructured camera output.
 
-![Overall metabolite identification table](../../img/UntargetedPipeline/OverallMetaboliteIdentificationTable.png)<center>**Figure 17.** Overall metabolite identification table</center>
+![Overall metabolite identification table](../../img/UntargetedPipeline/OverallMetaboliteIdentificationTable.png)<center>**Figure 16.** Overall metabolite identification table</center>
 
 **[MetScape](../MetScape) input**
 
 The results are generated in the MetScape input intensity format and metadata format.
 
-![MetScape intensity file](../../img/UntargetedPipeline/MetScapeIntensity.png)<center>**Figure 18.** MetScape intensity file</center>
+![MetScape intensity file](../../img/UntargetedPipeline/MetScapeIntensity.png)<center>**Figure 17.** MetScape intensity file</center>
 
-![MetScape cohort file](../../img/UntargetedPipeline/MetScapeCohort.png)<center>**Figure 19.** MetScape cohort file</center>
+![MetScape cohort file](../../img/UntargetedPipeline/MetScapeCohort.png)<center>**Figure 18.** MetScape cohort file</center>
 
-##Quality check
 
-This allows you to understand the clustering pattern between biologically grouped and ungrouped samples.
-
-![Quality Check](../../img/UntargetedPipeline/QC.png)<center>**Figure 20.** Quality check</center>
-
-##Statistical analysis
-
-This interface allows you to perform differential expression analysis with the aim to identify metabolites whose expression differs between any specified cohort conditions. The 'limma' R package is used to identify the differentially expressed metabolites. This method creates a log<sub>2</sub> fold change ratio between the two experimental conditions and an adjusted *p*-value that rates the significance of the difference.
-
-The following parameters are available for selection:
-
-*   Select *Cohort A* and *Cohort B*: Default values are filled automatically for a selected cohort condition, which can be changed as per the cohorts of interest.
-
-*   Select *p-val* or *adj. p-val*: Select either *p*-value or adj. *p*-value for significance.
-
-*   *p-val* or *adj. p-val* cutoff: By default, the value is 0.05 but can be changed if required.
-
-*   *log2FC*: Specify the cut-off for log<sub>2</sub> fold change with the help of the slider.
-
-Based on the parameters specified, a volcano plot is displayed. The volcano plot helps in visualizing metabolites that are significantly dysregulated between two cohorts.
-
-![Stastical analysis](../../img/UntargetedPipeline/Stastical analysis.png)<center>**Figure 21.** Stastical analysis</center>
 
 #References
 
