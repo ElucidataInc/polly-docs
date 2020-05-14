@@ -110,4 +110,4 @@ Click [here](../QuantFit/#metadata-interface) for a detailed documentation about
 *   Click on **Export** on the QuantFit dashboard to export this data back to Thermo Scientific<sup>TM</sup> Compound Discoverer<sup>TM</sup>.
 *   Go back to your analysis on Thermo Scientific<sup>TM</sup> Compound Discoverer<sup>TM</sup> and visualize your data by clicking on **Open Results** within **Job Queue**. This data can be used in further analysis.
 
-![Screenshot](../docs/img/CDQuantFit/Screen10.png) <!-- <center>**Figure 1.** Demo Data for Polly<sup>TM</sup> FirstView</center> -->
+![Screenshot](https://github.com/ElucidataInc/polly-docs/blob/master/docs/img/CDQuantFit/Screen10.png) <!-- <center>**Figure 1.** Demo Data for Polly<sup>TM</sup> FirstView</center> -->
