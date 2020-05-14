@@ -191,10 +191,9 @@ pool total of a metabolite in a sample = sum (all corrected intensities for a me
 
     *   *CorrectedIsotopologues*: It consists of the fractional enrichment values obtained from the NA Corrected output in percentage
 
-    *   *FracContribution*: It consists of the fractional contribution of the labelled carbons. It is calculated by the the following formula
-    
-    *   *Fractional contribution* = Sum(Label * Fractional Enrichment)/ total number of carbons.
-    Eg: for glycine, fractional contribution = (0*FE0 + 1*FE1 + 2*FE2)/2, where FE = Fractional Enrichment
+    *   *FracContribution*: It consists of the fractional contribution of the labelled carbons. It is calculated by the the following formula:
+         * Fractional contribution = Sum(Label * Fractional Enrichment)/ total number of carbons.
+    Eg: for glycine, fractional contribution = (0 * FE0 + 1 * FE1 + 2 * FE2)/2, where FE = Fractional Enrichment
 
 #References
 
