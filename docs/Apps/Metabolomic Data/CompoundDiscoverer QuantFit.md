@@ -1,30 +1,30 @@
 #Overview
 
-We have used Compound Discoverer to set up a node for peak picking on raw data obtained from a Thermo Mass Spec. The Absolute Quantification is then derived for this data with the Polly QuantFit Node. The following tools were used in the process:
+We have used Thermo Scientific<sup>TM</sup> Compound Discoverer<sup>TM</sup> to set up a node for peak picking on raw data obtained from a thermo mass spectrometer. The absolute quantification is then derived for this data with the Polly QuantFit Node. The following tools were used in the process:
 
-*   Compound Discoverer to set up a node for peak integration, and quantification
+*   Thermo Scientific<sup>TM</sup> Compound Discoverer<sup>TM</sup> to set up a node for peak integration, and quantification
 *   MSConvert for raw data conversion to an El-MAVEN accepted format
 *   El-MAVEN to identify and automatically pick the significant peaks in the data
 *   Polly QuantFit used for absolute quantification of data
 
 ##Pre Requisites
 
-*   You should have Compound Discoverer version 3.1 to be able to use this Node
-*   Compound Discoverer should not be running in the background when you are installing the Polly QuantFit Node
+*   You should have Thermo Scientific<sup>TM</sup> Compound Discoverer<sup>TM</sup> version 3.1 to be able to use this Node
+*   Thermo Scientific<sup>TM</sup> Compound Discoverer<sup>TM</sup> should not be running in the background when you are installing the Polly QuantFit Node
 *   The path for MSConvert installation directory is **C:/Users/*UserName*/AppData/Local/Apps/Proteowizard/msconvert.exe**
 *   **You should have an account on Polly**
 
 ##User Guide
 
-Steps to set up a node in the Compound Discoverer:
+Steps to set up a node in the Thermo Scientific<sup>TM</sup> Compound Discoverer<sup>TM</sup>:
 
 *   Install the QuantFit Node from the installer [here](https://cd-polly-test.s3-ap-southeast-1.amazonaws.com/installers/PollyQuant.exe).
 
 ![Screenshot](../../img/CDQuantFit/Screenshot6.png) <!-- <center>**Figure 1.** Demo Data for Polly<sup>TM</sup> FirstView</center> -->
 
-**Compound Discoverer**
+**Thermo Scientific<sup>TM</sup> Compound Discoverer<sup>TM</sup>**
 
-*   Open Compound Discoverer 3.1.
+*   Open Thermo Scientific<sup>TM</sup> Compound Discoverer<sup>TM</sup> 3.1.
 *   Select **New Study and Analysis**
 
 ![Screenshot](../../img/CDQuantFit/Screen1.png) <!-- <center>**Figure 1.** Demo Data for Polly<sup>TM</sup> FirstView</center> -->
@@ -105,7 +105,9 @@ Click [here](../QuantFit/#metadata-interface) for a detailed documentation about
 *   **Suggested Fits:** QuantFit also suggests good fits for your data with other fit types and standard rejection that can be used in further analysis by selecting the suggested fit as a **Default Fit**.
 *   **Scaling:** Neutralize any internal dilution by scaling the data by any factor within the **Processed Data** tab.  
 
-**Data Export to Compound Discoverer**
+**Data Export to Thermo Scientific<sup>TM</sup> Compound Discoverer<sup>TM</sup>**
 
-*   Click on **Export** on the QuantFit dashboard to export this data back to Compound Discoverer.
-*   Go back to your analysis on Compound Discoverer and visualize your data by clicking on **Open Results** within **Job Queue**. This data can be used in further analysis.
+*   Click on **Export** on the QuantFit dashboard to export this data back to Thermo Scientific<sup>TM</sup> Compound Discoverer<sup>TM</sup>.
+*   Go back to your analysis on Thermo Scientific<sup>TM</sup> Compound Discoverer<sup>TM</sup> and visualize your data by clicking on **Open Results** within **Job Queue**. This data can be used in further analysis.
+
+![Screenshot](../../img/CDQuantFit/Screen10.png) <!-- <center>**Figure 1.** Demo Data for Polly<sup>TM</sup> FirstView</center> -->

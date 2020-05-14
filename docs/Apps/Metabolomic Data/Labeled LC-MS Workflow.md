@@ -149,7 +149,7 @@ This tab allows you to generate the output workbook which consists of the Raw In
 
 *   *Upload Library File (.csv):* The library file contains metabolite to pathway mapping information such as name of metabolite, pathway identifiers as supercategory and subcategory as shown in Figure 16. This file should be in .csv format. A detailed description of this file is provided below.
 
-![Library File](../../img/LabeledLC-MSWorkflow/library_file.png) <center>**Figure 17.** Library File</center>
+![Library File](../../img/LabeledLC-MSWorkflow/library_file1.png) <center>**Figure 17.** Library File</center>
 
 where,
 
@@ -163,9 +163,9 @@ where,
 
 Select whether to proceed with Fractional Enrichment or Fractional Enrichment with zero or NA Corrected or NA Corrected with zero values using *Select a fractional enrichment* and *Select a NA correction* drop down. 
 
-Clicking on *Run* will generate a workbook that consists of the worksheets *rawIntensities*, *rawAbundances*, *FracContribution*, and *CorrectedIsotopologues* with entries for all the metabolite isotopologues across different samples. Further, all the metabolite isotopologues are grouped based on the pathway they belong to (information provided in the library file).
+Clicking on *Run* will generate a workbook that consists of the worksheets *rawIntensities*, *rawAbundances*, *CorrectedIsotopologues* and *FracContribution* with entries for all the metabolite isotopologues across different samples. Further, all the metabolite isotopologues are grouped based on the pathway they belong to (information provided in the library file).
 
-![Output Workbook](../../img/LabeledLC-MSWorkflow/output_workbook.png) <center>**Figure 18.** Output Workbook</center>
+![Output Workbook](../../img/LabeledLC-MSWorkflow/output_workbook1.png) <center>**Figure 18.** Output Workbook</center>
 
 #Details of the App
 
@@ -187,14 +187,13 @@ pool total of a metabolite in a sample = sum (all corrected intensities for a me
 
     *   *rawIntensities*: It consists of raw intensity values obtained from the NA Corrected output.
 
-    *   *rawAbundances*: It consists of the pool totals values obtained from the NA Corrected output.
+    *   *rawAbundances*: It consists of the pool total values obtained from the NA Corrected output.
 
-    *   *FracContribution*: It consists of the fractional enrichment values obtained from the NA Corrected output in percentage calculated using the formula: 
-    
-        fractional contribution = na corrected value of isotopologue / na corrected value of parent (M0)
+    *   *CorrectedIsotopologues*: It consists of the fractional enrichment values obtained from the NA Corrected output in percentage
 
-*   *CorrectedIsotopologues*: It consists of the fractional contribution values obtained from the NA Corrected output, wherein the parent (M0) is considered as 100%, and all other isotopologues are relative to it.
-
+    *   *FracContribution*: It consists of the fractional contribution of the labelled carbons. It is calculated by the the following formula:
+         * Fractional contribution = Sum(Label * Fractional Enrichment)/ total number of carbons.
+    Eg: for glycine, fractional contribution = (0 * FE0 + 1 * FE1 + 2 * FE2)/2, where FE = Fractional Enrichment
 
 #References
 
