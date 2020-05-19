@@ -159,7 +159,7 @@ Select the following options for Phi calculation:
 
 - **Glucose labeled (for TCA cycle):** In case the data is <sup>13</sup>C Glucose labeled, you can select this option for calculating the Phi. This will point to the metabolites of the TCA cycle contributing to the generation of that metabolite.
 
-- **Upload your Glucose label identifier file:** By default, identifiers file with the expressions present within the app is used. If you want to make use of the identifier file for Glucose with additional expressions, they can upload the Phi expression file. Here, you will be provided with the option to upload Phi Expression File and Intermediate Expression File.
+- **Upload your Glucose label identifier file:** By default, identifiers file with the expressions present within the app is used. If you want to make use of the identifier file for Glucose with additional expressions, you can upload the Phi expression file. Here, you will be provided with the option to upload Phi Expression File and Intermediate Expression File.
 
 ![Upload Glucose label identifier file](../../img/LabeledLC-MS2Workflow/glucose_identifier_uploads_option.png) <center>**Figure 19.** Upload Glucose label identifier file</center>
 
@@ -167,21 +167,21 @@ Select the following options for Phi calculation:
 
 ![Glucose Phi expressions and intermediate expressions identifier file formats](../../img/LabeledLC-MS2Workflow/glucose_intermediate_expression_file_format.png)<center>**Figure 20.** Glucose Phi expressions and intermediate expressions identifier file formats</center>
 
-- **Any generic label (eg: Glutamine Labeled):** In case you have any other generic label data other than Glucose, they can make use of this option. The app will perform Phi calculation in the same way as for <sup>13</sup>C Glucose labeled elements.
+- **Any generic label (eg: Glutamine Labeled):** In case you have any other generic label data other than Glucose, you can make use of this option. The app will perform Phi calculation in the same way as for <sup>13</sup>C Glucose labeled elements.
 
-- **Upload your generic label identifier file:** The app by default has the identifier expressions file for glutamine label. If at all, you have the identifier file for glutamine with additional expressions or any other generic label, they can select onto this option and further upload the identifier expression file for the same.
+- **Upload your generic label identifier file:** The app by default has the identifier expressions file for glutamine label. If at all, you have the identifier file for glutamine with additional expressions or any other generic label, you can select onto this option and further upload the identifier expression file for the same.
 
 ![Upload Generic label identifier file](../../img/LabeledLC-MS2Workflow/generic_label_file_upload.png) <center>**Figure 21.** Upload Generic label identifier file</center>
 
 ![Generic label Phi expressions identifier file format](../../img/LabeledLC-MS2Workflow/glutamine_identifier_file_format.png) <center>**Figure 22.** Generic label Phi expressions identifier file format</center>
 
-- **Upload your metadata mq with identifier file:** The app by default has the metadata mq identifier loaded, but in case you have made use of any additional expressions for the above parameters, they will have to upload their own metadata mq identifier file. Keeping it unchecked would utilize the metadata mq file within the app.
+- **Upload your metadata mq with identifier file:** The app by default has the metadata mq identifier loaded, but in case you have made use of any additional expressions for the above parameters, you will have to upload your own metadata mq identifier file. Keeping it unchecked would utilize the metadata mq file within the app.
 
 ![Metadata mq identifier file format](../../img/LabeledLC-MS2Workflow/metadata_mq_identifier_file_format.png) <center>**Figure 23.** Metadata mq identifier file format</center>
 
 - **Subset by cohorts for glucose labeled (for TCA Cycle)**: You can subset the specific cohorts that belong to the Glucose labeled (for TCA Cycle) to proceed with the Phi calculation. You can type out a characteristic string that denotes the particular cohort and select onto the required cohorts from the dropdown.
 
-- **Subset by cohorts for generic labeled**: You can subset the specific cohorts that belong to the Glucose labeled (for TCA Cycle) to proceed with the Phi calculation. You can type out a characteristic string that denotes the particular cohort and select onto the required cohorts from the dropdown.
+- **Subset by cohorts for generic labeled**: You can subset the specific cohorts that belong to the belong to generic labeled to proceed with the Phi calculation. You can type out a characteristic string that denotes the particular cohort and select onto the required cohorts from the dropdown.
 
 After uploading the necessary files, click on *Calculate Phi*.
 
