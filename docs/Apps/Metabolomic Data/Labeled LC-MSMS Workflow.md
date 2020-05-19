@@ -51,7 +51,7 @@ The background mapping metadata is a .csv, .xls, .xlsx or .txt file that contain
 *   Set analysis parameters and perform natural abundance correction
 *   Download corrected output files
 *   Visualize fractional enrichment and pool total plots
-*   Perform Phi calculation by uploading NA Corrected file
+*   Perform Phi calculation by uploading NA corrected file
 
 ##Caveats
 
@@ -143,83 +143,83 @@ Click "Run* to plot the fractional enrichment plot with all the labels present a
 
 ## Phi<sup>BETA</sup> Tab
 
-This tab enables the user to perform Phi analysis. The term 'Phi' denoted by 'φ' is ratios of fractional enrichments of isotopomers/isotopologues of a product to the fractional enrichments of isotopomers/isotopologues of a precursor in the pathway.
+This tab enables you to perform Phi analysis. The term 'Phi' denoted by 'φ' is ratio of fractional enrichments of isotopomers/isotopologues of a product to the fractional enrichments of isotopomers/isotopologues of a precursor in the pathway.
 
-- Consider, ![A to B to C](../../img/LabeledLC-MS2Workflow/phi3.png), then ![Phi calculation formula](../../img/LabeledLC-MS2Workflow/phi2.png), which means if there is **another flux** contributing to the generation of B, then other pathway contributes to **FE**<sub>**B* **</sub> in this case, **𝛷AB < 1**
+- Consider, ![A to B to C](../../img/LabeledLC-MS2Workflow/phi3.png), then ![Phi calculation formula](../../img/LabeledLC-MS2Workflow/phi2.png), which means if there is **another flux** contributing to the generation of B, then other pathway contributes to **FE**<sub>**B* </sub>**, in this case, **𝛷AB < 1**
 
 - For eg: In the image shown below, Acetyl-CoA is generated from Pyruvate and with some contribution from Fatty acids. Then, **𝜱PAc** < **1** as Acetyl-CoA is also formed from Fatty Acids. If the only contributor is Pyruvate then **𝜱PAc** = **1**
 
-![Acetyl CoA is generated from Pyruvate and Fatty acids](../../img/LabeledLC-MS2Workflow/tca.png)<center>**Figure 20:** Acetyl CoA is generated from Pyruvate and Fatty acids</center>
+![Acetyl CoA is generated from Pyruvate and Fatty acids](../../img/LabeledLC-MS2Workflow/tca.png)<center>**Figure 17.** Acetyl CoA is generated from Pyruvate and Fatty acids</center>
 
-**Calculate Phi:** This allows the user to set the parameters to calculate the Phi values based on the formula specified above. User can upload NA corrected file if it has been performed externally. In case, NA correction is performed within the app, there is no need to upload the NA corrected file and the user can directly perform Phi calculation.
+**Calculate Phi:** This allows you to set the parameters to calculate the Phi values based on the formula specified above. You can upload NA corrected file if it has been performed externally. In case, NA correction is performed within the app, there is no need to upload the NA corrected file and you can directly perform Phi calculation.
 
-![Calculate Phi](../../img/LabeledLC-MS2Workflow/Phi_calculation.png) <center>**Figure 21:** Calculate Phi</center>
+![Calculate Phi](../../img/LabeledLC-MS2Workflow/Phi_calculation.png) <center>**Figure 18.** Calculate Phi</center>
 
 Select the following options for Phi calculation:
 
-- **Glucose labeled (for TCA cycle):**In case the data is <sup>13</sup>C Glucose labeled, the user can select this option for calculating the Phi. This will point out to the metabolites of the TCA cycle contributing to the generation of that metabolite.
+- **Glucose labeled (for TCA cycle):** In case the data is <sup>13</sup>C Glucose labeled, you can select this option for calculating the Phi. This will point to the metabolites of the TCA cycle contributing to the generation of that metabolite.
 
-- **Upload your Glucose label identifier file:** The app uses a default identifiers file with the expressions present within the app. If the user wants to make use of the identifier file for Glucose with additional expressions, they can upload the Phi expression file. Here, the user will be provided with the option to upload Phi Expression File and Intermediate Expression File.
+- **Upload your Glucose label identifier file:** By default, identifiers file with the expressions present within the app is used. If you want to make use of the identifier file for Glucose with additional expressions, they can upload the Phi expression file. Here, you will be provided with the option to upload Phi Expression File and Intermediate Expression File.
 
-![Upload Glucose label identifier file](../../img/LabeledLC-MS2Workflow/glucose_identifier_uploads_option.png) <center>**Figure 22:** Upload Glucose label identifier file</center>
+![Upload Glucose label identifier file](../../img/LabeledLC-MS2Workflow/glucose_identifier_uploads_option.png) <center>**Figure 19.** Upload Glucose label identifier file</center>
 
 ![Glucose Phi expressions and intermediate expressions identifier file formats](../../img/LabeledLC-MS2Workflow/glucose_phi_expressions_file_format.png)
 
-![Glucose Phi expressions and intermediate expressions identifier file formats](../../img/LabeledLC-MS2Workflow/glucose_intermediate_expression_file_format.png)<center>**Figure 23:** Glucose Phi expressions and intermediate expressions identifier file formats</center>
+![Glucose Phi expressions and intermediate expressions identifier file formats](../../img/LabeledLC-MS2Workflow/glucose_intermediate_expression_file_format.png)<center>**Figure 20.** Glucose Phi expressions and intermediate expressions identifier file formats</center>
 
-- **Any generic label (eg: Glutamine Labeled):** In case the user has any other generic label data other than Glucose, they can make use of this option. The app will perform Phi calculation in the same way as for <sup>13</sup>C Glucose labeled elements.
+- **Any generic label (eg: Glutamine Labeled):** In case you have any other generic label data other than Glucose, they can make use of this option. The app will perform Phi calculation in the same way as for <sup>13</sup>C Glucose labeled elements.
 
-- **Upload your generic label identifier file:** The app by default has the identifier expressions file for glutamine label. If at all, the user has the identifier file for glutamine with additional expressions or any other generic label, they can select onto this option and further upload the identifier expression file for the same.
+- **Upload your generic label identifier file:** The app by default has the identifier expressions file for glutamine label. If at all, you have the identifier file for glutamine with additional expressions or any other generic label, they can select onto this option and further upload the identifier expression file for the same.
 
-![Upload Generic label identifier file](../../img/LabeledLC-MS2Workflow/generic_label_file_upload.png) <center>**Figure 24:** Upload Generic label identifier file</center>
+![Upload Generic label identifier file](../../img/LabeledLC-MS2Workflow/generic_label_file_upload.png) <center>**Figure 21.** Upload Generic label identifier file</center>
 
-![Generic label Phi expressions identifier file format](../../img/LabeledLC-MS2Workflow/glutamine_identifier_file_format.png) <center>**Figure 25:** Generic label Phi expressions identifier file format</center>
+![Generic label Phi expressions identifier file format](../../img/LabeledLC-MS2Workflow/glutamine_identifier_file_format.png) <center>**Figure 22.** Generic label Phi expressions identifier file format</center>
 
-- **Upload your metadata mq with identifier file:** The app by default has the metadata mq identifier loaded, but in case the user has made use of any additional expressions for the above parameters, they will have to upload their own metadata mq identifier file. Keeping it unchecked would utilise the metadata mq file within the app.
+- **Upload your metadata mq with identifier file:** The app by default has the metadata mq identifier loaded, but in case you have made use of any additional expressions for the above parameters, they will have to upload their own metadata mq identifier file. Keeping it unchecked would utilize the metadata mq file within the app.
 
-![Metadata mq identifier file format](../../img/LabeledLC-MS2Workflow/metadata_mq_identifier_file_format.png) <center>**Figure 26:** Metadata mq identifier file format</center>
+![Metadata mq identifier file format](../../img/LabeledLC-MS2Workflow/metadata_mq_identifier_file_format.png) <center>**Figure 23.** Metadata mq identifier file format</center>
 
-- **Subset by cohorts for glucose labelled (for TCA Cycle)**: The user can subset the specific cohorts that belong to the Glucose labelled (for TCA Cycle) to proceed with the Phi calculation. The user can type out a characteristic string that denotes the particular cohort and select onto the required cohorts from the dropdown.
+- **Subset by cohorts for glucose labeled (for TCA Cycle)**: You can subset the specific cohorts that belong to the Glucose labeled (for TCA Cycle) to proceed with the Phi calculation. You can type out a characteristic string that denotes the particular cohort and select onto the required cohorts from the dropdown.
 
-- **Subset by cohorts for generic labelled**: The user can subset the specific cohorts that belong to the Glucose labelled (for TCA Cycle) to proceed with the Phi calculation. The user can type out a characteristic string that denotes the particular cohort and select onto the required cohorts from the dropdown.
+- **Subset by cohorts for generic labeled**: You can subset the specific cohorts that belong to the Glucose labeled (for TCA Cycle) to proceed with the Phi calculation. You can type out a characteristic string that denotes the particular cohort and select onto the required cohorts from the dropdown.
 
-After uploading the necessary files, click on '*Calculate Phi*'.
+After uploading the necessary files, click on *Calculate Phi*.
 
 **Results: Glucose Labeled:** This tab contains the output to Phi calculation performed on <sup>13</sup>C Glucose samples. It consists of the following sub-tabs namely:
 
-- **Calculated Phis: **This sub-tab contains a table of Phi-values belonging to each identifier across the different samples. User can download the data as a CSV file as well.
+- **Calculated Phis:** This sub-tab contains a table of Phi values belonging to each identifier across the different samples. You can download the data as a CSV file as well.
 
-![Calculated Phis](../../img/LabeledLC-MS2Workflow/glucose_calculated_phi_table.png) <center>**Figure 27:** Calculated Phis</center>
+![Calculated Phis](../../img/LabeledLC-MS2Workflow/glucose_calculated_phi_table.png) <center>**Figure 24.** Calculated Phis</center>
 
-- **Absent Phis:** This sub-tab contains a downloadable list of absent Phi-values that could not be calculated possibly because of missing fragments withing the data provided.
+- **Absent Phis:** This sub-tab contains a downloadable list of absent Phi values that could not be calculated possibly because of missing fragments withing the data provided.
 
 - **Identifier Expression:** This sub-tab displays the list of identifier formulas used to calculate Phi values for the Glucose labeled data.
 
-![Identifier Expressions](../../img/LabeledLC-MS2Workflow/glucose_identifier_expressions.png) <center>**Figure 28:** Identifier Expressions</center>
+![Identifier Expressions](../../img/LabeledLC-MS2Workflow/glucose_identifier_expressions.png) <center>**Figure 25.** Identifier Expressions</center>
 
-- **Visualization:** The Visualization sub-tab consists of the type of visualizations to view the Phi of identifiers across the cohorts. Select '*Individual Plot*' or '*Multi-select Plot*' and enter cohorts to view in the visualization space. Further, the user can select the identifiers of interest from the dropdown provided under Select the identifier option. The user can as well specify the cohorts order.
+- **Visualization:** The Visualization sub-tab consists of the type of visualizations to view the Phi of identifiers across the cohorts. Select *Individual Plot* or *Multi-select Plot* and enter cohorts to view in the visualization space. Further, you can select the identifiers of interest from the dropdown provided under Select the identifier option. You can as well specify the cohorts order.
 
-![Individual plot Visualization](../../img/LabeledLC-MS2Workflow/glucose_individual_plot_vizual.png) <center>**Figure 25:** Individual plot Visualization</center>
+![Individual plot visualization](../../img/LabeledLC-MS2Workflow/glucose_individual_plot_vizual.png) <center>**Figure 26.** Individual plot visualization</center>
 
-![Multi-select plot](../../img/LabeledLC-MS2Workflow/glucose_multipleselect_plot_vizual.png) <center>**Figure 26:** Multi-select plot</center>
+![Multi-select plot](../../img/LabeledLC-MS2Workflow/glucose_multipleselect_plot_vizual.png) <center>**Figure 27.** Multi-select plot</center>
 
-**Results: Generic Labeled:** In case, the user has selected generic labels i.e., other than <sup>13</sup>C Glucose, this tab contains the output to Phi calculation performed on the other samples. It consists of the following sub-tabs namely:
+**Results: Generic Labeled:** In case, you have selected generic labels i.e., other than <sup>13</sup>C Glucose, this tab contains the output to Phi calculation performed on the other samples. It consists of the following sub-tabs namely:
 
-- **Calculated Phis:** This sub-tab contains a downloadable list of Phi-values that have been calculated for each identifier.
+- **Calculated Phis:** This sub-tab contains a downloadable list of Phi values that have been calculated for each identifier.
 
-![Calculated Phis](../../img/LabeledLC-MS2Workflow/glutamine_calculated_phi_table.png) <center>**Figure 27:** Calculated Phis (generic label)</center>
+![Calculated Phis](../../img/LabeledLC-MS2Workflow/glutamine_calculated_phi_table.png) <center>**Figure 28.** Calculated Phis (generic label)</center>
 
-- **Absent Phis:** This sub-tab contains a downloadable list of absent Phi-values that the app could not match with the identifier table.
+- **Absent Phis:** This sub-tab contains a downloadable list of absent Phi values that the app could not match with the identifier table.
 
-- **Identifier Expression:** This sub-tab displays the list of identifier formulas used to calculate Phi values for the generic labeled data. Here, we have for the glutamine label.
+- **Identifier Expression:** This sub-tab displays the list of identifier formulas used to calculate Phi values for the generic labeled data. Here in the figure 28, we have for the glutamine label.
 
-![Identifier Expression](../../img/LabeledLC-MS2Workflow/glutamine_identifier_expressions.png) <center>**Figure 28:** Identifier Expression (generic label)</center>
+![Identifier Expression](../../img/LabeledLC-MS2Workflow/glutamine_identifier_expressions.png) <center>**Figure 29.** Identifier Expression (generic label)</center>
 
-- **Visualization:** The Visualization sub-tab consists of the type of visualizations to view the Phi of identifiers across the cohorts. Select 'Individual Plot' or 'Multi-select Plot' and enter cohorts to view in the visualization space. Further, the user can select the identifiers of interest from the dropdown provided under Select the identifier option. The user can as well specify the cohorts order.
+- **Visualization:** The Visualization sub-tab consists of the type of visualizations to view the Phi of identifiers across the cohorts. Select *Individual Plot* or *Multi-select Plot* and enter cohorts to view in the visualization space. Further, you can select the identifiers of interest from the dropdown provided under Select the identifier option. You can as well specify the cohorts order.
 
-![Individual Plot](../../img/LabeledLC-MS2Workflow/glutamine_individual_plot_vizual.png) <center>**Figure 29:** Individual Plot (generic label)</center>
+![Individual Plot](../../img/LabeledLC-MS2Workflow/glutamine_individual_plot_vizual.png) <center>**Figure 30.** Individual Plot (generic label)</center>
 
-![Multi-select plot](../../img/LabeledLC-MS2Workflow/glutamine_multipleselect_plot_vizual.png) <center>**Figure 30:** Multi-select plot (generic label)</center>
+![Multi-select plot](../../img/LabeledLC-MS2Workflow/glutamine_multipleselect_plot_vizual.png) <center>**Figure 31.** Multi-select plot (generic label)</center>
 
 ##Details about the app
 
