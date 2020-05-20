@@ -145,7 +145,7 @@ Click "Run* to plot the fractional enrichment plot with all the labels present a
 
 This tab enables you to perform Phi analysis. The term 'Phi' denoted by 'φ' is ratio of fractional enrichments of isotopomers/isotopologues of a product to the fractional enrichments of isotopomers/isotopologues of a precursor in the pathway.
 
-- Consider, ![A to B to C](../../img/LabeledLC-MS2Workflow/phi3.png), then ![Phi calculation formula](../../img/LabeledLC-MS2Workflow/phi2.png), which means if there is **another flux** contributing to the generation of B, then other pathway contributes to **FE**<sub>**B***</sub>, in this case, **𝛷AB < 1**
+- Consider, ![A to B to C](../../img/LabeledLC-MS2Workflow/phi3.png), then ![Phi calculation formula](../../img/LabeledLC-MS2Workflow/phi2.png), which means if there is **another flux** contributing to the generation of B, then other pathway contributes to **FE**<sub>**B* **</sub>, in this case, **𝛷AB < 1**
 
 - For eg: In the image shown below, Acetyl-CoA is generated from Pyruvate and with some contribution from Fatty acids. Then, **𝜱PAc** < **1** as Acetyl-CoA is also formed from Fatty Acids. If the only contributor is Pyruvate then **𝜱PAc** = **1**
 
