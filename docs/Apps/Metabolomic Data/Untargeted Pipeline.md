@@ -8,7 +8,7 @@ Untargeted Metabolomics, otherwise known as discovery metabolomics, analyzes the
 
 *   Annotate adducts, isotopes and fragments in the data and identify metabolites
 *   Perform differential expression
-*   Generate input for [MetScape](../MetScape) to perform pathway analysis
+*   Generate input for [MetScape](https://docs.elucidata.io/Apps/Metabolomic%20Data/MetScape.html) to perform pathway analysis
 
 ![Untargeted Pipeline](../../img/UntargetedPipeline/PollyTM Untargeted Pipeline.png)<center>**Figure 1.** Untargeted Pipeline</center>
 
@@ -186,7 +186,7 @@ The representative metabolite identification table is again merged to the restru
 
 ![Overall metabolite identification table](../../img/UntargetedPipeline/OverallMetaboliteIdentificationTable.png)<center>**Figure 16.** Overall metabolite identification table</center>
 
-**[MetScape](../MetScape) input**
+**[MetScape](https://docs.elucidata.io/Apps/Metabolomic%20Data/MetScape.html) input**
 
 The results are generated in the MetScape input intensity format and metadata format.
 

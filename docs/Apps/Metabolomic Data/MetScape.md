@@ -2,7 +2,7 @@
 
 ##Overview
 
-Metabolomics is one of the key research areas focusing on small molecules present in a tissue or cell. MetScape Workflow allows you to process unlabeled LC-MS targeted, semi-targeted (without retention time) and untargeted data with insightful visualizations. You can directly upload CSV files obtained after peak detection in [El-MAVEN](https://resources.elucidata.io/elmaven) along with the cohort information. The [Polly Notebook](../../../Scaling compute/Polly Notebooks) enables you to use in-built scripts for normalizing, transforming and visualizing data along with the ability to upload and use your custom scripts. The pathway dashboard allows you to track differentially expressed metabolites across cohorts and form hypothesis on not only individual metabolites but on pathways as well.
+Metabolomics is one of the key research areas focusing on small molecules present in a tissue or cell. MetScape Workflow allows you to process unlabeled LC-MS targeted, semi-targeted (without retention time) and untargeted data with insightful visualizations. You can directly upload CSV files obtained after peak detection in [El-MAVEN](https://resources.elucidata.io/elmaven) along with the cohort information. The [Polly Notebook](https://docs.elucidata.io/Scaling%20compute/Polly%20Notebooks.html) enables you to use in-built scripts for normalizing, transforming and visualizing data along with the ability to upload and use your custom scripts. The pathway dashboard allows you to track differentially expressed metabolites across cohorts and form hypothesis on not only individual metabolites but on pathways as well.
 
 ##Scope of the app
 
@@ -12,7 +12,7 @@ Metabolomics is one of the key research areas focusing on small molecules presen
 *   Perform differential analysis and visualize it using volcano plot and canonical pathways.
 *   Visualize metabolite intensities across different cohorts.
 *   Select specific metabolites to highlight them on the global pathway that allows pathway analysis.
-*   Use the differentially expressed results with the output of [RNA Seq Workflow](../../Screening & Sequencing Data/RNA Seq Workflow) to integrate multi-omics data in [IntOmix](../../Multi-omic Data/IntOmix).
+*   Use the differentially expressed results with the output of [RNA Seq Workflow](https://docs.elucidata.io/Apps/Screening%20&%20Sequencing%20Data/RNA%20Seq%20Workflow.html) to integrate multi-omics data in [IntOmix](https://docs.elucidata.io/Apps/Multi-omic%20Data/IntOmix.html).
 
 ![MetScape](../../img/MetScape/MetScape.png) <center>**Figure 1.** MetScape</center>
 
@@ -24,7 +24,7 @@ MetScape requires the following two files as input:
 
 **Intensity file**
 
-The intensity file should be in .csv format as shown in Figure 2. The .csv file exported after peak picking in El-MAVEN is the input file. For untargeted analysis, the output of [Untargeted Pipeline](../Untargeted Pipeline) serves as the input. 
+The intensity file should be in .csv format as shown in Figure 2. The .csv file exported after peak picking in El-MAVEN is the input file. For untargeted analysis, the output of [Untargeted Pipeline](https://docs.elucidata.io/Apps/Metabolomic%20Data/Untargeted%20Pipeline.html) serves as the input. 
 
 ![Sample intensity file](../../img/MetScape/metscape_intensity_file.png) <center>**Figure 2.** Sample intensity file</center>
 
@@ -94,7 +94,7 @@ The function of these in-built scripts is mentioned below:
 
 <pre><code>sample_view(mavenData)</code></pre>
 
-Click [here](../../../Scaling compute/Polly Notebooks) for a detailed documentation about Polly Notebook.
+Click [here](https://docs.elucidata.io/Scaling%20compute/Polly%20Notebooks.html) for a detailed documentation about Polly Notebook.
     
 **Note:**
 
@@ -165,6 +165,6 @@ MetScape broadly works on the concept of differential expression analysis where 
 | 3    | **What are the required input files?**                                                                  | There are two input files required. The intensity file is the .csv file generated  after peak detection in El-MAVEN. It contains a list of metabolites along with their  m/z, rt and intensity values across different samples.![Intensity file](../../img/MetScape/intensity-cols.png) The cohort mapping file consists  of the cohort information of every sample file that is uploaded. ![Cohort file](../../img/MetScape/metscape_sample_cohort_file.png)                                                                                                                                      |
 | 4    | **Can I use MetScape if I  don't have the retention time information?**              | No. Retention time is mandatory as it is useful for separating duplicates.                                                                                                                                                                                                                                                                                                                                                                                               |
 | 5    | **Can I use MetScape if I don't have the HMDB IDs or KEGG IDs for my  metabolites?** | To use MetScape you need HMDB IDs or KEGG IDs using which  metabolites are mapped on the pathway dashboard.                                                                                                                                                                                                                                                                                                                                           |
-| 6    | **Can I use public data sets on MetScape?**                                          | Yes, public data sets can be processed using the following procedure: Convert  the instrument generated raw files to .mzML or .mzXML using [MSConvert](http://proteowizard.sourceforge.net/tools.shtml). Process  the files in El-MAVEN. For targeted analysis, perform peak annotation against  a compound database. For untargeted analysis, perform feature detection and  then run [Untargeted Pipeline](../Untargeted Pipeline).Prepare the cohort file. Run  the intensity and cohort files in MetScape. |
+| 6    | **Can I use public data sets on MetScape?**                                          | Yes, public data sets can be processed using the following procedure: Convert  the instrument generated raw files to .mzML or .mzXML using [MSConvert](http://proteowizard.sourceforge.net/tools.shtml). Process  the files in El-MAVEN. For targeted analysis, perform peak annotation against  a compound database. For untargeted analysis, perform feature detection and  then run [Untargeted Pipeline](https://docs.elucidata.io/Apps/Metabolomic%20Data/Untargeted%20Pipeline.html).Prepare the cohort file. Run  the intensity and cohort files in MetScape. |
 | 7    | **Can I check the quality of my samples in MetScape?**                               | Yes, for quality check, MetScape prepares interactive PCA  Plot from your data. The interactive plot enables you to remove any outliers  from your analyses.                                                                                                                                                                                                                                                                                          |
 | 8    | **What should I do if l get an error on MetScape?**                                  | You can directly message us on Intercom (icon on the bottom right of your screen)  or you can e-mail to the Polly Support Team.                                                                                                                                                                                                                                                                                                                                          |
