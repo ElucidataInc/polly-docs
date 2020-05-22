@@ -1,12 +1,20 @@
 #Release Notes
 
 <details open>
+  <summary><font size="+1"><b>May 22th, 2020</b></font></summary>
+  <br>
+  <a href="#" class="button">New</a>
+  <ul>
+    <li>Introduced <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/CompoundDiscoverer%20QuantFit.html">Polly QuantFit node </a>in Compound Discoverer™ that allows peak picking and absolute quantification on raw data obtained from a Thermo Scientific™ Mass Spec device.</li>
+    
+
+<details close>
   <summary><font size="+1"><b>May 8th, 2020</b></font></summary>
   <br>
   <a href="#" class="button">New</a>
   <ul>
     <li>We now host our desktop application, El-MAVEN on Polly.</li>
-    <li>Phi calculation feature has been added to Labeled LC-MS/MS Workflow.</li>
+   <li><a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Labeled%20LC-MSMS%20Workflow.html#phibeta-tab">Phi calculation </a>feature has been added to Labeled LC-MS/MS Workflow.</li>
   </ul> 
 
 <a href="#" class="w3-button">Improvements</a>
