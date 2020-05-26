@@ -211,7 +211,7 @@ After uploading the necessary files, click on *Calculate Phi*.
 
 - **Absent Phis:** This sub-tab contains a downloadable list of absent Phi values that the app could not match with the identifier table.
 
-- **Identifier Expression:** This sub-tab displays the list of identifier formulas used to calculate Phi values for the generic labeled data. Here in the figure 28, we have for the glutamine label.
+- **Identifier Expression:** This sub-tab displays the list of identifier formulas used to calculate Phi values for the generic labeled data.
 
 ![Identifier Expression](../../img/LabeledLC-MS2Workflow/glutamine_identifier_expressions.png) <center>**Figure 29.** Identifier Expression (generic label)</center>
 

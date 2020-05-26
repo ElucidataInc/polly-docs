@@ -63,4 +63,4 @@ The major advantage with our implementation is customization and ease of use. Wi
 
 Currently, custom OCR is integrated in the following apps:
 
-*   [MetScape](../Metabolomic Data/MetScape/#one-click-reportbeta)
+*   [MetScape](https://docs.elucidata.io/Apps/Metabolomic%20Data/MetScape.html#one-click-reportbeta)
