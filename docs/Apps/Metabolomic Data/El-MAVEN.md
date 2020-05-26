@@ -8,7 +8,7 @@ It is an open-source LC-MS data processing engine that is optimal for isotopomer
 
 El-MAVEN is now hosted on the Polly platform. This means El-MAVEN and all your Polly applications can reside on a single platform and can be shared with your colleagues easily. The following are the advantages of having El-MAVEN on Polly:
 
-*   The applications scale automatically on the Polly infrastructure for multiple users to use simultaneously.
+*   The application scale automatically on the Polly infrastructure for multiple users to use simultaneously.
 
 *   Access to the application is controlled by Polly authentication. Only users in your organization with required Polly authorization can access the applications.
 
