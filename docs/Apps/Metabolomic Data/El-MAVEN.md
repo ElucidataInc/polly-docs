@@ -90,7 +90,7 @@ Select the tab next to El-MAVEN to access it as and when required.
 
 Polly also provides a **web browser** for you to surf the internet on the fly. You can now search for any data related query or get data from anywhere on the cloud (Polly Projects, FTP, etc) within the same interface.
 
-![Browser] (../../img/El-MAVEN/Browser.png) <center>**Figure 8.** Browser</center>
+![Browser](../../img/El-MAVEN/Browser.png) <center>**Figure 8.** Browser</center>
 
 ##Terminal
 
