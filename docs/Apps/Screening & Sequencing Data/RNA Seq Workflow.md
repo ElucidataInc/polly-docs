@@ -13,7 +13,7 @@ RNA sequencing (RNA-seq) uses next generation sequencing (NGS) to estimate the p
 *   Presents the data in the form of Heatmap, depicting the expression values of each genes corresponding to the number of samples in the data. 
 *   Perform differential expression analysis. 
 *   Perform enrichment analysis of significant genes using Enrichr and X2K anlysis of significant gene set using X2K. 
-*   Use the differentially expressed results with the output of [MetScape](../../Metabolomic Data/MetScape) to integrate multi-omics data in [IntOmix](../../Multi-omic Data/IntOmix).
+*   Use the differentially expressed results with the output of [MetScape](https://docs.elucidata.io/Apps/Metabolomic%20Data/MetScape.html) to integrate multi-omics data in [IntOmix](https://docs.elucidata.io/Apps/Multi-omic%20Data/IntOmix.html).
 
 ![RNA Seq Workflow](../../img/RNASeq/RNA Seq.png) <center>**Figure 1.** RNA Seq Workflow</center>
 

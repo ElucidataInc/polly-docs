@@ -1,15 +1,24 @@
 #Release Notes
 
 <details open>
+  <summary><font size="+1"><b>May 22th, 2020</b></font></summary>
+  <br>
+  <a href="#" class="button">New</a>
+  <ul>
+    <li>Introduced <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/CompoundDiscoverer%20QuantFit.html">Polly QuantFit</a> node in <a href="https://www.thermofisher.com/in/en/home/industrial/mass-spectrometry/liquid-chromatography-mass-spectrometry-lc-ms/lc-ms-software/multi-omics-data-analysis/compound-discoverer-software.html">Compound Discoverer<sup>TM</sup></a> that allows peak picking and absolute quantification on raw data obtained from a Thermo Scientific<sup>TM</sup> Mass Spec instrument.</li>
+</details>
+<hr>
+
+<details>
   <summary><font size="+1"><b>May 8th, 2020</b></font></summary>
   <br>
   <a href="#" class="button">New</a>
   <ul>
     <li>We now host our desktop application, El-MAVEN on Polly.</li>
-    <li>Phi calculation feature has been added to Labeled LC-MS/MS Workflow.</li>
+    <li><a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Labeled%20LC-MSMS%20Workflow.html#phibeta-tab">Phi calculation</a> feature has been added to Labeled LC-MS/MS Workflow.</li>
   </ul> 
 
-<a href="#" class="w3-button">Improvements</a>
+<a href="#" class="w3-button">Updates</a>
   <ul>
     <li>Changed the optimized color palette in IntOmix from a red-yellow-green scale to a more intuitive red-green scale. All upregulated metabolites or genes are represented by a shade of red and downregulated metabolites or genes as a shade of green.</li>
     <li>Changed the non-optimized color palette in IntOmix from a pink-purple scale to a red-green scale to remove ambiguity.</li>
@@ -31,7 +40,7 @@
 
 <br />
 
-<!--Button style for improvement-->
+<!--Button style for updates-->
 <style>
   .w3-button {
     background-color: #4c61af;

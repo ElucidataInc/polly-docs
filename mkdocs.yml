@@ -16,7 +16,7 @@ nav:
         - FirstView: Apps/Metabolomic Data/FirstView.md
         - Untargeted Pipeline: Apps/Metabolomic Data/Untargeted Pipeline.md
         - QuantFit: Apps/Metabolomic Data/QuantFit.md
-        - CD-QuantFit: Apps/Metabolomic Data/CompoundDiscoverer QuantFit.md
+        - Compound Discoverer<sup>TM</sup> QuantFit: Apps/Metabolomic Data/CompoundDiscoverer QuantFit.md
       - Screening and Sequencing Data: 
         - CRISPR Screening: Apps/Screening & Sequencing Data/CRISPR Screening.md
         - High Throughput Drug Screening: Apps/Screening & Sequencing Data/High Throughput Drug Screening.md
