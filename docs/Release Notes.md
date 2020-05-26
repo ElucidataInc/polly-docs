@@ -18,7 +18,7 @@
   <br>
   <p class="new-button">New</p>
   <ul>
-    <li>We now host our desktop application, El-MAVEN on Polly.</li>
+    <li>We now host our desktop application, <a href="https://docs.elucidata.io/Apps/Metabolomic Data/El-MAVEN.html">El-MAVEN on Polly</a>.</li>
     <li><a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Labeled%20LC-MSMS%20Workflow.html#phibeta-tab">Phi calculation</a> feature has been added to Labeled LC-MS/MS Workflow.</li>
   </ul> 
   <p class="update-button">Update</p>
