@@ -146,6 +146,12 @@ After the file have been successfully uploaded you will be redirected to the Met
 
 ![Enter concentration values for all the standard samples across all metabolites in a few clicks](../../img/QuantFit/MetadataInterfaceCreate3.png) <center>**Figure 10.** Enter concentration values for all the standard samples across all metabolites in a few clicks</center>
 
+Watch the demo video below for more information.
+
+ <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+    <iframe src="https://www.youtube.com/embed/A37ra2Lh3yI" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
+
 ##Injection Efficiency Correction
 
 Injection Efficiency Correction is used to normalize the biosamples with respect to internal standards in the data on the basis of total ion count. We recommend the highest intensity non-outlier sample when correcting for injection efficiency. You can also select a sample from the outliers detected with Grubbs' test for this normalization. 

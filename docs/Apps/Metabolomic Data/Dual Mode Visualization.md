@@ -62,7 +62,7 @@ To process dual mode data, the following files are required:
 *   Perform normalization and scaling on the data
 *   View the quality checks for internal standards, metabolites and samples
 *   Perform differential expression between two cohort conditions
-*   Generate input for [IntOmix](../../Multi-omic Data/IntOmix) to identify significantly changing metabolic network modules between two experimental conditions
+*   Generate input for [IntOmix](https://docs.elucidata.io/Apps/Multi-omic%20Data/IntOmix.html) to identify significantly changing metabolic network modules between two experimental conditions
 
 ##Caveats
 
@@ -303,7 +303,7 @@ Once the parameters are selected, click on *Load Plots* to plot the bar plot for
 
 ##IntOmix Input
 
-This tab allows you to generate the input for [IntOmix](../../Multi-omic Data/IntOmix/#tutorial) where you can visualize the significantly altered metabolic network modules between any two experimental conditions.
+This tab allows you to generate the input for [IntOmix](https://docs.elucidata.io/Apps/Multi-omic%20Data/IntOmix.html) where you can visualize the significantly altered metabolic network modules between any two experimental conditions.
 
 ![IntOmix Input Tab options](../../img/DualMode/metab_app_intomix_input_tab.png) <center>**Figure 47.** IntOmix Input Tab options</center>
 
