@@ -1,9 +1,9 @@
 #Overview
 
-We have used Thermo Scientific<sup>TM</sup> Compound Discoverer<sup>TM</sup> to set up a node for peak picking on raw data obtained from a thermo mass spectrometer. The absolute quantification is then derived for this data with the Polly QuantFit Node. The following tools were used in the process:
+We have used Thermo Scientific<sup>TM</sup> [Compound Discoverer<sup>TM</sup>](https://www.thermofisher.com/in/en/home/industrial/mass-spectrometry/liquid-chromatography-mass-spectrometry-lc-ms/lc-ms-software/multi-omics-data-analysis/compound-discoverer-software.html) to set up a node for peak picking on raw data obtained from a thermo mass spectrometer. The absolute quantification is then derived for this data with the Polly QuantFit Node. The following tools were used in the process:
 
 *   Thermo Scientific<sup>TM</sup> Compound Discoverer<sup>TM</sup> to set up a node for peak integration, and quantification
-*   MSConvert for raw data conversion to an El-MAVEN accepted format
+*   MSConvert for raw data conversion to an [El-MAVEN](https://resources.elucidata.io/elmaven) accepted format
 *   El-MAVEN to identify and automatically pick the significant peaks in the data
 *   Polly QuantFit used for absolute quantification of data
 
@@ -85,7 +85,7 @@ Steps to set up a node in the Thermo Scientific<sup>TM</sup> Compound Discoverer
 
 *   The processing starts. On completion, you will receive an email on the Polly Email Address used in QuantFit Node. Open the email and click on **Start Quantification**.  
 
-Click [here](../QuantFit/#metadata-interface) for a detailed documentation about Polly QuantFit.
+Click [here](https://docs.elucidata.io/Apps/Metabolomic%20Data/QuantFit.html#metadata-interface) for a detailed documentation about Polly QuantFit.
 
 **QuantFit Metadata Interface**
 

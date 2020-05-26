@@ -24,7 +24,7 @@ The project management dashboard will update to show the new project.
 
 ##Content within a project
 
-A project contains all your [data](#adding-files-to-your-workspace), [analysis](../../Apps/Introduction), [notebooks](../../Scaling compute/Polly Notebooks), and [reports](../../Apps/Introduction/#reports). They can be accessed through the top panel.
+A project contains all your [data](https://docs.elucidata.io/Getting%20Started/Project%20Management%20Dashboard.html#adding-files-to-your-workspace), [analysis](https://docs.elucidata.io/Apps/Introduction.html), [notebooks](https://docs.elucidata.io/Scaling%20compute/Polly%20Notebooks.html), and [reports](https://docs.elucidata.io/Apps/Introduction.html#reports). They can be accessed through the top panel.
 
 ![Screenshot](../img/ProjectManagementDashboard/ProjectContents.png) <!-- <center>**Figure 1.** Demo Data for Polly<sup>TM</sup> FirstView</center> -->
 
@@ -38,7 +38,7 @@ New files can be added within a project by clicking on *Upload Files*. This will
 
 *   Using CLI
 
-You can use PollyCLI as well to import your data directly within Polly. This is a more convenient option for uploading large data (more than a few GBs). The steps for the same are detailed [here](../../Scaling compute/Polly CLI).
+You can use PollyCLI as well to import your data directly within Polly. This is a more convenient option for uploading large data (more than a few GBs). The steps for the same are detailed [here](https://docs.elucidata.io/Scaling%20compute/Polly%20CLI.html).
 
 ##Creating a new folder
 

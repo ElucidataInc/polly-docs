@@ -1,4 +1,4 @@
-##Introduction
+#Introduction
 
 Polly Notebook is a scalable analytics platform which allows you to perform data analysis remotely in a Jupyter-like notebook. It provides the flexibility to select the compute capacity, the environment according to your need along with the ability to share the analyses with your peers for seamless team collaboration.
 
@@ -14,7 +14,7 @@ Polly Notebook provides a Jupyter-like interface on the cloud. Some of the featu
 
 **Accessing Polly Notebooks**
 
-Navigate to the [Polly Workspace](../../Getting Started/Project Management Dashboard) in which the analysis needs to be performed.
+Navigate to the [Polly Projects](https://docs.elucidata.io/Getting%20Started/Project%20Management%20Dashboard.html) in which the analysis needs to be performed.
 
 ![Polly Projects](../img/Notebooks/1.png "Polly Projects") <center>**Figure 1.** Polly Projects</center>
 

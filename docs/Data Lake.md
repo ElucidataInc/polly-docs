@@ -11,7 +11,7 @@ Polly Discover consists of the following major components:
 
 *   Data Lake Exploration: 
 
-    To explore a data lake, Polly provides tools such as Shiny applications and Polly Notebooks. These tools enable you to find relevant data by searching for keywords associated with the file name, file metadata, or the contents of a file.  
+    To explore a data lake, Polly provides tools such as applications and Polly Notebooks. These tools enable you to find relevant data by searching for keywords associated with the file name, file metadata, or the contents of a file.  
     <br />
 
 *   On-the-fly Analysis: 
@@ -165,7 +165,7 @@ A data repository is a collection of different files having different file types
 
 ![Structure of a data repository](../img/Discover/discover_data_repository.png)
 
-Click [here](../Scaling compute/Polly Notebooks) for a detailed documentation about Polly Notebooks.
+Click [here](https://docs.elucidata.io/Scaling%20compute/Polly%20Notebooks.html) for a detailed documentation about Polly Notebooks.
 
 ##Usage
 
