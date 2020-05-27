@@ -131,7 +131,7 @@ To save the folder called “Output” back to Polly Project, use the following 
 
 Since peak picking can take days, Polly provides three options: 
 
-*   You can choose to close the tab without stoping or terminating it. This would keep the instance running in the background even if the browser tab is closed. You can later restore the same analysis with the same data used, from the Analysis section.
+*   You can choose to close the tab without stoping or terminating it. This would keep the instance running in the background even if the browser tab is closed. You can later restore the same analysis with the same data used, from the *Analysis* section.
 
 *   In case you choose to close the instance, you have separate options to Stop and Terminate the instance. Stopping the instance would keep the data (picked peaks) intact in the machine and the instance can be later resumed (soon to be available on Polly). If the tab is closed without Terminating or Stopping the instance, it would continue to run in the background. 
 
@@ -139,7 +139,7 @@ Since peak picking can take days, Polly provides three options:
 
 **Note**:
 
-*    Make sure you transfer back your results to the Project before selecting the terminate option.  
+*    Make sure you transfer your results to the project before selecting the terminate option.  
 
 ![Termination](../../img/El-MAVEN/Termination.png) <center>**Figure 10.** Instance Termination</center>
 
@@ -147,14 +147,14 @@ Since peak picking can take days, Polly provides three options:
 
 Polly contains the restore functionality that allows any analysis to be restored to the last step. This functionality would be available only if the instance has not been terminated. 
 
-Analyses can be restored by navigating to the Analysis section of a project. Click on History for the specific analysis to restore.
+Analyses can be restored by navigating to the *Analysis* section of a project. Click on History for the specific analysis to restore.
 
 ![History](../../img/El-MAVEN/History.png) <center>**Figure 11.** History</center>
 
 ![Restore](../../img/El-MAVEN/Restore.png) <center>**Figure 12.** Restore Analysis</center>
 
-Clicking on Restore Analysis will take you back to the application with the same data used before. It helps you to restore the incomplete analysis and improves reproducibility.
+Clicking on *Restore Analysis* will take you back to the application with the same data used before. It helps you to restore the incomplete analysis and improves reproducibility.
 
-In case you have terminated the instance, the option to restore will not be available. Instead, there will be an option to RestartAnalysis, which will take you back to the analysis with the same machine as used earlier in the analysis without restoring the data back. You would have to add the files again from th eproject to perform the analysis.
+In case you have terminated the instance, the option to restore will not be available. Instead, there will be an option to *Restart Analysis*, which will take you back to the analysis with the same machine as used earlier in the analysis without restoring the data back. You would have to add the files again from th eproject to perform the analysis.
 
 ![Restart](../../img/El-MAVEN/Restart.png) <center>**Figure 13.** Restart Analysis</center>
