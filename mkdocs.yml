@@ -8,15 +8,15 @@ nav:
       - Introduction: Apps/Introduction.md
       - Host Apps: Apps/Host Apps.md
       - Metabolomics Data:
-        - Dual Mode: Apps/Metabolomic Data/Dual Mode Visualization.md
-        - Labeled LC-MS Workflow: Apps/Metabolomic Data/Labeled LC-MS Workflow.md
-        - Labeled LC-MS/MS Workfow: Apps/Metabolomic Data/Labeled LC-MSMS Workflow.md
-        - MetScape: Apps/Metabolomic Data/MetScape.md
-        - El-MAVEN: Apps/Metabolomic Data/El-MAVEN.md
         - El-MAVEN Phi Relative LC-MS: Apps/Metabolomic Data/El-MAVEN Phi Relative LC-MS.md
+        - MetScape: Apps/Metabolomic Data/MetScape.md
         - FirstView: Apps/Metabolomic Data/FirstView.md
         - Untargeted Pipeline: Apps/Metabolomic Data/Untargeted Pipeline.md
+        - Dual Mode Data Visualization: Apps/Metabolomic Data/Dual Mode Visualization.md
         - QuantFit: Apps/Metabolomic Data/QuantFit.md
+        - El-MAVEN: Apps/Metabolomic Data/El-MAVEN.md
+        - Labeled LC-MS/MS Workfow: Apps/Metabolomic Data/Labeled LC-MSMS Workflow.md
+        - Labeled LC-MS Workflow: Apps/Metabolomic Data/Labeled LC-MS Workflow.md
         - Compound Discoverer<sup>TM</sup> QuantFit: Apps/Metabolomic Data/CompoundDiscoverer QuantFit.md
       - Screening and Sequencing Data: 
         - CRISPR Screening: Apps/Screening & Sequencing Data/CRISPR Screening.md
@@ -26,7 +26,7 @@ nav:
         - Proteomics Workflow: Apps/Proteomic Data/Proteomics Workflow.md
       - Lipidomics Data:
         - Lipidomics Visualization Dashboard: Apps/Lipidomics Data/Lipidomics Visualization Dashboard.md
-      - Multi-omics Data:
+      - Multi-omic Data:
         - IntOmix: Apps/Multi-omic Data/IntOmix.md
   - Scaling Compute: 
       - Polly CLI: Scaling compute/Polly CLI.md
