@@ -131,9 +131,14 @@ To generate visualizations, select a metabolite using the drop down that contain
 
 ![Fractional enrichment with 0 for ATP and label type N](../../img/LabeledLC-MSWorkflow/FEwithzero3.png) <center>**Figure 14.** Fractional enrichment with 0 for ATP and label type N</center>
 
+*   Visualization of labels in stacked plot shows comparison between different labels present across the samples. Each bar in the chart represents the sample and the segments in the bar represent different isotopic labels of selected metabolite.
+
+![Stacked Plot](../../img/LabeledLC-MSWorkflow/Stackedplot.png) <center>**Figure 15.** Visualization of labels in stacked plot</center>
+
+
 *   Visualization on the basis of pool totals shows the pool totals plot for the selected metabolite.
 
-![Pool Total Plot](../../img/LabeledLC-MSWorkflow/Pooltotal.png) <center>**Figure 15.** Pool Total Plot</center>
+![Pool Total Plot](../../img/LabeledLC-MSWorkflow/Pooltotal.png) <center>**Figure 16.** Pool Total Plot</center>
 
 **Note:**
 
@@ -143,13 +148,13 @@ To generate visualizations, select a metabolite using the drop down that contain
 
 This tab allows you to generate the output workbook which consists of the Raw Intensities, Raw Abundances, Fractional Contribution and Corrected Isotopologues in four different worksheets where the metabolites belonging to a particular pathway are grouped together based on the metabolite-pathway mapping provided in the Library File uploaded. The various options available are provided below:
 
-![Generate Output File](../../img/LabeledLC-MSWorkflow/labeled_lcms_generate_output_page.png) <center>**Figure 16.** Generate Output File</center>
+![Generate Output File](../../img/LabeledLC-MSWorkflow/labeled_lcms_generate_output_page.png) <center>**Figure 17.** Generate Output File</center>
 
 *   *Download Demo Library File:* Clicking on this would download the demo library file containing the metabolite and pathway mapping.
 
 *   *Upload Library File (.csv):* The library file contains metabolite to pathway mapping information such as name of metabolite, pathway identifiers as supercategory and subcategory as shown in Figure 16. This file should be in .csv format. A detailed description of this file is provided below.
 
-![Library File](../../img/LabeledLC-MSWorkflow/library_file1.png) <center>**Figure 17.** Library File</center>
+![Library File](../../img/LabeledLC-MSWorkflow/library_file1.png) <center>**Figure 18.** Library File</center>
 
 where,
 
@@ -165,7 +170,7 @@ Select whether to proceed with Fractional Enrichment or Fractional Enrichment wi
 
 Clicking on *Run* will generate a workbook that consists of the worksheets *rawIntensities*, *rawAbundances*, *CorrectedIsotopologues* and *FracContribution* with entries for all the metabolite isotopologues across different samples. Further, all the metabolite isotopologues are grouped based on the pathway they belong to (information provided in the library file).
 
-![Output Workbook](../../img/LabeledLC-MSWorkflow/output_workbook1.png) <center>**Figure 18.** Output Workbook</center>
+![Output Workbook](../../img/LabeledLC-MSWorkflow/output_workbook1.png) <center>**Figure 19.** Output Workbook</center>
 
 #Details of the App
 
