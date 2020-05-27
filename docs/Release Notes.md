@@ -1,8 +1,8 @@
 #Release Notes
 
-<!--May 22th, 2020-->
+<!--May 22nd, 2020-->
 <details open>
-  <summary><font size="+1"><b>May 22th, 2020</b></font></summary>
+  <summary><font size="+1"><b>May 22nd, 2020</b></font></summary>
   <br>
   <p class="new-button">New</p>
   <ul>
