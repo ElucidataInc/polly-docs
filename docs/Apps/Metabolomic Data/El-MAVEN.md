@@ -8,9 +8,9 @@ It is an open-source LC-MS data processing engine that is optimal for isotopomer
 
 El-MAVEN is now hosted on the Polly platform. This means El-MAVEN and all your Polly applications can reside on a single platform and can be shared with your colleagues easily. The following are the advantages of having El-MAVEN on Polly:
 
-*   The application scale automatically on the Polly infrastructure for multiple users to use simultaneously.
+*   The application scales automatically on the Polly infrastructure for multiple users to use simultaneously.
 
-*   Access to the application is controlled by Polly authentication. Only users in your organization with required Polly authorization can access the applications.
+*   Access to the application is controlled by Polly authentication. Only users in your organization with required Polly authorization can access the application.
 
 *   Have input and output data along with analysis stored at the same location in the [Polly Management Dashboard](https://docs.elucidata.io/Getting%20Started/Project%20Management%20Dashboard.html).
 
@@ -102,7 +102,7 @@ Once the *Terminal* option is selected, it provides access to the command-line i
 
 You can fetch directories from the Project. The contents of any directory within a Project can be listed using the following command on the terminal.
 
-<pre><code>polly files list --workspace-path "" -y</code></pre>
+<pre><code>polly files list --workspace-path "path/to/polly/folder" -y</code></pre>
 
 Here the path of the directory has to start with “*polly://*”.
 
@@ -113,7 +113,7 @@ To view the contents within a folder called “Data” in the project, the follo
 
 To access the directory, the following command will have to be executed on the terminal.
 
-<pre><code>polly files sync -s "" -d "" -y</code></pre>
+<pre><code>polly files sync -s "path/to/polly/folder" -d "path/on/elmaven/instance" -y</code></pre>
 
 If the folder called “Data” is to be accessed from Project in the folder called “Input”, execute the following command.
 
@@ -121,7 +121,7 @@ If the folder called “Data” is to be accessed from Project in the folder cal
 
 To save directories back to Project, keep the source as it is and destination as Polly Project in the same command as mentioned above.
 
-<pre><code>polly files sync -s "" -d "" -y</code></pre>
+<pre><code>polly files sync -s "path/on/elmaven/instance" -d "path/to/polly/folder" -y</code></pre>
 
 To save the folder called “Output” back to Polly Project, use the following command.
 
@@ -129,26 +129,32 @@ To save the folder called “Output” back to Polly Project, use the following 
 
 ##Instance Termination
 
-Since peak picking can take days, there is an option to keep the instance running in the background even if the browser tab is closed. For this, you have separate options to *Stop* and *Terminate* the instance. Stopping the instance would keep the data (picked peaks) intact in the machine and the instance can be later resumed. (This option will soon be available on Polly)
+Since peak picking can take days, Polly provides three options: 
 
-Once you are done with your analysis, you can transfer back your results to the Project and choose to terminate the instance.
+*   You can choose to close the tab without stoping or terminating it. This would keep the instance running in the background even if the browser tab is closed. You can later restore the same analysis with the same data used, from the *Analysis* section.
 
-![Termination](../../img/El-MAVEN/Termination.png) <center>**Figure 10.** Termination</center>
+*   In case you choose to close the instance, you have separate options to Stop and Terminate the instance. Stopping the instance would keep the data (picked peaks) intact in the machine and the instance can be later resumed (soon to be available on Polly). If the tab is closed without Terminating or Stopping the instance, it would continue to run in the background. 
+
+*   In case of termination of instance, the data would not remain intact in the machine. You would have to add the files again from the Project to perform the analysis.
+
+**Note**:
+
+*    Make sure you transfer your results to the project before selecting the terminate option.  
+
+![Termination](../../img/El-MAVEN/Termination.png) <center>**Figure 10.** Instance Termination</center>
 
 ##Restore Analysis 
 
-Polly contains the restore functionality that allows any analysis to be restored to the last step. Analyses can be restored by navigating to the *Analysis* section of a project. Click on *History* for the specific analysis to restore.
+Polly contains the restore functionality that allows any analysis to be restored to the last step. This functionality would be available only if the instance has not been terminated. 
+
+Analyses can be restored by navigating to the *Analysis* section of a project. Click on History for the specific analysis to restore.
 
 ![History](../../img/El-MAVEN/History.png) <center>**Figure 11.** History</center>
 
-![Restore](../../img/El-MAVEN/Restore.png) <center>**Figure 12.** Restore</center>
+![Restore](../../img/El-MAVEN/Restore.png) <center>**Figure 12.** Restore Analysis</center>
 
-Clicking on *Restore Analysis* will take you back to the application with the same data used before. It helps you to restore the incomplete analysis and improves reproducibility.
+Clicking on *Restore Analysis* will take you back to the application with the same data used before. It helps you to restore the incomplete analysis and improves reproducibility.
 
-**NOTE**:
+In case you have terminated the instance, the option to restore will not be available. Instead, there will be an option to *Restart Analysis*, which will take you back to the analysis with the same machine as used earlier in the analysis without restoring the data back. You would have to add the files again from th eproject to perform the analysis.
 
-*   This functionality would be available only if the instance has not been terminated.
-
-In case you have terminated the instance, you can use the *Restart Analysis* tab to restart your instance. It will take you back to the application but unlike the restoring feature the same data does not get restored but you would have to add the files again to perform the analysis.
-
-![Restart](../../img/El-MAVEN/Restart.png) <center>**Figure 13.** Restart</center>
+![Restart](../../img/El-MAVEN/Restart.png) <center>**Figure 13.** Restart Analysis</center>
