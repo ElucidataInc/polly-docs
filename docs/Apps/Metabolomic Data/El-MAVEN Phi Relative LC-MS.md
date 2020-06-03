@@ -114,6 +114,14 @@ Post-alignment the peaks in the group should appear closer to the median RT of t
 
 ![Peak group after alignment](../../img/EPI/AfterAlignment.png) <center> **Figure 12.** Peak group after alignment </center>
 
+Watch the demo video below for more information.
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+    <iframe src="https://www.youtube.com/embed/Zu5N1Vawrm4" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
+
+<br>
+
 **Isotope Settings**
 
 If the samples are labeled, check on *Report Isotopic Peaks* and select the isotopic tracer and set the parameters for isotope filtering.
@@ -193,6 +201,26 @@ This interface allows you to visualize the EIC plot and reject metabolites or is
 
 *   Label M0 corresponds to C12 PARENT, M1 to C13-label-1 and so on.
 
+#Videos
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+    <iframe src="https://www.youtube.com/embed/9foLye20BLA" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
+
+<br>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+    <iframe src="https://www.youtube.com/embed/LiMoEGXbMyo" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
+
+<br>
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+    <iframe src="https://www.youtube.com/embed/tw8kWfMhc3Q" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
+
+<br>
+
 ##Frequently Asked Questions (FAQs)
 
 | **S.No.** | **Questions** | **Answers** |
@@ -207,3 +235,4 @@ This interface allows you to visualize the EIC plot and reject metabolites or is
 |8.| **Is there any limit on the file size tha can be uploaded on El-MAVEN Phi Relative LC-MS?** | No. You can upload data irrespective of its size.|
 |9.| **How can I edit parameters for natural abundance correction?** | El-MAVEN Phi Relative LC-MS does not allow you to edit the natural abundance correction parameters. To have more flexibility over your analysis, please refer to [Labeled LC-MS Workflow](https://docs.elucidata.io/Apps/Metabolomic%20Data/Labeled%20LC-MS%20Workflow.html).|
 |10.| **Can the values be normalized based on the external standards I have?** | Yes. To support user specific customizations, you can use [Polly Notebooks](https://docs.elucidata.io/Scaling%20compute/Polly%20Notebooks.html).|
+
