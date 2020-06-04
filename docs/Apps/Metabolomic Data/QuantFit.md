@@ -152,6 +152,8 @@ Watch the demo video below for more information.
     <iframe src="https://www.youtube.com/embed/A37ra2Lh3yI" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
 </div>
 
+<br>
+
 ##Injection Efficiency Correction
 
 Injection Efficiency Correction is used to normalize the biosamples with respect to internal standards in the data on the basis of total ion count. We recommend the highest intensity non-outlier sample when correcting for injection efficiency. You can also select a sample from the outliers detected with Grubbs' test for this normalization. 
