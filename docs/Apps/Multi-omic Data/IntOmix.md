@@ -123,6 +123,14 @@ Using this question you can compare the analysis of the same data using differen
 
 ![Cross Cohort Comparison](../../img/IntOmix/intomix_cohort_comparison.png) <center>**Figure 12.** Cross Cohort Comparison</center>
 
+Watch the demo video below for more information.
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+    <iframe src="https://www.youtube.com/embed/ISsKc81FQqM" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
+
+<br>
+
 #Details about the app
 
 IntOmix is based on [CoMBI-T](https://www.cell.com/immunity/fulltext/S1074-7613(15)00080-1?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS1074761315000801%3Fshowall%3Dtrue) i.e., Concordant Metabolomics Integration with Transcription pipeline to utilize the multiple omics techniques (metabolomics and transcriptomics) to focus on the identification of significantly altering metabolic network modules between two experimental conditions under investigation. This network includes both metabolites and enzymes. The most co-ordinately responsive sub-network is identified using the integrated network analysis and also, the novel points of metabolic rewiring are revealed.
@@ -134,6 +142,14 @@ After making a network, one can find a connected module that contains the most s
 The *FDR values* and *Score for absent metabolites* options control the size of the module. Increasing/decreasing the *FDR for reactions* (*FDR for metabolites*) value makes adding reactions (metabolites) to a module easier/harder.
 
 It is recommended to start from the default values and then gradually change them depending on the results. Default FDR values are generated so that the module will be the size of ~100 reactions.
+
+#Videos
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+    <iframe src="https://www.youtube.com/embed/Qhdp82moWsQ" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
+
+<br>
 
 #References
 
