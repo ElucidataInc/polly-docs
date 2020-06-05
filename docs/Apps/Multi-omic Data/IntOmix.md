@@ -97,9 +97,9 @@ You can add all metabolites and genes which do not satisfy the parameters specif
 
 ##Option and Information
 
-In the *Option & Information* pop-up window as shown in Figure 9, you can select *All Others* option to add all genes and metabolites in the data to the generated map. The genes and metabolites that satisfy the parameters selected in the parameter interface have color ranging from red-green and the ones that do not are displayed as shades of purple.
+In the *Option & Information* pop-up window as shown in Figure 9, you can select *All Others* option to add all genes and metabolites in the data to the generated map. The genes and metabolites have color ranging from red-green scale . All upregulated metabolites or genes are represented by a shade of red and downregulated metabolites or genes as a shade of green. The missing metabolites and genes are represented by shade of blue.
 
-![Pathway map containing all metabolites and genes in the input files](../../img/IntOmix/intomix_pathway_map_with_all_metabs_genes.png) <center>**Figure 9.** Pathway map containing all metabolites and genes in the input files.</center>
+![Pathway map containing all metabolites and genes in the input files](../../img/IntOmix/Overallpathwaymap1.png) <center>**Figure 9.** Pathway map containing all metabolites and genes in the input files.</center>
 
 ##Analyze your data
 
