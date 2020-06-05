@@ -6,7 +6,7 @@
 <br>
   <p class="new-button">New</p>
   <ul>
-   <li>Introduced visualization of labels in <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Labeled%20LC-MS%20Workflow.html#visualization">Stacked Plot</a> in Labeled LC-MS Workflow.</li>
+   <li>Introduced visualization of labels in <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Labeled%20LC-MS%20Workflow.html#visualization">Stacked Plot</a> within Labeled LC-MS Workflow.</li>
   </ul>
 </details>
 
@@ -14,7 +14,7 @@
 
 
 <!--May 22nd, 2020-->
-<details close>
+<details>
   <summary><font size="+1"><b>May 22nd, 2020</b></font></summary>
   <br>
   <p class="new-button">New</p>
