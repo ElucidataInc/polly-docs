@@ -1,7 +1,19 @@
 #Release Notes
 
+<!--June 5th, 2020-->
+<details Open>
+<summary><font size="+1"><b>June 5th, 2020</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+   <li>Introduced visualization of labels in <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Labeled%20LC-MS%20Workflow.html#visualization">Stacked Plot</a> in Labeled LC-MS Workflow.</li>
+  </ul>
+</details>
+
+<hr>
+
 <!--May 22nd, 2020-->
-<details open>
+<details close>
   <summary><font size="+1"><b>May 22nd, 2020</b></font></summary>
   <br>
   <p class="new-button">New</p>
