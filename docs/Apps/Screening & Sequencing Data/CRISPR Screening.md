@@ -311,11 +311,19 @@ Follow these steps to remove these abruptly high sgRNAs
 
     ![(28)](../../../img/CRISPR/(28).png)
 
-##References
+#Videos
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+    <iframe src="https://www.youtube.com/embed/erTpaI8cNkY" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
+
+<br>
+
+#References
 
 *   Li W, Köster J, Xu H, Chen CH, Xiao T, Liu JS, Brown M, Liu XS. *Quality control, modeling, and visualization of CRISPR screens with MAGeCK-VISPR.* Genome biology. 2015 Dec;16(1):281.
 
-##Frequently Asked Questions (FAQs)
+#Frequently Asked Questions (FAQs)
 
 |**S.No.** | **Questions**|**Answers**|
 | --- | --- | --- |

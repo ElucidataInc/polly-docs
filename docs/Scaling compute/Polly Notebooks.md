@@ -338,3 +338,11 @@ Polly Notebook also allows you to make use of the reusable scripts which are alr
 On the right side, another collapsible dialogue box gets opened when you select any reusable script which provides information about the options and usage of that particular reusable script. You can also add your own reusable scripts on the Polly Notebook so as to make use of them in your repeated analysis and save time.
 
 ![Options and Information of Reusable scripts](../img/Notebooks/32.png) <center>**Figure 32.** Options and Information of Reusable scripts</center>
+
+#Videos
+
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+    <iframe src="https://www.youtube.com/embed/jdNeaXtzctE" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
+
+<br>

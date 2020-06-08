@@ -1,7 +1,27 @@
 #Release Notes
 
-<!--May 22nd, 2020-->
+<!--June 5th, 2020-->
 <details open>
+<summary><font size="+1"><b>June 5th, 2020</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+   <li>Introduced visualization of labels in <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Labeled%20LC-MS%20Workflow.html#visualization">stacked plot</a> within Labeled LC-MS Workflow.</li>
+    <li>Enabled least privilege access for stringent access policies.</li>
+    <li>Encryption of data in transit and at rest.</li>
+  </ul>
+  <p class="update-button">Update</p>
+  <ul>
+    <li>Improved access logs throughout the platform.</li>
+    <li>Enhanced security using a secrets management service.</li>
+    <li>Implemented regular backups and versioning of data.</li>
+  </ul> 
+</details>
+
+<hr>
+
+<!--May 22nd, 2020-->
+<details>
   <summary><font size="+1"><b>May 22nd, 2020</b></font></summary>
   <br>
   <p class="new-button">New</p>
@@ -37,6 +57,10 @@
   <p class="new-button">New</p>
   <ul>
     <li>Added a data lake for COVID-19.</li>
+    <br>
+    <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+    <iframe src="https://www.youtube.com/embed/AYgAb5Lbj4g" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+    </div>
   </ul> 
 </details>  
 
