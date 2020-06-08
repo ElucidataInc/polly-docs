@@ -8,7 +8,7 @@ The Labeled LC-MS/MS Workflow tool factors out the contribution from the natural
 
 *   The tool supports data from LC-MS/MS and MRM/SRM experiments.
 *   Supports data from single as well as dual labeled experiments.
-*   Corrects data from <sup>2</sup>D, <sup>13</sup>C, <sup>15</sup>N and <sup>34</sup>S labeled experiments
+*   Corrects data from <sup>13</sup>C labeled experiments
 *   Plot fractional enrichment and pool total for a selected metabolite.
 *   It performs Phi calculations.
 
