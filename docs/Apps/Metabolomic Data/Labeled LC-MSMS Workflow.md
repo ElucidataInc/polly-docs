@@ -225,7 +225,7 @@ After uploading the necessary files, click on *Calculate Phi*.
 
 **Autodetection of indistinguishable isotope**
 
-A new feature in CORNA has the ability to auto-detect indistinguishable isotopes in experiments with dual tracers. Some high-resolution mass spectrometer instruments are able to distinguish isotopes like <sup>13</sup>C from <sup>15</sup>N. The packages available for performing natural abundance correction on these data assume infinite resolution, which means that it is assumed that if <sup>13</sup>C can be resolved from <sup>15</sup>N at all masses and it can also be resolved from other isotopes like <sup>2</sup>D. However, this assumption becomes invalid as the resolution of the machine varies with the mass of the metabolite. Corna does not assume ultra-high resolution and corrects for partial indistinguishability in the data.
+A new feature in Corna has the ability to auto-detect indistinguishable isotopes in experiments with dual tracers. Some high-resolution mass spectrometer instruments are able to distinguish isotopes like <sup>13</sup>C from <sup>15</sup>N. The packages available for performing natural abundance correction on these data assume infinite resolution, which means that it is assumed that if <sup>13</sup>C can be resolved from <sup>15</sup>N at all masses and it can also be resolved from other isotopes like <sup>2</sup>D. However, this assumption becomes invalid as the resolution of the machine varies with the mass of the metabolite. Corna does not assume ultra-high resolution and corrects for partial indistinguishability in the data.
 
 **Fractional enrichment**
 
