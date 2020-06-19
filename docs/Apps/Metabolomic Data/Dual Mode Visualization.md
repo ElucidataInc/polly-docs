@@ -11,6 +11,7 @@ Metabolomics is one of the key research areas focusing on small molecules presen
 *   Performs normalization and scaling on the data.
 *   Performs quality checks for internal standards, metabolites, and samples.
 *   Performs statistical analysis using limma and provide interactive visualizations.
+*   Performs pathway analysis and visualize pathway enrichment analysis plots.
 
 ![Dual Mode Data Visualization (Metabolomics App) workflow schematic](../../img/DualMode/metab_app_workflow_schematics.png) <center>**Figure 1.** Dual Mode Data Visualization </center>
 
