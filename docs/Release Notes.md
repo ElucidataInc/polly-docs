@@ -6,21 +6,19 @@
 <br>
   <p class="new-button">New</p>
   <ul>
-   <li>We now support reactions from <i>Drosophila melanogaster</i> for integrated pathway analysis in IntOmix Application.</li>
-    <li>Introduced Comparative analysis along with pathway enrichment analysis and pathway view feature in Dual Mode Data Visualization application.</li>
-    <li>DEPMAP CCLE (DEPMAP Cancer cell line expression data and dependency scores for genes) repository has been added in Polly Discover.</li>
-    <li>Implemented input file access from the sub-folders of a project</li>
+   <li>We now support reactions from <i>Drosophila melanogaster</i> for integrated pathway analysis in <a href="https://docs.elucidata.io/Apps/Multi-omic%20Data/IntOmix.html">IntOmix</a>.</li>
+    <li>Introduced comparative analysis along with pathway enrichment and pathway view feature in <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Dual%20Mode%20Visualization.html">Dual Mode Data Visualization</a>.</li>
+    <li>DEPMAP CCLE (DEPMAP Cancer cell line expression data and dependency scores for genes) repository has been added in Data Lake.</li>
+    <li>Implemented input file access from the sub-folders of a project for applocations.</li>
   </ul>
   <p class="update-button">Update</p>
   <ul>
-    <li>The singlecell docker is updated with these new packages: rpy2, anndata2ri (python packages), ExperimentHub (R package).</li>
-    <li>Added GPU instance for Polly CLI.</li>
-    
+    <li>The Single Cell Downstream docker is updated with these new packages: rpy2, anndata2ri (Python packages), ExperimentHub (R package).</li>
+    <li>Added a GPU instance for Polly CLI.</li>
   </ul> 
 </details>
 
 <hr>
-
 
 <!--June 5th, 2020-->
 <details>
