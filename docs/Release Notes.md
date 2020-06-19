@@ -1,7 +1,29 @@
 #Release Notes
 
-<!--June 5th, 2020-->
+<!--June 19th, 2020-->
 <details open>
+<summary><font size="+1"><b>June 19th, 2020</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+   <li>We now support reactions from <i>Drosophila melanogaster</i> for integrated pathway analysis in IntOmix Application.</li>
+    <li>Introduced Comparative analysis along with pathway enrichment analysis and pathway view feature in Dual Mode Data Visualization application.</li>
+    <li>DEPMAP CCLE (DEPMAP Cancer cell line expression data and dependency scores for genes) repository has been added in Polly Discover.</li>
+    <li>Implemented input file access from the sub-folders of a project</li>
+  </ul>
+  <p class="update-button">Update</p>
+  <ul>
+    <li>The singlecell docker is updated with these new packages: rpy2, anndata2ri (python packages), ExperimentHub (R package).</li>
+    <li>Added GPU instance for Polly CLI.</li>
+    
+  </ul> 
+</details>
+
+<hr>
+
+
+<!--June 5th, 2020-->
+<details>
 <summary><font size="+1"><b>June 5th, 2020</b></font></summary>
 <br>
   <p class="new-button">New</p>
