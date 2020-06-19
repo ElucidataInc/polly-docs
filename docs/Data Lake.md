@@ -32,8 +32,6 @@ Public data repositories on Polly consist of processed and curated datasets from
     
 *   Single cell Atlas: Single cell RNA Sequencing datasets from Gene Expression Omnibus
     
-*   Single cell kidney: Single cell RNA Sequencing datasets from kidney studies.
-    
 *   GTEX: Normal tissue RNA Sequencing datasets from Genotype-Tissue Expression project
     
 *   TCGA: Tumor RNA Sequencing datasets from The Cancer Genome Atlas.
