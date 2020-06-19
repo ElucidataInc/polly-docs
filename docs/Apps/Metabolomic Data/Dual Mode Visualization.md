@@ -336,7 +336,7 @@ Specify two or more cohorts from the *Select cohorts* drop down option for which
 
 This tab allows you to perform comparative analysis between a set of cohorts in your data. As a result of which you can visualize the UpSet plot of the unique and overlapping metabolites for the selected cohort comparisons. Further, you can also perform pathway analysis on the metabolites for the set intersections of interest.
 
-* Comparison Parameters tab allows you to select the cohorts of interest for which you would want to get the set interections.
+* Comparison Parameters tab allows you to select the cohorts of interest for which you would want to get the set intersections.
 You can select the cohorts from the *Select cohorts* drop-down and click on *Run* button. Further, you can also specifiy the *p*-value cut-off and log<sub>2</sub>FC threshold.
 
 ![Comparison Parameters Tab options](../../img/DualMode/metab_app_comparative_analysis_uploads_tab.png) <center>**Figure 54.** Comparison Parameters Tab options</center>
