@@ -39,6 +39,9 @@ Public data repositories on Polly consist of processed and curated datasets from
 *   TCGA: Tumor RNA Sequencing datasets from The Cancer Genome Atlas.
 
 *   COVID-19: Transcriptional datasets for SARS viruses, viral infections, and therapeutics for novel coronavirus.
+
+*   DEPMAP CCLE: DEPMAP Cancer cell line expression data and dependency scores for genes.
+
     
 
 Additionally, the public data repositories also consist of publicly available databases that have been curated for annotations. These publicly available databases are currently part of these repositories.
