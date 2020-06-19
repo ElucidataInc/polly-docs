@@ -46,7 +46,7 @@ Both the input files consist of information about log<sub>2</sub> Fold Change an
 *   KEGG or HMDB ID for metabolites and gene id for genes is required to map these on the pathway map.
 *   If *State 1* and *State 2* columns are not present in the input files, the entire data will be treated as if from one comparison with the default cohort names, *Cohort1* and *Cohort2*.
 *   In case there are blank cells for *p*-value or log<sub>2</sub> fold change in the input files, the corresponding metabolites or genes are dropped before optimization and a notice is shown to that effect.
-*   Currently, we only support reactions from *Homo sapiens* and *Mus musculus*.
+*   Currently, we only support reactions from *Homo sapiens*, *Mus musculus* and *Drosophila melanogaster*.
 *   At a time only one keyword can be annotated as the primary keyword.
 *   Publication Search module requires at least one keyword to be annotated as the primary keyword.
 *   To utilize the Cross Cohort Comparison functionality, run your analysis at least twice at different parameters.
