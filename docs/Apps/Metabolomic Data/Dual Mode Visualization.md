@@ -10,8 +10,8 @@ Metabolomics is one of the key research areas focusing on small molecules presen
 *   Works with .gct file format as well.
 *   Performs normalization and scaling on the data.
 *   Performs quality checks for internal standards, metabolites, and samples.
-*   Performs statistical analysis using limma and provide interactive visualizations.
-*   Performs pathway analysis and visualize pathway enrichment analysis plots.
+*   Performs statistical analysis using limma and provides interactive visualizations.
+*   Performs pathway analysis and visualizes pathway enrichment analysis plots.
 
 ![Dual Mode Data Visualization (Metabolomics App) workflow schematic](../../img/DualMode/metab_app_workflow_schematics.png) <center>**Figure 1.** Dual Mode Data Visualization </center>
 
@@ -299,8 +299,7 @@ As a result, you get Metabolite Set Enrichment Analysis and Pathway Topology Ana
 
 ![Pathway Topology Analysis Table](../../img/DualMode/metab_app_stats_analysis_topology_table.png) <center>**Figure 48.** Pathway Topology Analysis Table</center>
 
-*Pathway View* plots the pathway view of the metabolisms that show up in the Metabolite Set Enrichment Analysis. It maps and renders the metabolite hits on relevant pathway graphs. This enables you to visualise the significant metabolites on pathway graphs of the respective metabolisms they belong to.
-You can select your metabolism of interest from the drop-down and click on *Plot*. This will plot the pathway view of the metabolism selected. You can also download the plot as a png by clicking onto the *Download Pathview Plot* button.
+*Pathway View* plots the pathway view of the metabolites that show up in the Metabolite Set Enrichment Analysis. It maps and renders the metabolite hits on relevant pathway graphs. This enables you to visualize the significant metabolites on pathway graphs of the respective metabolites they belong to. You can select your metabolite of interest from the drop-down and click on *Plot*. This will plot the pathway view of the metabolism selected. You can also download the plot as a .png file by clicking onto the *Download Pathview Plot* button.
 
 ![Pathway View Plot](../../img/DualMode/metab_app_stats_analysis_pathview_plot.png) <center>**Figure 49.** Pathway View Plot</center>
 
@@ -336,28 +335,25 @@ Specify two or more cohorts from the *Select cohorts* drop down option for which
 
 This tab allows you to perform comparative analysis between a set of cohorts in your data. As a result of which you can visualize the UpSet plot of the unique and overlapping metabolites for the selected cohort comparisons. Further, you can also perform pathway analysis on the metabolites for the set intersections of interest.
 
-* *Comparison Parameters* tab allows you to select the cohorts of interest for which you would want to get the set intersections.
-You can select the cohorts from the *Select cohorts* drop-down and click on *Run* button. Further, you can also specify the *p*-value cut-off and log<sub>2</sub>FC threshold.
+* *Comparison Parameters* tab allows you to select the cohorts of interest for which you would want to get the set intersections. You can select the cohorts from the *Select cohorts* drop-down and click on *Run* button. Further, you can also specify the *p*-value cut-off and log<sub>2</sub>FC threshold.
 
 ![Comparison Parameters Tab options](../../img/DualMode/metab_app_comparative_analysis_uploads_tab.png) <center>**Figure 54.** Comparison Parameters Tab options</center>
 
-You would get a table as a result of the parameters specified which will have the significant metabolites for the different cohort comparisons along with their corresponding *p*-values and log<sub>2</sub>FC values. You can also download this table as a CSV file.
+You will get a table as a result of the parameters specified which will have the significant metabolites for the different cohort comparisons along with their corresponding *p*-values and log<sub>2</sub>FC values. You can also download this table as a .CSV file.
 
 ![Comparison Table](../../img/DualMode/metab_app_comparative_analysis_comparison_table.png) <center>**Figure 55.** Comparison Table</center>
 
-* *UpSet Plot* tab allows you to visualize the set intersections for the cohort comparisons selected where every comparison consists of the significant metabolites associated with the same. 
-You can select the cohort comparisons of interest from the *Select Cohort Comparison* drop-down which essentially shows all the possible comparisons for the cohorts specified in the previous tab. Click on *Plot* to get the UpSet plot for the specified comparisons.
+* *UpSet Plot* tab allows you to visualize the set intersections for the cohort comparisons selected where every comparison consists of the significant metabolites associated with the same. You can select the cohort comparisons of interest from the *Select Cohort Comparison* drop-down which represents all the possible comparisons for the cohorts specified in the previous tab. Click on *Plot* to get the UpSet plot for the specified comparisons.
 
 ![UpSet Plot options](../../img/DualMode/metab_app_comparative_analysis_upset_plot_options.png) <center>**Figure 56.** UpSet Plot options</center>
 
 ![UpSet Plot](../../img/DualMode/metab_app_comparative_analysis_upset_plot.png) <center>**Figure 57.** UpSet Plot</center>
 
-Along with the plot, you can also get the all the constituent metabolites for the respective comparisons in a tabular format that can be downloaded as a CSV file.
+Along with the plot, you can also get all the constituent metabolites for the respective comparisons in a tabular format that can be downloaded as a .CSV file.
 
 ![UpSet Plot table](../../img/DualMode/metab_app_comparative_analysis_upset_table.png) <center>**Figure 58.** UpSet Plot Table</center>
 
-* *Pathway Enrichment Analysis* tab allows you to perform the pathway enrichment analysis for the significant metabolites that show up based on the parameters specified in the *Comparison Parameters* tab for the particular set of cohort comparison. Click on the *Perform Pathway Analysis* button.
-As a result, you get Metabolite Set Enrichment Analysis and Pathway Topology Analysis plots that can be downloaded under the *Plot* panel. You can also obtain the tablular representation of the plots by selecting onto the *Table* panel.
+* *Pathway Enrichment Analysis* tab allows you to perform the pathway enrichment analysis for the significant metabolites that show up based on the parameters specified in the *Comparison Parameters* tab for the particular set of cohort comparison. Click on the *Perform Pathway Analysis* button. As a result, you get Metabolite Set Enrichment Analysis and Pathway Topology Analysis plots that can be downloaded under the *Plot* panel. You can also obtain the tablular representation of the plots by selecting onto the *Table* panel.
 
 ![Metabolite Set Enrichment Analysis Plot](../../img/DualMode/metab_app_comparative_analysis_msea_plot.png) <center>**Figure 59.** Metabolite Set Enrichment Analysis Plot</center>
 
@@ -367,8 +363,7 @@ As a result, you get Metabolite Set Enrichment Analysis and Pathway Topology Ana
 
 ![Pathway Topology Analysis Table](../../img/DualMode/metab_app_comparative_analysis_topology_table.png) <center>**Figure 62.** Pathway Topology Analysis Table</center>
 
-*Pathway View* plots the pathway view of the metabolisms that show up in the Metabolite Set Enrichment Analysis. It maps and renders the metabolite hits on relevant pathway graphs. This enables you to visualise the significant metabolites on pathway graphs of the respective metabolisms they belong to.
-You can select your metabolism of interest from the drop-down and click on *Plot*. This will plot the pathway view of the metabolism selected. You can also download the plot as a png by clicking onto the *Download Pathview Plot* button.
+*Pathway View* plots the pathway view of the metabolites that show up in the Metabolite Set Enrichment Analysis. It maps and renders the metabolite hits on relevant pathway graphs. This enables you to visualize the significant metabolites on pathway graphs of the respective metabolisms they belong to. You can select your metabolite of interest from the drop-down and click on *Plot*. This will plot the pathway view of the metabolite selected. You can also download the plot as a .png file by clicking onto the *Download Pathview Plot* button.
 
 ![Pathway View options](../../img/DualMode/metab_app_comparative_analysis_pathway_view_options.png) <center>**Figure 63.** Pathway View options</center>
 
