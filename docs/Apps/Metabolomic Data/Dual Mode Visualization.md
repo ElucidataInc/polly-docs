@@ -10,7 +10,8 @@ Metabolomics is one of the key research areas focusing on small molecules presen
 *   Works with .gct file format as well.
 *   Performs normalization and scaling on the data.
 *   Performs quality checks for internal standards, metabolites, and samples.
-*   Performs statistical analysis using limma and provide interactive visualizations.
+*   Performs statistical analysis using limma and provides interactive visualizations.
+*   Performs pathway analysis and visualizes pathway enrichment analysis plots.
 
 ![Dual Mode Data Visualization (Metabolomics App) workflow schematic](../../img/DualMode/metab_app_workflow_schematics.png) <center>**Figure 1.** Dual Mode Data Visualization </center>
 
@@ -273,25 +274,40 @@ Once the parameters are specified, click on the *Update* button to plot the volc
 
 *Filtered Metabolites Visualization* provides the visualization of cohort-based distribution of the metabolites that are significant based on the parameters specified.
 
-![Filtered Metabolites Visualization](../../img/DualMode/metab_app_filtered_metab_viz.png) <center>**Figure 41.** Filtered Metabolites Visualization</center>
+![Filtered Metabolites Visualization](../../img/DualMode/metab_app_stats_analysis_filtered_metabolites_visualization.png) <center>**Figure 41.** Filtered Metabolites Visualization</center>
 
 *Filtered Normalized Table* contains the normalized data of the metabolites that are significant based on the parameters specified.
 
-![Filtered Normalized Table](../../img/DualMode/metab_app_filtered_normalized_table.png) <center>**Figure 42.** Filtered Normalized Table</center>
+![Filtered Normalized Table](../../img/DualMode/metab_app_stats_analysis_filtered_normalised_table.png) <center>**Figure 42.** Filtered Normalized Table</center>
 
 *Filtered Differential Expression Table* contains only the metabolites that have significant *p*-values as specified.
 
-![Filtered Differential Expression Table](../../img/DualMode/metab_app_filtered_diff_exp.png) <center>**Figure 43.** Filtered Differential Expression Table</center>
+![Filtered Differential Expression Table](../../img/DualMode/metab_app_stats_analysis_filtered_diff_exp_table.png) <center>**Figure 43.** Filtered Differential Expression Table</center>
 
 *Differential Expression Table* contains all the differentially expressed metabolites without any filtering.
 
-![Differential Expression Table](../../img/DualMode/metab_app_nonfiltered_diff_exp.png) <center>**Figure 44.** Differential Expression Table</center>
+![Differential Expression Table](../../img/DualMode/metab_app_stats_analysis_diff_exp_table.png) <center>**Figure 44.** Differential Expression Table</center>
+
+*Pathway Enrichment Analysis* performs the pathway enrichment analysis for the significant metabolites based on the parameters specified for the particular cohort comparison. Click on the *Perform Pathway Analysis* button.
+As a result, you get Metabolite Set Enrichment Analysis and Pathway Topology Analysis plots that can be downloaded under the *Plot* panel. You can also obtain the tablular representation of the plots by selecting onto the *Table* panel.
+
+![Metabolite Set Enrichment Analysis Plot](../../img/DualMode/metab_app_stats_analysis_msea_plot.png) <center>**Figure 45.** Metabolite Set Enrichment Analysis Plot</center>
+
+![Pathway Topology Analysis Plot](../../img/DualMode/metab_app_stats_analysis_pathway_topology_plot.png) <center>**Figure 46.** Pathway Topology Analysis Plot</center>
+
+![Metabolite Set Enrichment Analysis Table](../../img/DualMode/metab_app_stats_analysis_msea_table.png) <center>**Figure 47.** Metabolite Set Enrichment Analysis Table</center>
+
+![Pathway Topology Analysis Table](../../img/DualMode/metab_app_stats_analysis_topology_table.png) <center>**Figure 48.** Pathway Topology Analysis Table</center>
+
+*Pathway View* plots the pathway view of the metabolites that show up in the Metabolite Set Enrichment Analysis. It maps and renders the metabolite hits on relevant pathway graphs. This enables you to visualize the significant metabolites on pathway graphs of the respective metabolites they belong to. You can select your metabolite of interest from the drop-down and click on *Plot*. This will plot the pathway view of the metabolism selected. You can also download the plot as a .png file by clicking onto the *Download Pathview Plot* button.
+
+![Pathway View Plot](../../img/DualMode/metab_app_stats_analysis_pathview_plot.png) <center>**Figure 49.** Pathway View Plot</center>
 
 ##Visualization
 
 This interface allows you to visualize the cohort-based distribution of a specific metabolite or a group of metabolites on the basis on its normalized intensity values.
 
-![Visualization tab options](../../img/DualMode/metab_app_viz_tab_options.png) <center>**Figure 45.** Visualization tab options</center>
+![Visualization tab options](../../img/DualMode/metab_app_viz_tab_options.png) <center>**Figure 50.** Visualization tab options</center>
 
 *   *Enter metabolite:* Select the metabolite(s) of interest from the drop down option.
 *   *Select uniqueIds:* You can specifically select the metabolic feature of interest for the metabolite from the drop down option.
@@ -299,27 +315,65 @@ This interface allows you to visualize the cohort-based distribution of a specif
 
 Once the parameters are selected, click on *Load Plots* to plot the bar plot for the metabolite.
 
-![Cohort-wise bar plot with the normalized intensity of selected metabolite](../../img/DualMode/metab_app_barplot_viz.png) <center>**Figure 46.** Cohort-wise bar plot with the normalized intensity of selected metabolite</center>
+![Cohort-wise bar plot with the normalized intensity of selected metabolite](../../img/DualMode/metab_app_barplot_viz.png) <center>**Figure 51.** Cohort-wise bar plot with the normalized intensity of selected metabolite</center>
 
 ##IntOmix Input
 
 This tab allows you to generate the input for [IntOmix](https://docs.elucidata.io/Apps/Multi-omic%20Data/IntOmix.html) where you can visualize the significantly altered metabolic network modules between any two experimental conditions.
 
-![IntOmix Input Tab options](../../img/DualMode/metab_app_intomix_input_tab.png) <center>**Figure 47.** IntOmix Input Tab options</center>
+![IntOmix Input Tab options](../../img/DualMode/metab_app_intomix_input_tab.png) <center>**Figure 52.** IntOmix Input Tab options</center>
 
 Specify two or more cohorts from the *Select cohorts* drop down option for which you want to generate the IntOmix input. Once the required cohorts are selected, click on *Generate* to generate the IntOmix input.
 
-![IntOmix Table for the cohort conditions specified](../../img/DualMode/metab_app_intomix_table.png) <center>**Figure 48.** IntOmix Table for the cohort conditions specified</center>
+![IntOmix Table for the cohort conditions specified](../../img/DualMode/metab_app_intomix_table.png) <center>**Figure 53.** IntOmix Table for the cohort conditions specified</center>
 
 **NOTE:**
 
 *   At least two cohorts are required to create the input file.
 
+##Comparative Analysis
+
+This tab allows you to perform comparative analysis between a set of cohorts in your data. As a result of which you can visualize the UpSet plot of the unique and overlapping metabolites for the selected cohort comparisons. Further, you can also perform pathway analysis on the metabolites for the set intersections of interest.
+
+* *Comparison Parameters* tab allows you to select the cohorts of interest for which you would want to get the set intersections. You can select the cohorts from the *Select cohorts* drop-down and click on *Run* button. Further, you can also specify the *p*-value cut-off and log<sub>2</sub>FC threshold.
+
+![Comparison Parameters Tab options](../../img/DualMode/metab_app_comparative_analysis_uploads_tab.png) <center>**Figure 54.** Comparison Parameters Tab options</center>
+
+You will get a table as a result of the parameters specified which will have the significant metabolites for the different cohort comparisons along with their corresponding *p*-values and log<sub>2</sub>FC values. You can also download this table as a .CSV file.
+
+![Comparison Table](../../img/DualMode/metab_app_comparative_analysis_comparison_table.png) <center>**Figure 55.** Comparison Table</center>
+
+* *UpSet Plot* tab allows you to visualize the set intersections for the cohort comparisons selected where every comparison consists of the significant metabolites associated with the same. You can select the cohort comparisons of interest from the *Select Cohort Comparison* drop-down which represents all the possible comparisons for the cohorts specified in the previous tab. Click on *Plot* to get the UpSet plot for the specified comparisons.
+
+![UpSet Plot options](../../img/DualMode/metab_app_comparative_analysis_upset_plot_options.png) <center>**Figure 56.** UpSet Plot options</center>
+
+![UpSet Plot](../../img/DualMode/metab_app_comparative_analysis_upset_plot.png) <center>**Figure 57.** UpSet Plot</center>
+
+Along with the plot, you can also get all the constituent metabolites for the respective comparisons in a tabular format that can be downloaded as a .CSV file.
+
+![UpSet Plot table](../../img/DualMode/metab_app_comparative_analysis_upset_table.png) <center>**Figure 58.** UpSet Plot Table</center>
+
+* *Pathway Enrichment Analysis* tab allows you to perform the pathway enrichment analysis for the significant metabolites that show up based on the parameters specified in the *Comparison Parameters* tab for the particular set of cohort comparison. Click on the *Perform Pathway Analysis* button. As a result, you get Metabolite Set Enrichment Analysis and Pathway Topology Analysis plots that can be downloaded under the *Plot* panel. You can also obtain the tablular representation of the plots by selecting onto the *Table* panel.
+
+![Metabolite Set Enrichment Analysis Plot](../../img/DualMode/metab_app_comparative_analysis_msea_plot.png) <center>**Figure 59.** Metabolite Set Enrichment Analysis Plot</center>
+
+![Pathway Topology Analysis Plot](../../img/DualMode/metab_app_comparative_analysis_pathway_topology_plot.png) <center>**Figure 60.** Pathway Topology Analysis Plot</center>
+
+![Metabolite Set Enrichment Analysis Table](../../img/DualMode/metab_app_comparative_analysis_msea_table.png) <center>**Figure 61.** Metabolite Set Enrichment Analysis Table</center>
+
+![Pathway Topology Analysis Table](../../img/DualMode/metab_app_comparative_analysis_topology_table.png) <center>**Figure 62.** Pathway Topology Analysis Table</center>
+
+*Pathway View* plots the pathway view of the metabolites that show up in the Metabolite Set Enrichment Analysis. It maps and renders the metabolite hits on relevant pathway graphs. This enables you to visualize the significant metabolites on pathway graphs of the respective metabolisms they belong to. You can select your metabolite of interest from the drop-down and click on *Plot*. This will plot the pathway view of the metabolite selected. You can also download the plot as a .png file by clicking onto the *Download Pathview Plot* button.
+
+![Pathway View options](../../img/DualMode/metab_app_comparative_analysis_pathway_view_options.png) <center>**Figure 63.** Pathway View options</center>
+
+![Pathway View Plot](../../img/DualMode/metab_app_comparative_analysis_pathway_view_plot.png) <center>**Figure 64.** Pathway View Plot</center>
+
 ##Data for MetaboAnalyst
 
 This tab allows you to generate the input for MetaboAnalyst that enables statistical, functional and integrative analysis of metabolomics data by providing a variety of modules for different functionalities.
 
-![Data for MetaboAnalyst Tab options](../../img/DualMode/metab_app_metaboanalyst_page.png) <center>**Figure 49.** *Data for MetaboAnalyst* Tab options</center>
+![Data for MetaboAnalyst Tab options](../../img/DualMode/metab_app_metaboanalyst_page.png) <center>**Figure 65.** *Data for MetaboAnalyst* Tab options</center>
 
 Specify the cohort comparison of interest by sleecting the cohorts from the *Select cohort A* and *Select cohort B* drop downs. Click on *Download data for metaboanalyst* to download the .csv file. Clicking on *Go to metaboanalyst* will redirect you to MetaboAnalyst’s homepage.
 

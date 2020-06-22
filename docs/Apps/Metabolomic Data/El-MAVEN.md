@@ -38,7 +38,7 @@ The size of the data varies from a few MBs to hundreds of GBs, and in order to p
 
 | Name                       | CPU/Cores         | RAM   |
 |----------------               |-----------               |-------|
-| Polly 2x-large         | 4                          | 32 GB |
+| Polly 2x-large         | 4                          | 32GB |
 | Polly 3x-large         | 8                          | 64GB |
 | Polly  4x-large         | 16                         |120GB|
 

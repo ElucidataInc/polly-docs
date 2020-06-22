@@ -32,13 +32,14 @@ Public data repositories on Polly consist of processed and curated datasets from
     
 *   Single cell Atlas: Single cell RNA Sequencing datasets from Gene Expression Omnibus
     
-*   Single cell kidney: Single cell RNA Sequencing datasets from kidney studies.
-    
 *   GTEX: Normal tissue RNA Sequencing datasets fromÂ Genotype-Tissue Expression project
     
 *   TCGA: Tumor RNA Sequencing datasets from The Cancer Genome Atlas.
 
 *   COVID-19: Transcriptional datasets for SARS viruses, viral infections, and therapeutics for novel coronavirus.
+
+*   DEPMAP CCLE: DEPMAP Cancer cell line expression data and dependency scores for genes.
+
     
 
 Additionally, the public data repositories also consist of publicly available databases that have been curated for annotations. These publicly available databases are currently part of these repositories.
@@ -159,9 +160,7 @@ The Polly Notebook Dockers on Polly have an **internal** python package called â
 
 ##Structure of a data repository
 
-A data repository is a collection of different files having different file types. To ensure easy access at a granular level to all datasets a data repository is organized in the following manner. Under this schema, each repository can be considered as a collection of indices which can be used for querying. The discoverPy package can access all indices of a data repository using API endpoints.<!--Structure of a data repository-->
-
-A data repository is a collection of different files having different file types. To ensure easy access at a granular level to all datasets a data repository is organized in the following manner. Under this schema, each repository can be considered as a collection of indices which can be used for querying. The discoverPy package can access all indices of a data repository using API endpoints.  
+A data repository is a collection of different files having different file types. To ensure easy access at a granular level to all datasets a data repository is organized in the following manner. Under this schema, each repository can be considered as a collection of indices which can be used for querying. The discoverPy package can access all indices of a data repository using API endpoints.
 
 ![Structure of a data repository](../img/Discover/discover_data_repository.png)
 

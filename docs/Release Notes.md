@@ -1,7 +1,27 @@
 #Release Notes
 
-<!--June 5th, 2020-->
+<!--June 19th, 2020-->
 <details open>
+<summary><font size="+1"><b>June 19th, 2020</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+   <li>We now support reactions from <i>Drosophila melanogaster</i> for integrated pathway analysis in <a href="https://docs.elucidata.io/Apps/Multi-omic%20Data/IntOmix.html">IntOmix</a>.</li>
+    <li>Introduced <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Dual%20Mode%20Visualization.html#statistical-analysis">pathway enrichment and pathway view</a> feature along with <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Dual%20Mode%20Visualization.html#comparative-analysis">comparative analysis</a> in <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Dual%20Mode%20Visualization.html">Dual Mode Data Visualization</a>.</li>
+    <li>DEPMAP CCLE (DEPMAP Cancer cell line expression data and dependency scores for genes) repository has been added in <a href="https://docs.elucidata.io/Data%20Lake.html">Data Lake</a>.</li>
+    <li>Implemented input file access from the sub-folders of a project for applocations.</li>
+  </ul>
+  <p class="update-button">Update</p>
+  <ul>
+    <li>The Single Cell Downstream docker is updated with these new packages: rpy2, anndata2ri (Python packages), ExperimentHub (R package).</li>
+    <li>Added a GPU instance for <a href="https://docs.elucidata.io/Scaling%20compute/Polly%20CLI.html">Polly CLI</a>.</li>
+  </ul> 
+</details>
+
+<hr>
+
+<!--June 5th, 2020-->
+<details>
 <summary><font size="+1"><b>June 5th, 2020</b></font></summary>
 <br>
   <p class="new-button">New</p>
@@ -56,7 +76,7 @@
   <br>
   <p class="new-button">New</p>
   <ul>
-    <li>Added a data lake for COVID-19.</li>
+    <li>COVID-19 (Transcriptional datasets for SARS viruses, viral infections, and therapeutics for novel coronavirus) repository has been added in <a href="https://docs.elucidata.io/Data%20Lake.html">Data Lake</a>.</li>
     <br>
     <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
     <iframe src="https://www.youtube.com/embed/AYgAb5Lbj4g" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
