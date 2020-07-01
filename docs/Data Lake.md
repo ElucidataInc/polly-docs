@@ -58,7 +58,7 @@ Additionally, the public data repositories also consist of publicly available da
 
 #Data Lake Applications  
 
-Data Lake Applications are built on top of data lakes to query and explore relevant datasets. The following data lake applications are a part of the current platform.
+Data Lake Applications are built on top of data lakes to query and explore relevant datasets. The following data lake applications are a part of the current platform:
 
 *   Polly Discover Application: Visualization and exploration platform for bulk transcriptomics data curated from GEO. 
 
