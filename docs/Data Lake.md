@@ -69,7 +69,7 @@ Data Lake Applications are built on top of data lakes to query and explore relev
 
 ##Polly Discover App
 
-###Opening the app
+**Opening the app**
 
 Upon opening the Discover portal on Polly, choose a data repository that you would like to explore. The page should look something like this.
 
@@ -87,7 +87,7 @@ The app will open and you should see the overview page which contains a brief **
 
 ![App Description](../img/Discover/image4.png)
 
-###Exploring the data lake
+**Exploring the data lake**
 
 Search for relevant datasets by navigating to the *Dataset Search* tab in the navigation pane to the left. Keyword search can be applied to the following fields:
 
@@ -118,7 +118,7 @@ The search will return all datasets that are associated with your search. The re
 
 The table shown above shows very few columns by default. In order to view the other columns in the table, you can select the fields from **Available Columns** and click on *Show!* button. *Download Selected Dataset* button will let you download the dataset that you have selected on your local system. *Export results to CSV* button will let you download the search result table in the form of a .csv file. Once you have narrowed down the relevant datasets, you can analyze one or more datasets on the fly within the app.
 
-###Analyzing a single dataset
+**Analyzing a single dataset**
 
 You can analyze a single dataset by selecting the checkbox to the left of the entry in the table. Once you’ve selected the checkbox, click on the *Analyze Data* button below the table description.
 
@@ -140,7 +140,7 @@ After clicking the *Analyze Data* button, the app will read the selected dataset
 
 ![Analyses possible](../img/Discover/image8.png)
 
-###Analyzing multiple datasets
+**Analyzing multiple datasets**
 
 It is also possible to analyze multiple datasets simultaneously. If you select multiple datasets from the search result and click the *Analyze Data* button, you will see a new *Multiple Analyses* Tab, wherein you can select algorithms that you want to run on the selected datasets. While selecting algorithms, a workflow of nodes is formed. These nodes are input blocks for each algorithm for each dataset you selected.
 
@@ -166,7 +166,7 @@ Finally, on clicking the *Execute Rules* button, you will be able to get a preli
 
 ##DepMap CCLE
 
-###Opening the app
+**Opening the app**
 
 Upon opening the *Discover Insights* module on Polly, choose the *Depmap Data* repository.
 
@@ -184,9 +184,9 @@ Once inside the application, you can find two examples on the home page that bri
 
 ![App overview](../img/DepMapCCLE/image4.png)
 
-###Exploring the DepMap CCLE data lake
+**Exploring the data lake**
 
-This application provides the functionality to explore the DepMap CCLE data lake. You can query the datalake for three different functionalities for different genes in the application. Each functionality has a separate tab on the left for easy access. 
+This application provides the functionality to explore the DepMap CCLE data lake. You can query the data lake for three different functionalities for different genes in the application. Each functionality has a separate tab on the left for easy access. 
 
 *   Gene Essentiality
 
@@ -194,29 +194,31 @@ This application provides the functionality to explore the DepMap CCLE data lake
 
 *   CCLE Heatmap
 
-####Gene Essentiality 
+**Gene Essentiality**
 
 Gene Essentiality of the gene describes the efficacy vs selectivity map for a gene based on different models. The terms can be defined as: 
 
-*   **Efficacy** : how essential the gene is in the sensitive cell lines (the more negative the efficacy is, the more essential the gene is).
+*   **Efficacy**: how essential the gene is in the sensitive cell lines (the more negative the efficacy is, the more essential the gene is).
 
-*   **Selectivity** : how selectively essential the gene is between sensitive and resistant cell lines (the more positive the selectivity is, the more selective the gene is).
+*   **Selectivity**: how selectively essential the gene is between sensitive and resistant cell lines (the more positive the selectivity is, the more selective the gene is).
 
-As shown in the following image, you can search for a gene for it’s essentiality and *Press Go* to check the scores. 
+As shown in the following image, you can search for a gene and its essentiality. Click on *Press Go* to check the scores. 
 
 ![Select gene](../img/DepMapCCLE/image5.png)
 
-The search returns an *essentiality map* on the left panel with the searched gene highlighted with red color. The right panel describes the efficacy and selectivity scores of the *matched gene* and the *dependency scores* of different models in the datalake. 
+The search returns an *essentiality map* on the left panel with the searched gene highlighted in red color. The right panel describes the efficacy and selectivity scores of the *matched gene* and the *dependency scores* of different models in the data lake. 
 
 ![Essentiality](../img/DepMapCCLE/image6.png)
+
 ![Matched genes](../img/DepMapCCLE/image7.png)
+
 ![Dep score](../img/DepMapCCLE/image8.png)
 
-####Gene Cluster
+**Gene Cluster**
 
-In concept, genes that work together as complexes or pathways should show similar dependency scores across cell lines. With this assumption, 2,492 essential genes were clustered based on the similarity of their dependency scores across 423 cell lines—the resulting clusters group essential genes that likely work together.
+In concept, genes that work together as complexes or pathways should show similar dependency scores across cell lines. With this assumption, 2,492 essential genes were clustered based on the similarity of their dependency scores across 423 cell lines; the resulting cluster groups essential genes that likely work together.
 
-As shown in the figure below you can query for your gene of interest to see which genes cluster together with it. To do the search, type in the name of the gene. Suggestions will be displayed to help you select the gene of your interest. There is an option to change the *cluster size* to change the parameters for stringency of clustering. Small cluster equate to stringent cutoffs.  
+As shown in the figure below, you can query for your gene of interest to see which genes cluster with it. To search, type in the name of the gene. Suggestions will be displayed to help you select the gene of your interest. The *cluster size* option changes the parameters for stringency of clustering. A small cluster equates to stringent cutoffs.  
 
 ![Cluster gene select](../img/DepMapCCLE/image9.png)
 
@@ -228,20 +230,19 @@ The query returns an *efficacy vs selectivity plot* of the gene, a *t-SNE Plot* 
 
 ![Clustered genes](../img/DepMapCCLE/image12.png)
 
-####CCLE Heatmap
+**CCLE Heatmap**
 
-*CCLE heatmap* aids a user in visualizing the cancer specific expression of selected genes in different cell lines models along with the dependency scores of different genes. The heatmap requires three inputs, *Cancer Type* which will help to select the cell lines models, *Dependency Genes* for dependency scores of genes of interest and *Genes for Expression* which will display the expression of the genes. The inputs can be passed as shown in the following figure. 
+*CCLE heatmap* aids you in visualizing the cancer specific expression of selected genes in different cell lines models along with the dependency scores of different genes. The heatmap requires three inputs, *Cancer Type* to select the cell lines models, *Dependency Genes* for dependency scores of genes of interest and *Genes for Expression* to display the expression of the genes. The inputs can be provided as shown in the following image. 
 
 ![Select cancer](../img/DepMapCCLE/image13.png)
 
-Clicking on the *Plot* button processes the data and the result of the query is a heatmap with columns as the sample, rows for the genes and column descriptors describing the dependency scores of the genes. 
+Clicking on *Plot* processes the data and the result of the query is a heatmap with columns as the sample, rows for the genes and column descriptors describing the dependency scores of the genes. 
 
 ![Heatmap](../img/DepMapCCLE/image14.png)
 
 ##scViz
 
-scViz provides a visualization interface for single cell data hosted on GEO. The datalake working on it's backend is updated regularly with new datasets. The app has different visualizations for understanding data - *Dimensionality reduction plot*, *Violin plot*, *Dot Plot*. 
-
+scViz provides a visualization interface for single cell data hosted on GEO. The data lake working on its backend is updated regularly with new datasets. The app has different visualizations for understanding data: *Dimensionality reduction plot*, *Violin plot*, *Dot Plot*. 
 
 #Access through Polly Notebook interface
 
