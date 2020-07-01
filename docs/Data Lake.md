@@ -56,7 +56,16 @@ Additionally, the public data repositories also consist of publicly available da
     
 *   GENE_INFO: General Gene Information from Human Protein Atlas.
 
-#Discover Application  
+#Data Lake Applications  
+
+Data Lake Applications are built on top of data lakes to query and explore relevant datasets. The following data lake applications are a part of the current platform.
+
+*   Polly Discover Application: Visualization and exploration platform for bulk transcriptomics data curated from GEO. 
+
+*   DepMap CCLE Application: Exploration application for cell line dependency and gene expression data from DepMap and CCLE. 
+
+*   scViz Application: Visualization application for single cell studies. 
+
 
 ##Polly Discover App
 
