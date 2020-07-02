@@ -170,19 +170,19 @@ Finally, on clicking the *Execute Rules* button, you will be able to get a preli
 
 Upon opening the *Discover Insights* module on Polly, choose the *Depmap Data* repository.
 
-![Selecting app](../img/DepMapCCLE/image1.png)
+![Selecting app](../img/Discover/image31.png)
 
 After selecting the *Depmap repository*, you’ll be able to see a dashboard and the *DepMap CCLE application* icon. The dashboard will give you an overview of the repository, for instance, the information of different cell lines in the  repository, distribution of tissue lineages, metastatic status of samples, etc. among the datasets.
 
-![Kibana dashboard](../img/DepMapCCLE/image2.png)
+![Kibana dashboard](../img/Discover/image32.png)
 
 Click on the below icon to start the *DepMap CCLE application*.
 
-![DepMap icon](../img/DepMapCCLE/image3.png)
+![DepMap icon](../img/Discover/image33.png)
 
 Once inside the application, you can find two examples on the home page that briefly describes the usage of the application.
 
-![App overview](../img/DepMapCCLE/image4.png)
+![App overview](../img/Discover/image34.png)
 
 **Exploring the data lake**
 
@@ -204,15 +204,15 @@ Gene Essentiality of the gene describes the efficacy vs selectivity map for a ge
 
 As shown in the following image, you can search for a gene and its essentiality. Click on *Press Go* to check the scores. 
 
-![Select gene](../img/DepMapCCLE/image5.png)
+![Select gene](../img/Discover/image35.png)
 
 The search returns an *essentiality map* on the left panel with the searched gene highlighted in red color. The right panel describes the efficacy and selectivity scores of the *matched gene* and the *dependency scores* of different models in the data lake. 
 
-![Essentiality](../img/DepMapCCLE/image6.png)
+![Essentiality](../img/Discover/image36.png)
 
-![Matched genes](../img/DepMapCCLE/image7.png)
+![Matched genes](../img/Discover/image37.png)
 
-![Dep score](../img/DepMapCCLE/image8.png)
+![Dep score](../img/Discover/image38.png)
 
 **Gene Cluster**
 
@@ -220,25 +220,25 @@ In concept, genes that work together as complexes or pathways should show simila
 
 As shown in the figure below, you can query for your gene of interest to see which genes cluster with it. To search, type in the name of the gene. Suggestions will be displayed to help you select the gene of your interest. The *cluster size* option changes the parameters for stringency of clustering. A small cluster equates to stringent cutoffs.  
 
-![Cluster gene select](../img/DepMapCCLE/image9.png)
+![Cluster gene select](../img/Discover/image39.png)
 
 The query returns an *efficacy vs selectivity plot* of the gene, a *t-SNE Plot* for functional similarity and the *clustered genes* with the searched gene in the tabular format along with *connectivity map* and *correlation scores*. 
 
-![Eff plot](../img/DepMapCCLE/image10.png)
+![Eff plot](../img/Discover/image40.png)
 
-![tSNE](../img/DepMapCCLE/image11.png)
+![tSNE](../img/Discover/image41.png)
 
-![Clustered genes](../img/DepMapCCLE/image12.png)
+![Clustered genes](../img/Discover/image42.png)
 
 **CCLE Heatmap**
 
 *CCLE heatmap* aids you in visualizing the cancer specific expression of selected genes in different cell lines models along with the dependency scores of different genes. The heatmap requires three inputs, *Cancer Type* to select the cell lines models, *Dependency Genes* for dependency scores of genes of interest and *Genes for Expression* to display the expression of the genes. The inputs can be provided as shown in the following image. 
 
-![Select cancer](../img/DepMapCCLE/image13.png)
+![Select cancer](../img/Discover/image43.png)
 
 Clicking on *Plot* processes the data and the result of the query is a heatmap with columns as the sample, rows for the genes and column descriptors describing the dependency scores of the genes. 
 
-![Heatmap](../img/DepMapCCLE/image14.png)
+![Heatmap](../img/Discover/image44.png)
 
 ##scViz
 
