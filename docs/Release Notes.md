@@ -1,7 +1,23 @@
 #Release Notes
 
-<!--June 19th, 2020-->
+<!--July 3rd, 2020-->
 <details open>
+<summary><font size="+1"><b>July 3rd, 2020</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>We have released the newest version of El-MAVEN v.0.11.0.</li>
+     <li>Polly now provides its own docker repository for easy management of dockers.</li>
+  <p class="update-button">Update</p>
+  <ul>
+    <li>Added Si as an indistinguishable isotope in Labeled LC-MS Workflow.</li>
+  </ul>
+</details>
+
+<hr>
+
+<!--June 19th, 2020-->
+<details>
 <summary><font size="+1"><b>June 19th, 2020</b></font></summary>
 <br>
   <p class="new-button">New</p>
