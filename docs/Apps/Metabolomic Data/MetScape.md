@@ -6,12 +6,11 @@ Metabolomics is one of the key research areas focusing on small molecules presen
 
 ##Scope of the app
 
-*   Supports analysis of both targeted and untargeted LC-MS data.
+*   Supports analysis of targeted LC-MS data.
 *   Processes high-resolution and low-resolution data of up to 100 samples.
-*   Allows preprocessing and visualization of data through Polly Notebook.
-*   Perform differential analysis and visualize it using volcano plot and canonical pathways.
-*   Visualize metabolite intensities across different cohorts.
-*   Select specific metabolites to highlight them on the global pathway that allows pathway analysis.
+*   Allows preprocessing of data through Polly Notebook.
+*   Perform PCA and differential expression analysis.
+*   Visualize significant metabolites on a global pathway map.
 *   Use the differentially expressed results with the output of [RNA Seq Workflow](https://docs.elucidata.io/Apps/Screening%20&%20Sequencing%20Data/RNA%20Seq%20Workflow.html) to integrate multi-omics data in [IntOmix](https://docs.elucidata.io/Apps/Multi-omic%20Data/IntOmix.html).
 
 ![MetScape](../../img/MetScape/MetScape.png) <center>**Figure 1.** MetScape</center>
