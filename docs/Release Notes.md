@@ -8,7 +8,7 @@
   <ul>
     <li>We have released the newest version of <a href="https://github.com/ElucidataInc/ElMaven/releases/tag/v0.11.0">El-MAVEN v.0.11.0.</a></li>
     <li>Polly now provides its own docker repository for easy management of dockers.</li>
-    </ul>
+  </ul>
   <p class="update-button">Update</p>
   <ul>
     <li>Added Si as an indistinguishable isotope in <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Labeled%20LC-MS%20Workflow.html">Labeled LC-MS Workflow.</a></li>
