@@ -1,7 +1,28 @@
 #Release Notes
 
-<!--June 19th, 2020-->
+<!--July 3rd, 2020-->
 <details open>
+<summary><font size="+1"><b>July 3rd, 2020</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>We have released the newest version of <a href="https://github.com/ElucidataInc/ElMaven/releases/tag/v0.11.0">El-MAVEN v.0.11.0.</a></li>
+    <li>Polly now provides its own docker repository for easy management of dockers.</li>
+  </ul>
+  <p class="update-button">Update</p>
+  <ul>
+    <li>Added Si as an indistinguishable isotope in <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Labeled%20LC-MS%20Workflow.html">Labeled LC-MS Workflow.</a></li>
+  </ul>
+  <p class="Deprecated-button">Deprecated</p>
+  <ul>
+    <li>Deprecated El-MAVEN FirstView Integration.</li>
+  </ul>
+</details>
+
+<hr>
+
+<!--June 19th, 2020-->
+<details>
 <summary><font size="+1"><b>June 19th, 2020</b></font></summary>
 <br>
   <p class="new-button">New</p>
@@ -106,6 +127,19 @@
   .new-button {
     background-color: #4CAF50;
     border: 1px solid #367437;
+    border-radius: 70px;
+    color: #FFFFFF;
+    padding: 0px 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    cursor: default;
+  }
+  .Deprecated-button {
+    background-color: #b30000;
+    border: 1px solid #b30000;
     border-radius: 70px;
     color: #FFFFFF;
     padding: 0px 5px;
