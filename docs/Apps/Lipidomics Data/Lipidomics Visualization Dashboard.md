@@ -2,18 +2,17 @@
 
 ##Overview
 
-Analysis of lipidomic data involves complex lipidome analysis. Lipidomics analysis across large sample sizes produces large datasets that require dedicated lipid identification, quantification and  lipidome visualization. The wide diversity of native lipids and their modifications make their analyses challenging. Lipidomics Visualization Dashboard allows you to visualize, process and analyze the lipid species or classes concentration data. The current version supports the output from [SCIEX Lipidyzer<sup>TM</sup> Platform](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=2ahUKEwieru2379DoAhV1yzgGHdPEC0EQFjABegQIBBAB&url=https%3A%2F%2Fsciex.com%2FDocuments%2Ftech%2520notes%2Flipidyzer_platform_workflow.pdf&usg=AOvVaw1fVAzv52X1khl--ZzXKha7). It can calculate summary statistics, percentages and perform univariate analysis like ANOVA, Limma t-test along with Multivariate analysis like PCA. It helps you view lipids by their main class, sub class across cohorts.
+Analysis of lipidomic data involves complex lipidome analysis. Lipidomics analysis across large sample sizes produces large datasets that require dedicated lipid identification, quantification and lipidome visualization. The wide diversity of native lipids and their modifications make their analyses challenging. Lipidomics Visualization Dashboard allows you to visualize, process and analyze the lipid species or classes concentration data. The current version supports the output from [SCIEX Lipidyzer<sup>TM</sup> Platform](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=2ahUKEwieru2379DoAhV1yzgGHdPEC0EQFjABegQIBBAB&url=https%3A%2F%2Fsciex.com%2FDocuments%2Ftech%2520notes%2Flipidyzer_platform_workflow.pdf&usg=AOvVaw1fVAzv52X1khl--ZzXKha7). It can calculate summary statistics, percentages and perform univariate analysis like ANOVA, Limma t-test along with Multivariate analysis like PCA. It helps you view lipids by their main class, sub class across cohorts.
 
 ##Scope of the app
 
 *   Processes the output file of SCIEX Lipidyzer<sup>TM</sup> Platform.
-*   Perform preprocessing on input data 
+*   Performs preprocessing on input data. 
 *   Calculates lipid species concentration percentage for each lipid class and species across multiple cohorts.
 *   Plots the lipid class and species concentrations and their percentages in the form of pie charts and bar plots.
 *   Performs PCA for quality check.
 *   Performs differential expression using ANOVA or Limma t-test to find significant lipid species or class.
 *   Presents the data in the form of Heatmap, depicting the selected lipid data type corresponding to the number of samples in the data.
-
 
 ![Lipidomics Visualization Dashboard](../../img/Lipidomics/Lipidomics_Visualization_Dashboard.png) <center>**Figure 1.** Lipidomics Visualization Dashboard</center>
 
@@ -37,7 +36,7 @@ The metadata file contains two columns, *Name* which contains all the samples us
 
 **Species Metadata File**
 
-The *species metadata file* is optional to upload. It is helpful to classify the lipid species the way you desire. It contains three main columns: *Species*, *Class* which contains all the lipid species, and class used understudy and *Chain* which contains the fatty acid chain information for each lipid species.
+The *species metadata file* is optional. It is helpful to classify the lipid species the way you desire. It contains three main columns: *Species*, *Class* which contains all the lipid species, and class used understudy and *Chain* which contains the fatty acid chain information for each lipid species.
 
 ![Species Metadata file](../../img/Lipidomics/SpeciesMetadata.png) <center>**Figure 4.** Species Metadata file</center>
 
@@ -46,9 +45,9 @@ The *species metadata file* is optional to upload. It is helpful to classify the
 *   Upload input files
 *   Perform preprocessing of data
 *   Visualize input data based on lipid class or species, fatty acids or sum of carbons
-*   Perform Quality checks on your data
+*   Perform quality checks on your data
 *   Perform differential expression using ANOVA or Limma t-test
-*   Visualize data in the form of heatmap 
+*   Visualize data in the form of a heatmap 
 
 ##Caveats
 
@@ -75,7 +74,7 @@ At the top, example files are available for download. You can either upload thes
 
 ##Preprocessing Interface
 
-The Pre-processing interface allows you to perform a multitude of functions on the data such as:
+The Preprocessing interface allows you to perform a multitude of functions on the data such as:
 
 ![Preprocessing interface](../../img/Lipidomics/preprocessing.png) <center>**Figure 8.** Preprocessing Interface</center>
 
@@ -103,7 +102,7 @@ This interface allows you to visualize a summary of each
 
 *  Fatty acids: Data is summarized by an individual fatty acid chain. For example “DAG(16:0/16:1)” fatty acid will be “DAG(FA16:0)” and “DAG(FA16:1)”
 
-*   Sum of Carbons: Data is summarized by the total number of carbons within the lipid species. For example for “DAG(16:0/16:1)” the sum of carbons will be “DAG(32:1)”.
+*  Sum of Carbons: Data is summarized by the total number of carbons within the lipid species. For example for “DAG(16:0/16:1)” the sum of carbons will be “DAG(32:1)”.
 
 *Select Data Type* provides you the option to choose either of the above-mentioned options from the input excel file. 
 
@@ -164,7 +163,7 @@ The *p*-value and log<sub>2</sub> fold change cutoff parameters can be changed t
 
 ![Volcano Plot](../../img/Lipidomics/volcanoplot.png) <center>**Figure 20.** Volcano Plot</center>
 
-*Filtered Differential Expression Table* contains only the metabolites that have significant *p*\-values as specified.
+*Filtered Differential Expression Table* contains only the metabolites that have significant *p*-values as specified.
 
 ![Filtered differential expression table](../../img/Lipidomics/filterdiffexptable.png) <center>**Figure 21.** Filtered differential expression table</center>
 
@@ -173,15 +172,13 @@ The *p*-value and log<sub>2</sub> fold change cutoff parameters can be changed t
 ![Differential Expression Table](../../img/Lipidomics/diffexptable.png) <center>**Figure 22.** Differential Expression Table</center>
 
 
-##HeatMap
+##Heatmap
 
-A heat map is a graphical representation of data where the individual values contained in a matrix are represented on a color scale.
+A heatmap is a graphical representation of data where the individual values contained in a matrix are represented on a color scale. Click on *RESET HEATMAP* to generate the heatmap. Here the Heatmap will be based on the data selected in the previous tab (visualization summary).
 
-Click on *RESET HEATMAP* to generate the heatmap.Here the HeatMap will be based on the data selected in the previous tab (visualization summary) 
+![heatmap](../../img/Lipidomics/heatmap1.png) <center>**Figure 23.** Heatmap Interface</center>
 
-![heatmap](../../img/Lipidomics/heatmap1.png) <center>**Figure 23.** HeatMap Interface</center>
-
-It would represent the selected data type corresponding to the number of samples in the data. The filter icon can be used to filter out the desired samples and lipids. Once the filter is applied, the heat map containing the selected lipids and sample would be generated.
+It would represent the selected data type corresponding to the number of samples in the data. The filter icon can be used to filter out the desired samples and lipids. Once the filter is applied, the heatmap containing the selected lipids and sample would be generated.
 
 ![heatmap](../../img/Lipidomics/heatmap.png) <center>**Figure 24.** HeatMap</center>
 
