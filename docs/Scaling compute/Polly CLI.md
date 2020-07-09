@@ -175,6 +175,91 @@ This command will copy an individual file from source to destination. The transf
 
 *   If you are within a Polly environment while accessing Polly CLI (like notebook or CLI job), workspace id can be auto-detected by passing --yes or -y in the command instead of --workspace-id parameter.
 
+##Docker Management
+
+Polly has its own docker repository where dockers can be managed. The advantage of the Polly Docker Repository is that these dockers can also be stored within the same platform as data, code, and analyses and to access the stored dockers, all you need is the Polly login.
+
+**Docker login and logout**
+
+In order to login/logout of the docker repository you can run the following command:
+
+<pre><code>polly dockers login</code></pre>
+<pre><code>polly dockers logout</code></pre>
+
+The output generated from the above command should then be run on the terminal.
+
+**Note:**
+
+*   Add sudo before the command if required according to system settings.
+
+![Example output](../img/PollyCLI/Exampleoutput.png) <center>**Figure 4.** Example output generated from above commands</center>
+
+**Create a Docker Repository**
+
+Docker repository is a collection of dockers where you can publish and access your Docker images. Here you can store one or more versions of your docker image. Every docker can have a tag and if a docker with the same tag is pushed again, it will overwrite the older docker after saving its older version that can still be accessed and used.
+
+There can be multiple such repositories for an organization and only the members of your organization with Polly login credentials can assess them.
+
+Use the following command to create a docker repository:
+
+<pre><code>polly dockers create --name ,< docker_repository_name > --description < description of the repository ></code></pre>
+
+![Docker Repository Generation](../img/PollyCLI/dockerrepogeneration.png) <center>**Figure 5.** Docker Repository Generation</center>
+
+
+**List docker repositories**
+
+You can list all the stored docker repositories in your organization by using this command. 
+
+<pre><code>polly dockers list --all</code></pre>
+
+![Polly Docker List](../img/PollyCLI/dockerlist.png) <center>**Figure 6.** Polly Docker List</center>
+
+
+**List docker repositories commits**
+
+You can list specific repository to view the various commits or tags stored within it through the Polly docker commit list. 
+
+<pre><code>polly dockers commit-list --name < docker_repository_name > --all</code></pre>
+
+![Polly Docker Commit List](../img/PollyCLI/dockercommit.png) <center>**Figure 7.** Docker Commit List</center>
+
+In order to reduce the indecision when there are multiple dockers with the same name and same tag, you can distinguish them by their unique identifier which is assigned to every docker commit. In case the unique identifier is not passed in the command, the latest version of the docker with that tag will be used.
+
+You can go back to older commit as well if required by using its tag and unique identity listed in the Polly docker commit list.
+
+
+**Polly Dockers Path**
+
+Typical path of a docker on Polly is 
+
+<pre><code>docker.polly.elucidata.io/< organization >/< dockername >:< tag ></code></pre>
+
+**Note:**
+*   You can have two dockers with the same tag as well, in which case, the latest commit for that tag will be called by default if you call that docker. To call the docker with an older commit, commit hash will be required to specify in the path. 
+
+<pre><code>docker.polly.elucidata.io/< organization >/< dockername >@< commit_hash ></code></pre>
+
+The following example contains 2 docker images with the same tag. The latest image has the tag “active“. The active image can just be called by using the usual path. 
+
+<pre><code>docker.polly.elucidata.io/elucidata/16June:latest</code></pre>
+
+The image with the inactive tag can be called by specifying the commit hash.
+
+<pre><code>docker.polly.elucidata.io/elucidata/16June@sha256:5747316366b8cc9e3021cd7286f42b2d6d81e3d743e2ab571f55bcd5df788cc8</code></pre>
+
+![Example Dockers with tags status](../img/PollyCLI/Exampletags.png) <center>**Figure 8.** Example of Docker with different tag status</center>
+
+**Pull/push of dockers**
+
+The commands for docker’s pull/push are the same commands that you use for pulling and pushing from any other docker registry. The only thing that changes is the path of the docker.
+
+Example commands to pull a docker would be:
+
+<pre><code>docker.polly.elucidata.io/elucidata/16June:latest</code></pre>
+
+<pre><code>docker pull docker.polly.elucidata.io/elucidata/16june@sha256:5747316366b8cc9e3021cd7286f42b2d6d81e3d743e2ab571f55bcd5df788cc8</code></pre>
+
 
 ##Running Dockerized Jobs
 
@@ -236,9 +321,11 @@ While creating a docker to be run on Polly, the following must be taken care of.
 
 *   Only self contained dockers can be run on Polly. A self contained docker is one which has the code to get input files as well as upload output files back contained in the docker.
 
-*   Public as well as Private dockers are supported. In order to run Private dockers, “secret” should be passed as a key in the json file. To get the secret key for the private docker, the following steps need to be followed.
+*   Public as well as Private dockers are supported. In order to run Private dockers, “secret” should be passed as a key in the json file. If your private dockers are on Polly itself , you don't require to generate this secret.
 
-    *   For MacOS, you need to remove the key value pair "credsStore": "osxkeychain" from the config.json file present in the directory “/Users/<username>/.docker”.
+*   To get the secret key for the private docker, the following steps need to be followed.
+
+    *   For MacOS, you need to remove the key value pair "credsStore": "osxkeychain" from the config.json file present in the directory “/Users/< username >/.docker”.
 
     *   You need to be logged in to DockerHub or ECR through the terminal. If not, you will need to log in.
 
@@ -246,7 +333,7 @@ While creating a docker to be run on Polly, the following must be taken care of.
 
     *   Select the option “miscellaneous” followed by “create secret for docker”. 
 
-    *   Provide the path to the docker config file (the usual path for docker config is /Users/<username>/.docker/config.json in Mac and /home/<username>/.docker/config.json in Linux). Relative paths are not supported. 
+    *   Provide the path to the docker config file (the usual path for docker config is /Users/< username >/.docker/config.json in Mac and /home/< username >/.docker/config.json in Linux). Relative paths are not supported. 
 
     *   Select the account in which the docker to be run is present. 
 
@@ -304,7 +391,7 @@ On executing this command, you will be asked to enter the id of the workspace wh
 
 *   You do not need to create a new Workspace for running a job. You can simply list the older Workspaces and run a job in an already created Workspace.
 
-![Submit Jobs](../img/PollyCLI/4.png "Submit Jobs") <center>**Figure 4** Submit Jobs</center>
+![Submit Jobs](../img/PollyCLI/4.png "Submit Jobs") <center>**Figure 9.** Submit Jobs</center>
 
 ##Monitor Job status
 
@@ -314,7 +401,7 @@ On executing this command, you will be asked to enter the id of the workspace wh
 
 <pre><code>polly jobs status --workspace-id <workspace id> --job-id <job id></code></pre>
 
-![Single Job Status](../img/PollyCLI/5.png "Single Job Status") <center>**Figure 5.** Single Job Status</center>
+![Single Job Status](../img/PollyCLI/5.png "Single Job Status") <center>**Figure 10.** Single Job Status</center>
 
 *   The following command can be used to view the statuses of all the jobs in a workspace.
 
@@ -322,7 +409,7 @@ On executing this command, you will be asked to enter the id of the workspace wh
 
 A prompt to enter job id will appear which when kept blank gets all the job statuses in a workspaces.
 
-![All Job Statuses in a Workspace](../img/PollyCLI/6.png "All Job Statuses in a Workspace") <center>**Figure 6.** All Job Statuses in a Workspace</center>
+![All Job Statuses in a Workspace](../img/PollyCLI/6.png "All Job Statuses in a Workspace") <center>**Figure 11.** All Job Statuses in a Workspace</center>
 
 *   If you are within a Polly environment while accessing Polly CLI (like notebook or CLI job), workspace id can be auto-detected by passing --yes or -y in the command instead of --workspace-id parameter.
 
@@ -334,7 +421,7 @@ To view the logs of any job, use the following command:
 
 This will give the logs for the job. In case the job is still running, it will give the logs generated till that instant.
 
-![Job Logs](../img/PollyCLI/7.png "Job Logs") <center>**Figure 7.** Job Logs</center>
+![Job Logs](../img/PollyCLI/7.png "Job Logs") <center>**Figure 12.** Job Logs</center>
 
 **Note:**  
 
@@ -345,7 +432,7 @@ This will give the logs for the job. In case the job is still running, it will g
 
 If help is needed for any command, just type --help at the end of the command and execute.
 
-![Polly CLI Help](../img/PollyCLI/8.png "Polly CLI Help") <center>**Figure 8.** Polly CLI Help</center>
+![Polly CLI Help](../img/PollyCLI/8.png "Polly CLI Help") <center>**Figure 13.** Polly CLI Help</center>
 
 
 ## Some useful gists
