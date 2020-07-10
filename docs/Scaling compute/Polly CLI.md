@@ -62,7 +62,7 @@ Enter the Polly Username and Password when prompted.
 
 Once logged in, you will stay logged in the system and won’t need to log in again even if a new terminal is opened or the system is restarted. You will only need to log in again if you manually log out from the system.
 
-When you are in the Polly environment, you can log in to Polly CLI without the need to input credentials. We auto detect the Polly permissions or the user. The following are the ways to auto log in to Polly in different Polly environments :
+When you are in the Polly environment, you can log in to Polly CLI without the need to input credentials. We auto detect the Polly permissions or the user. The following are the ways to auto log in to Polly in different Polly environments:
 
 *   **Notebook:** You are automatically logged in to Polly CLI as the same user as your Polly log in. You can directly start using all the Polly CLI commands as you wish.
 
@@ -140,7 +140,7 @@ Polly CLI can be used to sync the data between a Polly Workspace and a local dir
 
 <pre><code>polly files sync --workspace-id <workspaceid> --source <path/source/directory> --destination <path/to/destination/directory></code></pre>
 
-Workspace ID of the workspace where the data is being synced has to be mentioned in the --workspace-id option. Source and destination can be Polly workspace path as well as local path. Workspace path should start with `polly://` followed by the directory path in the workspace where the data is to be synced. Here `polly://` is the root directory for the mentioned workspace.
+Workspace ID of the workspace where the data is being synced has to be mentioned in the `--workspace-id` option. Source and destination can be Polly workspace path as well as local path. Workspace path should start with `polly://` followed by the directory path in the workspace where the data is to be synced. Here `polly://` is the root directory for the mentioned workspace.
 
 The following command will sync data from Polly workspace to current local directory.
 
@@ -295,7 +295,7 @@ Name of the machine required to run the job needs to be mentioned as per the fol
 
 More machines (including some with GPUs) will be added soon. If you need a specific machine to be added to the list, please contact us at [polly@elucidata.io](mailto:polly@elucidata.io).
 
-If computational power required is less than 2 vCPUs and 8 GB RAM, use the keys **“cpu”** and **“memory”** in the json file instead of the key **“machineType”**. If all 3 keys are present, **“machineType”** takes priority and the machine will be assigned accordingly. In the example json (image) mentioned above, machine selected will be **“gp”** with 4 vCPUs and 16 GB RAM and **NOT** 1vCPU and 1 GB RAM.
+If computational power required is less than 2 vCPUs and 8 GB RAM, use the keys **“cpu”** and **“memory”** in the JSON file instead of the key **“machineType”**. If all 3 keys are present, **“machineType”** takes priority and the machine will be assigned accordingly. In the example JSON (image) mentioned above, machine selected will be **“gp”** with 4 vCPUs and 16 GB RAM and **NOT** 1vCPU and 1 GB RAM.
 
 *   **cpu:** Mention the number of CPUs needed here. For smaller jobs, just a part of the CPU can also be chosen. For example, if 0.1 vCPUs are required for the job, the number of CPUs can be mentioned as **“100m”**. If more than 2 CPUs are required for the job, use the key **“machineType”** to choose the relevant machine instead of **“cpu”** and **“memory”**.
 
@@ -319,23 +319,23 @@ While creating a docker to be run on Polly, the following must be taken care of.
 
 *   Only self contained dockers can be run on Polly. A self contained docker is one which has the code to get input files as well as upload output files back contained in the docker.
 
-*   Public as well as private dockers are supported. In order to run private dockers, “secret” should be passed as a key in the .json file. If your private dockers are on Polly itself, you don't require to generate this secret.
+*   Public as well as private dockers are supported. In order to run private dockers, “secret” should be passed as a key in the JSON file. If your private dockers are on Polly itself, you don't require to generate this secret.
 
 *   To get the secret key for the private docker, the following steps need to be followed.
 
-    *   For MacOS, you need to remove the key value pair "credsStore": "osxkeychain" from the config.json file present in the directory “/Users/< username >/.docker”.
+    *   For MacOS, you need to remove the key value pair "credsStore": "osxkeychain" from the config.json file present in the directory `/Users/< username >/.docker`.
 
     *   You need to be logged in to DockerHub or ECR through the terminal. If not, you will need to log in.
 
-    *   Run the command sudo polly on the Terminal. 
+    *   Run the command `sudo polly` on the Terminal. 
 
     *   Select the option miscellaneous followed by create secret for docker. 
 
-    *   Provide the path to the docker config file (the usual path for docker config is /Users/< username >/.docker/config.json in Mac and /home/< username >/.docker/config.json in Linux). Relative paths are not supported. 
+    *   Provide the path to the docker config file (the usual path for docker config is `/Users/< username >/.docker/config.json` in Mac and `/home/< username >/.docker/config.json` in Linux). Relative paths are not supported. 
 
     *   Select the account in which the docker to be run is present. 
 
-    *   Copy the long text string (secret key) output to the json file in the key “secret”.
+    *   Copy the long text string (secret key) output to the JSON file in the key “secret”.
 
 <pre><code>{
   "cpu": 1,
@@ -356,7 +356,7 @@ While creating a docker to be run on Polly, the following must be taken care of.
 
 **Note:**
 
-*   The value of Environment variables should always be string. For example, the correct way to assign Environment variable is {“parallel_threads” : “2”} and **NOT** {“parallel_threads” : 2}
+*   The value of Environment variables should always be string. For example, the correct way to assign Environment variable is `{“parallel_threads” : “2”}` and **NOT** `{“parallel_threads” : 2}`.
 
 <pre><code>{
  "cpu": "100m",
@@ -375,7 +375,6 @@ While creating a docker to be run on Polly, the following must be taken care of.
 }</code></pre>
 
 *   [Here](https://gist.github.com/GeorgeSabu/8a3251e263d93b08413ce2c56d8af45d "https://gist.github.com/GeorgeSabu/8a3251e263d93b08413ce2c56d8af45d") is an example gist showing how input data for a job can be taken from and output stored back to Polly Workspaces.
-
 
 ##Execute Job
 
@@ -428,7 +427,7 @@ This will give the logs for the job. In case the job is still running, it will g
 
 ##Polly CLI help
 
-If help is needed for any command, just type -`-help` at the end of the command and execute.
+If help is needed for any command, just type `--help` at the end of the command and execute.
 
 ![Polly CLI Help](../img/PollyCLI/8.png "Polly CLI Help") <center>**Figure 13.** Polly CLI Help</center>
 
