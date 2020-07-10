@@ -46,7 +46,7 @@ To uninstall Polly CLI, run the following commands on Terminal / Command prompt 
 
 **Note:**
 
-*   “sudo” might have to be used before every command while accessing Polly CLI on cloud instance or server.
+*   <pre><code>sudo</code></pre> might have to be used before every command while accessing Polly CLI on cloud instance or server.
 
 ##Logging in and out of Polly CLI
 
@@ -177,7 +177,7 @@ This command will copy an individual file from source to destination. The transf
 
 ##Docker Management
 
-Polly has its own docker repository where dockers can be managed. The advantage of the Polly Docker Repository is that these dockers can also be stored within the same platform as data, code, and analyses and to access the stored dockers, all you need is the Polly login.
+Polly has its own docker repository where dockers can be managed. The advantage of the Polly Docker Repository is that these dockers can also be stored within the same platform as data, code, and analyses and to access the stored dockers all you need is the Polly login credential.
 
 **Docker login and logout**
 
@@ -190,13 +190,13 @@ The output generated from the above command should then be run on the terminal.
 
 **Note:**
 
-*   Add sudo before the command if required according to system settings.
+*   Add <pre><code>sudo</code></pre> before the command if required according to system settings.
 
 ![Example output](../img/PollyCLI/Exampleoutput.png) <center>**Figure 4.** Example output generated from above commands</center>
 
 **Create a Docker Repository**
 
-Docker repository is a collection of dockers where you can publish and access your Docker images. Here you can store one or more versions of your docker image. Every docker can have a tag and if a docker with the same tag is pushed again, it will overwrite the older docker after saving its older version that can still be accessed and used.
+Docker repository is a collection of dockers where you can publish and access your docker images. Here you can store one or more versions of your docker image. Every docker can have a tag and if a docker with the same tag is pushed again, it will overwrite the older docker after saving its older version that can still be accessed and used.
 
 There can be multiple such repositories for an organization and only the members of your organization with Polly login credentials can assess them.
 
@@ -252,7 +252,7 @@ The image with the inactive tag can be called by specifying the commit hash.
 
 **Pull/push of dockers**
 
-The commands for docker’s pull/push are the same commands that you use for pulling and pushing from any other docker registry. The only thing that changes is the path of the docker.
+The commands for docker’s pull/push are the same commands that you use for pulling and pushing from any other docker registry. The only difference is the path of the docker.
 
 Example commands to pull a docker would be:
 
@@ -321,7 +321,7 @@ While creating a docker to be run on Polly, the following must be taken care of.
 
 *   Only self contained dockers can be run on Polly. A self contained docker is one which has the code to get input files as well as upload output files back contained in the docker.
 
-*   Public as well as Private dockers are supported. In order to run Private dockers, “secret” should be passed as a key in the json file. If your private dockers are on Polly itself , you don't require to generate this secret.
+*   Public as well as private dockers are supported. In order to run private dockers, “secret” should be passed as a key in the .json file. If your private dockers are on Polly itself, you don't require to generate this secret.
 
 *   To get the secret key for the private docker, the following steps need to be followed.
 
@@ -329,9 +329,9 @@ While creating a docker to be run on Polly, the following must be taken care of.
 
     *   You need to be logged in to DockerHub or ECR through the terminal. If not, you will need to log in.
 
-    *   Run the command “sudo polly” on the Terminal. 
+    *   Run the command sudo polly on the Terminal. 
 
-    *   Select the option “miscellaneous” followed by “create secret for docker”. 
+    *   Select the option miscellaneous followed by create secret for docker. 
 
     *   Provide the path to the docker config file (the usual path for docker config is /Users/< username >/.docker/config.json in Mac and /home/< username >/.docker/config.json in Linux). Relative paths are not supported. 
 
