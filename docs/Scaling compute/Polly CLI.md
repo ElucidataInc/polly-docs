@@ -34,7 +34,7 @@ To install Polly CLI, run the following commands on Terminal / Command prompt:
 
 **Commands to uninstall**
 
-To uninstall Polly CLI, run the following commands on Terminal / Command prompt :
+To uninstall Polly CLI, run the following commands on Terminal / Command prompt:
 
 *   Linux: 
 
@@ -46,7 +46,7 @@ To uninstall Polly CLI, run the following commands on Terminal / Command prompt 
 
 **Note:**
 
-*   <pre><code>sudo</code></pre> might have to be used before every command while accessing Polly CLI on cloud instance or server.
+*   `sudo` might have to be used before every command while accessing Polly CLI on cloud instance or server.
 
 ##Logging in and out of Polly CLI
 
