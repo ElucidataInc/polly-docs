@@ -327,7 +327,7 @@ While creating a docker to be run on Polly, the following must be taken care of.
 
     *   You need to be logged in to DockerHub or ECR through the terminal. If not, you will need to log in.
 
-    *   Run the command `sudo polly` on the Terminal. 
+    *   Run the command `sudo polly` on the terminal. 
 
     *   Select the option miscellaneous followed by create secret for docker. 
 
