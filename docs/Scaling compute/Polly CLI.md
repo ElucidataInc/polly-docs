@@ -66,12 +66,9 @@ When you are in the Polly environment, you can log in to Polly CLI without the n
 
 *   **Notebook:** You are automatically logged in to Polly CLI as the same user as your Polly log in. You can directly start using all the Polly CLI commands as you wish.
 
-    
-
 *   **Polly CLI jobs:** If you want to access Polly CLI inside a job, you will have to install Polly CLI in the docker of the job and execute the following command to log in.
 
 <pre><code>polly login --auto</code></pre>
-
 
 **Log out**
 
@@ -124,17 +121,17 @@ Files and folders within any Polly Workspace can be listed using the following c
 
 <pre><code>polly files list --workspace-id <workspaceid> --workspace-path <path/to/workspace/directory></code></pre>
 
-Workspace ID can be obtained by using the command “*polly workspaces list*” as explained in the previous section. The path to the workspace directory has to start with “*polly://*”. Eg - The following command will list all the files and folders within the folder ABC in the workspace 1234.
+Workspace ID can be obtained by using the command `polly workspaces list` as explained in the previous section. The path to the workspace directory has to start with `polly://`. Eg - The following command will list all the files and folders within the folder ABC in the workspace 1234.
 
 <pre><code>polly files list --workspace-id 1234 --workspace-path polly://ABC/</code></pre>
 
 **Note:**
 
-*   This command only shows files and folders just one layer within the directory mentioned (just like the “ls” command on terminal).
+*   This command only shows files and folders just one layer within the directory mentioned (just like the `ls` command on terminal).
 
 *   If the path contains space in the folder names or file names, provide the entire path within double quotes (““). 
 
-*   If you are within a Polly environment while accessing Polly CLI (like notebook or CLI job), workspace id can be auto-detected by passing --yes or -y in the command instead of --workspace-id parameter.
+*   If you are within a Polly environment while accessing Polly CLI (like notebook or CLI job), workspace id can be auto-detected by passing `--yes` or `-y` in the command instead of `--workspace-id` parameter.
 
 
 **Manually sync data to and from Polly**
@@ -143,7 +140,7 @@ Polly CLI can be used to sync the data between a Polly Workspace and a local dir
 
 <pre><code>polly files sync --workspace-id <workspaceid> --source <path/source/directory> --destination <path/to/destination/directory></code></pre>
 
-Workspace ID of the workspace where the data is being synced has to be mentioned in the --workspace-id option. Source and destination can be Polly workspace path as well as local path. Workspace path should start with “*polly://*” followed by the directory path in the workspace where the data is to be synced. Here ”*polly://*” is the root directory for the mentioned workspace.
+Workspace ID of the workspace where the data is being synced has to be mentioned in the --workspace-id option. Source and destination can be Polly workspace path as well as local path. Workspace path should start with `polly://` followed by the directory path in the workspace where the data is to be synced. Here `polly://` is the root directory for the mentioned workspace.
 
 The following command will sync data from Polly workspace to current local directory.
 
@@ -155,11 +152,11 @@ The following command will sync data from current local directory to Polly Works
 
 **Note:**
 
-*   Only files that have been changed or added new will get transferred using the sync command. The files that remained unchanged after the last sync will not get transferred. This command can only be used for folders or directories (not for individual files). To transfer just a single file to or from Polly, use the “copy” command mentioned in the next section.
+*   Only files that have been changed or added new will get transferred using the sync command. The files that remained unchanged after the last sync will not get transferred. This command can only be used for folders or directories (not for individual files). To transfer just a single file to or from Polly, use the `copy` command mentioned in the next section.
 
 *   If the path contains space in the folder names or file names, provide the entire path within double quotes (““). 
 
-*   If you are within a Polly environment while accessing Polly CLI (like notebook or CLI job), workspace id can be auto-detected by passing --yes or -y in the command instead of --workspace-id parameter. 
+*   If you are within a Polly environment while accessing Polly CLI (like notebook or CLI job), workspace id can be auto-detected by passing `--yes` or `-y` in the command instead of `--workspace-id` parameter. 
 
 **Copy files to and from Polly**
 
@@ -167,13 +164,13 @@ Files can be copied to and from a Polly Workspace using the following command.
 
 <pre><code>polly files copy --workspace-id <workspaceid> --source <path/to/source/file> --destination <path/to/destination/file></code></pre>
 
-This command will copy an individual file from source to destination. The transfer can be from or to Polly Workspace depending on the source and destination defined. Workspace path should start with “*polly://*” followed by the directory structure within the Workspace.
+This command will copy an individual file from source to destination. The transfer can be from or to Polly Workspace depending on the source and destination defined. Workspace path should start with `polly://` followed by the directory structure within the Workspace.
 
 **Note:**
 
 *   If the path contains space in the folder names or file names, provide the entire path within double quotes (““).
 
-*   If you are within a Polly environment while accessing Polly CLI (like notebook or CLI job), workspace id can be auto-detected by passing --yes or -y in the command instead of --workspace-id parameter.
+*   If you are within a Polly environment while accessing Polly CLI (like notebook or CLI job), workspace id can be auto-detected by passing `--yes` or `-y` in the command instead of `--workspace-id` parameter.
 
 ##Docker Management
 
@@ -190,7 +187,7 @@ The output generated from the above command should then be run on the terminal.
 
 **Note:**
 
-*   Add <pre><code>sudo</code></pre> before the command if required according to system settings.
+*   Add `sudo` before the command if required according to system settings.
 
 ![Example output](../img/PollyCLI/Exampleoutput.png) <center>**Figure 4.** Example output generated from above commands</center>
 
@@ -236,7 +233,8 @@ Typical path of a docker on Polly is
 <pre><code>docker.polly.elucidata.io/< organization >/< dockername >:< tag ></code></pre>
 
 **Note:**
-*   You can have two dockers with the same tag as well, in which case, the latest commit for that tag will be called by default if you call that docker. To call the docker with an older commit, commit hash will be required to specify in the path. 
+
+*    You can have two dockers with the same tag as well, in which case, the latest commit for that tag will be called by default if you call that docker. To call the docker with an older commit, commit hash will be required to specify in the path. 
 
 <pre><code>docker.polly.elucidata.io/< organization >/< dockername >@< commit_hash ></code></pre>
 
@@ -411,7 +409,7 @@ A prompt to enter job id will appear which when kept blank gets all the job stat
 
 ![All Job Statuses in a Workspace](../img/PollyCLI/6.png "All Job Statuses in a Workspace") <center>**Figure 11.** All Job Statuses in a Workspace</center>
 
-*   If you are within a Polly environment while accessing Polly CLI (like notebook or CLI job), workspace id can be auto-detected by passing --yes or -y in the command instead of --workspace-id parameter.
+*   If you are within a Polly environment while accessing Polly CLI (like notebook or CLI job), workspace id can be auto-detected by passing `--yes` or `-y` in the command instead of `--workspace-id` parameter.
 
 **Get job logs**
 
@@ -425,12 +423,12 @@ This will give the logs for the job. In case the job is still running, it will g
 
 **Note:**  
 
-*   If you are within a Polly environment while accessing Polly CLI (like notebook or CLI job), workspace id can be auto-detected by passing --yes or -y in the command instead of --workspace-id parameter.
+*   If you are within a Polly environment while accessing Polly CLI (like notebook or CLI job), workspace id can be auto-detected by passing `--yes` or `-y` in the command instead of `--workspace-id` parameter.
 
 
 ##Polly CLI help
 
-If help is needed for any command, just type --help at the end of the command and execute.
+If help is needed for any command, just type -`-help` at the end of the command and execute.
 
 ![Polly CLI Help](../img/PollyCLI/8.png "Polly CLI Help") <center>**Figure 13.** Polly CLI Help</center>
 
@@ -439,10 +437,6 @@ If help is needed for any command, just type --help at the end of the command an
 
 *   [Accessing Polly files in and out of a job](https://gist.github.com/GeorgeSabu/8a3251e263d93b08413ce2c56d8af45d)
 
-    
-
 *   [Running a cluster of jobs with different parameters](https://gist.github.com/GeorgeSabu/e89891da1d86fbaa3afa0655a4ede899)
-
-    
 
 *   [Bash script to identify when a job finishes](https://gist.github.com/GeorgeSabu/4fbc359fa9ee2bf4d3cb05df3b60db81)
