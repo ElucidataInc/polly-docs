@@ -12,7 +12,7 @@
   <p class="update-button">Update</p>
   <ul>
     <li>Added Si as an indistinguishable isotope in <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Labeled%20LC-MS%20Workflow.html">Labeled LC-MS Workflow.</a></li>
-    <li>Added lipid species concentration percentage calculation for each lipid class and species along with pie chart and heatmap for visualization in <a href="https://docs.elucidata.io/Apps/Lipidomics%20Data/Lipidomics%20Visualization%20Dashboard.html">Lipidomics Visualziation Dashboard</a>.</li>
+    <li>Introduced pre-processing functionlaities along with updated selections and heatmap for visualization in <a href="https://docs.elucidata.io/Apps/Lipidomics%20Data/Lipidomics%20Visualization%20Dashboard.html">Lipidomics Visualziation Dashboard</a>.</li>
   </ul>
   <p class="Deprecated-button">Deprecated</p>
   <ul>
