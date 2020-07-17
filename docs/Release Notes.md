@@ -1,13 +1,36 @@
 #Release Notes
 
-<!--July 3rd, 2020-->
+<!--July 17th, 2020-->
+
 <details open>
+<summary><font size="+1"><b>July 17th, 2020</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>We have released the newest version of <a href="https://docs.elucidata.io/Scaling%20compute/Polly%20CLI.html">Polly CLI v.0.1.18</a> enabling you to run a CLI job without the need of "secret" key if the private docker is on Polly.</li>
+    <li>Added <a href="https://docs.elucidata.io/Data%20Lake.html#depmap-ccle">DepMap CCLE application</a> to query and explore relevant datasets from CCLE data lake.</li>
+  </ul>
+  <p class="update-button">Update</p>
+  <ul>
+    <li><a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Labeled%20LC-MS%20Workflow.html">Labeled LC-MS Workflow.</a>has N and C as indistinguishable isotopes</li>
+    <li>Improved the stability of both Shiny and Desktop Appications.</li>
+    <li>Communication within the infrastructure is now through encrypted keys.</li>
+    <li>Shiny apps as well as shiny states are encrypted during transit as well as storage.</li>
+    <li>Added encryption for the disks running the computations.</li>
+    <li>Encrpted buckets containing credentials.</li>
+  </ul>
+</details>
+
+<hr>
+
+<!--July 3rd, 2020-->
+<details>
 <summary><font size="+1"><b>July 3rd, 2020</b></font></summary>
 <br>
   <p class="new-button">New</p>
   <ul>
     <li>We have released the newest version of <a href="https://github.com/ElucidataInc/ElMaven/releases/tag/v0.11.0">El-MAVEN v.0.11.0.</a></li>
-    <li>Polly now provides its own docker repository for easy management of dockers.</li>
+    <li>Polly now provides its own docker repository for easy <a href="https://docs.elucidata.io/Scaling%20compute/Polly%20CLI.html#docker-management">management of dockers</a>.</li>
   </ul>
   <p class="update-button">Update</p>
   <ul>
