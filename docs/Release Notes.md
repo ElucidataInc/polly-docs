@@ -8,7 +8,6 @@
   <p class="new-button">New</p>
   <ul>
     <li>We have released the newest version of <a href="https://docs.elucidata.io/Scaling%20compute/Polly%20CLI.html">Polly CLI v.0.1.18</a> enabling you to run a CLI job without the need of "secret" key if the private docker is on Polly.</li>
-    <li>Added <a href="https://docs.elucidata.io/Data%20Lake.html#depmap-ccle">DepMap CCLE application</a> to query and explore relevant datasets from CCLE data lake.</li>
   </ul>
   <p class="update-button">Update</p>
   <ul>
