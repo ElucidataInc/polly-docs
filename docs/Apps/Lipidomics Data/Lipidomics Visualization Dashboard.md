@@ -2,17 +2,16 @@
 
 ##Overview
 
-Analysis of lipidomic data involves complex lipidome analysis. Lipidomics analysis across large sample sizes produces large datasets that require dedicated lipid identification, quantification and lipidome visualization. The wide diversity of native lipids and their modifications make their analyses challenging. Lipidomics Visualization Dashboard allows you to visualize, process and analyze the lipid species or classes concentration data. The current version supports the output from [SCIEX Lipidyzer<sup>TM</sup> Platform](https://www.google.com/url?sa=t&rct=j&q=&esrc=s&source=web&cd=2&cad=rja&uact=8&ved=2ahUKEwieru2379DoAhV1yzgGHdPEC0EQFjABegQIBBAB&url=https%3A%2F%2Fsciex.com%2FDocuments%2Ftech%2520notes%2Flipidyzer_platform_workflow.pdf&usg=AOvVaw1fVAzv52X1khl--ZzXKha7). It can calculate summary statistics, percentages and perform univariate analysis like ANOVA, Limma t-test along with Multivariate analysis like PCA. It helps you view lipids by their main class, sub class across cohorts.
+Analysis of lipidomic data involves complex lipidome analysis. Lipidomics analysis across large sample sizes produces large datasets that require dedicated lipid identification, quantification and lipidome visualization. The wide diversity of native lipids and their modifications make their analyses challenging. Lipidomics Visualization Dashboard allows you to visualize, process and analyze the concentration data based on lipid species or classes along with sum of carbons and saturation type. The current version can calculate summary statistics, percentages and perform univariate analysis like ANOVA, Limma t-test along with Multivariate analysis like PCA. It helps you view lipids by their main class, sub class across cohorts.
 
 ##Scope of the app
 
-*   Processes the output file of SCIEX Lipidyzer<sup>TM</sup> Platform.
 *   Performs preprocessing on input data. 
 *   Calculates lipid species concentration percentage for each lipid class and species across multiple cohorts.
-*   Plots the lipid class and species concentrations and their percentages in the form of pie charts and bar plots.
+*   Plots the lipid class and species concentrations and their percentages along with sum of carbons and saturation type in the form of pie charts and bar plots.
 *   Performs PCA for quality check.
 *   Performs differential expression using ANOVA or Limma t-test to find significant lipid species or class.
-*   Presents the data in the form of Heatmap, depicting the selected lipid data type corresponding to the number of samples in the data.
+*   Analyze clustering profiles through a heatmap.
 
 ![Lipidomics Visualization Dashboard](../../img/Lipidomics/Lipidomics_Visualization_Dashboard.png) <center>**Figure 1.** Lipidomics Visualization Dashboard</center>
 
