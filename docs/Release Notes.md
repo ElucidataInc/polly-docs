@@ -7,7 +7,7 @@
 <br>
   <p class="new-button">New</p>
   <ul>
-    <li>We have released the newest version of <a href="https://docs.elucidata.io/Scaling%20compute/Polly%20CLI.html">Polly CLI v.0.1.18</a> enabling you to run a CLI job without the need of "secret" key if the private docker is on Polly.</li>
+    <li>We have released the newest version of <a href="https://docs.elucidata.io/Scaling%20compute/Polly%20CLI.html">Polly CLI v0.1.18</a> enabling you to run a CLI job without the need of "secret" key if the private docker is on Polly.</li>
   </ul>
   <p class="update-button">Update</p>
   <ul>
@@ -28,7 +28,7 @@
 <br>
   <p class="new-button">New</p>
   <ul>
-    <li>We have released the newest version of <a href="https://github.com/ElucidataInc/ElMaven/releases/tag/v0.11.0">El-MAVEN v.0.11.0.</a></li>
+    <li>We have released the newest version of <a href="https://github.com/ElucidataInc/ElMaven/releases/tag/v0.11.0">El-MAVEN v0.11.0.</a></li>
     <li>Polly now provides its own docker repository for easy <a href="https://docs.elucidata.io/Scaling%20compute/Polly%20CLI.html#docker-management">management of dockers</a>.</li>
   </ul>
   <p class="update-button">Update</p>
