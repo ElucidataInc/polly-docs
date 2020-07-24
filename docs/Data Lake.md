@@ -1,6 +1,6 @@
 #Introduction
 
-With Polly discover you can access public databases which have been curated and stored in the form of data lakes or make data lakes with your own data. These datalakes can be explored and analyzed either through the Polly Notebook interface on Polly or through the Polly Discover application.
+With Polly you can access public databases which have been curated and stored in the form of data lakes or make data lakes with your own data. These data lakes can be explored and analyzed either through the Polly Notebook or through several Data Lake Applications available.
 
 Polly Discover consists of the following major components:
 
