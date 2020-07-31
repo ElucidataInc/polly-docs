@@ -1,8 +1,31 @@
 #Release Notes
 
-<!--July 17th, 2020-->
+<!--July 31st, 2020-->
 
 <details open>
+<summary><font size="+1"><b>July 31st, 2020</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>We have introduced Workspaces on Polly, which is a new and improved version of Polly Projects.</li>
+  </ul>
+  <p class="update-button">Update</p>
+  <ul>
+    <li>Allowed internal standards and unlabeled data to pass through Labeled LCMS app to generate output</li>
+    <li>Added Phantasus, Boxplot & Whisker plot along with the bar plot in the <a href="https://docs.elucidata.io/Data%20Lake.html#polly-discover-app"> Polly Discover Application</a>.</li>
+    <li>Also added Dot plot for Gene Ontology.</li>
+    <li>Added another extra layer of security in authentication.</li>
+    <li>Fixed Polly CLI auto login in notebooks.</li>
+    <li>Solved a bug that lead to notebook loader page staying indefinitely with unresponsive notebook.</li>
+  </ul>
+</details>
+
+<hr>
+
+
+<!--July 17th, 2020-->
+
+<details>
 <summary><font size="+1"><b>July 17th, 2020</b></font></summary>
 <br>
   <p class="new-button">New</p>
