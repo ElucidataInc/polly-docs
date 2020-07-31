@@ -7,21 +7,20 @@
 <br>
   <p class="new-button">New</p>
   <ul>
-    <li>We have introduced Workspaces on Polly, which is a new and improved version of Polly Projects.</li>
+    <li>Introduced <a href="">Workspaces</a> on Polly, which is a new and improved version of Polly Projects.</li>
+    <li>Added dot plot for Gene Ontology in the <a href="https://docs.elucidata.io/Data%20Lake.html#polly-discover-app"> Discover</a> application.</li>
+    <li>Added an extra layer of security in authentication.</li>
   </ul>
   <p class="update-button">Update</p>
   <ul>
-    <li>Allowed internal standards and unlabeled data to pass through Labeled LCMS app to generate output</li>
-    <li>Added Phantasus, Boxplot & Whisker plot along with the bar plot in the <a href="https://docs.elucidata.io/Data%20Lake.html#polly-discover-app"> Polly Discover Application</a>.</li>
-    <li>Also added Dot plot for Gene Ontology.</li>
-    <li>Added another extra layer of security in authentication.</li>
-    <li>Fixed Polly CLI auto login in notebooks.</li>
-    <li>Solved a bug that lead to notebook loader page staying indefinitely with unresponsive notebook.</li>
+    <li>Allowed internal standards and unlabeled data to pass through the <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Labeled%20LC-MS%20Workflow.html">Labeled LC-MS Workflow</a> to generate output</li>
+    <li>Added Phantasus, Boxplot & Whisker plot along with the bar plot in the <a href="https://docs.elucidata.io/Data%20Lake.html#polly-discover-app"> Discover</a> application.</li>
+    <li>Fixed Polly CLI auto login error in notebooks.</li>
+    <li>Fixed unresponsive notebook with infinite loading.</li>
   </ul>
 </details>
 
 <hr>
-
 
 <!--July 17th, 2020-->
 
