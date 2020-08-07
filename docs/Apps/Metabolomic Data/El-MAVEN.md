@@ -14,15 +14,15 @@ El-MAVEN is now hosted on the Polly platform. This means El-MAVEN and all your P
 
 *   Have input and output data along with analysis stored at the same location in the [Polly Management Dashboard](https://docs.elucidata.io/Getting%20Started/Project%20Management%20Dashboard.html).
 
-*   Share the analyses along with input and output data by simply sharing the Project.
+*   Share the analyses along with input and output data by simply sharing the Workspace.
 
 #Getting Started
 
-Select El-MAVEN from PollyTM Dashboard under the *Metabolomics Data* Tab as shown in Figure 1. Create a *New Project* to be redirected to choose the machine configuration.
+Select El-MAVEN from PollyTM Dashboard under the *Metabolomics Data* Tab as shown in Figure 1. Create a *New Workspace* or choose form the existing one from the drop down and provide the *Name of the Session* to be redirected to choose the machine configuration.
 
-![El-MAVEN ](../../img/El-MAVEN/EL-MAVEN.png) <center>**Figure 1.** Select Application</center>
+![El-MAVEN ](../../img/El-MAVEN/Dashboard.png) <center>**Figure 1.** Select Application</center>
 
-![Project](../../img/El-MAVEN/EL-MAVENProject.png) <center>**Figure 2.** Project selection</center>
+![Workspace](../../img/El-MAVEN/Selection.png) <center>**Figure 2.** Workspace selection</center>
 
 The size of the data varies from a few MBs to hundreds of GBs, and in order to process and analyze this huge data, you would need the computation power from a small machine to a large workstation. Polly supports configurations having 16 to 120 GB Ram and 4 to 16 CPU cores as of now. While other machine configurations can be added on customer request.
 
@@ -54,7 +54,7 @@ This application act as a one-stop interface for all your peak curation needs. I
 
 *   Browser: To access data from anywhere on the cloud
 
-*   Terminal: For transferring your raw and processed data to and from the project. Also it can be used as a general terminal for other operations as well.
+*   Terminal: For transferring your raw and processed data to and from the workspace. Also it can be used as a general terminal for other operations as well.
 
 ![Apps](../../img/El-MAVEN/Apps.png) <center>**Figure 5.** Provided Apps and functionalities</center>
 
@@ -88,25 +88,25 @@ Select the tab next to El-MAVEN to access it as and when required.
 
 ##Browser
 
-Polly also provides a **web browser** for you to surf the internet on the fly. You can now search for any data related query or get data from anywhere on the cloud (Polly Projects, FTP, etc) within the same interface.
+Polly also provides a **web browser** for you to surf the internet on the fly. You can now search for any data related query or get data from anywhere on the cloud (Polly Workspaces, FTP, etc) within the same interface.
 
 ![Browser](../../img/El-MAVEN/Browser.png) <center>**Figure 8.** Browser</center>
 
 ##Terminal
 
-Once the *Terminal* option is selected, it provides access to the command-line interface to execute any sets of commands. You have access to all the file types which are available in Polly through the terminal. You can use it for getting data into the El-MAVEN instance from the Projects and sending processed data back. The terminal option also allows you to install Python or R packages, managing system binaries and system configurations and helps you working with code repositories hosted on GitHub, Bitbucket, etc.
+Once the *Terminal* option is selected, it provides access to the command-line interface to execute any sets of commands. You have access to all the file types which are available in Polly through the terminal. You can use it for getting data into the El-MAVEN instance from the Workspaces and sending processed data back. The terminal option also allows you to install Python or R packages, managing system binaries and system configurations and helps you working with code repositories hosted on GitHub, Bitbucket, etc.
 
 ![Terminal](../../img/El-MAVEN/Terminal.png) <center>**Figure 9.** Terminal</center>
 
 ##Accessing directories
 
-You can fetch directories from the Project. The contents of any directory within a Project can be listed using the following command on the terminal.
+You can fetch directories from the Workspaces. The contents of any directory within a Workspace can be listed using the following command on the terminal.
 
 <pre><code>polly files list --workspace-path "path/to/polly/folder" -y</code></pre>
 
 Here the path of the directory has to start with “*polly://*”.
 
-To view the contents within a folder called “Data” in the project, the following command will have to be executed on the terminal.
+To view the contents within a folder called “Data” in the workspace, the following command will have to be executed on the terminal.
 
 
 <pre><code>polly files list --workspace-path "polly://Data" -y</code></pre>
@@ -115,15 +115,15 @@ To access the directory, the following command will have to be executed on the t
 
 <pre><code>polly files sync -s "path/to/polly/folder" -d "path/on/elmaven/instance" -y</code></pre>
 
-If the folder called “Data” is to be accessed from Project in the folder called “Input”, execute the following command.
+If the folder called “Data” is to be accessed from Workspace in the folder called “Input”, execute the following command.
 
 <pre><code>polly files sync -s "polly://Data" -d "Input" -y</code></pre>
 
-To save directories back to Project, keep the source as it is and destination as Polly Project in the same command as mentioned above.
+To save directories back to the Workspace, keep the source as it is and destination as Polly Workspace in the same command as mentioned above.
 
 <pre><code>polly files sync -s "path/on/elmaven/instance" -d "path/to/polly/folder" -y</code></pre>
 
-To save the folder called “Output” back to Polly Project, use the following command.
+To save the folder called “Output” back to Polly Workspace, use the following command.
 
 <pre><code>polly files sync -s "Output" -d "polly://" -y</code></pre>
 
@@ -135,11 +135,11 @@ Since peak picking can take days, Polly provides three options:
 
 *   In case you choose to close the instance, you have separate options to Stop and Terminate the instance. Stopping the instance would keep the data (picked peaks) intact in the machine and the instance can be later resumed (soon to be available on Polly). If the tab is closed without Terminating or Stopping the instance, it would continue to run in the background. 
 
-*   In case of termination of instance, the data would not remain intact in the machine. You would have to add the files again from the Project to perform the analysis.
+*   In case of termination of instance, the data would not remain intact in the machine. You would have to add the files again from the Workspace to perform the analysis.
 
 **Note**:
 
-*    Make sure you transfer your results to the project before selecting the terminate option.  
+*    Make sure you transfer your results to the workspace before selecting the terminate option.  
 
 ![Termination](../../img/El-MAVEN/Termination.png) <center>**Figure 10.** Instance Termination</center>
 
@@ -147,7 +147,7 @@ Since peak picking can take days, Polly provides three options:
 
 Polly contains the restore functionality that allows any analysis to be restored to the last step. This functionality would be available only if the instance has not been terminated. 
 
-Analyses can be restored by navigating to the *Analysis* section of a project. Click on History for the specific analysis to restore.
+Analyses can be restored by navigating to the *Analysis* section of a workspace. Click on History for the specific analysis to restore.
 
 ![History](../../img/El-MAVEN/History.png) <center>**Figure 11.** History</center>
 
@@ -155,6 +155,6 @@ Analyses can be restored by navigating to the *Analysis* section of a project. C
 
 Clicking on *Restore Analysis* will take you back to the application with the same data used before. It helps you to restore the incomplete analysis and improves reproducibility.
 
-In case you have terminated the instance, the option to restore will not be available. Instead, there will be an option to *Restart Analysis*, which will take you back to the analysis with the same machine as used earlier in the analysis without restoring the data back. You would have to add the files again from th eproject to perform the analysis.
+In case you have terminated the instance, the option to restore will not be available. Instead, there will be an option to *Restart Analysis*, which will take you back to the analysis with the same machine as used earlier in the analysis without restoring the data back. You would have to add the files again from the workspace to perform the analysis.
 
 ![Restart](../../img/El-MAVEN/Restart.png) <center>**Figure 13.** Restart Analysis</center>

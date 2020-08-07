@@ -1,6 +1,6 @@
 #Welcome to Polly!
 
-Polly is an AI-enabled platform for storage, reproducible analysis and integration of high-throughput biomedical data on the cloud. Polly creates a unique, centralized ecosystem that enables a diverse team of biologists, bioinformaticians and scientific leaders to share and collaborate on projects, data and insights.
+Polly is an AI-enabled platform for storage, reproducible analysis and integration of high-throughput biomedical data on the cloud. Polly creates a unique, centralized ecosystem that enables a diverse team of biologists, bioinformaticians and scientific leaders to share and collaborate on workspaces, data and insights.
 
 Polly combines a proprietary platform with optional, on-demand high-value bioinformatics services for biological target identification and validation, pathway elucidation, cellular phenotype analysis, and biomarker identification.
 
@@ -32,21 +32,21 @@ Once logged in, you do not get automatically logged out and will have to log out
 
 ##Navigating through the platform
 
-The Polly Landing page provides access to 4 distinct interconnected modules on Polly.
+The Polly Landing page provides access to 3 distinct interconnected modules on Polly.
 
-![Polly as a platform](./img/Home/Capture.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
+![Polly as a platform](./img/Home/Home.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
 
 *   [Manage Data](https://docs.elucidata.io/Getting%20Started/Project%20Management%20Dashboard.html)
 
-    Find comprehensive information about your project, including files, notebooks, apps, analyses, and reports. This page also includes information about the creation date, project owner, and collaborators.
+    Find comprehensive information about your workspaces, including files, notebooks, apps, analyses, and reports. This page also includes information about the creation date, workspace owner, and collaborators.
 
-![Manage](./img/Home/Dashboard.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
+![Manage](./img/Home/Workspace.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
 
 *   [Use Apps](https://docs.elucidata.io/Apps/Introduction.html)
 
      Polly hosts a suite of apps and production-ready workflows to analyze and process a variety of data with ease. You can build and host your custom workflows from individual components or choose from a suite of ready-to-use workflows on Polly.
 
-![Manage](./img/Home/Analyse.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
+![Manage](./img/Home/Apps.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
 
 *   [Write & Maintain Code](https://docs.elucidata.io/Scaling%20compute/Polly%20Notebooks.html)
 
@@ -58,7 +58,7 @@ The Polly Landing page provides access to 4 distinct interconnected modules on P
 
     Polly enables access to proprietary, expert-curated, disease-specific data lakes to accelerate your drug discovery programs. Mine data lakes for public and proprietary data that are harmonized across sources on  Polly Discover. 
 
-![Discover](./img/Home/Discover.jpg) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
+![Discover](./img/Home/Discover1.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
 
 ##Getting help on the platform
 
