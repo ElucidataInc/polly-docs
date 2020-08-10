@@ -20,7 +20,7 @@ Navigate to the [Polly Workspaces](https://docs.elucidata.io/Getting%20Started/P
 
 You can access Polly Notebooks in three ways:
 
-*   **Create a new notebook:** Go to the *Applications* interface and Click on the *Polly Notebooks* button located on the bottom left side of the navigation bar to create a new notebook. You are required to provide a name to the Notebook and select the workspace along with an environment and a machine to run the given notebook. Once these selections are done you can launch the notebook.
+*   **Create a new notebook:** Go to the *Applications* interface and click on the *Polly Notebooks* button located on the bottom left side of the navigation bar to create a new notebook. You are required to provide a name to the Notebook and select the workspace along with an environment and a machine to run the given notebook.
 
 ![New Notebook button to create a new notebook](../img/Notebooks/Create.png) <center>**Figure 2.** *New Notebook* button to create a new notebook</center>
 
@@ -33,14 +33,15 @@ The notebook can be uploaded from the local system as well as from the various c
 ![Window to import notebook from local or other cloud storage services](../img/Notebooks/Upload.png) <center>**Figure 4.** Window to import notebook from local or other cloud storage services</center>
 
 *   **Open an existing notebook:** Click on the name of any existing notebook to *Edit and Launch* it.
-If you are running the notebook for the first time, the option Edit and Launch would appear as a default selection to launch the selected notebook. You are required to select an environment and a machine to run the given notebook, oly after these selections are done you can launch the notebook.
+If you are running the notebook for the first time, the option *Edit and Launch* would appear as a default selection to launch the selected notebook. You are required to select an environment and a machine to run the given notebook, oly after these selections are done you can launch the notebook.
 
 ![Opening a notebook](../img/Notebooks/Opennotebook.png)<center>**Figure 5.** Opening a notebook for the first time</center>
 
-For an older notebook: You have two options, you can either launch the notebook directly by the Launch button or you can choose to edit it first before launching through the Edit and Launch button. 
+*   **For an older notebook:** You have two options, you can either launch the notebook directly by the Launch button or you can choose to edit it first before launching through the Edit and Launch button. 
 
 **Note:**
-Under the edit option, you can only change the machine type. The docker environment would remain the same as the one selected when you run the notebook for the first time.
+
+*    Under the edit option, you can only change the machine type. The docker environment would remain the same as the one selected when you run the notebook for the first time.
 
 ![Opening a notebook](../img/Notebooks/Opennotebook2.png) <center>**Figure 6.** Opening an old notebook</center>
 
@@ -108,7 +109,7 @@ There are few other useful features as well that might come handy when using a P
 
 *   Scroll down in the menu and navigate to the desired option.
 
-    *   *Rename*: You can rename the file using this option. Provide the new name to the file and click on Rename to confirm your changes.   
+    *   *Rename*: You can rename the file using this option. Provide the new name to the file and click on *Rename* to confirm your changes.   
 
     *   *Edit*: Polly gives the flexibility to change the machine configuration to allow the usage of the notebook according to the computing power required at each step. You can change the configuration according to the need at each step.
     A menu with the different machine configuration will open, with the various options available will be displayed under the *Select Machine Type* segment. Select the appropriate option to change the configuration.

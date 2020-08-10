@@ -14,11 +14,11 @@ El-MAVEN is now hosted on the Polly platform. This means El-MAVEN and all your P
 
 *   Have input and output data along with analysis stored at the same location in the [Polly Management Dashboard](https://docs.elucidata.io/Getting%20Started/Project%20Management%20Dashboard.html).
 
-*   Share the analyses along with input and output data by simply sharing the Workspace.
+*   Share the analyses along with input and output data by simply sharing the workspace.
 
 #Getting Started
 
-Select El-MAVEN from PollyTM Dashboard under the *Metabolomics Data* Tab as shown in Figure 1. Create a *New Workspace* or choose form the existing one from the drop down and provide the *Name of the Session* to be redirected to choose the machine configuration.
+Select El-MAVEN from Polly Dashboard under the *Metabolomics Data* Tab as shown in Figure 1. Create a *New Workspace* or choose form the existing one from the drop down and provide the *Name of the Session* to be redirected to choose the machine configuration.
 
 ![El-MAVEN ](../../img/El-MAVEN/Dashboard.png) <center>**Figure 1.** Select Application</center>
 
@@ -88,7 +88,7 @@ Select the tab next to El-MAVEN to access it as and when required.
 
 ##Browser
 
-Polly also provides a **web browser** for you to surf the internet on the fly. You can now search for any data related query or get data from anywhere on the cloud (Polly Workspaces, FTP, etc) within the same interface.
+Polly also provides a **web browser** for you to surf the internet on the fly. You can now search for any data related query or get data from anywhere on the cloud (Polly workspaces, FTP, etc) within the same interface.
 
 ![Browser](../../img/El-MAVEN/Browser.png) <center>**Figure 8.** Browser</center>
 

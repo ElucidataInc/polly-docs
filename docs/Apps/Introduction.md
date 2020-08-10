@@ -16,15 +16,15 @@ To help you get started even if you do not have your own data, every app on Poll
 
 ##Upload Data
 
-All Polly <!-- ([El-MAVEN Phi Relative LC-MS](../El-MAVEN Phi Relative LC-MS), [FirstView](../FirstView), [MetScape](../MetScape), [QuantFit](../QuantFit), [CRISPR Screening](../CRISPR Screening) and [IntOmix](../IntOmix)) --> applications <!-- ([Dual Mode Data Visualization](../Dual Mode Data Visualization), [Labeled LC-MS Workflow](../Labeled LC-MS  Workflow), [Labeled LC-MS/MS Workflow](../Labeled LC-MS/MS Workflow), [Untargeted Pipeline](../Untargeted Pipeline), [High Throughput Drug Screening](../High Throughput Drug Screening), [RNA Seq Workflow](../RNA Seq Workflow), [Proteomics Workflow](../Proteomics Workflow) and [Lipidomics Visualization Dashboard](../Lipidomics Visualization Dashboard)) --> provide you the option to upload data from local storage as shown in Figure 4 and Figure 5.
+All Polly <!-- ([El-MAVEN Phi Relative LC-MS](../El-MAVEN Phi Relative LC-MS), [FirstView](../FirstView), [MetScape](../MetScape), [QuantFit](../QuantFit), [CRISPR Screening](../CRISPR Screening) and [IntOmix](../IntOmix)) --> applications <!-- ([Dual Mode Data Visualization](../Dual Mode Data Visualization), [Labeled LC-MS Workflow](../Labeled LC-MS  Workflow), [Labeled LC-MS/MS Workflow](../Labeled LC-MS/MS Workflow), [Untargeted Pipeline](../Untargeted Pipeline), [High Throughput Drug Screening](../High Throughput Drug Screening), [RNA Seq Workflow](../RNA Seq Workflow), [Proteomics Workflow](../Proteomics Workflow) and [Lipidomics Visualization Dashboard](../Lipidomics Visualization Dashboard)) --> applications provide you the option to upload data from local storage as shown in Figure 4 and Figure 5.
 
 ![Upload data from local storage for MetScape](../img/AppIntroduction/UploadDataMetScape.png)<center>**Figure 4.** Upload data from local storage for MetScape</center>
 
 ![Upload data from local storage for Labeled LC-MS app](../img/AppIntroduction/UploadDataLLCMSLocal.png)<center>**Figure 5.** Upload data from local storage for Labeled LC-MS app</center>
 
-Some of the Polly applications also provide the ability to uplaod input files from Polly workspace Files by using the option *Import from Polly* as shown in Figure 6. This simplifies data processing as well as makes Polly the platform where biological data can be stored and processed conveniently. 
+Some of the Polly applications also provide the ability to uplaod input files from Polly workspace by using the option *Import from Polly* as shown in Figure 6. This simplifies data processing as well as makes Polly the platform where biological data can be stored and processed conveniently. 
 
-![Upload data from workspace files for Labeled LC-MS app](../img/AppIntroduction/UploadDataLLCMSPolly.png)<center>**Figure 6.** Upload data from workspace files for Labeled LC-MS app</center>
+![Upload data from workspace for Labeled LC-MS app](../img/AppIntroduction/UploadDataLLCMSPolly.png)<center>**Figure 6.** Upload data from workspace for Labeled LC-MS app</center>
 
 ##Restore Analysis
 
@@ -52,7 +52,7 @@ All applications on Polly allow you to download processed data and plots when di
 
 ![Download the processed data as a .csv file](../img/AppIntroduction/DownloadLLCMS.png) <center>**Figure 12.** Download the processed data as a .csv file</center>
 
-As with upload, data can be downloaded to local storage for Angular and Shiny apps as well as Polly workspace Files for Shiny apps.
+As with upload, data can be downloaded to local storage for Angular and Shiny apps as well as Polly workspace for Shiny apps.
 
 ##Reports
 

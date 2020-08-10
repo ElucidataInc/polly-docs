@@ -31,7 +31,7 @@ The information about the workspace can be viewed through the top panel by click
 
 ## Content within a workspace
 
-A workspace contains all your data, analyses, Polly notebooks, and reports. They can be accessed through the middle panel.
+A workspace contains all your data, [analyses](https://docs.elucidata.io/Apps/Introduction.html),[notebooks](https://docs.elucidata.io/Scaling%20compute/Polly%20Notebooks.html), and [reports](https://docs.elucidata.io/Apps/Introduction.html#reports). They can be accessed through the middle panel.
 
 ![Workspace Content](../img/Workspace/6.png) <center>**Figure 6.** Workspace Contents</center>
 
@@ -43,14 +43,15 @@ A workspace contains all your data, analyses, Polly notebooks, and reports. They
 To add files to your workspaces, click on the *NEW* option present above the middle panel. You can choose the *File Upload* or *Notebook upload* option from within the menu in order to upload the data files and notebooks respectively.
 
 **Note:**
-If your file size is greater than 100 MB, use the Polly CLI option to upload to the workspace.
+
+*    If your file size is greater than **100 MB**, use the Polly CLI option to upload to the workspace.
 
 ![File Addition](../img/Workspace/7.png) <center>**Figure 7.** File Addition</center>
 
 *    Using CLI
 
 
-You can use PollyCLI as well to import your data directly within Polly. This is a more convenient option for uploading large data (more than 100 MB in size). The steps for the same are detailed [here]( "https://docs.google.com/document/d/1SBwlr4o50-hA9VXmrm44nddOCzAHbtWYVOZkUVqsGw0/edit?ts=5e7ca271").
+You can use PollyCLI as well to import your data directly within Polly. This is a more convenient option for uploading large data (more than **100 MB** in size). The steps for the same are detailed [here]( https://docs.elucidata.io/Scaling%20compute/Polly%20CLI.html).
 
 
 ## Filtering the content
@@ -66,14 +67,15 @@ Polly workspace allows you to organize and manage your data in folders and subfo
 
 ![Folder Creation](../img/Workspace/9.png) <center>**Figure 9.**  Create Folder</center>
 
-Enter the name of the folder you want to create and click on *Create Folder.*
+Enter the name of the folder you want to create and click on *Create Folder*.
 
 ![Folder Creation](../img/Workspace/10.png) <center>**Figure 10.** Add Folder Name</center>
 
-You can click on New again to upload files within the created folder
+You can click on New again to upload files within the created folder.
 
 **Note:** 
-Only the data files can be organized within a folder while the uploaded notebooks and analyses are present separately within the selected workspace.
+
+*    Only the data files can be organized within a folder while the uploaded notebooks and analyses are present separately within the selected workspace.
 
 
 ## Navigating through a folder
@@ -108,12 +110,12 @@ You can add the email of the Polly user account you want to share the workspace 
 
 There are 2 types of workspace permission you can give to your users.
 
-*    **Admin** - This permission allows the user to rename, add and delete files, analysis, code, and reports within the workspace. They can share the workspace and restore any analysis within it.
+*    **Admin** : This permission allows the user to rename, add and delete files, analysis, code, and reports within the workspace. They can share the workspace and restore any analysis within it.
 
-*    **Writer** - This permission allows the user to only add new files, analysis, code, and reports within the workspace. **They cannot delete anything from within the shared workspace**. They can also restore any analysis within the workspace but does not have the permission to share the workspace with others.
+*    **Writer** : This permission allows the user to only add new files, analysis, code, and reports within the workspace. **They cannot delete anything from within the shared workspace**. They can also restore any analysis within the workspace but does not have the permission to share the workspace with others.
 
 
-On selecting the desired permission, click *Add* to add the user to the list of collaborators. Once all the users are added, click on *Done.*
+On selecting the desired permission, click *Add* to add the user to the list of collaborators. Once all the users are added, click on *Done*.
 
 ![Sharing Workspace](../img/Workspace/16.png) <center>**Figure 16.** Add Collaborators</center>
 
@@ -178,7 +180,8 @@ Provide the new name to the file and click on *Rename* to confirm your changes.
 To access and download files from your workspaces, Click on the file to look at the file details on the right panel. You can look at the versions of the file along with general details like the file size and modifications date.
 
 **Note:**  
-If your file size is greater than 100 MB, use the Polly CLI option to access and download it.
+
+*    If your file size is greater than **100 MB**, use the Polly CLI option to access and download it.
 
 You can download the file by choosing the *Download* option provided at the bottom of the panel.
 
@@ -187,7 +190,7 @@ You can download the file by choosing the *Download* option provided at the bott
 *    Using CLI
 
 
-You can use PollyCLI as well to import your data directly within Polly. This is a more convenient option for accessing large data (more than 100 MB in size). The steps for the same are detailed [here]( "https://docs.google.com/document/d/1SBwlr4o50-hA9VXmrm44nddOCzAHbtWYVOZkUVqsGw0/edit?ts=5e7ca271").
+You can use PollyCLI as well to import your data directly within Polly. This is a more convenient option for accessing large data (more than **100 MB** in size). The steps for the same are detailed [here]( https://docs.elucidata.io/Scaling%20compute/Polly%20CLI.html).
 
 
 ## Accessing and Restoring an analysis within a workspace
