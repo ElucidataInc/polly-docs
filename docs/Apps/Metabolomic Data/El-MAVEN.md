@@ -12,7 +12,7 @@ El-MAVEN is now hosted on the Polly platform. This means El-MAVEN and all your P
 
 *   Access to the application is controlled by Polly authentication. Only users in your organization with required Polly authorization can access the application.
 
-*   Have input and output data along with analysis stored at the same location in the [Polly Management Dashboard](https://docs.elucidata.io/Getting%20Started/Project%20Management%20Dashboard.html).
+*   Have input and output data along with analysis stored at the same location in the [Polly Workspaces](https://docs.elucidata.io/Getting%20Started/Workspaces.html).
 
 *   Share the analyses along with input and output data by simply sharing the workspace.
 

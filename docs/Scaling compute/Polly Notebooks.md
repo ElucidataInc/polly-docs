@@ -14,7 +14,7 @@ Polly Notebook provides a Jupyter-like interface on the cloud. Some of the featu
 
 **Accessing Polly Notebooks**
 
-Navigate to the [Polly Workspaces](https://docs.elucidata.io/Getting%20Started/Project%20Management%20Dashboard.html) in which the analysis needs to be performed. The notebooks of this workspace can accessed from the middle panel.
+Navigate to the [Polly Workspaces](https://docs.elucidata.io/Getting%20Started/Workspaces.html) in which the analysis needs to be performed. The notebooks of this workspace can accessed from the middle panel.
 
 ![Polly Workspaces](../img/Notebooks/Workspace.png "Polly Workspaces") <center>**Figure 1.** Polly Workspaces</center>
 

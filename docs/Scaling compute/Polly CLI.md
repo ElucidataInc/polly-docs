@@ -84,7 +84,7 @@ Execute the following command to log out
 
 **What are Polly Workspaces?**
 
-Polly Workspaces are online workspaces that contain data, analyses, code, logs etc for a specific workspace or experiment. Data is stored and Analysis is performed within a user chosen workspace. More details about workspaces is mentioned [here](https://docs.elucidata.io/Getting%20Started/Project%20Management%20Dashboard.html).
+Polly Workspaces are online workspaces that contain data, analyses, code, logs etc for a specific workspace or experiment. Data is stored and Analysis is performed within a user chosen workspace. More details about workspaces is mentioned [here](https://docs.elucidata.io/Getting%20Started/Workspaces.html).
 
 **Creating a new Workspace**
 

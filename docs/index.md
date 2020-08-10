@@ -36,7 +36,7 @@ The Polly Landing page provides access to 3 distinct interconnected modules on P
 
 ![Polly as a platform](./img/Home/Home.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
 
-*   [Manage Data](https://docs.elucidata.io/Getting%20Started/Project%20Management%20Dashboard.html)
+*   [Manage Data](https://docs.elucidata.io/Getting%20Started/Workspaces.html)
 
     Find comprehensive information about your workspaces, including files, notebooks, apps, analyses, and reports. This page also includes information about the creation date, workspace owner, and collaborators.
 

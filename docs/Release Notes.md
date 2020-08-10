@@ -7,7 +7,7 @@
 <br>
   <p class="new-button">New</p>
   <ul>
-    <li>Introduced <a href="">Workspaces</a> on Polly, which is a new and improved version of Polly Projects.</li>
+    <li>Introduced <a href="https://docs.elucidata.io/Getting%20Started/Workspaces.html">Workspaces</a> on Polly, which is a new and improved version of Polly Projects.</li>
     <li>Added dot plot for Gene Ontology in the <a href="https://docs.elucidata.io/Data%20Lake.html#polly-discover-app"> Discover</a> application.</li>
     <li>Added an extra layer of security in authentication.</li>
   </ul>
