@@ -59,9 +59,10 @@ The cohort file should be in .csv format as shown in Figure 3. This file should 
 
 ##Upload files
 
-Select *MetScape Workflow* from the dashboard under the *Metabolomics Data* Tab as shown in Figure 4. Create a *New Project* to be redirected to MetScape's upload page.
+Select *MetScape Workflow* from the dashboard under the *Metabolomics Data* Tab as shown in Figure 4. Create a *New Workspace* or select an existing one from the drop-down and provide the *Name of the Session* to be redirected to MetScape's upload page.
+![Polly Dashboard and Workspace selection](../../img/MetScape/Dashboard.png)
 
-![Polly Dashboard and Project selection](../../img/MetScape/create_or_choose_project_dialog.png) <center>**Figure 4.** Polly Dashboard and Project selection</center>
+![Polly Dashboard and Workspace selection](../../img/MetScape/Selection.png) <center>**Figure 4.** Polly Dashboard and Workspace selection</center>
 
 After the files have been successfully uploaded as shown in Figure 5, click on *Proceed* to move to Polly Notebook.
 
@@ -137,7 +138,7 @@ You can select the metabolite feature(s) from the table by clicking onto the che
 
 ##One Click Report<sup>BETA</sup>
 
-One Click Report (OCR) is a functionality that allows you to generate reports in a standard format. It is extremely helpful when standard processes have been decided upon to generate results. Presence of a standardized reporting functionality also ensures reproducibility within an organization over a period of years. It is generated with parameters as specified by you. It can be saved in PDF and HTML formats and will be accessible from the *Report* section inside the project.
+One Click Report (OCR) is a functionality that allows you to generate reports in a standard format. It is extremely helpful when standard processes have been decided upon to generate results. Presence of a standardized reporting functionality also ensures reproducibility within an organization over a period of years. It is generated with parameters as specified by you. It can be saved in PDF and HTML formats and will be accessible from the *Report* section inside the workspace.
 
 The following information is mandatory to generate a report:
 

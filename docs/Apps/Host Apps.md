@@ -19,7 +19,7 @@ Polly can host Shiny applications, other web applications, and desktop applicati
 
 #Shiny Applications
 
-![Image1](../img/Host Apps/Image1.png)
+![Image1](../img/Host Apps/Dashboard.png)
 
 ![Image2](..//img/Host Apps/Image2.png)
 

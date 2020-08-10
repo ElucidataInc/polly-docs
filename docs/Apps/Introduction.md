@@ -16,26 +16,29 @@ To help you get started even if you do not have your own data, every app on Poll
 
 ##Upload Data
 
-All Polly <!-- ([El-MAVEN Phi Relative LC-MS](../El-MAVEN Phi Relative LC-MS), [FirstView](../FirstView), [MetScape](../MetScape), [QuantFit](../QuantFit), [CRISPR Screening](../CRISPR Screening) and [IntOmix](../IntOmix)) --> applications <!-- ([Dual Mode Data Visualization](../Dual Mode Data Visualization), [Labeled LC-MS Workflow](../Labeled LC-MS  Workflow), [Labeled LC-MS/MS Workflow](../Labeled LC-MS/MS Workflow), [Untargeted Pipeline](../Untargeted Pipeline), [High Throughput Drug Screening](../High Throughput Drug Screening), [RNA Seq Workflow](../RNA Seq Workflow), [Proteomics Workflow](../Proteomics Workflow) and [Lipidomics Visualization Dashboard](../Lipidomics Visualization Dashboard)) --> provide you the option to upload data from local storage as shown in Figure 4 and Figure 5.
+All Polly <!-- ([El-MAVEN Phi Relative LC-MS](../El-MAVEN Phi Relative LC-MS), [FirstView](../FirstView), [MetScape](../MetScape), [QuantFit](../QuantFit), [CRISPR Screening](../CRISPR Screening) and [IntOmix](../IntOmix)) --> <!-- ([Dual Mode Data Visualization](../Dual Mode Data Visualization), [Labeled LC-MS Workflow](../Labeled LC-MS  Workflow), [Labeled LC-MS/MS Workflow](../Labeled LC-MS/MS Workflow), [Untargeted Pipeline](../Untargeted Pipeline), [High Throughput Drug Screening](../High Throughput Drug Screening), [RNA Seq Workflow](../RNA Seq Workflow), [Proteomics Workflow](../Proteomics Workflow) and [Lipidomics Visualization Dashboard](../Lipidomics Visualization Dashboard)) --> applications provide you the option to upload data from local storage as shown in Figure 4 and Figure 5.
 
 ![Upload data from local storage for MetScape](../img/AppIntroduction/UploadDataMetScape.png)<center>**Figure 4.** Upload data from local storage for MetScape</center>
 
 ![Upload data from local storage for Labeled LC-MS app](../img/AppIntroduction/UploadDataLLCMSLocal.png)<center>**Figure 5.** Upload data from local storage for Labeled LC-MS app</center>
 
-Some of the Polly applications also provide the ability to uplaod input files from Polly Project Files by using the option *Import from Polly* as shown in Figure 6. This simplifies data processing as well as makes Polly the platform where biological data can be stored and processed conveniently. 
+Some of the Polly applications also provide the ability to uplaod input files from Polly workspace by using the option *Import from Polly* as shown in Figure 6. This simplifies data processing as well as makes Polly the platform where biological data can be stored and processed conveniently. 
 
-![Upload data from project files for Labeled LC-MS app](../img/AppIntroduction/UploadDataLLCMSPolly.png)<center>**Figure 6.** Upload data from project files for Labeled LC-MS app</center>
+![Upload data from workspace for Labeled LC-MS app](../img/AppIntroduction/UploadDataLLCMSPolly.png)<center>**Figure 6.** Upload data from workspace for Labeled LC-MS app</center>
 
 ##Restore Analysis
 
-All Polly <!-- ([El-MAVEN Phi Relative LC-MS](../El-MAVEN Phi Relative LC-MS), [FirstView](../FirstView), [MetScape](../MetScape), [QuantFit](../QuantFit), [CRISPR Screening](../CRISPR Screening) and [IntOmix](../IntOmix)) --> applications <!-- ([Dual Mode Data Visualization](../Dual Mode Data Visualization), [Labeled LC-MS Workflow](../Labeled LC-MS  Workflow), [Labeled LC-MS/MS Workflow](../Labeled LC-MS/MS Workflow), [Untargeted Pipeline](../Untargeted Pipeline), [High Throughput Drug Screening](../High Throughput Drug Screening), [RNA Seq Workflow](../RNA Seq Workflow), [Proteomics Workflow](../Proteomics Workflow) and [Lipidomics Visualization Dashboard](../Lipidomics Visualization Dashboard)) --> contain the restore functionality that allows any analysis to be restored to the last step. Some of the Polly applications also provide the ability to save at that exact moment of your choice using the *Save the State* option. Analyses can be restored by navigating to the *Analysis* section of a project. Click on *History* for the specific analysis to restore. Clicking on *Restore Analysis* will take you back to the application with the same data used before as shown in Figure 5. For the applications providing the *Save the  state* option, you have an additional step to choose which step to restore. Multiple states, if saved are depicted as a branch structure which makes it extremely easy to visually identify the state of interest as shown in Figure 8 and Figure 9.  Restore helps laboratories and organizations with standardization across labs and improves reproducibility.
+All Polly <!-- ([El-MAVEN Phi Relative LC-MS](../El-MAVEN Phi Relative LC-MS), [FirstView](../FirstView), [MetScape](../MetScape), [QuantFit](../QuantFit), [CRISPR Screening](../CRISPR Screening) and [IntOmix](../IntOmix)) --> applications <!-- ([Dual Mode Data Visualization](../Dual Mode Data Visualization), [Labeled LC-MS Workflow](../Labeled LC-MS  Workflow), [Labeled LC-MS/MS Workflow](../Labeled LC-MS/MS Workflow), [Untargeted Pipeline](../Untargeted Pipeline), [High Throughput Drug Screening](../High Throughput Drug Screening), [RNA Seq Workflow](../RNA Seq Workflow), [Proteomics Workflow](../Proteomics Workflow) and [Lipidomics Visualization Dashboard](../Lipidomics Visualization Dashboard)) --> contain the restore functionality that allows any analysis to be restored to the last step. Analyses can be restored by navigating to the desired workspace. Click on the specific analysis and select the algorithm you want to restore. Clicking on *Restore* from the right panel will take you back to the application with the same data used before as shown in Figure 7. Restore helps laboratories and organizations with standardization across labs and improves reproducibility.
 
-![Restore for Angular applications](../img/AppIntroduction/MetScapeRestore.png) <center>**Figure 7.** Restore for Angular applications</center>
+![Restore for Angular applications](../img/AppIntroduction/Restore.png) <center>**Figure 7.** Restore for Angular applications</center>
+
+Some of the Polly applications also provide the ability to save at that exact moment of your choice using the *Save the State* option.
 
 ![Restore for Shiny applications](../img/AppIntroduction/LLCMSRestore.png) <center>**Figure 8.** Restore for Shiny applications</center>
 
+For the applications providing the *Save the  state* option, you have an additional step to choose which state to restore. Multiple states, if saved are depicted as versions which makes it extremely easy to visually identify the state of interest as shown in Figure 8 and Figure 9.
 
-![Branch structure in case of multiple states saved during a single analysis for Shiny applications](../img/AppIntroduction/RestoreShiny.png) <center>**Figure 9.** Branch structure in case of multiple states saved during a single analysis for Shiny applications</center>
+![Branch structure in case of multiple states saved during a single analysis for Shiny applications](../img/AppIntroduction/Savedstates.png) <center>**Figure 9.** Branch structure in case of multiple states saved during a single analysis for Shiny applications</center>
 
 ##Download Plots & Output
 
@@ -49,7 +52,7 @@ All applications on Polly allow you to download processed data and plots when di
 
 ![Download the processed data as a .csv file](../img/AppIntroduction/DownloadLLCMS.png) <center>**Figure 12.** Download the processed data as a .csv file</center>
 
-As with upload, data can be downloaded to local storage for Angular and Shiny apps as well as Polly Project Files for Shiny apps.
+As with upload, data can be downloaded to local storage for Angular and Shiny apps as well as Polly workspace for Shiny apps.
 
 ##Reports
 

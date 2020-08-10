@@ -126,11 +126,11 @@ where,
 
 ##Uplaod Files
 
-Select QuantFIt from the dashboard under the *Metabolomics Data* tab. Create a *New Project* to be redirected to QuantFit's upload page.
+Select QuantFIt from the dashboard under the *Metabolomics Data* tab. Create a *New Workspace* or select an existing one from the drop-down and provide the *Name of the Session* to be redirected to QuantFit's upload page.
 
-![Polly Dashboard and Project selection](../../img/QuantFit/polly_analyze_apps_tiles.png) <!-- <center>**Figure 1.** Sample metadata mapping file</center> -->
+![Polly Dashboard and Workspace selection](../../img/QuantFit/Dashboard.png) <!-- <center>**Figure 1.** Sample metadata mapping file</center> -->
 
-![Polly Dashboard and Project selection](../../img/QuantFit/create_or_choose_project_dialog.png) <center>**Figure 6.** Polly Dashboard and Project selection</center>
+![Polly Dashboard and Workspace selection](../../img/QuantFit/Selection.png) <center>**Figure 6.** Polly Dashboard and Workspace selection</center>
 
 Click on *Upload File* and upload the metabolite intensity file.
 

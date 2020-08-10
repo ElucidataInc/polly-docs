@@ -7,7 +7,7 @@
 <br>
   <p class="new-button">New</p>
   <ul>
-    <li>Introduced <a href="">Workspaces</a> on Polly, which is a new and improved version of Polly Projects.</li>
+    <li>Introduced <a href="https://docs.elucidata.io/Getting%20Started/Workspaces.html">Workspaces</a> on Polly, which is a new and improved version of Polly Projects.</li>
     <li>Added dot plot for Gene Ontology in the <a href="https://docs.elucidata.io/Data%20Lake.html#polly-discover-app"> Discover</a> application.</li>
     <li>Added an extra layer of security in authentication.</li>
   </ul>
@@ -75,7 +75,7 @@
    <li>We now support reactions from <i>Drosophila melanogaster</i> for integrated pathway analysis in IntOmix.</li>
     <li>Introduced <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Dual%20Mode%20Visualization.html#statistical-analysis">pathway enrichment and pathway view</a> feature along with <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Dual%20Mode%20Visualization.html#comparative-analysis">comparative analysis</a> in Dual Mode Data Visualization.</li>
     <li>DEPMAP CCLE (DEPMAP Cancer cell line expression data and dependency scores for genes) repository has been added in <a href="https://docs.elucidata.io/Data%20Lake.html">Data Lake</a>.</li>
-    <li>Implemented input file access from the sub-folders of a project for applications.</li>
+    <li>Implemented input file access from the sub-folders of a workspace for applications.</li>
   </ul>
   <p class="update-button">Update</p>
   <ul>
