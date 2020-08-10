@@ -78,11 +78,11 @@ To process dual mode data, the following files are required:
 
 #Tutorial
 
-Select *Dual Mode Data Visualization (Metabolomics App)* from the dashboard under the *Metabolomics Data* Tab as shown in Figure 7. Create a *New Project* to be redirected to Dual Mode Data Visualisation (Metabolomics App)'s upload page.
+Select *Dual Mode Data Visualization (Metabolomics App)* from the dashboard under the *Metabolomics Data* Tab as shown in Figure 7. Create a *New Workspace* or choose from the existing one from the dop-down and provide the *Name of the Session* to be redirected to Dual Mode Data Visualisation (Metabolomics App)'s upload page.
 
-![Polly Dashboard and Project selection](../../img/DualMode/metab_app_tile_highlight.png)
+![Polly Dashboard and Workspace selection](../../img/DualMode/Dashboard.png)
 
-![Polly Dashboard and Project selection](../../img/DualMode/metab_app_create_project_dialog.png) <center>**Figure 8.** Polly Dashboard and Project selection</center>
+![Polly Dashboard and Workspace selection](../../img/DualMode/Selection.png) <center>**Figure 8.** Polly Dashboard and Workspace selection</center>
 
 ##Upload Files
 
