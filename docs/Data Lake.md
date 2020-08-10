@@ -1,6 +1,6 @@
 #Introduction
 
-With Polly you can access public databases which have been curated and stored in the form of data lakes or make data lakes with your own data. These data lakes can be explored and analyzed either through Polly Notebooks or the several Data Lake Applications available.
+With Polly discover you can access public databases which have been curated and stored in the form of data lakes or make data lakes with your own data. These datalakes can be explored and analyzed either through the Polly Notebook interface on Polly or through the Polly Discover application.
 
 Polly Discover consists of the following major components:
 
@@ -73,7 +73,7 @@ Data Lake Applications are built on top of data lakes to query and explore relev
 
 Upon opening the Discover portal on Polly, choose a data repository that you would like to explore. The page should look something like this.
 
-![Polly Discover](../img/Discover/Discover.png)
+![Polly Discover](../img/Discover/image1.jpg)
 
 After selecting a repository, you’ll be able to see a dashboard and the Polly Discover app icon. The dashboard will give you an overview of the repository, for instance, the number of data sets in the repository, distribution of tissues, organisms, etc. among the datasets.
 

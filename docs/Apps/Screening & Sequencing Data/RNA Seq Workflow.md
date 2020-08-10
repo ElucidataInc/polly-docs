@@ -49,11 +49,11 @@ This is a .csv file wherein the first column presents the samples and would incl
 
 Select *RNA Seq Workflow* from the dashboard under the *Screening and Sequencing Data* tab.
 
-![Polly Dashboard](../../img/RNASeq/Dashboard.png) <center>**Figure 4.** Polly Dashboard</center>
+![Polly Dashboard](../../img/RNASeq/Screenshot 2020-03-26 at 6.00.19 PM.png) <center>**Figure 4.** Polly Dashboard</center>
 
-Create a *New Workspace* or choose the existing one from the drop down and provide the *Name of the Session* to be redirected to *RNA Seq Workflow*'s upload page
+Create a *New Project* or choose the existing one from the drop down to be redirected to *RNA Seq Workflow*'s upload page
 
-![Workspace selection](../../img/RNASeq/Selection.png) <center>**Figure 5.** Workspace selection</center>
+![Project selection](../../img/RNASeq/Screenshot 2020-03-26 at 6.00.28 PM.png) <center>**Figure 5.** Project selection</center>
 
 ##Uplaod Files
 

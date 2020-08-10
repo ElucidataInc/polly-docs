@@ -47,11 +47,11 @@ The metadata file should contain sample cohort mapping for the samples present i
 
 ##Upload files
 
-Select *Proteomics Workflow* from the dashboard under the *Proteomics Data* tab. You can either *Add New* Workspace or *Select a Workspace*  which is an already existing workspace as shown in Figure 4. After entering workspace details, you will be redirected to the app.
+Select *Proteomics Workflow* from the dashboard under the *Proteomics Data* tab. You can either *Add New* Project or *Select a Project*  which is an already existing project as shown in Figure 4. After entering project details, you will be redirected to the app.
 
-![Polly Dashboard](../../img/Proteomics/Dashboard.png)
+![Polly Dashboard](../../img/Proteomics/Dashboard1.png)
 
-![Polly Dashboard](../../img/Proteomics/Selection.png) <center>**Figure 4.** Polly Dashboard and Proteomics Workflow</center>
+![Polly Dashboard](../../img/Proteomics/Dashboard.png) <center>**Figure 4.** Polly Dashboard and Proteomics Workflow</center>
 
 Upload the abundance and cohort file in the upload space and click on *Go*.
 

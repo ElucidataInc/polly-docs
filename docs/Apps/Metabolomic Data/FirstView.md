@@ -52,7 +52,7 @@ To use FirstView from Polly, you only require the El-MAVEN Output file:
 
 **El-MAVEN FirstView Interface**
 
-Once you have derived a peak table containing the list of metabolites. You can click on the *Polly* Icon at the Menu Bar to export the data directly to PollyTM FirstView. Provide your Polly login credentials and a window will pop-up which allows you to select the peak table to be uploaded to FirstView. You can select the workspace from the list of your existing Polly Workspaces or choose to create a new one from this menu itself and then click on *Upload.* Once the files are uploaded, click on *Go to FirstView* and you would be redirected to FirstView.
+Once you have derived a peak table containing the list of metabolites. You can click on the *Polly* Icon at the Menu Bar to export the data directly to PollyTM FirstView. Provide your Polly login credentials and a window will pop-up which allows you to select the peak table to be uploaded to FirstView. You can select the project from the list of your existing projects or choose to create a new one from this menu itself and then click on *Upload.* Once the files are uploaded, click on *Go to FirstView* and you would be redirected to FirstView.
 
 ![El-MAVEN FirstView Interface](../../img/FirstView/Elmaven.png) <center>**Figure 4.** El-MAVEN FirstView Interface</center>
 
@@ -62,9 +62,9 @@ Alternatively, select FirstView from the dashboard under the *Metabolomics Data
 
 ![Polly Dashboard](../../img/FirstView/Dashboard.png) <center>**Figure 5.** Polly Dashboard</center>
 
-Create a *New Workspace* or choose the existing one from the drop down and provide the *Name of the Session* to be redirected to FirstView's upload page as shown in Figure 6.
+Create a *New Project* or choose the existing one from the drop down to be redirected to FirstView's upload page as shown in Figure 6.
 
-![Workspace selection](../../img/FirstView/Selection.png) <center>**Figure 6.** Workspace selection</center>
+![Project selection](../../img/FirstView/Projectselection.png) <center>**Figure 6.** Project selection</center>
 
 ![Upload page of FirstView](../../img/FirstView/Uploadpage.png) <center>**Figure 7.** Upload page of FirstView</center>
 

@@ -74,7 +74,7 @@ Once sample files are ready for processing, launch El-MAVEN. El-MAVEN consists o
 
 **Load Samples and Compound Database**
 
-You can load the sample by going to *Load Samples|Workspaces|Peaks* option in the Sample space menu. Then navigate to the folder containing the sample data and select all .mzXML or .mzML files. A loading bar displays the progress at the bottom. When the samples have loaded, you should see a sample panel on the left side. If it is not displayed automatically, click on the Samples Widget button on the widget toolbar. El-MAVEN automatically assigns a color to every sample. You can select/deselect any sample by clicking the checkbox on the left of the sample name or completely remove it from the *Remove sample* option. To mark samples as blank, click on the *Mark the Blanks* icon in the *Samples* menu. This will change the color of the marked samples to black to easily differentiate them from other samples. Multiple blanks can be marked together.
+You can load the sample by going to *Load Samples|Projects|Peaks* option in the Sample space menu. Then navigate to the folder containing the sample data and select all .mzXML or .mzML files. A loading bar displays the progress at the bottom. When the samples have loaded, you should see a sample panel on the left side. If it is not displayed automatically, click on the Samples Widget button on the widget toolbar. El-MAVEN automatically assigns a color to every sample. You can select/deselect any sample by clicking the checkbox on the left of the sample name or completely remove it from the *Remove sample* option. To mark samples as blank, click on the *Mark the Blanks* icon in the *Samples* menu. This will change the color of the marked samples to black to easily differentiate them from other samples. Multiple blanks can be marked together.
 
 ![El-MAVEN toolbars](../../img/EPI/El-MAVENToolbars.png) <center> **Figure 5.** El-MAVEN toolbars </center>
 
@@ -160,7 +160,7 @@ After curating the detected metabolites, go to option to export the data directl
 
 ![El-MAVEN PollyPhiTM Interface](../../img/EPI/EPI.png) <center> **Figure 19.** El-MAVEN Phi Interface </center>
 
-You can select the peak table and/or create a new workspace to be pushed to PollyPhi for Flux analysis and hit on *Upload*. This will take a while. Click on Start Fluxing. After giving the command to upload, you would receive an email containing the link to the analysis which can be accessed anytime. After clicking on *Start Fluxing*, you will be redirected to the GSheet interface where cohort information has to be entered.
+You can select the peak table and/or create a new project to be pushed to PollyPhi for Flux analysis and hit on *Upload*. This will take a while. Click on Start Fluxing. After giving the command to upload, you would receive an email containing the link to the analysis which can be accessed anytime. After clicking on *Start Fluxing*, you will be redirected to the GSheet interface where cohort information has to be entered.
 
 ![Automated email with analysis link](../../img/EPI/EmailLink.png) <center> **Figure 20.** Automated email with analysis link </center>
 

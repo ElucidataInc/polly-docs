@@ -3,7 +3,7 @@ use_directory_urls: false
 nav:
   - Home: index.md
   - Getting Started:
-    - Workspaces: Getting Started/Workspaces.md
+    - Projects: Getting Started/Project Management Dashboard.md
   - Apps:
       - Introduction: Apps/Introduction.md
       - Host Apps: Apps/Host Apps.md

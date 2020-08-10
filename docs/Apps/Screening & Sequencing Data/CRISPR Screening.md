@@ -75,7 +75,7 @@ The file contains three columns:
 ##Steps involved in data processing
 
 *   **Plan a run:** To obtain insights from your data generated from a CRISPR screening experiment, open the CRISPR Screening app on Polly.
-*   **Create/Choose a workspace:** Before running your data in CRISPR Screening, you need to either create or choose an existing workspace on Polly.
+*   **Create/Choose a project:** Before running your data in CRISPR Screening, you need to either create or choose an existing project on Polly.
 *   **Uploading data:** Polly CRISPR Screening requires two types of input files; fastq.gz files generated from the experiment and the sgRNA library.
 *   **Select pipeline and parameters:** You need to select parameters such as *Pipeline*, *Species*, *Assembly*, *Trim*, and *sgRNA length*.
 *   **Rename samples:** You can rename the samples if required.
@@ -96,11 +96,11 @@ CRISPR Screening provides an interactive way to explore and visualize the qualit
 
 *   The public dataset used for the tutorial is extracted from the paper *"A CRISPR Dropout Screen Identifies Genetic Vulnerabilities and Therapeutic Targets in Acute Myeloid Leukemia(Tzelepis et al)".* Genome-wide drop-out screens were performed in 5 Acute Myeloid Leukemia (AML) cell lines and 2 Non-AML cell lines (HT-29 and HT-1080). For our study, we have considered three AML cell lines i.e. OCIAML3, MV411, and MOLM.
 
-Select *CRISPR Screening* from the dashboard under the *Screening and Sequencing Data* Tab as shown in Figure 6. Create a *New Workspace* or select from the existing one from the drop-down and provide a *Name of the Session* to be redirected to CRISPR Screening's upload page.
+Select *CRISPR Screening* from the dashboard under the *Screening and Sequencing Data* Tab as shown in Figure 7. Create a *New Project* to be redirected to CRISPR Screening's upload page.
 
-![Polly Dashboard](../../../img/CRISPR/Dashboard.png) <center>**Figure 6.** Dashboard</center>
+![Polly Dashboard](../../../img/CRISPR/Dashboard1.png) <center>**Figure 6.** Dashboard</center>
 
-![CRISPR Screening](../../../img/CRISPR/Selection1.png) <center>**Figure 7.** CRISPR Screening</center>
+![CRISPR Screening](../../../img/CRISPR/(3)Analyze.png) <center>**Figure 7.** CRISPR Screening</center>
 
 
 ##Upload Files
@@ -155,9 +155,9 @@ After the coffee break, you can go to the working project by following small ste
 
 2.  Go to Manage Tab.
 
-3.  Click on the workspace you were working on.
+3.  Click on the project you were working on. Here I have "new_project" as a project name.
 
-![Select Workspace](../../../img/CRISPR/Workspace.png) <center>**Figure 13.** Select workspace</center>
+![Select Project](../../../img/CRISPR/Dashboard2.png) <center>**Figure 13.** Select project</center>
 
 **Track the progress of each comparison** with the help of the icons depicted below.
 
@@ -257,7 +257,7 @@ By clicking on the indicated module and selecting the visualization of interest.
 
 ##Multi Comparison
 
-In Multi Comparison, you can compare the current analysis with the previously processed analyses irrespective of whether they are in the current workspace or a different workspace. To view multiple comparisons follow these steps :
+In Multi Comparison, you can compare the current analysis with the previously processed analyses irrespective of whether they are in the current project or a different project. To view multiple comparisons follow these steps :
 
 *   Click on Multi-Comparison. A drop down with a list of all the CRISPR Screening analyses pops up.
 
