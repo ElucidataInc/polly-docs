@@ -52,7 +52,7 @@ Select High Throughput Drug Screening Application from the dashboard under the�
 
 ![Polly Dashboard](../../img/HTS/Dashboard1.png) <center>**Figure 4.** Polly Dashboard</center>
 
-Create a *New Workspace* or select from the existing one from the drop-down and provide a *Name of the Session*to be redirected to *High Throughput Drug Screening* application's upload page.
+Create a *New Workspace* or select from the existing one from the drop-down and provide a *Name of the Session* to be redirected to *High Throughput Drug Screening* application's upload page.
 
 ![Workspace Selection](../../img/HTS/Selection.png) <center>**Figure 5.** Workspace Selection</center>
 
