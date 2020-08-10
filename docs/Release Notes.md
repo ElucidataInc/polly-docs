@@ -1,30 +1,8 @@
 #Release Notes
 
-<!--July 31st, 2020-->
-
-<details open>
-<summary><font size="+1"><b>July 31st, 2020</b></font></summary>
-<br>
-  <p class="new-button">New</p>
-  <ul>
-    <li>Introduced <a href="https://docs.elucidata.io/Getting%20Started/Workspaces.html">Workspaces</a> on Polly, which is a new and improved version of Polly Projects.</li>
-    <li>Added dot plot for Gene Ontology in the <a href="https://docs.elucidata.io/Data%20Lake.html#polly-discover-app"> Discover</a> application.</li>
-    <li>Added an extra layer of security in authentication.</li>
-  </ul>
-  <p class="update-button">Update</p>
-  <ul>
-    <li>Allowed internal standards and unlabeled data to pass through the <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Labeled%20LC-MS%20Workflow.html">Labeled LC-MS Workflow</a> to generate output</li>
-    <li>Added Phantasus, Boxplot & Whisker plot along with the bar plot in the <a href="https://docs.elucidata.io/Data%20Lake.html#polly-discover-app"> Discover</a> application.</li>
-    <li>Fixed Polly CLI auto login error in notebooks.</li>
-    <li>Fixed unresponsive notebook with infinite loading.</li>
-  </ul>
-</details>
-
-<hr>
-
 <!--July 17th, 2020-->
 
-<details>
+<details open>
 <summary><font size="+1"><b>July 17th, 2020</b></font></summary>
 <br>
   <p class="new-button">New</p>

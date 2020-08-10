@@ -76,7 +76,7 @@ Steps to set up a node in the Thermo Scientific<sup>TM</sup> Compound Discoverer
     *   **Polly QuantFit**
         *   **Polly Username:** Enter the email id registered on Polly.
         *   **Password:** Enter the password for this account.
-        *   **Polly Workspace Name:** Enter a new/existing Workspace name for your workspaces on Polly.  
+        *   **Polly Project Name:** Enter a new/existing Project name for your projects on Polly.  
         <br />
 
 *   Click on **Run** within **Analysis**
