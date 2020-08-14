@@ -127,19 +127,28 @@ You can analyze a single dataset by selecting the checkbox to the left of the en
 After clicking the *Analyze Data* button, the app will read the selected dataset and take you to the *Dataset Analysis* tab. Here, you can perform the following analyses:
 
 *   Principal Component Analysis (PCA)
+
+*   Boxplot Visualization
     
-*   Pathway Visualization
+*   Plots
+
+*   Heatmap
     
 *   Differential Expression
     
 *   X2K Analysis
+
+*   Gene Ontology Plot
     
 *   Enrichr
     
 *   GSEA  
 
+*   Specific Pathway Visualization using Pathview
+
 ![Analyses possible](../img/Discover/image8.png)
 
+<!--
 **Analyzing multiple datasets**
 
 It is also possible to analyze multiple datasets simultaneously. If you select multiple datasets from the search result and click the *Analyze Data* button, you will see a new *Multiple Analyses* Tab, wherein you can select algorithms that you want to run on the selected datasets. While selecting algorithms, a workflow of nodes is formed. These nodes are input blocks for each algorithm for each dataset you selected.
@@ -163,6 +172,8 @@ After the algorithms have been executed, you’ll be taken to the rules tab, whe
 Finally, on clicking the *Execute Rules* button, you will be able to get a preliminary hitlist.
 
 ![Preliminary hitlist](../img/Discover/image13.png)
+
+-->
 
 ##DepMap CCLE
 
@@ -341,6 +352,12 @@ The datasets in the public repositories are saved as a .gct file. This is a file
 
 ![GCT file structure](../img/Discover/gct_file.png)
 
+H5AD File Format
+
+The single cell datasets in the public repositories are saved as a .h5ad file. This is a file format in which data can be stored along with the sample metadata.
+
+![H5AD file structure](../img/Discover/h5ad_file.svg)
+
 *   Get fields present in the index
 
 <pre><code>discover.sample_repo.get_all_fields()</code></pre>
@@ -355,7 +372,8 @@ The datasets in the public repositories are saved as a .gct file. This is a file
 
 *   Search for samples by keyword in a particular field. Searching for “M1” in the field “fab\_classification\_ch1” here.
 
-<pre><code>fab_df = discover.sample_repo.query_samples_by_field("fab_classification_ch1", "M1", n = 100) fab_df</code></pre>
+<pre><code>fab_df = discover.sample_repo.query_samples_by_field("fab_classification_ch1", "M1", n = 100)
+fab_df</code></pre>
 
 ![Search for samples using keywords](../img/Discover/image22.png)
 
@@ -367,7 +385,7 @@ The datasets in the public repositories are saved as a .gct file. This is a file
 
 ##Querying at the feature level
 
-The matrix of a .gct file contains the actual values for the different features(genes/metabolites). The ‘\_gct\_index’ index of a repository can be queried for features.
+The matrix of a .gct/.h5ad file contains the actual values for the different features(genes/metabolites). The ‘\_gct\_index’ or ‘\_h5ad\_index’ index of a repository can be queried for features.
 
 *   Get fields present in the index  
 
@@ -385,7 +403,8 @@ The ‘\_\_index\_\_’ column contains the feature name
 
 *   Get values for a particular feature across all samples in all datasets of the repository. Getting values for “NRAS” gene here.
 
-<pre><code>nras_df =discover.feature_repo.get_feature_values("NRAS", n = 1000) nras_df</code></pre>
+<pre><code>nras_df =discover.feature_repo.get_feature_values("NRAS", n = 1000)
+nras_df</code></pre>
 
 ![Values for a feature](../img/Discover/image26.png)
 
@@ -419,7 +438,19 @@ You can also perform more complex queries on multiple fields combining them with
 
 <pre><code>discover.sample_repo.query_samples_by_field_combination(or_fields = {"cell_type_ch1":"CD34","cell_type_ch1":"mononuclear"}, not_fields = {"treatment_protocol_ch1":"de novo"}, n = 300)</code></pre>
 
-![Advanced query example 1](../img/Discover/image30.png)
+![Advanced query example 2](../img/Discover/image30.png)
+
+##Downloading datasets
+
+*   You can use the get_file(key, repo_id, file_name) function to download a dataset from a datalake repository. The function has following 3 parameters:
+    
+    *   \_\_key\_\_: S3 key of the file
+
+    *   \_\_repo_id\_\_: Repository id
+
+    *   \_\_file_name\_\_: Name of the file with file extentions such as gct, h5ad etc.
+
+<pre><code>discover.get_file("TRV_data_lake/data/transcriptomics/RNASeq/TRV_GSE147507_GPL18573/GSE147507_GPL18573_curated.gct, 25, GSE147507_GPL18573_curated.gct)</code></pre>
 
 #Videos
 
