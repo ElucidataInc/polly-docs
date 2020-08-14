@@ -408,6 +408,13 @@ nras_df</code></pre>
 
 ![Values for a feature](../img/Discover/image26.png)
 
+*   To get features from all single cell datasets, use the variant get_feature_values_sc. See the following example.
+
+<pre><code>hhex_df =discover.feature_repo.get_feature_values_sc("HHEX", n = 1000) 
+hhex_df</code></pre>
+
+![Values for a feature in single cell datasets](../img/Discover/image260.png)
+
 ##Access annotation repositories
 
 The various gene annotation databases can also be accessed through discoverpy. These can be used to get information about a particular gene or a set of genes.
