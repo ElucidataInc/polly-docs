@@ -1,13 +1,41 @@
 #Release Notes
 
-<!--July 31st, 2020-->
+<!--August 14th, 2020-->
 
 <details open>
+<summary><font size="+1"><b>August 14th, 2020</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>Introduced <a href="https://docs.elucidata.io/Getting%20Started/Workspaces.html"> Workspaces</a> on Polly, which is a new and improved version of Polly Projects.</li>
+    <li>Added GTEx app to process the filtered datasets from GTEx data lake.</li>
+    <li>Added a filtering interface for GTEx data lake that allows filtering of the data on the basis of fields within the curated dataset.</li>
+    <li>Intergrated <a href="https://docs.elucidata.io/Data%20Lake.html#polly-discover-app"> Discover</a>,<a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Dual%20Mode%20Visualization.html"> Dual Mode Visualization</a> and <a href="https://docs.elucidata.io/Data%20Lake.html#scviz"> Single Cell Visualization</a> for processing and further analysis of transcriptomic and metabolomic and single cell filtered datasets.</li>
+    <li>Integrated <a href="https://docs.elucidata.io/Scaling%20compute/Polly%20Notebooks.html"> Notebook</a> to process the filtered datasets.</li>
+    <li>Hosted <a href="https://chanzuckerberg.github.io/cellxgene/">CellxGene</a> for processing and visualization of single cell datasets.</li>
+  </ul>
+  <p class="update-button">Update</p>
+  <ul>
+    <li>Enabled logs access functionality through <a href="https://docs.elucidata.io/Scaling%20compute/Polly%20CLI.html">Polly CLI</a>.</li>
+    <li>Added the python package, Discoverpy to all the dockers.</li>
+  </ul>
+  <p class="Deprecated-button">Deprecated</p>
+  <ul>
+    <li> The Project Management Dashboard has been deprecated and replaced by Workspaces.</li>
+  </ul>
+</details>
+
+<hr>
+
+
+
+<!--July 31st, 2020-->
+
+<details>
 <summary><font size="+1"><b>July 31st, 2020</b></font></summary>
 <br>
   <p class="new-button">New</p>
   <ul>
-    <li>Introduced <a href="https://docs.elucidata.io/Getting%20Started/Workspaces.html">Workspaces</a> on Polly, which is a new and improved version of Polly Projects.</li>
     <li>Added dot plot for Gene Ontology in the <a href="https://docs.elucidata.io/Data%20Lake.html#polly-discover-app"> Discover</a> application.</li>
     <li>Added an extra layer of security in authentication.</li>
   </ul>
@@ -75,7 +103,7 @@
    <li>We now support reactions from <i>Drosophila melanogaster</i> for integrated pathway analysis in IntOmix.</li>
     <li>Introduced <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Dual%20Mode%20Visualization.html#statistical-analysis">pathway enrichment and pathway view</a> feature along with <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Dual%20Mode%20Visualization.html#comparative-analysis">comparative analysis</a> in Dual Mode Data Visualization.</li>
     <li>DEPMAP CCLE (DEPMAP Cancer cell line expression data and dependency scores for genes) repository has been added in <a href="https://docs.elucidata.io/Data%20Lake.html">Data Lake</a>.</li>
-    <li>Implemented input file access from the sub-folders of a workspace for applications.</li>
+    <li>Implemented input file access from the sub-folders of a project for applications.</li>
   </ul>
   <p class="update-button">Update</p>
   <ul>
