@@ -1,13 +1,41 @@
 #Release Notes
 
-<!--July 31st, 2020-->
+<!--August 14th, 2020-->
 
 <details open>
+<summary><font size="+1"><b>August 14th, 2020</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>Introduced <a href="https://docs.elucidata.io/Getting%20Started/Workspaces.html"> Workspaces</a> on Polly, which is a new and improved version of Polly Projects.</li>
+    <li>Added Filtering interface for GTEx data lake and proprietary data lake that allows filtering of the data on the basis of fields within the curated dataset.</li>
+    <li>Added GTEx app to process the filtered datasets from GTEx data lake</li>
+    <li>Intergrated <a href="https://docs.elucidata.io/Data%20Lake.html#polly-discover-app"> Polly Discover App</a>,<a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Dual%20Mode%20Visualization.html"> Dual Mode Visualization app</a> and <a href="https://docs.elucidata.io/Data%20Lake.html#scviz"> Single Cell Visualization app</a> for processing and further analysis of transcriptomic and metabolomic and single cell filtered datasets of proprietary data lake.</li>
+    <li>Also hosted CellxGene for processing and visualization of single cell datasets of proprietary data lake.</li>
+    <li>Added <a href="https://docs.elucidata.io/Scaling%20compute/Polly%20Notebooks.html"> Notebook</a> to process the filtered datasets of both GTEx and proprietary data lake.</li>
+  </ul>
+  <p class="update-button">Update</p>
+  <ul>
+    <li>Enabled logs access functionality in selected app that runs through polly CLI</li>
+    <li>Python package: Discoverpy is added to all the dockers.</li>
+  </ul>
+  <p class="Deprecated-button">Deprecated</p>
+  <ul>
+    <li> The Project Management Dashboard has been deprecated and replaced by workspaces</li>
+  </ul>
+</details>
+
+<hr>
+
+
+
+<!--July 31st, 2020-->
+
+<details>
 <summary><font size="+1"><b>July 31st, 2020</b></font></summary>
 <br>
   <p class="new-button">New</p>
   <ul>
-    <li>Introduced <a href="https://docs.elucidata.io/Getting%20Started/Workspaces.html">Workspaces</a> on Polly, which is a new and improved version of Polly Projects.</li>
     <li>Added dot plot for Gene Ontology in the <a href="https://docs.elucidata.io/Data%20Lake.html#polly-discover-app"> Discover</a> application.</li>
     <li>Added an extra layer of security in authentication.</li>
   </ul>
