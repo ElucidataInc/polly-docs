@@ -62,9 +62,9 @@ Data Lake Applications are built on top of data lakes to query and explore relev
 
 <!--
 
-*   DepMap CCLE Application: Exploration application for cell line dependency and gene expression data from DepMap and CCLE. 
+*   DepMap CCLE: Exploration application for cell line dependency and gene expression data from DepMap and CCLE. 
 
-*   scViz Application: Visualization application for single cell studies. 
+*   Single Cell Visualziation: Visualization application for single cell studies. 
 
 -->
 
