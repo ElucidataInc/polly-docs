@@ -193,7 +193,6 @@ Finally, on clicking the *Execute Rules* button, you will be able to get a preli
 
 ![Preliminary hitlist](../img/Discover/image13.png)
 
--->
 
 ##DepMap CCLE
 
@@ -274,6 +273,7 @@ Clicking on *Plot* processes the data and the result of the query is a heatmap w
 ##scViz
 
 scViz provides a visualization interface for single cell data hosted on GEO. The data lake working on its backend is updated regularly with new datasets. The app has different visualizations for understanding data: *Dimensionality reduction plot*, *Violin plot*, *Dot Plot*. 
+-->
 
 #Access through Polly Notebook interface
 
