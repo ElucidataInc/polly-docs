@@ -40,8 +40,6 @@ Public data repositories on Polly consist of processed and curated datasets from
 
 *   DEPMAP CCLE: DEPMAP Cancer cell line expression data and dependency scores for genes.
 
-    
-
 Additionally, the public data repositories also consist of publicly available databases that have been curated for annotations. These publicly available databases are currently part of these repositories.
 
 *   HMDB: Pathway information from Human Metabolome Database.
@@ -60,7 +58,7 @@ Additionally, the public data repositories also consist of publicly available da
 
 Data Lake Applications are built on top of data lakes to query and explore relevant datasets. The following data lake applications are a part of the current platform:
 
-*   Polly Discover Application: Visualization and exploration platform for bulk transcriptomics data curated from GEO. 
+*   Discover: Visualization and exploration platform for bulk transcriptomics data curated from GEO. 
 
 <!--
 
