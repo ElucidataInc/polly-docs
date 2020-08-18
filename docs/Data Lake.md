@@ -62,10 +62,13 @@ Data Lake Applications are built on top of data lakes to query and explore relev
 
 *   Polly Discover Application: Visualization and exploration platform for bulk transcriptomics data curated from GEO. 
 
+<!--
+
 *   DepMap CCLE Application: Exploration application for cell line dependency and gene expression data from DepMap and CCLE. 
 
 *   scViz Application: Visualization application for single cell studies. 
 
+-->
 
 ##Discover
 
