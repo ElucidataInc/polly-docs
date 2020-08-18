@@ -67,7 +67,7 @@ Data Lake Applications are built on top of data lakes to query and explore relev
 *   scViz Application: Visualization application for single cell studies. 
 
 
-##Polly Discover App
+##Discover
 
 **Opening the app**
 
@@ -270,9 +270,9 @@ Clicking on *Plot* processes the data and the result of the query is a heatmap w
 
 ![Heatmap](../img/Discover/image44.png)
 
-##scViz
+##Single Cell Visualization
 
-scViz provides a visualization interface for single cell data hosted on GEO. The data lake working on its backend is updated regularly with new datasets. The app has different visualizations for understanding data: *Dimensionality reduction plot*, *Violin plot*, *Dot Plot*. 
+Single Cell Visualization provides a visualization interface for single cell data hosted on GEO. The data lake working on its backend is updated regularly with new datasets. The app has different visualizations for understanding data: *Dimensionality reduction plot*, *Violin plot*, *Dot Plot*. 
 -->
 
 #Access through Polly Notebook interface
