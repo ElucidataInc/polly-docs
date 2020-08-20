@@ -97,7 +97,7 @@ Most of the machine configuration are already specified to cover the wide variet
 |----------------|-----------|-------|
 | Polly 2x-large | 4         | 32 GB |
 | Polly 3x-large | 8         | 64 GB |
-
+| Polly 4x-large | 16        | 120GB |
 
 ##Other Useful Features
 
@@ -184,9 +184,9 @@ Additionally, you can also launch a new notebook by selecting the *New* button p
 
 ##Accessing Workspace files in Notebook
 
-**Accessing individual files**
+**Accessing individual files using python and R functions**
 
-For carrying on analysis, if you require any input files which are available in Polly Workspaces, those files can be fetched using a set of commands. You can list all the files present in the Workspace and then select the individual file by the following command
+For carrying on analysis, if you require any input files which are available in Polly Workspaces, those files can be fetched using a set of commands. You can list all the files present in the Workspace and then select the individual file by the following command:
 
 <pre><code>## Lists all the files present in the project
 list_project_file()
@@ -202,26 +202,29 @@ save_file_to_project('sample_file.csv')
 
 ![Accessing individual files in a notebook](../img/Notebooks/25.png) <center>**Figure 19.** Accessing individual files in a notebook</center>
 
-**Accessing directories**
+*    **Note:**
 
-Similar to individual files, you can fetch directories from the Workspaces. 
+These functions cannot access files within folders in workspace. To access those files, use CLI commands.
 
-The contents of any directory within a Workspace can be listed using the following command on a notebook terminal.
+
+**Accessing files and directories using CLI commands**
+
+The contents of any directory within a Workspace can be listed using the following command on a notebook terminal or a bash cell.
 
 <pre><code>polly files list --workspace-path "<path/to/the/directory>" -y
 </code></pre>
 
-Here the path of the directory has to start with “*polly://*”. To view the contents within a folder called “Data” in the workspace, the following command will have to be executed on the notebook terminal.
+Here, the path of the directory has to start with “polly://”. To view the contents within a folder called “Data” in the workspace, the following command will have to be executed on the notebook terminal.
 
 <pre><code>polly files list --workspace-path "polly://Data" -y
 </code></pre>
 
-To access the directory in the notebook, the following command will have to be executed on the notebook terminal.
+To access the directory in the notebook, the following command will have to be executed on the notebook terminal or a bash cell.
 
 <pre><code>polly files sync -s "<path/to/the/project/directory>" -d "<absolute/path/to/the/notebook/directory>" -y
 </code></pre>
 
-If the folder called “Data” is to be accessed from Workspace in the notebook folder called “Input”, execute the following command.
+Here, -s refers to source and -d refers to destination. If the folder called “Data” is to be accessed from Workspace in the notebook folder called “Input”, execute the following command.
 
 <pre><code>polly files sync -s "polly://Data" -d "Input" -y
 </code></pre>
@@ -233,8 +236,21 @@ To save notebook directories back to the Workspace, keep the source as notebook 
 
 To save the folder called “Output” back to Polly Workspace, use the following command.
 
-<pre><code>polly files sync -s "Output" -d "polly://" -y
+<pre><code>polly files sync -s "Output" -d "polly://" -y</code></pre>
+
+Similarly, if an individual file needs to be accessed in a notebook, use the following command
+
+<pre><code>polly files copy -s "" -d "" -y
 </code></pre>
+
+Here, -s refers to source and -d refers to destination. If the file called “Input1.csv” is to be accessed from Workspace folder “Data” in the notebook folder called “Input”, execute the following command.
+
+<pre><code>polly files copy -s "polly://Data/Input1" -d "Input/Input1.csv" -y</code></pre>
+
+An individual file can be saved back to workspace by interchanging source and destination in the mentioned command. 
+
+<pre><code>polly files copy -s "Input/Input1.csv" -d "polly://Data/Input1" -y</code></pre>
+
 
 ##Installing Packages
 
