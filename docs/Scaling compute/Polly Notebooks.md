@@ -184,7 +184,7 @@ Additionally, you can also launch a new notebook by selecting the *New* button p
 
 ##Accessing Workspace files in Notebook
 
-**Accessing individual files using python and R functions**
+**Accessing individual files using Python and R functions**
 
 For carrying on analysis, if you require any input files which are available in Polly Workspaces, those files can be fetched using a set of commands. You can list all the files present in the Workspace and then select the individual file by the following command:
 
@@ -202,9 +202,9 @@ save_file_to_project('sample_file.csv')
 
 ![Accessing individual files in a notebook](../img/Notebooks/25.png) <center>**Figure 19.** Accessing individual files in a notebook</center>
 
-*    **Note:**
+**Note:**
 
-These functions cannot access files within folders in workspace. To access those files, use CLI commands.
+*    These functions cannot access files within folders in workspace. To access those files, use CLI commands.
 
 
 **Accessing files and directories using CLI commands**
@@ -224,7 +224,7 @@ To access the directory in the notebook, the following command will have to be e
 <pre><code>polly files sync -s "<path/to/the/project/directory>" -d "<absolute/path/to/the/notebook/directory>" -y
 </code></pre>
 
-Here, -s refers to source and -d refers to destination. If the folder called “Data” is to be accessed from Workspace in the notebook folder called “Input”, execute the following command.
+Here, `-s` refers to source and `-d` refers to destination. If the folder called “Data” is to be accessed from Workspace in the notebook folder called “Input”, execute the following command.
 
 <pre><code>polly files sync -s "polly://Data" -d "Input" -y
 </code></pre>
@@ -243,7 +243,7 @@ Similarly, if an individual file needs to be accessed in a notebook, use the fol
 <pre><code>polly files copy -s "" -d "" -y
 </code></pre>
 
-Here, -s refers to source and -d refers to destination. If the file called “Input1.csv” is to be accessed from Workspace folder “Data” in the notebook folder called “Input”, execute the following command.
+Here, `-s` refers to source and `-d` refers to destination. If the file called “Input1.csv” is to be accessed from Workspace folder “Data” in the notebook folder called “Input”, execute the following command.
 
 <pre><code>polly files copy -s "polly://Data/Input1" -d "Input/Input1.csv" -y</code></pre>
 
