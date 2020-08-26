@@ -38,8 +38,6 @@ Public data repositories on Polly consist of processed and curated datasets from
 
 *   COVID-19: Transcriptional datasets for SARS viruses, viral infections, and therapeutics for novel coronavirus.
 
-    
-
 Additionally, the public data repositories also consist of publicly available databases that have been curated for annotations. These publicly available databases are currently part of these repositories.
 
 *   HMDB: Pathway information from Human Metabolome Database.
@@ -57,10 +55,13 @@ Data Lake Applications are built on top of data lakes to query and explore relev
 
 *   Polly Discover Application: Visualization and exploration platform for bulk transcriptomics data curated from GEO.
 
-*   scViz Application: Visualization application for single cell studies. 
+*   DepMap CCLE: Exploration application for cell line dependency and gene expression data from DepMap and CCLE. 
 
+*   Single Cell Visualziation: Visualization application for single cell studies. 
 
-##Polly Discover App
+-->
+
+##Discover
 
 **Opening the app**
 
@@ -277,9 +278,9 @@ Clicking on *Plot* processes the data and the result of the query is a heatmap w
 
 ![Heatmap](../img/Discover/image44.png)
 
-##scViz
+##Single Cell Visualization
 
-scViz provides a visualization interface for single cell data hosted on GEO. The data lake working on its backend is updated regularly with new datasets. The app has different visualizations for understanding data: *Dimensionality reduction plot*, *Violin plot*, *Dot Plot*. 
+Single Cell Visualization provides a visualization interface for single cell data hosted on GEO. The data lake working on its backend is updated regularly with new datasets. The app has different visualizations for understanding data: *Dimensionality reduction plot*, *Violin plot*, *Dot Plot*. 
 -->
 
 #Access through Polly Notebook interface
