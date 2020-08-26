@@ -16,7 +16,7 @@ Polly Discover consists of the following major components:
 
 *   On-the-fly Analysis: 
 
-    Once you have narrowed down relevant omics datasets, you can analyze the dataset(s) on the fly using various statistical analyses, displaying intuitive visualizations and allowing you to create a hitlist while analyzing multiple datasets simultaneously.
+    Once you have narrowed down relevant omics datasets, you can analyze the dataset(s) on the fly using various statistical analyses while displaying intuitive visualizations.
 
 ##Available public data repositories
 
@@ -38,8 +38,6 @@ Public data repositories on Polly consist of processed and curated datasets from
 
 *   COVID-19: Transcriptional datasets for SARS viruses, viral infections, and therapeutics for novel coronavirus.
 
-*   DEPMAP CCLE: DEPMAP Cancer cell line expression data and dependency scores for genes.
-
     
 
 Additionally, the public data repositories also consist of publicly available databases that have been curated for annotations. These publicly available databases are currently part of these repositories.
@@ -48,21 +46,16 @@ Additionally, the public data repositories also consist of publicly available da
     
 *   KEGG: Pathway information from Kyoto Encyclopedia of Genes and Genomes.
     
-*   Reactome: Pathway information from Reactome
-    
-*   GO: Gene Ontology from GO database.
+*   Reactome: Pathway information from Reactome.
     
 *   GWAS: Phenotypic data from Genome-Wide Association Studies Catalogue.
-    
-*   GENE_INFO: General Gene Information from Human Protein Atlas.
+
 
 #Data Lake Applications  
 
 Data Lake Applications are built on top of data lakes to query and explore relevant datasets. The following data lake applications are a part of the current platform:
 
-*   Polly Discover Application: Visualization and exploration platform for bulk transcriptomics data curated from GEO. 
-
-*   DepMap CCLE Application: Exploration application for cell line dependency and gene expression data from DepMap and CCLE. 
+*   Polly Discover Application: Visualization and exploration platform for bulk transcriptomics data curated from GEO.
 
 *   scViz Application: Visualization application for single cell studies. 
 
@@ -81,7 +74,11 @@ After selecting a repository, you’ll be able to see a dashboard and the Polly 
 
 Click on the below icon to start the discover app.
 
-![Discover App](../img/Discover/image3.png)
+<!-- ![Discover App](../img/Discover/image3.png) -->
+<p align="center">
+ <img src="../img/Discover/image3.png" alt="Discover App Icon"
+    title="Discover App Icon" /> 
+</p>
 
 The app will open and you should see the overview page which contains a brief **description** of the application, it's **scope** and the **usage** as shown below.
 
@@ -128,43 +125,53 @@ After clicking the *Analyze Data* button, the app will read the selected dataset
 
 *   **Principal Component Analysis (PCA)**
 
-    Principal Component Analysis: Also known as PCA plot, it is used to see the overall differences between cohorts of interest, if a strong separation is found along X axis (PC1) then that means strong biological differences between cohorts of interest. One can also increase the number of genes considered in the PCA plot, as one increases the number of genes, it is bound to decrease the PC1 component.
+    Principal Component Analysis: Also known as PCA plot, it is used to see the overall differences between cohorts of interest, if a strong separation is found along X axis (PC1) then that means strong biological differences between cohorts of interest. One can also increase the number of genes considered in the PCA plot, as one increases the number of genes, it is bound to decrease the PC1 component.  
+    <br />
 
 *   **Boxplot Visualization**
 
-    Boxplot can be really useful in understanding the distribution of expression within a dataset. For any downstream analysis such as differential expression or pathway analysis, the distribution has to be normal since they use tests which assume this distribution.
+    Boxplot can be really useful in understanding the distribution of expression within a dataset. For any downstream analysis such as differential expression or pathway analysis, the distribution has to be normal since they use tests which assume this distribution.  
+    <br />
     
 *   **Plots**
 
-    A box and whisker plot (a boxplot) is a graph that presents information from a five-number summary namely lower extreme, lower quartile, median, upper quartile, and upper extreme. In this plot, the median is marked by a vertical line inside the box; the ends of the box are upper and lower quartiles; the two lines outside the box extend to the highest and lowest observations. It is useful for knowing the nature of distribution (i.e., skewed) and potential unusual observations.
+    A box and whisker plot (a boxplot) is a graph that presents information from a five-number summary namely lower extreme, lower quartile, median, upper quartile, and upper extreme. In this plot, the median is marked by a vertical line inside the box; the ends of the box are upper and lower quartiles; the two lines outside the box extend to the highest and lowest observations. It is useful for knowing the nature of distribution (i.e., skewed) and potential unusual observations.  
+    <br />
 
 *   **Heatmap**
 
-    A heatmap is a graphical representation of data that uses a system of color-coding to represent different values. This heatmap shows the cohort wise mean expression of a particular gene. The samples are aggregated on the basis of a given cohort and the mean is calculated based on the cohort information.
+    A heatmap is a graphical representation of data that uses a system of color-coding to represent different values. This heatmap shows the cohort wise mean expression of a particular gene. The samples are aggregated on the basis of a given cohort and the mean is calculated based on the cohort information.  
+    <br />
     
 *   **Differential Expression**
 
-    Differential expression analysis means taking the normalised read count data and performing statistical analysis to discover quantitative changes in expression levels between experimental groups. For example, we use statistical testing to decide whether, for a given gene, an observed difference in read counts is significant, that is, whether it is greater than what would be expected just due to natural random variation.
+    Differential expression analysis means taking the normalised read count data and performing statistical analysis to discover quantitative changes in expression levels between experimental groups. For example, we use statistical testing to decide whether, for a given gene, an observed difference in read counts is significant, that is, whether it is greater than what would be expected just due to natural random variation.  
+    <br />
     
 *   **X2K Analysis**
 
-    X2K infers upstream regulatory networks from signatures of differentially expressed genes. By combining transcription factor enrichment analysis, protein-protein interaction network expansion, with kinase enrichment analysis, X2K produces inferred networks of transcription factors, proteins, and kinases predicted to regulate the expression of the inputted gene list.
+    X2K infers upstream regulatory networks from signatures of differentially expressed genes. By combining transcription factor enrichment analysis, protein-protein interaction network expansion, with kinase enrichment analysis, X2K produces inferred networks of transcription factors, proteins, and kinases predicted to regulate the expression of the inputted gene list.  
+    <br />
 
 *   **Gene Ontology Plot**
 
-    Gene Ontology Annotation Plot is a simple but useful tool for visualizing, comparing and plotting GO (Gene Ontology) annotation results.
+    Gene Ontology Annotation Plot is a simple but useful tool for visualizing, comparing and plotting GO (Gene Ontology) annotation results.  
+    <br />
     
 *   **Enrichr**
 
-    Enrichr, includes new gene-set libraries, an alternative approach to rank enriched terms, and various interactive visualization approaches to display enrichment results using the JavaScript library, Data Driven Documents (D3).
+    Enrichr, includes new gene-set libraries, an alternative approach to rank enriched terms, and various interactive visualization approaches to display enrichment results using the JavaScript library, Data Driven Documents (D3).  
+    <br />
     
 *   **GSEA** 
 
-    Gene Set Enrichment Analysis (GSEA) is a computational method that determines whether an a priori defined set of genes shows statistically significant, concordant differences between two biological states (e.g. phenotypes).
+    Gene Set Enrichment Analysis (GSEA) is a computational method that determines whether an a priori defined set of genes shows statistically significant, concordant differences between two biological states (e.g. phenotypes).  
+    <br />
 
 *   **Specific Pathway Visualization using Pathview**
 
-    Pathview maps, integrates and renders a wide variety of biological data on relevant pathway graphs.
+    Pathview maps, integrates and renders a wide variety of biological data on relevant pathway graphs.  
+    <br />
 
 ![Analyses possible](../img/Discover/image8.png)
 
@@ -299,28 +306,27 @@ discover</code></pre>
 
 ![Discover object](../img/Discover/image14.png)
 
-*   List all available endpoints for public data repositories along with their index
+*   List all available data repositories along with their indices.
 
-<pre><code>discover.get_endpoints()</code></pre>
+<pre><code>discover.get_repositories()</code></pre>
 
 ![Endpoints for public data](../img/Discover/image15.png)
 
-*   Add a dataset repository file index
+*   Set a repository for fetching the different endpoints.
 
-This index contains all file names, their paths in the cloud along with any relevant metadata.
+    Choose a repository from the list of repositories and use it's corresponding it to set the discover object to point to that repository.
 
-<pre><code>discover.set_dataset_repo("aml_files")</code></pre>
+    *   For single cell repositories use mode='single_cell'.
 
-*   Add a sample index
+    *   For bulk data repositories use mode='bulk' (default)
 
-This index contains information at the sample level (columns of a matrix) with any relevant metadata.
+For *geo* repository *repo_id* is **16**.
 
-<pre><code>discover.set_dataset_repo("aml_gct_metadata")</code></pre>
+<pre><code>discover.set_repo('16')</code></pre>
 
-*   Add a feature index
-This index contains information at the feature level (rows of a matrix). Every data value in the matrix is saved in this repository feature wise.
+For *sc_data_lake* repository *repo_id* is **17**.
 
-<pre><code>discover.set_feature_repo("aml_gct_data")</code></pre>
+<pre><code>discover.set_repo("17", mode="single_cell")</code></pre>
 
 After you’ve added the indices for a repository, you can view the discover object
 
@@ -359,10 +365,6 @@ To search for datasets, the ‘\_files’ index can be searched using the metada
 <pre><code>dataset_query_df = discover.dataset_repo.query_dataset_by_field("description","mll") dataset_query_df</code></pre>
 
 ![Search for a dataser](../img/Discover/image19.png)
-
-*   Download file for a dataset by key
-
-<pre><code>discover.download_file_by_key(dataset_query_df["_source.__key__"][14])</code></pre>
 
 ##Querying at the sample level
 
@@ -477,8 +479,7 @@ You can also perform more complex queries on multiple fields combining them with
 
     *   \_\_file_name\_\_: Name of the file with file extentions such as gct, h5ad etc.
 
-<pre><code>discover.get_file("AML_data_lake/data/Microarray/
-GSE76320/GSE76320_GPL8321_curated.gct, 2, GSE76320_GPL8321_curated.gct)</code></pre>
+<pre><code>discover.get_file('AML_data_lake/data/Microarray/GSE76320/GCT/GSE76320_GPL8321_curated.gct', '1', 'GSE76320_GPL8321_curated.gct')</code></pre>
 
 #Videos
 
