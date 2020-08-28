@@ -281,7 +281,7 @@ Single Cell Visualization provides a visualization interface for single cell dat
 
 **Opening the app**
 
-Upon opening the Discover module on Polly, choose a relevant data repository which hosts single cell data. 
+Upon opening the Discover application on Polly, choose a relevant data repository which hosts single cell data. 
 
 ![Polly Discover](../img/Discover/Discover.png)
 
@@ -289,11 +289,11 @@ After selecting a repository, you’ll be able to see a dashboard and the Polly 
 
 ![Repository Dashboard](../img/Discover/single_1.png)
 
-Click on the below icon to start the single cell app.
+Click on the below icon to start the Single Cell app.
 
 ![single cell App](../img/Discover/single_2.png)
 
-The app will open and you should see the overview page which contains a brief Overview of the application, the Scope and Caveats as shown below.
+The app will open and you should see the overview page which contains a brief overview of the application, scope and caveats as shown below.
 
 ![App Description](../img/Discover/single_3.png)
 
@@ -321,7 +321,7 @@ Search for relevant datasets by navigating to the *Dataset Search* tab in the na
 
 ![Search options](../img/Discover/single_4.png)
 
-The search will return all datasets that are associated with your search. The result should look like the image below.
+The search will return all datasets that are associated with your search. The result should look like as shown below.
 
 ![Search results](../img/Discover/single_5.png)
 
@@ -341,7 +341,7 @@ This tab provides quick summary of the selected dataset. The tab reveals the no.
 
 ![Value Boxes](../img/Discover/single_7.png)
     
-Below it lies the Metadata summary table which contains the different metadata fields and their categories. The table is searchable and clicking on a particular metadata shows it's distribution. For instance if you want to see the distribution of cell types in a study, you can search the keyword 'cell_type' in *name* search box. Upon click on it a table describing the distribution of cell types will popup.
+Below it lies the metadata summary table which contains the different metadata fields and their categories. The table is searchable and clicking on a particular metadata shows it's distribution. For instance if you want to see the distribution of cell types in a study, you can search the keyword 'cell_type' in *name* search box. Upon click on it a table describing the distribution of cell types will popup.
 
 ![Metadata Table](../img/Discover/single_8.png)
 
@@ -377,7 +377,7 @@ The *Marker dot plot* panel, is the area for exploring the average expression an
     
 ![Marker Dot plot](../img/Discover/single_15.png)
 
-The *Marker Violin plot* panel is the area for exploring the marker distribution using violin plot in an interactive fashion. Using Customize Violin slider, the range of values used for plotting violin can be adjusted. It is useful for observing a section of data such as the non-zero values of the expression. 
+The *Marker Violin plot* panel is the area for exploring the marker distribution using violin plot in an interactive fashion. Using *Customize Violin* slider, the range of values used for plotting violin can be adjusted. It is useful for observing a section of data such as the non-zero values of the expression. 
 
 ![Marker Violin plot](../img/Discover/single_16.png)
 
@@ -392,7 +392,7 @@ Potential use-case example: What is the expression of SARS-CoV2 virus entry spec
 
 ![Use case](../img/Discover/single_18.png)
     
-The Cell Type Aggregation tab provides the input in the form of text field where query can be made for a gene, using our internal discover services, the input gene is queried across all the datasets in which it is expressed in the repository. To check for ACE2 expression, simply enter ACE2 in the search field. After entering the gene, clicking on *Search gene* will generate a bar plot showing the median expression and the distribution of gene expression across different studies.
+The *Cell Type Aggregation* tab provides the input in the form of text field where query can be made for a gene, using our internal discover services, the input gene is queried across all the datasets in which it is expressed in the repository. To check for ACE2 expression, simply enter ACE2 in the search field. After entering the gene, clicking on *Search gene* will generate a bar plot showing the median expression and the distribution of gene expression across different studies.
 
 ![Cell-type aggregation plot](../img/Discover/single_19.png)
 
