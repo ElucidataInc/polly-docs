@@ -56,7 +56,6 @@ Data Lake Applications are built on top of data lakes to query and explore relev
 *   Polly Discover Application: Visualization and exploration platform for bulk transcriptomics data curated from GEO.
 
 *   DepMap CCLE: Exploration application for cell line dependency and gene expression data from DepMap and CCLE. 
--->
 
 *   Single Cell Visualziation: Visualization application for single cell studies. 
 
@@ -284,7 +283,7 @@ Clicking on *Plot* processes the data and the result of the query is a heatmap w
 Single Cell Visualization provides a visualization interface for single cell data hosted on GEO. The data lake working on its backend is updated regularly with new datasets. The app has different visualizations for understanding data: *Dimensionality reduction plot*, *Violin plot*, *Dot Plot*. 
 -->
 
-##Single Cell Visualziation
+##Single Cell Visualization
 
 **Opening the app**
 
