@@ -8,19 +8,16 @@
   <p class="new-button">New</p>
   <ul>
     <li>Introduced a metabolomics docker equipped with packages for analysis of metabolomics data.</li>
-    <li>Added restore functionality to all the <a href="https://docs.elucidata.io/Data%20Lake.html#data-lake-applications"> Data Lake Applications</a>.</li>
+    <li>Added restore functionality to all the <a href="https://docs.elucidata.io/Data%20Lake.html#data-lake-applications"> Data Lake applications</a>.</li>
     <li>Added boxplots for lipids in <a href="https://docs.elucidata.io/Apps/Lipidomics%20Data/Lipidomics%20Visualization%20Dashboard.html"> Lipidomics application</a>.</li>
   </ul>
   <p class="update-button">Update</p>
   <ul>
-    <li>Polly’s Infrastructure is now in a private cloud network of its own, secluded from the internet.</li>
-    <li>Enable Encryption of temporary storage used in Compute, Discover and Worker Cloud.</li>
-    <li>Updated discoverpy package in all the dockers to latest version.</li>
-    <li>Brought down the notebook opening error from 6% to 0%.</li>
-    <li>Fixed cellxgene visualization loading for specific datasets in datalakes.</li>
-    <li> Fixed duplicate metabolite issue in IntOmix input data generated within the Dual Mode Visualization Application.</li>
+    <li>Updated discoverpy package in all the dockers to the latest version.</li?
+    <li>Fixed CellxGene visualization loading for specific datasets.</li>
+    <li>Fixed duplicate metabolite generation issue within the <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Dual%20Mode%20Visualization.html"> Dual Mode Data Visualization application</a>.</li>
     <li>Fixed workspaces UI issues.</li>
-    <li>Increased the workspace loading speed.</li>
+    <li>Decreased the workspace loading time.</li>
   </ul>
 </details>
 
@@ -37,7 +34,9 @@
     <li>Introduced <a href="https://docs.elucidata.io/Getting%20Started/Workspaces.html"> Workspaces</a> on Polly, which is a new and improved version of Polly Projects.</li>
     <li>Added GTEx app to process the filtered datasets from GTEx data lake.</li>
     <li>Added a filtering interface for GTEx data lake that allows filtering of the data on the basis of fields within the curated dataset.</li>
-    <li>Intergrated <a href="https://docs.elucidata.io/Data%20Lake.html#polly-discover-app"> Discover</a> and <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Dual%20Mode%20Visualization.html"> Dual Mode Visualization</a> for processing and further analysis of transcriptomic and metabolomic and single cell filtered datasets.</li>
+    <li>Intergrated <a href="https://docs.elucidata.io/Data%20Lake.html#polly-discover-app"> Discover</a> and <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Dual%20Mode%20Visualization.html"> 
+      
+      Visualization</a> for processing and further analysis of transcriptomic and metabolomic and single cell filtered datasets.</li>
     <li>Integrated <a href="https://docs.elucidata.io/Scaling%20compute/Polly%20Notebooks.html"> Notebook</a> to process the filtered datasets.</li>
     <li>Hosted <a href="https://chanzuckerberg.github.io/cellxgene/">CellxGene</a> for processing and visualization of single cell datasets.</li>
   </ul>
