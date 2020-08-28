@@ -1,8 +1,35 @@
 #Release Notes
 
-<!--August 14th, 2020-->
+<!--August 28th, 2020-->
 
 <details open>
+<summary><font size="+1"><b>August 28th, 2020</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>Introduced a metabolomics docker equipped with packages for analysis of metabolomics data.</li>
+    <li>Added restore functionality to all the <a href="https://docs.elucidata.io/Data%20Lake.html#data-lake-applications"> Data Lake Applications</a>.</li>
+    <li>Added boxplots for lipids in <a href="https://docs.elucidata.io/Apps/Lipidomics%20Data/Lipidomics%20Visualization%20Dashboard.html"> Lipidomics application</a>.</li>
+  </ul>
+  <p class="update-button">Update</p>
+  <ul>
+    <li>Polly’s Infrastructure is now in a private cloud network of its own, secluded from the internet.</li>
+    <li>Enable Encryption of temporary storage used in Compute, Discover and Worker Cloud.</li>
+    <li>Updated discoverpy package in all the dockers to latest version.</li>
+    <li>Brought down the notebook opening error from 6% to 0%.</li>
+    <li>Fixed cellxgene visualization loading for specific datasets in datalakes.</li>
+    <li> Fixed duplicate metabolite issue in IntOmix input data generated within the Dual Mode Visualization Application.</li>
+    <li>Fixed workspaces UI issues.</li>
+    <li>Increased the workspace loading speed.</li>
+  </ul>
+</details>
+
+<hr>
+
+
+<!--August 14th, 2020-->
+
+<details>
 <summary><font size="+1"><b>August 14th, 2020</b></font></summary>
 <br>
   <p class="new-button">New</p>
