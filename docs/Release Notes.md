@@ -1,8 +1,32 @@
 #Release Notes
 
-<!--August 14th, 2020-->
+<!--August 28th, 2020-->
 
 <details open>
+<summary><font size="+1"><b>August 28th, 2020</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>Introduced a metabolomics docker equipped with packages for analysis of metabolomics data.</li>
+    <li>Added restore functionality to all the <a href="https://docs.elucidata.io/Data%20Lake.html#data-lake-applications"> Data Lake applications</a>.</li>
+    <li>Added boxplots for lipids in <a href="https://docs.elucidata.io/Apps/Lipidomics%20Data/Lipidomics%20Visualization%20Dashboard.html"> Lipidomics application</a>.</li>
+  </ul>
+  <p class="update-button">Update</p>
+  <ul>
+    <li>Updated discoverpy package in all the dockers to the latest version.</li?
+    <li>Fixed CellxGene visualization loading for specific datasets.</li>
+    <li>Fixed duplicate metabolite generation issue within the <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Dual%20Mode%20Visualization.html"> Dual Mode Data Visualization application</a>.</li>
+    <li>Fixed workspaces UI issues.</li>
+    <li>Decreased the workspace loading time.</li>
+  </ul>
+</details>
+
+<hr>
+
+
+<!--August 14th, 2020-->
+
+<details>
 <summary><font size="+1"><b>August 14th, 2020</b></font></summary>
 <br>
   <p class="new-button">New</p>
