@@ -34,9 +34,7 @@
     <li>Introduced <a href="https://docs.elucidata.io/Getting%20Started/Workspaces.html"> Workspaces</a> on Polly, which is a new and improved version of Polly Projects.</li>
     <li>Added GTEx app to process the filtered datasets from GTEx data lake.</li>
     <li>Added a filtering interface for GTEx data lake that allows filtering of the data on the basis of fields within the curated dataset.</li>
-    <li>Intergrated <a href="https://docs.elucidata.io/Data%20Lake.html#polly-discover-app"> Discover</a> and <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Dual%20Mode%20Visualization.html"> 
-      
-      Visualization</a> for processing and further analysis of transcriptomic and metabolomic and single cell filtered datasets.</li>
+    <li>Intergrated <a href="https://docs.elucidata.io/Data%20Lake.html#polly-discover-app"> Discover</a> and <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Dual%20Mode%20Visualization.html"> Dual Mode Visualization</a> for processing and further analysis of transcriptomic and metabolomic and single cell filtered datasets.</li>
     <li>Integrated <a href="https://docs.elucidata.io/Scaling%20compute/Polly%20Notebooks.html"> Notebook</a> to process the filtered datasets.</li>
     <li>Hosted <a href="https://chanzuckerberg.github.io/cellxgene/">CellxGene</a> for processing and visualization of single cell datasets.</li>
   </ul>
