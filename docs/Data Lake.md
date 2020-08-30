@@ -68,7 +68,7 @@ Once these filters are applied, the dashboard will get updated accordingly.
 
 ##Dataset Filtering Dashboard
 
-For smaller data lakes, we provide a dataset filtering interface. It allows you to explore and filter the relevant datasets present in the Data Lake. 
+For smaller data lakes, we provide a dataset filtering interface. It allows you to explore and filter the relevant datasets present in the data lake. 
 
 ### Filters and Columns
 
@@ -116,13 +116,13 @@ Once you have narrowed down relevant omics datasets, you can mark a selection on
 
 ### On-the-fly Analysis
 
-You can analyze the selected dataset on the fly using various tools on Polly and Polly Notebooks.. They enable you to perform various statistical analyses, displaying intuitive visualizations, and allowing you to create a hitlist while analyzing multiple datasets simultaneously.
+You can analyze the selected dataset on the fly using various applications on Polly. They enable you to perform various statistical analyses, displaying intuitive visualizations, and allowing you to create a hitlist while analyzing multiple datasets simultaneously.
 
-In order to select the tool of your analysis, click on the Select the Application option present at the bottom of the screen after selection of any dataset from the list and choose the analysis platform of your interest and click on open.
+In order to select the tool of your analysis, click on *Select the Application* option at the bottom of the screen after selection of any dataset from the list and choose the analysis platform of your interest and click on open.
 
 ![Selecting an application](../img/Discover/ORC3.png)
 
-Select the workspace where you would like to store the analysis and click on Launch to open the selected application/notebook.
+Select the workspace where you would like to store the analysis and click on *Launch* to open the selected application/notebook.
 
 ![Launching workspace](../img/Discover/ORC4.png)
 
