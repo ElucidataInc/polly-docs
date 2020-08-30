@@ -289,7 +289,7 @@ Single Cell Visualization provides a visualization interface for single cell dat
 
 **Opening the app**
 
-Using GTEx card on the Discover portal GTEx tissues can be accessed. 
+GTEx respository can be accessed using the GTEx card on Discover. 
 
 ![Polly GTEx](../img/Discover/GTEx.png)
 
@@ -311,7 +311,7 @@ Principal Component Analysis: Also known as PCA plot, it is used to see the over
 
 ![Metadata Table](../img/Discover/GTEx_4.png)
 
-The tab provides a metadata table to check different characterstics of samples. Further various parameters of PCA can be adjusted. 
+The tab provides a metadata table to check different characterstics of samples. Furthermore various parameters of PCA can be adjusted. 
 
 ![PCA Parameters](../img/Discover/GTEx_5.png)
 
@@ -336,7 +336,7 @@ Upon selecting the *Pathway Visualization* option, pathway specific genes can be
 
 *GTEx Expression Map* can be used to explore the distribution of selected genes in different GTEx tissues. After exploring the selected tissue and finding list of genes of interest, it presents visualization methods like *GTEx Expression Violin* and *GTEx Expression Heatmap* to study the distribution of genes across different tissues. 
 
-A Single gene can be selected to plot violin for it's expression across different tissues. 
+A single gene can be selected to plot violin for it's expression across different tissues. 
 
 ![GTEX Expression Violin](../img/Discover/GTEx_10.png)
 
