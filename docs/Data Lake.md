@@ -150,6 +150,11 @@ Data Lake Applications are built on top of data lakes to query and explore relev
 
     Exploration application for cell line dependency and gene expression data from DepMap and CCLE.  
     <br />
+    
+*   **[GTEx Application](https://docs.elucidata.io/Data%20Lake.html#gtex)**
+
+    GTEx Application is is a platform for visualization, analytics, and exploration of transcriptomics data from GTEx.  
+    <br />
 
 *   **[Dual Mode Data Visualization(Metabolomics App:](https://docs.elucidata.io/Apps/Metabolomic%20Data/Dual%20Mode%20Visualization.html)**
 
