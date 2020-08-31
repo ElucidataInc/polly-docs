@@ -28,6 +28,8 @@ nav:
         - Lipidomics Visualization Dashboard: Apps/Lipidomics Data/Lipidomics Visualization Dashboard.md
       - Multi-omic Data:
         - IntOmix: Apps/Multi-omic Data/IntOmix.md
+      - Data studio:
+        - Data Studio Application: Datastudio.md
   - Scaling Compute: 
       - Polly CLI: Scaling compute/Polly CLI.md
       - Notebooks: Scaling compute/Polly Notebooks.md
