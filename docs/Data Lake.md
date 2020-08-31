@@ -48,20 +48,133 @@ Additionally, the public data repositories also consist of publicly available da
     
 *   GWAS: Phenotypic data from Genome-Wide Association Studies Catalogue.
 
+#Dataset Filtering
+
+## Kibana Dashboard
+
+After selecting a Data Lake, you’ll be able to see a repository overview dashboard. For bigger data lakes,this dashboard is provided to give you an overview of the repository, for instance, the number of data sets in the repository, distribution of tissues, organisms, etc. among the datasets.
+
+![Repository Dashboard](../img/Discover/1.png)
+
+You can filter the datasets of the data lake either by selecting the fields of interest from the input control panel.
+
+![Dashboard Filtering](../img/Discover/2.png)
+
+You can also add your own query. Just click on *add filter* to choose the addition filter field.
+
+![Filter Query](../img/Discover/3.png)
+
+Once these filters are applied, the dashboard will get updated accordingly.
+
+##Dataset Filtering Dashboard
+
+For smaller data lakes, we provide a dataset filtering interface. It allows you to explore and filter the relevant datasets present in the data lake. 
+
+### Filters and Columns
+
+![Filters and columns](../img/Discover/ORC1.png)
+
+The filtering interface provides **4 parameters** that you can use to filter the datasets within the selected repository. The parameters are:
+
+*    Disease: This option will give you an overview of all the diseased type datasets present in the repository. You can choose to work on any of the disease options listed or the normal datasets. In order to do the selection, mark the checkboxes present besides the disease of your interest.
+
+*    Organism: It provides the list of the organisms associated with the datasets of the datalake. You can mark a selection to filter the datasets of only the desired organism.
+
+*    Tissue: This section will give you the distribution of tissue across the repository. Click on Load More to look at the entire list, or use the search option to find the tissue type you are looking for. Select the tissue type required to filter the datasets specific to it.
+
+*    Data Type: The dataset variety would be listed in this option. Choose the data type for your study by selecting the checkbox beside it.
+
+When the selections are marked, you can find the filtered datasets on the right panel. 
+
+**Note:**
+
+*    You can select multiple entries at the same time.
+
+*    To clear your filters at any point in time, click on the clear option present beside all the parameters.
+
+### Dataset Selection
+
+![Dataset selection](../img/Discover/ORC2.png)
+
+The right panel displays the dataset present in the repository. It incorporates the
+
+*    Dataset ID: Unique identifier associated with the dataset.
+
+*    Description: It encompasses the title of the paper.
+
+*    Organism: Organism associated with the dataset
+
+*    Datatype: Datatype of the dataset e.g. Transcriptomic, Metabolomics, Single Cell etc
+
+*    Disease: Disease studied with the selected dataset
+
+*    Tissue: Type of tissue the dataset is from
+
+*    Source: Provides the link to the publication
+
+Once you have narrowed down relevant omics datasets, you can mark a selection on the checkbox present beside the desired dataset.
+
+### On-the-fly Analysis
+
+You can analyze the selected dataset on the fly using various applications on Polly. They enable you to perform various statistical analyses, displaying intuitive visualizations, and allowing you to create a hitlist while analyzing multiple datasets simultaneously.
+
+In order to select the tool of your analysis, click on *Select the Application* option at the bottom of the screen after selection of any dataset from the list and choose the analysis platform of your interest and click on open.
+
+![Selecting an application](../img/Discover/ORC3.png)
+
+Select the workspace where you would like to store the analysis and click on *Launch* to open the selected application/notebook.
+
+![Launching workspace](../img/Discover/ORC4.png)
+
 
 #Data Lake Applications  
 
 Data Lake Applications are built on top of data lakes to query and explore relevant datasets. The following data lake applications are a part of the current platform:
 
-*   Polly Discover Application: Visualization and exploration platform for bulk transcriptomics data curated from GEO.
+*   **[Polly Discover Application:](https://docs.elucidata.io/Data%20Lake.html#discover)**
 
-*   DepMap CCLE: Exploration application for cell line dependency and gene expression data from DepMap and CCLE. 
+    It is a platform for visualization, analytics, and exploration for bulk transcriptomics data curated from GEO. It offers users an interactive dashboard for analysis and visualization of transcriptomics data. Currently, the platform handles gene expression microarray and RNA-seq data and supports three species human, mouse, and rat.  
+    <br />
 
-*   Single Cell Visualziation: Visualization application for single cell studies. 
+*   **[Single Cell Visualziation:](https://docs.elucidata.io/Data%20Lake.html#single-cell-visualization)**
 
+    It is a comprehensive visualization platform for single-cell transcriptomics data. The app is helpful in visualizing cells and the association of different genes with the metadata.  
+    <br />
+    
+*   **[Cellxgene:](https://chanzuckerberg.github.io/cellxgene/posts/annotations)**
 
+    It is an interactive data explorer for single-cell transcriptomics datasets.  
+    <br />
+ 
+*   **DepMap CCLE:**
 
-##Discover
+    Exploration application for cell line dependency and gene expression data from DepMap and CCLE.  
+    <br />
+    
+*   **[GTEx Application](https://docs.elucidata.io/Data%20Lake.html#gtex)**
+
+    GTEx Application is is a platform for visualization, analytics, and exploration of transcriptomics data from GTEx.  
+    <br />
+
+*   **[Dual Mode Data Visualization(Metabolomics App:](https://docs.elucidata.io/Apps/Metabolomic%20Data/Dual%20Mode%20Visualization.html)**
+
+    This app allows you to perform downstream analysis on untargeted unlabeled metabolomics data along with insightful visualizations. It provides a variety of normalization methods, scaling options, and data visualization functionalities, thereby allowing an efficient analysis of the data to get actionable insights.  
+    <br />
+
+*   **[Discover Notebook:](https://docs.elucidata.io/Scaling%20compute/Polly%20Notebooks.html)**
+
+    This app allows you to perform downstream analysis on untargeted unlabeled metabolomics data along with insightful visualizations. It provides a variety of normalization methods, scaling options, and data visualization functionalities, thereby allowing an efficient analysis of the data to get actionable insights.  
+    <br />
+
+| Polly Notebooks| Docker      | Machine Configuration   |
+|---------------|-----------|-------|
+| Discover Notebook Single-cell  | Single Cell Downstream   | Memory-optimized 32GB, Polly 2x-large |
+| Discover Notebook Transcriptomics  | RNA-Seq Downstream     | RNA-Seq Downstream  |
+| Discover Notebook Proteomics   | RNA-Seq Downstream   | Polly medium 4GB  |
+| Discover Notebook Metabolomics| Metabolomics | Polly medium 4GB |
+    
+
+# Polly Discover Application
 
 **Opening the app**
 
@@ -282,6 +395,66 @@ Clicking on *Plot* processes the data and the result of the query is a heatmap w
 
 Single Cell Visualization provides a visualization interface for single cell data hosted on GEO. The data lake working on its backend is updated regularly with new datasets. The app has different visualizations for understanding data: *Dimensionality reduction plot*, *Violin plot*, *Dot Plot*. 
 -->
+
+##GTEx 
+
+**Opening the app**
+
+GTEx respository can be accessed using the GTEx card on Discover. 
+
+![Polly GTEx](../img/Discover/GTEx.png)
+
+After selecting the repository, you’ll be able to see a dashboard with different tissues. Select a dataset and use GTEx application to explore the dataset. 
+
+![Repository Dashboard](../img/Discover/GTEx_2.png)
+
+The app will open and you should see the overview page which contains a brief overview of the application, scope and caveats as shown below.
+
+![App Description](../img/Discover/GTEx_3.png)
+
+**Analyzing a dataset**
+
+As the application starts, it will load the requested dataset. Once it is loaded, it can be explored. 
+
+*   **Principal Component Analysis (PCA)**
+
+Principal Component Analysis: Also known as PCA plot, it is used to see the overall differences between cohorts of interest, if a strong separation is found along X axis (PC1) then that means strong biological differences between cohorts of interest. It provides an aspect to check the quality control of different samples. 
+
+![Metadata Table](../img/Discover/GTEx_4.png)
+
+The tab provides a metadata table to check different characterstics of samples. Furthermore various parameters of PCA can be adjusted. 
+
+![PCA Parameters](../img/Discover/GTEx_5.png)
+
+A publication quality and an interactive version of the PCA plot is available to explore. 
+
+![PCA Plot](../img/Discover/GTEx_6.png)
+
+*   **Bar Plot**
+
+*Barplot* provides exploration of different genes either standalone or as a part of different pathways. The distribution can be grouped by different metadata cohorts such as tissue type or tissue-subtype. 
+
+Using the *Gene Expression* toggle, different genes can be queried for different samples. 
+
+![Gene Expression](../img/Discover/GTEx_7.png)
+
+Upon selecting the *Pathway Visualization* option, pathway specific genes can be selected. At a given time more than one pathways can be selected  
+
+![Pathway Visualization](../img/Discover/GTEx_8.png)
+![Pathway Visualization Plot](../img/Discover/GTEx_9.png)
+    
+*   **GTEx Expression Map**
+
+*GTEx Expression Map* can be used to explore the distribution of selected genes in different GTEx tissues. After exploring the selected tissue and finding list of genes of interest, it presents visualization methods like *GTEx Expression Violin* and *GTEx Expression Heatmap* to study the distribution of genes across different tissues. 
+
+A single gene can be selected to plot violin for it's expression across different tissues. 
+
+![GTEX Expression Violin](../img/Discover/GTEx_10.png)
+
+Multipe genes can be used to make a heatmap for different tissues. 
+    
+![GTEx Expression Heatmap](../img/Discover/GTEx_11.png)
+
 
 ##Single Cell Visualization
 

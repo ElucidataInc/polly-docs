@@ -16,8 +16,8 @@
     <li>Updated discoverpy package in all the dockers to the latest version.</li?
     <li>Fixed CellxGene visualization loading for specific datasets.</li>
     <li>Fixed duplicate metabolite generation issue within the <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Dual%20Mode%20Visualization.html"> Dual Mode Data Visualization application</a>.</li>
-    <li>Fixed workspaces UI issues.</li>
-    <li>Decreased the workspace loading time.</li>
+    <li>Fixed minor UI issues in Workspaces.</li>
+    <li>Decreased Workspaces loading time.</li>
   </ul>
 </details>
 
