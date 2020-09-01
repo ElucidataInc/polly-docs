@@ -12,7 +12,9 @@ This starter guide provides a broad overview of the platform to get you started 
 
     To sign in to the Polly platform, you must have an account. Account credentials can be generated for both temporary, limited access as well as enterprise accounts. Reach out to our team at [polly@elucidata.io](mailto:polly@elucidata.io) for your login credentials.
 
-    We recommend using Chrome as a browser for accessing Polly. It is not fully compatible with other browsers.
+    **Note:**
+
+    *    We recommend using chrome for an optimized experience.
 
 *   **Login to the platform**
 
