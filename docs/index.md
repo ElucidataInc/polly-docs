@@ -14,7 +14,7 @@ This starter guide provides a broad overview of the platform to get you started 
 
     **Note:**
 
-    *    We recommend using chrome for an optimized experience.
+    *    We recommend using Google Chrome for an optimized experience.
 
 *   **Login to the platform**
 
