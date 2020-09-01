@@ -29,7 +29,8 @@ nav:
       - Multi-omic Data:
         - IntOmix: Apps/Multi-omic Data/IntOmix.md
       - Data studio:
-        - Data Studio Application: Datastudio.md
+        - Introduction: Datastudio.md
+        - CCLE correlation analysis: ccle.md
   - Scaling Compute: 
       - Polly CLI: Scaling compute/Polly CLI.md
       - Notebooks: Scaling compute/Polly Notebooks.md
