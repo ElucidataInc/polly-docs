@@ -56,6 +56,9 @@ To process dual mode data, the following files are required:
 *   An already processed .gct file can also serve as input to the app.
 *   The internal standard file is optional.
 
+#Caveats
+Pathways analysis only works when the data has KEGG Ids within the “compoundId” column.
+
 #Tutorial
 
 Select *Dual Mode Data Visualization (Metabolomics App)* from the dashboard under the *Metabolomics Data* Tab as shown in Figure 8. Create a *New Workspace* or choose from the existing one from the dop-down and provide the *Name of the Session* to be redirected to Dual Mode Data Visualisation (Metabolomics App)'s upload page.
