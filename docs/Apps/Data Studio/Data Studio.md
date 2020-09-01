@@ -39,7 +39,7 @@ You can explore the Polly Data Studio in two ways:
 
 Studio core allows you to build and use your own custom workflow in Data Studio. It enables you to explore and define a workflow and ultimately visualize your data on a fully customizable dashboard and report.
 
-**Build:** It provides the flexibility to break down the goal of a workflow into the steps that should be executed by the workflow. Use any of the components from the component library for the chosen step of the analysis. Select and add different components to grow your workflow You can then arrange the steps to complete your workflow. If you can’t find the one you are looking for, make your own custom component and host it within your workflow.
+**Build:** It provides the flexibility to break down the goal of a workflow into the steps that should be executed by the workflow. Use any of the components from the component library for the chosen step of the analysis. Select and add different components to grow your workflow. You can then arrange the steps to complete your workflow. If you can’t find the one you are looking for, make your own custom component and host it within your workflow.
 
 **Visualize:** Easily interact with the parameters of the selected components and customize your data visualizations through highly configurable charts like line, bar, and pie charts, area, and bubble graphs and tables, and more.
 
@@ -168,16 +168,16 @@ Let's say you have two plots in your dashboard. After you insert the component,
 
 *    *Column*: Lets you add an additional column in the dashboard
 
-*    *Row***:** Lets you add an additional row in the dashboard
+*    *Row*: Lets you add an additional row in the dashboard
 
-*    *Header**:*** Lets you add a header to the dashboard
+*    *Header*: Lets you add a header to the dashboard
 
-*    *Markdown*: In this section, we will add some text to our dashboard. Within the *Insert* components pane, drag and drop a* Markdown*box on the dashboard. Now to edit the text, select the box. You can enter text in markdown format (see [this Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet "https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet") for more information about this format). You can toggle between **Edit** and **Preview** using the menu on the top of the box.
+*    *Markdown*: In this section, we will add some text to our dashboard. Within the *Insert* components pane, drag and drop a* Markdown*box on the dashboard. Now to edit the text, select the box. You can enter text in markdown format (see [this Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet "https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet") for more information about this format). You can toggle between *Edit* and *Preview* using the menu on the top of the box.
 
 
 ![Markdown](../img/Datastudio/15.png)
 
-*    *Divider**:*** Use this to divide different sections of your dashboard
+*    *Divider*: Use this to divide different sections of your dashboard
 
 
 **Note:** 
