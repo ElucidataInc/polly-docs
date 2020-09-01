@@ -214,14 +214,6 @@ This tab allows you to perform quality checks for the internal standards, metabo
 
 It allows you to have a look at the quality of the internal standards used in the data with the help of the different visualizations for any individual as well as for all internal standards.
 
-*   Internal Standards (All): You can visualize Coefficient of Variance, Standards Intensity, Standards Intensity-CoV across all the internal standards present in the data. For dual mode data, the plots will be displayed for the internal standards in negative and positive mode.
-
-![Coefficient of Variance across Standards plot](../../img/DualMode/metab_app_cov_across_stds.png) <center>**Figure 27.** Coefficient of Variance across Standards plot</center>
-
-![Standards Intensity plot](../../img/DualMode/metab_app_stds_intensity.png) <center>**Figure 28.** Standards Intensity plot</center>
-
-![Standards Intensity-CoV vs Mean plot](../../img/DualMode/metab_app_stds_int_cov_vs_mean.png) <center>**Figure 29.** Standards Intensity-CoV *vs* Mean plot</center>
-
 *   Internal Standards (Individual): You can visualize the quality checks for any internal standard specifically. This allows you to select the internal standard by name, followed by another drop down to select by uniqueId of the feature. It’s also possible to specify the cohort order for the plots. For dual mode data, you can specify the internal standard of the particular mode from the *Select uniqueIds* drop down.
 
 ![Internal Standards (Individual) options](../../img/DualMode/metab_app_internal_standards_individual_page.png) <center>**Figure 30.** Internal Standards (Individual) options</center>
