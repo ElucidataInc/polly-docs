@@ -2,16 +2,16 @@
 
 ##Overview
 
-Metabolomics is one of the key research areas focusing on small molecules present in a tissue or cell. The Dual Mode Data Visualization (Metabolomics App) allows you to perform downstream analysis on single mode (either positive or negative mode) as well as dual mode (both positive and negative mode) targeted, semi-targeted (without retention time) and untargeted metabolomics data along with insightful visualizations. You are provided with the option to upload either the data as a .csv file from [El-MAVEN](https://resources.elucidata.io/elmaven) in the group summary matrix format along with the cohort mapping file or as a .gct file format, which contains both the data and metadata. The app provides you with a variety of normalization methods, scaling options and data visualization functionalities, thereby allowing an efficient analysis of the data to get actionable insights.
+The Dual Mode Data Visualization (Metabolomics App) allows you to perform downstream analysis on single mode (either positive or negative mode) as well as dual mode (both positive and negative mode) targeted, semi-targeted (without retention time) and untargeted unlabeled metabolomics data along with insightful visualizations. The app provides a variety of normalization methods, scaling options and data visualization functionalities, thereby allowing an efficient analysis of the data to get actionable insights.
 
 ##Scope of the App
 
-*   Processes negative and positive mode unlabeled LC-MS data together.
-*   Works with .gct file format as well.
-*   Performs normalization and scaling on the data.
+*   The application supports data with a simple matrix having samples in the columns and metabolites in the rows.
+*   It provides different normalization and scaling methods to perform on the data.
 *   Performs quality checks for internal standards, metabolites, and samples.
 *   Performs statistical analysis using limma and provides interactive visualizations.
-*   Performs pathway analysis and visualizes pathway enrichment analysis plots.
+*   Provides heatmap visualization along with different algorithms like hierarchical clustering, k-means, correlation etc.
+*   Performs comparative analysis for the different cohort comparisons.
 
 ![Dual Mode Data Visualization (Metabolomics App) workflow schematic](../../img/DualMode/metab_app_workflow_schematics.png) <center>**Figure 1.** Dual Mode Data Visualization </center>
 
@@ -56,29 +56,12 @@ To process dual mode data, the following files are required:
 *   An already processed .gct file can also serve as input to the app.
 *   The internal standard file is optional.
 
-##Steps in data processing
-
-*   Perform peak annotation on El-MAVEN
-*   Prepare the cohort mapping file
-*   Perform normalization and scaling on the data
-*   View the quality checks for internal standards, metabolites and samples
-*   Perform differential expression between two cohort conditions
-*   Generate input for [IntOmix](https://docs.elucidata.io/Apps/Multi-omic%20Data/IntOmix.html) to identify significantly changing metabolic network modules between two experimental conditions
-
-##Caveats
-
-*   Single-Mode Data
-    *   The metadata file should have at least two columns: *Sample* and *Cohort*. However, it might have additional columns to perform any specific normalization such as *Cell Number* etc.
-
-*   Dual-Mode Data
-    *   The metadata file should contain a cohort mapping for samples from both the negative and positive mode.
-    *   It should have at least four columns: *Sample*, *SampleName\_neg*, *SampleName\_pos* and *Cohort*. However, it might have additional columns to perform any specific normalization such as *Cell Number* etc.
-    *   The sample name should be exactly same between different input files
-    *   *Sample* column denotes the new sample name that will be assigned to the specific sample from positive and negative mode after merging the data.
+#Caveats
+Pathways analysis only works when the data has KEGG Ids within the “compoundId” column.
 
 #Tutorial
 
-Select *Dual Mode Data Visualization (Metabolomics App)* from the dashboard under the *Metabolomics Data* Tab as shown in Figure 7. Create a *New Workspace* or choose from the existing one from the dop-down and provide the *Name of the Session* to be redirected to Dual Mode Data Visualisation (Metabolomics App)'s upload page.
+Select *Dual Mode Data Visualization (Metabolomics App)* from the dashboard under the *Metabolomics Data* Tab as shown in Figure 8. Create a *New Workspace* or choose from the existing one from the dop-down and provide the *Name of the Session* to be redirected to Dual Mode Data Visualisation (Metabolomics App)'s upload page.
 
 ![Polly Dashboard and Workspace selection](../../img/DualMode/Dashboard.png)
 
@@ -146,17 +129,17 @@ The Pre-processing interface allows you to perform a multitude of functions on t
 
 ![Preprocessing Tab](../../img/DualMode/metab_app_preprocessing_tab.png) <center>**Figure 16.** Preprocessing Tab</center>
 
-*   *Drop Samples:* This allows you to drop/remove certain samples from further analysis which could be blank samples or any samples that didn’t have a good run during MS processing. Samples can be dropped by clicking on *Drop Samples* as shown in Figure 16 after selecting the sample(s) from the drop down menu.
-
-![*Drop Samples* option](../../img/DualMode/metab_app_drop_samples_option.png) <center>**Figure 17.** *Drop Samples* option</center>
-
 *   *Select Internal Standards:* This allows you to select the internal standard(s) from within the El-MAVEN output file when a separate internal standards file is not provided as input.
 
 **Note:**
 
 *   In case, the internal standard(s) are not in the El-MAVEN output file but in the separate internal standards file, they will not show up in the drop down menu. To select the desired internal standards, select them in *Normalize by individual internal standards* option under *Normalize by Internal standards* in the *Perform Normalization > Normalization*.
 
-![Selecting internal standards from the data](../../img/DualMode/metab_app_int_stds_from_elmaven.png) <center>**Figure 18.** Selecting internal standards from the data</center>
+![Selecting internal standards from the data](../../img/DualMode/metab_app_int_stds_from_elmaven.png) <center>**Figure 17.** Selecting internal standards from the data</center>
+
+*   *Drop Samples:* This allows you to drop/remove certain samples from further analysis which could be blank samples or any samples that didn’t have a good run during MS processing. Samples can be dropped by clicking on *Drop Samples* as shown in Figure 18 after selecting the sample(s) from the drop down menu.
+
+![*Drop Samples* option](../../img/DualMode/metab_app_drop_samples_option.png) <center>**Figure 18.** *Drop Samples* option</center>
 
 *   *Normalize by Internal standards* performs normalization using the internal standards.
 
@@ -193,18 +176,24 @@ The Pre-processing interface allows you to perform a multitude of functions on t
 Clicking on *Run* will perform the normalization and scaling based on the parameters selected.
 
 *   *Table:* This displays the data table and visualizations for both pre- and post- normalization.
-    *   **Raw data:** This displays the raw El-MAVEN data uploaded. This data can be downloaded in the .gct format as shown in Figure 22.
-    *   **Normalized data:** This displays the normalized El-MAVEN data based on the parameters selected. This data can be downloaded in .gct format as shown in Figure 23.
-    *   **Pre-Normalization Results:** This allows you to have a look at the sample distribution with the help of density plot and box-plot before normalization as shown in Figure 24.
-    *   **Post-Normalization Results:** This allows you to have a look at the sample distribution with the help of the density plot and box-plot after normalization. This provides you with the ability to check the effect of the normalization parameters on the data as shown in Figure 25.
+    *   **Metadata:** This displays the metadata uploaded. This data can be downloaded in the .csv format as shown in Figure 23.
+    *   **Metabolite Mapping data:** This displays the metabolite data uploaded. This data can be downloaded in the .csv format as shown in Figure 24.
+    *   **Raw data:** This displays the raw El-MAVEN data uploaded. This data can be downloaded in the .gct format as shown in Figure 25.
+    *   **Processed data:** This displays the normalized El-MAVEN data based on the parameters selected. This data can be downloaded in .gct format as shown in Figure 26.
+    *   **Pre-Processing Results:** This allows you to have a look at the sample distribution with the help of density plot and box-plot before normalization as shown in Figure 27.
+    *   **Post-Processing Results:** This allows you to have a look at the sample distribution with the help of the density plot and box-plot after normalization. This provides you with the ability to check the effect of the normalization parameters on the data as shown in Figure 28.
 
-![Raw data table](../../img/DualMode/metab_app_raw_data_table.png) <center>**Figure 23.** Raw data table</center>  
+![Metadata table](../../img/DualMode/metab_app_metadata_table.png) <center>**Figure 23.** Metadata table</center> 
 
-![Normalized data table](../../img/DualMode/metab_app_noramlized_data_table.png) <center>**Figure 24.** Normalized data table</center>  
+![Metabolite Mapping data table](../../img/DualMode/metab_app_metabolite_mapping_data_table.png) <center>**Figure 24.** Metabolite Mapping data table</center> 
 
-![Pre-Normalization Results](../../img/DualMode/metab_app_pre_norm_results.png) <center>**Figure 25.** Pre-Normalization Results</center>
+![Raw data table](../../img/DualMode/metab_app_raw_data_table.png) <center>**Figure 25.** Raw data table</center>  
 
-![Post-Normalization Results](../../img/DualMode/metab_app_post_norm_results.png) <center>**Figure 26.** Post-Normalization Results</center>
+![Processed data table](../../img/DualMode/metab_app_normalized_data_table.png) <center>**Figure 26.** Processed data table</center>  
+
+![Pre-Processing Results](../../img/DualMode/metab_app_pre_norm_results.png) <center>**Figure 27.** Pre-Processing Results</center>
+
+![Post-Processing Results](../../img/DualMode/metab_app_post_norm_results.png) <center>**Figure 28.** Post-Processing Results</center>
 
 ##Quality Checks
 
@@ -214,34 +203,26 @@ This tab allows you to perform quality checks for the internal standards, metabo
 
 It allows you to have a look at the quality of the internal standards used in the data with the help of the different visualizations for any individual as well as for all internal standards.
 
-*   Internal Standards (All): You can visualize Coefficient of Variance, Standards Intensity, Standards Intensity-CoV across all the internal standards present in the data. For dual mode data, the plots will be displayed for the internal standards in negative and positive mode.
-
-![Coefficient of Variance across Standards plot](../../img/DualMode/metab_app_cov_across_stds.png) <center>**Figure 27.** Coefficient of Variance across Standards plot</center>
-
-![Standards Intensity plot](../../img/DualMode/metab_app_stds_intensity.png) <center>**Figure 28.** Standards Intensity plot</center>
-
-![Standards Intensity-CoV vs Mean plot](../../img/DualMode/metab_app_stds_int_cov_vs_mean.png) <center>**Figure 29.** Standards Intensity-CoV *vs* Mean plot</center>
-
 *   Internal Standards (Individual): You can visualize the quality checks for any internal standard specifically. This allows you to select the internal standard by name, followed by another drop down to select by uniqueId of the feature. It’s also possible to specify the cohort order for the plots. For dual mode data, you can specify the internal standard of the particular mode from the *Select uniqueIds* drop down.
 
-![Internal Standards (Individual) options](../../img/DualMode/metab_app_internal_standards_individual_page.png) <center>**Figure 30.** Internal Standards (Individual) options</center>
+![Internal Standards (Individual) options](../../img/DualMode/metab_app_internal_standards_individual_page.png) <center>**Figure 29.** Internal Standards (Individual) options</center>
 
-![CV Distribution across cohorts](../../img/DualMode/metab_app_indi_stds_cv_distri_across_cohorts.png) <center>**Figure 31.** CV Distribution across cohorts</center>
+![CV Distribution across cohorts](../../img/DualMode/metab_app_indi_stds_cv_distri_across_cohorts.png) <center>**Figure 30.** CV Distribution across cohorts</center>
 
-![CV Distribution across samples](../../img/DualMode/metab_app_indi_stds_cv_distri_samples.png) <center>**Figure 32.** CV Distribution across samples</center>
+![CV Distribution across samples](../../img/DualMode/metab_app_indi_stds_cv_distri_samples.png) <center>**Figure 31.** CV Distribution across samples</center>
 
 *   Metabolites: It allows you to have a look at the quality of the metabolites present in the data with the help of the Coefficient of Variation plots
 
     *   Metabolites CoV Boxplot visualizes the Coefficient of Variation across different cohorts in the data in the form of the boxplot. It’s also possible to specify the cohort order for the plots as shown in Figure 32.
-    *   Metabolites CoV Barplot visualizes the Coefficient of Variation as a quality check for any specific metabolite. To use this, select the metabolite followed by the unique id of the feature using the drop downs shown in Figure 32. It’s also possible to specify the cohort order for the plots as shown in FIgure 33.
+    *   Metabolites CoV Barplot visualizes the Coefficient of Variation as a quality check for any specific metabolite. To use this, select the metabolite followed by the unique id of the feature using the drop downs shown in Figure 33. It’s also possible to specify the cohort order for the plots as shown in FIgure 33.
 
-![Metabolites CoV Boxplot option and CV Distribution across Cohorts boxplot](../../img/DualMode/metab_app_metabolites_cov_boxplot_options.png) <center>**Figure 33.** Metabolites CoV Boxplot option and CV Distribution across Cohorts boxplot</center> 
+![Metabolites CoV Boxplot option and CV Distribution across Cohorts boxplot](../../img/DualMode/metab_app_metabolites_cov_boxplot_options.png) <center>**Figure 32.** Metabolites CoV Boxplot option and CV Distribution across Cohorts boxplot</center> 
 
-![Metabolites CoV Barplot](../../img/DualMode/metab_app_metabolites_cov_barplot.png) <center>**Figure 34.** Metabolites CoV Barplot</center>
+![Metabolites CoV Barplot](../../img/DualMode/metab_app_metabolites_cov_barplot.png) <center>**Figure 33.** Metabolites CoV Barplot</center>
 
-![CV Distribution across cohorts for selected metabolite](../../img/DualMode/metab_app_metabolites_cv_barplot_cv_across_cohorts.png) <center>**Figure 35.** CV Distribution across cohorts for selected metabolite</center>
+![CV Distribution across cohorts for selected metabolite](../../img/DualMode/metab_app_metabolites_cv_barplot_cv_across_cohorts.png) <center>**Figure 34.** CV Distribution across cohorts for selected metabolite</center>
 
-![CV Distribution across samples for the selected metabolite](../../img/DualMode/metab_app_metabolites_cv_barplot_cv_across_samples.png) <center>**Figure 36.** CV Distribution across samples for the selected metabolite</center>
+![CV Distribution across samples for the selected metabolite](../../img/DualMode/metab_app_metabolites_cv_barplot_cv_across_samples.png) <center>**Figure 35.** CV Distribution across samples for the selected metabolite</center>
 
 **PCA**
 
@@ -249,17 +230,17 @@ This allows you to understand the clustering pattern between biologically groupe
 
 *   PCA (2D) provides PCA visualization in a two-dimensional manner by selecting the PC values for *x-* and *y-* axes. It’s also possible to specify the cohort order for the plots.
 
-![Two-dimensional PCA plot](../../img/DualMode/metab_app_2d_pca.png) <center>**Figure 37.** Two-dimensional PCA plot</center>
+![Two-dimensional PCA plot](../../img/DualMode/metab_app_2d_pca.png) <center>**Figure 36.** Two-dimensional PCA plot</center>
 
 *   PCA (3D) provides PCA visualization in a three-dimensional manner by selecting the PC values for *x-*, *y-* and *z-* axes. It’s also possible to specify the cohort order for the plots.
 
-![Three-dimensional PCA plot](../../img/DualMode/metab_app_3d_pca.png) <center>**Figure 38.** Three-dimensional PCA plot</center>
+![Three-dimensional PCA plot](../../img/DualMode/metab_app_3d_pca.png) <center>**Figure 37.** Three-dimensional PCA plot</center>
 
 ##Statistical Analysis
 
 This interface allows you to perform differential expression analysis with the aim to identify metabolites whose expression differs between any specified cohort conditions. The 'limma' R package is used to identify the differentially expressed metabolites. This method creates a log<sub>2</sub> fold change ratio between the two experimental conditions and an 'adjusted' *p*-value that rates the significance of the difference.
 
-![Statistical Analysis interface](../../img/DualMode/metab_app_stats_analysis_page.png) <center>**Figure 39.** Statistical Analysis interface</center>
+![Statistical Analysis interface](../../img/DualMode/metab_app_stats_analysis_page.png) <center>**Figure 38.** Statistical Analysis interface</center>
 
 The following parameters are available for selection:
 
@@ -270,44 +251,44 @@ The following parameters are available for selection:
 
 Once the parameters are specified, click on the *Update* button to plot the volcano plot. Based on the parameters specified, a volcano plot is displayed. The volcano plot helps in visualizing metabolites that are significantly dysregulated between two cohorts.
 
-![Volcano plot](../../img/DualMode/metab_app_volcano_plot.png) <center>**Figure 40.** Volcano plot</center>
+![Volcano plot](../../img/DualMode/metab_app_volcano_plot.png) <center>**Figure 39.** Volcano plot</center>
 
 *Filtered Metabolites Visualization* provides the visualization of cohort-based distribution of the metabolites that are significant based on the parameters specified.
 
-![Filtered Metabolites Visualization](../../img/DualMode/metab_app_stats_analysis_filtered_metabolites_visualization.png) <center>**Figure 41.** Filtered Metabolites Visualization</center>
+![Filtered Metabolites Visualization](../../img/DualMode/metab_app_stats_analysis_filtered_metabolites_visualization.png) <center>**Figure 40.** Filtered Metabolites Visualization</center>
 
 *Filtered Normalized Table* contains the normalized data of the metabolites that are significant based on the parameters specified.
 
-![Filtered Normalized Table](../../img/DualMode/metab_app_stats_analysis_filtered_normalised_table.png) <center>**Figure 42.** Filtered Normalized Table</center>
+![Filtered Normalized Table](../../img/DualMode/metab_app_stats_analysis_filtered_normalised_table.png) <center>**Figure 41.** Filtered Normalized Table</center>
 
 *Filtered Differential Expression Table* contains only the metabolites that have significant *p*-values as specified.
 
-![Filtered Differential Expression Table](../../img/DualMode/metab_app_stats_analysis_filtered_diff_exp_table.png) <center>**Figure 43.** Filtered Differential Expression Table</center>
+![Filtered Differential Expression Table](../../img/DualMode/metab_app_stats_analysis_filtered_diff_exp_table.png) <center>**Figure 42.** Filtered Differential Expression Table</center>
 
 *Differential Expression Table* contains all the differentially expressed metabolites without any filtering.
 
-![Differential Expression Table](../../img/DualMode/metab_app_stats_analysis_diff_exp_table.png) <center>**Figure 44.** Differential Expression Table</center>
+![Differential Expression Table](../../img/DualMode/metab_app_stats_analysis_diff_exp_table.png) <center>**Figure 43.** Differential Expression Table</center>
 
 *Pathway Enrichment Analysis* performs the pathway enrichment analysis for the significant metabolites based on the parameters specified for the particular cohort comparison. Click on the *Perform Pathway Analysis* button.
 As a result, you get Metabolite Set Enrichment Analysis and Pathway Topology Analysis plots that can be downloaded under the *Plot* panel. You can also obtain the tablular representation of the plots by selecting onto the *Table* panel.
 
-![Metabolite Set Enrichment Analysis Plot](../../img/DualMode/metab_app_stats_analysis_msea_plot.png) <center>**Figure 45.** Metabolite Set Enrichment Analysis Plot</center>
+![Metabolite Set Enrichment Analysis Plot](../../img/DualMode/metab_app_stats_analysis_msea_plot.png) <center>**Figure 44.** Metabolite Set Enrichment Analysis Plot</center>
 
-![Pathway Topology Analysis Plot](../../img/DualMode/metab_app_stats_analysis_pathway_topology_plot.png) <center>**Figure 46.** Pathway Topology Analysis Plot</center>
+![Pathway Topology Analysis Plot](../../img/DualMode/metab_app_stats_analysis_pathway_topology_plot.png) <center>**Figure 45.** Pathway Topology Analysis Plot</center>
 
-![Metabolite Set Enrichment Analysis Table](../../img/DualMode/metab_app_stats_analysis_msea_table.png) <center>**Figure 47.** Metabolite Set Enrichment Analysis Table</center>
+![Metabolite Set Enrichment Analysis Table](../../img/DualMode/metab_app_stats_analysis_msea_table.png) <center>**Figure 46.** Metabolite Set Enrichment Analysis Table</center>
 
-![Pathway Topology Analysis Table](../../img/DualMode/metab_app_stats_analysis_topology_table.png) <center>**Figure 48.** Pathway Topology Analysis Table</center>
+![Pathway Topology Analysis Table](../../img/DualMode/metab_app_stats_analysis_topology_table.png) <center>**Figure 47.** Pathway Topology Analysis Table</center>
 
 *Pathway View* plots the pathway view of the metabolites that show up in the Metabolite Set Enrichment Analysis. It maps and renders the metabolite hits on relevant pathway graphs. This enables you to visualize the significant metabolites on pathway graphs of the respective metabolites they belong to. You can select your metabolite of interest from the drop-down and click on *Plot*. This will plot the pathway view of the metabolism selected. You can also download the plot as a .png file by clicking onto the *Download Pathview Plot* button.
 
-![Pathway View Plot](../../img/DualMode/metab_app_stats_analysis_pathview_plot.png) <center>**Figure 49.** Pathway View Plot</center>
+![Pathway View Plot](../../img/DualMode/metab_app_stats_analysis_pathview_plot.png) <center>**Figure 48.** Pathway View Plot</center>
 
 ##Visualization
 
 This interface allows you to visualize the cohort-based distribution of a specific metabolite or a group of metabolites on the basis on its normalized intensity values.
 
-![Visualization tab options](../../img/DualMode/metab_app_viz_tab_options.png) <center>**Figure 50.** Visualization tab options</center>
+![Visualization tab options](../../img/DualMode/metab_app_viz_tab_options.png) <center>**Figure 49.** Visualization tab options</center>
 
 *   *Enter metabolite:* Select the metabolite(s) of interest from the drop down option.
 *   *Select uniqueIds:* You can specifically select the metabolic feature of interest for the metabolite from the drop down option.
@@ -315,21 +296,27 @@ This interface allows you to visualize the cohort-based distribution of a specif
 
 Once the parameters are selected, click on *Load Plots* to plot the bar plot for the metabolite.
 
-![Cohort-wise bar plot with the normalized intensity of selected metabolite](../../img/DualMode/metab_app_barplot_viz.png) <center>**Figure 51.** Cohort-wise bar plot with the normalized intensity of selected metabolite</center>
+![Cohort-wise bar plot with the normalized intensity of selected metabolite](../../img/DualMode/metab_app_barplot_viz.png) <center>**Figure 50.** Cohort-wise bar plot with the normalized intensity of selected metabolite</center>
 
 ##IntOmix Input
 
 This tab allows you to generate the input for [IntOmix](https://docs.elucidata.io/Apps/Multi-omic%20Data/IntOmix.html) where you can visualize the significantly altered metabolic network modules between any two experimental conditions.
 
-![IntOmix Input Tab options](../../img/DualMode/metab_app_intomix_input_tab.png) <center>**Figure 52.** IntOmix Input Tab options</center>
+![IntOmix Input Tab options](../../img/DualMode/metab_app_intomix_input_tab.png) <center>**Figure 51.** IntOmix Input Tab options</center>
 
 Specify two or more cohorts from the *Select cohorts* drop down option for which you want to generate the IntOmix input. Once the required cohorts are selected, click on *Generate* to generate the IntOmix input.
 
-![IntOmix Table for the cohort conditions specified](../../img/DualMode/metab_app_intomix_table.png) <center>**Figure 53.** IntOmix Table for the cohort conditions specified</center>
+![IntOmix Table for the cohort conditions specified](../../img/DualMode/metab_app_intomix_table.png) <center>**Figure 52.** IntOmix Table for the cohort conditions specified</center>
 
 **NOTE:**
 
 *   At least two cohorts are required to create the input file.
+
+##Heatmap
+
+This tab allows you to produce a heatmap of the processed data, so that you can observe the level of expression in a visual form. Click on *Load Heatmap* button to generate the heatmap.
+
+![Heatmap of the processed data](../../img/DualMode/metab_app_heatmap.png) <center>**Figure 53.** Heatmap</center>
 
 ##Comparative Analysis
 
