@@ -63,17 +63,17 @@ The Studio Core has three main panels:
 
 *    *Visualization Panel*: Displays the selected visualization plot along with visualization parameters
 
-![Data Studio](../img/Datastudio/1.png)
+![Studio Panels](../../img/Datastudio/1.png)
 
 ## Add and Configure components
 
 In order to add a component to your workflow, click on the *Select Component* option present in the parameter panel. You can select the desired component from the dropdown menu. You can search for the component as well from the search option.
 
-![Add component](../img/Datastudio/2.png)
+![Add component](../../img/Datastudio/2.png)
 
 To add subsequent components, Click on the *NEW* option present in the component panel.
 
-![New component](../img/Datastudio/3.png)
+![New component](../../img/Datastudio/3.png)
 
 ## Adding Input Files
 
@@ -81,17 +81,17 @@ Once a component is selected it is required to add the input files. In order to 
 
 Note: Input Files are not required to be added at each step, it automatically gets mapped from the previous component.
 
-![Input files](../img/Datastudio/4.png)
+![Input files](../../img/Datastudio/4.png)
 
 ## Executing the components
 
 Each component comes with its associated parameters that are displayed in the parameter panel. Fill in all the mandatory fields using the dropdown menu or using the checkboxes. Once the parameters are specified, click on the *Run Task* option to execute your component.
 
-![Executing component](../img/Datastudio/5.png)
+![Executing component](../../img/Datastudio/5.png)
 
 You can have a look at the state of your execution with the displayed status bar.
 
-![Task status](../img/Datastudio/6.png)
+![Task status](../../img/Datastudio/6.png)
 
 The default visualization of the component will be generated on the *Visualization Panel.*
 
@@ -99,7 +99,7 @@ The default visualization of the component will be generated on the *Visualizati
 
 If there are multiple visualizations for a particular component, you can use the *Select a Chart* option to choose the visualization you want displayed on your screen. At a time only a single visualization can be displayed on the *Visualization Panel*.
 
-![Chart Collection](../img/Datastudio/7.png)
+![Chart Collection](../../img/Datastudio/7.png)
 
 In order to look at all the visualization simultaneously, save your visualization to a dashboard.
 
@@ -115,7 +115,7 @@ In order to add a visualization to your dashboard, you first need to save it und
 
 In order to do that, click on the *Save* option present beside *Run Query* option.
 
-![Chart saving](../img/Datastudio/8.png)
+![Chart saving](../../img/Datastudio/8.png)
 
 
 It will display a menu:
@@ -131,29 +131,29 @@ It will display a menu:
 
 Once all the selections are done, click on *Save.*
 
-![Chart parameters](../img/Datastudio/9.png)
+![Chart parameters](../../img/Datastudio/9.png)
 
 ## Visualizing the Dashboards
 
 Click on the *Visualize Data* tab.
 
-![Dashboard](../img/Datastudio/10.png)
+![Dashboard](../../img/Datastudio/10.png)
 
 It will display the list of all your created dashboards. Select a dashboard to look at the added visualization charts.
 
-![Dashboards list](../img/Datastudio/11.png)
+![Dashboards list](../../img/Datastudio/11.png)
 
 ## Editing a dashboard
 
 In order to edit your dashboard, click on the *Edit Dashboard* option present at the top right corner.
 
-![Dashboards edit](../img/Datastudio/12.png)
+![Dashboards edit](../../img/Datastudio/12.png)
 
 There are a few ways to edit the dashboard
 
 *   Resizing the table/charts: By selecting the bottom right-hand corner of the table/chart (the cursor will change too), you can resize it by dragging and dropping.
 
-![Resizing charts](../img/Datastudio/13.png)
+![Resizing charts](../../img/Datastudio/13.png)
 
 ## Inserting a component
 
@@ -164,7 +164,7 @@ There are a few ways to edit the dashboard
 
 Let's say you have two plots in your dashboard. After you insert the component, just drag and drop the two charts. Once the two charts have been separated, label the tabs with the corresponding dataset names (or any desired name) represented in the charts.
 
-![Tabs](../img/Datastudio/14.png)
+![Tabs](../../img/Datastudio/14.png)
 
 *    *Column*: Lets you add an additional column in the dashboard
 
@@ -175,7 +175,7 @@ Let's say you have two plots in your dashboard. After you insert the component,
 *    *Markdown*: In this section, we will add some text to our dashboard. Within the *Insert* components pane, drag and drop a* Markdown*box on the dashboard. Now to edit the text, select the box. You can enter text in markdown format (see [this Markdown Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet "https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet") for more information about this format). You can toggle between **Edit** and **Preview** using the menu on the top of the box.
 
 
-![Markdown](../img/Datastudio/15.png)
+![Markdown](../../img/Datastudio/15.png)
 
 *    *Divider**:*** Use this to divide different sections of your dashboard
 
@@ -188,11 +188,11 @@ Let's say you have two plots in your dashboard. After you insert the component,
 
 The color tabs let you choose the color scheme from the 9 default schemes present in the dropdown.
 
-![colour](../img/Datastudio/16.png)
+![colour](../../img/Datastudio/16.png)
 
 Finally, save your changes by selecting *Save changes*in the top right.
 
-![save changes](../img/Datastudio/17.png)
+![save changes](../../img/Datastudio/17.png)
 
 ## Other useful features
 
@@ -202,22 +202,22 @@ You can restore your analysis at any point in time. Data Studio contains the re
 
 Click on the specific analysis which will enable the *Restore* option on the right panel. Clicking on *Restore* will take you back to the application with the same data used before.
 
-![Restore](../img/Datastudio/18.png)
+![Restore](../../img/Datastudio/18.png)
 
 ### Accessing the logs
 
 The log option present at top right corner of the screen allows you to look at the logs of the current session. You can look at the input files uploaded, the output files generated as well as the parameters used in this session.
 
-![Accessing logs](../img/Datastudio/19.png)
+![Accessing logs](../../img/Datastudio/19.png)
 
 **View Docker Logs**: Enable *View Docker Logs* option to view the execution of the component on the code level.
 
-![Docker logs](../img/Datastudio/20.png)
+![Docker logs](../../img/Datastudio/20.png)
 
 Select a job for which you want the logs from the drop-down menu.
 
-![Select Job](../img/Datastudio/21.png)
+![Select Job](../../img/Datastudio/21.png)
 
 Once the job is selected, you will be able to visualize the docker logs. It will let you know what is happening, or what happened at every layer of the stack.
 
-![Docker logs](../img/Datastudio/22.png)
+![Docker logs](../../img/Datastudio/22.png)
