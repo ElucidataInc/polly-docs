@@ -2,7 +2,7 @@
 
 Data Studio application lets you explore data, make multiple workflows, and variate endlessly on those workflows. It allows the ingestion of all kinds of data and their combinations so that you can perform any analysis easily. The studio is made of smaller components that are split into various categories for ingestion, cleaning, analyzing, and visualizing your data. You can select these components and arrange them according to your analysis needs to create your own custom workflow. You can also save a particular sequence of the components that can be reused again.
 
-Furthermore, these components can be configured or custom components can be added by anyone to cater to their workflow requirements. Detailed documentation on the customization and creation of components can be found [here](https://drive.google.com/file/d/1PPNEapLtHzCVHKXii8NufajWuEmc3fuv/view?usp=sharing).
+Furthermore, these components can be configured or custom components can be added by anyone to cater to their workflow requirements. Detailed documentation on the customization and creation of components can be found [here](https://drive.google.com/file/d/1rYCqOKuXc9hlRj1u-tNZoYN2_IlxnjVB/view?usp=sharing).
 
 ## Scope of the application
 
@@ -29,7 +29,7 @@ Furthermore, these components can be configured or custom components can be adde
 
 A component in Data Studio is a containerized script with specified input and output files along with its defined visualizations. Each component is a separate docker with only the essential library installations and a main script that can read inputs. The main script can be in R or Python. Apart from the output files, components are also responsible for writing the files required for data visualization, along with visualization parameters.
 
-Data Studio is fully customizable as you can select the component of your choice from the predefined list, or write your own component and add it to the list. Component templates are available to help with component creation. The Python3 and R templates are available on GitHub. You can easily download the templates. Read on about the creation of the components in detail from [here](https://drive.google.com/file/d/1PPNEapLtHzCVHKXii8NufajWuEmc3fuv/view?usp=sharing).
+Data Studio is fully customizable as you can select the component of your choice from the predefined list, or write your own component and add it to the list. Component templates are available to help with component creation. The Python3 and R templates are available on GitHub. You can easily download the templates. Read on about the creation of the components in detail from [here](https://drive.google.com/file/d/1rYCqOKuXc9hlRj1u-tNZoYN2_IlxnjVB/view?usp=sharing).
 
 ## Data Studio Journeys
 
