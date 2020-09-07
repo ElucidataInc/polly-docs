@@ -136,7 +136,7 @@ Data Lake Applications are built on top of data lakes to query and explore relev
     It is a platform for visualization, analytics, and exploration for bulk transcriptomics data curated from GEO. It offers users an interactive dashboard for analysis and visualization of transcriptomics data. Currently, the platform handles gene expression microarray and RNA-seq data and supports three species human, mouse, and rat.  
     <br />
 
-*   **[Single Cell Visualziation:](https://docs.elucidata.io/Data%20Lake.html#single-cell-visualization)**
+*   **[Single Cell Visualization:](https://docs.elucidata.io/Data%20Lake.html#single-cell-visualization)**
 
     It is a comprehensive visualization platform for single-cell transcriptomics data. The app is helpful in visualizing cells and the association of different genes with the metadata.  
     <br />
@@ -156,7 +156,7 @@ Data Lake Applications are built on top of data lakes to query and explore relev
     GTEx Application is is a platform for visualization, analytics, and exploration of transcriptomics data from GTEx.  
     <br />
 
-*   **[Dual Mode Data Visualization(Metabolomics App:](https://docs.elucidata.io/Apps/Metabolomic%20Data/Dual%20Mode%20Visualization.html)**
+*   **[Dual Mode Data Visualization(Metabolomics App):](https://docs.elucidata.io/Apps/Metabolomic%20Data/Dual%20Mode%20Visualization.html)**
 
     This app allows you to perform downstream analysis on untargeted unlabeled metabolomics data along with insightful visualizations. It provides a variety of normalization methods, scaling options, and data visualization functionalities, thereby allowing an efficient analysis of the data to get actionable insights.  
     <br />
