@@ -1,8 +1,28 @@
 #Release Notes
 
-<!--August 28th, 2020-->
+<!--September 11th, 2020-->
 
 <details open>
+<summary><font size="+1"><b>September 11th, 2020</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>Introduced <a href="https://docs.elucidata.io/Apps/Data%20Studio/Data%20Studio.html"> Data Studio</a> that brings the tools you need to create, customize, and share your analysis effortlessly with your team across the world.</li>
+    <li>Introduced <a href="https://docs.elucidata.io/Apps/Data%20Studio/CCLE%20Correlation%20Analysis.html"> CCLE Correlation Analysis</a> for identification of features correlated with a gene mutation such as mutations in other genes, expression and sample level metadata.</li>
+  </ul>
+  <p class="update-button">Update</p>
+  <ul>
+    <li>Updated the version of scanpy to 1.6.0 in single cell docker.</li>
+    <li>Fixed a bug in notebook giving error with CLI commands.</li>
+  </ul>
+</details>
+
+<hr>
+
+
+<!--August 28th, 2020-->
+
+<details>
 <summary><font size="+1"><b>August 28th, 2020</b></font></summary>
 <br>
   <p class="new-button">New</p>
