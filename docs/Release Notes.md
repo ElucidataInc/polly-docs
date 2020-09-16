@@ -8,7 +8,7 @@
   <p class="new-button">New</p>
   <ul>
     <li>Introduced <a href="https://docs.elucidata.io/Apps/Data%20Studio/Data%20Studio.html"> Data Studio</a> that brings the tools you need to create, customize, and share your analysis effortlessly with your team across the world.</li>
-    <li>Introduced <a href="https://docs.elucidata.io/Apps/Data%20Studio/CCLE%20Correlation%20Analysis.html"> CCLE Correlation Analysis</a> as a Studio Preset for identification of features correlated with a gene mutation such as mutations in other genes, expression and sample level metadata.</li>
+    <li>Introduced <a href="https://docs.elucidata.io/Apps/Data%20Studio/CCLE%20Correlation%20Analysis.html"> CCLE Correlation Analysis</a> for identification of features correlated with a gene mutation such as mutations in other genes, expression and sample level metadata.</li>
   </ul>
   <p class="update-button">Update</p>
   <ul>
