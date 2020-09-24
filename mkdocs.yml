@@ -7,7 +7,7 @@ nav:
   - Apps:
       - Introduction: Apps/Introduction.md
       - Host Apps: Apps/Host Apps.md
-      - Metabolomics Data:
+      - Metabolomic Data:
         - El-MAVEN Phi Relative LC-MS: Apps/Metabolomic Data/El-MAVEN Phi Relative LC-MS.md
         - MetScape: Apps/Metabolomic Data/MetScape.md
         - FirstView: Apps/Metabolomic Data/FirstView.md
@@ -22,9 +22,9 @@ nav:
         - CRISPR Screening: Apps/Screening & Sequencing Data/CRISPR Screening.md
         - High Throughput Drug Screening: Apps/Screening & Sequencing Data/High Throughput Drug Screening.md
         - RNA Seq Workflow: Apps/Screening & Sequencing Data/RNA Seq Workflow.md
-      - Proteomics Data:
+      - Proteomic Data:
         - Proteomics Workflow: Apps/Proteomic Data/Proteomics Workflow.md
-      - Lipidomics Data:
+      - Lipidomic Data:
         - Lipidomics Visualization Dashboard: Apps/Lipidomics Data/Lipidomics Visualization Dashboard.md
       - Multi-omic Data:
         - IntOmix: Apps/Multi-omic Data/IntOmix.md
