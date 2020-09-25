@@ -1,8 +1,32 @@
 #Release Notes
 
-<!--September 11th, 2020-->
+
+<!--September 25th, 2020-->
 
 <details open>
+<summary><font size="+1"><b>September 25th, 2020</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>Introduced Labeled LC-MS Analysis preset for natural abundance correction and visualization for single or dual labeled LC-MS data combined with an interactive, customizable and shareable reporting dashboard.</li>
+    <li>Integrated pathway visulization in <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Labeled%20LC-MS%20Workflow.html"> Labeled LC-MS Workflow</a>.</li>
+    <li>Added dilution factor and protein normalization in the <a href="https://docs.elucidata.io/Apps/Lipidomics%20Data/Lipidomics%20Visualization%20Dashboard.html"> Lipidomics Visualization Dashboard</a>.</li>
+  </ul>
+  <p class="update-button">Update</p>
+  <ul>
+    <li>Added warning message to prevent duplicate folder creation in Workspaces.</li>
+    <li>Fixed nested folder creation and notebook renaming error in Workspaces.</li>
+    <li>Fixed error 503 in Metabolomics Datalake.</li>
+    <li>Fixed a bug associated with notebooks and shiny apps opening to a blank screen.</li>
+    <li>Fixed error occuring in automated jobs.</li>
+  </ul>
+</details>
+
+<hr>
+
+<!--September 11th, 2020-->
+
+<details>
 <summary><font size="+1"><b>September 11th, 2020</b></font></summary>
 <br>
   <p class="new-button">New</p>
