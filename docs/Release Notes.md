@@ -16,7 +16,7 @@
   <ul>
     <li>Added warning message to prevent duplicate folder creation in Workspaces.</li>
     <li>Fixed nested folder creation and notebook renaming error in Workspaces.</li>
-    <li>Fixed error 503 in Metabolomics Datalake.</li>
+    <li>Fixed error 503 in Metabolomics Data Lake.</li>
     <li>Fixed a bug associated with notebooks and shiny apps opening to a blank screen.</li>
     <li>Fixed error occuring in automated jobs.</li>
   </ul>
