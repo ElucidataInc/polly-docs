@@ -1,9 +1,31 @@
 #Release Notes
 
+<!--October 9th, 2020-->
+
+<details open>
+<summary><font size="+1"><b>October 9th, 2020</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>Introduced option to make dockers on polly public by adding public docker domain.</li>
+    <li>Welcome screen would now contain the username.</li>
+  </ul>
+  <p class="update-button">Update</p>
+  <ul>
+    <li>Fixed login to discover landing.</li>
+    <li>Decreased launching time for shiny applications and notebooks through horizontal pod scaling and buffering.</li>
+    <li>Fixed issue with layer assigning priority to automated jobs.</li>
+    <li>Fixed issues with workspaces including issue with renaming file after upload.</li>
+    <li>Fixed error 404 in Metabolomics Data Lake.</li>
+    <li>Integrated documentation with every application.</li>
+  </ul>
+</details>
+
+<hr>
 
 <!--September 25th, 2020-->
 
-<details open>
+<details>
 <summary><font size="+1"><b>September 25th, 2020</b></font></summary>
 <br>
   <p class="new-button">New</p>
