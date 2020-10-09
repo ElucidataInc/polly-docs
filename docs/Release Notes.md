@@ -1,9 +1,31 @@
 #Release Notes
 
+<!--October 9th, 2020-->
+
+<details open>
+<summary><font size="+1"><b>October 9th, 2020</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>Introduced the option to make dockers on Polly public by adding public docker domain.</li>
+    <li>Welcome screen now displays the username.</li>
+    <li>Decreased launch time for applications and notebooks through horizontal pod scaling and buffering.</li>
+  </ul>
+  <p class="update-button">Update</p>
+  <ul>
+    <li>Fixed landing on Discover after logging in error.</li>
+    <li>Fixed priority assignment of automated jobs error.</li>
+    <li>Fixed renaming files after upload error.</li>
+    <li>Fixed 404 error in Metabolomics Data Lake.</li>
+    <li>Integrated documentation to every application.</li>
+  </ul>
+</details>
+
+<hr>
 
 <!--September 25th, 2020-->
 
-<details open>
+<details>
 <summary><font size="+1"><b>September 25th, 2020</b></font></summary>
 <br>
   <p class="new-button">New</p>
@@ -16,7 +38,7 @@
   <ul>
     <li>Added warning message to prevent duplicate folder creation in Workspaces.</li>
     <li>Fixed nested folder creation and notebook renaming error in Workspaces.</li>
-    <li>Fixed error 503 in Metabolomics Data Lake.</li>
+    <li>Fixed 503 error in Metabolomics Data Lake.</li>
     <li>Fixed a bug associated with notebooks and shiny apps opening to a blank screen.</li>
     <li>Fixed error occuring in automated jobs.</li>
   </ul>
