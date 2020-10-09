@@ -7,17 +7,17 @@
 <br>
   <p class="new-button">New</p>
   <ul>
-    <li>Introduced option to make dockers on polly public by adding public docker domain.</li>
-    <li>Welcome screen would now contain the username.</li>
+    <li>Introduced the option to make dockers on Polly public by adding public docker domain.</li>
+    <li>Welcome screen now displays the username.</li>
+    <li>Decreased launch time for applications and notebooks through horizontal pod scaling and buffering.</li>
   </ul>
   <p class="update-button">Update</p>
   <ul>
-    <li>Fixed login to discover landing.</li>
-    <li>Decreased launching time for shiny applications and notebooks through horizontal pod scaling and buffering.</li>
-    <li>Fixed issue with layer assigning priority to automated jobs.</li>
-    <li>Fixed issues with workspaces including issue with renaming file after upload.</li>
-    <li>Fixed error 404 in Metabolomics Data Lake.</li>
-    <li>Integrated documentation with every application.</li>
+    <li>Fixed landing on Discover after logging in error.</li>
+    <li>Fixed priority assignment of automated jobs error.</li>
+    <li>Fixed renaming files after upload error.</li>
+    <li>Fixed 404 error in Metabolomics Data Lake.</li>
+    <li>Integrated documentation to every application.</li>
   </ul>
 </details>
 
@@ -38,7 +38,7 @@
   <ul>
     <li>Added warning message to prevent duplicate folder creation in Workspaces.</li>
     <li>Fixed nested folder creation and notebook renaming error in Workspaces.</li>
-    <li>Fixed error 503 in Metabolomics Data Lake.</li>
+    <li>Fixed 503 error in Metabolomics Data Lake.</li>
     <li>Fixed a bug associated with notebooks and shiny apps opening to a blank screen.</li>
     <li>Fixed error occuring in automated jobs.</li>
   </ul>
