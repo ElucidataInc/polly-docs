@@ -8,7 +8,7 @@ The recent development of various omics technologies in biology has increased th
 
 *   Go from differentially expressed data to visualisations of pathway-level changes in less than 5 minutes.
 *   Process single or multi-omics data.
-*   Search for publications based on keywords added and significantly perturbed genes or metabolites by adding/ editing keywords before or after optimization.
+*   Search for publications based on keywords added and significantly perturbed genes or metabolites by adding/editing keywords before or after optimization.
 *   Compare insights obtained from the data with existing literature.
 *   Compare results obtained from the same data at different parameters.
 *   Download results as publication-quality figures in various formats such as .png, .jpeg, .pdf or .xgmml.
@@ -24,7 +24,7 @@ IntOmix requires two types of .csv input files:
 *   Metabolite differential expression file
 *   Gene differential expression file
 
-Both the input files consist of information about log<sub>2</sub> Fold Change and the *p*-value of each gene or metabolite. In case of comparisons between multiple cohorts, you can also provide the name of the cohorts in the columns state1 and state2 as shown in Figure 2. You can also use files without the cohort information as shown in Figure 3.
+Both the input files consist of information about log<sub>2</sub> fold change and the *p*-value of each gene or metabolite. In case of comparisons between multiple cohorts, you can also provide the name of the cohorts in the columns *state1* and *state2* as shown in Figure 2. You can also use files without the cohort information as shown in Figure 3.
 
 ![Sample input files](../../img/IntOmix/intomix_sample_input_files.png) <center>**Figure 2.** Sample input files</center>
 
@@ -44,7 +44,7 @@ Both the input files consist of information about log<sub>2</sub> Fold Change an
 ## Caveats
 
 *   KEGG or HMDB ID for metabolites and gene id for genes is required to map these on the pathway map.
-*   If *State 1* and *State 2* columns are not present in the input files, the entire data will be treated as if from one comparison with the default cohort names, *Cohort1* and *Cohort2*.
+*   If *state 1* and *state 2* columns are not present in the input files, the entire data will be treated as if from one comparison with the default cohort names, *Cohort1* and *Cohort2*.
 *   In case there are blank cells for *p*-value or log<sub>2</sub> fold change in the input files, the corresponding metabolites or genes are dropped before optimization and a notice is shown to that effect.
 *   Currently, we only support reactions from *Homo sapiens*, *Mus musculus* and *Drosophila melanogaster*.
 *   At a time only one keyword can be annotated as the primary keyword.
