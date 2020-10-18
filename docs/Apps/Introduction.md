@@ -30,15 +30,15 @@ Some of the Polly applications also provide the ability to uplaod input files fr
 
 All Polly <!-- ([El-MAVEN Phi Relative LC-MS](../El-MAVEN Phi Relative LC-MS), [FirstView](../FirstView), [MetScape](../MetScape), [QuantFit](../QuantFit), [CRISPR Screening](../CRISPR Screening) and [IntOmix](../IntOmix)) --> applications <!-- ([Dual Mode Data Visualization](../Dual Mode Data Visualization), [Labeled LC-MS Workflow](../Labeled LC-MS  Workflow), [Labeled LC-MS/MS Workflow](../Labeled LC-MS/MS Workflow), [Untargeted Pipeline](../Untargeted Pipeline), [High Throughput Drug Screening](../High Throughput Drug Screening), [RNA Seq Workflow](../RNA Seq Workflow), [Proteomics Workflow](../Proteomics Workflow) and [Lipidomics Visualization Dashboard](../Lipidomics Visualization Dashboard)) --> contain the restore functionality that allows any analysis to be restored to the last step. Analyses can be restored by navigating to the desired workspace. Click on the specific analysis and select the algorithm you want to restore. Clicking on *Restore* from the right panel will take you back to the application with the same data used before as shown in Figure 7. Restore helps laboratories and organizations with standardization across labs and improves reproducibility.
 
-![Restore for Angular applications](../img/AppIntroduction/Restore.png) <center>**Figure 7.** Restore for Angular applications</center>
+![Restore for Angular applications](../img/AppIntroduction/Restoreangular1.png) <center>**Figure 7.** Restore for Angular applications</center>
 
 Some of the Polly applications also provide the ability to save at that exact moment of your choice using the *Save the State* option.
 
-![Restore for Shiny applications](../img/AppIntroduction/LLCMSRestore.png) <center>**Figure 8.** Restore for Shiny applications</center>
+![Restore for Shiny applications](../img/AppIntroduction/LLCMSRestore.png) <center>**Figure 8.** Saving the states in Shiny applications</center>
 
 For the applications providing the *Save the  state* option, you have an additional step to choose which state to restore. Multiple states, if saved are depicted as versions which makes it extremely easy to visually identify the state of interest as shown in Figure 8 and Figure 9.
 
-![Branch structure in case of multiple states saved during a single analysis for Shiny applications](../img/AppIntroduction/Savedstates.png) <center>**Figure 9.** Branch structure in case of multiple states saved during a single analysis for Shiny applications</center>
+![Branch structure in case of multiple states saved during a single analysis for Shiny applications](../img/AppIntroduction/Restoreshiny1.png) <center>**Figure 9.** Restoring the saved states</center>
 
 ##Download Plots & Output
 

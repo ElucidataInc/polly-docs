@@ -24,7 +24,7 @@ You can access Polly Notebooks in three ways:
 
 ![New Notebook button to create a new notebook](../img/Notebooks/Create.png) <center>**Figure 2.** *New Notebook* button to create a new notebook</center>
 
-*   **Upload a notebook:** Click on the *New* option prsent at the top of the middle panel and select the *Notebook Upload* option.
+*   **Upload a notebook:** Click on the *Cloud Upload icon* prsent at the top of the middle panel and select the *Upload a Notebook* option.
 
 ![Upload Notebook button to upload a notebook](../img/Notebooks/Notebookupload.png) <center>**Figure 3.** *Upload Notebook* button to upload a notebook</center>
 

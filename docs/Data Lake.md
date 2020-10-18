@@ -50,7 +50,7 @@ Additionally, the public data repositories also consist of publicly available da
 
 #Dataset Filtering
 
-## Kibana Dashboard
+<!--## Kibana Dashboard
 
 After selecting a Data Lake, you’ll be able to see a repository overview dashboard. For bigger data lakes,this dashboard is provided to give you an overview of the repository, for instance, the number of data sets in the repository, distribution of tissues, organisms, etc. among the datasets.
 
@@ -64,7 +64,7 @@ You can also add your own query. Just click on *add filter* to choose the additi
 
 ![Filter Query](../img/Discover/3.png)
 
-Once these filters are applied, the dashboard will get updated accordingly.
+Once these filters are applied, the dashboard will get updated accordingly. -->
 
 ##Dataset Filtering Dashboard
 

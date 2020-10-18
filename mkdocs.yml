@@ -18,10 +18,11 @@ nav:
         - Labeled LC-MS/MS Workfow: Apps/Metabolomic Data/Labeled LC-MSMS Workflow.md
         - Labeled LC-MS Workflow: Apps/Metabolomic Data/Labeled LC-MS Workflow.md
         - Compound Discoverer<sup>TM</sup> QuantFit: Apps/Metabolomic Data/CompoundDiscoverer QuantFit.md
-      - Screening and Sequencing Data: 
-        - CRISPR Screening: Apps/Screening & Sequencing Data/CRISPR Screening.md
-        - High Throughput Drug Screening: Apps/Screening & Sequencing Data/High Throughput Drug Screening.md
-        - RNA Seq Workflow: Apps/Screening & Sequencing Data/RNA Seq Workflow.md
+      - Screening Data: 
+        - CRISPR Screening: Apps/Screening Data/CRISPR Screening.md
+        - High Throughput Drug Screening: Apps/Screening Data/High Throughput Drug Screening.md
+      - Sequencing Data:  
+        - RNA Seq Workflow: Apps/Sequencing Data/RNA Seq Workflow.md
       - Proteomic Data:
         - Proteomics Workflow: Apps/Proteomic Data/Proteomics Workflow.md
       - Lipidomic Data:

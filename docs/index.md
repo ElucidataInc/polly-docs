@@ -40,19 +40,19 @@ Once logged in, you do not get automatically logged out and will have to log out
 
 The Polly Landing page provides access to 3 distinct interconnected modules on Polly.
 
-![Polly as a platform](./img/Home/Home.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
+![Polly as a platform](./img/Home/Home1.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
 
 *   [Manage Data](https://docs.elucidata.io/Getting%20Started/Workspaces.html)
 
     Find comprehensive information about your workspaces, including files, notebooks, apps, analyses, and reports. This page also includes information about the creation date, workspace owner, and collaborators.
 
-![Manage](./img/Home/Workspace.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
+![Manage](./img/Home/Workspace1.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
 
 *   [Use Apps](https://docs.elucidata.io/Apps/Introduction.html)
 
      Polly hosts a suite of apps and production-ready workflows to analyze and process a variety of data with ease. You can build and host your custom workflows from individual components or choose from a suite of ready-to-use workflows on Polly.
 
-![Manage](./img/Home/Apps.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
+![Manage](./img/Home/Apps1.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
 
 *   [Write & Maintain Code](https://docs.elucidata.io/Scaling%20compute/Polly%20Notebooks.html)
 
