@@ -23,7 +23,7 @@ Lipidomics analysis requires the following two files as input:
 
 **Concentration File**
 
-The concentration file is the data output from Lipidizer. The file should be in .xlsx format and must contain Lipids/ Fatty Acid concentrations sheet. The current version supports the .xlsx format only which comes out of SCIEX Lipidyzer<sup>TM</sup> Platform as shown in Figure 2.
+The concentration file is the data output from Lipidizer. The file should be in .xlsx format and must contain Lipids/ Fatty Acid concentrations sheet. 
 
 ![Concentration File](../../img/Lipidomics/Concentration_table.png) <center>**Figure 2.** Concentration file</center>
 
@@ -61,7 +61,7 @@ Select *Lipidomics Visulalization Dashboard* from the dashboard under the *Lipid
 
 Create a *New Workspace* or choose the existing one from the drop down and provide the *Name of the session* to be redirected to *Lipidomics Visualization Dashboard's* upload page.
 
-![Workspace Selection](../../img/Lipidomics/Selection.png) <center>**Figure 6.** Workspace Selection</center>
+![Workspace Selection](../../img/Lipidomics/Selection1.png) <center>**Figure 6.** Workspace Selection</center>
 
 ##Upload Interface
 

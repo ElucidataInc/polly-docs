@@ -182,11 +182,7 @@ Upon opening the Discover portal on Polly, choose a data repository that you wou
 
 ![Polly Discover](../img/Discover/Discover.png)
 
-After selecting a repository, you’ll be able to see a dashboard and the Polly Discover app icon. The dashboard will give you an overview of the repository, for instance, the number of data sets in the repository, distribution of tissues, organisms, etc. among the datasets.
-
-![Repository Dashboard](../img/Discover/image2.png)
-
-Click on the below icon to start the discover app.
+After selecting a repository, you’ll be able to view a filtering interface which provides ** parameters** that you can use to filter the datasets within the selected repository. Once you select a dataset , you can access the integrated tools attached with the repository. For transcriptomics data, you can use discover application for further analysis of transcriptomics data.
 
 <!-- ![Discover App](../img/Discover/image3.png) -->
 <p align="center">
@@ -194,7 +190,7 @@ Click on the below icon to start the discover app.
     title="Discover App Icon" /> 
 </p>
 
-The app will open and you should see the overview page which contains a brief **description** of the application, it's **scope** and the **usage** as shown below.
+The app shows overview page which contains a brief **description** of the application, it's **scope** and the **usage** as shown below.
 
 ![App Description](../img/Discover/image4.png)
 
@@ -464,11 +460,8 @@ Upon opening the Discover application on Polly, choose a relevant data repositor
 
 ![Polly Discover](../img/Discover/Discover.png)
 
-After selecting a repository, you’ll be able to see a dashboard and the Polly Single Cell app icon. The dashboard will give you an overview of the repository, for instance, the number of data sets in the repository, distribution of tissues, organisms, etc. among the datasets.
+After selecting a repository, you’ll be able to view a filtering interface which provides ** parameters** that you can use to filter the datasets within the selected repository. Once you select a dataset , you can access the integrated tools attached with the repository. For transcriptomics data, you can use Single cell application for further analysis of single cell data.
 
-![Repository Dashboard](../img/Discover/single_1.png)
-
-Click on the below icon to start the Single Cell app.
 
 ![single cell App](../img/Discover/single_2.png)
 

@@ -60,9 +60,9 @@ The cohort file should be in .csv format as shown in Figure 3. This file should 
 ##Upload files
 
 Select *MetScape Workflow* from the dashboard under the *Metabolomics Data* Tab as shown in Figure 4. Create a *New Workspace* or select an existing one from the drop-down and provide the *Name of the Session* to be redirected to MetScape's upload page.
-![Polly Dashboard and Workspace selection](../../img/MetScape/Dashboard.png)
+![Polly Dashboard and Workspace selection](../../img/MetScape/Dashboard1.png)
 
-![Polly Dashboard and Workspace selection](../../img/MetScape/Selection.png) <center>**Figure 4.** Polly Dashboard and Workspace selection</center>
+![Polly Dashboard and Workspace selection](../../img/MetScape/Selection1.png) <center>**Figure 4.** Polly Dashboard and Workspace selection</center>
 
 After the files have been successfully uploaded as shown in Figure 5, click on *Proceed* to move to Polly Notebook.
 
