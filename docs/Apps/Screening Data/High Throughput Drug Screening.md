@@ -54,7 +54,7 @@ Select High Throughput Drug Screening Application from the dashboard under the�
 
 Create a *New Workspace* or select from the existing one from the drop-down and provide a *Name of the Session* to be redirected to *High Throughput Drug Screening* application's upload page.
 
-![Workspace Selection](../../img/HTS/Selection.png) <center>**Figure 5.** Workspace Selection</center>
+![Workspace Selection](../../img/HTS/Selection1.png) <center>**Figure 5.** Workspace Selection</center>
 
 Choose no. of cell lines from the drop down as shown in Figure 6.
 
