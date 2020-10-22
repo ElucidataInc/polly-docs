@@ -182,7 +182,7 @@ Upon opening the Discover portal on Polly, choose a data repository that you wou
 
 ![Polly Discover](../img/Discover/Discover.png)
 
-After selecting a repository, you’ll be able to view a filtering interface which provides ** parameters** that you can use to filter the datasets within the selected repository. Once you select a dataset , you can access the integrated tools attached with the repository. For transcriptomics data, you can use discover application for further analysis of transcriptomics data.
+After selecting a repository, you’ll be able to view a filtering interface which provides **parameters** that you can use to filter the datasets within the selected repository. Once you select a dataset , you can access the integrated tools attached with the repository. For transcriptomics data, you can use discover application for further analysis of transcriptomics data.
 
 <!-- ![Discover App](../img/Discover/image3.png) -->
 <p align="center">
@@ -460,7 +460,7 @@ Upon opening the Discover application on Polly, choose a relevant data repositor
 
 ![Polly Discover](../img/Discover/Discover.png)
 
-After selecting a repository, you’ll be able to view a filtering interface which provides ** parameters** that you can use to filter the datasets within the selected repository. Once you select a dataset , you can access the integrated tools attached with the repository. For transcriptomics data, you can use Single cell application for further analysis of single cell data.
+After selecting a repository, you’ll be able to view a filtering interface which provides **parameters** that you can use to filter the datasets within the selected repository. Once you select a dataset you can access the integrated tools attached with the repository. You can use Single Cell Visualization application for further analysis of single cell data.
 
 
 ![single cell App](../img/Discover/single_2.png)
