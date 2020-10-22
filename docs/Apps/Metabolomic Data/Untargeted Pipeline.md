@@ -40,9 +40,9 @@ The intensity file used here is the El-MAVEN output in peak detailed format. Thi
 
 Go to the dashboard and select Untargeted Pipeline under the *Metabolomcis Data* tab. Create a *New workspace* or choose from the existing ones and provide a *Name of the Session* to be redirected to the upload page.
 
-![Polly Dashboard](../../img/UntargetedPipeline/Dashboard.png)<center>**Figure 3.** Polly Dashboard</center>
+![Polly Dashboard](../../img/UntargetedPipeline/Dashboard1.png)<center>**Figure 3.** Polly Dashboard</center>
 
-![Untargeted Pipeline](../../img/UntargetedPipeline/Selection.png)<center>**Figure 4.** Untargeted Pipeline</center>
+![Untargeted Pipeline](../../img/UntargetedPipeline/Selection1.png)<center>**Figure 4.** Untargeted Pipeline</center>
 
 ##Uplaod Files
 

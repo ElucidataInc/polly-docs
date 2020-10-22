@@ -60,11 +60,11 @@ Once you have derived a peak table containing the list of metabolites. You can c
 
 Alternatively, select FirstView from the dashboard under the *Metabolomics Data* Tab.
 
-![Polly Dashboard](../../img/FirstView/Dashboard.png) <center>**Figure 5.** Polly Dashboard</center>
+![Polly Dashboard](../../img/FirstView/Dashboard1.png) <center>**Figure 5.** Polly Dashboard</center>
 
 Create a *New Workspace* or choose the existing one from the drop down and provide the *Name of the Session* to be redirected to FirstView's upload page as shown in Figure 6.
 
-![Workspace selection](../../img/FirstView/Selection.png) <center>**Figure 6.** Workspace selection</center>
+![Workspace selection](../../img/FirstView/Selection1.png) <center>**Figure 6.** Workspace selection</center>
 
 ![Upload page of FirstView](../../img/FirstView/Uploadpage.png) <center>**Figure 7.** Upload page of FirstView</center>
 

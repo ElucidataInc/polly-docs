@@ -98,7 +98,7 @@ CRISPR Screening provides an interactive way to explore and visualize the qualit
 
 Select *CRISPR Screening* from the dashboard under the *Screening and Sequencing Data* Tab as shown in Figure 6. Create a *New Workspace* or select from the existing one from the drop-down and provide a *Name of the Session* to be redirected to CRISPR Screening's upload page.
 
-![Polly Dashboard](../../../img/CRISPR/Dashboard.png) <center>**Figure 6.** Dashboard</center>
+![Polly Dashboard](../../../img/CRISPR/Dashboard1.png) <center>**Figure 6.** Dashboard</center>
 
 ![CRISPR Screening](../../../img/CRISPR/Selection1.png) <center>**Figure 7.** CRISPR Screening</center>
 

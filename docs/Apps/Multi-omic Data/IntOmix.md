@@ -55,9 +55,9 @@ Both the input files consist of information about log<sub>2</sub> fold change an
 
 Select *IntOmix* from the dashboard under the *Multi-omic Data* Tab as shown in Figure 4. Create a *New Workspace* or choose an existing one from thr drop-down and provide a *Name of the Session* to be redirected to IntOmix's upload page.
 
-![Polly Dashboard and Workspace selection](../../img/IntOmix/Dashboard.png)
+![Polly Dashboard and Workspace selection](../../img/IntOmix/Dashboard1.png)
 
-![Polly Dashboard and Workspace selection](../../img/IntOmix/Selection.png) <center>**Figure 4.** Polly Dashboard and Workspace selection</center>
+![Polly Dashboard and Workspace selection](../../img/IntOmix/Selection1.png) <center>**Figure 4.** Polly Dashboard and Workspace selection</center>
 
 ##Upload files
 
