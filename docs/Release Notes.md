@@ -40,7 +40,7 @@
     <li>Fixed nested folder creation and notebook renaming error in Workspaces.</li>
     <li>Fixed 503 error in Metabolomics Data Lake.</li>
     <li>Fixed a bug associated with notebooks and shiny apps opening to a blank screen.</li>
-    <li>Fixed error occuring in automated jobs.</li>
+    <li>Fixed error occurring in automated jobs.</li>
   </ul>
 </details>
 
@@ -100,7 +100,7 @@
     <li>Introduced <a href="https://docs.elucidata.io/Getting%20Started/Workspaces.html"> Workspaces</a> on Polly, which is a new and improved version of Polly Projects.</li>
     <li>Added GTEx app to process the filtered datasets from GTEx data lake.</li>
     <li>Added a filtering interface for GTEx data lake that allows filtering of the data on the basis of fields within the curated dataset.</li>
-    <li>Intergrated <a href="https://docs.elucidata.io/Data%20Lake.html#polly-discover-app"> Discover</a> and <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Dual%20Mode%20Visualization.html"> Dual Mode Visualization</a> for processing and further analysis of transcriptomic and metabolomic and single cell filtered datasets.</li>
+    <li>Integrated <a href="https://docs.elucidata.io/Data%20Lake.html#polly-discover-app"> Discover</a> and <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Dual%20Mode%20Visualization.html"> Dual Mode Visualization</a> for processing and further analysis of transcriptomic and metabolomic and single cell filtered datasets.</li>
     <li>Integrated <a href="https://docs.elucidata.io/Scaling%20compute/Polly%20Notebooks.html"> Notebook</a> to process the filtered datasets.</li>
     <li>Hosted <a href="https://chanzuckerberg.github.io/cellxgene/">CellxGene</a> for processing and visualization of single cell datasets.</li>
   </ul>
@@ -152,11 +152,11 @@
   <p class="update-button">Update</p>
   <ul>
     <li><a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Labeled%20LC-MS%20Workflow.html">Labeled LC-MS Workflow.</a>has N and C as indistinguishable isotopes</li>
-    <li>Improved the stability of both Shiny and Desktop Appications.</li>
+    <li>Improved the stability of both Shiny and Desktop Applications.</li>
     <li>Communication within the infrastructure is now through encrypted keys.</li>
     <li>Shiny apps as well as shiny states are encrypted during transit as well as storage.</li>
     <li>Added encryption for the disks running the computations.</li>
-    <li>Encrpted buckets containing credentials.</li>
+    <li>Encrypted buckets containing credentials.</li>
   </ul>
 </details>
 
@@ -174,7 +174,7 @@
   <p class="update-button">Update</p>
   <ul>
     <li>Added Si as an indistinguishable isotope in <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Labeled%20LC-MS%20Workflow.html">Labeled LC-MS Workflow.</a></li>
-    <li>Introduced pre-processing functionlaities along with updated selections and heatmap for visualization in <a href="https://docs.elucidata.io/Apps/Lipidomics%20Data/Lipidomics%20Visualization%20Dashboard.html">Lipidomics Visualziation Dashboard</a>.</li>
+    <li>Introduced pre-processing functionalities along with updated selections and heatmap for visualization in <a href="https://docs.elucidata.io/Apps/Lipidomics%20Data/Lipidomics%20Visualization%20Dashboard.html">Lipidomics Visualization Dashboard</a>.</li>
   </ul>
   <p class="Deprecated-button">Deprecated</p>
   <ul>
