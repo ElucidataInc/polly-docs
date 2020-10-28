@@ -79,7 +79,7 @@
   </ul>
   <p class="update-button">Update</p>
   <ul>
-    <li>Updated discoverpy package in all the dockers to the latest version.</li?
+    <li>Updated discoverpy package in all the dockers to the latest version.</li>
     <li>Fixed CellxGene visualization loading for specific datasets.</li>
     <li>Fixed duplicate metabolite generation issue within the <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Dual%20Mode%20Visualization.html"> Dual Mode Data Visualization application</a>.</li>
     <li>Fixed minor UI issues in Workspaces.</li>
@@ -131,7 +131,7 @@
   </ul>
   <p class="update-button">Update</p>
   <ul>
-    <li>Allowed internal standards and unlabeled data to pass through the <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Labeled%20LC-MS%20Workflow.html">Labeled LC-MS Workflow</a> to generate output</li>
+    <li>Allowed internal standards and unlabeled data to pass through the <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Labeled%20LC-MS%20Workflow.html">Labeled LC-MS Workflow</a> to generate output.</li>
     <li>Added Phantasus, Boxplot & Whisker plot along with the bar plot in the <a href="https://docs.elucidata.io/Data%20Lake.html#polly-discover-app"> Discover</a> application.</li>
     <li>Fixed Polly CLI auto login error in notebooks.</li>
     <li>Fixed unresponsive notebook with infinite loading.</li>
@@ -151,7 +151,7 @@
   </ul>
   <p class="update-button">Update</p>
   <ul>
-    <li><a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Labeled%20LC-MS%20Workflow.html">Labeled LC-MS Workflow.</a>has N and C as indistinguishable isotopes</li>
+    <li><a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Labeled%20LC-MS%20Workflow.html">Labeled LC-MS Workflow</a> has N and C as indistinguishable isotopes.</li>
     <li>Improved the stability of both Shiny and Desktop Applications.</li>
     <li>Communication within the infrastructure is now through encrypted keys.</li>
     <li>Shiny apps as well as shiny states are encrypted during transit as well as storage.</li>
