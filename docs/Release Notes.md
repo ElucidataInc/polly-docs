@@ -1,8 +1,56 @@
 #Release Notes
 
-<!--October 9th, 2020-->
+<!--November 6th, 2020-->
 
 <details open>
+<summary><font size="+1"><b>November 6th, 2020</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>Data transfer time limit has been extended to 8 hour enabling transfer of 1TB data through CLI at once.</li>
+  </ul>
+  <p class="update-button">Update</p>
+  <ul>
+    <li>Updated user interface of Discover and Data Studio.</li>
+    <li>Added filtering interface to GEO data lake.</li>
+    <li>Added search functionality on Discover interface.</li>
+    <li>Added highlight and cumulative size feature on multiselection in Workspaces.</li>
+    <li>Updated collaborators icon to show number of collaborators.</li>
+    <li>Resolved inconsistent log2FC values for multiple comparisons in IntOmix.</li>
+    <li>Resolved sample name descrepancy in concentration plot of QuantFit. 
+    <li>Fixed table column resizing error on filtering interface.</li>
+    <li>Resolved a bug in Polly Docker Domain.</li>
+  </ul>
+</details>
+
+<hr>
+
+<!--October 23rd, 2020-->
+
+<details>
+<summary><font size="+1"><b>October 23rd, 2020</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>Hosted our first <a href="https://elucidata.io/ugm/">User Group Meeting</a>.</li>
+    <li>Introduced our public platform<a href="https://omixwiki.elucidata.io/dashboard">OmixWiki</a>, showcasing top 100 cited COVID-19 publications with end to end omics analysis.</li>
+    <li>Released the newest version of <a href="https://elucidata.io/ugm/">El-MAVEN v0.12.0.</a>.</li>
+  </ul>
+  <p class="update-button">Update</p>
+  <ul>
+    <li>Updated Workspaces user interface.</li>
+    <li>Added filtering interface to COVID-19 data lake.</li>
+    <li>Updated datasets searchability on dataset ID and description.</li>
+    <li>Fixed incorrect memory error in Polly CLI.</li>
+  </ul>
+</details>
+
+<hr>
+
+
+<!--October 9th, 2020-->
+
+<details>
 <summary><font size="+1"><b>October 9th, 2020</b></font></summary>
 <br>
   <p class="new-button">New</p>
@@ -31,7 +79,7 @@
   <p class="new-button">New</p>
   <ul>
     <li>Introduced Labeled LC-MS Analysis preset for natural abundance correction and visualization for single or dual labeled LC-MS data combined with an interactive, customizable and shareable reporting dashboard.</li>
-    <li>Integrated pathway visulization in <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Labeled%20LC-MS%20Workflow.html"> Labeled LC-MS Workflow</a>.</li>
+    <li>Integrated pathway visualization in <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Labeled%20LC-MS%20Workflow.html"> Labeled LC-MS Workflow</a>.</li>
     <li>Added dilution factor and protein normalization in the <a href="https://docs.elucidata.io/Apps/Lipidomics%20Data/Lipidomics%20Visualization%20Dashboard.html"> Lipidomics Visualization Dashboard</a>.</li>
   </ul>
   <p class="update-button">Update</p>
@@ -40,7 +88,7 @@
     <li>Fixed nested folder creation and notebook renaming error in Workspaces.</li>
     <li>Fixed 503 error in Metabolomics Data Lake.</li>
     <li>Fixed a bug associated with notebooks and shiny apps opening to a blank screen.</li>
-    <li>Fixed error occuring in automated jobs.</li>
+    <li>Fixed error occurring in automated jobs.</li>
   </ul>
 </details>
 
@@ -79,7 +127,7 @@
   </ul>
   <p class="update-button">Update</p>
   <ul>
-    <li>Updated discoverpy package in all the dockers to the latest version.</li?
+    <li>Updated discoverpy package in all the dockers to the latest version.</li>
     <li>Fixed CellxGene visualization loading for specific datasets.</li>
     <li>Fixed duplicate metabolite generation issue within the <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Dual%20Mode%20Visualization.html"> Dual Mode Data Visualization application</a>.</li>
     <li>Fixed minor UI issues in Workspaces.</li>
@@ -100,7 +148,7 @@
     <li>Introduced <a href="https://docs.elucidata.io/Getting%20Started/Workspaces.html"> Workspaces</a> on Polly, which is a new and improved version of Polly Projects.</li>
     <li>Added GTEx app to process the filtered datasets from GTEx data lake.</li>
     <li>Added a filtering interface for GTEx data lake that allows filtering of the data on the basis of fields within the curated dataset.</li>
-    <li>Intergrated <a href="https://docs.elucidata.io/Data%20Lake.html#polly-discover-app"> Discover</a> and <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Dual%20Mode%20Visualization.html"> Dual Mode Visualization</a> for processing and further analysis of transcriptomic and metabolomic and single cell filtered datasets.</li>
+    <li>Integrated <a href="https://docs.elucidata.io/Data%20Lake.html#polly-discover-app"> Discover</a> and <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Dual%20Mode%20Visualization.html"> Dual Mode Visualization</a> for processing and further analysis of transcriptomic and metabolomic and single cell filtered datasets.</li>
     <li>Integrated <a href="https://docs.elucidata.io/Scaling%20compute/Polly%20Notebooks.html"> Notebook</a> to process the filtered datasets.</li>
     <li>Hosted <a href="https://chanzuckerberg.github.io/cellxgene/">CellxGene</a> for processing and visualization of single cell datasets.</li>
   </ul>
@@ -131,7 +179,7 @@
   </ul>
   <p class="update-button">Update</p>
   <ul>
-    <li>Allowed internal standards and unlabeled data to pass through the <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Labeled%20LC-MS%20Workflow.html">Labeled LC-MS Workflow</a> to generate output</li>
+    <li>Allowed internal standards and unlabeled data to pass through the <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Labeled%20LC-MS%20Workflow.html">Labeled LC-MS Workflow</a> to generate output.</li>
     <li>Added Phantasus, Boxplot & Whisker plot along with the bar plot in the <a href="https://docs.elucidata.io/Data%20Lake.html#polly-discover-app"> Discover</a> application.</li>
     <li>Fixed Polly CLI auto login error in notebooks.</li>
     <li>Fixed unresponsive notebook with infinite loading.</li>
@@ -151,12 +199,12 @@
   </ul>
   <p class="update-button">Update</p>
   <ul>
-    <li><a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Labeled%20LC-MS%20Workflow.html">Labeled LC-MS Workflow.</a>has N and C as indistinguishable isotopes</li>
-    <li>Improved the stability of both Shiny and Desktop Appications.</li>
+    <li><a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Labeled%20LC-MS%20Workflow.html">Labeled LC-MS Workflow</a> has N and C as indistinguishable isotopes.</li>
+    <li>Improved the stability of both Shiny and Desktop Applications.</li>
     <li>Communication within the infrastructure is now through encrypted keys.</li>
     <li>Shiny apps as well as shiny states are encrypted during transit as well as storage.</li>
     <li>Added encryption for the disks running the computations.</li>
-    <li>Encrpted buckets containing credentials.</li>
+    <li>Encrypted buckets containing credentials.</li>
   </ul>
 </details>
 
@@ -174,7 +222,7 @@
   <p class="update-button">Update</p>
   <ul>
     <li>Added Si as an indistinguishable isotope in <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Labeled%20LC-MS%20Workflow.html">Labeled LC-MS Workflow.</a></li>
-    <li>Introduced pre-processing functionlaities along with updated selections and heatmap for visualization in <a href="https://docs.elucidata.io/Apps/Lipidomics%20Data/Lipidomics%20Visualization%20Dashboard.html">Lipidomics Visualziation Dashboard</a>.</li>
+    <li>Introduced pre-processing functionalities along with updated selections and heatmap for visualization in <a href="https://docs.elucidata.io/Apps/Lipidomics%20Data/Lipidomics%20Visualization%20Dashboard.html">Lipidomics Visualization Dashboard</a>.</li>
   </ul>
   <p class="Deprecated-button">Deprecated</p>
   <ul>
