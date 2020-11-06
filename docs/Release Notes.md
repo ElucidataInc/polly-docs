@@ -1,8 +1,56 @@
 #Release Notes
 
-<!--October 9th, 2020-->
+<!--November 6th, 2020-->
 
 <details open>
+<summary><font size="+1"><b>November 6th, 2020</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>Data transfer time limit has been extended to 8 hour enabling transfer of 1TB data through CLI at once.</li>
+  </ul>
+  <p class="update-button">Update</p>
+  <ul>
+    <li>Updated user interface of Discover and Data Studio.</li>
+    <li>Added filtering interface to GEO data lake.</li>
+    <li>Added search functionality on Discover interface.</li>
+    <li>Added highlight and cumulative size feature on multiselection in Workspaces.</li>
+    <li>Updated collaborators icon to show number of collaborators.</li>
+    <li>Resolved inconsistent log2FC values for multiple comparisons in IntOmix.</li>
+    <li>Resolved sample name descrepancy in concentration plot of QuantFit. 
+    <li>Fixed table column resizing error on filtering interface.</li>
+    <li>Resolved a bug in Polly Docker Domain.</li>
+  </ul>
+</details>
+
+<hr>
+
+<!--October 23rd, 2020-->
+
+<details>
+<summary><font size="+1"><b>October 23rd, 2020</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>Hosted our first <a href="https://elucidata.io/ugm/">User Group Meeting</a>.</li>
+    <li>Introduced our public platform<a href="https://omixwiki.elucidata.io/dashboard">OmixWiki</a>, showcasing top 100 cited COVID-19 publications with end to end omics analysis.</li>
+    <li>Released the newest version of <a href="https://elucidata.io/ugm/">El-MAVEN v0.12.0.</a>.</li>
+  </ul>
+  <p class="update-button">Update</p>
+  <ul>
+    <li>Updated Workspaces user interface.</li>
+    <li>Added filtering interface to COVID-19 data lake.</li>
+    <li>Updated datasets searchability on dataset ID and description.</li>
+    <li>Fixed incorrect memory error in Polly CLI.</li>
+  </ul>
+</details>
+
+<hr>
+
+
+<!--October 9th, 2020-->
+
+<details>
 <summary><font size="+1"><b>October 9th, 2020</b></font></summary>
 <br>
   <p class="new-button">New</p>
