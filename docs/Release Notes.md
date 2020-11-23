@@ -1,5 +1,27 @@
 #Release Notes
 
+<!--November 20th, 2020-->
+
+<details open>
+<summary><font size="+1"><b>November 20th, 2020</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>Improved Omixwiki UI for better consumption.</li>
+    <li>Added a feature to clone notebooks within the Workspaces.</li>
+  </ul>
+  <p class="update-button">Update</p>
+  <ul>
+    <li>Added more granular error messages for notebook functions and CLI jobs.</li>
+    <li>Resolved the issue with renaming large data files.</li>
+    <li>Resolved an issue with folder breadcrumb in Workspace.</li>
+    <li>Fixed involuntary logout issue.</li>
+  </ul>
+</details>
+
+<hr>
+
+
 <!--November 6th, 2020-->
 
 <details open>
