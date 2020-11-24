@@ -7,14 +7,14 @@
 <br>
   <p class="new-button">New</p>
   <ul>
-    <li>Improved Omixwiki UI for better consumption.</li>
-    <li>Added a feature to clone notebooks within the Workspaces.</li>
+    <li>Improved OmixWiki UI for better consumption.</li>
+    <li>Added the ability to clone Notebooks within Workspaces.</li>
   </ul>
   <p class="update-button">Update</p>
   <ul>
-    <li>Added more granular error messages for notebook functions and CLI jobs.</li>
+    <li>Added granular error messages for Notebook functions and CLI jobs.</li>
     <li>Resolved the issue with renaming large data files.</li>
-    <li>Resolved an issue with folder breadcrumb in Workspace.</li>
+    <li>Resolved the issue with folder breadcrumb in Workspaces.</li>
     <li>Fixed involuntary logout issue.</li>
   </ul>
 </details>
@@ -24,7 +24,7 @@
 
 <!--November 6th, 2020-->
 
-<details open>
+<details>
 <summary><font size="+1"><b>November 6th, 2020</b></font></summary>
 <br>
   <p class="new-button">New</p>
