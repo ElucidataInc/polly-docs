@@ -18,7 +18,7 @@
 
 <!--November 20th, 2020-->
 
-<details open>
+<details>
 <summary><font size="+1"><b>November 20th, 2020</b></font></summary>
 <br>
   <p class="new-button">New</p>
