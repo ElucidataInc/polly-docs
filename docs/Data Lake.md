@@ -9,12 +9,12 @@ Polly Discover consists of the following major components:
     Data lakes are reservoirs of information that contain multi-omics data, annotations from publicly available databases, publications, etc. Reservoirs are further segregated into two parts: public data repositories which are curated by Elucidata using public data sources, and private data repositories, where you can add your proprietary data.  
     <br />
 
-*   Data Lake Exploration: 
+*   Data Lake Exploration 
 
     To explore a data lake, Polly provides tools such as applications and Polly Notebooks. These tools enable you to find relevant data by searching for keywords associated with the file name, file metadata, or the contents of a file.  
     <br />
 
-*   On-the-fly Analysis: 
+*   On-the-fly Analysis 
 
     Once you have narrowed down relevant omics datasets, you can analyze the dataset(s) on the fly using various statistical analyses while displaying intuitive visualizations.
 

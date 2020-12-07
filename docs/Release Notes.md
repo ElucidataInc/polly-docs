@@ -1,8 +1,24 @@
 #Release Notes
 
-<!--November 20th, 2020-->
+<!--December 4th, 2020-->
 
 <details open>
+<summary><font size="+1"><b>December 4th, 2020</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>We now support reactions from Chinese Hamster Ovary (CHO) for integrated pathway analysis in <a href="https://docs.elucidata.io/Apps/Multi-omic%20Data/IntOmix.html">IntOmix</a>.</li>
+  </ul>;
+  <p class="update-button">Update</p>
+  <ul>
+    <li>Resolved timeout error for opening a folder containing large number of files within a Workspace.</li>
+    <li>Resolved issue with Workspace root directory redirection on selection.</li>
+  </ul>
+</details>
+
+<!--November 20th, 2020-->
+
+<details>
 <summary><font size="+1"><b>November 20th, 2020</b></font></summary>
 <br>
   <p class="new-button">New</p>
