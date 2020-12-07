@@ -7,8 +7,8 @@
 <br>
   <p class="new-button">New</p>
   <ul>
-    <li>We now support reactions from Chinese Hamster Ovary(CHO) for integrated pathway analysis in <a href="https://docs.elucidata.io/Scaling%20compute/Polly%20CLI.html">IntOmix</a>.</li>
-  </ul>
+    <li>We now support reactions from Chinese Hamster Ovary (CHO) for integrated pathway analysis in <a href="https://docs.elucidata.io/Apps/Multi-omic%20Data/IntOmix.html">IntOmix</a>.</li>
+  </ul>;
   <p class="update-button">Update</p>
   <ul>
     <li>Resolved timeout error for opening a folder containing large number of files within a Workspace.</li>
