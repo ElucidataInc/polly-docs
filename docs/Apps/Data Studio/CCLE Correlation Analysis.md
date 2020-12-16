@@ -98,13 +98,13 @@ This component is used to filter samples from the expression data and metadata b
 
 ![Filetering Interface](../../img/ccle/9.png) <center>**Figure 9.** Filtering parameters</center>
 
-*   **Filter samples?:** It provides two options - ‘*Yes*' and '*No*'. If '*No*’ is selected, then no filtering is applied to the data and all the samples are available for usage in the downstream components. If '*Yes*' is selected, then you must select the options for filtering from the beneath dropdowns.
+*   **Filter samples?:** It provides two options - *Yes* and *No*. If '*No*’ is selected, then no filtering is applied to the data and all the samples are available for usage in the downstream components. If '*Yes*' is selected, then you must select the options for filtering from the beneath dropdowns.
 
 *   **Select Column:** Names of the columns from the metadata file are enlisted here for you to choose.
 
 *   **Column Value:** Once a column has been selected in the *Select Column* dropdown, then all the unique values from the selected column are available for you to pick from.
 
-Once all the fields are selected, click on *Run Task* to execute the component.It will generate three output files:
+Once all the fields are selected, click on *Run Task* to execute the component. It will generate three output files:
 
 ![Filtering output](../../img/ccle/10.png) <center>**Figure 10.** Filtering output</center>
 
@@ -159,7 +159,7 @@ This component uses Fisher's exact test to test for correlation between the muta
 
 *   Correlation with metadata - The selected metadata column is split so that each newly created column represents one unique value from the column and the values represent the presence(1) or absence(0) of that feature. Contingency table created for each of these columns separately.
 
-*   Correlation with expression - The gene expression values are binarised and samples are labeled 'Highly expressed' where there is at least one standard deviation difference on the higher side. Rest are labeled 'Not expressed'. A contingency table is then created.
+*   Correlation with expression - The gene expression values are binarised and samples are labeled *Highly expressed* where there is at least one standard deviation difference on the higher side. Rest are labeled *Not expressed*. A contingency table is then created.
 
 
 ![Correlation](../../img/ccle/15.png) <center>**Figure 15.** Correlation parameters</center>
@@ -168,20 +168,18 @@ This component uses Fisher's exact test to test for correlation between the muta
 
 *   **Metadata column:** Dropdown to select one of the metadata columns.
 
-*   **Test correlation:** Multi-select dropdown with two options - expression data and mutation data. You can select either of them or both. The component performs fisher's exact test to test for correlation of the mutation status of the selected gene vs the options picked here.    
+*   **Test correlation:** Multi-select dropdown with two options - expression data and mutation data. You can select either of them or both. The component performs Fisher's exact test to test for correlation of the mutation status of the selected gene vs the options picked here.    
 
-Once all the parameters are selected, execute the component by clicking on *Run Task*.
-
-It will generate three output files:
+Once all the parameters are selected, execute the component by clicking on *Run Task*. It will generate three output files:
 
 ![Correlation](../../img/ccle/18.png) <center>**Figure 16.** Correlation outputs</center>
 
 
-*   **Pvals Metadata:** Table for p-values of fisher's exact test of selected gene mutation against all the unique values from the metadata column selected.   
+*   **Pvals Metadata:** Table for *p*-values of Fisher's exact test of selected gene mutation against all the unique values from the metadata column selected.   
 
-*   **Pvals Expression:** Table for p-values of fisher's exact test of selected gene mutation against the binarised expression values of all the genes present in the expression matrix.
+*   **Pvals Expression:** Table for *p*-values of Fisher's exact test of selected gene mutation against the binarised expression values of all the genes present in the expression matrix.
 
-*   **Pvals Mutation:** Table for p-values of fisher's exact test of selected gene mutation against the mutation status of all the genes in the mutation matrix.
+*   **Pvals Mutation:** Table for *p*-values of Fisher's exact test of selected gene mutation against the mutation status of all the genes in the mutation matrix.
 
     
 
@@ -197,9 +195,9 @@ This component allows the search for differentially expressed (DE) genes, that i
 
 *   **Cohort B:** Dropdown to select another cohort from the metadata column selected.
 
-*   **Normalization:** Perform log2 normalization if data is not normalized
+*   **Normalization:** Perform log<sup>2</sup>normalization if data is not normalized.
 
-*   **Algorithm:** You can select any one of the two algorithms - “limma” or “Unpaired t-test”.
+*   **Algorithm:** You can select any one of the two algorithms - *limma* or *Unpaired t-test*.
 
     
 
@@ -207,19 +205,17 @@ This component allows the search for differentially expressed (DE) genes, that i
 
 An *unpaired t-test* (also known as an independent t-test) is a statistical procedure that compares the averages/means of two independent or unrelated groups to determine if there is a significant difference between the two.
 
-*   **P-Value Correction:** You can select the “Benjamini-Hochberg” method to correct the p-value for False Discovery Rate or the “Bonferroni” method to correct the p-value for Type I errors.
+*   **P-Value Correction:** You can select the *Benjamini-Hochberg* method to correct the *p*-value for False Discovery Rate or the *Bonferroni* method to correct the *p*-value for Type I errors.
 
-*   **P-Value Metric:** Plot and calculate significance using the selected metric. P-value is the value returned by the algorithm while Adjusted P-value is the corrected value after applying one of the correction methods above.
+*   **P-Value Metric:** Plot and calculate significance using the selected metric. *p-value* is the value returned by the algorithm while *Adjusted p-value* is the corrected value after applying one of the correction methods above.
 
-*   **P-value threshold:** You can select the appropriate threshold for the selected P-Value metric. P-values lower than this threshold will be marked as Significant
+*   **P-value threshold:** You can select the appropriate threshold for the selected *p*-value metric. *p8-values lower than this threshold will be marked as significant.
 
-*   **Absolute Log2FC Threshold:** You can select the appropriate fold change threshold. Log2FC values higher than this will be marked as Significant
+*   **Absolute Log2FC Threshold:** You can select the appropriate fold change threshold. Log<sub>2</sub>fold change values higher than this will be marked as significant.
 
-Once all the parameters are selected, execute the component by clicking on *Run Task*.
+Once all the parameters are selected, execute the component by clicking on *Run Task*. It will generate thwo outputs:    
 
-It will generate thwo outputs:    
-
-*   **Differential Expression:** Table with Differential Expression results with p-value and fold change
+*   **Differential Expression:** Table with Differential Expression results with *p*-value and fold change.
 
 *   **Volcano Plot:** Based on the parameters specified, a volcano plot is displayed. The volcano plot helps in visualizing metabolites that are significantly dysregulated between two cohorts. 
 
