@@ -6,7 +6,7 @@ Oncology is in the midst of a paradigm shift towards personalized medicine with 
 
 Enter the [Cancer Cell Line Encyclopedia](https://portals.broadinstitute.org/ccle) (CCLE), a collection of open access whole genome, whole exome, and RNA-seq datasets encompassing nearly 1000 human cancer cell lines. A project of the [Broad Institute](https://www.broadinstitute.org/), [Novartis Institutes for Biomedical Research](https://www.nibr.com/), and the [Genomics Institute of the Novartis Research Foundation](https://www.gnf.nibr.com/), the CCLE correlates genomic data from 947 human cancer cell lines with pharmacological profiles of 24 anticancer drugs.
 
-Since the availability of these datasets allows for large-scale comparative analysis. The CCLE Correlation Analysis App can be used to identify features correlated with a gene mutation such as mutations in other genes, expression, and sample-level metadata.
+The availability of these datasets allows for large-scale comparative analysis. The CCLE Correlation Analysis App can be used to identify features correlated with a gene mutation such as mutations in other genes, expression, and sample-level metadata.
 
 ## Scope of the App
 
@@ -14,9 +14,9 @@ Since the availability of these datasets allows for large-scale comparative anal
 
 *   Filter samples from the expression data and metadata based on selection.
 
-*   Analyze the Correlation between the mutation status of the selected gene vs the other features.
+*   Analyze the correlation between the mutation status of the selected gene against the other features.
 
-*   Performs univariate analysis like Limma t-test along with Multivariate analysis like PCA analysis.
+*   Performs univariate analysis like limma t-test along with multivariate analysis like PCA analysis.
    
 
 # Getting Started
@@ -29,17 +29,17 @@ The data files can be downloaded from [DepMap portal](https://depmap.org/portal/
 
 *   **CCLE mutation:** Mutation File - File “CCLE_mutations.csv” from DepMap Public 20Q2 data release at the DepMap portal.
 
-*   **CCLE metadata:** File “ sample_info.csv” from DepMap Public 20Q2 data release at the DepMap portal.
+*   **CCLE metadata:** File “sample_info.csv” from DepMap Public 20Q2 data release at the DepMap portal.
 
     
 
 # Tutorial
 
-Select *CCLE Correlation Analysis App* from the dashboard under the *Studio Presets* Tab.
+Select *CCLE Correlation Analysis App* from the dashboard under the *Studio Presets* tab.
 
 ![Dashboard](../../img/ccle/1.png)<center>**Figure 1.** Polly Dashboard</center>
 
-Select an existing workspace from the drop-down and provide the *Name of the Session* to be redirected to *CCLE Correlation Analysis Preset's* upload page.
+Select an existing Workspace from the drop-down and provide the *Name of the Session* to be redirected to *CCLE Correlation Analysis Preset's* upload page.
 
 ![Selection](../../img/ccle/2.png) <center>**Figure 2.** App selection</center>
 
@@ -65,7 +65,7 @@ It will generate three output files:
 
 *   **Expression matrix:** Table for the expression values of genes in cell lines with genes in rows and samples in columns.
    
-*   **Mutation matrix:** Table depicting the presence and absence of gene mutations in cell lines. 0s represent the wild-type genes and 1s represent mutated genes.
+*   **Mutation matrix:** Table depicting the presence and absence of gene mutations in cell lines. `0s` represent the wild-type genes and `1s` represent mutated genes.
 
 *   **CCLE metadata:** Table for the metadata information associated with each cell line. Rows represent samples and columns represent various attributes of the samples.
 
@@ -75,7 +75,7 @@ It will generate three output files:
 
 This component allows you to annotate the column metadata with the gene mutation.
 
-*   **Mutation Gene** : Select a gene for annotation using the dropdown menu of *Mutation Gene*. Across samples, the mutation status of this gene will be correlated with various features such as the expression of other genes and the sample level metadata. Once all the fields are filled, Click on *Run Task* to execute the component.
+*   **Mutation Gene:** Select a gene for annotation using the dropdown menu of *Mutation Gene*. Across samples, the mutation status of this gene will be correlated with various features such as the expression of other genes and the sample level metadata. Once all the fields are filled, Click on *Run Task* to execute the component.
 
 **Note:**
 
@@ -85,7 +85,7 @@ This component allows you to annotate the column metadata with the gene mutation
 
 ![Annotation Interface](../../img/ccle/7.png) <center>**Figure 7.** Annotation parameters</center>
 
-Output:
+The generated output:
 
 *   **CCLE annotated metadata:** New column will be added which has the information about the mutation status of the selected gene across all the samples. If multiple genes are selected, then multiple columns will be added.
 
@@ -98,15 +98,13 @@ This component is used to filter samples from the expression data and metadata b
 
 ![Filetering Interface](../../img/ccle/9.png) <center>**Figure 9.** Filtering parameters</center>
 
-*   **Filter samples? :** It provides two options - ‘*Yes*' and '*No*'. If '*No*’ is selected, then no filtering is applied to the data and all the samples are available for usage in the downstream components. If '*Yes*' is selected, then the user must fill-up the options for filtering in the UI elements just beneath this radio button.
+*   **Filter samples?:** It provides two options - ‘*Yes*' and '*No*'. If '*No*’ is selected, then no filtering is applied to the data and all the samples are available for usage in the downstream components. If '*Yes*' is selected, then you must select the options for filtering from the beneath dropdowns.
 
 *   **Select Column:** Names of the columns from the metadata file are enlisted here for you to choose.
 
 *   **Column Value:** Once a column has been selected in the *Select Column* dropdown, then all the unique values from the selected column are available for you to pick from.
 
-Once all the fields are selected, click on *Run Task* to execute the component.
-
-It will generate three output files:
+Once all the fields are selected, click on *Run Task* to execute the component.It will generate three output files:
 
 ![Filtering output](../../img/ccle/10.png) <center>**Figure 10.** Filtering output</center>
 
@@ -121,7 +119,7 @@ It will generate three output files:
 
 ## Gene expression Box plot
 
-This component generated a gene expression Boxplot. It is a visualization component that uses a five-number summary ( minimum, first quartile, median, third quartile, and maximum) to display the distribution of data based on quartiles. Outliers are also displayed as individual points.
+This component generated a gene expression Boxplot. It is a visualization component that uses a five-number summary (minimum, first quartile, median, third quartile, and maximum) to display the distribution of data based on quartiles. Outliers are also displayed as individual points.
 
 ![Box plot interface](../../img/ccle/11.png) <center>**Figure 11.** Boxplot parameters</center>
 
@@ -134,9 +132,9 @@ After executing the component, an interactive *Boxplot* will be generated as an 
 ![Box plot](../../img/ccle/12.png) <center>**Figure 12.** Boxplot</center>
     
 
-## **PCA**
+## PCA
 
-This component allows you to simplifies the complexity of high-dimensional data while retaining the trends and patterns in it. It projects the data onto a lower dimension with an objective to find the best summary of the data using a limited number of principal components that help in understanding the clustering pattern between biologically grouped and ungrouped samples.
+This component allows you to simplify the complexity of high-dimensional data while retaining the trends and patterns in it. It projects the data onto a lower dimension with an objective to find the best summary of the data using a limited number of principal components that help in understanding the clustering pattern between biologically grouped and ungrouped samples.
 
 ![PCA](../../img/ccle/13.png) <center>**Figure 13.** PCA parameters</center>
 
@@ -144,18 +142,18 @@ This component allows you to simplifies the complexity of high-dimensional data 
 
 *   **Top N Variants:** The top N variable entities will be used for PCA calculation. Define the number in this box. The default number used is 1500.
 
-It generated two outputs:
+It generates two outputs:
 
-*   **PCA Plot:** A plot is created where the samples are labeled based on the cohort selected in the metadata column. When the user hovers over the points, sample ID and percentage of variance explained by each principal component are displayed along with the cohort.
+*   **PCA Plot:** A plot is created where the samples are labeled based on the cohort selected in the metadata column. When you hovers over the points, sample ID and percentage of variance explained by each principal component are displayed along with the cohort.
 
 *   **PCA Score:** Table of the first 10 PC values and metadata columns.  
 
 ![PCA](../../img/ccle/14.png) <center>**Figure 14.** PCA outputs</center>
    
 
-## **Correlation**
+## Correlation
 
-This component uses Fisher's exact test to test for correlation between the mutation status of the selected gene vs the other selected features.
+This component uses Fisher's exact test to test for correlation between the mutation status of the selected gene against the other selected features.
 
 *   Correlation with other gene mutations - A contingency table for each gene with the mutation count across all the samples for the selected gene and the gene against which the test is to be done.
 
