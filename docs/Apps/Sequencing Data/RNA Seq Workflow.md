@@ -55,7 +55,7 @@ Create a *New Workspace* or choose the existing one from the drop down and provi
 
 ![Workspace selection](../../img/RNASeq/Selection1.png) <center>**Figure 5.** Workspace selection</center>
 
-##Uplaod Files
+##Upload Files
 
 Upload the feature countsa and metadata file using the drop downs as shown in Figure 6.
 
