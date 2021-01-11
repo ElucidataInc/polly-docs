@@ -7,7 +7,7 @@
 <br>
   <p class="update-button">Update</p>
   <ul>
-    <li>Updated <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Untargeted%20Pipeline.html">Untargeted Pipeline</a> to be compatible with peakML output.</li>
+    <li>Updated <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Untargeted%20Pipeline.html">Untargeted Pipeline</a> to be compatible with El-MAVEN's peakML output.</li>
   </ul>
 </details>
 
