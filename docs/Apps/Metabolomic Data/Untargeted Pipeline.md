@@ -194,18 +194,18 @@ The results are generated in the MetScape input intensity format and metadata fo
 
 ##GCT-Preparation
 
-This interface allows user to select the data to be used in the downstream pipeline. The user can use any data to the downstream analysis by selecting the data from the previous steps.
+This interface allows you to select the data to be used in the downstream pipeline. The user can use any data to the downstream analysis by selecting the data from the previous steps.
 
 ![GCT-Preparation Tab](../../img/UntargetedPipeline/GCTPreparation.png)<center>**Figure 19.** GCT-Preparation Tab</center>
 
 *   *Uploaded data:* This allows you to take the uploaded data to the downsteam pipeline.
-*   *Annotated Data:* This allows you to take the annotated data to the downsteam pipeline. The user can take the representative data or the overall data to the downsteam pipeline.
-*   *Identified data:* This allows you to take the identified data to the downsteam pipeline. The user can take the representative data or the overall data to the downsteam pipeline.
+*   *Annotated data:* This allows you to take the annotated data to the downsteam pipeline. You can either take the representative data or the overall data to the downsteam pipeline.
+*   *Identified data:* This allows you to take the identified data to the downsteam pipeline. You can either take the representative data or the overall data to the downsteam pipeline.
 
 ![Data downstream](../../img/UntargetedPipeline/dataDownstream.png)<center>**Figure 20.** Data downstream</center>
 
-*   *Representative:* This allows you to select the representative data from either the annotated data or identified data whichever is selected in the above option.
-*   *Overall:* This allows you to select the overall data from either the annotated data or identified data whichever is selected in the above option.
+*   *Representative:* This allows you to select the representative data from either the annotated data or identified data depending on the above selection.
+*   *Overall:* This allows you to select the overall data from either the annotated data or identified data depending on the above selection.
 
 ![Data Type](../../img/UntargetedPipeline/dataType.png)<center>**Figure 21.** Data type</center>
 
