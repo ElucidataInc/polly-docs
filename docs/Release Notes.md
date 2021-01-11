@@ -11,8 +11,7 @@
   </ul>
 </details>
 
-
-
+<hr>
 
 <!--December 18th, 2020-->
 
@@ -31,6 +30,7 @@
   </ul>
 </details>
 
+<hr>
 
 <!--December 4th, 2020-->
 
@@ -47,6 +47,8 @@
     <li>Resolved issue with Workspace root directory redirection on selection.</li>
   </ul>
 </details>
+
+<hr>
 
 <!--November 20th, 2020-->
 
