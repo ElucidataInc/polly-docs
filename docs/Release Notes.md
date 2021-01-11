@@ -7,12 +7,11 @@
 <br>
   <p class="update-button">Update</p>
   <ul>
-    <li>Updated <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Untargeted%20Pipeline.html">Untargeted Pipeline</a> to be compatible with peakML output.</li>
+    <li>Updated <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Untargeted%20Pipeline.html">Untargeted Pipeline</a> to be compatible with El-MAVEN's peakML output.</li>
   </ul>
 </details>
 
-
-
+<hr>
 
 <!--December 18th, 2020-->
 
@@ -31,6 +30,7 @@
   </ul>
 </details>
 
+<hr>
 
 <!--December 4th, 2020-->
 
@@ -47,6 +47,8 @@
     <li>Resolved issue with Workspace root directory redirection on selection.</li>
   </ul>
 </details>
+
+<hr>
 
 <!--November 20th, 2020-->
 
