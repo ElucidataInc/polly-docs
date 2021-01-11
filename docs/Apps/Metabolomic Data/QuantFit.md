@@ -124,7 +124,7 @@ where,
 
 #Tutorial
 
-##Uplaod Files
+##Upload Files
 
 Select QuantFIt from the dashboard under the *Metabolomics Data* tab. Create a *New Workspace* or select an existing one from the drop-down and provide the *Name of the Session* to be redirected to QuantFit's upload page.
 

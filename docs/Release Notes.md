@@ -1,8 +1,40 @@
 #Release Notes
 
-<!--December 4th, 2020-->
+<!--January 1st, 2021-->
 
 <details open>
+<summary><font size="+1"><b>January 1st, 2021</b></font></summary>
+<br>
+  <p class="update-button">Update</p>
+  <ul>
+    <li>Updated <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Untargeted%20Pipeline.html">Untargeted Pipeline</a> to be compatible with peakML output.</li>
+  </ul>
+</details>
+
+
+
+
+<!--December 18th, 2020-->
+
+<details>
+<summary><font size="+1"><b>December 18th, 2020</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>LINCS(Library of Integrated Network-Based Cellular Signatures) repository with 19,520 curated datasets has been added in <a href="https://docs.elucidata.io/Data%20Lake.html">Data Lake</a>.</li>
+  </ul>
+  <p class="update-button">Update</p>
+  <ul>
+    <li>Added ANOVA Test and updated Limma Test with extra filters for volcano plot and Heatmap for the differentially expressed results in the <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Dual%20Mode%20Visualization.html">Dual Mode Data Visulaization</a>.
+    <li>Resolved timeout error for opening a folder containing large number of files within a Workspace.</li>
+    <li>Resolved issue with Workspace root directory redirection on selection.</li>
+  </ul>
+</details>
+
+
+<!--December 4th, 2020-->
+
+<details>
 <summary><font size="+1"><b>December 4th, 2020</b></font></summary>
 <br>
   <p class="new-button">New</p>

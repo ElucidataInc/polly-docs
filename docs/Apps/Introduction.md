@@ -22,7 +22,7 @@ All Polly <!-- ([El-MAVEN Phi Relative LC-MS](../El-MAVEN Phi Relative LC-MS), [
 
 ![Upload data from local storage for Labeled LC-MS app](../img/AppIntroduction/UploadDataLLCMSLocal.png)<center>**Figure 5.** Upload data from local storage for Labeled LC-MS app</center>
 
-Some of the Polly applications also provide the ability to uplaod input files from Polly workspace by using the option *Import from Polly* as shown in Figure 6. This simplifies data processing as well as makes Polly the platform where biological data can be stored and processed conveniently. 
+Some of the Polly applications also provide the ability to upload input files from Polly workspace by using the option *Import from Polly* as shown in Figure 6. This simplifies data processing as well as makes Polly the platform where biological data can be stored and processed conveniently. 
 
 ![Upload data from workspace for Labeled LC-MS app](../img/AppIntroduction/UploadDataLLCMSPolly.png)<center>**Figure 6.** Upload data from workspace for Labeled LC-MS app</center>
 
