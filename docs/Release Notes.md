@@ -12,8 +12,8 @@
   </ul>
   <p class="update-button">Update</p>
   <ul>
-    <li>Added specific error message to indicate presence of multiple groups with the same compound name in <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Labeled%20LC-MS%20Workflow.html"> Labeled LC-MS Workflow</a>.</li>
-    <li>Added specific error message in <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Labeled%20LC-MS%20Workflow.html"> Labeled LC-MS Workflow</a> if isotopologues of the compound are spread over different metagroups in El-MAVEN output.</li>
+    <li>Added specific error message to indicate presence of multiple groups with the same compound name in <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Labeled%20LC-MS%20Workflow.html">Labeled LC-MS Workflow</a>.</li>
+    <li>Added specific error message in <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Labeled%20LC-MS%20Workflow.html">Labeled LC-MS Workflow</a> if isotopologues of the compound are spread over different metagroups in El-MAVEN output.</li>
   </ul>
 </details>
 
@@ -27,8 +27,8 @@
 <br>
   <p class="new-button">New</p>
   <ul>
-    <li>GTEx Correlation and Enrichment Analysis Preset is now available which can be used to identify enriched pathways based on the gene correlations.</li>
-    <li>Added TraceFinder Downstream Analysis Preset with additional feature of translating the analytical insights into shareable dashboards.</li>
+    <li>GTEx Correlation and Enrichment Analysis preset is now available which can be used to identify enriched pathways based on the gene correlations.</li>
+    <li>Added TraceFinder Downstream Analysis preset with additional feature of translating the analytical insights into shareable dashboards.</li>
     <li>Added 1,836 new curated transcriptomics and proteomics datasets to different Data Lakes.</li>
   </ul>
   <p class="update-button">Update</p>
