@@ -7,13 +7,13 @@
 <br>
   <p class="new-button">New</p>
   <ul>
-    <li>Public sharing of the reports created within any studio session is now available on Polly.</li>
-    <li>Added 14,727 new curated transcriptomics and metabolomics datasets with 9513 transcriptomics datasets being added to the LINCS Datalake.</li>
+    <li>Public sharing of the reports created within any Studio session is now available on Polly.</li>
+    <li>Added 14,727 new curated transcriptomics and metabolomics datasets with 9,513 transcriptomics datasets being added to the LINCS Data Lake.</li>
   </ul>
   <p class="update-button">Update</p>
   <ul>
-    <li>Added specific error message to indicate presence of multiple groups with the same compound name in Labeled LC-MS Application.</li>
-    <li>Added specific error message in Labeled LC-MS Application if isotopologues of the compound are spread over different metagroups in El-MAVEN output.</li>
+    <li>Added specific error message to indicate presence of multiple groups with the same compound name in <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Labeled%20LC-MS%20Workflow.html"> Labeled LC-MS Workflow</a>.</li>
+    <li>Added specific error message in <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Labeled%20LC-MS%20Workflow.html"> Labeled LC-MS Workflow</a> if isotopologues of the compound are spread over different metagroups in El-MAVEN output.</li>
   </ul>
 </details>
 
@@ -29,12 +29,11 @@
   <ul>
     <li>GTEx Correlation and Enrichment Analysis Preset is now available which can be used to identify enriched pathways based on the gene correlations.</li>
     <li>Added TraceFinder Downstream Analysis Preset with additional feature of translating the analytical insights into shareable dashboards.</li>
-    <li>Added 1836 new curated transcriptomics and proteomics datasets to different Datalakes.</li>
+    <li>Added 1,836 new curated transcriptomics and proteomics datasets to different Data Lakes.</li>
   </ul>
   <p class="update-button">Update</p>
   <ul>
-    <li>Enabled use of retention time information for metabolite identification and updated Untargeted Pipeline library to handle already identified metabolities.</li>
-    <li>Resolved issues in Untargeted Pipeline.</li>
+    <li>Enabled use of retention time information for metabolite identification and updated <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Untargeted%20Pipeline.html">Untargeted Pipeline</a> library to handle already identified metabolities.</li>
   </ul>
 </details>
 
