@@ -1,8 +1,49 @@
 #Release Notes
 
-<!--January 1st, 2021-->
+<!--January 29th, 2021-->
 
 <details open>
+<summary><font size="+1"><b>January 29th, 2021</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>Public sharing of the reports created within any studio session is now available on Polly.</li>
+    <li>Added 14,727 new curated transcriptomics and metabolomics datasets with 9513 transcriptomics datasets being added to the LINCS Datalake.</li>
+  </ul>
+  <p class="update-button">Update</p>
+  <ul>
+    <li>Added specific error message to indicate presence of multiple groups with the same compound name in Labeled LC-MS Application.</li>
+    <li>Added specific error message in Labeled LC-MS Application if isotopologues of the compound are spread over different metagroups in El-MAVEN output.</li>
+  </ul>
+</details>
+
+<hr>
+
+
+<!--January 15th, 2021-->
+
+<details>
+<summary><font size="+1"><b>January 15th, 2021</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>GTEx Correlation and Enrichment Analysis Preset is now available which can be used to identify enriched pathways based on the gene correlations.</li>
+    <li>Added TraceFinder Downstream Analysis Preset with additional feature of translating the analytical insights into shareable dashboards.</li>
+    <li>Added 1836 new curated transcriptomics and proteomics datasets to different Datalakes.</li>
+  </ul>
+  <p class="update-button">Update</p>
+  <ul>
+    <li>Enabled use of retention time information for metabolite identification and updated Untargeted Pipeline library to handle already identified metabolities.</li>
+    <li>Resolved issues in Untargeted Pipeline.</li>
+  </ul>
+</details>
+
+<hr>
+
+
+<!--January 1st, 2021-->
+
+<details>
 <summary><font size="+1"><b>January 1st, 2021</b></font></summary>
 <br>
   <p class="update-button">Update</p>
@@ -24,9 +65,7 @@
   </ul>
   <p class="update-button">Update</p>
   <ul>
-    <li>Added ANOVA Test and updated Limma Test with extra filters for volcano plot and Heatmap for the differentially expressed results in the <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Dual%20Mode%20Visualization.html">Dual Mode Data Visulaization</a>.
-    <li>Resolved timeout error for opening a folder containing large number of files within a Workspace.</li>
-    <li>Resolved issue with Workspace root directory redirection on selection.</li>
+    <li>Added ANOVA Test and updated Limma Test with extra filters for volcano plot and Heatmap for the differentially expressed results in the <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Dual%20Mode%20Visualization.html">Dual Mode Data Visulaization</a>.</li>
   </ul>
 </details>
 
