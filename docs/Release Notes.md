@@ -1,8 +1,32 @@
 #Release Notes
 
-<!--January 29th, 2021-->
+<!--February 12th, 2021-->
 
 <details open>
+<summary><font size="+1"><b>February 12th, 2021</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>Introduced the <a href="https://status.polly.elucidata.io/">status page</a> for real time updates on Polly’s status, downtime, incidents, and maintenance.</li>
+    <li>Added auto-run feature for selected Studio Presets.</li>
+    <li>Enabled component updating and versioning by component creator.</li>
+    <li>Added 11,580 new curated transcriptomics datasets to GEO and LINCS Data Lakes.</li>
+  </ul>
+  <p class="update-button">Update</p>
+  <ul>
+    <li>Updated the UI of visualization dashboard of <a href="https://docs.elucidata.io/Apps/Data%20Studio/Data%20Studio.html">Data Studio</a> for better visibility.</li>
+    <li>Updated all notebook dockers with the latest version of discoverpy (0.0.10).</li>
+    <li>Added finer error and warning messages to <a href="https://docs.elucidata.io/Scaling%20compute/Polly%20CLI.html">CLI</a>.</li>
+    <li>Removed the 1000 row limit on query results in <a href="https://docs.elucidata.io/Scaling%20compute/Polly%20CLI.html">CLI</a>.</li>
+  </ul>
+</details>
+
+<hr>
+
+
+<!--January 29th, 2021-->
+
+<details>
 <summary><font size="+1"><b>January 29th, 2021</b></font></summary>
 <br>
   <p class="new-button">New</p>
