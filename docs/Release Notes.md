@@ -9,7 +9,7 @@
   <p class="new-button">New</p>
   <ul>
     <li>Introduced the functionality that enables the users to host their own application on Polly by using <a href="https://docs.elucidata.io/Apps/Host%20Apps.html">Polly CLI</a>.</li>
-    <li>Enabled feature level querying for GEO DataLake.</li>
+    <li>Enabled feature level querying for GEO Data Lake.</li>
     <li>Added Genomics docker for variant calling and annotation.</li>
     <li>Added a new notebook environment for Genomics Variant Analysis.</li>
     <li>Enabled partial string search for dataset id in the search bar.</li>
