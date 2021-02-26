@@ -1,8 +1,29 @@
 #Release Notes
 
-<!--February 12th, 2021-->
+
+<!--February 26th, 2021-->
 
 <details open>
+<summary><font size="+1"><b>February 26th, 2021</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>Introduced the functionality that enables the users to host their own application on Polly by using <a href="https://docs.elucidata.io/Apps/Host%20Apps.html">Polly CLI</a>.</li>
+    <li>Enabled feature level querying for GEO Data Lake.</li>
+    <li>Added Genomics docker for variant calling and annotation.</li>
+    <li>Added a new notebook environment for Genomics Variant Analysis.</li>
+    <li>Enabled partial string search for dataset id in the search bar.</li>
+    <li>Added 20,096 new curated transcriptomics and single cell datasets to different Data Lakes.</li>
+  </ul>
+</details>
+
+<hr>
+
+
+
+<!--February 12th, 2021-->
+
+<details>
 <summary><font size="+1"><b>February 12th, 2021</b></font></summary>
 <br>
   <p class="new-button">New</p>
