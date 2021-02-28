@@ -1,12 +1,12 @@
-# Introduction
+#Introduction
 
-## Overview
+##Overview
 
 Understanding the biochemical characteristics of metabolites is crucial for metabolomics studies in order to gain insights into complex biological systems and to understand the systemic effects of diseases and drugs. With the advancement in high-throughput technologies, it is now possible to perform large-scale metabolomics studies. However, key challenges remain in peak detection and manually curating the global profile of metabolites from multiple biological samples, which requires considerable time and expertise. 
 
-Polly-PeakML is a novel machine-learning tool that enables the curation of peak groups into real-signal and noise and provides additional information on correlating features and variation across cohorts, in a matter of minutes. 
+Polly-PeakML is a novel machine-learning tool that enables the curation of peak groups into real-signal and noise and provides additional information by correlating features and variation across cohorts, in a matter of minutes. 
 
-## Scope
+##Scope
 
 * Make use of [El-MAVEN](https://resources.elucidata.io/elmaven) for automated peak-picking and displaying curated results.
 * Raw data to curated peak-groups in minutes.
@@ -14,13 +14,13 @@ Polly-PeakML is a novel machine-learning tool that enables the curation of peak 
 
 ![Polly-PeakML workflow schematic](../../img/Polly-PeakML/Workflow.png) <center>**Figure 1.** Polly-PeakML workflow</center>
 
-# Getting Started
+#Getting Started
 
-## User input
+##User input
 
 Polly-PeakML is capable of processing the file-format supported by El-MAVEN.
 
-PeakML requires following two types of files: 
+PeakML requires two types of files: 
 
 **Sample Files**
 
@@ -37,11 +37,11 @@ Following cohort file format is supported -
 
 * .CSV / .csv
 
-## Steps involved in the data processing 
+##Steps for data processing 
 
 **Load samples and cohort file**
 
-Users can load the sample by going to Load Samples|Workspaces|Peaks option in the Sample space menu. Then navigate to the folder containing the sample data and select all .mzXML or .mzML files. A loading bar displays the progress at the bottom. When the samples have loaded, you should see a sample panel on the left side.
+You can load the sample by going to *Load Samples|Workspaces|Peaks* option in the Sample space menu. Then navigate to the folder containing the sample data and select all .mzXML or .mzML files. A loading bar displays the progress at the bottom. When the samples have loaded, you should see a sample panel on the left side.
 
 Likewise, you can load the cohort information by choosing the *upload* option in the sample space menu. 
 
@@ -59,13 +59,13 @@ Change global settings for El-MAVEN by clicking the *settings* icon given on the
 
 Alignment shifts the peak RTs in every sample to correct for this drift and brings the peaks closer to median RT of the group. *Alignment visualization* can be used to judge the extent of deviation from median RT. 
 
-Users can perform alignment by going to the option *Alignment* given on the menu bar of application.
+You can perform alignment by going to the option *Alignment* given on the menu bar of application.
 
 ![Alignment Dialog](../../img/Polly-PeakML/alignment.png) <center>**Figure 4.** Alignment Dialog</center>
 
 **Peak Detection and Curation**
 
-* Select Peak Detection flow - Targeted or Untargeted pipeline.
+* Select Peak Detection flow - *Automated feature detection or Compound database search*.
 
     Polly-PeakML supports curation of peakgroups detected by both the available El-MAVEN's peak detection flow. 
 
@@ -73,19 +73,19 @@ Users can perform alignment by going to the option *Alignment* given on the menu
     
 * Select Polly-PeakML options
 
-    Move to the *Polly-PeakML* tab:  Click on the ‘peak curation’ checkbox. 
+    Move to the *Polly-PeakML* tab:  Click on the *‘peak curation’* checkbox. 
 
     ![Peak Curation Dialog](../../img/Polly-PeakML/peakCurationDialog.png) <center>**Figure 6.** Select peak cuation</center>
 
-    Authenticate yourself for PeakML license: PeakML models are proprietary to the organization and require the user to be authorised for the same to use PeakML.
+    Authenticate yourself for PeakML license: PeakML Models are proprietary to the organization and require you to be authorized for the same to use PeakML.
 
     ![Authentication Dialog](../../img/Polly-PeakML/peakMLAuthorization.png) <center>**Figure 6.** Authenticate using Polly credentials</center>
 
-    Choose Models from the list: Different models can be available to different users. The list of the models depends on the user’s license for the same. 
+    Choose Models from the list: Different models can be available to different users. The list of the models depends on the your license for the same. 
 
     ![peakML Models](../../img/Polly-PeakML/peakMLModels.png) <center>**Figure 7.** Select PeakML Model</center>
 
-    Slider - Using Slider, the user can set the range of the classified label to be bad or signal accordingly. For example, if the range is set to 0.0 to 0.3 (that is marked by red) this determines that the group has a probability of less than 0.3 would be noise. Similarly, the peak-groups with a probability of more than 0.6 (marked by green) would be a signal ( that is a good peak-group).
+    Slider - Using Slider, you can set the range of the classified label to be bad or signal accordingly. For example, if the range is set to 0.0 to 0.3 (that is marked by red) this determines that the group has a probability of less than 0.3 would be noise. Similarly, the peak-groups with a probability of more than 0.6 (marked by green) would be a signal ( that is a good peak-group).
 
     The gray region in slider from 0.3 to 0.6 is marked as - ‘Maybe good peak-group’
 
@@ -93,15 +93,15 @@ Users can perform alignment by going to the option *Alignment* given on the menu
 
 * Caveats 
     
-    * The ML model is for feature detection. it can distinguish between good and noise peak-groups. It's not trained to distinguish between matched and unmatched peak-groups for targeted analysis. 
+    * The ML Model is for feature detection. It can distinguish between good peak-groups and noise peak-groups. It's not trained to distinguish between matched and unmatched peak-groups for targeted analysis. 
 
     * For targeted analysis, it can eliminate noise peak-groups but required manual curation to select the matched peak-group from all the good peaks that are detected for a given m/z and RT.
 
-# Tutorial
+#Tutorial
 
 **Classified Peak Table**
 
-* Peak-tables have two additional columns than usual, namely, *‘Labels’* and *‘Classification probability’*. 
+* Peak-tables have two additional columns than usual, namely, *Labels* and *Classification probability*. 
 
 * Labels - Polly-peakML classifies the peak-groups into six different classes.
     
@@ -112,25 +112,25 @@ Users can perform alignment by going to the option *Alignment* given on the menu
     * Noise: Bad peak-group.
     * MayBe Good: Peak-group may be a real signal or not.
 
-* Classification Probability - The probability value which we can assure how much model is certain that it is noise or signals.
+* Classification Probability - The probability value which defines the certainty of the model to classify the peak group as signal or noise.
 
 ![Classified Peak Table](../../img/Polly-PeakML/classifiedPeakTable.png) <center>**Figure 9.** Classified Peak Table</center>
 
 **Labels drop-down in the peak-table menu** 
 
-Using ‘labels’ dropdown, a user can filter out the classes that he doesn’t want to appear in the table. 
+Using ‘labels’ dropdown, you can filter out the classes that you do not wish to see in the table. 
 
 ![Labels](../../img/Polly-PeakML/labelsDropdown.png) <center>**Figure 10.** Understanding Labels</center>
 
 *  Percentage beside the *Label* name depicts the percentage of the peak-groups that are present in the current peak-table. For example, ‘Noise(13.74%)’ represents that 13.74% of all peak-groups are noise i.e bad peak-groups. 
 
-* The user would need to uncheck the label that he wants to filter out in the peak-table.
+* You would need to uncheck the label that you want to filter out in the peak-table.
 
 ![Filter Peak-groups](../../img/Polly-PeakML/filterPeakgroups.png) <center>**Figure 11.** Filter peak groups using *Labels* dropdown</center>
 
 **Relabel peak-groups**
 
-There may be the chance that the user used the slider parameters in the peak-detection dialog to be stringent. Using, Re-label option the user can change the limit of noise and signal and the peak-table would be re-classified based on their probability score. 
+If in case you have applied stringent slider parameters in the *peak detection dialog*, using *Re-label* option you can change the limit of noise and signal and the peak-table would be re-classified based on their probability score. 
 
 ![Relabel Option](../../img/Polly-PeakML/relabelOption.png) <center>**Figure 12.** Relabeling peak groups</center>
 
@@ -146,7 +146,7 @@ The groups that are labeled with yellow stars determines that the peak-group is 
 
 Polly-PeakML uses *shap plot* to explain the attributes that contributes in deciding the label of the peak-group.
 
-When a user selects a peakgroup in the table and right clicks, a context menu appears. The option *Explain Classification* in the menu opens the layout that shows the shap plot for the selected peak-group.
+On selecting a peakgroup in the table and right clicking it, a context menu appears. The option *Explain Classification* in the menu opens the layout that shows the shap plot for the selected peak-group.
 
 ![Context Menu](../../img/Polly-PeakML/contextMenu.png) <center>**Figure 15.** Explain Classification</center>
 
@@ -158,23 +158,23 @@ If the output value is greater than the base value it determines the peak-group 
 
 **Setting Logs**
 
-User can check the settings and parameters that were set while detecting the peak-table by going to the *Settings* option given in peak-table menu bar. 
+You can check the settings and parameters that were set while detecting the peak-table by going to the *Settings* option given in peak-table menu bar. 
 
 ![Setting Logs Option](../../img/Polly-PeakML/settingLogs.png) <center>**Figure 17.** Setting Logs Option</center>
 
-Setting logs have defined section for the parameters using in curating peakgroups through Polly-PeakML.
+Curation Parameters used in PeakML can be found in the setting logs for your reference. 
 
 ![Setting Logs](../../img/Polly-PeakML/peakMLSettingLogs.png) <center>**Figure 18.** Peak curation settings</center>
 
-## Exporting Results
+##Exporting Results
 
 **As csv and pdf**
 
-The user can export the results of the classified peak-table in form of csv and pdf. Followings are the options provided to the users to export the results - 
+You can export the results of the classified peak-table in form of csv and pdf. Following are the options provided to you to export the results - 
 
-* Export selected groups - User can manually select the peak-groups in the peak-table that he wants to export as csv or pdf files.
+* Export selected groups - You can manually select the peak-groups in the peak-table that you want to export as csv or pdf files.
 
-* Export displayed groups - User can filter out the peak-groups in peak-table using labels drop-down. This option exports all the peak-groups that are currently visible in peak-table i.e. filtered out peak-groups would not be exported. 
+* Export displayed groups - You can filter out the peak-groups in peak-table using labels drop-down. This option exports all the peak-groups that are currently visible in peak-table i.e. filtered out peak-groups would not be exported. 
 
 * Export all signals- This option exports all the signals i.e peak-groups with following labels are exported - 
 
@@ -194,7 +194,7 @@ The user can export the results of the classified peak-table in form of csv and 
     
     El-MAVEN projects can be exported as emDB that saves the entire session of analysis as SQL tables. Opening an emDB in the application would restore the settings and the peak-tables that were detected. 
 
-    User can save the session by going to the option *Save project* provided in the menu bar of the application. 
+    You can save the session by going to the option *Save project* provided in the menu bar of the application. 
 
     ![Save Project](../../img/Polly-PeakML/saveProject.png) <center>**Figure 20.** Export session as emDB</center>  
 
@@ -202,11 +202,11 @@ The user can export the results of the classified peak-table in form of csv and 
 
     El-MAVEN is capalble of exporting projects with raw data i.e. this type of session files would store EIC information as the part of emDB. 
 
-    User can save the session as raw project by going to the option *Save project as raw data* provided in the menu bar of the application. 
+    You can save the session as raw project by going to the option *Save project as raw data* provided in the menu bar of the application. 
 
     ![Save Project](../../img/Polly-PeakML/saveRawProject.png) <center>**Figure 21.** Export session as emDB with raw data</center>  
 
-    User is provided with following two options of exporting emDB with raw data - 
+    You are provided with following two options of exporting emDB with raw data - 
 
     ![Export EIC(s) Options](../../img/Polly-PeakML/rawProjectExportOptions.png) <center>**Figure 22.** Range of EIC(s) to be exported</center>  
     
@@ -214,16 +214,16 @@ The user can export the results of the classified peak-table in form of csv and 
 
     * Complete-range EIC - Exports EIC(s) in the range of the minimum to maximum retention time of the uploaded samples.
 
-# Export Results to Polly Workspace
+#Export Results to Polly Workspace
 
-El-MAVEN user's can upload session files to Polly workspaces for further analysis. 
+You can upload session files to Polly workspaces for further analysis. 
 
 Following are the steps that must be followed to upload files -
 
 * Pre-requisites 
 
-    * User must be authorised for using Polly. 
-    * User must have valid credentials for Polly. 
+    * You must be authorized for using Polly. 
+    * You must have valid credentials for Polly. 
 
 * Click on *Polly* icon provided on the main window to access Polly El-MAVEN Interface.
 
@@ -233,7 +233,7 @@ Following are the steps that must be followed to upload files -
 
     ![Polly Authorization](../../img/Polly-PeakML/EPIauthorisation.png) <center>**Figure 24.** Log in using polly credentials</center>  
 
-* If the user is authenticated, EPI Dialog appears.
+* If you are authenticated, EPI Dialog appears.
 
     ![EPI](../../img/Polly-PeakML/EPI.png) <center>**Figure 25.** Polly El-MAVEN Interface</center>  
 
@@ -241,7 +241,7 @@ Following are the steps that must be followed to upload files -
 
     * Select Table (refer to figure 25) - From the dropdown beside 'Select Table' choose the table that you would like to export to polly. 
 
-    * Select Groups - User can filter out peakgroups that he wants to export to Polly.
+    * Select Groups - You can filter out peakgroups that you want to export to Polly.
 
         ![EPI groups option](../../img/Polly-PeakML/EPIgroupOptions.png) <center>**Figure 26.** Select the groups type</center>  
 
@@ -255,19 +255,19 @@ Following are the steps that must be followed to upload files -
         
         * Choose the options of slices and complete-range EIC
 
-    * Project on Polly (refer to figure 25) - User can choose two of the given options for selecting the project. Either the user can create a new project and export the files in the newly created project or the user can select the existing workspace and upload the session files in selected workspace.
+    * Project on Polly (refer to figure 25) - You can choose two of the given options for selecting the project. Either you can create a new project and export the files in the newly created project or you can select the existing workspace and upload the session files in selected workspace.
 
-# Note     
+#Note     
 
 * To access Polly-PeakML, a user must be licensed to PeakML models that are proprietary to the organisation.
 
-## Frequently Asked Questions (FAQs)
+##Frequently Asked Questions (FAQs)
 
 | **S.No.** | **Questions** | **Answers** |
 | --- | --- | --- |
 |1.| **What is peak curation?** | Metabolities in biological samples are run through chromatrographic columns and then detected by a mass spectrometer. The resultant data is then read in tools such as El-MAVEN which has algorithms for automatically detecting signals (untargeted approach) in this data that we visualise as peaks having varying intensities. Depending on the threshold set for detection, one would also detect noise amongst these signals. This is where experts systematically go through the detected peak-groups and curate them as good peak groups/ bad peak groups.|
-|2.| **Why we need an ML model for peak-curation?** |Reasons for the need of ML model - Inherent noise in metabolomics datasets; Differences in expert opinions; Manual curation is long and tedious.|
-|3.| **Why we need an Polly credentials?** |Polly-PeakMl models are proprietary to the organisation. Only the users licensed to use PeakML can access it.|
+|2.| **Why do we need an ML model for peak-curation?** |Reasons for the need of ML model - Inherent noise in metabolomics datasets; Differences in expert opinions; Manual curation is long and tedious.|
+|3.| **Why do we need Polly credentials?** |Polly-PeakMl models are proprietary to the organisation. Only the users licensed to use PeakML can access it.|
 |4.| **Is it necessary to provide cohort information?** |Yes, Polly-PeakML makes it a compulsion for the users to enter the cohort information for the samples that are uploaded.|
 |5.| **How can I book a demo for Polly-PeakMl?** |Email us at *polly@elucidata.io*|
 
