@@ -18,6 +18,7 @@ nav:
         - Labeled LC-MS/MS Workfow: Apps/Metabolomic Data/Labeled LC-MSMS Workflow.md
         - Labeled LC-MS Workflow: Apps/Metabolomic Data/Labeled LC-MS Workflow.md
         - Compound Discoverer<sup>TM</sup> QuantFit: Apps/Metabolomic Data/CompoundDiscoverer QuantFit.md
+        - Polly-PeakML: Apps/Metabolomic Data/Polly-PeakML.md
       - Screening Data: 
         - CRISPR Screening: Apps/Screening Data/CRISPR Screening.md
         - High Throughput Drug Screening: Apps/Screening Data/High Throughput Drug Screening.md
