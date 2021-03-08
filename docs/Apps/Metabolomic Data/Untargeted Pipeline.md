@@ -19,7 +19,7 @@ Untargeted Pipeline can take a csv file are well as a emdb file as input.
 
 **Emdb File**
 
-The emdb file used here is a RSQLite database file generated when an El-MAVEN session is saved. It has all the unannotated features along with other features of the peaks. 
+The emdb file used here is a RSQLite database file generated when an El-MAVEN session is saved. It has all the unannotated features along with other features of the peaks. An emdb file can have multiple feature tables, and the user can select the feature table to use in the downsteam pipeline thhrough the dropdown.
 
 **Intensity File**
 
@@ -336,6 +336,10 @@ This allows you to understand the clustering pattern between biologically groupe
 
 ##Statistical Analysis
 
+This tab allows you to perform various statistical analysis test on the data, namely limma test and anova test to identify significant and important features from the data.
+
+**Limma Test**
+
 This interface allows you to perform differential expression limma analysis with the aim to identify metabolites whose expression differs between any specified cohort conditions. The 'limma' R package is used to identify the differentially expressed metabolites. This method creates a log<sub>2</sub> fold change ratio between the two experimental conditions and an 'adjusted' *p*-value that rates the significance of the difference.
 
 ![Statistical Analysis interface](../../img/UntargetedPipeline/utp_app_stats_analysis_page.png) <center>**Figure 46.** Statistical Analysis interface</center>
@@ -360,66 +364,108 @@ Once the parameters are specified, click on the *Update* button to plot the volc
 
 ![Volcano plot](../../img/UntargetedPipeline/utp_app_volcano_plot.png) <center>**Figure 48.** Volcano plot</center>
 
-*Filtered Metabolites Visualization* provides the visualization of cohort-based distribution of the metabolites that are significant based on the parameters specified.
+*Filtered Metabolites Visualization* provides the option to visualize the cohort-based distribution of the features/metabolites that are significant based on the parameters specified through bar plots and boxplots and also look at the EIC plot of specific features to update categorization of the feateure by the peakML algorithm.
 
 ![Filtered Metabolites Visualization](../../img/UntargetedPipeline/utp_app_stats_analysis_filtered_metabolites_visualization.png) <center>**Figure 49.** Filtered Metabolites Visualization</center>
 
+*   Plots: This tab allows the user to visualize the cohort-based distribution of the features/metabolites through barplots and boxplots.
+![Filtered Metabolites Plots](../../img/UntargetedPipeline/utp_app_stats_analysis_filtered_metabolites_barplot_boxplot_visualization.png) <center>**Figure 50.** Barplot </center>
+*   Heatmap: This tab allows you to produce a heatmap of the filtered features/metabolite data, so that you can observe the level of expression in a visual form. Click on *Load Heatmap* button to generate the heatmap..
+![Heatmap of the significant features/metabolites data](../../img/UntargetedPipeline/utp_app_filtered_heatmap.png) <center>**Figure 51.** Heatmap</center>
+*   EIC Plot: This tab allows you to visualize the eic of specific features so that the user can relabel the classification of the feature done by the peakML algorithm. You can also download the updated emdb file after reaclassification from the Downloads tab.
+![EIC plot of significant features/metabolites](../../img/UntargetedPipeline/utp_app_filtered_eic_plot.png) <center>**Figure 52.** EIC Plot</center>
+![Relabel features/metabolites](../../img/UntargetedPipeline/utp_app_filtered_realabel.png) <center>**Figure 53.** EIC Plot</center>
+
 *Filtered Normalized Table* contains the normalized data of the metabolites that are significant based on the parameters specified.
 
-![Filtered Normalized Table](../../img/UntargetedPipeline/utp_app_stats_analysis_filtered_normalised_table.png) <center>**Figure 50.** Filtered Normalized Table</center>
+![Filtered Normalized Table](../../img/UntargetedPipeline/utp_app_stats_analysis_filtered_normalised_table.png) <center>**Figure 54.** Filtered Normalized Table</center>
 
 *Filtered Differential Expression Table* contains only the metabolites that have significant *p*-values as specified.
 
-![Filtered Differential Expression Table](../../img/UntargetedPipeline/utp_app_stats_analysis_filtered_diff_exp_table.png) <center>**Figure 51.** Filtered Differential Expression Table</center>
+![Filtered Differential Expression Table](../../img/UntargetedPipeline/utp_app_stats_analysis_filtered_diff_exp_table.png) <center>**Figure 55.** Filtered Differential Expression Table</center>
 
 *Differential Expression Table* contains all the differentially expressed metabolites without any filtering.
 
-![Differential Expression Table](../../img/UntargetedPipeline/utp_app_stats_analysis_diff_exp_table.png) <center>**Figure 52.** Differential Expression Table</center>
+![Differential Expression Table](../../img/UntargetedPipeline/utp_app_stats_analysis_diff_exp_table.png) <center>**Figure 56.** Differential Expression Table</center>
 
 *Pathway Enrichment Analysis* performs the pathway enrichment analysis for the significant metabolites based on the parameters specified for the particular cohort comparison. Click on the *Perform Pathway Analysis* button.
 As a result, you get Metabolite Set Enrichment Analysis and Pathway Topology Analysis plots that can be downloaded under the *Plot* panel. You can also obtain the tablular representation of the plots by selecting onto the *Table* panel.
 
-![Metabolite Set Enrichment Analysis Plot](../../img/UntargetedPipeline/utp_app_stats_analysis_msea_plot.png) <center>**Figure 53.** Metabolite Set Enrichment Analysis Plot</center>
+![Metabolite Set Enrichment Analysis Plot](../../img/UntargetedPipeline/utp_app_stats_analysis_msea_plot.png) <center>**Figure 57.** Metabolite Set Enrichment Analysis Plot</center>
 
-![Pathway Topology Analysis Plot](../../img/UntargetedPipeline/utp_app_stats_analysis_pathway_topology_plot.png) <center>**Figure 54.** Pathway Topology Analysis Plot</center>
+![Pathway Topology Analysis Plot](../../img/UntargetedPipeline/utp_app_stats_analysis_pathway_topology_plot.png) <center>**Figure 58.** Pathway Topology Analysis Plot</center>
 
-![Metabolite Set Enrichment Analysis Table](../../img/UntargetedPipeline/utp_app_stats_analysis_msea_table.png) <center>**Figure 55.** Metabolite Set Enrichment Analysis Table</center>
+![Metabolite Set Enrichment Analysis Table](../../img/UntargetedPipeline/utp_app_stats_analysis_msea_table.png) <center>**Figure 59.** Metabolite Set Enrichment Analysis Table</center>
 
-![Pathway Topology Analysis Table](../../img/UntargetedPipeline/utp_app_stats_analysis_topology_table.png) <center>**Figure 56.** Pathway Topology Analysis Table</center>
+![Pathway Topology Analysis Table](../../img/UntargetedPipeline/utp_app_stats_analysis_topology_table.png) <center>**Figure 60.** Pathway Topology Analysis Table</center>
 
 *Pathway View* plots the pathway view of the metabolites that show up in the Metabolite Set Enrichment Analysis. It maps and renders the metabolite hits on relevant pathway graphs. This enables you to visualize the significant metabolites on pathway graphs of the respective metabolites they belong to. You can select your metabolite of interest from the drop-down and click on *Plot*. This will plot the pathway view of the metabolism selected. You can also download the plot as a .png file by clicking onto the *Download Pathview Plot* button.
 
-![Pathway View Plot](../../img/UntargetedPipeline/utp_app_stats_analysis_pathview_plot.png) <center>**Figure 57.** Pathway View Plot</center>
+![Pathway View Plot](../../img/UntargetedPipeline/utp_app_stats_analysis_pathview_plot.png) <center>**Figure 61.** Pathway View Plot</center>
+
+**ANOVA Test**
+This interface allows you to compare the means of two or more groups using F-statistic under the assumption that samples population are normally distributed. One- way ANOVA allows determining whether one given factor has significant effect in mean values of any groups in the data.
+
+![ANOVA Test interface](../../img/UntargetedPipeline/utp_app_anova_page.png) <center>**Figure 62.** Statistical Analysis interface</center>
+
+The following parameters are available for selection:
+
+*   Select *Cohorts*: Select the cohorts you want to consider while performing the one way anova test.
+*   p-val: By default, the value is 0.05 but can be changed if required.
+*   F value: Specify the cut-off for f value with the help of the slider.
+
+Once the parameters are specified, click on the RUN ANOVA button to plot the barplots and boxplots. Based on the parameters specified, the generated tables are filtered.
+
+*Filtered Metabolites Visualization* provides the option to visualize the cohort-based distribution of the features/metabolites that are significant based on the parameters specified through bar plots and boxplots.
+
+![Filtered Metabolites Visualization](../../img/UntargetedPipeline/utp_app_stats_analysis_anova_filtered_metabolites_visualization.png) <center>**Figure 63.** Filtered Metabolites Visualization</center>
+
+*   Plots: This tab allows the user to visualize the cohort-based distribution of the features/metabolites through barplots and boxplots.
+![Filtered Metabolites Plots](../../img/UntargetedPipeline/utp_app_stats_analysis_filtered_metabolites_barplot_boxplot_visualization.png) <center>**Figure 64.** Filtering Interface</center>
+*   Heatmap: This tab allows you to produce a heatmap of the filtered features/metabolite data, so that you can observe the level of expression in a visual form. Click on *Load Heatmap* button to generate the heatmap..
+![Heatmap of the significant features/metabolites data](../../img/UntargetedPipeline/utp_app_filtered_heatmap.png) <center>**Figure 65.** Heatmap</center>
+
+*Filtered Normalized Table* contains the normalized data of the metabolites that are significant based on the parameters specified.
+
+![Filtered Normalized Table](../../img/UntargetedPipeline/utp_app_stats_analysis_anova_filtered_normalised_table.png) <center>**Figure 66.** Filtered Normalized Table</center>
+
+*Filtered Anova Table* contains only the metabolites that have significant *p*-values and F statisitic value as specified.
+
+![Filtered Anova Table](../../img/UntargetedPipeline/utp_app_stats_analysis_anova_filtered_diff_exp_table.png) <center>**Figure 67.** Filtered Anova Table</center>
+
+*Anova Table* contains all the metabolites without any filtering.
+
+![Anova Table](../../img/UntargetedPipeline/utp_app_stats_analysis_anova_diff_exp_table.png) <center>**Figure 68.** Anova Table</center>
 
 ##Visualization
 
 This interface allows you to visualize the cohort-based distribution of a specific metabolite or a group of metabolites on the basis on its normalized intensity values.
 
-![Visualization tab options](../../img/UntargetedPipeline/utp_app_viz_tab_options.png) <center>**Figure 58.** Visualization tab options</center>
+![Visualization tab options](../../img/UntargetedPipeline/utp_app_viz_tab_options.png) <center>**Figure 69.** Visualization tab options</center>
 
 *   *Enter metabolite:* Select the metabolite(s) of interest from the drop down option.
 *   *Select uniqueIds:* You can specifically select the metabolic feature of interest for the metabolite from the drop down option.
 *   *Select order of cohort:* You can also specify the particular order of the cohort to visualize the bar plot.
 
-Once the parameters are selected, click on *Load Plots* to plot the bar plot for the metabolite.
+Once the parameters are selected, click on *Load Plots* to plot the bar plot and boxplot for the metabolite.
 
-![Cohort-wise bar plot with the normalized intensity of selected metabolite](../../img/UntargetedPipeline/utp_app_barplot_viz.png) <center>**Figure 59.** Cohort-wise bar plot with the normalized intensity of selected metabolite</center>
+![Cohort-wise bar plot with the normalized intensity of selected metabolite](../../img/UntargetedPipeline/utp_app_boxplot_viz.png) <center>**Figure 70.** Cohort-wise bar plot with the normalized intensity of selected metabolite</center>
 
 ##Heatmap
 
 This tab allows you to produce a heatmap of the processed data, so that you can observe the level of expression in a visual form. Click on *Load Heatmap* button to generate the heatmap.
 
-![Heatmap of the processed data](../../img/UntargetedPipeline/utp_app_heatmap.png) <center>**Figure 60.** Heatmap</center>
+![Heatmap of the processed data](../../img/UntargetedPipeline/utp_app_heatmap.png) <center>**Figure 71.** Heatmap</center>
 
 ##IntOmix Input
 
 This tab allows you to generate the input for [IntOmix](https://docs.elucidata.io/Apps/Multi-omic%20Data/IntOmix.html) where you can visualize the significantly altered metabolic network modules between any two experimental conditions.
 
-![IntOmix Input Tab options](../../img/UntargetedPipeline/utp_app_intomix_input_tab.png) <center>**Figure 61.** IntOmix Input Tab options</center>
+![IntOmix Input Tab options](../../img/UntargetedPipeline/utp_app_intomix_input_tab.png) <center>**Figure 72.** IntOmix Input Tab options</center>
 
 Specify two or more cohorts from the *Select cohorts* drop down option for which you want to generate the IntOmix input. Once the required cohorts are selected, click on *Generate* to generate the IntOmix input.
 
-![IntOmix Table for the cohort conditions specified](../../img/UntargetedPipeline/utp_app_intomix_table.png) <center>**Figure 62.** IntOmix Table for the cohort conditions specified</center>
+![IntOmix Table for the cohort conditions specified](../../img/UntargetedPipeline/utp_app_intomix_table.png) <center>**Figure 73.** IntOmix Table for the cohort conditions specified</center>
 
 **NOTE:**
 
@@ -431,37 +477,37 @@ This tab allows you to perform comparative analysis between a set of cohorts in 
 
 * *Comparison Parameters* tab allows you to select the cohorts of interest for which you would want to get the set intersections. You can select the cohorts from the *Select cohorts* drop-down and click on *Run* button. Further, you can also specify the *p*-value cut-off and log<sub>2</sub>FC threshold.
 
-![Comparison Parameters Tab options](../../img/UntargetedPipeline/utp_app_comparative_analysis_uploads_tab.png) <center>**Figure 63.** Comparison Parameters Tab options</center>
+![Comparison Parameters Tab options](../../img/UntargetedPipeline/utp_app_comparative_analysis_uploads_tab.png) <center>**Figure 74.** Comparison Parameters Tab options</center>
 
 You will get a table as a result of the parameters specified which will have the significant metabolites for the different cohort comparisons along with their corresponding *p*-values and log<sub>2</sub>FC values. You can also download this table as a .CSV file.
 
-![Comparison Table](../../img/UntargetedPipeline/utp_app_comparative_analysis_comparison_table.png) <center>**Figure 64.** Comparison Table</center>
+![Comparison Table](../../img/UntargetedPipeline/utp_app_comparative_analysis_comparison_table.png) <center>**Figure 75.** Comparison Table</center>
 
 * *UpSet Plot* tab allows you to visualize the set intersections for the cohort comparisons selected where every comparison consists of the significant metabolites associated with the same. You can select the cohort comparisons of interest from the *Select Cohort Comparison* drop-down which represents all the possible comparisons for the cohorts specified in the previous tab. Click on *Plot* to get the UpSet plot for the specified comparisons.
 
-![UpSet Plot options](../../img/UntargetedPipeline/utp_app_comparative_analysis_upset_plot_options.png) <center>**Figure 65.** UpSet Plot options</center>
+![UpSet Plot options](../../img/UntargetedPipeline/utp_app_comparative_analysis_upset_plot_options.png) <center>**Figure 76.** UpSet Plot options</center>
 
-![UpSet Plot](../../img/UntargetedPipeline/utp_app_comparative_analysis_upset_plot.png) <center>**Figure 66.** UpSet Plot</center>
+![UpSet Plot](../../img/UntargetedPipeline/utp_app_comparative_analysis_upset_plot.png) <center>**Figure 77.** UpSet Plot</center>
 
 Along with the plot, you can also get all the constituent metabolites for the respective comparisons in a tabular format that can be downloaded as a .CSV file.
 
-![UpSet Plot table](../../img/UntargetedPipeline/utp_app_comparative_analysis_upset_table.png) <center>**Figure 67.** UpSet Plot Table</center>
+![UpSet Plot table](../../img/UntargetedPipeline/utp_app_comparative_analysis_upset_table.png) <center>**Figure 78.** UpSet Plot Table</center>
 
 * *Pathway Enrichment Analysis* tab allows you to perform the pathway enrichment analysis for the significant metabolites that show up based on the parameters specified in the *Comparison Parameters* tab for the particular set of cohort comparison. Click on the *Perform Pathway Analysis* button. As a result, you get Metabolite Set Enrichment Analysis and Pathway Topology Analysis plots that can be downloaded under the *Plot* panel. You can also obtain the tablular representation of the plots by selecting onto the *Table* panel.
 
-![Metabolite Set Enrichment Analysis Plot](../../img/UntargetedPipeline/utp_app_comparative_analysis_msea_plot.png) <center>**Figure 68.** Metabolite Set Enrichment Analysis Plot</center>
+![Metabolite Set Enrichment Analysis Plot](../../img/UntargetedPipeline/utp_app_comparative_analysis_msea_plot.png) <center>**Figure 79.** Metabolite Set Enrichment Analysis Plot</center>
 
-![Pathway Topology Analysis Plot](../../img/UntargetedPipeline/utp_app_comparative_analysis_pathway_topology_plot.png) <center>**Figure 69.** Pathway Topology Analysis Plot</center>
+![Pathway Topology Analysis Plot](../../img/UntargetedPipeline/utp_app_comparative_analysis_pathway_topology_plot.png) <center>**Figure 80.** Pathway Topology Analysis Plot</center>
 
-![Metabolite Set Enrichment Analysis Table](../../img/UntargetedPipeline/utp_app_comparative_analysis_msea_table.png) <center>**Figure 70.** Metabolite Set Enrichment Analysis Table</center>
+![Metabolite Set Enrichment Analysis Table](../../img/UntargetedPipeline/utp_app_comparative_analysis_msea_table.png) <center>**Figure 81.** Metabolite Set Enrichment Analysis Table</center>
 
-![Pathway Topology Analysis Table](../../img/UntargetedPipeline/utp_app_comparative_analysis_topology_table.png) <center>**Figure 71.** Pathway Topology Analysis Table</center>
+![Pathway Topology Analysis Table](../../img/UntargetedPipeline/utp_app_comparative_analysis_topology_table.png) <center>**Figure 82.** Pathway Topology Analysis Table</center>
 
 *Pathway View* plots the pathway view of the metabolites that show up in the Metabolite Set Enrichment Analysis. It maps and renders the metabolite hits on relevant pathway graphs. This enables you to visualize the significant metabolites on pathway graphs of the respective metabolisms they belong to. You can select your metabolite of interest from the drop-down and click on *Plot*. This will plot the pathway view of the metabolite selected. You can also download the plot as a .png file by clicking onto the *Download Pathview Plot* button.
 
-![Pathway View options](../../img/UntargetedPipeline/utp_app_comparative_analysis_pathway_view_options.png) <center>**Figure 72.** Pathway View options</center>
+![Pathway View options](../../img/UntargetedPipeline/utp_app_comparative_analysis_pathway_view_options.png) <center>**Figure 83.** Pathway View options</center>
 
-![Pathway View Plot](../../img/UntargetedPipeline/utp_app_comparative_analysis_pathway_view_plot.png) <center>**Figure 73.** Pathway View Plot</center>
+![Pathway View Plot](../../img/UntargetedPipeline/utp_app_comparative_analysis_pathway_view_plot.png) <center>**Figure 84.** Pathway View Plot</center>
 
 #References
 
