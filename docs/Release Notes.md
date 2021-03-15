@@ -22,7 +22,7 @@
 
 <!--February 26th, 2021-->
 
-<details open>
+<details>
 <summary><font size="+1"><b>February 26th, 2021</b></font></summary>
 <br>
   <p class="new-button">New</p>
