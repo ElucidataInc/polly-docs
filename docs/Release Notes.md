@@ -1,6 +1,25 @@
 #Release Notes
 
 
+<!--March 12th, 2021-->
+
+<details open>
+<summary><font size="+1"><b>March 12th, 2021</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>Introduced Docker building feature on <a href="https://docs.elucidata.io/Scaling%20compute/Polly%20CLI.html#docker-management">Polly CLI</a> which enable users to build dockers, check their build status and logs and push dockers to Polly.</li>
+    <li>Added 11,470 new curated transcriptomics and single cell datasets to different Data Lakes.</li>
+  </ul>
+  <p class="update-button">Update</p>
+  <ul>
+    <li>Better accessibility to datasets within OmixWiki with accessibility to metadata filtering options.</li>
+  </ul>
+</details>
+
+<hr>
+
+
 <!--February 26th, 2021-->
 
 <details open>
