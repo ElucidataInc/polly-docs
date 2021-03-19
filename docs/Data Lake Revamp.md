@@ -103,7 +103,7 @@ The values within these fields are standardized across all datasets and correspo
 These attributes are also present at the sample-level.
 
 ![Curation_img](img/Discover/revamp/curation.png)
-*Fig caption: A screen grab of the contents of a GCT file. Here, every row is a sample and fields with the prefix ‘kw_curated’ and ‘curated’ contain information that was appended to the file after curation.*
+*A screen grab of the contents of a GCT file. Here, every row is a sample and fields with the prefix ‘kw_curated’ and ‘curated’ contain information that was appended to the file after curation.*
 
 There are 3 additional labels curated_is_control, curated_cohort_id, curated_cohort_name. These labels are also standard across most datasets and are useful when performing certain downstream analyses (like Differential Expression analysis) on a large number of datasets in an automated fashion.
 
