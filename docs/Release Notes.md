@@ -1,9 +1,34 @@
 #Release Notes
 
+<!--March 26th, 2021-->
+
+<details open>
+<summary><font size="+1"><b>March 26th, 2021</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>TEDDY (The Environmental Determinants of Diabetes in the Young) and DEPMAP (Dependency Map) Data Lakes have been added on Polly.</li>
+    <li>Introduced option to directly export data to the workspace from a Studio Preset.</li>
+    <li>Added 37,177 new curated transcriptomics and single cell datasets to different Data Lakes.</li>
+  </ul>
+  <p class="update-button">Update</p>
+  <ul>
+    <li>Updated Polly Login User Interface.</li>
+    <li>Added additional filters to TEDDY Data Lake.</li>
+    <li>Resolved issue with app hosting infrastructure to increase stability of apps.</li>
+  </ul>
+</details>
+
+<hr>
+
+
+
+
+
 
 <!--March 12th, 2021-->
 
-<details open>
+<details>
 <summary><font size="+1"><b>March 12th, 2021</b></font></summary>
 <br>
   <p class="new-button">New</p>
