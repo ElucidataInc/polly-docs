@@ -9,13 +9,13 @@
   <ul>
     <li>TEDDY (The Environmental Determinants of Diabetes in the Young) and DEPMAP (Dependency Map) Data Lakes have been added on Polly.</li>
     <li>Introduced option to directly export data to the workspace from a Studio Preset.</li>
-    <li>Added 37,177 new curated transcriptomics and single cell datasets to different Data Lakes.</li>
+    <li>Added 37,177 new curated datasets corresponding to various omics to different Data Lakes.</li>
   </ul>
   <p class="update-button">Update</p>
   <ul>
     <li>Updated Polly Login User Interface.</li>
     <li>Added additional filters to TEDDY Data Lake.</li>
-    <li>Resolved issue with app hosting infrastructure to increase stability of apps.</li>
+    <li>Resolved issue with app hosting infrastructure to increase stability of apps for better user experience.</li>
   </ul>
 </details>
 
