@@ -35,6 +35,7 @@
         - [2.2.2.2.4 Querying at the sample level](#22224-querying-at-the-sample-level)
         - [2.2.2.2.5 Access annotation repositories](#22225-access-annotation-repositories)
       - [2.2.2.3 Downloading a dataset](#2223-downloading-a-dataset)
+- [Get key of the first file returned by the query](#get-key-of-the-first-file-returned-by-the-query)
 
 
 
@@ -53,15 +54,15 @@ A data repository on Polly is a collection of datasets organized based on the so
 
 There are also some secondary categorizations of datasets based on diseases and tissues. There are various disease-specific and tissue-specific repositories on Polly which contain multi-omic data for those diseases and tissues from various sources.
 
-These are the current disease and tissue based repositories (recorded in March 2021):-
+These are the current disease and tissue-based repositories (recorded in March 2021):-
 
 * AML: Microarray and RNA Sequencing datasets for Acute Myeloid Leukemia.
 
-* GBM: Microarray and RNA Sequencing datasets for Gliblastoma Multiforme.
+* GBM: Microarray and RNA Sequencing datasets for Glioblastoma Multiforme.
 
 * IBD: Microarray and RNA Sequencing datasets for Inflammatory Bowel Disease.
 
-* Covid-19: Transcriptomics, Single-cell RNA Sequencing, Proteomics, Metabolomics and Lipidomics datasets for COVID-19 (SARS-CoV-2).
+* Covid-19: Transcriptomics, Single-cell RNA Sequencing, Proteomics, Metabolomics and Lipidomics, datasets for COVID-19 (SARS-CoV-2).
 
 ## 1.2 What do we mean by curation of data in Polly?
 Omics data in public and private repositories is often unstructured and not always analysis-ready. Researchers have to spend an enormous amount of time grappling with different file formats (CSV, Excel, GCT, Soft files, H5ad etc.) and different conventions for metadata representation.
@@ -89,15 +90,15 @@ In addition to this, we append annotations to each dataset on Polly. These annot
 
 Users can view and query dataset-level annotations both using discoverpy and the filtering interface.
 
-These values are standardized across all datasets. The names of the ontologies we use are also mentioned above. The standardization of these fields is in line with FAIR guidelines for improving findability, interoperability and re-usability. In particular, these annotations address the FAIR principles F2, F3 and I2 (see here for more details).
+These values are standardized across all datasets. The names of the ontologies we use are also mentioned above. The standardization of these fields is in line with FAIR guidelines for improving findability, interoperability, and re-usability. In particular, these annotations address the FAIR principles F2, F3 and I2 (see here for more details).
 
 ### 1.2.2 Sample-level annotations
-**Ontology Mapping**: Similar to dataset-level ontology mappings, there are 5 sample-level mappings -  Disease, Tissue, Cell type, Cell line, Drug. While the dataset-level mappings can be used to narrow down a dataset of interest, sample-level mappings directly describe the biological characteristics of the sample. For instance, if a sample is labeled with a drug, it means that that drug was used to treat the sample. On the other hand if a dataset is tagged with a drug it doesn’t necessarily mean that the samples were treated with that drug, only that it was mentioned somewhere in the description of the study.
+**Ontology Mapping**: Similar to dataset-level ontology mappings, there are 5 sample-level mappings -  Disease, Tissue, Cell type, Cell line, Drug. While the dataset-level mappings can be used to narrow down a dataset of interest, sample-level mappings directly describe the biological characteristics of the sample. For instance, if a sample is labeled with a drug, it means that that drug was used to treat the sample. On the other hand, if a dataset is tagged with a drug it doesn’t necessarily mean that the samples were treated with that drug, only that it was mentioned somewhere in the description of the study.
 
 All sample-level annotations are stored in the GCT as shown below.
 
 ![Curation_img](img/Discover/revamp/curation.png)
-*A screen grab of the contents of a GCT file. Here, every row is a sample and fields with the prefix ‘kw_curated’ and ‘curated’ contain information that was appended to the file after curation.*
+*A screen grab of the contents of a GCT file. Here, every row is a sample, and fields with the prefix ‘kw_curated’ and ‘curated’ contain information that was appended to the file after curation.*
 
 **Perturbation/control identification**: In addition to ontology mappings we also have the following three annotations at the sample-level.
 
@@ -109,7 +110,7 @@ All sample-level annotations are stored in the GCT as shown below.
 
 These labels are present for most datasets and are useful when performing certain downstream analyses (like Differential Expression) on a large number of datasets in an automated fashion. These annotations also address the FAIR metrics R1.2 (see here for more details).
 
-**Manual curation of perturbation/control labels**: To do this perturbation/control classification we use a machine learning classifier which uses the textual metadata associated with each sample to classify it as control or perturbation. To train this classifier and improve its accuracy on different types of omics datasets, we manually curate these labels for a subset of the datasets in our data lake.  This manual labelling is done by graduate and undergraduate students who are well versed in understanding biological data generation. We use these manually annotated datasets to train our classifier and improve its accuracy. The current classification model has an accuracy of ~90% on sample metadata for transcriptomics datasets.
+**Manual curation of perturbation/control labels**: To do this perturbation/control classification we use a machine learning classifier that uses the textual metadata associated with each sample to classify it as control or perturbation. To train this classifier and improve its accuracy on different types of omics datasets, we manually curate these labels for a subset of the datasets in our data lake.  This manual labeling is done by graduate and undergraduate students who are well versed in understanding biological data generation. We use these manually annotated datasets to train our classifier and improve its accuracy. The current classification model has an accuracy of ~90% on sample metadata for transcriptomics datasets.
 
 
 ## 1.3 Index of repositories on Polly Discover
@@ -144,7 +145,7 @@ Moreover, each dataset has been annotated with study metadata fields such as dis
 
 
 **Usage**
-This is the largest curated transcriptomics repository with over 50k datasets. A user can easily identify dataset(s) of relevance and perform analysis. Analysis on Transcriptomics data generally include comparing specific pairs of samples. The differences may be due to different phenotypes (samples from diseased or healthy tissue, samples with different treatments, samples at different time points undergoing the same treatment, etc.). More commonly, healthy and disease sample groups are compared to discover quantitative changes in expression levels of genes between the two groups, in turn identifying differentially expressed Genes.
+This is the largest curated transcriptomics repository with over 50k datasets. A user can easily identify dataset(s) of relevance and perform analysis. Analysis of Transcriptomics data generally includes comparing specific pairs of samples. The differences may be due to different phenotypes (samples from diseased or healthy tissue, samples with different treatments, samples at different time points undergoing the same treatment, etc.). More commonly, healthy and disease sample groups are compared to discover quantitative changes in expression levels of genes between the two groups, in turn identifying differentially expressed Genes.
 
 Furthermore, the following analyses can be done on top of the differentially expressed Genes:
 
@@ -157,7 +158,7 @@ Since most of the RNAseq datasets in GEO do not have processed counts and only h
 
 **Dataset Level** 
 
-We have mapped the following study metadata fields to an ontology so that they remain consistent throughout the repository and querying on the basis of these fields yield appropriate results:
+We have mapped the following study metadata fields to an ontology so that they remain consistent throughout the repository and querying based on these fields yield appropriate results:
 1. Disease
 2. Tissue
 3. Cell type
@@ -167,7 +168,7 @@ We have mapped the following study metadata fields to an ontology so that they r
 
 **Sample Level** 
 
-We have mapped the above-mentioned fields in the sample metadata to an onology so that they remain consistent throughout the repository and querying on the basis of these fields yield appropriate results.
+We have mapped the above-mentioned fields in the sample metadata to an onology so that they remain consistent throughout the repository and querying based on these fields yield appropriate results.
 
 We have also deployed our proprietary Machine Learning Model that accurately identifies the samples as Perturbation and Control, which can allow the user to seamlessly analyze a large number of datasets in batches.
 
@@ -177,7 +178,7 @@ https://www.ncbi.nlm.nih.gov/geo/
 
 ### 1.3.2 LINCS (The Library of Integrated Network-Based Cellular Signatures)
 **Introduction**
-LINCS program is an initiative by NIH to create a network-based understanding of biology by cataloguing the gene expression as well as other cellular processes. When we expose cells to a variety of perturbating agents then it causes a change in gene expression as well as other cellular processes.Developing the network-based approach, it will enable a new understanding of health and disease through an integrative approach the will help to identify the patterns of common network and cellular responses across different types of tissues and cell in response to a broad range of perturbations.
+LINCS program is an initiative by NIH to create a network-based understanding of biology by cataloging the gene expression as well as other cellular processes. When we expose cells to a variety of perturbating agents then it causes a change in gene expression as well as other cellular processes. Developing the network-based approach, it will enable a new understanding of health and disease through an integrative approach the will help to identify the patterns of common network and cellular responses across different types of tissues and cell in response to a broad range of perturbations.
 
 **Types of Omics Datasets**
 - Microarray
@@ -185,12 +186,12 @@ LINCS program is an initiative by NIH to create a network-based understanding of
 **Usage**
 By generating and making public data that indicates how cells respond to various genetic and environmental stressors, the LINCS project will help us gain a more detailed understanding of cell pathways and aid efforts to develop therapies that might restore perturbed pathways and networks to their normal states.Polly enables the user to query metadata search  across all annotations associated with perturbations, model systems, and signatures.
 
-LINCS database played a crucial role to investigate the reproducibility of prototypical perturbational assay: quantifying the responsiveness of cultured cells to anti-cancer drugs and influential in requirement of FAIR data. With additional curations available as part of Polly, facilitates cross comparision in turn ensuring reproducibility.
+LINCS database played a crucial role to investigate the reproducibility of the prototypical perturbational assay: quantifying the responsiveness of cultured cells to anti-cancer drugs and influential in the requirement of FAIR data. With additional curations available as part of Polly, facilitates cross comparison in turn ensuring reproducibility.
 
 Identifying the transcription factors (TFs) responsible for observed changes in gene expression is an important step in understanding gene regulatory networks. Enrichment results from these distinct sources are integrated to generate a composite rank that improves the prediction of the correct upstream TF compared to ranks produced by individual libraries.
 
 **Level of curation**
-Changes in each cell line measured against treating it with different perturbations which can be drugs or genetic perturbations (CRISPR knockdown perturbations). Each dataset contains the gene expression values for perturbation as well as control vehicle, control untreated and control vector for the respective cell line.  Moreover, these datasets are curated at their dataset and sample level to make them standardised and consistent.
+Changes in each cell line measured against treating it with different perturbations which can be drugs or genetic perturbations (CRISPR knockdown perturbations). Each dataset contains the gene expression values for perturbation as well as control vehicle, control untreated and control vector for the respective cell line.  Moreover, these datasets are curated at their dataset and sample level to make them standardized and consistent.
 
 **Dataset Level**
 
@@ -223,18 +224,18 @@ With the advent of knowledge in the molecular basis of cancer, the next question
 - Drug Screens
   
 **Usage**
-After the phenomenal success of the TCGA portal in mankind's fight against cancer, DepMap is to be the most important next step to understand how the molecules (drugs) effect the overall physiological workflow.
+After the phenomenal success of the TCGA portal in mankind's fight against cancer, DepMap is to be the most important next step to understand how the molecules (drugs) affect the overall physiological workflow.
 
-DepMap scientists are profiling hundreds of cancer cell line models for genomic information and sensitivity to genetic and small molecule perturbations. The information available as part of results in pooled-cell line chemical-perturbation viability screens has the potential to replace the initial part on drug lead screening. The data for about 4518 compounds can very eficiently be used to novel drug discovery pipeline as well as for approved drug repositioning or repurposing.
+DepMap scientists are profiling hundreds of cancer cell line models for genomic information and sensitivity to genetic and small molecule perturbations. The information available as part of results in pooled-cell line chemical-perturbation viability screens has the potential to replace the initial part on drug lead screening. The data for about 4518 compounds can very efficiently be used for novel drug discovery pipelines as well as for approved drug repositioning or repurposing.
 
 CRISPR-Cas9 viability screens are increasingly performed at a genome-wide scale across large panels of cell lines to identify new therapeutic targets for precision cancer therapy. The integration of these data with the already available pool of molecular understanding of cancer recapitulate findings from the individual datasets, provide greater statistical power to cancer- and subtype-specific analyses, unveil additional biomarkers of gene dependency, and improve the detection of common essential genes.
 
-The DepMap dataset is extensively used to perform and predict interaction between genes. Few therapies target the loss of tumor suppressor genes in cancer. CRISPR-SpCas9 and RNA-interference loss-of-function screens enable the identification of new therapeutic targets associated with genomic loss of tumor suppressor genes.
+The DepMap dataset is extensively used to perform and predict the interaction between genes. Few therapies target the loss of tumor suppressor genes in cancer. CRISPR-SpCas9 and RNA-interference loss-of-function screens enable the identification of new therapeutic targets associated with genomic loss of tumor suppressor genes.
 
-Additionally computational biologist, are efficiently using DepMap for developing insilico methods to detail the invivo process. Cell lines are key tools for preclinical cancer research, but it remains unclear how well they represent patient tumor samples. Direct comparisons of tumor and cell line transcriptional profiles are complicated by several factors, including the variable presence of normal cells in tumor samples. Computational tools developed using DepMap data could be used to guide the selection of cell lines that more closely resemble patient tumors and improve the clinical translation of insights gained from cell lines.
+Additionally, computational biologists, are efficiently using DepMap for developing in-silico methods to detail the in-vivo process. Cell lines are key tools for preclinical cancer research, but it remains unclear how well they represent patient tumor samples. Direct comparisons of tumor and cell line transcriptional profiles are complicated by several factors, including the variable presence of normal cells in tumor samples. Computational tools developed using DepMap data could be used to guide the selection of cell lines that more closely resemble patient tumors and improve the clinical translation of insights gained from cell lines.
 
 **Level of curation**
-DepMap repo contains a wide variety of dataset including Gene dependency, Drug screens and RNAi. Though the data is quite structured as far as the DepMap repository is concerned the metadata of cell lines and drugs is avaiable as seperate objects. While curating the data, merging of the different information from cell lines, Drugs, probe performance were merged using precise unique IDs to make the holistic information available for the user.
+DepMap repo contains a wide variety of dataset including Gene dependency, Drug screens and RNAi. Though the data is quite structured as far as the DepMap repository is concerned the metadata of cell lines and drugs is available as separate objects. While curating the data, merging of the different information from cell lines, Drugs, probe performance was merged using precise unique IDs to make the holistic information available for the user.
 
 **Dataset Level** 
 At the dataset level, we tag the metadata of the dataset with ontologies. The fields in the dataset level metadata are : 
@@ -248,7 +249,7 @@ At the dataset level, we tag the metadata of the dataset with ontologies. The fi
 **Sample Level**
 The data includes information for failed screens which was cleaned as part of curation process.
 In order to facilitate quick learning about the cell lines used, Cell line info is made available as column metadata.
-For RNAi, we do not currently have globally standardised refernce database, hence the probe Id along with gene symbol were used to annotate the metadata.
+For RNAi, we do not currently have a globally standardized reference database, hence the probe Id along with gene symbols were used to annotate the metadata.
 
 **Source**
 https://depmap.org/portal/
@@ -268,11 +269,11 @@ Each study on MeWork can have multiple datasets designated by analysis ids. The 
 
 The two data entities in each MetaboLights Study are MAF and Sample Metadata
 
-Metabolite Assignment File (MAF) - A TSV file containing information about the metabolites investigated in the study. Information regarding database accession IDs , where in the spectra the metabolite is found and data pertaining to its abundance within the study samples is present in this file. The file name is of the format : m_MTBLSxxx_POS/NEG_Sample_MS/NMR_maf.tsv. Example : m_MTBLS1080_POS_LC-LTQ-MS_metabolite_profiling_v2_maf.tsv
+Metabolite Assignment File (MAF) - A TSV file containing information about the metabolites investigated in the study. Information regarding database accession IDs , wherein the spectra the metabolite is found and data pertaining to its abundance within the study samples is present in this file. The file name is of the format : m_MTBLSxxx_POS/NEG_Sample_MS/NMR_maf.tsv. Example : m_MTBLS1080_POS_LC-LTQ-MS_metabolite_profiling_v2_maf.tsv
 
 Sample Metadata - The sample information provides all relevant facts about each sample and any controls/standards included in the study. There is ONE sample file corresponding to each MAF file. Sample metadata includes a unique sample name, organism, organism part (for controls use eg. experimental blank and solvent) and sample type (ie. control, QC, experimental sample). Further sample descriptors may include other columns such as Gender, Age, Treatment, etc.  The file name is of the format : a_MTBLSxxx_POS/NEG_Sample_MS/NMR.txt.Example : a_MTBLS1080_POS_LC-LTQ-MS_metabolite_profiling.txt
 
-Study - A study can have multiple MAF and Sample Metadata Files. Each study record is assigned a unique MetaboLights Identifier (MTBLSxxx).A Dataset represents a curated collection of MAF and it's corresponding Sample Metadata. To enforce this dataset definition, on Polly, each dataset is denoted using a unique ID of the format MTBLSxxx_m_MTBLSxxx_POS/NEG_Sample_MS/NMR.For example, MTBLS100_m_dwhsaliva_metabolite_profiling_NMR_spectroscopy would translate to a collection of saliva samples from the study MTBLS100 processed using the NMR Spectroscopy protocol.On Polly, you can find all the information corresponding to a dataset in one place (i.e. one GCT file) which includes, study metadata (title, description, author, disease, organism, etc.), sample metadata, and abundance data. This saves a considerable amount of time and effort in finding relevant metadata and mapping it to the abundance data which can be better spent on the analysis of data.Moreover, each dataset has been annotated with study metadata fields such as disease, organism, Ion Mode, tissue, and dataset ID that can be used to identify relevant dataset(s) on Polly.
+Study - A study can have multiple MAF and Sample Metadata Files. Each study record is assigned a unique MetaboLights Identifier (MTBLSxxx).A Dataset represents a curated collection of MAF and its corresponding Sample Metadata. To enforce this dataset definition, on Polly, each dataset is denoted using a unique ID of the format MTBLSxxx_m_MTBLSxxx_POS/NEG_Sample_MS/NMR.For example, MTBLS100_m_dwhsaliva_metabolite_profiling_NMR_spectroscopy would translate to a collection of saliva samples from the study MTBLS100 processed using the NMR Spectroscopy protocol. On Polly, you can find all the information corresponding to a dataset in one place (i.e. one GCT file) which includes, study metadata (title, description, author, disease, organism, etc.), sample metadata, and abundance data. This saves a considerable amount of time and effort in finding relevant metadata and mapping it to the abundance data which can be better spent on the analysis of data. Moreover, each dataset has been annotated with study metadata fields such as disease, organism, Ion Mode, tissue, and dataset ID that can be used to identify relevant dataset(s) on Polly.
 
 **Types of Omics Datasets**
 
@@ -280,7 +281,7 @@ Study - A study can have multiple MAF and Sample Metadata Files. Each study reco
 - Lipidomics
 
 **Usage**
-Default application on Polly allow you to perform downstream analysis on single mode (either positive or negative mode) as well as dual mode (both positive and negative mode) targeted, semi-targeted (without retention time) and untargeted unlabeled metabolomics data along with insightful visualizations. The app provides a variety of normalization methods, scaling options and data visualization functionalities, thereby allowing an efficient analysis of the data to get actionable insights.
+Default application on Polly allows you to perform downstream analysis on single-mode (either positive or negative mode) as well as dual-mode (both positive and negative mode) targeted, semi-targeted (without retention time) and untargeted unlabeled metabolomics data along with insightful visualizations. The app provides a variety of normalization methods, scaling options and data visualization functionalities, thereby allowing an efficient analysis of the data to get actionable insights.
 
 - The application supports data with a simple matrix having samples in the columns and metabolites in the rows.
 - It provides different normalization and scaling methods to perform on the data.
@@ -290,7 +291,7 @@ Default application on Polly allow you to perform downstream analysis on single 
 - Provides heatmap visualization along with different algorithms like hierarchical clustering, k-means, correlation etc.
 - Performs comparative analysis for the different cohort comparisons.
 
-User can also start a notebook and analyze the datasets using most popular packages like metaboanalyst.
+Users can also start a notebook and analyze the datasets using many popular packages like metaboanalyst.
 
 **Level of curation**
 Each analysis contains the intensity of metabolites and related metadata for the analysis. Thus the curation for these datasets includes curation at the dataset level.
@@ -324,10 +325,10 @@ The use of Single-cell RNA sequencing (scRNA-seq) in understanding cellular biol
 
 Different types of analyses can be performed on these single cell datasets to answer a variety of biological questions. Clustering and biomarker analysis- to identify the cell types in the population, trajectory inference- to understand the differentiation paths adopted by different sub-populations,  differential gene expression analysis- to identify biomarkers of cell types and genes that differentiate two cell types are some examples of the vast number of analyses that can be done on single cell RNASeq datasets.
 
-These analyses can be performed using various open source packages such as  [Scanpy](https://scanpy.readthedocs.io/en/stable/), [Seurat](https://satijalab.org/seurat/) and [Monocle](https://github.com/cole-trapnell-lab/monocle3) among others. We store the datasets in this repository in the h5ad file format. The h5ad file format is an HDF5 file format which is widely accepted in the single cell sequencing community. It is designed to store large amounts of data, and allow fast querying of parts of a file without accessing the complete file in memory. The dataset h5ad files can be consumed using Polly notebooks, via popular single cell analysis packages like Scanpy and Seurat, which are pre-installed in Polly Notebook environments. They can also be consumed through a GUI-interface, using the [Cellxgene](https://github.com/ElucidataInc/polly-docs/blob/discover_doc_revamp/docs/Data%20Lake%20Revamp.md#2121-proprietary-applications) app or the [single cell visualisation app](https://github.com/ElucidataInc/polly-docs/blob/discover_doc_revamp/docs/Data%20Lake%20Revamp.md#2121-proprietary-applications) hosted on Polly. 
+These analyses can be performed using various open source packages such as  [Scanpy](https://scanpy.readthedocs.io/en/stable/), [Seurat](https://satijalab.org/seurat/) and [Monocle](https://github.com/cole-trapnell-lab/monocle3) among others. We store the datasets in this repository in the h5ad file format. The h5ad file format is an HDF5 file format that is widely accepted in the single cell sequencing community. It is designed to store large amounts of data, and allow fast querying of parts of a file without accessing the complete file in memory. The dataset h5ad files can be consumed using Polly notebooks, via popular single cell analysis packages like Scanpy and Seurat, which are pre-installed in Polly Notebook environments. They can also be consumed through a GUI-interface, using the [Cellxgene](https://github.com/ElucidataInc/polly-docs/blob/discover_doc_revamp/docs/Data%20Lake%20Revamp.md#2121-proprietary-applications) app or the [single cell visualisation app](https://github.com/ElucidataInc/polly-docs/blob/discover_doc_revamp/docs/Data%20Lake%20Revamp.md#2121-proprietary-applications) hosted on Polly. 
 
 **Level of curation**
-A lot of the datasets in this repository is a collection of samples whose cells have been sequenced together. Thus the curation for these datasets includes curation at the study level (title, description, author, disease, organism, etc.), sample level, as well as cell level.  
+A lot of the datasets in this repository are a collection of samples whose cells have been sequenced together. Thus the curation for these datasets includes curation at the study level (title, description, author, disease, organism, etc.), sample level, as well as cell level.  
 
 **Dataset Level**
 At the dataset level, we tag the metadata of the dataset with ontologies. The fields in the dataset level metadata are disease, tissue, organism and drug as well as the description and author of the study.
@@ -344,7 +345,7 @@ In some datasets we have also manually curated the cell types present in the dat
 
 ### 1.3.6 TEDDY
 **Introduction**
-The TEDDY study - The Environmental Determinants of Diabetes in the Young - is looking for the causes of type 1 diabetes mellitus (T1DM). Research tells us that children who get diabetes have certain kind of genes that make them highly susceptible to getting diabetes. However, not all children who are in the high risk category get diabetes.  It is believed that something happens to "triggers" a child with these risky genes to actually get diabetes. It is the purpose of this study to try and find out what are the triggers that cause children to get diabetes.
+The TEDDY study - The Environmental Determinants of Diabetes in the Young - is looking for the causes of type 1 diabetes mellitus (T1DM). Research tells us that children who get diabetes have certain kind of genes that make them highly susceptible to getting diabetes. However, not all children who are in the high-risk category get diabetes.  It is believed that something happens to "triggers" a child with these risky genes to actually get diabetes. It is the purpose of this study to try and find out what are the triggers that cause children to get diabetes.
 
 The study encompasses results from ~11,000 patients.
 
@@ -354,10 +355,10 @@ Lipidomics - Case Study [ST001636](https://www.metabolomicsworkbench.org/data/DR
 Metabolomics - Case Study [ST001386](https://www.metabolomicsworkbench.org/data/DRCCMetadata.php?Mode=Study&StudyID=ST001386) (Metabolomics)
 
 **Usage**
-Given the fact that the data ultimately comprises of Lipidomic and Metabolomic expression intensities (but that of young children), they can be easily combined with any other library of Lipidomic or Metabolomic studies (mostly of Adults) to possibly find if any Perturbation group in other studies have similar Lipidomic or Metabolomic features in children and, hence, possibly warn them or even prevent an onset of an illness by taking suitable preventive measures to possibly mitigate or even cure the child of the said perturbation.
+Given the fact that the data ultimately comprises of Lipidomic and Metabolomic expression intensities (but that of young children), they can be easily combined with any other library of Lipidomic or Metabolomic studies (mostly of Adults) to possibly find if any Perturbation group in other studies have similar Lipidomic or Metabolomic features in children and, hence, possibly warn them or even prevent onset of an illness by taking suitable preventive measures to possibly mitigate or even cure the child of the said perturbation.
 
 **Level of curation**
-Whenever an instant (a child) is found to be ‘IA’ positive, control instants is then chosen from amongst the remaining samples such that they have similar features (like diet, viral infections, etc). A more in-depth analysis into how do they do the sampling can be found here. These pairs are tied together using a Case Index which is unique to each such pair.
+Whenever an instant (a child) is found to be ‘IA’ positive, control instants are then chosen from amongst the remaining samples such that they have similar features (like diet, viral infections, etc). A more in-depth analysis into how do they do the sampling can be found here. These pairs are tied together using a Case Index which is unique to each such pair.
 
 For each Case Index, we can have multiple samples under Control and also under Case.
 
@@ -370,17 +371,17 @@ The sample [meta-data](ftp://www.metabolomicsworkbench.org/Studies/ST001386_TEDD
 - 'ia_endptage_1' - this is the age in days when the persistent presence of 'IA' was confirmed (2 successive tests).
 - ‘sex’ - Gender
 
-The 'IA''s control counter part also has a similar definition.
+The 'IA''s control counterpart also has a similar definition.
 
-Similarly, whenever an instant comes up which is found to be 'T1D' (Type 1 Diabetes) positive, this 'case's control counter part is chosen from amongst all those instances which are not 'T1D' positive and have similar features. 
+Similarly, whenever an instant comes up which is found to be 'T1D' (Type 1 Diabetes) positive, this 'case's control counterpart is chosen from amongst all those instances which are not 'T1D' positive and have similar features. 
 
 **Dataset Level**
 
 The dataset-level meta-data is inherently the same as the sample-level meta-data as the dataset was sliced according to the unique samples that were present.
 
-In this study, given an instant (sample or child) from a class of Perturbation (either IA positive or T1D positive), we also have a set of Control cases that were similar to the Perturbation when it occurred (features like: diet history, illness history, visits, stool sample, etc). Now, having dissented up the data on the basis of sample ID (one sample ID per child in the study), Polly allows us to easily pick one perturbation sample and its corresponding set of control samples by simply filtering according to Which sort of perturbation we want (IA positive or T1D positive), and 
+In this study, given an instant (sample or child) from a class of Perturbation (either IA positive or T1D positive), we also have a set of Control cases that were similar to the Perturbation when it occurred (features like diet history, illness history, visits, stool sample, etc). Now, having dissented up the data on the basis of sample ID (one sample ID per child in the study), Polly allows us to easily pick one perturbation sample and its corresponding set of control samples by simply filtering according to Which sort of perturbation we want (IA positive or T1D positive), and 
 
-Pick a Case Index number which will pull up one Perturbation Instant and its corresponding set of Control Instances.
+Pick a Case Index number that will pull up one Perturbation Instant and its corresponding set of Control Instances.
 
 **Source**
 - Case Study [ST001386](https://www.metabolomicsworkbench.org/data/DRCCMetadata.php?Mode=Study&StudyID=ST001386)
@@ -389,10 +390,10 @@ Pick a Case Index number which will pull up one Perturbation Instant and its cor
 
 ### 1.3.7 TCGA
 **Introduction**
-The Cancer Genome Atlas (TCGA) is a public funded project that aims to catalogue and discover major cancer-causing genomic alterations to create a comprehensive “atlas” of cancer genomic profiles. 
+The Cancer Genome Atlas (TCGA) is a publicly funded project that aims to catalog and discover major cancer-causing genomic alterations to create a comprehensive “atlas” of cancer genomic profiles. 
 TCGA molecularly characterized over 20,000 primary cancer and matched normal samples spanning [33 cancer types](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers); generated over 2.5 petabytes of genomic, epigenomic, transcriptomic, and proteomic data.
 
-TCGA is corner stone in cancer biology. It has enabled deeper understanding of cancer at molecular levels, helped research in science and technology  that had fasten the pace of drug discovery helped patients at the clinic in real time. TCGA has been influential in R&D processes of many immuno-therapeutics. 
+TCGA is cornerstone in cancer biology. It has enabled a deeper understanding of cancer at molecular levels, helped research in science and technology  that has fastened the pace of drug discovery helped patients at the clinic in real-time. TCGA has been influential in the R&D processes of many immuno-therapeutics. 
 
 **Types of Omics Datasets**
 - Transcriptomics (mRNA,miRNA)
@@ -402,18 +403,18 @@ TCGA is corner stone in cancer biology. It has enabled deeper understanding of c
 - Methylation
 
 **Usage**
-All the available data can be sliced and diced as per users exquisite research problem to run downstream analysis including but not limited to pathway enrichment , differential expression , TMB, cross study summary statistics. 
+All the available data can be sliced and diced as per users' exquisite research problem to run downstream analysis including but not limited to pathway enrichment, differential expression, TMB, cross-study summary statistics. 
 
-Comprehensive curation done for ontologies related to disease,tissue, source , publication, sample (control/pertubation) etc enables the to easily integrate the data from different assays (expression , mutation etc. ) and different cohorts (BRCA,LUAD etc) for multi-omics integration analysis for putative biomolecular discovery.
+Comprehensive curation is done for ontologies related to disease,tissue, source , publication, sample (control/pertubation) etc. that enables them to easily integrate the data from different assays (expression , mutation etc. ) and different cohorts (BRCA,LUAD etc) for multi-omics integration analysis for putative biomolecular discovery.
 
-In conclusion, TCGA remains holy grail for cancer researchers and the all novel findings will facilitate diagnosis, treatment, and cancer prevention. 
+In conclusion, TCGA remains a holy grail for cancer researchers and all the novel findings will facilitate diagnosis, treatment, and cancer prevention. 
 
 **Level of curation**
-Though meticulous efforts have been done at TCGA to structure and standardise the data, none the less some hurdles still exits in accessing and analysing the data. Polly aims to reduce and where possible completely eliminate these barriers by standardising molecular nomenclature (e.g genes will be represented as HGNC ids, and conversions from other formats like Ensemble will be done whenever necessary) and representing sample IDS across study/Repository.
+Though meticulous efforts have been done at TCGA to structure and standardise the data, none the less some hurdles still exists in accessing and analyzing the data. Polly aims to reduce and where possible completely eliminate these barriers by standardizing molecular nomenclature (e.g genes will be represented as HGNC ids, and conversions from other formats like Ensemble will be done whenever necessary) and representing sample IDs across the study/Repository.
 
 **Dataset Level**
 
-Comprehensive curation done for ontologies related to the below
+Comprehensive curation is done for ontologies related to the below fields-
 
 1. Cancer Type/Project
 2. Disease Type
@@ -423,15 +424,15 @@ Comprehensive curation done for ontologies related to the below
 6. Gender
 7. Vital Status &/or Cause of death
 
-These enable consistency throughout the repository and querying on the basis of above fields yield appropriate results
+These enable consistency throughout the repository and querying on the basis of the above fields yield appropriate results
 
 **Sample Level**
 
-Sparsity in clinical data has been consistent problem to deal, polly enables by cleaning up clinical data and adding additional annotations for pathological status, drugs, response etc. that are result of research on primary TCGA data. 
+Sparsity in clinical data has been a consistent problem to deal, polly enables by cleaning up clinical data and adding additional annotations for pathological status, drugs, response etc. that are result of research on primary TCGA data. 
 
 The [TCGA barcode](https://docs.gdc.cancer.gov/Encyclopedia/pages/TCGA_Barcode/) is made up of multiple strings representing various information. Clinical data is represented at Patient level, but the various assay data are represented at sample and/or aliquot level. 
 
-For eg. Clinical data will have unique key to be Patient Barcode (tcga-5l-aat0), where as the transcriptomics (and other assays too) data will have unique key at sample level, whether taken from tumor sample or normal site. A single patient can have multiple tumor sample assessments too, example given for a breast (or lung) cancer patient where patient has developed tumors in both the breasts (or lungs). Additionally aliquot Barcode is needed to asses the assay specific information, for e.g the same sample (tumor biopsy) is used to analyse the DNA and transciptome (also methlylation etc depending on the size of initial biopsy) in such case the Sample barcode for the patient is similar accross the assays for that given patient and timepoint. Considering these representations, it becomes a critical tasks for the user to merge clinical and assay level data. To ease this for the user , in the curation process, team has parsed all the relevant barcodes available in tcga and the mappings have been done accordingly. So that for the user wants the task to merge the clinical data (1 patient 1 record) to transcriptomics data for example ( 1 patient 3 records - normal , tumor left breast, tumor right breast) is already done as part of curation and the data on polly is ready to use for more deeper and insightful analysis.
+For eg. Clinical data will have unique key to be Patient Barcode (tcga-5l-aat0), where as the transcriptomics (and other assays too) data will have unique key at sample level, whether taken from tumor sample or normal site. A single patient can have multiple tumor sample assessments too, example given for a breast (or lung) cancer patient where patient has developed tumors in both the breasts (or lungs). Additionally aliquot Barcode is needed to asses the assay specific information, for e.g the same sample (tumor biopsy) is used to analyze the DNA and transciptome (also methlylation etc depending on the size of initial biopsy) in such case the Sample barcode for the patient is similar accross the assays for that given patient and timepoint. Considering these representations, it becomes a critical tasks for the user to merge clinical and assay level data. To ease this for the user , in the curation process, team has parsed all the relevant barcodes available in tcga and the mappings have been done accordingly. So that for the user wants the task to merge the clinical data (1 patient 1 record) to transcriptomics data for example ( 1 patient 3 records - normal , tumor left breast, tumor right breast) is already done as part of curation and the data on polly is ready to use for more deeper and insightful analysis.
 
 Additionally, it is a know fact that clinical data in TCGA is bit sparce, so team has curated additional papers that provide meaningful information. For e.g. though TCGA has the drug data, associated response is not cleary mentioned, additional annotations (from publications/curation packages) have been done in this regards to provide user with the information not available within TGGA.
 
@@ -445,7 +446,7 @@ https://portal.gdc.cancer.gov/
 ## 2.1 Accessing Discover through Polly's interface
 ### 2.1.1 Filtering interface
 
-For all data repositories, we provide a dataset filtering interface which is built around F.A.I.R guidelines. It gives a listing of datasets along with their metadata fields obtained from dataset level curation. This curation makes the dataset findable using a controlled vocabulary.
+For all data repositories, we provide a dataset filtering interface that is built around F.A.I.R guidelines. It gives a listing of datasets along with their metadata fields obtained from dataset level curation. This curation makes the dataset findable using a controlled vocabulary.
 
 - Apart from this, the filtering interface- 
 - provides standardized metadata fields to search for datasets (Findability)
@@ -459,7 +460,7 @@ For all data repositories, we provide a dataset filtering interface which is bui
 
 The filtering interface provides various fields(depending on the data repository) that you can use to filter the datasets within the selected repository. These fields are obtained from the dataset level curation of the datasets. All these fields in the repository store values using a controlled biological vocabulary inline with the interoperability principle of the FAIR guidelines. Some of the common fields that are present in every repository are-
 
-* Disease: This field will give you a list of all the diseased type datasets present in the repository. You can choose to work on any of the disease dataset listed or the ‘normal’ datasets. In order to do the selection, mark the checkboxes present besides the disease of your interest.
+* Disease: This field will give you a list of all the diseased type datasets present in the repository. You can choose to work on any of the disease datasets listed or the ‘normal’ datasets. In order to do the selection, mark the checkboxes present besides the disease of your interest.
 
 * Organism: This field will give you a list of the organisms associated with the datasets of the repository. You can mark a selection to filter the datasets of only the desired organism.
 
@@ -500,7 +501,7 @@ It is also possible to search for datasets by entering the complete or partial d
 
 ![Dataset search](img/Discover/revamp/dataset_search.png)
 
-Once you have narrowed down to a relevant omics datasets, you can mark a selection on the checkbox present beside the desired dataset and start analysing the dataset through the various applications available on Polly.
+Once you have narrowed down to a relevant omics datasets, you can mark a selection on the checkbox present beside the desired dataset and start analyzing the dataset through the various applications available on Polly.
 
 ### 2.1.2 GUI based applications
 
@@ -515,7 +516,7 @@ Select the workspace where you would like to store the analysis and click on *La
 ![Launching workspace](img/Discover/ORC4.png)
   
 
-Data Lake Applications are built on top of data lakes to query and explore relevant datasets. We have both proprietary applications used to visualise and analyse specific data types as well as popular open source applications. 
+Data Lake Applications are built on top of data lakes to query and explore relevant datasets. We have both proprietary applications used to visualize and analyze specific data types as well as popular open source applications. 
 
 #### 2.1.2.1 Proprietary applications
 
@@ -526,7 +527,7 @@ Data Lake Applications are built on top of data lakes to query and explore relev
 
 *   **[Single Cell Visualization:](https://docs.elucidata.io/Data%20Lake.html#single-cell-visualization)**
 
-    It is a comprehensive visualization platform for single-cell transcriptomics data. The app is helpful in visualizing cells and the association of different genes with the metadata.  
+    It is a comprehensive visualization platform for single-cell transcriptomics data. The app helps visualise cells and the association of different genes with the metadata.  
     <br />
 
 
@@ -552,7 +553,7 @@ You can read about these applications in the [Apps Section](https://docs.elucida
  
 ### 2.1.3 Polly Discover Notebook
 
-It is possible to analyse and visualise a dataset in a [Polly Notebook](https://docs.elucidata.io/Scaling%20compute/Polly%20Notebooks.html) for custom visualisations and analysis. This can be done by selecting the Notebook option in the application launch menu from the filtering screen. We have various types of notebook environments for different data types in Discover. 
+It is possible to analyze and visualise a dataset in a [Polly Notebook](https://docs.elucidata.io/Scaling%20compute/Polly%20Notebooks.html) for custom visualizations and analysis. This can be done by selecting the Notebook option in the application launch menu from the filtering screen. We have various types of notebook environments for different data types in Discover. 
 
 
 | Polly Notebook| Docker      | Machine Configuration   |
@@ -611,7 +612,7 @@ You can use the id of a repository to set the discover object to point to that r
 * For single cell repositories use `mode='single_cell'`.
 * For bulk data repositories use `mode='bulk'` (default)
 
-For instance, tge GEO repository has repo_id 9.
+For instance, the GEO repository has repo_id 9.
 
 <pre><code>discover.set_repo('9')</code></pre>
 The single cell repository's repo_id is 17.
@@ -648,7 +649,7 @@ As [our curation](https://github.com/ElucidataInc/polly-docs/blob/discover_doc_r
 
 ##### 2.2.2.2.1 Common methods for multiple indices.
 
-There are the methods available on all levels of repository indices. You just need to replace `<INDEX_LEVEL_NAME>` with one of `sample_repo` | `feature_repo` | `dataset_repo` | `annotation_repo`
+There are methods available on all levels of repository indices. You just need to replace `<INDEX_LEVEL_NAME>` with one of `sample_repo` | `feature_repo` | `dataset_repo` | `annotation_repo`
 
 * Get fields present in the index.
 `discover.<INDEX_LEVEL_NAME>.get_all_fields()`
@@ -672,7 +673,7 @@ For example, to get the fields present for datasets in this repository,
 
 ![records in df](img/Discover/revamp/image7.png)
 
-* Note: You would find there are many methods that have the *_as_df variant as well, which takes exactly the same arguments and return the result in Dataframe.
+* Note: You would find there are many methods that have the *_as_df variant as well, which takes the same arguments and return the result in Dataframe.
 
 * Instead of just `n` records, you can fetch all records as well by using 
   `discover.<INDEX_LEVEL_NAME>.get_all_records_as_df()`
@@ -686,7 +687,7 @@ For example, to get the fields present for datasets in this repository,
 <pre><code>discover.dataset_repo.get_n_datasets_for_field(field, value, regexp, n=Discover.DEFAULT_PAGE_SIZE, cursor=None, sort_by=Discover.DEFAULT_SORT_ORDER)</code></pre>
 Optionally a regular expression (`regexp`) can be provided instead of a `value`. 
 
-For example, The following query lists all datasets in the repository, where ‘publication name’ fields has the pubmed id ‘28756234’
+For example, The following query lists all datasets in the repository, where ‘publication name’ fields has pubmed id ‘28756234’
 
 
 <pre><code>discover.dataset_repo.get_n_datasets_for_field_as_df('publication_name', '28756234', regexp=False)[0]</code></pre>
@@ -707,7 +708,7 @@ Instead of just `n` datasets, you can fetch all datasets as well.
 
 <pre><code>discover.dataset_repo.get_n_datasets_for_field_combination(and_fields, or_fields, not_fields, n=Discover.DEFAULT_PAGE_SIZE, cursor=None, sort_by=Discover.DEFAULT_SORT_ORDER)</code></pre>
 
-The following query fetches datasets where platform is Microarray, tissue is stem cells, and the keyword ‘knockdown’ is NOT present in the description of the study.
+The following query fetches datasets where the platform is Microarray, tissue is stem cells, and the keyword ‘knockdown’ is NOT present in the description of the study.
 
 <pre><code>discover.dataset_repo.get_n_datasets_for_field_combination_as_df(and_fields={"platform":"Microarray", "tissue":"stem cells"}, not_fields={"description":"knockdown"})[0]</code></pre>
 
@@ -736,7 +737,7 @@ Instead of just `n` feature values, you can fetch all as well.
 ![feature level query 1](img/Discover/revamp/image13.png)
 
 
-* Fetch feature values matching against the `feature_name` term, in single-cell datasets. The `n` here decides the number of datasets which will be searched. This is for the case where mode was set to single cell. It outputs the average expression of the gene in the pool of cells corresponding to each unique cell type in the repository, per dataset.
+* Fetch feature values matching against the `feature_name` term, in single-cell datasets. The `n` here decides the number of datasets that will be searched. This is for the case where the mode was set to single cell. It outputs the average expression of the gene in the pool of cells corresponding to each unique cell type in the repository, per dataset.
 
 <pre><code> discover.feature_repo.get_n_sc_feature_match_values(feature_name, n=Discover.DEFAULT_PAGE_SIZE, cursor=None, sort_by=Discover.DEFAULT_SORT_ORDER)</code></pre>
 
@@ -770,7 +771,7 @@ Instead of just `n` feature values, you can fetch all as well.
 ![sample level query 1](img/Discover/revamp/image17.png)
 
 
-* Fetch sample entries that match against the `search_term` in any of the given fields. This is useful if you do not know the field to query on beforehand, or want to search across all fields, or a list of fields.
+* Fetch sample entries that match against the `search_term` in any of the given fields. This is useful if you do not know the field to query on beforehand or want to search across all fields, or a list of fields.
 
 
 <pre><code>discover.sample_repo.get_n_samples_for_fields(search_term, fields=[], n=Discover.DEFAULT_PAGE_SIZE, cursor=None, sort_by=Discover.DEFAULT_SORT_ORDER)</code></pre>
@@ -779,7 +780,7 @@ Instead of just `n` feature values, you can fetch all as well.
 
 * Dataframe output variant - `get_n_samples_for_fields_as_df`
 
-Instead of just `n` sample matches you can fetch all as well.
+Instead of just `n` sample matches, you can fetch all as well.
 
 <pre><code>discover.sample_repo.get_all_samples_for_fields_as_df(search_term, fields=[], sort_by=Discover.DEFAULT_SORT_ORDER)</code></pre>
 
@@ -793,7 +794,7 @@ Instead of just `n` sample matches you can fetch all as well.
 
 * Dataframe output variant - `get_n_samples_for_field_combinations_as_df`
 
-Instead of just `n` sample matches you can fetch all as well.
+Instead of just `n` sample matches, you can fetch all as well.
 
 <pre><code>discover.sample_repo.get_all_samples_for_field_combinations_as_df(and_fields={}, or_fields={}, not_fields={}, sort_by=Discover.DEFAULT_SORT_ORDER)</code></pre>
 
