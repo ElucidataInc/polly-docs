@@ -35,7 +35,6 @@
         - [2.2.2.2.4 Querying at the sample level](#22224-querying-at-the-sample-level)
         - [2.2.2.2.5 Access annotation repositories](#22225-access-annotation-repositories)
       - [2.2.2.3 Downloading a dataset](#2223-downloading-a-dataset)
-- [Get key of the first file returned by the query](#get-key-of-the-first-file-returned-by-the-query)
 
 
 
