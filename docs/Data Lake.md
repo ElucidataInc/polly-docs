@@ -393,7 +393,7 @@ Given the fact that the data ultimately comprises of Lipidomic and Metabolomic e
 
 **Level of curation**
 
-Whenever an instant (a child) is found to be ‘IA’ positive, control instants are then chosen from amongst the remaining samples such that they have similar features (like diet, viral infections, etc). A more in-depth analysis into how do they do the sampling can be found here. These pairs are tied together using a Case Index which is unique to each such pair.
+Whenever an instant (a child) is found to be ‘IA’ positive, control instants are then chosen from amongst the remaining samples such that they have similar features (like diet, viral infections, etc). A more in-depth analysis into how do they do the sampling can be found [here](https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4058423/). These pairs are tied together using a Case Index which is unique to each such pair.
 
 For each Case Index, we can have multiple samples under Control and also under Case.
 
