@@ -427,10 +427,9 @@ Pick a Case Index number that will pull up one Perturbation Instant and its corr
 ### 1.3.7 TCGA
 **Introduction**
 
-The Cancer Genome Atlas (TCGA) is a publicly funded project that aims to catalog and discover major cancer-causing genomic alterations to create a comprehensive “atlas” of cancer genomic profiles. 
+The Cancer Genome Atlas (TCGA) is a publicly funded project that aims to catalog and discover major cancer-causing genomic alterations to create a comprehensive “atlas” of cancer genomic profiles.
 TCGA molecularly characterized over 20,000 primary cancer and matched normal samples spanning [33 cancer types](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers); generated over 2.5 petabytes of genomic, epigenomic, transcriptomic, and proteomic data.
-
-TCGA is cornerstone in cancer biology. It has enabled a deeper understanding of cancer at molecular levels, helped research in science and technology  that has fastened the pace of drug discovery helped patients at the clinic in real-time. TCGA has been influential in the R&D processes of many immuno-therapeutics. 
+TCGA is cornerstone in cancer biology. It has enabled a deeper understanding of cancer at molecular levels, helped research in science and technology  that has fastened the pace of drug discovery helped patients at the clinic in real-time. TCGA has been influential in R&D processes of many immuno-therapeutics.
 
 **Types of Omics Datasets**
 
@@ -442,20 +441,17 @@ TCGA is cornerstone in cancer biology. It has enabled a deeper understanding of 
 
 **Usage**
 
-All the available data can be sliced and diced as per users' exquisite research problem to run downstream analysis including but not limited to pathway enrichment, differential expression, TMB, cross-study summary statistics. 
-
-Comprehensive curation is done for ontologies related to disease,tissue, source , publication, sample (control/pertubation) etc. that enables them to easily integrate the data from different assays (expression , mutation etc. ) and different cohorts (BRCA,LUAD etc) for multi-omics integration analysis for putative biomolecular discovery.
-
-In conclusion, TCGA remains a holy grail for cancer researchers and all the novel findings will facilitate diagnosis, treatment, and cancer prevention. 
+All the available data can be sliced and diced as per user's exquisite research problem to run downstream analysis including but not limited to pathway enrichment, differential expression, TMB, cross-study summary statistics.
+Comprehensive curation done for ontologies related to disease, tissue, source, publication, sample (control/perturbation), etc enables easy integration of data from different assays (expression, mutation, etc.) and different cohorts (BRCA, LUAD, etc) for multi-omics integration analysis for putative biomolecular discovery.
+In conclusion, TCGA remains the holy grail for cancer researchers and all the novel findings will facilitate diagnosis, treatment, and cancer prevention.
 
 **Level of curation**
 
-Though meticulous efforts have been done at TCGA to structure and standardise the data, none the less some hurdles still exists in accessing and analyzing the data. Polly aims to reduce and where possible completely eliminate these barriers by standardizing molecular nomenclature (e.g genes will be represented as HGNC ids, and conversions from other formats like Ensemble will be done whenever necessary) and representing sample IDs across the study/Repository.
+Though meticulous efforts have been done at TCGA to structure and standardize the data, none the less some hurdles still exist in accessing and analyzing the data. Polly aims to reduce and where possible eliminate these barriers by standardizing molecular nomenclature (e.g genes will be represented as HGNC ids, and conversions from other formats like Ensemble will be done whenever necessary) and representing sample IDS across the study/Repository.
 
 **Dataset Level**
 
-Comprehensive curation is done for ontologies related to the below fields-
-
+Comprehensive curation done for ontologies related to the below
 1. Cancer Type/Project
 2. Disease Type
 3. Disease Stage
@@ -463,26 +459,18 @@ Comprehensive curation is done for ontologies related to the below fields-
 5. Sample Type (Tumor or normal)
 6. Gender
 7. Vital Status &/or Cause of death
-
-These enable consistency throughout the repository and querying on the basis of the above fields yield appropriate results
+These enable consistency throughout the repository and querying based on the above fields yield appropriate results
 
 **Sample Level**
 
-Sparsity in clinical data has been a consistent problem to deal, polly enables by cleaning up clinical data and adding additional annotations for pathological status, drugs, response etc. that are result of research on primary TCGA data. 
-
-The [TCGA barcode](https://docs.gdc.cancer.gov/Encyclopedia/pages/TCGA_Barcode/) is made up of multiple strings representing various information. Clinical data is represented at Patient level, but the various assay data are represented at sample and/or aliquot level. 
-
-For eg. Clinical data will have unique key to be Patient Barcode (tcga-5l-aat0), where as the transcriptomics (and other assays too) data will have unique key at sample level, whether taken from tumor sample or normal site. A single patient can have multiple tumor sample assessments too, example given for a breast (or lung) cancer patient where patient has developed tumors in both the breasts (or lungs). Additionally aliquot Barcode is needed to asses the assay specific information, for e.g the same sample (tumor biopsy) is used to analyze the DNA and transciptome (also methlylation etc depending on the size of initial biopsy) in such case the Sample barcode for the patient is similar accross the assays for that given patient and timepoint. Considering these representations, it becomes a critical tasks for the user to merge clinical and assay level data. To ease this for the user , in the curation process, team has parsed all the relevant barcodes available in tcga and the mappings have been done accordingly. So that for the user wants the task to merge the clinical data (1 patient 1 record) to transcriptomics data for example ( 1 patient 3 records - normal , tumor left breast, tumor right breast) is already done as part of curation and the data on polly is ready to use for more deeper and insightful analysis.
-
-Additionally, it is a know fact that clinical data in TCGA is bit sparce, so team has curated additional papers that provide meaningful information. For e.g. though TCGA has the drug data, associated response is not cleary mentioned, additional annotations (from publications/curation packages) have been done in this regards to provide user with the information not available within TGGA.
-
+Sparsity in clinical data has been a consistent problem to deal, polly enables by cleaning up clinical data and adding additional annotations for pathological status, drugs, response, etc. that are the result of research on primary TCGA data.
+The [TCGA barcode](https://docs.gdc.cancer.gov/Encyclopedia/pages/TCGA_Barcode/) is made up of multiple strings representing various information. Clinical data is represented at patient level, but the various assay data are represented at s sample and/or aliquot level.
+For eg. Clinical data will have a unique key to be Patient Barcode (tcga-5l-aat0), whereas the transcriptomics (and other assays too) data will have a unique key at the sample level, whether taken from tumor sample or normal site. A single patient can have multiple tumor sample assessments too, example given for a breast (or lung) cancer patient where a patient has developed tumors in both the breasts (or lungs). Additionally, aliquot Barcode is needed to assess the assay-specific information, for e.g the same sample (tumor biopsy) is used to analyze the DNA and transcriptome (also methylation etc depending on the size of initial biopsy) in such case the Sample barcode for the patient is similar across the assays for that given patient and time point. Considering these representations, it becomes a critical task for the user to merge clinical and assay level data. To ease this for the user, in the curation process, the team has parsed all the relevant barcodes available in TCGA and the mappings have been done accordingly. So that for the user wants the task to merge the clinical data (1 patient 1 record) to transcriptomics data for example ( 1 patient 3 records - normal, tumor left breast, tumor right breast) is already done as part of curation and the data on Polly is ready to use for deeper and insightful analysis.
+Additionally, it is a known fact that clinical data in TCGA is a bit sparse, so the team has curated additional papers that provide meaningful information. E.g. though TCGA has the drug data, the associated response is not clearly mentioned, additional annotations (from publications/curation packages) have been done in this regard to provide the user with the information not available within TGGA.
 
 **Source**
 
 https://portal.gdc.cancer.gov/
-
-
-
 
 # 2. How is this data accessed and consumed?
 ## 2.1 Accessing Discover through Polly's interface
