@@ -476,7 +476,7 @@ https://portal.gdc.cancer.gov/
 ## 2.1 Accessing Discover through Polly's interface
 ### 2.1.1 Filtering interface
 
-For all data repositories, we provide a dataset filtering interface that is built around F.A.I.R guidelines. It gives a listing of datasets along with their metadata fields obtained from dataset level curation. This curation makes the dataset findable using a controlled vocabulary.
+For all data repositories, we provide a dataset filtering interface that is built around F.A.I.R guidelines. It gives a listing of datasets along with their metadata fields obtained from [dataset level curation](https://github.com/ElucidataInc/polly-docs/blob/discover_doc_revamp/docs/Data%20Lake%20Revamp.md#12-what-do-we-mean-by-curation-of-data-in-polly). This curation makes the dataset findable using a controlled vocabulary.
 
 - Apart from this, the filtering interface- 
 - provides standardized metadata fields to search for datasets (Findability)
