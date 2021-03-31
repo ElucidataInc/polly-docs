@@ -1,90 +1,503 @@
-#Introduction
 
-With Polly you can access public databases which have been curated and stored in the form of data lakes or make data lakes with your own data. These data lakes can be explored and analyzed either through Polly Notebooks or the several Data Lake Applications available.
+### Table of contents
 
-Polly Discover consists of the following major components:
+- [1 What is the curated data that exists in discover?](#1-what-is-the-curated-data-that-exists-in-discover)
+  - [1.1 Organization of data repositories on Polly](#11-organization-of-data-repositories-on-polly)
+  - [1.2 What do we mean by curation of data in Polly?](#12-what-do-we-mean-by-curation-of-data-in-polly)
+    - [1.2.1 Dataset-level annotations](#121-dataset-level-annotations)
+    - [1.2.2 Sample-level annotations](#122-sample-level-annotations)
+  - [1.3 Index of repositories on Polly Discover](#13-index-of-repositories-on-polly-discover)
+    - [1.3.1 GEO](#131-geo)
+    - [1.3.2 LINCS (The Library of Integrated Network-Based Cellular Signatures)](#132-lincs-the-library-of-integrated-network-based-cellular-signatures)
+    - [1.3.3 DEPMAP](#133-depmap)
+    - [1.3.4 Metabolomics](#134-metabolomics)
+    - [1.3.5 Single Cell](#135-single-cell)
+    - [1.3.6 TEDDY](#136-teddy)
+    - [1.3.7 TCGA](#137-tcga)
+- [2. How is this data accessed and consumed?](#2-how-is-this-data-accessed-and-consumed)
+  - [2.1 Accessing Discover through Polly's interface](#21-accessing-discover-through-pollys-interface)
+    - [2.1.1 Filtering interface](#211-filtering-interface)
+      - [2.1.1.1 Filters and Columns](#2111-filters-and-columns)
+      - [2.1.1.2 Dataset Selection and Search](#2112-dataset-selection-and-search)
+    - [2.1.2 GUI based applications](#212-gui-based-applications)
+      - [2.1.2.1 Proprietary applications](#2121-proprietary-applications)
+      - [2.1.2.2 Open source applications](#2122-open-source-applications)
+    - [2.1.3 Polly Discover Notebook](#213-polly-discover-notebook)
+    - [2.1.4 Studio Presets](#214-studio-presets)
+  - [2.2 Accessing Discover programmatically](#22-accessing-discover-programmatically)
+    - [2.2.1 Elastic search indices in Discover](#221-elastic-search-indices-in-discover)
+    - [2.2.2 Discoverpy Usage](#222-discoverpy-usage)
+      - [2.2.2.1  Initialisation](#2221--initialisation)
+      - [2.2.2.2 Querying](#2222-querying)
+        - [2.2.2.2.1 Common methods for multiple indices.](#22221-common-methods-for-multiple-indices)
+        - [2.2.2.2.2 Querying at the Dataset Level](#22222-querying-at-the-dataset-level)
+        - [2.2.2.2.3 Querying at the feature level](#22223-querying-at-the-feature-level)
+        - [2.2.2.2.4 Querying at the sample level](#22224-querying-at-the-sample-level)
+        - [2.2.2.2.5 Access annotation repositories](#22225-access-annotation-repositories)
+      - [2.2.2.3 Downloading a dataset](#2223-downloading-a-dataset)
 
-*   Data Lake Curation
 
-    Data lakes are reservoirs of information that contain multi-omics data, annotations from publicly available databases, publications, etc. Reservoirs are further segregated into two parts: public data repositories which are curated by Elucidata using public data sources, and private data repositories, where you can add your proprietary data.  
-    <br />
 
-*   Data Lake Exploration 
+With the development and widespread use of high-throughput technologies in biomedical research over the past decade, there has been an exponential increase in the amount of omics data being generated. The increase in data generation, however, does not ensure easy accessibility and reusability. Currently, there are numerous data repositories (such as [GEO - Gene Expression Omnibus](https://www.ncbi.nlm.nih.gov/geo/), [LINCS](https://lincsproject.org/), [TCGA](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga), etc.) where researchers can store their data to facilitate reuse by other research groups. Owing to a lack of standardized protocols for data deposition in these repositories, data is often unstructured and hard to access. Consequently, a considerable amount of time has to be invested in cleaning and pre-processing the data before it can be used to gain new insights. Polly Discover presents a solution to these issues.
 
-    To explore a data lake, Polly provides tools such as applications and Polly Notebooks. These tools enable you to find relevant data by searching for keywords associated with the file name, file metadata, or the contents of a file.  
-    <br />
+#### What is Discover?
 
-*   On-the-fly Analysis 
+Polly Discover is a centralized datalake containing curated multi-omics data from multiple publicly available data repositories. This data is stored in the form of individual data repositories to facilitate easy exploration and can be analyzed using various proprietary and open source applications on Polly, through Polly notebooks, and through a python SDK. In addition to public data, Discover also enables the analysis of proprietary data generated by the user. At present, Discover provides access to more than 150,000 unique datasets through repository-specific data lakes.
 
-    Once you have narrowed down relevant omics datasets, you can analyze the dataset(s) on the fly using various statistical analyses while displaying intuitive visualizations.
+# 1 What is the curated data that exists in discover?
 
-##Available public data repositories
+The number of public datasets that we add to our datalake is doubling every quarter and updated every day. As of March 16, 2021, Polly has around 150,000 unique datasets. These datasets are diverse in terms of the source public data repositories, omics, disease, drug, cell-line, and tissue being studied.
 
-Public data repositories on Polly consist of processed and curated datasets from various sources. They can be readily used for searching for new datasets or running an analysis on one or more datasets.
+## 1.1 Organization of data repositories on Polly
+A data repository on Polly is a collection of datasets organized based on the source of the datasets (the corresponding public data repository). For example, the bulk Transcriptomics datasets in GEO are included in the GEO repository.
 
-*   AML: Microarray and RNA Sequencing datasets for Acute Myeloid Leukemia.
-    
-*   GBM: Microarray and RNA Sequencing datasets for Gliblastoma Multiforme.
-    
-*   IBD: Microarray and RNA Sequencing datasets for Inflammatory Bowel Disease.
-    
-*   GEO: Microarray and RNA Sequencing datasets from Gene Expression Omnbius.
-    
-*   Single cell Atlas: Single cell RNA Sequencing datasets from Gene Expression Omnibus
-    
-*   GTEX: Normal tissue RNA Sequencing datasets from Genotype-Tissue Expression project
-    
-*   TCGA: Tumor RNA Sequencing datasets from The Cancer Genome Atlas.
+There are also some secondary categorizations of datasets based on diseases and tissues. There are various disease-specific and tissue-specific repositories on Polly which contain multi-omic data for those diseases and tissues from various sources.
 
-*   COVID-19: Transcriptional datasets for SARS viruses, viral infections, and therapeutics for novel coronavirus.
+These are the current disease and tissue-based repositories (recorded in March 2021):-
 
-Additionally, the public data repositories also consist of publicly available databases that have been curated for annotations. These publicly available databases are currently part of these repositories.
+* AML: Microarray and RNA Sequencing datasets for Acute Myeloid Leukemia.
 
-*   HMDB: Pathway information from Human Metabolome Database.
-    
-*   KEGG: Pathway information from Kyoto Encyclopedia of Genes and Genomes.
-    
-*   Reactome: Pathway information from Reactome.
-    
-*   GWAS: Phenotypic data from Genome-Wide Association Studies Catalogue.
+* GBM: Microarray and RNA Sequencing datasets for Glioblastoma Multiforme.
 
-#Dataset Filtering
+* IBD: Microarray and RNA Sequencing datasets for Inflammatory Bowel Disease.
 
-<!--## Kibana Dashboard
+* Covid-19: Transcriptomics, Single-cell RNA Sequencing, Proteomics, Metabolomics and Lipidomics, datasets for COVID-19 (SARS-CoV-2).
 
-After selecting a Data Lake, you’ll be able to see a repository overview dashboard. For bigger data lakes,this dashboard is provided to give you an overview of the repository, for instance, the number of data sets in the repository, distribution of tissues, organisms, etc. among the datasets.
+## 1.2 What do we mean by curation of data in Polly?
+Omics data in public and private repositories is often unstructured and not always analysis-ready. Researchers have to spend an enormous amount of time grappling with different file formats (CSV, Excel, GCT, Soft files, H5ad etc.) and different conventions for metadata representation.
 
-![Repository Dashboard](../img/Discover/1.png)
+Curation is the process of transforming this data into a consistent and machine-readable format and making it accessible on the platform. It is guided by the [FAIR principles](https://www.nature.com/articles/sdata201618) (**F**indable, **A**ccessible, **I**nteroperable and **R**e-usable) for scientific data management.
 
-You can filter the datasets of the data lake either by selecting the fields of interest from the input control panel.
+Datasets on Polly are stored in GCT (Gene Cluster Format from Broad Institute) files which allow for storing sample and molecular-level metadata in a single file. The only exception is single-cell data for which we use H5ad. We also make sure that consistent molecular identifiers are used across all data (e.g. we use HGNC symbols for all human transcriptomic data).
 
-![Dashboard Filtering](../img/Discover/2.png)
+In addition to this, we append annotations to each dataset on Polly. These annotations on Polly are present at two levels. First, each file or dataset is designated descriptive metadata (dataset-level annotations). Second, each sample within each dataset is also annotated with relevant metadata (sample-level annotations). The annotations are generated through model-assisted labeling. We have an in-house team of expert curators who manually curate roughly 10% of all data. The labels generated during this process are used to train ML models which are then run on the remaining 90%.
 
-You can also add your own query. Just click on *add filter* to choose the addition filter field.
+### 1.2.1 Dataset-level annotations
+**Ontology mapping**: Each dataset is mapped to terms in biomedical ontologies. Currently, we have 6 different types of mappings:
 
-![Filter Query](../img/Discover/3.png)
+* Organism: (NCBI Taxonomy) Organism from which the samples originated.
 
-Once these filters are applied, the dashboard will get updated accordingly. -->
+* Disease: (MeSH) Disease(s) being studied in the experiment.
 
-##Dataset Filtering Dashboard
+* Tissue: (Brenda Tissue Ontology) The tissue from which the samples originated.
 
-For smaller data lakes, we provide a dataset filtering interface. It allows you to explore and filter the relevant datasets present in the data lake. 
+* Cell type: (Cell Ontology) Cell type of the samples within the study.
 
-### Filters and Columns
+* Cell line: (The Cellosaurus) Cell line from which the samples were extracted.
 
-![Filters and columns](../img/Discover/ORC1.png)
+* Drug: (CHEBI) Drugs that have been used in the treatment of the samples or relate to the experiment in some other way.
 
-The filtering interface provides **4 parameters** that you can use to filter the datasets within the selected repository. The parameters are:
+Users can view and query dataset-level annotations both using discoverpy and the filtering interface.
 
-*    Disease: This option will give you an overview of all the diseased type datasets present in the repository. You can choose to work on any of the disease options listed or the normal datasets. In order to do the selection, mark the checkboxes present besides the disease of your interest.
+These values are standardized across all datasets. The names of the ontologies we use are also mentioned above. The standardization of these fields is in line with FAIR guidelines for improving findability, interoperability, and re-usability. In particular, these annotations address the FAIR principles F2, F3 and I2 (see here for more details).
 
-*    Organism: It provides the list of the organisms associated with the datasets of the datalake. You can mark a selection to filter the datasets of only the desired organism.
+### 1.2.2 Sample-level annotations
+**Ontology Mapping**: Similar to dataset-level ontology mappings, there are 5 sample-level mappings -  Disease, Tissue, Cell type, Cell line, Drug. While the dataset-level mappings can be used to narrow down a dataset of interest, sample-level mappings directly describe the biological characteristics of the sample. For instance, if a sample is labeled with a drug, it means that that drug was used to treat the sample. On the other hand, if a dataset is tagged with a drug it doesn’t necessarily mean that the samples were treated with that drug, only that it was mentioned somewhere in the description of the study.
 
-*    Tissue: This section will give you the distribution of tissue across the repository. Click on Load More to look at the entire list, or use the search option to find the tissue type you are looking for. Select the tissue type required to filter the datasets specific to it.
+All sample-level annotations are stored in the GCT as shown below.
 
-*    Data Type: The dataset variety would be listed in this option. Choose the data type for your study by selecting the checkbox beside it.
+![Curation_img](img/Discover/revamp/curation.png)
+*A screen grab of the contents of a GCT file. Here, every row is a sample, and fields with the prefix ‘kw_curated’ and ‘curated’ contain information that was appended to the file after curation.*
 
-When the selections are marked, you can find the filtered datasets on the right panel. 
+**Perturbation/control identification**: In addition to ontology mappings we also have the following three annotations at the sample-level.
+
+1. curated_is_control: This indicates whether the sample is a control or a perturbation sample within the context of a particular experiment.
+
+2. curated_cohort_id: Indicates the cohort that the sample belongs to. Samples within the same cohort have the same value for this field
+
+3. curated_cohort_name: This is a short textual description of the cohort. It tries to capture sample properties that are exclusive to the samples within a cohort.
+
+These labels are present for most datasets and are useful when performing certain downstream analyses (like Differential Expression) on a large number of datasets in an automated fashion. These annotations also address the FAIR metrics R1.2 (see here for more details).
+
+**Manual curation of perturbation/control labels**: To do this perturbation/control classification we use a machine learning classifier that uses the textual metadata associated with each sample to classify it as control or perturbation. To train this classifier and improve its accuracy on different types of omics datasets, we manually curate these labels for a subset of the datasets in our data lake.  This manual labeling is done by graduate and undergraduate students who are well versed in understanding biological data generation. We use these manually annotated datasets to train our classifier and improve its accuracy. The current classification model has an accuracy of ~90% on sample metadata for transcriptomics datasets.
+
+
+## 1.3 Index of repositories on Polly Discover
+
+### 1.3.1 GEO
+
+**Introduction**
+
+GEO (Gene Expression Omnibus), managed by the National Center for Biotechnology Information (NCBI) is a public repository that archives and freely distributes microarray, next-generation sequencing, and other forms of high-throughput functional genomics data submitted by the research community.
+
+The three central data entities of GEO are Platforms, Samples, and Series.
+
+Platform - A Platform is composed of a summary description of the array or sequencer. Each Platform record is assigned a unique GEO Identifier (GPLxxx).
+
+1. Sample - A Sample record describes the conditions under which an individual Sample was handled, the manipulations it underwent, and the expression of each element derived from it. Each Sample record is assigned a unique GEO Identifier (GSMxxx). A Sample entity must reference only one Platform and may be included in multiple Series.
+
+2. Series - A Series record links together a group of related Samples and provides a focal point and description of the whole study. Series records may also contain tables describing extracted data, summary conclusions, or analyses. Each Series record is assigned a unique GEO Identifier (GSExxx).
+
+3.  Dataset represents a curated collection of biologically and statistically comparable GEO Samples referring to the same Platform. To enforce this dataset definition, on Polly, each dataset is denoted using a unique ID of the format GSExxxx_GPLxxxx.
+
+For example, GSE100003_GPL15207 would translate to a collection of samples from the series GSE100003 sequenced using the platform GPL15207.
+
+Samples sequenced using X number of Platforms in a particular Series would result in X number of Datasets.
+
+On Polly, you can find all the information corresponding to a dataset in one place (i.e. one GCT file) which includes, study metadata (title, description, author, disease, organism, etc.), sample metadata, and expression data. This saves a considerable amount of time and effort in finding relevant metadata and mapping it to the expression data which can be better spent on the analysis of data.
+
+Moreover, each dataset has been annotated with study metadata fields such as disease, organism, drug, tissue, and dataset ID that can be used to identify relevant dataset(s) on Polly.
+
+**Types of Omics Datasets**
+
+- Bulk Transcriptomics
+  -  Microarray
+  -  RNA Sequencing
+
+
+**Usage**
+
+This is the largest curated transcriptomics repository with over 50k datasets. A user can easily identify dataset(s) of relevance and perform analysis. Analysis of Transcriptomics data generally includes comparing specific pairs of samples. The differences may be due to different phenotypes (samples from diseased or healthy tissue, samples with different treatments, samples at different time points undergoing the same treatment, etc.). More commonly, healthy and disease sample groups are compared to discover quantitative changes in expression levels of genes between the two groups, in turn identifying differentially expressed Genes.
+
+Furthermore, the following analyses can be done on top of the differentially expressed Genes:
+
+1. Gene Ontology (GO) and Pathway enrichment analysis
+2. Identification of alternative splicing events and Single Nucleotide Polymorphisms (SNPs)
+3. Analysis of the protein-protein interaction network
+
+**Level of curation**
+
+Since most of the RNAseq datasets in GEO do not have processed counts and only have raw data in the form of FASTQ files, we did raw data processing using our in-house star alignment pipeline to generate counts. This counts data is then VST normalized using DESEQ package before being wrapped along with the sample metadata as a Dataset.
+
+**Dataset Level** 
+
+We have mapped the following study metadata fields to an ontology so that they remain consistent throughout the repository and querying based on these fields yield appropriate results:
+1. Disease
+2. Tissue
+3. Cell type
+4. Cell line
+5. Drug
+6. Organism
+
+**Sample Level** 
+
+We have mapped the above-mentioned fields in the sample metadata to an onology so that they remain consistent throughout the repository and querying based on these fields yield appropriate results.
+
+We have also deployed our proprietary Machine Learning Model that accurately identifies the samples as Perturbation and Control, which can allow the user to seamlessly analyze a large number of datasets in batches.
+
+**Source**
+
+https://www.ncbi.nlm.nih.gov/geo/
+
+
+### 1.3.2 LINCS (The Library of Integrated Network-Based Cellular Signatures)
+**Introduction**
+
+LINCS program is an initiative by NIH to create a network-based understanding of biology by cataloging the gene expression as well as other cellular processes. When we expose cells to a variety of perturbating agents then it causes a change in gene expression as well as other cellular processes. Developing the network-based approach, it will enable a new understanding of health and disease through an integrative approach the will help to identify the patterns of common network and cellular responses across different types of tissues and cell in response to a broad range of perturbations.
+
+**Types of Omics Datasets**
+
+- Microarray
+
+**Usage**
+
+By generating and making public data that indicates how cells respond to various genetic and environmental stressors, the LINCS project will help us gain a more detailed understanding of cell pathways and aid efforts to develop therapies that might restore perturbed pathways and networks to their normal states.Polly enables the user to query metadata search  across all annotations associated with perturbations, model systems, and signatures.
+
+LINCS database played a crucial role to investigate the reproducibility of the prototypical perturbational assay: quantifying the responsiveness of cultured cells to anti-cancer drugs and influential in the requirement of FAIR data. With additional curations available as part of Polly, facilitates cross comparison in turn ensuring reproducibility.
+
+Identifying the transcription factors (TFs) responsible for observed changes in gene expression is an important step in understanding gene regulatory networks. Enrichment results from these distinct sources are integrated to generate a composite rank that improves the prediction of the correct upstream TF compared to ranks produced by individual libraries.
+
+**Level of curation**
+
+Changes in each cell line measured against treating it with different perturbations which can be drugs or genetic perturbations (CRISPR knockdown perturbations). Each dataset contains the gene expression values for perturbation as well as control vehicle, control untreated and control vector for the respective cell line.  Moreover, these datasets are curated at their dataset and sample level to make them standardized and consistent.
+
+**Dataset Level**
+
+At the dataset level, we tag the metadata of the dataset with ontologies. The fields in the dataset level metadata are
+1. disease
+2. tissue
+3. organism
+4. drug
+5. author of the study
+
+**Sample Level** 
+
+We have mapped the above-mentioned fields in the samples of the datasets to ontologies so that they remain consistent throughout the repository and querying based on these fields yields appropriate results.
+
+**Source**
+
+Level 3 LINCS data for a gene and drug perturbations has been taken from GEO, using GSE70138 and GSE92742.
+
+* https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE70138 
+* https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE92742
+* https://lincsproject.org/LINCS/
+
+### 1.3.3 DEPMAP
+**Introduction**
+
+With the advent of knowledge in the molecular basis of cancer, the next question that faced researchers was to establish cause and effect relationship. DepMap consortium is a step in that direction to make the dependency map between the studied alterations in cancer, available drug molecules and physiological processes while enables identifying small molecule sensitivities and predictive biomarkers.
+
+**Types of Omics Datasets**
+
+- Gene Dependency
+- RNAi
+- Drug Screens
+  
+**Usage**
+
+After the phenomenal success of the TCGA portal in mankind's fight against cancer, DepMap is to be the most important next step to understand how the molecules (drugs) affect the overall physiological workflow.
+
+DepMap scientists are profiling hundreds of cancer cell line models for genomic information and sensitivity to genetic and small molecule perturbations. The information available as part of results in pooled-cell line chemical-perturbation viability screens has the potential to replace the initial part on drug lead screening. The data for about 4518 compounds can very efficiently be used for novel drug discovery pipelines as well as for approved drug repositioning or repurposing.
+
+CRISPR-Cas9 viability screens are increasingly performed at a genome-wide scale across large panels of cell lines to identify new therapeutic targets for precision cancer therapy. The integration of these data with the already available pool of molecular understanding of cancer recapitulate findings from the individual datasets, provide greater statistical power to cancer- and subtype-specific analyses, unveil additional biomarkers of gene dependency, and improve the detection of common essential genes.
+
+The DepMap dataset is extensively used to perform and predict the interaction between genes. Few therapies target the loss of tumor suppressor genes in cancer. CRISPR-SpCas9 and RNA-interference loss-of-function screens enable the identification of new therapeutic targets associated with genomic loss of tumor suppressor genes.
+
+Additionally, computational biologists, are efficiently using DepMap for developing in-silico methods to detail the in-vivo process. Cell lines are key tools for preclinical cancer research, but it remains unclear how well they represent patient tumor samples. Direct comparisons of tumor and cell line transcriptional profiles are complicated by several factors, including the variable presence of normal cells in tumor samples. Computational tools developed using DepMap data could be used to guide the selection of cell lines that more closely resemble patient tumors and improve the clinical translation of insights gained from cell lines.
+
+**Level of curation**
+
+DepMap repo contains a wide variety of dataset including Gene dependency, Drug screens and RNAi. Though the data is quite structured as far as the DepMap repository is concerned the metadata of cell lines and drugs is available as separate objects. While curating the data, merging of the different information from cell lines, Drugs, probe performance was merged using precise unique IDs to make the holistic information available for the user.
+
+**Dataset Level** 
+
+At the dataset level, we tag the metadata of the dataset with ontologies. The fields in the dataset level metadata are : 
+1. disease
+2. tissue
+3. organism
+4. drug
+5. description
+6. author of the study
+
+**Sample Level**
+
+The data includes information for failed screens which was cleaned as part of curation process.
+In order to facilitate quick learning about the cell lines used, Cell line info is made available as column metadata.
+For RNAi, we do not currently have a globally standardized reference database, hence the probe Id along with gene symbols were used to annotate the metadata.
+
+**Source**
+
+https://depmap.org/portal/
+ 
+
+
+### 1.3.4 Metabolomics
+**Introduction**
+
+Metabolomics repository contains all the publicly available metabolomics data sourced from two public repositories - Metabolomics Workbench and Metabolights. Metabolomics Workbench serves as a national and international repository for metabolomics data and metadata. MetaboLights is also a database for Metabolomics experiments and derived information. The database is cross-species, cross-technique. We curate the data from these repositories and make it available in a FAIR manner.
+
+***Datasets in Metabolomics Workbench (MeWork)*** 
+
+Each study on MeWork can have multiple datasets designated by analysis ids. The metadata template of MeWork consists of the following key sections to cover metadata reporting standards recommended by MSI: project, study, experimental design, subjects, treatment, collection, sample preparation, chromatography, analysis and MS/NMR. Each metadata section in turn contains a set of required and optional data fields pertaining to appropriate details about the experiment. For example, the analytical metadata sections include details regarding sample storage conditions, sample preparation and extraction protocols, sample procurement and analytical methods. The dataset id on Polly is framed as STUDYID_ANALYSISID of the corresponding study on MeWork.
+
+
+***Datasets in MetaboLights***
+
+The two data entities in each MetaboLights Study are MAF and Sample Metadata
+
+Metabolite Assignment File (MAF) - A TSV file containing information about the metabolites investigated in the study. Information regarding database accession IDs , wherein the spectra the metabolite is found and data pertaining to its abundance within the study samples is present in this file. The file name is of the format : m_MTBLSxxx_POS/NEG_Sample_MS/NMR_maf.tsv. Example : m_MTBLS1080_POS_LC-LTQ-MS_metabolite_profiling_v2_maf.tsv
+
+Sample Metadata - The sample information provides all relevant facts about each sample and any controls/standards included in the study. There is ONE sample file corresponding to each MAF file. Sample metadata includes a unique sample name, organism, organism part (for controls use eg. experimental blank and solvent) and sample type (ie. control, QC, experimental sample). Further sample descriptors may include other columns such as Gender, Age, Treatment, etc.  The file name is of the format : a_MTBLSxxx_POS/NEG_Sample_MS/NMR.txt.Example : a_MTBLS1080_POS_LC-LTQ-MS_metabolite_profiling.txt
+
+Study - A study can have multiple MAF and Sample Metadata Files. Each study record is assigned a unique MetaboLights Identifier (MTBLSxxx).A Dataset represents a curated collection of MAF and its corresponding Sample Metadata. To enforce this dataset definition, on Polly, each dataset is denoted using a unique ID of the format MTBLSxxx_m_MTBLSxxx_POS/NEG_Sample_MS/NMR.For example, MTBLS100_m_dwhsaliva_metabolite_profiling_NMR_spectroscopy would translate to a collection of saliva samples from the study MTBLS100 processed using the NMR Spectroscopy protocol. On Polly, you can find all the information corresponding to a dataset in one place (i.e. one GCT file) which includes, study metadata (title, description, author, disease, organism, etc.), sample metadata, and abundance data. This saves a considerable amount of time and effort in finding relevant metadata and mapping it to the abundance data which can be better spent on the analysis of data. Moreover, each dataset has been annotated with study metadata fields such as disease, organism, Ion Mode, tissue, and dataset ID that can be used to identify relevant dataset(s) on Polly.
+
+**Types of Omics Datasets**
+
+- Metabolomics
+- Lipidomics
+
+**Usage**
+
+Default application on Polly allows you to perform downstream analysis on single-mode (either positive or negative mode) as well as dual-mode (both positive and negative mode) targeted, semi-targeted (without retention time) and untargeted unlabeled metabolomics data along with insightful visualizations. The app provides a variety of normalization methods, scaling options and data visualization functionalities, thereby allowing an efficient analysis of the data to get actionable insights.
+
+- The application supports data with a simple matrix having samples in the columns and metabolites in the rows.
+- It provides different normalization and scaling methods to perform on the data.
+- Performs quality checks for internal standards, metabolites, and samples.
+- Performs statistical analysis using limma and provides interactive visualizations.
+- Performs pathway enrichment analysis and provides pathway visualizations.
+- Provides heatmap visualization along with different algorithms like hierarchical clustering, k-means, correlation etc.
+- Performs comparative analysis for the different cohort comparisons.
+
+Users can also start a notebook and analyze the datasets using many popular packages like metaboanalyst.
+
+**Level of curation**
+
+Each analysis contains the intensity of metabolites and related metadata for the analysis. Thus the curation for these datasets includes curation at the dataset level.
+
+**Dataset Level** 
+
+At the dataset level, we tag the metadata of the dataset with ontologies. The fields in the dataset level metadata are disease, tissue, organism and drug as well as the description and author of the study.
+
+**Sample Level**
+
+The sample level information in this repository is yet not curated, we are doing both automatic and manual curation for this repository.
+
+**Caveats** 
+
+We discourage comparing multiple datasets in this repository since the experimental conditions  metabolomics can be vastly different.
+
+**Source**
+
+This repository consists of datasets from mainly two sources, Metabolomics Workbench and MetaboLights.
+
+- https://www.metabolomicsworkbench.org/about/index.php 
+- https://www.ebi.ac.uk/metabolights/
+
+
+### 1.3.5 Single Cell
+**Introduction**
+
+Single cell sequencing technologies have grown exponentially in the last few years in terms of the number of cells that can be sequenced. With the advent of de-multiplexing platforms like 10x, it is possible to sequence hundreds of thousands of cells in one go. The single cell repository on Polly contains data from these high-throughput platforms(10x, InDrops) as well as datasets generated using older platforms (such as CELSeq, SmartSeq) where the throughput of cells is relatively lower. This is the largest curated single cell RNASeq data repository in the world with over 1500 datasets. Most of the datasets in this repository are sourced from the Gene Expression Omnibus(GEO). It is updated every day to include the recent single cell RNASeq datasets published on GEO. 
+This repository also contains singlecell RNASeq datasets from the Human Cell Atlas.
+
+**Types of Omics Datasets**
+
+- Single cell RNA-seq
+
+**Usage**
+
+The use of Single-cell RNA sequencing (scRNA-seq) in understanding cellular biology and disease mechanisms is unparalleled. It allows us to identify and discover complex and rare cell populations, understand the regulatory relationships between genes at the cellular level, and map the trajectory of cellular differentiation. Understanding a biological system in such a precise manner enables us to catch biological signals otherwise missed at the bulk level and design targeted therapies. 
+
+Different types of analyses can be performed on these single cell datasets to answer a variety of biological questions. Clustering and biomarker analysis- to identify the cell types in the population, trajectory inference- to understand the differentiation paths adopted by different sub-populations,  differential gene expression analysis- to identify biomarkers of cell types and genes that differentiate two cell types are some examples of the vast number of analyses that can be done on single cell RNASeq datasets.
+
+These analyses can be performed using various open source packages such as  [Scanpy](https://scanpy.readthedocs.io/en/stable/), [Seurat](https://satijalab.org/seurat/) and [Monocle](https://github.com/cole-trapnell-lab/monocle3) among others. We store the datasets in this repository in the h5ad file format. The h5ad file format is an HDF5 file format that is widely accepted in the single cell sequencing community. It is designed to store large amounts of data, and allow fast querying of parts of a file without accessing the complete file in memory. The dataset h5ad files can be consumed using Polly notebooks, via popular single cell analysis packages like Scanpy and Seurat, which are pre-installed in Polly Notebook environments. They can also be consumed through a GUI-interface, using the [Cellxgene](https://github.com/ElucidataInc/polly-docs/blob/discover_doc_revamp/docs/Data%20Lake%20Revamp.md#2121-proprietary-applications) app or the [single cell visualisation app](https://github.com/ElucidataInc/polly-docs/blob/discover_doc_revamp/docs/Data%20Lake%20Revamp.md#2121-proprietary-applications) hosted on Polly. 
+
+**Level of curation**
+
+A lot of the datasets in this repository are a collection of samples whose cells have been sequenced together. Thus the curation for these datasets includes curation at the study level (title, description, author, disease, organism, etc.), sample level, as well as cell level.  
+
+**Dataset Level**
+
+At the dataset level, we tag the metadata of the dataset with ontologies. The fields in the dataset level metadata are disease, tissue, organism and drug as well as the description and author of the study.
+
+**Sample Level**
+
+We have mapped the above-mentioned fields in the samples of the datasets to ontologies so that they remain consistent throughout the repository and querying based on these fields yields appropriate results. 
+
+**Cell level**
+
+In some datasets we have also manually curated the cell types present in the dataset. This means, that each cell present in the dataset is tagged with a cell type within the context of the study. 
+
+**Source**
+
+- Gene Expression Omnibus - https://www.ncbi.nlm.nih.gov/geo/
+- Human Cell Atlas- https://data.humancellatlas.org/
+
+### 1.3.6 TEDDY
+**Introduction**
+
+The TEDDY study - The Environmental Determinants of Diabetes in the Young - is looking for the causes of type 1 diabetes mellitus (T1DM). Research tells us that children who get diabetes have certain kind of genes that make them highly susceptible to getting diabetes. However, not all children who are in the high-risk category get diabetes.  It is believed that something happens to "triggers" a child with these risky genes to actually get diabetes. It is the purpose of this study to try and find out what are the triggers that cause children to get diabetes.
+
+The study encompasses results from ~11,000 patients.
+
+**Types of Omics Datasets**
+
+Lipidomics - Case Study [ST001636](https://www.metabolomicsworkbench.org/data/DRCCMetadata.php?Mode=Study&StudyID=ST001636) (Lipidomics)
+
+Metabolomics - Case Study [ST001386](https://www.metabolomicsworkbench.org/data/DRCCMetadata.php?Mode=Study&StudyID=ST001386) (Metabolomics)
+
+**Usage**
+
+Given the fact that the data ultimately comprises of Lipidomic and Metabolomic expression intensities (but that of young children), they can be easily combined with any other library of Lipidomic or Metabolomic studies (mostly of Adults) to possibly find if any Perturbation group in other studies have similar Lipidomic or Metabolomic features in children and, hence, possibly warn them or even prevent onset of an illness by taking suitable preventive measures to possibly mitigate or even cure the child of the said perturbation.
+
+**Level of curation**
+
+Whenever an instant (a child) is found to be ‘IA’ positive, control instants are then chosen from amongst the remaining samples such that they have similar features (like diet, viral infections, etc). A more in-depth analysis into how do they do the sampling can be found here. These pairs are tied together using a Case Index which is unique to each such pair.
+
+For each Case Index, we can have multiple samples under Control and also under Case.
+
+**Sample Level**
+
+The sample [meta-data](ftp://www.metabolomicsworkbench.org/Studies/ST001386_TEDDY_GCTOF_study_design_data_dictionary.xlsx) for each child has the following attributes which can be set by the instant which is shown to be ‘IA’ positive and it is referred to as a ‘case’:
+
+- 'ia_case' -  a Boolean variable: 1 means it is positive for 'IA'
+- 'ia_case_ind_1' - it is a case-control pair ID that helps pair up the case instant (this one) with its control instant. Unique for all pairs.
+- 'ia_endptage_1' - this is the age in days when the persistent presence of 'IA' was confirmed (2 successive tests).
+- ‘sex’ - Gender
+
+The 'IA''s control counterpart also has a similar definition.
+
+Similarly, whenever an instant comes up which is found to be 'T1D' (Type 1 Diabetes) positive, this 'case's control counterpart is chosen from amongst all those instances which are not 'T1D' positive and have similar features. 
+
+**Dataset Level**
+
+The dataset-level meta-data is inherently the same as the sample-level meta-data as the dataset was sliced according to the unique samples that were present.
+
+In this study, given an instant (sample or child) from a class of Perturbation (either IA positive or T1D positive), we also have a set of Control cases that were similar to the Perturbation when it occurred (features like diet history, illness history, visits, stool sample, etc). Now, having dissented up the data on the basis of sample ID (one sample ID per child in the study), Polly allows us to easily pick one perturbation sample and its corresponding set of control samples by simply filtering according to Which sort of perturbation we want (IA positive or T1D positive), and 
+
+Pick a Case Index number that will pull up one Perturbation Instant and its corresponding set of Control Instances.
+
+**Source**
+
+- Case Study [ST001386](https://www.metabolomicsworkbench.org/data/DRCCMetadata.php?Mode=Study&StudyID=ST001386)
+- Case Study [ST001636](https://www.metabolomicsworkbench.org/data/DRCCMetadata.php?Mode=Study&StudyID=ST001636)
+
+
+### 1.3.7 TCGA
+**Introduction**
+
+The Cancer Genome Atlas (TCGA) is a publicly funded project that aims to catalog and discover major cancer-causing genomic alterations to create a comprehensive “atlas” of cancer genomic profiles.
+TCGA molecularly characterized over 20,000 primary cancer and matched normal samples spanning [33 cancer types](https://www.cancer.gov/about-nci/organization/ccg/research/structural-genomics/tcga/studied-cancers); generated over 2.5 petabytes of genomic, epigenomic, transcriptomic, and proteomic data.
+TCGA is cornerstone in cancer biology. It has enabled a deeper understanding of cancer at molecular levels, helped research in science and technology  that has fastened the pace of drug discovery helped patients at the clinic in real-time. TCGA has been influential in R&D processes of many immuno-therapeutics.
+
+**Types of Omics Datasets**
+
+- Transcriptomics (mRNA,miRNA)
+- Proteomics
+- Copy Number Alteration
+- Single Nucleotide Variations & Small Indels
+- Methylation
+
+**Usage**
+
+All the available data can be sliced and diced as per user's exquisite research problem to run downstream analysis including but not limited to pathway enrichment, differential expression, TMB, cross-study summary statistics.
+Comprehensive curation done for ontologies related to disease, tissue, source, publication, sample (control/perturbation), etc enables easy integration of data from different assays (expression, mutation, etc.) and different cohorts (BRCA, LUAD, etc) for multi-omics integration analysis for putative biomolecular discovery.
+In conclusion, TCGA remains the holy grail for cancer researchers and all the novel findings will facilitate diagnosis, treatment, and cancer prevention.
+
+**Level of curation**
+
+Though meticulous efforts have been done at TCGA to structure and standardize the data, none the less some hurdles still exist in accessing and analyzing the data. Polly aims to reduce and where possible eliminate these barriers by standardizing molecular nomenclature (e.g genes will be represented as HGNC ids, and conversions from other formats like Ensemble will be done whenever necessary) and representing sample IDS across the study/Repository.
+
+**Dataset Level**
+
+Comprehensive curation done for ontologies related to the below
+1. Cancer Type/Project
+2. Disease Type
+3. Disease Stage
+4. Data type/Assay type
+5. Sample Type (Tumor or normal)
+6. Gender
+7. Vital Status &/or Cause of death
+These enable consistency throughout the repository and querying based on the above fields yield appropriate results
+
+**Sample Level**
+
+Sparsity in clinical data has been a consistent problem to deal, polly enables by cleaning up clinical data and adding additional annotations for pathological status, drugs, response, etc. that are the result of research on primary TCGA data.
+The [TCGA barcode](https://docs.gdc.cancer.gov/Encyclopedia/pages/TCGA_Barcode/) is made up of multiple strings representing various information. Clinical data is represented at patient level, but the various assay data are represented at s sample and/or aliquot level.
+For eg. Clinical data will have a unique key to be Patient Barcode (tcga-5l-aat0), whereas the transcriptomics (and other assays too) data will have a unique key at the sample level, whether taken from tumor sample or normal site. A single patient can have multiple tumor sample assessments too, example given for a breast (or lung) cancer patient where a patient has developed tumors in both the breasts (or lungs). Additionally, aliquot Barcode is needed to assess the assay-specific information, for e.g the same sample (tumor biopsy) is used to analyze the DNA and transcriptome (also methylation etc depending on the size of initial biopsy) in such case the Sample barcode for the patient is similar across the assays for that given patient and time point. Considering these representations, it becomes a critical task for the user to merge clinical and assay level data. To ease this for the user, in the curation process, the team has parsed all the relevant barcodes available in TCGA and the mappings have been done accordingly. So that for the user wants the task to merge the clinical data (1 patient 1 record) to transcriptomics data for example ( 1 patient 3 records - normal, tumor left breast, tumor right breast) is already done as part of curation and the data on Polly is ready to use for deeper and insightful analysis.
+Additionally, it is a known fact that clinical data in TCGA is a bit sparse, so the team has curated additional papers that provide meaningful information. E.g. though TCGA has the drug data, the associated response is not clearly mentioned, additional annotations (from publications/curation packages) have been done in this regard to provide the user with the information not available within TGGA.
+
+**Source**
+
+https://portal.gdc.cancer.gov/
+
+# 2. How is this data accessed and consumed?
+## 2.1 Accessing Discover through Polly's interface
+### 2.1.1 Filtering interface
+
+For all data repositories, we provide a dataset filtering interface that is built around F.A.I.R guidelines. It gives a listing of datasets along with their metadata fields obtained from dataset level curation. This curation makes the dataset findable using a controlled vocabulary.
+
+- Apart from this, the filtering interface- 
+- provides standardized metadata fields to search for datasets (Findability)
+- provides access to datasets using their unique identifiers (Accessibility)
+- uses a controlled vocabulary (obtained from biological ontologies) for the values stored in the metadata fields (Interoperability)
+- provides a link to the source of the dataset (Reusability)
+
+#### 2.1.1.1 Filters and Columns
+
+![Filters and columns](img/Discover/ORC1.png)
+
+The filtering interface provides various fields(depending on the data repository) that you can use to filter the datasets within the selected repository. These fields are obtained from the dataset level curation of the datasets. All these fields in the repository store values using a controlled biological vocabulary inline with the interoperability principle of the FAIR guidelines. Some of the common fields that are present in every repository are-
+
+* Disease: This field will give you a list of all the diseased type datasets present in the repository. You can choose to work on any of the disease datasets listed or the ‘normal’ datasets. In order to do the selection, mark the checkboxes present besides the disease of your interest.
+
+* Organism: This field will give you a list of the organisms associated with the datasets of the repository. You can mark a selection to filter the datasets of only the desired organism.
+
+* Tissue: This field will give you the distribution of tissue across the repository. Click on Load More to look at the entire list, or use the search option to find the tissue type you are looking for. Select the tissue type required to filter the datasets specific to it.
+
+* Data Type: This field will give you the different types of omics datasets present in the repository. Choose the data type for your study by selecting the checkbox beside it.
+
+When the selections are marked, you can find the filtered datasets on the right panel.
 
 **Note:**
 
@@ -92,11 +505,10 @@ When the selections are marked, you can find the filtered datasets on the right 
 
 *    To clear your filters at any point in time, click on the clear option present beside all the parameters.
 
-### Dataset Selection
+#### 2.1.1.2 Dataset Selection and Search
 
-![Dataset selection](../img/Discover/ORC2.png)
 
-The right panel displays the dataset present in the repository. It incorporates the
+The right panel displays the dataset present in the repository. It displays these fields about the datasets among others(depending on the repository)-
 
 *    Dataset ID: Unique identifier associated with the dataset.
 
@@ -110,26 +522,32 @@ The right panel displays the dataset present in the repository. It incorporates 
 
 *    Tissue: Type of tissue the dataset is from
 
-*    Source: Provides the link to the publication
+*    Publication : Provides the link to the publication
 
-Once you have narrowed down relevant omics datasets, you can mark a selection on the checkbox present beside the desired dataset.
+![Dataset selection](img/Discover/ORC2.png)
 
-### On-the-fly Analysis
+It is also possible to search for datasets by entering the complete or partial dataset ID in the search box above this panel. This search runs across the unique dataset IDs in the repository.
 
-You can analyze the selected dataset on the fly using various applications on Polly. They enable you to perform various statistical analyses, displaying intuitive visualizations, and allowing you to create a hitlist while analyzing multiple datasets simultaneously.
+![Dataset search](img/Discover/revamp/dataset_search.png)
+
+Once you have narrowed down to a relevant omics datasets, you can mark a selection on the checkbox present beside the desired dataset and start analyzing the dataset through the various applications available on Polly.
+
+### 2.1.2 GUI based applications
+
+You can analyze the selected dataset on the fly using various applications on Polly. They enable you to perform various statistical analyses, displaying intuitive visualizations, and allowing you to create a hitlist of molecules while analyzing multiple datasets simultaneously.
 
 In order to select the tool of your analysis, click on *Select the Application* option at the bottom of the screen after selection of any dataset from the list and choose the analysis platform of your interest and click on open.
 
-![Selecting an application](../img/Discover/ORC3.png)
+![Selecting an application](img/Discover/ORC3.png)
 
 Select the workspace where you would like to store the analysis and click on *Launch* to open the selected application/notebook.
 
-![Launching workspace](../img/Discover/ORC4.png)
+![Launching workspace](img/Discover/ORC4.png)
+  
 
+Data Lake Applications are built on top of data lakes to query and explore relevant datasets. We have both proprietary applications used to visualize and analyze specific data types as well as popular open source applications. 
 
-#Data Lake Applications  
-
-Data Lake Applications are built on top of data lakes to query and explore relevant datasets. The following data lake applications are a part of the current platform:
+#### 2.1.2.1 Proprietary applications
 
 *   **[Polly Discover Application:](https://docs.elucidata.io/Data%20Lake.html#discover)**
 
@@ -138,19 +556,10 @@ Data Lake Applications are built on top of data lakes to query and explore relev
 
 *   **[Single Cell Visualization:](https://docs.elucidata.io/Data%20Lake.html#single-cell-visualization)**
 
-    It is a comprehensive visualization platform for single-cell transcriptomics data. The app is helpful in visualizing cells and the association of different genes with the metadata.  
+    It is a comprehensive visualization platform for single-cell transcriptomics data. The app helps visualise cells and the association of different genes with the metadata.  
     <br />
-    
-*   **[Cellxgene:](https://chanzuckerberg.github.io/cellxgene/posts/annotations)**
 
-    It is an interactive data explorer for single-cell transcriptomics datasets.  
-    <br />
- 
-*   **DepMap CCLE:**
 
-    Exploration application for cell line dependency and gene expression data from DepMap and CCLE.  
-    <br />
-    
 *   **[GTEx Application](https://docs.elucidata.io/Data%20Lake.html#gtex)**
 
     GTEx Application is is a platform for visualization, analytics, and exploration of transcriptomics data from GTEx.  
@@ -161,12 +570,22 @@ Data Lake Applications are built on top of data lakes to query and explore relev
     This app allows you to perform downstream analysis on untargeted unlabeled metabolomics data along with insightful visualizations. It provides a variety of normalization methods, scaling options, and data visualization functionalities, thereby allowing an efficient analysis of the data to get actionable insights.  
     <br />
 
-*   **[Discover Notebook:](https://docs.elucidata.io/Scaling%20compute/Polly%20Notebooks.html)**
+You can read about these applications in the [Apps Section](https://docs.elucidata.io/Apps/) of the documentation. 
 
-    This app allows you to perform downstream analysis on untargeted unlabeled metabolomics data along with insightful visualizations. It provides a variety of normalization methods, scaling options, and data visualization functionalities, thereby allowing an efficient analysis of the data to get actionable insights.  
+#### 2.1.2.2 Open source applications
+
+
+*   **[Cellxgene:](https://chanzuckerberg.github.io/cellxgene/posts/annotations)**
+
+    It is an interactive data explorer for single-cell transcriptomics datasets.  
     <br />
+ 
+### 2.1.3 Polly Discover Notebook
 
-| Polly Notebooks| Docker      | Machine Configuration   |
+It is possible to analyze and visualise a dataset in a [Polly Notebook](https://docs.elucidata.io/Scaling%20compute/Polly%20Notebooks.html) for custom visualizations and analysis. This can be done by selecting the Notebook option in the application launch menu from the filtering screen. We have various types of notebook environments for different data types in Discover. 
+
+
+| Polly Notebook| Docker      | Machine Configuration   |
 |---------------|-----------|-------|
 | Discover Notebook Single-cell  | Single Cell Downstream   | Memory-optimized 32GB, Polly 2x-large |
 | Discover Notebook Transcriptomics  | RNA-Seq Downstream     | RNA-Seq Downstream  |
@@ -174,609 +593,269 @@ Data Lake Applications are built on top of data lakes to query and explore relev
 | Discover Notebook Metabolomics| Metabolomics | Polly medium 4GB |
     
 
-# Polly Discover Application
+### 2.1.4 Studio Presets
+It is also possible to import datasets from a Discover repository into a studio preset for analysis. You can analyze the selected dataset on the fly using various applications on Polly including Studio Presets. In order to select the Preset for your analysis, click on the Select the Application option at the bottom of the screen after selection of any dataset from the list and choose the analysis platform of your interest and click on Launch App.
 
-**Opening the app**
+It allows you to perform downstream analysis on the omics data hosted on any of the data lakes on Polly. The preset provides a variety of tools to visualize the data, as well as allows you to perform statistical analyses, displaying intuitive visualizations, and allowing you to create a shareable dashboard while analyzing the datasets. Read more about Polly Data Studio here.
 
-Upon opening the Discover portal on Polly, choose a data repository that you would like to explore. The page should look something like this.
+![studio preset 1](img/Discover/revamp/studio_1.png)
 
-![Polly Discover](../img/Discover/Discover.png)
+![studio preset 2](img/Discover/revamp/studio_2.png)
 
-After selecting a repository, you’ll be able to view a filtering interface which provides **parameters** that you can use to filter the datasets within the selected repository. Once you select a dataset , you can access the integrated tools attached with the repository. For transcriptomics data, you can use discover application for further analysis of transcriptomics data.
 
-<!-- ![Discover App](../img/Discover/image3.png) -->
-<p align="center">
- <img src="../img/Discover/image3.png" alt="Discover App Icon"
-    title="Discover App Icon" /> 
-</p>
+## 2.2 Accessing Discover programmatically
+It is possible to interact with the Discover repositories programmatically by using **DiscoverPy**- a python package developed by us. DiscoverPy comes pre-installed in all Polly notebooks. As of now, it can be used only in a Polly environment.
 
-The app shows overview page which contains a brief **description** of the application, it's **scope** and the **usage** as shown below.
+### 2.2.1 Elastic search indices in Discover
+   
+According to the FAIR’s Findable principle, (Meta)data should be indexed in a searchable resource so that we can find a record with its unique identifier or any of its rich metadata. For that, we’ve used [Elasticsearch](https://aws.amazon.com/elasticsearch-service/) and put repositories data and metadata in Elasticsearch Indexes.
 
-![App Description](../img/Discover/image4.png)
+We’ve also provided APIs over HTTPS with authentication for accessing the data in a secured manner which aligns with the FAIR’s Accessible principle of (Meta)data should be retrievable by their unique identifier using a standardized communications protocol.
 
-**Exploring the data lake**
+### 2.2.2 Discoverpy Usage
 
-Search for relevant datasets by navigating to the *Dataset Search* tab in the navigation pane to the left. Keyword search can be applied to the following fields:
+#### 2.2.2.1  Initialisation
 
-*   Data Set ID
-    
-*   Data Set Source
-    
-*   Description
-    
-*   Diseases
-    
-*   Is Public
-    
-*   Organisms
-    
-*   Platform
-    
-*   Tissue
-    
-*   Year
-    
-
-![Search options](../img/Discover/image5.png)
-
-The search will return all datasets that are associated with your search. The result should look like the image below.
-
-![Search results](../img/Discover/image6.png)
-
-The table shown above shows very few columns by default. In order to view the other columns in the table, you can select the fields from **Available Columns** and click on *Show!* button. *Download Selected Dataset* button will let you download the dataset that you have selected on your local system. *Export results to CSV* button will let you download the search result table in the form of a .csv file. Once you have narrowed down the relevant datasets, you can analyze one or more datasets on the fly within the app.
-
-**Analyzing a single dataset**
-
-You can analyze a single dataset by selecting the checkbox to the left of the entry in the table. Once you’ve selected the checkbox, click on the *Analyze Data* button below the table description.
-
-![Select a data set](../img/Discover/image7.png)
-
-After clicking the *Analyze Data* button, the app will read the selected dataset and take you to the *Dataset Analysis* tab. Here, you can perform the following analyses:
-
-*   **Principal Component Analysis (PCA)**
-
-    Principal Component Analysis: Also known as PCA plot, it is used to see the overall differences between cohorts of interest, if a strong separation is found along X axis (PC1) then that means strong biological differences between cohorts of interest. One can also increase the number of genes considered in the PCA plot, as one increases the number of genes, it is bound to decrease the PC1 component.  
-    <br />
-
-*   **Boxplot Visualization**
-
-    Boxplot can be really useful in understanding the distribution of expression within a dataset. For any downstream analysis such as differential expression or pathway analysis, the distribution has to be normal since they use tests which assume this distribution.  
-    <br />
-    
-*   **Plots**
-
-    A box and whisker plot (a boxplot) is a graph that presents information from a five-number summary namely lower extreme, lower quartile, median, upper quartile, and upper extreme. In this plot, the median is marked by a vertical line inside the box; the ends of the box are upper and lower quartiles; the two lines outside the box extend to the highest and lowest observations. It is useful for knowing the nature of distribution (i.e., skewed) and potential unusual observations.  
-    <br />
-
-*   **Heatmap**
-
-    A heatmap is a graphical representation of data that uses a system of color-coding to represent different values. This heatmap shows the cohort wise mean expression of a particular gene. The samples are aggregated on the basis of a given cohort and the mean is calculated based on the cohort information.  
-    <br />
-    
-*   **Differential Expression**
-
-    Differential expression analysis means taking the normalised read count data and performing statistical analysis to discover quantitative changes in expression levels between experimental groups. For example, we use statistical testing to decide whether, for a given gene, an observed difference in read counts is significant, that is, whether it is greater than what would be expected just due to natural random variation.  
-    <br />
-    
-*   **X2K Analysis**
-
-    X2K infers upstream regulatory networks from signatures of differentially expressed genes. By combining transcription factor enrichment analysis, protein-protein interaction network expansion, with kinase enrichment analysis, X2K produces inferred networks of transcription factors, proteins, and kinases predicted to regulate the expression of the inputted gene list.  
-    <br />
-
-*   **Gene Ontology Plot**
-
-    Gene Ontology Annotation Plot is a simple but useful tool for visualizing, comparing and plotting GO (Gene Ontology) annotation results.  
-    <br />
-    
-*   **Enrichr**
-
-    Enrichr, includes new gene-set libraries, an alternative approach to rank enriched terms, and various interactive visualization approaches to display enrichment results using the JavaScript library, Data Driven Documents (D3).  
-    <br />
-    
-*   **GSEA** 
-
-    Gene Set Enrichment Analysis (GSEA) is a computational method that determines whether an a priori defined set of genes shows statistically significant, concordant differences between two biological states (e.g. phenotypes).  
-    <br />
-
-*   **Specific Pathway Visualization using Pathview**
-
-    Pathview maps, integrates and renders a wide variety of biological data on relevant pathway graphs.  
-    <br />
-
-![Analyses possible](../img/Discover/image8.png)
-
-<!--
-**Analyzing multiple datasets**
-
-It is also possible to analyze multiple datasets simultaneously. If you select multiple datasets from the search result and click the *Analyze Data* button, you will see a new *Multiple Analyses* Tab, wherein you can select algorithms that you want to run on the selected datasets. While selecting algorithms, a workflow of nodes is formed. These nodes are input blocks for each algorithm for each dataset you selected.
-
-**Total number of nodes = number of datasets selected (n) X number of algorithms selected (m)**
-
-![Multiple analyses](../img/Discover/image9.png)
-
-Upon clicking each node, a pop up with input parameters for each algorithm corresponding to a particular dataset will appear. Adjust these parameters to fit your analysis before executing the algorithms.
-
-![Algorithm input parameters](../img/Discover/image10.png)
-
-Once you have filled all the parameters, you can verify them in the table formed below. Next, execute the algorithms by clicking on the *Execute Algorithms* button.
-
-![Execute algorithms](../img/Discover/image11.png)
-
-After the algorithms have been executed, you’ll be taken to the rules tab, where you can define the rules by which you want to filter the output of the algorithms to get a preliminary hitlist. For instance, after running differential expression, you want to filter by logFC and *p*-value. Along with that you can also add annotations to that hitlist by selecting your source of annotations.
-
-![Rules tab](../img/Discover/image12.png)
-
-Finally, on clicking the *Execute Rules* button, you will be able to get a preliminary hitlist.
-
-![Preliminary hitlist](../img/Discover/image13.png)
-
-
-##DepMap CCLE
-
-**Opening the app**
-
-Upon opening the *Discover Insights* module on Polly, choose the *Depmap Data* repository.
-
-![Selecting app](../img/Discover/image31.png)
-
-After selecting the *Depmap repository*, you’ll be able to see a dashboard and the *DepMap CCLE application* icon. The dashboard will give you an overview of the repository, for instance, the information of different cell lines in the  repository, distribution of tissue lineages, metastatic status of samples, etc. among the datasets.
-
-![Kibana dashboard](../img/Discover/image32.png)
-
-Click on the below icon to start the *DepMap CCLE application*.
-
-![DepMap icon](../img/Discover/image33.png)
-
-Once inside the application, you can find two examples on the home page that briefly describes the usage of the application.
-
-![App overview](../img/Discover/image34.png)
-
-**Exploring the data lake**
-
-This application provides the functionality to explore the DepMap CCLE data lake. You can query the data lake for three different functionalities for different genes in the application. Each functionality has a separate tab on the left for easy access. 
-
-*   Gene Essentiality
-
-*   Gene Cluster
-
-*   CCLE Heatmap
-
-**Gene Essentiality**
-
-Gene Essentiality of the gene describes the efficacy vs selectivity map for a gene based on different models. The terms can be defined as: 
-
-*   **Efficacy**: how essential the gene is in the sensitive cell lines (the more negative the efficacy is, the more essential the gene is).
-
-*   **Selectivity**: how selectively essential the gene is between sensitive and resistant cell lines (the more positive the selectivity is, the more selective the gene is).
-
-As shown in the following image, you can search for a gene and its essentiality. Click on *Press Go* to check the scores. 
-
-![Select gene](../img/Discover/image35.png)
-
-The search returns an *essentiality map* on the left panel with the searched gene highlighted in red color. The right panel describes the efficacy and selectivity scores of the *matched gene* and the *dependency scores* of different models in the data lake. 
-
-![Essentiality](../img/Discover/image36.png)
-
-![Matched genes](../img/Discover/image37.png)
-
-![Dep score](../img/Discover/image38.png)
-
-**Gene Cluster**
-
-In concept, genes that work together as complexes or pathways should show similar dependency scores across cell lines. With this assumption, 2,492 essential genes were clustered based on the similarity of their dependency scores across 423 cell lines; the resulting cluster groups essential genes that likely work together.
-
-As shown in the figure below, you can query for your gene of interest to see which genes cluster with it. To search, type in the name of the gene. Suggestions will be displayed to help you select the gene of your interest. The *cluster size* option changes the parameters for stringency of clustering. A small cluster equates to stringent cutoffs.  
-
-![Cluster gene select](../img/Discover/image39.png)
-
-The query returns an *efficacy vs selectivity plot* of the gene, a *t-SNE Plot* for functional similarity and the *clustered genes* with the searched gene in the tabular format along with *connectivity map* and *correlation scores*. 
-
-![Eff plot](../img/Discover/image40.png)
-
-![tSNE](../img/Discover/image41.png)
-
-![Clustered genes](../img/Discover/image42.png)
-
-**CCLE Heatmap**
-
-*CCLE heatmap* aids you in visualizing the cancer specific expression of selected genes in different cell lines models along with the dependency scores of different genes. The heatmap requires three inputs, *Cancer Type* to select the cell lines models, *Dependency Genes* for dependency scores of genes of interest and *Genes for Expression* to display the expression of the genes. The inputs can be provided as shown in the following image. 
-
-![Select cancer](../img/Discover/image43.png)
-
-Clicking on *Plot* processes the data and the result of the query is a heatmap with columns as the sample, rows for the genes and column descriptors describing the dependency scores of the genes. 
-
-![Heatmap](../img/Discover/image44.png)
-
-##Single Cell Visualization
-
-Single Cell Visualization provides a visualization interface for single cell data hosted on GEO. The data lake working on its backend is updated regularly with new datasets. The app has different visualizations for understanding data: *Dimensionality reduction plot*, *Violin plot*, *Dot Plot*. 
--->
-
-##GTEx 
-
-**Opening the app**
-
-GTEx respository can be accessed using the GTEx card on Discover. 
-
-![Polly GTEx](../img/Discover/GTEx.png)
-
-After selecting the repository, you’ll be able to see a dashboard with different tissues. Select a dataset and use GTEx application to explore the dataset. 
-
-![Repository Dashboard](../img/Discover/GTEx_2.png)
-
-The app will open and you should see the overview page which contains a brief overview of the application, scope and caveats as shown below.
-
-![App Description](../img/Discover/GTEx_3.png)
-
-**Analyzing a dataset**
-
-As the application starts, it will load the requested dataset. Once it is loaded, it can be explored. 
-
-*   **Principal Component Analysis (PCA)**
-
-Principal Component Analysis: Also known as PCA plot, it is used to see the overall differences between cohorts of interest, if a strong separation is found along X axis (PC1) then that means strong biological differences between cohorts of interest. It provides an aspect to check the quality control of different samples. 
-
-![Metadata Table](../img/Discover/GTEx_4.png)
-
-The tab provides a metadata table to check different characterstics of samples. Furthermore various parameters of PCA can be adjusted. 
-
-![PCA Parameters](../img/Discover/GTEx_5.png)
-
-A publication quality and an interactive version of the PCA plot is available to explore. 
-
-![PCA Plot](../img/Discover/GTEx_6.png)
-
-*   **Bar Plot**
-
-*Barplot* provides exploration of different genes either standalone or as a part of different pathways. The distribution can be grouped by different metadata cohorts such as tissue type or tissue-subtype. 
-
-Using the *Gene Expression* toggle, different genes can be queried for different samples. 
-
-![Gene Expression](../img/Discover/GTEx_7.png)
-
-Upon selecting the *Pathway Visualization* option, pathway specific genes can be selected. At a given time more than one pathways can be selected  
-
-![Pathway Visualization](../img/Discover/GTEx_8.png)
-![Pathway Visualization Plot](../img/Discover/GTEx_9.png)
-    
-*   **GTEx Expression Map**
-
-*GTEx Expression Map* can be used to explore the distribution of selected genes in different GTEx tissues. After exploring the selected tissue and finding list of genes of interest, it presents visualization methods like *GTEx Expression Violin* and *GTEx Expression Heatmap* to study the distribution of genes across different tissues. 
-
-A single gene can be selected to plot violin for it's expression across different tissues. 
-
-![GTEX Expression Violin](../img/Discover/GTEx_10.png)
-
-Multipe genes can be used to make a heatmap for different tissues. 
-    
-![GTEx Expression Heatmap](../img/Discover/GTEx_11.png)
-
-
-##Single Cell Visualization
-
-**Opening the app**
-
-Upon opening the Discover application on Polly, choose a relevant data repository which hosts single cell data. 
-
-![Polly Discover](../img/Discover/Discover.png)
-
-After selecting a repository, you’ll be able to view a filtering interface which provides **parameters** that you can use to filter the datasets within the selected repository. Once you select a dataset you can access the integrated tools attached with the repository. You can use Single Cell Visualization application for further analysis of single cell data.
-
-
-![single cell App](../img/Discover/single_2.png)
-
-The app will open and you should see the overview page which contains a brief overview of the application, scope and caveats as shown below.
-
-![App Description](../img/Discover/single_3.png)
-
-**Exploring the data lake**
-
-Search for relevant datasets by navigating to the *Dataset Search* tab in the navigation panel to the left. Keyword search can be applied to the following fields:
-
-*   DatasetID
-    
-*   Platform
-
-*   Title
-    
-*   Description
-    
-*   Disease
-    
-*   Pubmed ID
-    
-*   Organism
-    
-*   Cell Types
-    
-*   Tissue
-
-![Search options](../img/Discover/single_4.png)
-
-The search will return all datasets that are associated with your search. The result should look like as shown below.
-
-![Search results](../img/Discover/single_5.png)
-
-The table shown above shows very few columns by default. In order to view the other columns in the table, you can select the fields from **Available Columns** and click on *Show* button. Once you have narrowed down the relevant datasets, you can analyze one dataset on the fly within the app.
-
-**Analyzing a dataset**
-
-You can analyze a single dataset by selecting the checkbox to the left of the entry in the table. Once you’ve selected the checkbox, click on the *Load* button below the table description.
-
-![Select a data set](../img/Discover/single_6.png)
-
-After clicking the *Load* button, the app will read the selected dataset. Once the loading finishes, you can check the further tabs to explore the dataset:
-
-*   **Dataset Summary**
-
-This tab provides quick summary of the selected dataset. The tab reveals the no. of celltype/clusters, genes and cells, available metadata and quality control metrics for the selected dataset. The Value boxes at the top provide information about the no. of genes, cells and celltypes/clusters. 
-
-![Value Boxes](../img/Discover/single_7.png)
-    
-Below it lies the metadata summary table which contains the different metadata fields and their categories. The table is searchable and clicking on a particular metadata shows it's distribution. For instance if you want to see the distribution of cell types in a study, you can search the keyword 'cell_type' in *name* search box. Upon click on it a table describing the distribution of cell types will popup.
-
-![Metadata Table](../img/Discover/single_8.png)
-
-Quality Control(QC) Metrics helps in understanding the processing of the dataset. The application provides the opportunity to understand quality control using *QC distribution* and *QC scatter* plots. Using QC distribution one can understand the distribution of a single quality control metric in a particular metadata. For instance, if we want to check the distribution of gene counts in different cell type, we can select 'gene_counts' as QC metric and 'cell_type' as cluster.
-
-![QC Distribution](../img/Discover/single_9.png)
-
-Using QC scatter plot one can understand the assosciation between distribution of two different quality control metrics. It can be useful in understanding the distribution of gene counts and UMI counts.
-
-![QC Scatter](../img/Discover/single_10.png)
-
-*   **Cell Visualization**
-
-*Cell visualization* provides exploration of cells using dimensionality reduction methods. The tab presents the dimensionality reduction methods such as tSNE, UMAP, PCA and others to visualize the distribution of the cells. The *Visualize cells* panel on the right, shows the distribution of the cells in an interactive way. 
-
-![Visualize cells](../img/Discover/single_11.png)
-
-Using *Feature selection* panel, a metadata or a gene feature can be selected for plotting. 
-
-![Feature selection](../img/Discover/single_12.png)
-    
-The *Customize visualization* panel, offers the scope of customizing visualization features such as *highlight non-zero cells*, *point size* and *method* used based on personal preferences.
-
-![Customize visualization](../img/Discover/single_13.png)       
-    
-*   **Marker**
-
-*Marker* tab provides exploration of distribution of markers. It presents visualization methods like *dot plot* and *violin plot* to study the distribution of genes across different metadata. The *Marker selection* panel, provides the user with options to choose different genes and metadata for plotting marker distribution. 
-
-![Marker selection](../img/Discover/single_14.png)
-
-The *Marker dot plot* panel, is the area for exploring the average expression and distribution of marker using dot plot in an interactive fashion.
-    
-![Marker Dot plot](../img/Discover/single_15.png)
-
-The *Marker Violin plot* panel is the area for exploring the marker distribution using violin plot in an interactive fashion. Using *Customize Violin* slider, the range of values used for plotting violin can be adjusted. It is useful for observing a section of data such as the non-zero values of the expression. 
-
-![Marker Violin plot](../img/Discover/single_16.png)
-
-
-*   **Cell-Type Aggregation**
-
-After having insights about different markers in a single cell study, it is imperative to have a look at the expression of the selected markers across different cell types in different studies. Single cell visualization provides pan-dataset exloratory analysis in the form of *Cell Type Aggregation*. It provides the scope to query the respective repository for median expression of a selected gene across top 20 cell types based on expression. This provides the scope to study expression of a gene in a particular cell type in a given biological context. 
-
-![cell-type aggregation](../img/Discover/single_17.png)
-    
-Potential use-case example: What is the expression of SARS-CoV2 virus entry specific host protein 'ACE2' across different cell types in different studies? 
-
-![Use case](../img/Discover/single_18.png)
-    
-The *Cell Type Aggregation* tab provides the input in the form of text field where query can be made for a gene, using our internal discover services, the input gene is queried across all the datasets in which it is expressed in the repository. To check for ACE2 expression, simply enter ACE2 in the search field. After entering the gene, clicking on *Search gene* will generate a bar plot showing the median expression and the distribution of gene expression across different studies.
-
-![Cell-type aggregation plot](../img/Discover/single_19.png)
-
-#Access through Polly Notebook interface
-
-The Polly Notebook Dockers on Polly have an **internal** python package called ‘discoverPy’ pre-installed, which can be used to search for datasets in the various data repositories.
-
-##Structure of a data repository
-
-A data repository is a collection of different files having different file types. To ensure easy access at a granular level to all datasets a data repository is organized in the following manner. Under this schema, each repository can be considered as a collection of indices which can be used for querying. The discoverPy package can access all indices of a data repository using API endpoints.
-
-![Structure of a data repository](../img/Discover/discover_data_repository.png)
-
-Click [here](https://docs.elucidata.io/Scaling%20compute/Polly%20Notebooks.html) for a detailed documentation about Polly Notebooks.
-
-##Usage
-
-*   Initialize a discover object
-
-This discover object is used to interact with a dataset repository.
+- We need a discover object to interact with a data repository in Discover.
 
 <pre><code>from discoverpy import Discover
 discover = Discover() 
 discover</code></pre>
 
-![Discover object](../img/Discover/image14.png)
-
-*   List all available data repositories along with their indices.
+- Each data repository on Polly has a unique ID that is used to refer to that repository. The following command list the available data repositories, their ID, and other information associated with them.
 
 <pre><code>discover.get_repositories()</code></pre>
 
-![Endpoints for public data](../img/Discover/image15.png)
+![data repository list](img/Discover/revamp/discover_get_repo.png) #replace
 
-*   Set a repository for fetching the different endpoints.
+- Next, we need to set the context to a repository, so that all the subsequent queries will be run against that repository.
+There is another parameter mode, that we can set for
 
-    Choose a repository from the list of repositories and use it's corresponding it to set the discover object to point to that repository.
+single-cell repositories mode='single_cell', which will search across cells.
 
-    *   For single cell repositories use mode='single_cell'.
+bulk data repositories mode='bulk', which will search across samples (default).
 
-    *   For bulk data repositories use mode='bulk' (default)
+1. Set a repository for the discover object
+You can use the id of a repository to set the discover object to point to that repository.
 
-For *geo* repository *repo_id* is **16**.
+* For single cell repositories use `mode='single_cell'`.
+* For bulk data repositories use `mode='bulk'` (default)
 
-<pre><code>discover.set_repo('16')</code></pre>
+For instance, the GEO repository has repo_id 9.
 
-For *sc_data_lake* repository *repo_id* is **17**.
+<pre><code>discover.set_repo('9')</code></pre>
+The single cell repository's repo_id is 17.
 
 <pre><code>discover.set_repo("17", mode="single_cell")</code></pre>
-
-After you’ve added the indices for a repository, you can view the discover object
+After you’ve added the indices for a repository, you can view the discover object. It lists the various indices associated with the repository set.
 
 <pre><code>discover</code></pre>
 
-![View the discover object](../img/Discover/image16.png)
+![discover object](img/Discover/revamp/image4.png)
 
-Note that the ‘annotation\_repo’ index is added automatically for each repository.
+**Understanding the Discover object**
+The discover object contains different slots, each containing different levels of curated information. While querying using the Discover object, we need to specify a slot explicitly - which denotes the level at which we want to query. Thus, it is essential to know what information each slot contains-
 
-##Querying at the dataset level
+1. dataset_repo - This slot contains the study level metadata which consists of identifiers for diseases, cell lines, tissue, drugs, organism, and cell types. The identifier maps to concepts in biomedical ontologies and is consistent across datasets. Refer to Dataset level annotations for more information about the curation at the dataset level.
 
-To search for datasets, the ‘\_files’ index can be searched using the metadata fields present in it.
+![dataset repo](img/Discover/revamp/dataset_repo.png)
 
-*   Get fields present in the index
+2. sample_repo - This slot contains sample level metadata such as genotype, cell lines, tissue, drugs, siRNA, etc., and is also tagged using ontologies. For multi-sample datasets, it also contains the variable which informs about whether the sample is a control sample or a perturbation sample in the context of the study.  With this, we should be able to run queries that find metastatic and primary tumors, finds samples treated with a particular drug, or more generally, look for a sample that has a specific phenotype. Refer to Sample level annotation for more information about the curation at the sample level.
+
+![sample repo](img/Discover/revamp/sample_repo.png)
+
+3. feature_repo - This is the slot containing matrix data of a dataset that contains the rows (feature identifiers) and the actual measurement value for those features for the samples in the dataset. The features could be anything depending on the type of study. For example, for transcriptomics datasets, the feature identifiers will be genes(HGNC symbols) and for proteomics datasets, they will be Proteins(referring back to UNIPROT).
+
+![feature repo](img/Discover/revamp/feature_repo.png)
+
+4. annotation_repo - With this slot, we can access various feature annotation databases to get information about a particular feature or a set of features.
+
+![annot repo](img/Discover/revamp/annot_repo.png)
+
+#### 2.2.2.2 Querying
+
+As [our curation](https://github.com/ElucidataInc/polly-docs/blob/discover_doc_revamp/docs/Data%20Lake%20Revamp.md#12-what-do-we-mean-by-curation-of-data-in-polly) process stores metadata values under a controlled vocabulary, the queries in discoverpy follow FAIR's Interoperability guideline. This means that all the users' queries are searched against keywords in a search space that is limited to the vocabulary present in biological ontologies.
+
+##### 2.2.2.2.1 Common methods for multiple indices.
+
+There are methods available on all levels of repository indices. You just need to replace `<INDEX_LEVEL_NAME>` with one of `sample_repo` | `feature_repo` | `dataset_repo` | `annotation_repo`
+
+* Get fields present in the index.
+`discover.<INDEX_LEVEL_NAME>.get_all_fields()`
+For example, to get the fields present for the datasets in this repository,
 
 <pre><code>discover.dataset_repo.get_all_fields()</code></pre>
 
-![Fields present in the index](../img/Discover/image17.png)
+![dataset level fields](img/Discover/revamp/image5.png)
 
-*   To get a sense of what values are present in each field, one can view the top n entries. Some generic fields are present for each file.
+* Fetch the top `n` records from a repository.
+`discover.<INDEX_LEVEL_NAME>.get_n_records()`
 
-    *   \_\_bucket\_\_: S3 bucket name
-    
-    *   \_\_filetype\_\_: Type of file such as pdf, gct etc.
-    
-    *   \_\_key\_\_: S3 key of the file
-    
-    *   \_\_location\_\_: Location of the file within data repository
+For example, to get the fields present for datasets in this repository,
+<pre><code>discover.dataset_repo.get_all_fields()</code></pre>
 
-<pre><code>discover.dataset_repo.get_top_n_examples(n = 30)</code></pre>
 
-![Values present in each field](../img/Discover/image18.png)
+![top n records](img/Discover/revamp/image6.png)
 
-*   Search for a dataset by keyword in a particular field. Searching for “mll” in the field “description” here.
+* Output the records as a dataframe - 
+`discover.<INDEX_LEVEL_NAME>.get_n_records_as_df()[0]`
 
-<pre><code>dataset_query_df = discover.dataset_repo.query_dataset_by_field("description","mll") dataset_query_df</code></pre>
+![records in df](img/Discover/revamp/image7.png)
 
-![Search for a dataser](../img/Discover/image19.png)
+* Note: You would find there are many methods that have the *_as_df variant as well, which takes the same arguments and return the result in Dataframe.
 
-##Querying at the sample level
+* Instead of just `n` records, you can fetch all records as well by using 
+  `discover.<INDEX_LEVEL_NAME>.get_all_records_as_df()`
 
-**GCT File Format**
 
-The datasets in the public repositories are saved as a .gct file. This is a file format in which data can be stored along with the sample metadata. The data values in the actual matrix along with features (genes) are indexed in the ‘\_gct\_data’ index of the repository and the sample metadata is index in the ‘\_gct\_metadata’ of the index of the repository.
 
-![GCT file structure](../img/Discover/gct_file.png)
+##### 2.2.2.2.2 Querying at the Dataset Level
 
-**H5AD File Format**
 
-The single cell datasets in the public repositories are saved as a .h5ad file. This is a file format in which data can be stored along with the sample metadata.
+* Fetch dataset entries that match against the `value` for a `field`.
+<pre><code>discover.dataset_repo.get_n_datasets_for_field(field, value, regexp, n=Discover.DEFAULT_PAGE_SIZE, cursor=None, sort_by=Discover.DEFAULT_SORT_ORDER)</code></pre>
+Optionally a regular expression (`regexp`) can be provided instead of a `value`. 
 
-![H5AD file structure](../img/Discover/h5ad_file.svg)
+For example, The following query lists all datasets in the repository, where ‘publication name’ fields has pubmed id ‘28756234’
 
-*   Get fields present in the index
 
-<pre><code>discover.sample_repo.get_all_fields()</code></pre>
+<pre><code>discover.dataset_repo.get_n_datasets_for_field_as_df('publication_name', '28756234', regexp=False)[0]</code></pre>
 
-![Fields present in the index](../img/Discover/image20.png)
+![dataset level query](img/Discover/revamp/image8.png)
 
-*   To get a sense of what values are present in each field, one can view the top n entries.
+The following query lists all datasets in the repository where ‘tissue’ is ‘liver’
 
-<pre><code>discover.sample_repo.get_top_n_examples(n =30)</code></pre>
+<pre><code>discover.dataset_repo.get_n_datasets_for_field_as_df('tissue', 'liver', regexp=False)[0]</code></pre>
 
-![Values present in field](../img/Discover/image21.png)
+![liver query](img/Discover/revamp/image9.png)
 
-*   Search for samples by keyword in a particular field. Searching for “M1” in the field “fab\_classification\_ch1” here.
+Instead of just `n` datasets, you can fetch all datasets as well.
 
-<pre><code>fab_df = discover.sample_repo.query_samples_by_field("fab_classification_ch1", "M1", n = 100)
-fab_df</code></pre>
+`discover.dataset_repo.get_all_datasets_for_field_as_df(field=None, value=None, regexp=False, sort_by=Discover.DEFAULT_SORT_ORDER)`
 
-![Search for samples using keywords](../img/Discover/image22.png)
+* Fetch dataset entries that satisfy the given match combinations.
 
-*   Search for samples by keywords in all fields. This can be used if the field to search for is not known beforehand.
+<pre><code>discover.dataset_repo.get_n_datasets_for_field_combination(and_fields, or_fields, not_fields, n=Discover.DEFAULT_PAGE_SIZE, cursor=None, sort_by=Discover.DEFAULT_SORT_ORDER)</code></pre>
 
-<pre><code>fab_all_fields = discover.sample_repo.query_samples_by_all_fields("M1", n = 100) fab_all_fields</code></pre>
+The following query fetches datasets where the platform is Microarray, tissue is stem cells, and the keyword ‘knockdown’ is NOT present in the description of the study.
 
-![Search for samples using keywords](../img/Discover/image23.png)
+<pre><code>discover.dataset_repo.get_n_datasets_for_field_combination_as_df(and_fields={"platform":"Microarray", "tissue":"stem cells"}, not_fields={"description":"knockdown"})[0]</code></pre>
 
-##Querying at the feature level
+![microarray stem cell]( img/Discover/revamp/image10.png)
 
-The matrix of a .gct/.h5ad file contains the actual values for the different features(genes/metabolites). The ‘\_gct\_index’ or ‘\_h5ad\_index’ index of a repository can be queried for features.
+Instead of just `n` datasets, you can fetch all datasets as well.
 
-*   Get fields present in the index  
+<pre><code>discover.dataset_repo.get_all_datasets_for_field_combination_as_df(and_fields={"platform":"Microarray", "tissue":"stem cells"},not_fields={"description":"knockdown"})</code></pre>
 
-<pre><code>discover.feature_repo.get_all_fields()</code></pre>
+![microarray stem cell all datasets](img/Discover/revamp/image11.png)
 
-![Fields present in the index](../img/Discover/image24.png)
+##### 2.2.2.2.3 Querying at the feature level
 
-*   To get a sense of what values are present in each field, one can view the top n entries.
+* Fetch feature values matching against the `feature_name` term. The `n` here decides the number of datasets that will be searched.
 
-<pre><code>discover.feature_repo.get_top_n_examples(n=20)</code></pre>
+<pre><code>discover.feature_repo.get_n_feature_match_values(feature_name, n=Discover.DEFAULT_PAGE_SIZE, cursor=None, sort_by=Discover.DEFAULT_SORT_ORDER)</code></pre>
 
-![Values present in field](../img/Discover/image25.png)
+The following query fetches the expression level of the gene `OLfr1396` in the various samples of the repository
 
-The ‘\_\_index\_\_’ column contains the feature name
+<pre><code>discover.feature_repo.get_n_feature_match_values_as_df("Olfr1396")[0]</code></pre>
 
-*   Get values for a particular feature across all samples in all datasets of the repository. Getting values for “NRAS” gene here.
+![feature level query 1](img/Discover/revamp/image12.png)
 
-<pre><code>nras_df =discover.feature_repo.get_feature_values("NRAS", n = 1000)
-nras_df</code></pre>
+Instead of just `n` feature values, you can fetch all as well.
 
-![Values for a feature](../img/Discover/image26.png)
+![feature level query 1](img/Discover/revamp/image13.png)
 
-*   To get features from all single cell datasets, use the variant get_feature_values_sc. See the following example.
 
-<pre><code>hhex_df =discover.feature_repo.get_feature_values_sc("HHEX", n = 1000) 
-hhex_df</code></pre>
+* Fetch feature values matching against the `feature_name` term, in single-cell datasets. The `n` here decides the number of datasets that will be searched. This is for the case where the mode was set to single cell. It outputs the average expression of the gene in the pool of cells corresponding to each unique cell type in the repository, per dataset.
 
-![Values for a feature in single cell datasets](../img/Discover/image260.png)
+<pre><code> discover.feature_repo.get_n_sc_feature_match_values(feature_name, n=Discover.DEFAULT_PAGE_SIZE, cursor=None, sort_by=Discover.DEFAULT_SORT_ORDER)</code></pre>
 
-##Access annotation repositories
+<pre><code>discover.feature_repo.get_all_sc_feature_match_values_as_df("NTM")[0]</code></pre>
 
+![feature level query 2](img/Discover/revamp/image14.png)
+
+
+Instead of just `n` feature values, you can fetch all as well.
+
+`discover.feature_repo.get_all_sc_feature_match_values_as_df(feature_name, sort_by=Discover.DEFAULT_SORT_ORDER)`
+
+![feature level query 2](img/Discover/revamp/image15.png)
+
+
+
+##### 2.2.2.2.4 Querying at the sample level
+
+* Fetch sample entries that match against the `value` for a `field`.
+
+<pre><code>discover.sample_repo.get_n_samples_for_field(field, value, regexp, n=Discover.DEFAULT_PAGE_SIZE, cursor=None, sort_by=Discover.DEFAULT_SORT_ORDER)</code></pre>
+
+The following example fetches the samples whose source is “stem cells”.
+
+![sample level query 1](img/Discover/revamp/image16.png)
+
+* Dataframe output variant - `get_n_samples_for_field_as_df`
+
+Instead of just `n` feature values, you can fetch all as well.
+
+![sample level query 1](img/Discover/revamp/image17.png)
+
+
+* Fetch sample entries that match against the `search_term` in any of the given fields. This is useful if you do not know the field to query on beforehand or want to search across all fields, or a list of fields.
+
+
+<pre><code>discover.sample_repo.get_n_samples_for_fields(search_term, fields=[], n=Discover.DEFAULT_PAGE_SIZE, cursor=None, sort_by=Discover.DEFAULT_SORT_ORDER)</code></pre>
+
+![sample level query 2](img/Discover/revamp/image18.png)
+
+* Dataframe output variant - `get_n_samples_for_fields_as_df`
+
+Instead of just `n` sample matches, you can fetch all as well.
+
+<pre><code>discover.sample_repo.get_all_samples_for_fields_as_df(search_term, fields=[], sort_by=Discover.DEFAULT_SORT_ORDER)</code></pre>
+
+![sample level query 2](img/Discover/revamp/image19.png)
+
+* Fetch sample entries that satisfy the given field combinations.
+
+<pre><code>discover.sample_repo.get_n_samples_for_field_combinations(and_fields={}, or_fields={}, not_fields={}, n=Discover.DEFAULT_PAGE_SIZE, cursor=None, sort_by=Discover.DEFAULT_SORT_ORDER)</code></pre>
+
+![sample level query 3](img/Discover/revamp/image20.png)
+
+* Dataframe output variant - `get_n_samples_for_field_combinations_as_df`
+
+Instead of just `n` sample matches, you can fetch all as well.
+
+<pre><code>discover.sample_repo.get_all_samples_for_field_combinations_as_df(and_fields={}, or_fields={}, not_fields={}, sort_by=Discover.DEFAULT_SORT_ORDER)</code></pre>
+
+![sample level query 3](img/Discover/revamp/image21.png)
+
+##### 2.2.2.2.5 Access annotation repositories
 The various gene annotation databases can also be accessed through discoverpy. These can be used to get information about a particular gene or a set of genes.
 
-*   Get all annotation databases
+* Get all annotation databases
 
 <pre><code>discover.annotation_repo.get_annotation_databases()</code></pre>
 
-![Get all annotation databases](../img/Discover/image27.png)
+![annotation query 1](img/Discover/revamp/image22.png)
 
-*   Get annotations for a list of genes from a particular database. Getting Reactome pathways for the genes.
+* Get annotations for a list of genes from a particular database. Getting Reactome pathways for the genes.
 
-<pre><code>discover.annotation_repo.get_feature_annotation('reactome', ['ACTA1', 'AHCTF1', 'AKAP13', 'ATP2C1', 'CDK7'])</code></pre>
+<pre><code>discover.annotation_repo.get_feature_annotation(data_lake, _docid, list_of_genes, n=10000)</code></pre>
 
-![Get annotations for a list of genes](../img/Discover/image28.png)
+![annotation query 2](img/Discover/revamp/image23.png)
 
-##Advanced queries
 
-You can also perform more complex queries on multiple fields combining them with boolean logic. Some examples are shown here.
+#### 2.2.2.3 Downloading a dataset
+Discoverpy can be used to download a dataset from a repository. This can be done by using the “key” of the dataset in the repository. 
 
-*   Get microarray stem cell datasets which did not involve a knockdown experiment
+<pre><code>query_list = discover.dataset_repo.get_n_datasets_for_field('publication_name', '28756234', regexp=False)[0]
+# Get key of the first file returned by the query
+file_key = query_list[0]["_source"]["kw_key"]</code></pre>
 
-<pre><code>discover.dataset_repo.query_dataset_by_field_combination(and_fields={"platform":"Microarray", "tissue":"stem cells"}, not_fields={"description":"knockdown"}, n = 50)</code></pre>
+```
+'GEO_data_lake/data/Microarray/GSE100129/GCT/GSE100129_GPL10558_curated.gct'
+```
 
-![Advanced query example 1](../img/Discover/image29.png)
+<pre><code>discover.get_file(key, repo_id="9", local_fp="downloaded_file.gct")</code></pre>
 
-*   Get samples containing CD34 cells or mononuclear cells do not include de novo samples
-
-<pre><code>discover.sample_repo.query_samples_by_field_combination(or_fields = {"cell_type_ch1":"CD34","cell_type_ch1":"mononuclear"}, not_fields = {"treatment_protocol_ch1":"de novo"}, n = 300)</code></pre>
-
-![Advanced query example 2](../img/Discover/image30.png)
-
-##Downloading datasets
-
-*   You can use the get_file(key, repo_id, file_name) function to download a dataset from a datalake repository. The function has following 3 parameters:
-    
-    *   \_\_key\_\_: S3 key of the file
-
-    *   \_\_repo_id\_\_: Repository id
-
-    *   \_\_file_name\_\_: Name of the file with file extentions such as gct, h5ad etc.
-
-<pre><code>discover.get_file('AML_data_lake/data/Microarray/GSE76320/GCT/GSE76320_GPL8321_curated.gct', '1', 'GSE76320_GPL8321_curated.gct')</code></pre>
-
-#Videos
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-    <iframe src="https://www.youtube.com/embed/AYgAb5Lbj4g" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-</div>
-
-<br>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-    <iframe src="https://www.youtube.com/embed/J-l298jBtIQ" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-</div>
-
-<br>
+This will download the file to the local environment.
