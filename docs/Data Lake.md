@@ -35,6 +35,7 @@
         - [2.2.2.2.4 Querying at the sample level](#22224-querying-at-the-sample-level)
         - [2.2.2.2.5 Access annotation repositories](#22225-access-annotation-repositories)
       - [2.2.2.3 Downloading a dataset](#2223-downloading-a-dataset)
+- [Get key of the first file returned by the query](#get-key-of-the-first-file-returned-by-the-query)
 
 
 
@@ -75,21 +76,21 @@ In addition to this, we append annotations to each dataset on Polly. These annot
 ### 1.2.1 Dataset-level annotations
 **Ontology mapping**: Each dataset is mapped to terms in biomedical ontologies. Currently, we have 6 different types of mappings:
 
-* Organism: (NCBI Taxonomy) Organism from which the samples originated.
+* Organism: ([NCBI Taxonomy](https://www.ncbi.nlm.nih.gov/taxonomy)) Organism from which the samples originated.
 
-* Disease: (MeSH) Disease(s) being studied in the experiment.
+* Disease: ([MeSH](https://www.ncbi.nlm.nih.gov/mesh/)) Disease(s) being studied in the experiment.
 
-* Tissue: (Brenda Tissue Ontology) The tissue from which the samples originated.
+* Tissue: ([Brenda Tissue Ontology](https://www.ebi.ac.uk/ols/ontologies/bto)) The tissue from which the samples originated.
 
-* Cell type: (Cell Ontology) Cell type of the samples within the study.
+* Cell type: ([Cell Ontology](https://www.ebi.ac.uk/ols/ontologies/cl)) Cell type of the samples within the study.
 
-* Cell line: (The Cellosaurus) Cell line from which the samples were extracted.
+* Cell line: ([The Cellosaurus](https://web.expasy.org/cellosaurus/)) Cell line from which the samples were extracted.
 
-* Drug: (CHEBI) Drugs that have been used in the treatment of the samples or relate to the experiment in some other way.
+* Drug: ([CHEBI](https://www.ebi.ac.uk/chebi/)) Drugs that have been used in the treatment of the samples or relate to the experiment in some other way.
 
 Users can view and query dataset-level annotations both using discoverpy and the filtering interface.
 
-These values are standardized across all datasets. The names of the ontologies we use are also mentioned above. The standardization of these fields is in line with FAIR guidelines for improving findability, interoperability, and re-usability. In particular, these annotations address the FAIR principles F2, F3 and I2 (see here for more details).
+These values are standardized across all datasets. The names of the ontologies we use are also mentioned above. The standardization of these fields is in line with [FAIR guidelines](https://www.nature.com/articles/sdata201618) for improving findability, interoperability, and re-usability. In particular, these annotations address the FAIR principles F2, F3 and I2 (see [here](https://www.go-fair.org/fair-principles/) for more details).
 
 ### 1.2.2 Sample-level annotations
 **Ontology Mapping**: Similar to dataset-level ontology mappings, there are 5 sample-level mappings -  Disease, Tissue, Cell type, Cell line, Drug. While the dataset-level mappings can be used to narrow down a dataset of interest, sample-level mappings directly describe the biological characteristics of the sample. For instance, if a sample is labeled with a drug, it means that that drug was used to treat the sample. On the other hand, if a dataset is tagged with a drug it doesn’t necessarily mean that the samples were treated with that drug, only that it was mentioned somewhere in the description of the study.
@@ -107,7 +108,7 @@ All sample-level annotations are stored in the GCT as shown below.
 
 3. curated_cohort_name: This is a short textual description of the cohort. It tries to capture sample properties that are exclusive to the samples within a cohort.
 
-These labels are present for most datasets and are useful when performing certain downstream analyses (like Differential Expression) on a large number of datasets in an automated fashion. These annotations also address the FAIR metrics R1.2 (see here for more details).
+These labels are present for most datasets and are useful when performing certain downstream analyses (like Differential Expression) on a large number of datasets in an automated fashion. These annotations also address the FAIR metrics R1.2 (see [here](https://www.go-fair.org/fair-principles/]) for more details).
 
 **Manual curation of perturbation/control labels**: To do this perturbation/control classification we use a machine learning classifier that uses the textual metadata associated with each sample to classify it as control or perturbation. To train this classifier and improve its accuracy on different types of omics datasets, we manually curate these labels for a subset of the datasets in our data lake.  This manual labeling is done by graduate and undergraduate students who are well versed in understanding biological data generation. We use these manually annotated datasets to train our classifier and improve its accuracy. The current classification model has an accuracy of ~90% on sample metadata for transcriptomics datasets.
 
