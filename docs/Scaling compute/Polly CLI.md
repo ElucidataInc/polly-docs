@@ -1,6 +1,6 @@
 #What is Polly CLI?
 
-Polly CLI (Command Line Interface) is an open source tool that enables you to interact with Polly services using commands in your command-line shell. Polly CLI lets you upload data and run jobs on the Polly cloud infrastructure by scaling computation resources as per need. You can start and stop jobs, monitor them and view logs. 
+Polly CLI (Command Line Interface) is a tool that enables you to interact with Polly services using commands in your command-line shell. Polly CLI lets you upload data and run jobs on the Polly cloud infrastructure by scaling computation resources as per need. You can start and stop jobs, monitor them and view logs. 
 
 ##Required System Configurations
 

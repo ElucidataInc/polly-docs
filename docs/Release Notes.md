@@ -233,7 +233,7 @@
   <ul>
     <li>Hosted our first <a href="https://elucidata.io/ugm/">User Group Meeting</a>.</li>
     <li>Introduced our public platform <a href="https://omixwiki.elucidata.io/dashboard">OmixWiki</a>, showcasing top 100 cited COVID-19 publications with end to end omics analysis.</li>
-    <li>Released the newest version of <a href="https://elucidata.io/ugm/">El-MAVEN v0.12.0</a>.</li>
+    <li>Released the newest version of <a href="https://github.com/ElucidataInc/ElMaven/releases">El-MAVEN v0.12.0</a>.</li>
   </ul>
   <p class="update-button">Update</p>
   <ul>

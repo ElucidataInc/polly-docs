@@ -12,7 +12,7 @@ Polly-PeakML is a novel machine-learning tool that enables the curation of peak 
 * Raw data to curated peak-groups in minutes.
 * Process high-resolution and low-resolution data of up to 100 samples.
 
-![Polly-PeakML workflow schematic](../../img/Polly-PeakML/Workflow.png) <center>**Figure 1.** Polly-PeakML workflow</center>
+![Polly-PeakML workflow schematic](../../img/Polly-PeakML/workflow.png) <center>**Figure 1.** Polly-PeakML workflow</center>
 
 #Getting Started
 
