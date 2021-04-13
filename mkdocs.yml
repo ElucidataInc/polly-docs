@@ -16,7 +16,7 @@ nav:
       - About Curation: DataLakeHub/About Curation.md
       - About Data Repositories: DataLakeHub/About Repositores.md
       - Accessing Discover Programmagtically: DataLakeHub/Accessing Discover programmatically.md
-      - Accessing Data Through UI: DataLakeHub/Accessing Discover through Polly's interface
+      - Accessing Data Through UI: DataLakeHub/Accessing Discover through Polly's interface.md
   - Analyses:
     - Polly Notebooks:
       - About Polly Notebooks: Scaling compute/Notebook/About Polly Notebooks.md
@@ -31,11 +31,13 @@ nav:
       - CCLE Correlation Analysis Preset: Apps/CCLE Correlation Analysis.md
       - Compound Discoverer<sup>TM</sup> QuantFit: Apps/Metabolomic Data/CompoundDiscoverer QuantFit.md
       - CRISPR Screening: Apps/Screening Data/CRISPR Screening.md
+      - Discover: Apps/Polly Discover Application.md
       - Dual Mode Data Visualization: Apps/Metabolomic Data/Dual Mode Visualization.md
       - El-MAVEN: Apps/Metabolomic Data/El-MAVEN.md
       - El-MAVEN Phi Relative LC-MS: Apps/Metabolomic Data/El-MAVEN Phi Relative LC-MS.md
       - FirstView: Apps/Metabolomic Data/FirstView.md
       - GTEx Correlation and Enrichment Analysis Preset: Apps/GTEX preset.md
+      - GTEX Discover Application: Apps/GTEX Discover.md
       - High Throughput Drug Screening: Apps/Screening Data/High Throughput Drug Screening.md
       - IntOmix: Apps/Multi-omic Data/IntOmix.md
       - Labeled LC-MS/MS Workfow: Apps/Metabolomic Data/Labeled LC-MSMS Workflow.md
@@ -49,6 +51,7 @@ nav:
       - Proteomics Workflow: Apps/Proteomic Data/Proteomics Workflow.md
       - QuantFit: Apps/Metabolomic Data/QuantFit.md
       - RNA Seq Workflow: Apps/Sequencing Data/RNA Seq Workflow.md
+      - Single Cell Visualization: Apps/Single Cell Visualization.md
       - TraceFinder Downstream Analysis Preset: Apps/tracefinder_preset.md
       - Untargeted Pipeline: Apps/Metabolomic Data/Untargeted Pipeline.md
     - Data Studio:

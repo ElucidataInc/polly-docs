@@ -1,6 +1,6 @@
-# Data Studio Overview
+## Data Studio Overview
 
-## What is a Component?
+### What is a Component?
 
 A component in Data Studio is a containerized script with specified input and output files along with its defined visualizations. Each component is a separate docker with only the essential library installations and a main script that can read inputs. The main script can be in R or Python. Apart from the output files, components are also responsible for writing the files required for data visualization, along with visualization parameters.
 

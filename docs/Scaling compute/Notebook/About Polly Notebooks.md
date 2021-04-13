@@ -1,4 +1,4 @@
-#Introduction
+## About Polly Notebooks
 
 Polly Notebook is a scalable analytics platform which allows you to perform data analysis remotely in a Jupyter-like notebook. It provides the flexibility to select the compute capacity, the environment according to your need along with the ability to share the analyses with your peers for seamless team collaboration.
 

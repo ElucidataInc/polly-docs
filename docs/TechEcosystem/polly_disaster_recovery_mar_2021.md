@@ -3,21 +3,19 @@
 
 All the data being ingested and/or generated inside Polly is being stored inside AWS. Types of data include input/output files, logs, DB transactional data & static data. No data as of now is being stored outside of the AWS account. Although AWS provides very high durability and reliability for all the data stores, there is still a risk associated with some circumstances like accidental deletion, natural hazard & unwanted access to the AWS account.
 
-<br/>
-
 ## Datastores
 
 There are majorly 5 data stores in which the data is being stored currently inside AWS:
 
--   [**RDS**](https://aws.amazon.com/rds/ "https://aws.amazon.com/rds/") **(Postgres)**
+*   [**RDS**](https://aws.amazon.com/rds/ "https://aws.amazon.com/rds/") **(Postgres)**
     
--   [**DynamoDB**](https://aws.amazon.com/dynamodb/ "https://aws.amazon.com/dynamodb/")
+*   [**DynamoDB**](https://aws.amazon.com/dynamodb/ "https://aws.amazon.com/dynamodb/")
     
--   [**Elasticsearch**](https://aws.amazon.com/elasticsearch-service/ "https://aws.amazon.com/elasticsearch-service")
+*   [**Elasticsearch**](https://aws.amazon.com/elasticsearch-service/ "https://aws.amazon.com/elasticsearch-service")
     
--   [**EFS**](https://aws.amazon.com/efs/ "https://aws.amazon.com/efs/")
+*   [**EFS**](https://aws.amazon.com/efs/ "https://aws.amazon.com/efs/")
     
--   [**S3 buckets**](https://aws.amazon.com/s3/ "https://aws.amazon.com/s3/")
+*   [**S3 buckets**](https://aws.amazon.com/s3/ "https://aws.amazon.com/s3/")
 
 <br/>    
 
@@ -34,8 +32,8 @@ There are majorly 5 data stores in which the data is being stored currently insi
 
 ## Key take-aways
 
--   Backups are done at least once a day
+*   Backups are done at least once a day
     
--   Following datastores are backed up - [**RDS**](https://aws.amazon.com/rds/ "https://aws.amazon.com/rds/")**,** [**DynamoDB**](https://aws.amazon.com/dynamodb/ "https://aws.amazon.com/dynamodb/")**,** [**Elasticsearch**](https://aws.amazon.com/elasticsearch-service/ "https://aws.amazon.com/elasticsearch-service/")**,** [**EFS**](https://aws.amazon.com/efs/ "https://aws.amazon.com/efs/")**,** [**S3 buckets**](https://aws.amazon.com/s3/ "https://aws.amazon.com/s3/")**.**
+*   Following datastores are backed up - [**RDS**](https://aws.amazon.com/rds/ "https://aws.amazon.com/rds/")**,** [**DynamoDB**](https://aws.amazon.com/dynamodb/ "https://aws.amazon.com/dynamodb/")**,** [**Elasticsearch**](https://aws.amazon.com/elasticsearch-service/ "https://aws.amazon.com/elasticsearch-service/")**,** [**EFS**](https://aws.amazon.com/efs/ "https://aws.amazon.com/efs/")**,** [**S3 buckets**](https://aws.amazon.com/s3/ "https://aws.amazon.com/s3/")**.**
     
--   **In case of a disaster, a maximum of one day of data will be lost.**
+*   **In case of a disaster, a maximum of one day of data will be lost.**
