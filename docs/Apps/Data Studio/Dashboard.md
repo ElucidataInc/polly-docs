@@ -1,10 +1,10 @@
-# Dashboard
+## Dashboard
 
 Data Studio lets you visualize your data with the number fo highly configurable charts and tables, which you can add to dashboards and then customize as needed. The Visualization Dashboard provides an at-a-glance view of the selected visualization charts. The dashboard is customizable and can be organized in the most effective way to help you understand complex relationships in your data and can be used to create engaging and easy-to-understand reports.
 
 The generated reports are interactive and can be shared with the collaborators. You can easily communicate and act on the customized data where all the members of your team can compare, filter and organize the exact data they need on the fly, in one report.
 
-## Saving a Chart
+### Saving a Chart
 
 In order to add a visualization to your dashboard, you first need to save it under the desired dashboard name.
 
@@ -28,7 +28,7 @@ Once all the selections are done, click on *Save*.
 
 ![Chart parameters](../../img/Datastudio/9.png)
 
-## Visualizing the Dashboard
+### Visualizing the Dashboard
 
 Click on the *Visualize Data* tab.
 
@@ -38,7 +38,7 @@ It will display the list of all your created dashboards. Select a dashboard to l
 
 ![Dashboards list](../../img/Datastudio/11.png)
 
-## Editing a dashboard
+### Editing a dashboard
 
 In order to edit your dashboard, click on the *Edit Dashboard* option present at the top right corner.
 
@@ -50,7 +50,7 @@ There are a few ways to edit the dashboard
 
 ![Resizing charts](../../img/Datastudio/13.png)
 
-## Inserting a Component
+### Inserting a Component
 
 *    *Your charts and filters:* You can use this tab to sort your charts
 

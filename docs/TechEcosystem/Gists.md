@@ -5,7 +5,7 @@
 
 The RNA-seq pipeline implemented in our work environment has been completely automated using a few different tools integrated together. These include SoS, Docker, AWS and PollyCLI. The schematic diagram below gives an overview of the workflow implementation:
 
-![Gists_Figures](./Gists_Figures/Gists_fig1.png “Gists_Figures”) <center>**Figure .1** RNA-seq implementation schema</center>
+![Gists_Figures](../img/Gists_Figures/Gists_fig1.png) <center>**Figure .1** RNA-seq implementation schema</center>
 
 **1\. Running the workflow as a single command via SoS**
 
@@ -61,7 +61,7 @@ The invoke.sh script is a custom script integrated in the docker to launch your 
 
 The pipeline fetches input data and the workflow notebook saved on AWS S3 bucket for now. Below is a snapshot of the data directory on the cloud.
 
-![Gists_Figures](./Gists_Figures/Gists_fig2.png “Gists_Figures”) <center>**Figure .2** Raw data on AWS S3</center>
+![Gists_Figures](../img/Gists_Figures/Gists_fig2.png) <center>**Figure .2** Raw data on AWS S3</center>
 
 **4\. Connecting the SoS, Docker and AWS cloud to Polly CLI through a JSON file:**
 
@@ -91,48 +91,48 @@ The main input for running the RNA-seq workflow would be a JSON file that stores
 
 As you can see above, the JSON file has a specific <key> : <value> format which is very convenient for parsing the parameters defined in it. Below are some of the keys that are described in the JSON file for the automated RNA-seq analysis pipeline:
 
--   **machineType: **This describes the specifications (CPU and RAM) of a machine to be used for launching the job. The different machine types supported by Polly are mentioned [here](https://docs.elucidata.io/Scaling%20compute/Polly%20CLI.html#create-job-description-json-file "https://docs.elucidata.io/Scaling%20compute/Polly%20CLI.html#create-job-description-json-file").
+*   **machineType:** This describes the specifications (CPU and RAM) of a machine to be used for launching the job. The different machine types supported by Polly are mentioned [here](https://docs.elucidata.io/Scaling%20compute/Polly%20CLI.html#create-job-description-json-file "https://docs.elucidata.io/Scaling%20compute/Polly%20CLI.html#create-job-description-json-file").
     
--   **image: **Docker image to be used for the job, this docker image should be stored on any docker container registry like Amazon ECR, docker hub or Polly docker registry.
+*   **image:** Docker image to be used for the job, this docker image should be stored on any docker container registry like Amazon ECR, docker hub or Polly docker registry.
     
--   **tag: **Tag of the image, see the docker [reference page](https://docs.docker.com/engine/reference/commandline/tag/ "https://docs.docker.com/engine/reference/commandline/tag/") to understand what a tag is.
+*   **tag:** Tag of the image, see the docker [reference page](https://docs.docker.com/engine/reference/commandline/tag/ "https://docs.docker.com/engine/reference/commandline/tag/") to understand what a tag is.
     
--   **name: **Name for the job as shown in the listing of jobs through Polly CLI
+*   **name:** Name for the job as shown in the listing of jobs through Polly CLI
     
--   **env: **Environment variables for the job to be run. Please note that this is highly dependent on the docker that you are using. However one must realize that this is a way to run highly customizable jobs for various workflows. Anything can be passed here which is ultimately understood by an invoke.sh script which is inside a docker (the variables defined here are accessed in the invoke.sh script). See the contents of invoke.sh above in step 2.
+*   **env:** Environment variables for the job to be run. Please note that this is highly dependent on the docker that you are using. However one must realize that this is a way to run highly customizable jobs for various workflows. Anything can be passed here which is ultimately understood by an invoke.sh script which is inside a docker (the variables defined here are accessed in the invoke.sh script). See the contents of invoke.sh above in step 2.
     
-    -   **NOTEBOOK\_NAME: **Name of the SoS notebook which contains the workflow. The notebook should be in the same directory as the FastQ files or in the starting folder.
+    *   **NOTEBOOK\_NAME:** Name of the SoS notebook which contains the workflow. The notebook should be in the same directory as the FastQ files or in the starting folder.
         
-    -   **WORKFLOW: **The workflow which needs to be executed in the SoS notebook. See [SoS documentation for workflows](https://vatlab.github.io/sos-docs/workflow.html#content "https://vatlab.github.io/sos-docs/workflow.html#content") for more detail. In short, an SoS notebook can contain multiple workflows, this parameter selects the workflow to be executed.
+    *   **WORKFLOW:** The workflow which needs to be executed in the SoS notebook. See [SoS documentation for workflows](https://vatlab.github.io/sos-docs/workflow.html#content "https://vatlab.github.io/sos-docs/workflow.html#content") for more detail. In short, an SoS notebook can contain multiple workflows, this parameter selects the workflow to be executed.
         
-    -   **BUCKET\_NAME: **S3 bucket name on which the data is present. 
+    *   **BUCKET\_NAME:** S3 bucket name on which the data is present. 
         
-    -   **INPUT\_DATA\_PATH: **Path of the data within the s3 bucket. The parameters BUCKET\_NAME and INPUT\_DATA\_PATH will be combined to create the URL, for example, *s3://polly-public-datasets/Novagene\_Shashank/JNK1\_OneFile/* will be created by using these.
+    *   **INPUT\_DATA\_PATH:** Path of the data within the s3 bucket. The parameters BUCKET\_NAME and INPUT\_DATA\_PATH will be combined to create the URL, for example, *s3://polly-public-datasets/Novagene\_Shashank/JNK1\_OneFile/* will be created by using these.
         
-    -   **PYTHONUNBUFFERED: **This is to force the stdin, stdout and stderr to be totally unbuffered (same as with python -u).
+    *   **PYTHONUNBUFFERED:** This is to force the stdin, stdout and stderr to be totally unbuffered (same as with python -u).
         
-    -   **EXTRA\_ARGS: **Extra parameters to be passed to RNAseq workflow. These are mostly arguments telling to skip some steps.
+    *   **EXTRA\_ARGS:** Extra parameters to be passed to RNAseq workflow. These are mostly arguments telling to skip some steps.
         
--   **secret\_env: **Secret environment variables to be passed to docker. These won't be stored in the database. Primarily these will be credentials.
+*   **secret\_env:** Secret environment variables to be passed to docker. These won't be stored in the database. Primarily these will be credentials.
     
 
 **5\. Executing and managing the bundled workflow in Polly CLI:**
 
 i. Once you have the workflow notebook, input reads and JSON file ready, you can login to your Polly CLI account from your local machine (as shown below).
 
-![Gists_Figures](./Gists_Figures/Gists_fig3.png “Gists_Figures”) <center>**Figure .3** Polly CLI login</center>
+![Gists_Figures](../img/Gists_Figures/Gists_fig3.png) <center>**Figure .3** Polly CLI login</center>
 
 ii. Then simply submit your job through Polly CLI as below. Select jobs option and select the submit option to initiate the job.
 
-![Gists_Figures](./Gists_Figures/Gists_fig4.png “Gists_Figures”) <center>**Figure .4** Polly CLI submit</center>
+![Gists_Figures](../img/Gists_Figures/Gists_fig4.png) <center>**Figure .4** Polly CLI submit</center>
 
 iii. Provide the workspace-id and JSON file path  
   
-![Gists_Figures](./Gists_Figures/Gists_fig5.png “Gists_Figures”) <center>**Figure .5** Polly CLI JSON input</center>
+![Gists_Figures](../img/Gists_Figures/Gists_fig5.png) <center>**Figure .5** Polly CLI JSON input</center>
 
 iv. After, submitting the job, you can track its progress with the commands suggested by Polly as shown below.
 
-![Gists_Figures](./Gists_Figures/Gists_fig6.png “Gists_Figures”) <center>**Figure .6** 	Polly CLI job tracking</center>
+![Gists_Figures](../img/Gists_Figures/Gists_fig6.png) <center>**Figure .6** 	Polly CLI job tracking</center>
 
 ## II. Single cell RNA-seq workflow on Polly Notebook:
 
@@ -140,47 +140,47 @@ The Polly notebook is a Jupyter Polyglot notebook that supports multiple kernels
 
 1\. To begin with the analysis, download the raw data given at the link above and upload it in your workspace through Polly GUI as shown below:
 
-![Gists_Figures](./Gists_Figures/Gists_fig7.png “Gists_Figures”) <center>**Figure .7** Polly workspace</center>
+![Gists_Figures](../img/Gists_Figures/Gists_fig7.png) <center>**Figure .7** Polly workspace</center>
 
 Once the dataset is uploaded, it will be visible in the workspace as shown below:
 
-![Gists_Figures](./Gists_Figures/Gists_fig7.2.png “Gists_Figures”) <center>**Figure .7.2** Uploaded data in workspace</center>
+![Gists_Figures](../img/Gists_Figures/Gists_fig7.2.png) <center>**Figure .7.2** Uploaded data in workspace</center>
 
 2\. Launch a new Polly notebook in your workspace with the desired docker environment and machine type
 
-![Gists_Figures](./Gists_Figures/Gists_fig8.png “Gists_Figures”) <center>**Figure .8** Polly notebook</center>
+![Gists_Figures](../img/Gists_Figures/Gists_fig8.png) <center>**Figure .8** Polly notebook</center>
 
 3\. Read the dataset from your workspace to a notebook instance to make it accessible for analysis as below using Polly CLI in Bash kernel:
 
-![Gists_Figures](./Gists_Figures/Gists_fig9.png “Gists_Figures”) <center>**Figure .9** Polly files copy</center>
+![Gists_Figures](../img/Gists_Figures/Gists_fig9.png) <center>**Figure .9** Polly files copy</center>
 
 4\. Uncompress the file read in the notebook instance:
 
-![Gists_Figures](./Gists_Figures/Gists_fig10.png “Gists_Figures”) <center>**Figure .10** Untar data</center>
+![Gists_Figures](../img/Gists_Figures/Gists_fig10.png) <center>**Figure .10** Untar data</center>
 
 Please note that the uncompressed directory filtered\_gene\_bc\_matrices and its contents will be lost on closing the notebook session. If the uncompressed folder is required to be saved (although not necessary here), it can be done as below:
 
-![Gists_Figures](./Gists_Figures/Gists_fig11.png “Gists_Figures”) <center>**Figure .11** Polly files sync</center>
+![Gists_Figures](../img/Gists_Figures/Gists_fig11.png) <center>**Figure .11** Polly files sync</center>
 
 You can also rename the folder while syncing with the workspace. Further, on refreshing the workspace page, you will be able to see the compressed data added along with your notebook and the downloaded data.
 
-![Gists_Figures](./Gists_Figures/Gists_fig12.png “Gists_Figures”) <center>**Figure .12** Polly workspace with data</center>
+![Gists_Figures](../img/Gists_Figures/Gists_fig12.png) <center>**Figure .12** Polly workspace with data</center>
 
 5\. Follow the reference link and perform the scRNA-seq analysis as per the steps described in R. One step is shown below as an example.
 
-![Gists_Figures](./Gists_Figures/Gists_fig13.png “Gists_Figures”) <center>**Figure .13** Seurat analysis</center>
+![Gists_Figures](../img/Gists_Figures/Gists_fig13.png) <center>**Figure .13** Seurat analysis</center>
 
 6\. In case a particular R library of interest is not available in the pre-built environment, you can easily install it in the notebook instance using the notebook itself or the Terminal from Polly Offerings menu as shown below:
 
-![Gists_Figures](./Gists_Figures/Gists_fig14.png “Gists_Figures”) <center>**Figure .14** Polly Offerings</center>
+![Gists_Figures](../img/Gists_Figures/Gists_fig14.png) <center>**Figure .14** Polly Offerings</center>
 
 Enter the R console (note the usage of sudo) and install the desired library. Here, as an example, we will install library(pryr). First, we can check that it is missing by calling the library in R as below:
 
-![Gists_Figures](./Gists_Figures/Gists_fig15.png “Gists_Figures”) <center>**Figure .15** Missing R library</center>
+![Gists_Figures](../img/Gists_Figures/Gists_fig15.png) <center>**Figure .15** Missing R library</center>
 
 You can install the library from Bioconductor as below:
 
-![Gists_Figures](./Gists_Figures/Gists_fig16.png “Gists_Figures”) <center>**Figure .16** Installing R library</center>
+![Gists_Figures](../img/Gists_Figures/Gists_fig16.png) <center>**Figure .16** Installing R library</center>
 
 7\. Please remember that the output files generated during the analysis will also need to be saved/copied in the workspace specifically, else they will be lost on exiting the session. The individual files can be copied using the polly files copy command as shown below:
 

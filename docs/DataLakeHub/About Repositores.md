@@ -10,11 +10,11 @@ The three central data entities of GEO are Platforms, Samples, and Series.
 
 Platform - A Platform is composed of a summary description of the array or sequencer. Each Platform record is assigned a unique GEO Identifier (GPLxxx).
 
-1. Sample - A Sample record describes the conditions under which an individual Sample was handled, the manipulations it underwent, and the expression of each element derived from it. Each Sample record is assigned a unique GEO Identifier (GSMxxx). A Sample entity must reference only one Platform and may be included in multiple Series.
+1. *Sample* - A Sample record describes the conditions under which an individual Sample was handled, the manipulations it underwent, and the expression of each element derived from it. Each Sample record is assigned a unique GEO Identifier (GSMxxx). A Sample entity must reference only one Platform and may be included in multiple Series.
 
-2. Series - A Series record links together a group of related Samples and provides a focal point and description of the whole study. Series records may also contain tables describing extracted data, summary conclusions, or analyses. Each Series record is assigned a unique GEO Identifier (GSExxx).
+2. *Series* - A Series record links together a group of related Samples and provides a focal point and description of the whole study. Series records may also contain tables describing extracted data, summary conclusions, or analyses. Each Series record is assigned a unique GEO Identifier (GSExxx).
 
-3.  Dataset represents a curated collection of biologically and statistically comparable GEO Samples referring to the same Platform. To enforce this dataset definition, on Polly, each dataset is denoted using a unique ID of the format GSExxxx_GPLxxxx.
+3.  *Dataset* represents a curated collection of biologically and statistically comparable GEO Samples referring to the same Platform. To enforce this dataset definition, on Polly, each dataset is denoted using a unique ID of the format GSExxxx_GPLxxxx.
 
 For example, GSE100003_GPL15207 would translate to a collection of samples from the series GSE100003 sequenced using the platform GPL15207.
 
@@ -26,9 +26,9 @@ Moreover, each dataset has been annotated with study metadata fields such as dis
 
 **Types of Omics Datasets**
 
-- Bulk Transcriptomics
-  -  Microarray
-  -  RNA Sequencing
+*   Bulk Transcriptomics
+*   Microarray
+*   RNA Sequencing
 
 
 **Usage**
@@ -67,13 +67,14 @@ https://www.ncbi.nlm.nih.gov/geo/
 
 
 ## 1.3.2 LINCS (The Library of Integrated Network-Based Cellular Signatures)
+
 **Introduction**
 
 LINCS program is an initiative by NIH to create a network-based understanding of biology by cataloging the gene expression as well as other cellular processes. When we expose cells to a variety of perturbating agents then it causes a change in gene expression as well as other cellular processes. Developing the network-based approach, it will enable a new understanding of health and disease through an integrative approach the will help to identify the patterns of common network and cellular responses across different types of tissues and cell in response to a broad range of perturbations.
 
 **Types of Omics Datasets**
 
-- Microarray
+*  Microarray
 
 **Usage**
 
@@ -109,6 +110,7 @@ Level 3 LINCS data for a gene and drug perturbations has been taken from GEO, us
 * https://lincsproject.org/LINCS/
 
 ## 1.3.3 DEPMAP
+
 **Introduction**
 
 With the advent of knowledge in the molecular basis of cancer, the next question that faced researchers was to establish cause and effect relationship. DepMap consortium is a step in that direction to make the dependency map between the studied alterations in cancer, available drug molecules and physiological processes while enables identifying small molecule sensitivities and predictive biomarkers.
@@ -158,6 +160,7 @@ https://depmap.org/portal/
 
 
 ## 1.3.4 Metabolomics
+
 **Introduction**
 
 Metabolomics repository contains all the publicly available metabolomics data sourced from two public repositories - Metabolomics Workbench and Metabolights. Metabolomics Workbench serves as a national and international repository for metabolomics data and metadata. MetaboLights is also a database for Metabolomics experiments and derived information. The database is cross-species, cross-technique. We curate the data from these repositories and make it available in a FAIR manner.
@@ -171,28 +174,28 @@ Each study on MeWork can have multiple datasets designated by analysis ids. The 
 
 The two data entities in each MetaboLights Study are MAF and Sample Metadata
 
-Metabolite Assignment File (MAF) - A TSV file containing information about the metabolites investigated in the study. Information regarding database accession IDs , wherein the spectra the metabolite is found and data pertaining to its abundance within the study samples is present in this file. The file name is of the format : m_MTBLSxxx_POS/NEG_Sample_MS/NMR_maf.tsv. Example : m_MTBLS1080_POS_LC-LTQ-MS_metabolite_profiling_v2_maf.tsv
+*Metabolite Assignment File (MAF)* - A TSV file containing information about the metabolites investigated in the study. Information regarding database accession IDs , wherein the spectra the metabolite is found and data pertaining to its abundance within the study samples is present in this file. The file name is of the format : m_MTBLSxxx_POS/NEG_Sample_MS/NMR_maf.tsv. Example : m_MTBLS1080_POS_LC-LTQ-MS_metabolite_profiling_v2_maf.tsv
 
-Sample Metadata - The sample information provides all relevant facts about each sample and any controls/standards included in the study. There is ONE sample file corresponding to each MAF file. Sample metadata includes a unique sample name, organism, organism part (for controls use eg. experimental blank and solvent) and sample type (ie. control, QC, experimental sample). Further sample descriptors may include other columns such as Gender, Age, Treatment, etc.  The file name is of the format : a_MTBLSxxx_POS/NEG_Sample_MS/NMR.txt.Example : a_MTBLS1080_POS_LC-LTQ-MS_metabolite_profiling.txt
+*Sample Metadata* - The sample information provides all relevant facts about each sample and any controls/standards included in the study. There is ONE sample file corresponding to each MAF file. Sample metadata includes a unique sample name, organism, organism part (for controls use eg. experimental blank and solvent) and sample type (ie. control, QC, experimental sample). Further sample descriptors may include other columns such as Gender, Age, Treatment, etc.  The file name is of the format : a_MTBLSxxx_POS/NEG_Sample_MS/NMR.txt.Example : a_MTBLS1080_POS_LC-LTQ-MS_metabolite_profiling.txt
 
-Study - A study can have multiple MAF and Sample Metadata Files. Each study record is assigned a unique MetaboLights Identifier (MTBLSxxx).A Dataset represents a curated collection of MAF and its corresponding Sample Metadata. To enforce this dataset definition, on Polly, each dataset is denoted using a unique ID of the format MTBLSxxx_m_MTBLSxxx_POS/NEG_Sample_MS/NMR.For example, MTBLS100_m_dwhsaliva_metabolite_profiling_NMR_spectroscopy would translate to a collection of saliva samples from the study MTBLS100 processed using the NMR Spectroscopy protocol. On Polly, you can find all the information corresponding to a dataset in one place (i.e. one GCT file) which includes, study metadata (title, description, author, disease, organism, etc.), sample metadata, and abundance data. This saves a considerable amount of time and effort in finding relevant metadata and mapping it to the abundance data which can be better spent on the analysis of data. Moreover, each dataset has been annotated with study metadata fields such as disease, organism, Ion Mode, tissue, and dataset ID that can be used to identify relevant dataset(s) on Polly.
+*Study* - A study can have multiple MAF and Sample Metadata Files. Each study record is assigned a unique MetaboLights Identifier (MTBLSxxx).A Dataset represents a curated collection of MAF and its corresponding Sample Metadata. To enforce this dataset definition, on Polly, each dataset is denoted using a unique ID of the format MTBLSxxx_m_MTBLSxxx_POS/NEG_Sample_MS/NMR.For example, MTBLS100_m_dwhsaliva_metabolite_profiling_NMR_spectroscopy would translate to a collection of saliva samples from the study MTBLS100 processed using the NMR Spectroscopy protocol. On Polly, you can find all the information corresponding to a dataset in one place (i.e. one GCT file) which includes, study metadata (title, description, author, disease, organism, etc.), sample metadata, and abundance data. This saves a considerable amount of time and effort in finding relevant metadata and mapping it to the abundance data which can be better spent on the analysis of data. Moreover, each dataset has been annotated with study metadata fields such as disease, organism, Ion Mode, tissue, and dataset ID that can be used to identify relevant dataset(s) on Polly.
 
 **Types of Omics Datasets**
 
-- Metabolomics
-- Lipidomics
+* Metabolomics
+* Lipidomics
 
 **Usage**
 
 Default application on Polly allows you to perform downstream analysis on single-mode (either positive or negative mode) as well as dual-mode (both positive and negative mode) targeted, semi-targeted (without retention time) and untargeted unlabeled metabolomics data along with insightful visualizations. The app provides a variety of normalization methods, scaling options and data visualization functionalities, thereby allowing an efficient analysis of the data to get actionable insights.
 
-- The application supports data with a simple matrix having samples in the columns and metabolites in the rows.
-- It provides different normalization and scaling methods to perform on the data.
-- Performs quality checks for internal standards, metabolites, and samples.
-- Performs statistical analysis using limma and provides interactive visualizations.
-- Performs pathway enrichment analysis and provides pathway visualizations.
-- Provides heatmap visualization along with different algorithms like hierarchical clustering, k-means, correlation etc.
-- Performs comparative analysis for the different cohort comparisons.
+* The application supports data with a simple matrix having samples in the columns and metabolites in the rows.
+* It provides different normalization and scaling methods to perform on the data.
+* Performs quality checks for internal standards, metabolites, and samples.
+* Performs statistical analysis using limma and provides interactive visualizations.
+* Performs pathway enrichment analysis and provides pathway visualizations.
+* Provides heatmap visualization along with different algorithms like hierarchical clustering, k-means, correlation etc.
+* Performs comparative analysis for the different cohort comparisons.
 
 Users can also start a notebook and analyze the datasets using many popular packages like metaboanalyst.
 
@@ -216,11 +219,12 @@ We discourage comparing multiple datasets in this repository since the experimen
 
 This repository consists of datasets from mainly two sources, Metabolomics Workbench and MetaboLights.
 
-- https://www.metabolomicsworkbench.org/about/index.php 
-- https://www.ebi.ac.uk/metabolights/
+* https://www.metabolomicsworkbench.org/about/index.php 
+* https://www.ebi.ac.uk/metabolights/
 
 
 ## 1.3.5 Single Cell
+
 **Introduction**
 
 Single cell sequencing technologies have grown exponentially in the last few years in terms of the number of cells that can be sequenced. With the advent of de-multiplexing platforms like 10x, it is possible to sequence hundreds of thousands of cells in one go. The single cell repository on Polly contains data from these high-throughput platforms(10x, InDrops) as well as datasets generated using older platforms (such as CELSeq, SmartSeq) where the throughput of cells is relatively lower. This is the largest curated single cell RNASeq data repository in the world with over 1500 datasets. Most of the datasets in this repository are sourced from the Gene Expression Omnibus(GEO). It is updated every day to include the recent single cell RNASeq datasets published on GEO. 
@@ -228,7 +232,7 @@ This repository also contains singlecell RNASeq datasets from the Human Cell Atl
 
 **Types of Omics Datasets**
 
-- Single cell RNA-seq
+* Single cell RNA-seq
 
 **Usage**
 
@@ -256,10 +260,11 @@ In some datasets we have also manually curated the cell types present in the dat
 
 **Source**
 
-- Gene Expression Omnibus - https://www.ncbi.nlm.nih.gov/geo/
-- Human Cell Atlas- https://data.humancellatlas.org/
+* Gene Expression Omnibus - https://www.ncbi.nlm.nih.gov/geo/
+* Human Cell Atlas- https://data.humancellatlas.org/
 
 ## 1.3.6 TEDDY
+
 **Introduction**
 
 The TEDDY study - The Environmental Determinants of Diabetes in the Young - is looking for the causes of type 1 diabetes mellitus (T1DM). Research tells us that children who get diabetes have certain kind of genes that make them highly susceptible to getting diabetes. However, not all children who are in the high-risk category get diabetes.  It is believed that something happens to "triggers" a child with these risky genes to actually get diabetes. It is the purpose of this study to try and find out what are the triggers that cause children to get diabetes.
@@ -286,10 +291,10 @@ For each Case Index, we can have multiple samples under Control and also under C
 
 The sample [meta-data](ftp://www.metabolomicsworkbench.org/Studies/ST001386_TEDDY_GCTOF_study_design_data_dictionary.xlsx) for each child has the following attributes which can be set by the instant which is shown to be ‘IA’ positive and it is referred to as a ‘case’:
 
-- 'ia_case' -  a Boolean variable: 1 means it is positive for 'IA'
-- 'ia_case_ind_1' - it is a case-control pair ID that helps pair up the case instant (this one) with its control instant. Unique for all pairs.
-- 'ia_endptage_1' - this is the age in days when the persistent presence of 'IA' was confirmed (2 successive tests).
-- ‘sex’ - Gender
+*  *ia_case* -  a Boolean variable: 1 means it is positive for 'IA'
+*  *ia_case_ind_1* - it is a case-control pair ID that helps pair up the case instant (this one) with its control instant. Unique for all pairs.
+*  *ia_endptage_1* - this is the age in days when the persistent presence of 'IA' was confirmed (2 successive tests).
+*  *sex* - Gender
 
 The 'IA''s control counterpart also has a similar definition.
 
@@ -305,11 +310,12 @@ Pick a Case Index number that will pull up one Perturbation Instant and its corr
 
 **Source**
 
-- Case Study [ST001386](https://www.metabolomicsworkbench.org/data/DRCCMetadata.php?Mode=Study&StudyID=ST001386)
-- Case Study [ST001636](https://www.metabolomicsworkbench.org/data/DRCCMetadata.php?Mode=Study&StudyID=ST001636)
+* Case Study [ST001386](https://www.metabolomicsworkbench.org/data/DRCCMetadata.php?Mode=Study&StudyID=ST001386)
+* Case Study [ST001636](https://www.metabolomicsworkbench.org/data/DRCCMetadata.php?Mode=Study&StudyID=ST001636)
 
 
 ## 1.3.7 TCGA
+
 **Introduction**
 
 The Cancer Genome Atlas (TCGA) is a publicly funded project that aims to catalog and discover major cancer-causing genomic alterations to create a comprehensive “atlas” of cancer genomic profiles.
@@ -318,11 +324,11 @@ TCGA is cornerstone in cancer biology. It has enabled a deeper understanding of 
 
 **Types of Omics Datasets**
 
-- Transcriptomics (mRNA,miRNA)
-- Proteomics
-- Copy Number Alteration
-- Single Nucleotide Variations & Small Indels
-- Methylation
+* Transcriptomics (mRNA,miRNA)
+* Proteomics
+* Copy Number Alteration
+* Single Nucleotide Variations & Small Indels
+* Methylation
 
 **Usage**
 
