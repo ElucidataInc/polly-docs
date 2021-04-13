@@ -1,42 +1,75 @@
 site_name: Polly Documentation
 use_directory_urls: false
 nav:
-  - Home: index.md
   - Getting Started:
-    - Workspaces: Getting Started/Workspaces.md
-  - Apps:
-      - Introduction: Apps/Introduction.md
-      - Host Apps: Apps/Host Apps.md
-      - Metabolomic Data:
-        - El-MAVEN Phi Relative LC-MS: Apps/Metabolomic Data/El-MAVEN Phi Relative LC-MS.md
-        - MetScape: Apps/Metabolomic Data/MetScape.md
-        - FirstView: Apps/Metabolomic Data/FirstView.md
-        - Untargeted Pipeline: Apps/Metabolomic Data/Untargeted Pipeline.md
-        - Dual Mode Data Visualization: Apps/Metabolomic Data/Dual Mode Visualization.md
-        - QuantFit: Apps/Metabolomic Data/QuantFit.md
-        - El-MAVEN: Apps/Metabolomic Data/El-MAVEN.md
-        - Labeled LC-MS/MS Workfow: Apps/Metabolomic Data/Labeled LC-MSMS Workflow.md
-        - Labeled LC-MS Workflow: Apps/Metabolomic Data/Labeled LC-MS Workflow.md
-        - Compound Discoverer<sup>TM</sup> QuantFit: Apps/Metabolomic Data/CompoundDiscoverer QuantFit.md
-        - Polly-PeakML: Apps/Metabolomic Data/Polly-PeakML.md
-      - Screening Data: 
-        - CRISPR Screening: Apps/Screening Data/CRISPR Screening.md
-        - High Throughput Drug Screening: Apps/Screening Data/High Throughput Drug Screening.md
-      - Sequencing Data:  
-        - RNA Seq Workflow: Apps/Sequencing Data/RNA Seq Workflow.md
-      - Proteomic Data:
-        - Proteomics Workflow: Apps/Proteomic Data/Proteomics Workflow.md
-      - Lipidomic Data:
-        - Lipidomics Visualization Dashboard: Apps/Lipidomics Data/Lipidomics Visualization Dashboard.md
-      - Multi-omic Data:
-        - IntOmix: Apps/Multi-omic Data/IntOmix.md
-      - Data Studio:
-        - Introduction: Apps/Data Studio/Data Studio.md
-        - CCLE Correlation Analysis: Apps/Data Studio/CCLE Correlation Analysis.md
-  - Scaling Compute: 
-      - Polly CLI: Scaling compute/Polly CLI.md
-      - Notebooks: Scaling compute/Polly Notebooks.md
-  - Data Lake: Data Lake.md
+    - About Polly: Getting Started/About Polly.md  
+    - Before You Start:
+      - Privacy Policy: Getting Started/Privacy Policy.md
+      - Prequisites of UI and CLI: Getting Started/Prerequisites.md
+    - QuickStart:
+      - Onboarding Basics: Getting Started/index1.md
+      - Your Workspaces: Getting Started/Your Workspaces2.md
+      - Your Data: Getting Started/Your Data.md
+      - Your Collaborations: Getting Started/Your Collaborations.md
+  - DataLakes Hub:
+      - About Discover: DataLakeHub/About Discover.md
+      - About Curation: DataLakeHub/About Curation.md
+      - About Data Repositories: DataLakeHub/About Repositores.md
+      - Accessing Discover Programmagtically: DataLakeHub/Accessing Discover programmatically.md
+      - Accessing Data Through UI: DataLakeHub/Accessing Discover through Polly's interface.md
+  - Analyses:
+    - Polly Notebooks:
+      - About Polly Notebooks: Scaling compute/Notebook/About Polly Notebooks.md
+      - Accessing Polly Notebooks: Scaling compute/Notebook/Accessing Notebooks.md
+      - Pre-configured Environment: Scaling compute/Notebook/Preconfigured Env.md
+      - Computational Machines Available: Scaling compute/Notebook/Machines Available.md
+      - Getting Started With Notebooks: Scaling compute/Notebook/Getting Started with Notebooks.md
+    - Polly CLI:
+      - Getting Started with Polly CLI: Scaling compute/Polly CLI.md
+    - Polly Applications: 
+      - Application Features: Apps/Introduction.md
+      - CCLE Correlation Analysis Preset: Apps/CCLE Correlation Analysis.md
+      - Compound Discoverer<sup>TM</sup> QuantFit: Apps/Metabolomic Data/CompoundDiscoverer QuantFit.md
+      - CRISPR Screening: Apps/Screening Data/CRISPR Screening.md
+      - Discover: Apps/Polly Discover Application.md
+      - Dual Mode Data Visualization: Apps/Metabolomic Data/Dual Mode Visualization.md
+      - El-MAVEN: Apps/Metabolomic Data/El-MAVEN.md
+      - El-MAVEN Phi Relative LC-MS: Apps/Metabolomic Data/El-MAVEN Phi Relative LC-MS.md
+      - FirstView: Apps/Metabolomic Data/FirstView.md
+      - GTEx Correlation and Enrichment Analysis Preset: Apps/GTEX preset.md
+      - GTEX Discover Application: Apps/GTEX Discover.md
+      - High Throughput Drug Screening: Apps/Screening Data/High Throughput Drug Screening.md
+      - IntOmix: Apps/Multi-omic Data/IntOmix.md
+      - Labeled LC-MS/MS Workfow: Apps/Metabolomic Data/Labeled LC-MSMS Workflow.md
+      - Labeled LC-MS Workflow: Apps/Metabolomic Data/Labeled LC-MS Workflow.md
+      - Labeled LC-MS Analysis Preset: Apps/labeled_lcms_analysis.md
+      - Lipidomics Data Analysis Preset: Apps/lipidomics_data_analysis.md
+      - Lipidomics Visualization Dashboard: Apps/Lipidomics Data/Lipidomics Visualization Dashboard.md
+      - Metabolomics Data Analysis Preset: Apps/metabolomics_data_analysis.md
+      - MetScape: Apps/Metabolomic Data/MetScape.md
+      - Proteomics Enrichment Analysis Preset: Apps/Proteomics Enrichment Analysis.md
+      - Proteomics Workflow: Apps/Proteomic Data/Proteomics Workflow.md
+      - QuantFit: Apps/Metabolomic Data/QuantFit.md
+      - RNA Seq Workflow: Apps/Sequencing Data/RNA Seq Workflow.md
+      - Single Cell Visualization: Apps/Single Cell Visualization.md
+      - TraceFinder Downstream Analysis Preset: Apps/tracefinder_preset.md
+      - Untargeted Pipeline: Apps/Metabolomic Data/Untargeted Pipeline.md
+    - Data Studio:
+      - About DataStudio: Apps/Data Studio/Datastudio Intro.md
+      - DataStudio Journeys: Apps/Data Studio/Studio Journeys.md
+      - DataStudio Tutorial: Apps/Data Studio/Studio Tutorial.md
+      - Dashboarding and Reporting: Apps/Data Studio/Dashboard.md
+  - Tech Ecosystem:
+    - Polly Architecture: TechEcosystem/Polly Architecture.md
+    - Security and Data Transfer: TechEcosystem/Data Security.md
+    - Disaster Recovery: TechEcosystem/polly_disaster_recovery_mar_2021.md
+    - Docker Building Guidelines: TechEcosystem/Docker Building guidelines.md
+    - Docker Management: TechEcosystem/Docker Management.md
+    - Running Dockerized Jobs: TechEcosystem/Running Dockerized Jobs.md
+    - Jobs Execution: TechEcosystem/Job Execution.md
+    - Gists: TechEcosystem/Gists.md
+    - Host Apps: Apps/Host Apps.md
+    - Polly-PeakML: Apps/Metabolomic Data/Polly-PeakML.md
   - Release Notes: Release Notes.md
 theme: readthedocs
 site_favicon: img/elucidata.ico
