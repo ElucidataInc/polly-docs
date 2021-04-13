@@ -1,8 +1,6 @@
 Polly is a cloud based Software as a Service (SAAS) solution. Below diagram details out various layers of Polly.
 
-![Polly Architecture](../img/Tech/PollyArchitecture_v1.png) <center>**Figure 1.** Polly Architecture</center>
-
-
+![Polly Architecture](../img/Architecture/PollyArchitecture_v1.png) <center>**Figure 1.** Polly Architecture</center>
 
 ## Infrastructure
 
@@ -20,6 +18,6 @@ Various parts of Polly are built and deployed as micro services. This allows for
 
 Polly’s micro-services architecture pattern allows the development teams to choose different technologies that are best suited to those parts. Polly has been built ground up using Python3.6, Angular11, NodeJS, R & R-Shiny.
 
-### 3rd Party Integrations
+### Third Party Integrations
 
 File uploads from Polly front-end is powered by [Filestack](https://www.filestack.com/ "https://www.filestack.com/"). [Sentry](https://sentry.io/welcome/ "https://sentry.io/welcome/") integration allows Polly developers to monitor errors and fix them faster. [Mixpanel](https://mixpanel.com/ "https://mixpanel.com/") is used for gathering usage analytics which help product owners refine and improve platform capabilities and user journeys.

@@ -1,4 +1,4 @@
-# Getting Started with Data Studio
+## Getting Started with Data Studio
 
 The Studio Core has three main panels:
 
@@ -10,7 +10,7 @@ The Studio Core has three main panels:
 
 ![Studio Panels](../../img/Datastudio/1.png)
 
-## Add and Configure Components
+### Add and Configure Components
 
 In order to add a component to your workflow, click on the *Select Component* option present in the parameter panel. You can select the desired component from the dropdown menu. You can search for the component as well from the search option.
 
@@ -20,7 +20,7 @@ To add subsequent components, Click on the *NEW* option present in the component
 
 ![New component](../../img/Datastudio/3.png)
 
-## Adding Input Files
+### Adding Input Files
 
 Once a component is selected it is required to add the input files. In order to do that, click on the *Browse* option. A slide menu will appear displaying the data files present in the selected workspace. Select the file and click on *Import*. Your file will be added.
 
@@ -30,7 +30,7 @@ Once a component is selected it is required to add the input files. In order to 
 
 ![Input files](../../img/Datastudio/4.png)
 
-## Executing the Components
+### Executing the Components
 
 Each component comes with its associated parameters that are displayed in the parameter panel. Fill in all the mandatory fields using the dropdown menu or using the checkboxes. Once the parameters are specified, click on the *Run Task* option to execute your component.
 
@@ -42,7 +42,7 @@ You can have a look at the state of your execution with the displayed status bar
 
 The default visualization of the component will be generated on the *Visualization Panel*.
 
-## Chart Selection
+### Chart Selection
 
 If there are multiple visualizations for a particular component, you can use the *Select a Chart* option to choose the visualization you want displayed on your screen. At a time only a single visualization can be displayed on the *Visualization Panel*.
 
@@ -51,7 +51,7 @@ If there are multiple visualizations for a particular component, you can use the
 In order to look at all the visualization simultaneously, save your visualization to a dashboard.
 
 
-## Other Useful Features
+### Other Useful Features
 
 **Restoring the analysis**
 
