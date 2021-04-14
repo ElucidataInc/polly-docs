@@ -1,5 +1,3 @@
-## 2.2 Accessing Discover programmatically
-
 It is possible to interact with the Discover repositories programmatically by using **DiscoverPy**- a python package developed by us. DiscoverPy comes pre-installed in all Polly notebooks. As of now, it can be used only in a Polly environment.
 
 ### 2.2.1 Elastic search indices in Discover
@@ -22,7 +20,7 @@ discover</code></pre>
 
 <pre><code>discover.get_repositories()</code></pre>
 
-![data repository list](../img/Discover1/discover_get_repo.png) #replace
+![data repository list](../img/Discover1/discover_get_repo.png) 
 
 * Next, we need to set the context to a repository, so that all the subsequent queries will be run against that repository.
 There is another parameter mode, that we can set for

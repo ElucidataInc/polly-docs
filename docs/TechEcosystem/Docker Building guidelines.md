@@ -1,5 +1,3 @@
-##Docker Building Guidelines
-
 While creating a docker to be run on Polly, the following must be taken care of.
 
 *   Dockers must be present in either Docker Hub or Amazon ECR. 

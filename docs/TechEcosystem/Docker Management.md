@@ -1,5 +1,3 @@
-##Docker Management
-
 Polly has its own docker repository where dockers can be managed. The advantage of the Polly Docker Repository is that these dockers can also be stored within the same platform as data, code, and analyses and to access the stored dockers all you need is the Polly login credential.
 
 **Docker login and logout**

@@ -1,29 +1,28 @@
 site_name: Polly Documentation
 use_directory_urls: false
 nav:
-  - Getting Started:
-    - About Polly: Getting Started/About Polly.md  
-    - Before You Start:
+  - About Polly: index.md  
+  - Before You Start:
       - Privacy Policy: Getting Started/Privacy Policy.md
       - Prequisites of UI and CLI: Getting Started/Prerequisites.md
-    - QuickStart:
-      - Onboarding Basics: Getting Started/index1.md
+  - QuickStart:
+      - Accessing The Platform: Getting Started/index1.md
       - Your Workspaces: Getting Started/Your Workspaces2.md
       - Your Data: Getting Started/Your Data.md
       - Your Collaborations: Getting Started/Your Collaborations.md
-  - DataLakes Hub:
+  - Discover:
       - About Discover: DataLakeHub/About Discover.md
       - About Curation: DataLakeHub/About Curation.md
-      - About Data Repositories: DataLakeHub/About Repositores.md
+      - About DataLakes: DataLakeHub/About Repositores.md
       - Accessing Discover Programmagtically: DataLakeHub/Accessing Discover programmatically.md
       - Accessing Data Through UI: DataLakeHub/Accessing Discover through Polly's interface.md
   - Analyses:
     - Polly Notebooks:
-      - About Polly Notebooks: Scaling compute/Notebook/About Polly Notebooks.md
-      - Accessing Polly Notebooks: Scaling compute/Notebook/Accessing Notebooks.md
-      - Pre-configured Environment: Scaling compute/Notebook/Preconfigured Env.md
-      - Computational Machines Available: Scaling compute/Notebook/Machines Available.md
-      - Getting Started With Notebooks: Scaling compute/Notebook/Getting Started with Notebooks.md
+      - About Polly Notebooks: Scaling compute/Polly Notebooks5.md
+      - Accessing Polly Notebooks: Scaling compute/Polly Notebooks1.md
+      - Pre-configured Environment: Scaling compute/Polly Notebooks2.md
+      - Computational Machines Available: Scaling compute/Polly Notebooks3.md
+      - Getting Started With Notebooks: Scaling compute/Polly Notebooks4.md
     - Polly CLI:
       - Getting Started with Polly CLI: Scaling compute/Polly CLI.md
     - Polly Applications: 

@@ -1,28 +1,15 @@
-#Welcome to Polly!
+###   **Sign up for the platform**
 
-Every year, vast amounts of biological multi-omics data are being generated in academic labs and organizations worldwide. This data holds tremendous potential for reuse but is scattered across multiple, disparate sources and lacks standardization. Thus, the availability of data does not equate to its easy usability, making the need for an efficient means of exploring molecular data an immediate necessity. 
+To sign in to the Polly platform, you must have an account. Account credentials can be generated for both temporary, limited access as well as enterprise accounts. Reach out to our team at [polly@elucidata.io](mailto:polly@elucidata.io) for your login credentials.
 
-Polly is an AI-enabled cloud platform that provides access to FAIR multi-omics data from public and proprietary sources. Data from across repositories, databases, and proprietary datasets is curated using ML models, ensuring that it is machine-actionable and analysis-ready. Polly’s cloud infrastructure enables seamless data analysis, visualization, and sharing by offering a toolbox of scalable, easy to customize, bioinformatics pipelines.
+**Note:**
 
-Polly creates a unique, centralized ecosystem that enables a diverse team of biologists, bioinformaticians, and scientific leaders to share and collaborate on workspaces, data, and insights.
-
-This starter guide provides a broad overview of the platform to get you started on an exciting journey of research and discovery with your data.
-
-##Accessing the platform
-
-*   **Sign up for the platform**
-
-    To sign in to the Polly platform, you must have an account. Account credentials can be generated for both temporary, limited access as well as enterprise accounts. Reach out to our team at [polly@elucidata.io](mailto:polly@elucidata.io) for your login credentials.
-
-    **Note:**
-
-    *    We recommend using Google Chrome for an optimized experience.
+*    We recommend using Google Chrome for an optimized experience.
     
-    <br/>
 
-*   **Login to the platform**
+###   **Login to the platform**
 
-    You can sign in Polly with the provided credentials: Username and Password, connected to your account, and then click *Sign in*. When logging in for the first time, you will be prompted to reset your password. If you do not sign out when you leave Polly, you will be automatically authenticated for your next visit.
+You can sign in Polly with the provided credentials: Username and Password, connected to your account, and then click *Sign in*. When logging in for the first time, you will be prompted to reset your password. If you do not sign out when you leave Polly, you will be automatically authenticated for your next visit.
 
 ![Login](../img/Home/Login.png)
 

@@ -1,4 +1,3 @@
-## Elucidata Privacy Policy
 
 Elucidata Corporation and its affiliates (“Elucidata,” “we,” “our,” and/or “us”) values the privacy of individuals who use our, websites, and related services (collectively, our “Services). This privacy policy (the “Privacy Policy”) explains how we collect, use, and share information from users of our Services (“Users”). By using our Services, you agree to the collection, use, disclosure, and procedures this Privacy Policy describes.
 

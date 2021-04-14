@@ -1,4 +1,3 @@
-##Pre-Configured Environments
 
 Polly supports various notebook environments in the form of dockers to cater to the needs of different users. Each of the dockers is built according to various data analytic needs ranging from basic scripting, processing large data or training and testing of ML models. The menu to select the notebook environments will pop-up whenever you create or upload the notebook and opens it for the first time.
 
@@ -18,3 +17,5 @@ The various notebook environments supported are as follows:
 | Data Exploration | R and python for general data analysis | All libraries from base R docker | All libraries from base python docker |   |
 | RNA-seq Downstream | Transcriptomics Analysis | <ul><li>All libraries from R docker</li><li>limma</li><li>affy</li><li>DESeq2</li><li>edgeR</li><li>cqn</li><li>sva</li><li>BioMart</li><li>mygene</li><li>amritr</li><li>Boruta</li><li>fgsea</li><li>gsva</li><li>ReactomePA</li><li>xCell</li><li>singleR</li><li>enrichR</li><li>org.Hs.eg.db</li><li>org.Mm.eg.db</li><li>Annotation dbi</li><li>clusterProfiler</li><ul> | All libraries from base python docker |   |
 | Metabolomics | Metabolomics Analysis | <ul><li>[CAMERA](https://github.com/sneumann/CAMERA, https://www.bioconductor.org/packages/release/bioc/html/CAMERA.html)</li><li>[XCMS](https://www.bioconductor.org/packages/release/bioc/html/xcms.html)</li><li>limma</li><li>matrixStats</li><li>stats</li><li>stringr</li><li>ggplot2</li><li>plotly</li><li>ggsci</li><li>latex2exp</li><li>dplyr</li><li>ggrepel</li><li>SuperExactTest</li><li>UpSetR</li><li>[PollyCommonR](https://bitbucket.org/elucidatainc/pollycommonr/src/master/PollyCommonR/)</li><li>mapGCT</li><li>MetaboAnalystR</li><li>KEGGREST</li><li>[Pathview](https://www.bioconductor.org/packages/release/bioc/html/pathview.html)</li><li>KEGGgraph</li><li>[Morpheus](https://github.com/cmap/morpheus.R)</li><li>Pca3d</li><li>X13CMS</li><li>Phantasus</li><li>MSnbase</li><li>MAIT</li><li>cmapR</li><li>xMSannotator</li><ul> | All libraries from base python docker |   |
+
+
