@@ -1,5 +1,3 @@
-##Execute Job
-
 To execute the job, execute the following command
 
 <pre><code>polly jobs submit</code></pre>

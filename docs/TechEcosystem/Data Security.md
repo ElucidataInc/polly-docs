@@ -1,5 +1,3 @@
-# Data security
-
 It can’t be stressed enough how important Data is. And so protecting it against any kind of theft is of utmost priority. We follow the standard norms and best practices to ensure customer data is safe with us. Steps we take to ensure data safety and integrity.
 
 *  Private Databases 

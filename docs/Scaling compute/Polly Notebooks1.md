@@ -1,8 +1,7 @@
-#Accessing Polly Notebooks
 
 Navigate to the [Polly Workspaces](https://docs.elucidata.io/Getting%20Started/Workspaces.html) in which the analysis needs to be performed. The notebooks of this workspace can accessed from the middle panel.
 
-![Polly Workspaces](../img/Notebooks1/Workspace.png "Polly Workspaces") <center>**Figure 1.** Polly Workspaces</center>
+![Polly Workspaces](../img/Notebooks/Workspace.png "Polly Workspaces") <center>**Figure 1.** Polly Workspaces</center>
 
 You can access Polly Notebooks in three ways:
 
@@ -16,7 +15,7 @@ You can access Polly Notebooks in three ways:
 
 The notebook can be uploaded from the local system as well as from the various cloud storage services (Dropbox, Google Drive and Box). To upload from local system, files can be dragged and dropped. To upload from various cloud storage services, select the relevant option, login to the service and select the files to be uploaded.
 
-![Window to import notebook from local or other cloud storage services](../img/Notebooks1/Upload.png) <center>**Figure 4.** Window to import notebook from local or other cloud storage services</center>
+![Window to import notebook from local or other cloud storage services](../img/Notebooks/Upload.png) <center>**Figure 4.** Window to import notebook from local or other cloud storage services</center>
 
 *   **Open an existing notebook:** Click on the name of any existing notebook to *Edit and Launch* it.
 If you are running the notebook for the first time, the option *Edit and Launch* would appear as a default selection to launch the selected notebook. You are required to select an environment and a machine to run the given notebook, oly after these selections are done you can launch the notebook.
@@ -30,7 +29,6 @@ If you are running the notebook for the first time, the option *Edit and Launch*
 *    Under the edit option, you can only change the machine type. The docker environment would remain the same as the one selected when you run the notebook for the first time.
 
 ![Opening a notebook](../img/Notebooks/Opennotebook2.png) <center>**Figure 6.** Opening an old notebook</center>
-
 
 ##Other Useful Features
 

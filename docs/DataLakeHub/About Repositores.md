@@ -1,4 +1,4 @@
-# 1.3 Index of repositories on Polly Discover
+# 1.3 Index of DataLakes on Polly Discover
 
 ## 1.3.1 GEO
 

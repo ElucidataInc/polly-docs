@@ -1,5 +1,3 @@
-# Gists
-
 
 ## I. Automated RNA-seq workflow on Polly CLI:
 
