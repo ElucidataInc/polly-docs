@@ -1,5 +1,3 @@
-##Running Dockerized Jobs
-
 Polly CLI can run dockerized jobs on managed Polly infrastructure. Polly infrastructure will scale computational resources with increased usage. All you need to do is submit a job and rest is taken care of by Polly. 
 
 ##Create job description JSON file
