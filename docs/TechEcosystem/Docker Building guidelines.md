@@ -63,3 +63,10 @@ While creating a docker to be run on Polly, the following must be taken care of.
 
 *   [Here](https://gist.github.com/GeorgeSabu/8a3251e263d93b08413ce2c56d8af45d "https://gist.github.com/GeorgeSabu/8a3251e263d93b08413ce2c56d8af45d") is an example gist showing how input data for a job can be taken from and output stored back to Polly Workspaces.
 
+##Polly CLI help
+
+If help is needed for any command, just type `--help` at the end of the command and execute.
+
+![Polly CLI Help](../img/PollyCLI/8.png "Polly CLI Help") <center>**Figure 13.** Polly CLI Help</center>
+
+

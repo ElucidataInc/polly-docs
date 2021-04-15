@@ -35,7 +35,7 @@ The data files can be downloaded from [DepMap portal](https://depmap.org/portal/
 
 # Tutorial
 
-Select *CCLE Correlation Analysis App* from the dashboard under the *Studio Presets* tab.
+Select *CCLE Correlation Analysis App* from the dashboard under the *Studio Applications* tab.
 
 ![Dashboard](../../img/ccle/1.png)<center>**Figure 1.** Polly Dashboard</center>
 

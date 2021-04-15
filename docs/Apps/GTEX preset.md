@@ -35,7 +35,7 @@ Data can be uploaded from the GTEx data lake on Polly. The user inputs required 
 
 ### Tutorial
 
-Select the *GTEx Correlation and Enrichment Analysis App* from the dashboard under the *Studio Presets* tab.
+Select the *GTEx Correlation and Enrichment Analysis App* from the dashboard under the *Studio Applications* tab.
 
 ![GTEx](../img/GTEX./1.png) <center> **Figure 1.** Select the GTEx Preset </center>
 

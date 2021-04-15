@@ -8,13 +8,12 @@ nav:
   - QuickStart:
       - Accessing The Platform: Getting Started/index1.md
       - Your Workspaces: Getting Started/Your Workspaces2.md
-      - Your Data: Getting Started/Your Data.md
+      - Your Data and Analyses: Getting Started/Your Data.md
       - Your Collaborations: Getting Started/Your Collaborations.md
   - Discover:
       - About Discover: DataLakeHub/About Discover.md
-      - About Curation: DataLakeHub/About Curation.md
-      - About DataLakes: DataLakeHub/About Repositores.md
-      - Accessing Discover Programmagtically: DataLakeHub/Accessing Discover programmatically.md
+      - Index of DataLakes: DataLakeHub/About Repositores.md
+      - Accessing Data Programmagtically: DataLakeHub/Accessing Discover programmatically.md
       - Accessing Data Through UI: DataLakeHub/Accessing Discover through Polly's interface.md
   - Analyses:
     - Polly Notebooks:
@@ -23,10 +22,18 @@ nav:
       - Pre-configured Environment: Scaling compute/Polly Notebooks2.md
       - Computational Machines Available: Scaling compute/Polly Notebooks3.md
       - Getting Started With Notebooks: Scaling compute/Polly Notebooks4.md
+      - Gists: TechEcosystem/Gists1.md
     - Polly CLI:
-      - Getting Started with Polly CLI: Scaling compute/Polly CLI.md
+      - Getting Started with Polly CLI: Scaling compute/Polly CLI 1.md
+      - Docker Building Guidelines: TechEcosystem/Docker Building guidelines.md
+      - Docker Management: TechEcosystem/Docker Management.md
+      - Running Dockerized Jobs: TechEcosystem/Running Dockerized Jobs.md
+      - Jobs Execution: TechEcosystem/Job Execution.md
+      - Gists: TechEcosystem/Gists2.md
     - Polly Applications: 
       - Application Features: Apps/Introduction.md
+      - Host Apps: Apps/Host Apps.md
+      - Polly-PeakML: Apps/Metabolomic Data/Polly-PeakML.md
       - CCLE Correlation Analysis Preset: Apps/CCLE Correlation Analysis.md
       - Compound Discoverer<sup>TM</sup> QuantFit: Apps/Metabolomic Data/CompoundDiscoverer QuantFit.md
       - CRISPR Screening: Apps/Screening Data/CRISPR Screening.md
@@ -61,14 +68,7 @@ nav:
   - Tech Ecosystem:
     - Polly Architecture: TechEcosystem/Polly Architecture.md
     - Security and Data Transfer: TechEcosystem/Data Security.md
-    - Disaster Recovery: TechEcosystem/polly_disaster_recovery_mar_2021.md
-    - Docker Building Guidelines: TechEcosystem/Docker Building guidelines.md
-    - Docker Management: TechEcosystem/Docker Management.md
-    - Running Dockerized Jobs: TechEcosystem/Running Dockerized Jobs.md
-    - Jobs Execution: TechEcosystem/Job Execution.md
-    - Gists: TechEcosystem/Gists.md
-    - Host Apps: Apps/Host Apps.md
-    - Polly-PeakML: Apps/Metabolomic Data/Polly-PeakML.md
+    - Data Recovery: TechEcosystem/polly_disaster_recovery_mar_2021.md
   - Release Notes: Release Notes.md
 theme: readthedocs
 site_favicon: img/elucidata.ico
