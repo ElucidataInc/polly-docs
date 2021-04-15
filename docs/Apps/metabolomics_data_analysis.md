@@ -3,9 +3,9 @@
 
 ## Overview
 
-The Metabolomics Data Analysis preset allows you to perform downstream analysis on the metabolomic data hosted on any of the data lakes on Polly. The preset provides a variety of tools to visualize the data, as well as allows you to perform statistical analysis, thereby providing an efficient analysis of the data to get actionable insights.
+The Metabolomics Data Analysis application allows you to perform downstream analysis on the metabolomic data hosted on any of the data lakes on Polly. The preset provides a variety of tools to visualize the data, as well as allows you to perform statistical analysis, thereby providing an efficient analysis of the data to get actionable insights.
 
-## Scope of the Preset
+## Scope of the Application
 
 * Allows the metabolomic data to be used from any of the data lakes on Polly.
 * Performs quality checks using PCA analysis.
@@ -17,14 +17,14 @@ The Metabolomics Data Analysis preset allows you to perform downstream analysis 
 
 ## User Input
 
-The following are the inputs of the preset, which needs to be specified if the user launches the preset from the Applications interface. The fields are pre-populated if it is launched from a data lake. The inputs are:
+The following are the inputs of the application, which needs to be specified if the user launches the application from the Applications interface. The fields are pre-populated if it is launched from a data lake. The inputs are:
 * *Repo ID(repo_id)*: The repo id of the data lake from which you want to fetch the data.
 * *Dataset ID(dataset_id)*: The name of the dataset you want to fetch from the data lake.
 * *Dataset ID Column(dataset_id_col)*: The column which contains the names of the datasets('dataset_id' for all the data lakes).
 
 ## Tutorial
 
-Select *Metabolomics Data Analysis* from the dashboard under the Studio Presets tab.
+Select *Metabolomics Data Analysis* from the dashboard under the Studio Applications tab.
 
 ![Polly Dashboard](../img/Metabolomics Data Analysis/metabolomics_preset_1.png) <center>**Figure 1.** Polly Dashboard</center>
 
@@ -34,7 +34,7 @@ Select an existing Workspace from the drop-down and provide the Name of the Sess
 
 ## Fetching dataset
 
-The first component is the *Data picker*, which allows you to enter the repo from which you want to use the data, and the dataset you want to use in the preset for the analysis. These inputs are filled in a Global input pop-up which comes up just after launching the preset.
+The first component is the *Data picker*, which allows you to enter the repo from which you want to use the data, and the dataset you want to use in the preset for the analysis. These inputs are filled in a Global input pop-up which comes up just after launching the application.
 
 ![Global Inputs](../img/Metabolomics Data Analysis/metabolomics_preset_3.png) <center>**Figure 3.** Global Inputs</center>
 

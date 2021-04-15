@@ -40,7 +40,7 @@ Proteomics is the scientific discipline, which mainly analyzes the presence and 
 
 # Tutorial
 
-Select *Proteomics Enrichment Analysis* from the dashboard under the *Studio Presets* tab.
+Select *Proteomics Enrichment Analysis* from the dashboard under the *Studio Applications* tab.
 
 ![Polly Dashboard](../img/Notebooks/1.GettingStartedSelectApp.png "Polly Dashboard") <center>**Figure 1.** Polly Dashboard</center>
 
