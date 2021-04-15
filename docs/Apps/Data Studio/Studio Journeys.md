@@ -20,7 +20,7 @@ Studio core allows you to build and use your own custom workflow in Data Studio.
 
 **Report:** Ultimately create a custom version of the visualization dashboard to represent the report from the workflow. Easily annotate your report, apply styles, and color themes to make your data story work.
 
-**Studio Preset**
+**Studio Applications**
 
 Once the goal and the steps of the workflow are defined in Data Studio. It can be exported as a Studio Preset that will include a predefined series of steps that are required to complete an end-to-end process.
 

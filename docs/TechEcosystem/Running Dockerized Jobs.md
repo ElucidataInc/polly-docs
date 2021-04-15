@@ -45,3 +45,19 @@ If computational power required is less than 2 vCPUs and 8 GB RAM, use the keys 
 *   **name:** Name you want to provide to the job has to be mentioned in this key.
 
 *   **command:** Any commands to be executed after the docker has been run can be mentioned in this key.
+
+
+##Polly CLI help
+
+If help is needed for any command, just type `--help` at the end of the command and execute.
+
+![Polly CLI Help](../img/PollyCLI/8.png "Polly CLI Help") <center>**Figure 13.** Polly CLI Help</center>
+
+
+## Some useful gists
+
+*   [Accessing Polly files in and out of a job](https://gist.github.com/GeorgeSabu/8a3251e263d93b08413ce2c56d8af45d)
+
+*   [Running a cluster of jobs with different parameters](https://gist.github.com/GeorgeSabu/e89891da1d86fbaa3afa0655a4ede899)
+
+*   [Bash script to identify when a job finishes](https://gist.github.com/GeorgeSabu/4fbc359fa9ee2bf4d3cb05df3b60db81)

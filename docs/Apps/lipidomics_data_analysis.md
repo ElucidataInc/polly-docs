@@ -3,9 +3,9 @@
 
 ## Overview
 
-The *Lipidomics Data Analysis* preset allows you to perform downstream analysis on the lipidomics data hosted on any of the data lakes on Polly. The preset provides a variety of tools to visualize the data, as well as allows you to perform statistical analysis, thereby providing an efficient analysis of the data to get actionable insights.
+The *Lipidomics Data Analysis* application allows you to perform downstream analysis on the lipidomics data hosted on any of the data lakes on Polly. The preset provides a variety of tools to visualize the data, as well as allows you to perform statistical analysis, thereby providing an efficient analysis of the data to get actionable insights.
 
-## Scope of the Preset
+## Scope of the Application
 
 *  Allows any lipidomic data to be used from any of the data lakes on Polly.
 *  Performs quality checks using PCA analysis.
@@ -17,14 +17,14 @@ The *Lipidomics Data Analysis* preset allows you to perform downstream analysis 
 
 ## User Input
 
-The following are the inputs of the preset, which needs to be specified if the user launches the preset from the Applications interface. The fields are pre-populated if it is launched from a data lake. The inputs are:
+The following are the inputs of the application, which needs to be specified if the user launches the application from the Applications interface. The fields are pre-populated if it is launched from a data lake. The inputs are:
 * *Repo ID(repo_id)*: The repo id of the data lake from which you want to fetch the data.
 * *Dataset ID(dataset_id)*: The name of the dataset you want to fetch from the data lake.
 * *Dataset ID Column(dataset_id_col)*: The column which contains the names of the datasets('dataset_id' for all the data lakes).
 
 ## Tutorial
 
-Select *Lipidomics Data Analysis* from the dashboard under the Studio Presets tab.
+Select *Lipidomics Data Analysis* from the dashboard under the Studio Applications tab.
 
 ![Polly Dashboard](../img/Lipidomics Data Analysis/lipidomics_preset_1.png) <center>**Figure 1.** Polly Dashboard</center>
 

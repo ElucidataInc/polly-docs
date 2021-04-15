@@ -81,3 +81,19 @@ Example commands to pull a docker would be:
 <pre><code>docker.polly.elucidata.io/elucidata/16June:latest</code></pre>
 
 <pre><code>docker pull docker.polly.elucidata.io/elucidata/16june@sha256:5747316366b8cc9e3021cd7286f42b2d6d81e3d743e2ab571f55bcd5df788cc8</code></pre>
+
+
+##Polly CLI help
+
+If help is needed for any command, just type `--help` at the end of the command and execute.
+
+![Polly CLI Help](../img/PollyCLI/8.png "Polly CLI Help") <center>**Figure 13.** Polly CLI Help</center>
+
+
+## Some useful gists
+
+*   [Accessing Polly files in and out of a job](https://gist.github.com/GeorgeSabu/8a3251e263d93b08413ce2c56d8af45d)
+
+*   [Running a cluster of jobs with different parameters](https://gist.github.com/GeorgeSabu/e89891da1d86fbaa3afa0655a4ede899)
+
+*   [Bash script to identify when a job finishes](https://gist.github.com/GeorgeSabu/4fbc359fa9ee2bf4d3cb05df3b60db81)

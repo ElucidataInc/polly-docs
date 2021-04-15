@@ -1,9 +1,9 @@
 # Introduction
 
 ## Overview
-The *TraceFinder Downstream Analysis* preset performs the downstream analysis of the LC-MS data from the TraceFinder. It allows the user to do various statistical analyses to find valuable insights from the data.
+The *TraceFinder Downstream Analysis* application performs the downstream analysis of the LC-MS data from the TraceFinder. It allows the user to do various statistical analyses to find valuable insights from the data.
 
-### Scope of the Preset
+### Scope of the Application
 
 * LC-MS data from TraceFinder can be used for the downstream analysis.
 * Performs quality checks using PCA analysis.
@@ -22,7 +22,7 @@ The user needs to upload the following files to the workspace
 
 ## Tutorial
 
-Select the *TraceFinder Downstream analysis* preset from the *Studio Preset* section.
+Select the *TraceFinder Downstream analysis* application from the *Studio Applications* section.
 
 ![tf_images](../img/tf_images/Tracefinder_preset_1.png)
 
