@@ -1,5 +1,3 @@
-# 1.3 Index of DataLakes on Polly Discover
-
 ## 1.3.1 GEO
 
 **Introduction**
