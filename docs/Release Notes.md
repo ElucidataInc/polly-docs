@@ -1,9 +1,53 @@
 #Release Notes
 
+<!--March 26th, 2021-->
+
+<details open>
+<summary><font size="+1"><b>March 26th, 2021</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>TEDDY (The Environmental Determinants of Diabetes in the Young) and DEPMAP (Dependency Map) Data Lakes have been added on Polly.</li>
+    <li>Introduced option to directly export data to the workspace from a Studio Preset.</li>
+    <li>Added 37,177 new curated transcriptomics and single cell datasets to different Data Lakes.</li>
+  </ul>
+  <p class="update-button">Update</p>
+  <ul>
+    <li>Updated Polly Login User Interface.</li>
+    <li>Added additional filters to TEDDY Data Lake.</li>
+    <li>Resolved issue with app hosting infrastructure to increase stability of apps.</li>
+  </ul>
+</details>
+
+<hr>
+
+
+
+
+
+
+<!--March 12th, 2021-->
+
+<details>
+<summary><font size="+1"><b>March 12th, 2021</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>Introduced Docker building feature on <a href="https://docs.elucidata.io/Scaling%20compute/Polly%20CLI.html#docker-management">Polly CLI</a> which enable users to build dockers, check their build status and logs and push dockers to Polly.</li>
+    <li>Added 11,470 new curated transcriptomics and single cell datasets to different Data Lakes.</li>
+  </ul>
+  <p class="update-button">Update</p>
+  <ul>
+    <li>Better accessibility to datasets within OmixWiki with accessibility to metadata filtering options.</li>
+  </ul>
+</details>
+
+<hr>
+
 
 <!--February 26th, 2021-->
 
-<details open>
+<details>
 <summary><font size="+1"><b>February 26th, 2021</b></font></summary>
 <br>
   <p class="new-button">New</p>
@@ -189,7 +233,7 @@
   <ul>
     <li>Hosted our first <a href="https://elucidata.io/ugm/">User Group Meeting</a>.</li>
     <li>Introduced our public platform <a href="https://omixwiki.elucidata.io/dashboard">OmixWiki</a>, showcasing top 100 cited COVID-19 publications with end to end omics analysis.</li>
-    <li>Released the newest version of <a href="https://elucidata.io/ugm/">El-MAVEN v0.12.0</a>.</li>
+    <li>Released the newest version of <a href="https://github.com/ElucidataInc/ElMaven/releases">El-MAVEN v0.12.0</a>.</li>
   </ul>
   <p class="update-button">Update</p>
   <ul>
