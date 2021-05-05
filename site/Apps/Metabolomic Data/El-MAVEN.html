@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/elucidata.ico">
+  
+  <title>El-MAVEN - Polly Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "El-MAVEN";
+    var mkdocs_page_input_path = "Apps/Metabolomic Data/El-MAVEN.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../index.html" class="icon icon-home"> Polly Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../index.html">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Getting Started</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Getting Started/Workspaces.html">Workspaces</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Apps</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Introduction.html">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Host Apps.html">Host Apps</a>
+                </li>
+                <li class=" current">
+                    
+    <span class="caption-text">Metabolomic Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="El-MAVEN Phi Relative LC-MS.html">El-MAVEN Phi Relative LC-MS</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="MetScape.html">MetScape</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="FirstView.html">FirstView</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="Untargeted Pipeline.html">Untargeted Pipeline</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="Dual Mode Visualization.html">Dual Mode Data Visualization</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="QuantFit.html">QuantFit</a>
+                </li>
+                <li class="toctree-l3 current">
+                    
+    <a class="current" href="El-MAVEN.html">El-MAVEN</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l4"><a href="#introduction">Introduction</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#overview">Overview</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l4"><a href="#getting-started">Getting Started</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#el-maven">El-MAVEN</a></li>
+        
+            <li><a class="toctree-l5" href="#msconvert">MSConvert</a></li>
+        
+            <li><a class="toctree-l5" href="#browser">Browser</a></li>
+        
+            <li><a class="toctree-l5" href="#terminal">Terminal</a></li>
+        
+            <li><a class="toctree-l5" href="#accessing-directories">Accessing directories</a></li>
+        
+            <li><a class="toctree-l5" href="#instance-termination">Instance Termination</a></li>
+        
+            <li><a class="toctree-l5" href="#restore-analysis">Restore Analysis</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="Labeled LC-MSMS Workflow.html">Labeled LC-MS/MS Workfow</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="Labeled LC-MS Workflow.html">Labeled LC-MS Workflow</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="CompoundDiscoverer QuantFit.html">Compound Discoverer<sup>TM</sup> QuantFit</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Screening Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Screening Data/CRISPR Screening.html">CRISPR Screening</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Screening Data/High Throughput Drug Screening.html">High Throughput Drug Screening</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Sequencing Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Sequencing Data/RNA Seq Workflow.html">RNA Seq Workflow</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Proteomic Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Proteomic Data/Proteomics Workflow.html">Proteomics Workflow</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Lipidomic Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Lipidomics Data/Lipidomics Visualization Dashboard.html">Lipidomics Visualization Dashboard</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Multi-omic Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Multi-omic Data/IntOmix.html">IntOmix</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Data Studio</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Data Studio/Data Studio.html">Introduction</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Data Studio/CCLE Correlation Analysis.html">CCLE Correlation Analysis</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Scaling Compute</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Scaling compute/Polly CLI.html">Polly CLI</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Scaling compute/Polly Notebooks.html">Notebooks</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../Data Lake.html">Data Lake</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../Release Notes.html">Release Notes</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Polly Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Metabolomic Data &raquo;</li>
+        
+      
+        
+          <li>Apps &raquo;</li>
+        
+      
+    
+    <li>El-MAVEN</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="introduction">Introduction</h1>
+<h2 id="overview">Overview</h2>
+<p>Polly is capable of hosting any desktop applications that can be dockerized. One such desktop application is <a href="https://resources.elucidata.io/elmaven">El-MAVEN</a>.</p>
+<p>It is an open-source LC-MS data processing engine that is optimal for isotopomer labeling and untargeted metabolomic profiling experiments. Currently El-MAVEN exists as a desktop application that runs on Windows, Linux, and Mac systems. The software can be used to view the mass spectra, align chromatograms, perform peak-feature detection, and alignment for labeled and unlabeled mass spectrometry data. The aim of this software package is to reduce the complexity of metabolomics analysis by using a highly intuitive interface for exploring and validating metabolomics data.</p>
+<p>El-MAVEN is now hosted on the Polly platform. This means El-MAVEN and all your Polly applications can reside on a single platform and can be shared with your colleagues easily. The following are the advantages of having El-MAVEN on Polly:</p>
+<ul>
+<li>
+<p>The application scales automatically on the Polly infrastructure for multiple users to use simultaneously.</p>
+</li>
+<li>
+<p>Access to the application is controlled by Polly authentication. Only users in your organization with required Polly authorization can access the application.</p>
+</li>
+<li>
+<p>Have input and output data along with analysis stored at the same location in the <a href="https://docs.elucidata.io/Getting%20Started/Workspaces.html">Polly Workspaces</a>.</p>
+</li>
+<li>
+<p>Share the analyses along with input and output data by simply sharing the workspace.</p>
+</li>
+</ul>
+<h1 id="getting-started">Getting Started</h1>
+<p>Select El-MAVEN from Polly Dashboard under the <em>Metabolomics Data</em> Tab as shown in Figure 1. Create a <em>New Workspace</em> or choose form the existing one from the drop down and provide the <em>Name of the Session</em> to be redirected to choose the machine configuration.</p>
+<p><img alt="El-MAVEN " src="../../img/El-MAVEN/Dashboard1.png" /> <center><strong>Figure 1.</strong> Select Application</center></p>
+<p><img alt="Workspace" src="../../img/El-MAVEN/Selection1.png" /> <center><strong>Figure 2.</strong> Workspace selection</center></p>
+<p>The size of the data varies from a few MBs to hundreds of GBs, and in order to process and analyze this huge data, you would need the computation power from a small machine to a large workstation. Polly supports configurations having 16 to 120 GB Ram and 4 to 16 CPU cores as of now. While other machine configurations can be added on customer request.</p>
+<p><img alt="El-MAVEN output" src="../../img/El-MAVEN/Machineconfig.png" /> <center><strong>Figure 3.</strong> Mchine configurations</center></p>
+<ul>
+<li><strong>General purpose:</strong> Configuration 4 CPU cores 16 GB RAM fall under this category.</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>CPU/Cores</th>
+<th>RAM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Polly x-large</td>
+<td>4</td>
+<td>16 GB</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><strong>Memory optimized:</strong> Configurations from 4 to 16 CPU cores and 32 to 120 GB RAM fall under this category. The various configurations are:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>CPU/Cores</th>
+<th>RAM</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Polly 2x-large</td>
+<td>4</td>
+<td>32GB</td>
+</tr>
+<tr>
+<td>Polly 3x-large</td>
+<td>8</td>
+<td>64GB</td>
+</tr>
+<tr>
+<td>Polly  4x-large</td>
+<td>16</td>
+<td>120GB</td>
+</tr>
+</tbody>
+</table>
+<p>Choose from these pre-configured machines. Upon selecting you will see a progress bar that will tell you the status of your app launch.</p>
+<p><img alt="Launch" src="../../img/El-MAVEN/Applaunch.png" /> <center><strong>Figure 4.</strong> App Launch Status</center></p>
+<p>This application act as a one-stop interface for all your peak curation needs. It contains:</p>
+<ul>
+<li>
+<p>El-MAVEN desktop application: For peak picking</p>
+</li>
+<li>
+<p><a href="http://proteowizard.sourceforge.net/download.html">MSConvert</a>: For raw file conversions</p>
+</li>
+<li>
+<p>Browser: To access data from anywhere on the cloud</p>
+</li>
+<li>
+<p>Terminal: For transferring your raw and processed data to and from the workspace. Also it can be used as a general terminal for other operations as well.</p>
+</li>
+</ul>
+<p><img alt="Apps" src="../../img/El-MAVEN/Apps.png" /> <center><strong>Figure 5.</strong> Provided Apps and functionalities</center></p>
+<h2 id="el-maven">El-MAVEN</h2>
+<p>Once the server is ready, you will see El-MAVEN opened on the browser. The interface is similar to the desktop version. You can start analyzing by adding your files.</p>
+<p><img alt="El-Maven Interface" src="../../img/El-MAVEN/El-interface.png" /> <center><strong>Figure 6.</strong> El-MAVEN Application</center></p>
+<h2 id="msconvert">MSConvert</h2>
+<p>To cater to the needs of your file conversions. Polly also hosts MSConvert application.</p>
+<p>It is a command-line/GUI tool that is used to convert between various mass spectroscopy data formats. Raw data files obtained from mass spectrometers need to be converted to certain acceptable formats before processing in El-MAVEN. MSConvert supports the following formats:</p>
+<ul>
+<li>
+<p>.mzXML</p>
+</li>
+<li>
+<p>.mzML</p>
+</li>
+<li>
+<p>.RAW (Thermofisher)</p>
+</li>
+<li>
+<p>.RAW (Waters)</p>
+</li>
+<li>
+<p>.d (Agilent)</p>
+</li>
+<li>
+<p>.wiff (ABSciex)</p>
+</li>
+</ul>
+<p>Select the tab next to El-MAVEN to access it as and when required.</p>
+<p><img alt="MSConvert" src="../../img/El-MAVEN/MSConvert.png" /> <center><strong>Figure 7.</strong> MSConvert Application</center></p>
+<h2 id="browser">Browser</h2>
+<p>Polly also provides a <strong>web browser</strong> for you to surf the internet on the fly. You can now search for any data related query or get data from anywhere on the cloud (Polly workspaces, FTP, etc) within the same interface.</p>
+<p><img alt="Browser" src="../../img/El-MAVEN/Browser.png" /> <center><strong>Figure 8.</strong> Browser</center></p>
+<h2 id="terminal">Terminal</h2>
+<p>Once the <em>Terminal</em> option is selected, it provides access to the command-line interface to execute any sets of commands. You have access to all the file types which are available in Polly through the terminal. You can use it for getting data into the El-MAVEN instance from the Workspaces and sending processed data back. The terminal option also allows you to install Python or R packages, managing system binaries and system configurations and helps you working with code repositories hosted on GitHub, Bitbucket, etc.</p>
+<p><img alt="Terminal" src="../../img/El-MAVEN/Terminal.png" /> <center><strong>Figure 9.</strong> Terminal</center></p>
+<h2 id="accessing-directories">Accessing directories</h2>
+<p>You can fetch directories from the Workspaces. The contents of any directory within a Workspace can be listed using the following command on the terminal.</p>
+<pre><code>polly files list --workspace-path "path/to/polly/folder" -y</code></pre>
+
+<p>Here the path of the directory has to start with “<em>polly://</em>”.</p>
+<p>To view the contents within a folder called “Data” in the workspace, the following command will have to be executed on the terminal.</p>
+<pre><code>polly files list --workspace-path "polly://Data" -y</code></pre>
+
+<p>To access the directory, the following command will have to be executed on the terminal.</p>
+<pre><code>polly files sync -s "path/to/polly/folder" -d "path/on/elmaven/instance" -y</code></pre>
+
+<p>If the folder called “Data” is to be accessed from Workspace in the folder called “Input”, execute the following command.</p>
+<pre><code>polly files sync -s "polly://Data" -d "Input" -y</code></pre>
+
+<p>To save directories back to the Workspace, keep the source as it is and destination as Polly Workspace in the same command as mentioned above.</p>
+<pre><code>polly files sync -s "path/on/elmaven/instance" -d "path/to/polly/folder" -y</code></pre>
+
+<p>To save the folder called “Output” back to Polly Workspace, use the following command.</p>
+<pre><code>polly files sync -s "Output" -d "polly://" -y</code></pre>
+
+<h2 id="instance-termination">Instance Termination</h2>
+<p>Since peak picking can take days, Polly provides three options: </p>
+<ul>
+<li>
+<p>You can choose to close the tab without stoping or terminating it. This would keep the instance running in the background even if the browser tab is closed. You can later restore the same analysis with the same data used, from the <em>Analysis</em> section.</p>
+</li>
+<li>
+<p>In case you choose to close the instance, you have separate options to Stop and Terminate the instance. Stopping the instance would keep the data (picked peaks) intact in the machine and the instance can be later resumed (soon to be available on Polly). If the tab is closed without Terminating or Stopping the instance, it would continue to run in the background. </p>
+</li>
+<li>
+<p>In case of termination of instance, the data would not remain intact in the machine. You would have to add the files again from the Workspace to perform the analysis.</p>
+</li>
+</ul>
+<p><strong>Note</strong>:</p>
+<ul>
+<li>Make sure you transfer your results to the workspace before selecting the terminate option.  </li>
+</ul>
+<p><img alt="Termination" src="../../img/El-MAVEN/Termination.png" /> <center><strong>Figure 10.</strong> Instance Termination</center></p>
+<h2 id="restore-analysis">Restore Analysis</h2>
+<p>Polly contains the restore functionality that allows any analysis to be restored to the last step. This functionality would be available only if the instance has not been terminated. </p>
+<p>Analyses can be restored by navigating to the <em>Analysis</em> section of a workspace. Click on History for the specific analysis to restore.</p>
+<p><img alt="History" src="../../img/El-MAVEN/History.png" /> <center><strong>Figure 11.</strong> History</center></p>
+<p><img alt="Restore" src="../../img/El-MAVEN/Restore.png" /> <center><strong>Figure 12.</strong> Restore Analysis</center></p>
+<p>Clicking on <em>Restore Analysis</em> will take you back to the application with the same data used before. It helps you to restore the incomplete analysis and improves reproducibility.</p>
+<p>In case you have terminated the instance, the option to restore will not be available. Instead, there will be an option to <em>Restart Analysis</em>, which will take you back to the analysis with the same machine as used earlier in the analysis without restoring the data back. You would have to add the files again from the workspace to perform the analysis.</p>
+<p><img alt="Restart" src="../../img/El-MAVEN/Restart.png" /> <center><strong>Figure 13.</strong> Restart Analysis</center></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Labeled LC-MSMS Workflow.html" class="btn btn-neutral float-right" title="Labeled LC-MS/MS Workfow">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="QuantFit.html" class="btn btn-neutral" title="QuantFit"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="QuantFit.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="Labeled LC-MSMS Workflow.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

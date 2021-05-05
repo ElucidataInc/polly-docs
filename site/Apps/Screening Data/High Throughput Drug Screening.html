@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/elucidata.ico">
+  
+  <title>High Throughput Drug Screening - Polly Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "High Throughput Drug Screening";
+    var mkdocs_page_input_path = "Apps/Screening Data/High Throughput Drug Screening.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../index.html" class="icon icon-home"> Polly Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../index.html">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Getting Started</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Getting Started/Workspaces.html">Workspaces</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Apps</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Introduction.html">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Host Apps.html">Host Apps</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Metabolomic Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Metabolomic Data/El-MAVEN Phi Relative LC-MS.html">El-MAVEN Phi Relative LC-MS</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Metabolomic Data/MetScape.html">MetScape</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Metabolomic Data/FirstView.html">FirstView</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Metabolomic Data/Untargeted Pipeline.html">Untargeted Pipeline</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Metabolomic Data/Dual Mode Visualization.html">Dual Mode Data Visualization</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Metabolomic Data/QuantFit.html">QuantFit</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Metabolomic Data/El-MAVEN.html">El-MAVEN</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Metabolomic Data/Labeled LC-MSMS Workflow.html">Labeled LC-MS/MS Workfow</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Metabolomic Data/Labeled LC-MS Workflow.html">Labeled LC-MS Workflow</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Metabolomic Data/CompoundDiscoverer QuantFit.html">Compound Discoverer<sup>TM</sup> QuantFit</a>
+                </li>
+    </ul>
+                </li>
+                <li class=" current">
+                    
+    <span class="caption-text">Screening Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="CRISPR Screening.html">CRISPR Screening</a>
+                </li>
+                <li class="toctree-l3 current">
+                    
+    <a class="current" href="High Throughput Drug Screening.html">High Throughput Drug Screening</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l4"><a href="#introduction">Introduction</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#overview">Overview</a></li>
+        
+            <li><a class="toctree-l5" href="#scope-of-the-app">Scope of the app</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l4"><a href="#getting-started">Getting Started</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#user-input">User Input</a></li>
+        
+            <li><a class="toctree-l5" href="#steps-in-data-processing">Steps in data processing</a></li>
+        
+            <li><a class="toctree-l5" href="#caveats">Caveats</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l4"><a href="#tutorial">Tutorial</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#upload-files">Upload files</a></li>
+        
+            <li><a class="toctree-l5" href="#visualization-interface">Visualization Interface</a></li>
+        
+            <li><a class="toctree-l5" href="#post-processing-results">Post-Processing results</a></li>
+        
+            <li><a class="toctree-l5" href="#analysis">Analysis</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Sequencing Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Sequencing Data/RNA Seq Workflow.html">RNA Seq Workflow</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Proteomic Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Proteomic Data/Proteomics Workflow.html">Proteomics Workflow</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Lipidomic Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Lipidomics Data/Lipidomics Visualization Dashboard.html">Lipidomics Visualization Dashboard</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Multi-omic Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Multi-omic Data/IntOmix.html">IntOmix</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Data Studio</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Data Studio/Data Studio.html">Introduction</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Data Studio/CCLE Correlation Analysis.html">CCLE Correlation Analysis</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Scaling Compute</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Scaling compute/Polly CLI.html">Polly CLI</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Scaling compute/Polly Notebooks.html">Notebooks</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../Data Lake.html">Data Lake</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../Release Notes.html">Release Notes</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Polly Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Screening Data &raquo;</li>
+        
+      
+        
+          <li>Apps &raquo;</li>
+        
+      
+    
+    <li>High Throughput Drug Screening</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="introduction">Introduction</h1>
+<h2 id="overview">Overview</h2>
+<p>With the capability of rapid screening, large quantity of data is generated in a considerably short period of time and we subsequently need rapid extraction of biochemical significance from the heaps of data generated. High Throughput Drug Screening allows you to rapidly screen diverse compounds, by conducting chemical, genetic or pharmacological tests and provide key insights on active compounds, genes or antibodies that regulate the bio-molecular pathway of interest. The results obtained provide a deeper understanding and present a starting point for drug design.</p>
+<h2 id="scope-of-the-app">Scope of the app</h2>
+<ul>
+<li>Automates post-processing of your data output from high throughput sequencing experiments</li>
+<li>Rapid visualizations of the results giving you insights about various drug-dosage combinations</li>
+<li>Percentage proliferation vs concentration dosage for all the drugs in the library at a glance</li>
+<li>Percentage proliferation difference vs concentration dosage selectivity plot for drugs and cell lines</li>
+<li>IC<sub>50</sub> values</li>
+<li>Lethality estimation of all the drugs for the provided cell lines</li>
+<li>Analyze the results for a drug individually</li>
+<li>Download tabular representation of the post-processed results</li>
+</ul>
+<p><img alt="Workflow Schematic" src="../../img/HTS/Workflowschematic.png" /> <center><strong>Figure 1.</strong> High Throughput Drug Screening</center></p>
+<h1 id="getting-started">Getting Started</h1>
+<h2 id="user-input">User Input</h2>
+<p>High Throughput Drug Screening requires the following two files as input:</p>
+<p><strong>RLU Sample Files</strong></p>
+<p>RLU files are machine generated and should not be tampered with. The second sheet of the file contains all the valuable information that the app needs as shown in Figure 2.</p>
+<p><img alt="Second sheet of RLU file" src="../../img/HTS/RLUfile.png" /> <center><strong>Figure 2.</strong> Second sheet of RLU file</center></p>
+<p><strong>Drug Key-Dosage Files</strong></p>
+<p>Drug key-dosage file contains the information pertaining to the names of the drugs and their concentration values. It should contain only the drugs from one library i.e. for 40 drugs as shown in Figure 3.</p>
+<p><img alt="Drug key-dosage file" src="../../img/HTS/Dosagefile.png" /> <center><strong>Figure 3.</strong> Drug key-dosage file</center></p>
+<h2 id="steps-in-data-processing">Steps in data processing</h2>
+<ul>
+<li>Upload input files</li>
+<li>Performs visualizations for proliferation, IC<sub>50</sub>, lethality and selectivity values</li>
+</ul>
+<h2 id="caveats">Caveats</h2>
+<ul>
+<li>The input file format has to be exactly same as the demo data.</li>
+</ul>
+<h1 id="tutorial">Tutorial</h1>
+<h2 id="upload-files">Upload files</h2>
+<p>Select High Throughput Drug Screening Application from the dashboard under the <em>Screening and Sequencing Data</em> Tab.</p>
+<p><img alt="Polly Dashboard" src="../../img/HTS/Dashboard1.png" /> <center><strong>Figure 4.</strong> Polly Dashboard</center></p>
+<p>Create a <em>New Workspace</em> or select from the existing one from the drop-down and provide a <em>Name of the Session</em> to be redirected to <em>High Throughput Drug Screening</em> application's upload page.</p>
+<p><img alt="Workspace Selection" src="../../img/HTS/Selection1.png" /> <center><strong>Figure 5.</strong> Workspace Selection</center></p>
+<p>Choose no. of cell lines from the drop down as shown in Figure 6.</p>
+<p><img alt="Cell line selection" src="../../img/HTS/CLselection.png" /> <center><strong>Figure 6.</strong> Cell line selection</center></p>
+<p>For each cell line:</p>
+<ul>
+<li>Provide a name to your cell line</li>
+<li>Click on the <em>Browse</em> option to select the input files files.</li>
+<li><em>Browse</em> option for replicate files provides multiple file selection option so that all your replicate files can be selected and added here.</li>
+<li>Click on <em>Browse</em> to add metadata file in the metadata option. It allows only single file selection and only one metadata file would be added for one cell line.</li>
+<li>Repeat steps 1-4 for other cell lines if selected.</li>
+</ul>
+<p><img alt="File upload for cell line 1" src="../../img/HTS/CLupload.png" /> <center><strong>Figure 7.</strong> File upload for cell line 1</center></p>
+<p>Once all the input files are selected, click on <em>Go</em>. You will be able to see the information of the uploaded cell lines along with their input files at the top right section of the interface.</p>
+<p><img alt="Upload Interface" src="../../img/HTS/Uploadinterface.png" /> <center><strong>Figure 8.</strong> Upload Interface</center></p>
+<h2 id="visualization-interface">Visualization Interface</h2>
+<p>Once the input files are uploaded in the side panel, the results are generated and the plots, single drug and table tabs are populated. To see the plots click on <em>Plots</em> present at the top.</p>
+<p><img alt="Plot for percentage proliferation vs concentration dosage for all the drugs" src="../../img/HTS/Plots1.png" /> <center><strong>Figure 9.</strong> Plot for percentage proliferation vs concentration dosage for all the drugs</center></p>
+<p>Under the <em>Plots</em> tab, you can see the percent proliferation <em>vs</em> concentration dosage for all the drugs in the library at a glance. The x-axis represents the dosage concentration values in log<sub>10</sub> of (nM) and the y-axis represents the percent proliferation.</p>
+<p>Choose the desired cell line by clicking on the selection box present beside the cell lines a shown in Figure 10. You can choose multiple cell lines as well and their Percent proliferation <em>vs</em> concentration dosage information would be overlaid on the prior plots.</p>
+<p><img alt="Cell line selection on Plots interface" src="../../img/HTS/Plots2.png" /> <center><strong>Figure 10.</strong> Cell line selection on Plots interface</center></p>
+<p>Within the plot, you can see the name of the drug at the top while different cell lines would be represented with different colors. To know the information of data points within the plot simply hover over the point you want to see.</p>
+<p>To analyze the results for a single drug, click on the <em>Single Drug</em> present at the top and then select the cell line you want to analyze by clicking on the selection box beside it.</p>
+<p><img alt="Cell line selection at single drug interface" src="../../img/HTS/Singledrug1.png" /> <center><strong>Figure 11.</strong> Cell line selection at single drug interface</center></p>
+<p>For selecting the drug, move to the bottom of the page to the <em>Choose drug</em> option and select the desired drug from the drop down. The plot would get updated as per your drug selection.</p>
+<p><img alt="Single drug selection interface" src="../../img/HTS/Singledrug2.png" /> <center><strong>Figure 12.</strong> Single drug selection interface</center></p>
+<h2 id="post-processing-results">Post-Processing results</h2>
+<p>The results are available in a tabular format in the <em>Table</em> section. Choose your cell line to view the processed file of that cell line as shown in Figure 13.</p>
+<p><img alt="Cell line selection for tabular results" src="../../img/HTS/Table1.png" /> <center><strong>Figure 13.</strong> Cell line selection for tabular results</center></p>
+<h2 id="analysis">Analysis</h2>
+<p>The <em>Analysis</em> section provides further detailed insights in three sections:</p>
+<p><strong>IC<sub>50</sub>:</strong> The half maximal inhibitory concentration (IC<sub>50</sub>) is a measure of the effectiveness of a substance in inhibiting a specific biological or biochemical function. This quantitative measure indicates how much of a particular drug is needed to inhibit a given biological process (or component of a process, i.e. an enzyme or cell receptor) by half. According to the FDA, IC<sub>50</sub> represents the concentration of a drug that is required for 50% inhibition in vitro.</p>
+<p>Selecting a cell line from the drop down as shown in Figure 13 will display three different lists pertaining to the drugs that fall under the following categories:</p>
+<ul>
+<li>Drugs with IC<sub>50</sub> values in the given dosage range</li>
+<li>Drugs with IC<sub>50</sub> values lesser than the tested minimum dosage</li>
+<li>Drugs with IC<sub>50</sub> values greater than the tested maximum dosage</li>
+</ul>
+<p><img alt="IC50 Plot" src="../../img/HTS/Analysis1.png" /> <center><strong>Figure 14.</strong> IC<sub>50</sub> Plot</center></p>
+<p><strong>Lethality:</strong> It offers an indication of the lethal toxicity for a given drug. It provides the degree to which a drug is harmful to a user or how capable it is of causing death.</p>
+<p>The <em>Lethality</em> section provides a chart showing relative lethality of drugs for all the cell lines uploaded.</p>
+<p><img alt="Lethality Plot" src="../../img/HTS/Lethality.png" /> <center><strong>Figure 15.</strong> Lethality Plot</center></p>
+<p><strong>Selectivity:</strong> It refers to a drug’s ability to preferentially produce a particular effect and is related to the structural specificity of drug binding to receptors. Drug selectivity is an important aspect and is used for evaluating the ADRs (Adverse Drug Reaction) of drugs.</p>
+<p>The <em>Selectivity</em> section provides a percent proliferation difference vs concentration dosage selectivity plot.</p>
+<p><img alt="Selectivity Plot" src="../../img/HTS/Selectivity1.png" /> <center><strong>Figure 16.</strong> Selectivity Plot</center></p>
+<p>Select you desired drug as well as the cell lines to get the visualization as shown in Figure 16.</p>
+<p><img alt="Cell line selection for Selectivity" src="../../img/HTS/Selectivity2.png" /> <center><strong>Figure 17.</strong> Cell line selection for Selectivity</center></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Sequencing Data/RNA Seq Workflow.html" class="btn btn-neutral float-right" title="RNA Seq Workflow">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="CRISPR Screening.html" class="btn btn-neutral" title="CRISPR Screening"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="CRISPR Screening.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Sequencing Data/RNA Seq Workflow.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

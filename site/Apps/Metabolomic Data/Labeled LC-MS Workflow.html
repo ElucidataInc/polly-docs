@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/elucidata.ico">
+  
+  <title>Labeled LC-MS Workflow - Polly Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Labeled LC-MS Workflow";
+    var mkdocs_page_input_path = "Apps/Metabolomic Data/Labeled LC-MS Workflow.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../index.html" class="icon icon-home"> Polly Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../index.html">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Getting Started</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Getting Started/Workspaces.html">Workspaces</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Apps</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Introduction.html">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Host Apps.html">Host Apps</a>
+                </li>
+                <li class=" current">
+                    
+    <span class="caption-text">Metabolomic Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="El-MAVEN Phi Relative LC-MS.html">El-MAVEN Phi Relative LC-MS</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="MetScape.html">MetScape</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="FirstView.html">FirstView</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="Untargeted Pipeline.html">Untargeted Pipeline</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="Dual Mode Visualization.html">Dual Mode Data Visualization</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="QuantFit.html">QuantFit</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="El-MAVEN.html">El-MAVEN</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="Labeled LC-MSMS Workflow.html">Labeled LC-MS/MS Workfow</a>
+                </li>
+                <li class="toctree-l3 current">
+                    
+    <a class="current" href="Labeled LC-MS Workflow.html">Labeled LC-MS Workflow</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l4"><a href="#introduction">Introduction</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#overview">Overview</a></li>
+        
+            <li><a class="toctree-l5" href="#scope-of-the-app">Scope of the app</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l4"><a href="#getting-started">Getting Started</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#user-input">User Input</a></li>
+        
+            <li><a class="toctree-l5" href="#steps-involved-in-data-processing">Steps involved in data processing</a></li>
+        
+            <li><a class="toctree-l5" href="#caveats">Caveats</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l4"><a href="#tutorial">Tutorial</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#upload-files">Upload files</a></li>
+        
+            <li><a class="toctree-l5" href="#cohort-creation-interface">Cohort Creation Interface</a></li>
+        
+            <li><a class="toctree-l5" href="#na-correction">NA Correction</a></li>
+        
+            <li><a class="toctree-l5" href="#visualization">Visualization</a></li>
+        
+            <li><a class="toctree-l5" href="#generate-output-file">Generate Output File</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l4"><a href="#details-of-the-app">Details of the App</a></li>
+    
+
+    <li class="toctree-l4"><a href="#videos">Videos</a></li>
+    
+
+    <li class="toctree-l4"><a href="#references">References</a></li>
+    
+
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="CompoundDiscoverer QuantFit.html">Compound Discoverer<sup>TM</sup> QuantFit</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Screening Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Screening Data/CRISPR Screening.html">CRISPR Screening</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Screening Data/High Throughput Drug Screening.html">High Throughput Drug Screening</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Sequencing Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Sequencing Data/RNA Seq Workflow.html">RNA Seq Workflow</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Proteomic Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Proteomic Data/Proteomics Workflow.html">Proteomics Workflow</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Lipidomic Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Lipidomics Data/Lipidomics Visualization Dashboard.html">Lipidomics Visualization Dashboard</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Multi-omic Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Multi-omic Data/IntOmix.html">IntOmix</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Data Studio</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Data Studio/Data Studio.html">Introduction</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Data Studio/CCLE Correlation Analysis.html">CCLE Correlation Analysis</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Scaling Compute</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Scaling compute/Polly CLI.html">Polly CLI</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Scaling compute/Polly Notebooks.html">Notebooks</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../Data Lake.html">Data Lake</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../Release Notes.html">Release Notes</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Polly Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Metabolomic Data &raquo;</li>
+        
+      
+        
+          <li>Apps &raquo;</li>
+        
+      
+    
+    <li>Labeled LC-MS Workflow</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="introduction">Introduction</h1>
+<h2 id="overview">Overview</h2>
+<p>The use of isotopically labeled tracer substrates is an experimental approach for measuring <em>in vivo</em> and <em>in vitro</em> intracellular metabolic dynamics. Stable isotopes that alter the mass but not the chemical behavior of a molecule are commonly used in isotope tracer studies. Because stable isotopes of some atoms naturally occur at non-negligible abundances, it is important to account for the natural abundance of these isotopes when analyzing data from isotope labeling experiments. Specifically, a distinction must be made between isotopes introduced experimentally via an isotopically labeled tracer and the isotopes naturally present at the start of an experiment.</p>
+<p>The Labeled LC-MS Workflow factors out the contribution from the Natural Abundance (NA) of each element from the signal of each isotopologue peak obtained from LC-MS techniques in a labeling experiment. It provides visualization for fractional enrichment and pool totals for single as well as dual-labeled data. It also allows you to download an output Excel Workbook with worksheets containing the raw abundances, raw intensities, fractional contributions and corrected isotopologues of the metabolites belonging to different pathways based on the library data provided.</p>
+<h2 id="scope-of-the-app">Scope of the app</h2>
+<ul>
+<li>Performs NA correction on data from LC-MS experiments.</li>
+<li>Supports data from single (<sup>2</sup>D, <sup>13</sup>C, <sup>15</sup>N and <sup>34</sup>S) as well as dual-labeled experiments.</li>
+<li>Plots fractional enrichment, pool total and NA corrected intensity plots for a selected metabolite.</li>
+<li>Generates a consolidated Excel workbook of outputs.</li>
+</ul>
+<p><img alt="Workflow Schematic" src="../../img/LabeledLC-MSWorkflow/Workflowschematic.png" /> <center><strong>Figure 1.</strong> Labeled LC-MS Workflow</center></p>
+<h1 id="getting-started">Getting Started</h1>
+<h2 id="user-input">User Input</h2>
+<p>Labeled LC-MS Workflow requires the following two files as input:</p>
+<p><strong>Intensity file</strong></p>
+<p>The intensity file should be in CSV format as shown in Figure 1. The .csv file exported after peak picking in <a href="https://resources.elucidata.io/elmaven">El-MAVEN</a> is the input file.</p>
+<p><img alt="El-MAVEN output file" src="../../img/LabeledLC-MSWorkflow/Outputfile.png" /> <center><strong>Figure 2.</strong> El-MAVEN output file</center></p>
+<p><strong>Cohort file</strong></p>
+<p>The cohort file is optional and is used for generating visualizations. In case you only want to perform NA correction, you can skip this step. The cohort file should be in .csv format as shown in Figure 3. This file should contain two columns, <em>Sample</em> containing sample names along with <em>Cohort</em> for its cohort information.</p>
+<p><img alt="Cohort file" src="../../img/LabeledLC-MSWorkflow/Cohortfile.png" /> <center><strong>Figure 3.</strong> Cohort file</center></p>
+<h2 id="steps-involved-in-data-processing">Steps involved in data processing</h2>
+<ul>
+<li>Upload intensity file obtained from El-MAVEN</li>
+<li>Set analysis parameters and perform NA correction</li>
+<li>Download NA corrected output files</li>
+<li>Visualize fractional enrichment, pool total and NA corrected intensity plots</li>
+<li>Download consolidated output workbook using a library data</li>
+</ul>
+<h2 id="caveats">Caveats</h2>
+<ul>
+<li>All the samples present in the intensity files should also be present in the cohort file.</li>
+<li>The cohort file is optional but visualizations will only be generated if this file is provided.</li>
+<li>If using the <em>Edit NA Option</em>, the natural abundances of all the isotopes of an element should sum to 1.</li>
+<li>The library file is not required for NA Correction.</li>
+<li>The name of the metabolites should match exactly between the input and the library file.</li>
+</ul>
+<h1 id="tutorial">Tutorial</h1>
+<h2 id="upload-files">Upload files</h2>
+<p>The <em>Upload Files</em> tab allows you to upload the input files required for processing through the app. Once the files have been uploaded, click on <em>Run.</em> This will validate and process the uploaded files and give error messages or warnings if the format or data in files are incorrect. You can also run the demo files directly by clicking on <em>Run Demo Files</em>.</p>
+<p><img alt="Upload interface" src="../../img/LabeledLC-MSWorkflow/Upload.png" /> <center><strong>Figure 4.</strong> Upload interface</center></p>
+<h2 id="cohort-creation-interface">Cohort Creation Interface</h2>
+<p>If you do not wish to create a cohort file, you can utilize the cohort creation interface that allows you to enter the cohort information on the app itself. Upload your intensity file and uncheck <em>Upload Cohort File</em> option. Once the intensity file is uploaded, click on <em>Run</em> and a cohort creation interface with sample names with input files will open as shown in Figure 4. After entering the cohort information, click on <em>NA Correction</em> on the top left side to be taken to the NA correction interface.</p>
+<p><img alt="Cohort creation interface" src="../../img/LabeledLC-MSWorkflow/Cohortcreation.png" /> <center><strong>Figure 5.</strong> Cohort creation interface</center></p>
+<h2 id="na-correction">NA Correction</h2>
+<p>Isotopologue identification and quantification of thousands of metabolites in the metabolomic experiments can provide a wealth of data for modeling the flux through metabolic networks. But before isotopologue intensity data can be properly interpreted, the contributions from isotopic natural abundance must be factored out (deisotoped). This is referred to as natural abundance (NA) correction. The various analysis parameters for performing NA Correction shown in Figure 5 are defined below:</p>
+<p><img alt="NA Correction Tab" src="../../img/LabeledLC-MSWorkflow/NAcorrection.png" /> <center><strong>Figure 6.</strong> NA Correction Tab</center></p>
+<ul>
+<li>
+<p><em>Indistinguishable isotopes</em>: Indistinguishable isotopes can be corrected for natural abundance by electing either of the following options:</p>
+<ul>
+<li>
+<p>Manually: You can manually select a standard list of indistinguishable isotopes with respect to the labelled isotope for NA correction.</p>
+</li>
+<li>
+<p>Using PPM: You can enable auto detection of indistinguishable isotopes, by selecting <em>Using PPM</em> option and providing PPM resolution of the mass spectrometer used for the experiment.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><em>Edit NA values:</em> Default NA values used in the tool are taken from CRC Handbook of Chemistry and Physics. You can change these values by clicking on <em>Edit NA Values</em>. as shown in Figure 6.</p>
+</li>
+</ul>
+<p><img alt="Edit NA values" src="../../img/LabeledLC-MSWorkflow/Editvalues.png" /> <center><strong>Figure 7.</strong> Edit NA values</center></p>
+<ul>
+<li><em>Replace negatives with zero:</em> Sometimes negative intensities arise which can be replaced with zero. This option is selected by default.</li>
+</ul>
+<p>After all parameters have been decided click on <em>Perform NA Correction</em>. Once NA correction has been performed, the output will be displayed in in a tabular format as shown in Figure 7. There are three sections on this interface; <em>NA Corrected Values</em>, <em>Fractional Enrichment</em> and <em>Merged Output</em>. The first two sections only display the NA corrected values and fractional enrichment respectively as shown in Figure 7 and Figure 8 whereas the Third section combines these information to provide you with a single file with the entire information as shown in Figure 9. A detailed description of the merged output file is provided below.</p>
+<p><img alt="NA Corrected Values" src="../../img/LabeledLC-MSWorkflow/Correctedvalues.png" /> <center><strong>Figure 8.</strong> NA Corrected Values</center></p>
+<p><img alt="Fractional Enrichment" src="../../img/LabeledLC-MSWorkflow/FE.png" /> <center><strong>Figure 9.</strong> Fractional Enrichment</center></p>
+<p><img alt=" Merged Output" src="../../img/LabeledLC-MSWorkflow/Mergedoutput.png" /> <center><strong>Figure 10.</strong> Merged Output</center></p>
+<p>where,</p>
+<ul>
+<li><em>Name</em> is Name of the metabolite</li>
+<li><em>Label</em> is Label information</li>
+<li><em>Formula</em> is Chemical formula</li>
+<li><em>Sample</em> is Sample names</li>
+<li><em>Intensity</em> is Raw intensities</li>
+<li><em>NA Corrected</em> is NA corrected intensities</li>
+<li><em>NA Corrected with zero</em> is NA corrected intensities with negative intensities replaced with zero</li>
+<li><em>Indistinguishable isotopes</em> is List of indistinguishable isotopes for the particular metabolite
+<em>Pool total</em> is Pool total of a metabolite in a sample</li>
+<li><em>Fractional Enrichment</em> is Fractional enrichment calculated after NA Correction has been done</li>
+<li><em>Fractional Enrichment with zero</em> is Negative values are replaced with zero</li>
+<li><em>compoundid</em> is KEGG or HMDB ID of the metabolites as specified oin the input file</li>
+</ul>
+<h2 id="visualization">Visualization</h2>
+<p>The visualization tab provides fractional enrichment, pool total and NA corrected intensity plots that are generated according to the metabolite and quantification type specified before.</p>
+<p><img alt="Visualization Interface" src="../../img/LabeledLC-MSWorkflow/Vizinterface.png" /> <center><strong>Figure 11.</strong> Visualization Interface</center></p>
+<p>To generate visualizations, select a metabolite using the drop down that contains metabolites present in the intensity file uploaded and a quantification type from <em>Intensity</em>, <em>NA Corrected</em>, <em>NA Corrected with zero</em>, <em>Fractional Enrichment</em> and <em>Fractional Enrichment with zero</em>. After this, click on <em>Run</em> to get the selected visualization.</p>
+<ul>
+<li>Visualization on the basis of the number of labels shows all the available labels of a metabolite based on the quantification type selected across cohorts.</li>
+</ul>
+<p><img alt="Fractional enrichment with zero for ATP" src="../../img/LabeledLC-MSWorkflow/FEwithzero.png" /> <center><strong>Figure 12.</strong> Fractional enrichment with zero for ATP</center></p>
+<ul>
+<li>In case of dual labeled data, plots for each element can be visualized individually as shown in Figure 13 and Figure 14.</li>
+</ul>
+<p><img alt="Fractional enrichment with 0 for ATP and label type C" src="../../img/LabeledLC-MSWorkflow/FEwithzero2.png" /> <center><strong>Figure 13.</strong> Fractional enrichment with 0 for ATP and label type C</center></p>
+<p><img alt="Fractional enrichment with 0 for ATP and label type N" src="../../img/LabeledLC-MSWorkflow/FEwithzero3.png" /> <center><strong>Figure 14.</strong> Fractional enrichment with 0 for ATP and label type N</center></p>
+<ul>
+<li>Visualization of labels in stacked plot shows comparison between different labels present across the samples. Each bar in the chart represents the sample and the segments in the bar represent different isotopic labels of selected metabolite.</li>
+</ul>
+<p><img alt="Stacked Plot" src="../../img/LabeledLC-MSWorkflow/Stackedplot.png" /> <center><strong>Figure 15.</strong> Visualization of labels in stacked plot</center></p>
+<ul>
+<li>Visualization on the basis of pool totals shows the pool totals plot for the selected metabolite.</li>
+</ul>
+<p><img alt="Pool Total Plot" src="../../img/LabeledLC-MSWorkflow/Pooltotal.png" /> <center><strong>Figure 16.</strong> Pool Total Plot</center></p>
+<p><strong>Note:</strong></p>
+<ul>
+<li>The pool total plot will be shown regardless of the quantification type selection.</li>
+</ul>
+<h2 id="generate-output-file">Generate Output File</h2>
+<p>This tab allows you to generate the output workbook which consists of the Raw Intensities, Raw Abundances, Fractional Contribution and Corrected Isotopologues in four different worksheets where the metabolites belonging to a particular pathway are grouped together based on the metabolite-pathway mapping provided in the Library File uploaded. The various options available are provided below:</p>
+<p><img alt="Generate Output File" src="../../img/LabeledLC-MSWorkflow/labeled_lcms_generate_output_page.png" /> <center><strong>Figure 17.</strong> Generate Output File</center></p>
+<ul>
+<li>
+<p><em>Download Demo Library File:</em> Clicking on this would download the demo library file containing the metabolite and pathway mapping.</p>
+</li>
+<li>
+<p><em>Upload Library File (.csv):</em> The library file contains metabolite to pathway mapping information such as name of metabolite, pathway identifiers as supercategory and subcategory as shown in Figure 16. This file should be in .csv format. A detailed description of this file is provided below.</p>
+</li>
+</ul>
+<p><img alt="Library File" src="../../img/LabeledLC-MSWorkflow/library_file1.png" /> <center><strong>Figure 18.</strong> Library File</center></p>
+<p>where,</p>
+<ul>
+<li><em>compound</em> is the column that contains the names of the metabolites as in the El-MAVEN output</li>
+<li><em>formula</em> is the column that contains the elemental formula of the metabolites</li>
+<li><em>id</em> is the column that contains the compound ids of the metabolites</li>
+<li><em>rt</em> is the column that contains the retention times of the metabolites</li>
+<li><em>mz</em> is the column that contains the mzs of the metabolites</li>
+<li><em>category</em> is the column that contains the pathway name to which the metabolite belongs to. The entries should ideally be pathwaynumber_pathwayname. Example: 01_Glycolysis</li>
+<li><em>subcategory</em> is the column that contains the pathway number according to the Supercategory column followed by the metabolite number. Example: 9 for glutathione. </li>
+</ul>
+<p>Select whether to proceed with Fractional Enrichment or Fractional Enrichment with zero or NA Corrected or NA Corrected with zero values using <em>Select a fractional enrichment</em> and <em>Select a NA correction</em> drop down. </p>
+<p>Clicking on <em>Run</em> will generate a workbook that consists of the worksheets <em>rawIntensities</em>, <em>rawAbundances</em>, <em>CorrectedIsotopologues</em> and <em>FracContribution</em> with entries for all the metabolite isotopologues across different samples. Further, all the metabolite isotopologues are grouped based on the pathway they belong to (information provided in the library file).</p>
+<p><img alt="Output Workbook" src="../../img/LabeledLC-MSWorkflow/output_workbook1.png" /> <center><strong>Figure 19.</strong> Output Workbook</center></p>
+<h1 id="details-of-the-app">Details of the App</h1>
+<p>Corna, the algorithm used for NA correction has the ability to auto-detect indistinguishable isotopes in experiments with dual tracers. Some high-resolution mass spectrometer instruments are able to distinguish isotopes like <sup>13</sup>C from <sup>15</sup>N. The packages available for performing natural abundance correction on these data assume infinite resolution, which means that it is assumed that if <sup>13</sup>C can be resolved from <sup>15</sup>N at all masses and it can also be resolved from other isotopes like <sup>2</sup>D. However, this assumption becomes invalid as the resolution of the machine varies with the mass of the metabolite. Corna does not assume ultra-high resolution and corrects for partial indistinguishability in the data.</p>
+<ul>
+<li><strong>Fractional enrichment:</strong></li>
+</ul>
+<p>Fractional enrichment is calculated for each label corresponding to every metabolite in a sample using the formula:</p>
+<p>Fractional enrichment = corrected intensity of a label / sum of corrected intensities for all labels</p>
+<ul>
+<li><strong>Pool total:</strong></li>
+</ul>
+<p>Sum total of corrected intensities of every isotopologue for each metabolite in a sample using the formula:</p>
+<p>pool total of a metabolite in a sample = sum (all corrected intensities for a metabolite)</p>
+<ul>
+<li>
+<p><strong>Calculations in the output workbook:</strong></p>
+<ul>
+<li>
+<p><em>rawIntensities</em>: It consists of raw intensity values obtained from the NA Corrected output.</p>
+</li>
+<li>
+<p><em>rawAbundances</em>: It consists of the pool total values obtained from the NA Corrected output.</p>
+</li>
+<li>
+<p><em>CorrectedIsotopologues</em>: It consists of the fractional enrichment values obtained from the NA Corrected output in percentage</p>
+</li>
+<li>
+<p><em>FracContribution</em>: It consists of the fractional contribution of the labelled carbons. It is calculated by the the following formula:</p>
+<ul>
+<li>Fractional contribution = Sum(Label * Fractional Enrichment)/ total number of carbons.
+Eg: for glycine, fractional contribution = (0 * FE0 + 1 * FE1 + 2 * FE2)/2, where FE = Fractional Enrichment</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="videos">Videos</h1>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+    <iframe src="https://www.youtube.com/embed/FarXheRsZ-4" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
+
+<p><br></p>
+<h1 id="references">References</h1>
+<ul>
+<li>
+<p>Midani FS, Wynn ML, Schnell S. The importance of accurately correcting for the natural abundance of stable isotopes. <em>Anal Biochem</em>. 2017;520:27–43. doi:10.1016/j.ab.2016.12.011</p>
+</li>
+<li>
+<p>Lide, D. R., “CRC Handbook of Chemistry and Physics (83rd ed.). Boca Raton”, FL: CRC Press. ISBN 0-8493-0483-0, 2002.</p>
+</li>
+<li>
+<p>Moseley H., “Correcting for the effects of natural abundance in stable isotope resolved metabolomics experiments involving ultra-high resolution mass spectrometry”,BMC Bioinformatics, 2010, 11:139.</p>
+</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="CompoundDiscoverer QuantFit.html" class="btn btn-neutral float-right" title="Compound Discoverer<sup>TM</sup> QuantFit">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="Labeled LC-MSMS Workflow.html" class="btn btn-neutral" title="Labeled LC-MS/MS Workfow"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="Labeled LC-MSMS Workflow.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="CompoundDiscoverer QuantFit.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

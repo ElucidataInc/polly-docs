@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/elucidata.ico">
+  
+  <title>Polly CLI - Polly Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Polly CLI";
+    var mkdocs_page_input_path = "Scaling compute/Polly CLI.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Polly Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../index.html">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Getting Started</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Getting Started/Workspaces.html">Workspaces</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Apps</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Apps/Introduction.html">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Apps/Host Apps.html">Host Apps</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Metabolomic Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Apps/Metabolomic Data/El-MAVEN Phi Relative LC-MS.html">El-MAVEN Phi Relative LC-MS</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Apps/Metabolomic Data/MetScape.html">MetScape</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Apps/Metabolomic Data/FirstView.html">FirstView</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Apps/Metabolomic Data/Untargeted Pipeline.html">Untargeted Pipeline</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Apps/Metabolomic Data/Dual Mode Visualization.html">Dual Mode Data Visualization</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Apps/Metabolomic Data/QuantFit.html">QuantFit</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Apps/Metabolomic Data/El-MAVEN.html">El-MAVEN</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Apps/Metabolomic Data/Labeled LC-MSMS Workflow.html">Labeled LC-MS/MS Workfow</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Apps/Metabolomic Data/Labeled LC-MS Workflow.html">Labeled LC-MS Workflow</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Apps/Metabolomic Data/CompoundDiscoverer QuantFit.html">Compound Discoverer<sup>TM</sup> QuantFit</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Screening Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Apps/Screening Data/CRISPR Screening.html">CRISPR Screening</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Apps/Screening Data/High Throughput Drug Screening.html">High Throughput Drug Screening</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Sequencing Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Apps/Sequencing Data/RNA Seq Workflow.html">RNA Seq Workflow</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Proteomic Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Apps/Proteomic Data/Proteomics Workflow.html">Proteomics Workflow</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Lipidomic Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Apps/Lipidomics Data/Lipidomics Visualization Dashboard.html">Lipidomics Visualization Dashboard</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Multi-omic Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Apps/Multi-omic Data/IntOmix.html">IntOmix</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Data Studio</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Apps/Data Studio/Data Studio.html">Introduction</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Apps/Data Studio/CCLE Correlation Analysis.html">CCLE Correlation Analysis</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Scaling Compute</span>
+    <ul class="subnav">
+                <li class=" current">
+                    
+    <a class="current" href="Polly CLI.html">Polly CLI</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#what-is-polly-cli">What is Polly CLI?</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#required-system-configurations">Required System Configurations</a></li>
+        
+            <li><a class="toctree-l4" href="#installation">Installation</a></li>
+        
+            <li><a class="toctree-l4" href="#logging-in-and-out-of-polly-cli">Logging in and out of Polly CLI</a></li>
+        
+            <li><a class="toctree-l4" href="#create-and-view-polly-workspaces">Create and View Polly Workspaces</a></li>
+        
+            <li><a class="toctree-l4" href="#data-transfer">Data Transfer</a></li>
+        
+            <li><a class="toctree-l4" href="#docker-management">Docker Management</a></li>
+        
+            <li><a class="toctree-l4" href="#running-dockerized-jobs">Running Dockerized Jobs</a></li>
+        
+            <li><a class="toctree-l4" href="#create-job-description-json-file">Create job description JSON file</a></li>
+        
+            <li><a class="toctree-l4" href="#docker-building-guidelines">Docker Building Guidelines</a></li>
+        
+            <li><a class="toctree-l4" href="#execute-job">Execute Job</a></li>
+        
+            <li><a class="toctree-l4" href="#monitor-job-status">Monitor Job status</a></li>
+        
+            <li><a class="toctree-l4" href="#polly-cli-help">Polly CLI help</a></li>
+        
+            <li><a class="toctree-l4" href="#some-useful-gists">Some useful gists</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <a class="" href="Polly Notebooks.html">Notebooks</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data Lake.html">Data Lake</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Release Notes.html">Release Notes</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Polly Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Scaling Compute &raquo;</li>
+        
+      
+    
+    <li>Polly CLI</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="what-is-polly-cli">What is Polly CLI?</h1>
+<p>Polly CLI (Command Line Interface) is an open source tool that enables you to interact with Polly services using commands in your command-line shell. Polly CLI lets you upload data and run jobs on the Polly cloud infrastructure by scaling computation resources as per need. You can start and stop jobs, monitor them and view logs. </p>
+<h2 id="required-system-configurations">Required System Configurations</h2>
+<p>Polly CLI can work on any Unix based system (Linux and Mac distributions). It does not work on Windows. We will be releasing a Windows version soon. It can be used on local computers as well as cloud instances and servers. </p>
+<p>There are no specific machine configurations required for Polly CLI. It can work on a system with as low as 512 MB RAM and 1 CPU.</p>
+<h2 id="installation">Installation</h2>
+<p><strong>Dependencies Required for Polly CLI</strong></p>
+<p>The following dependencies are required to be installed before installing Polly CLI:</p>
+<ul>
+<li>
+<p><a href="https://www.npmjs.com/get-npm">Node and npm</a>:  </p>
+<ul>
+<li>
+<p>Linux: For installation on Linux, follow the steps mentioned <a href="https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04">here</a>.</p>
+</li>
+<li>
+<p>Mac: For installation on Mac, follow the steps mentioned <a href="https://www.digitalocean.com/community/tutorials/how-to-install-node-js-and-create-a-local-development-environment-on-macos">here</a>.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Commands to install</strong></p>
+<p>To install Polly CLI, run the following commands on Terminal / Command prompt:</p>
+<ul>
+<li>
+<p>Linux:</p>
+<p><pre><code>sudo npm install -g @elucidatainc/pollycli</code></pre></p>
+</li>
+<li>
+<p>Mac: </p>
+<p><pre><code>npm install -g @elucidatainc/pollycli</code></pre></p>
+</li>
+</ul>
+<p><strong>Commands to uninstall</strong></p>
+<p>To uninstall Polly CLI, run the following commands on Terminal / Command prompt:</p>
+<ul>
+<li>
+<p>Linux: </p>
+<p><pre><code>sudo npm uninstall -g @elucidatainc/pollycli</code></pre></p>
+</li>
+<li>
+<p>Mac: </p>
+<p><pre><code>npm uninstall -g @elucidatainc/pollycli</code></pre></p>
+</li>
+</ul>
+<p><strong>Note:</strong></p>
+<ul>
+<li><code>sudo</code> might have to be used before every command while accessing Polly CLI on cloud instance or server.</li>
+</ul>
+<h2 id="logging-in-and-out-of-polly-cli">Logging in and out of Polly CLI</h2>
+<p><strong>Log in</strong></p>
+<p>Open the terminal on the system and execute the following command to log in.</p>
+<pre><code>polly login</code></pre>
+
+<p>Enter the Polly Username and Password when prompted.</p>
+<p><img alt="Polly Login" src="../img/PollyCLI/1.png" title="Polly Login" /> <center><strong>Figure 1.</strong> Polly Login</center></p>
+<p>Once logged in, you will stay logged in the system and won’t need to log in again even if a new terminal is opened or the system is restarted. You will only need to log in again if you manually log out from the system.</p>
+<p>When you are in the Polly environment, you can log in to Polly CLI without the need to input credentials. We auto detect the Polly permissions or the user. The following are the ways to auto log in to Polly in different Polly environments:</p>
+<ul>
+<li>
+<p><strong>Notebook:</strong> You are automatically logged in to Polly CLI as the same user as your Polly log in. You can directly start using all the Polly CLI commands as you wish.</p>
+</li>
+<li>
+<p><strong>Polly CLI jobs:</strong> If you want to access Polly CLI inside a job, you will have to install Polly CLI in the docker of the job and execute the following command to log in.</p>
+</li>
+</ul>
+<pre><code>polly login --auto</code></pre>
+
+<p><strong>Log out</strong></p>
+<p>Execute the following command to log out</p>
+<pre><code>polly logout</code></pre>
+
+<p><strong>Note:</strong></p>
+<ul>
+<li>Logging out will not stop a running job.</li>
+</ul>
+<h2 id="create-and-view-polly-workspaces">Create and View Polly Workspaces</h2>
+<p><strong>What are Polly Workspaces?</strong></p>
+<p>Polly Workspaces are online workspaces that contain data, analyses, code, logs etc for a specific workspace or experiment. Data is stored and Analysis is performed within a user chosen workspace. More details about workspaces is mentioned <a href="https://docs.elucidata.io/Getting%20Started/Workspaces.html">here</a>.</p>
+<p><strong>Creating a new Workspace</strong></p>
+<p>To create a new workspace, use the following command.</p>
+<pre><code>polly workspaces create</code></pre>
+
+<p>You will be asked to name the Workspace and provide a description. Once the workspace is created, the workspace name and ID will be shown on the screen. This workspace ID will be needed while creating a JSON file for running jobs.</p>
+<p><img alt="Create Workspace" src="../img/PollyCLI/2.png" title="Create Workspace" /> <center><strong>Figure 2.</strong> Create Workspace</center></p>
+<p><strong>View Workspaces</strong></p>
+<p>To view all the existing Workspaces with access, use the following command.</p>
+<pre><code>polly workspaces list</code></pre>
+
+<p>You will be asked to select which Workspaces to list:</p>
+<ul>
+<li><em>all:</em> On selecting this, all the Workspaces will be listed.</li>
+<li><em>latest or oldest:</em> On selecting this you will be asked to enter the number of workspaces as shown in the image below.</li>
+</ul>
+<p><img alt="List Workspaces" src="../img/PollyCLI/3.png" title="List Workspaces" /> <center><strong>Figure 3.</strong> List Workspaces</center></p>
+<p>Workspace ID will be required for transferring data and running jobs.   </p>
+<h2 id="data-transfer">Data Transfer</h2>
+<p>Polly CLI can be used to transfer large data to and from Polly Workspaces. Upto <strong>5 TBs</strong> of data can be transferred in one go. </p>
+<p><strong>Listing the files and folders in a Polly Workspace Directory</strong></p>
+<p>Files and folders within any Polly Workspace can be listed using the following command.</p>
+<pre><code>polly files list --workspace-id <workspaceid> --workspace-path <path/to/workspace/directory></code></pre>
+
+<p>Workspace ID can be obtained by using the command <code>polly workspaces list</code> as explained in the previous section. The path to the workspace directory has to start with <code>polly://</code>. Eg - The following command will list all the files and folders within the folder ABC in the workspace 1234.</p>
+<pre><code>polly files list --workspace-id 1234 --workspace-path polly://ABC/</code></pre>
+
+<p><strong>Note:</strong></p>
+<ul>
+<li>
+<p>This command only shows files and folders just one layer within the directory mentioned (just like the <code>ls</code> command on terminal).</p>
+</li>
+<li>
+<p>If the path contains space in the folder names or file names, provide the entire path within double quotes (““). </p>
+</li>
+<li>
+<p>If you are within a Polly environment while accessing Polly CLI (like notebook or CLI job), workspace id can be auto-detected by passing <code>--yes</code> or <code>-y</code> in the command instead of <code>--workspace-id</code> parameter.</p>
+</li>
+</ul>
+<p><strong>Manually sync data to and from Polly</strong></p>
+<p>Polly CLI can be used to sync the data between a Polly Workspace and a local directory. Data can be synced manually both ways using the following command.</p>
+<pre><code>polly files sync --workspace-id <workspaceid> --source <path/source/directory> --destination <path/to/destination/directory></code></pre>
+
+<p>Workspace ID of the workspace where the data is being synced has to be mentioned in the <code>--workspace-id</code> option. Source and destination can be Polly workspace path as well as local path. Workspace path should start with <code>polly://</code> followed by the directory path in the workspace where the data is to be synced. Here <code>polly://</code> is the root directory for the mentioned workspace.</p>
+<p>The following command will sync data from Polly workspace to current local directory.</p>
+<pre><code>polly files sync --workspace-id 1234 --source polly://directory1/ --destination ./</code></pre>
+
+<p>The following command will sync data from current local directory to Polly Workspace directory.</p>
+<pre><code>polly files sync --workspace-id 1234 --source ./ --destination polly://directory1/</code></pre>
+
+<p><strong>Note:</strong></p>
+<ul>
+<li>
+<p>Only files that have been changed or added new will get transferred using the sync command. The files that remained unchanged after the last sync will not get transferred. This command can only be used for folders or directories (not for individual files). To transfer just a single file to or from Polly, use the <code>copy</code> command mentioned in the next section.</p>
+</li>
+<li>
+<p>If the path contains space in the folder names or file names, provide the entire path within double quotes (““). </p>
+</li>
+<li>
+<p>If you are within a Polly environment while accessing Polly CLI (like notebook or CLI job), workspace id can be auto-detected by passing <code>--yes</code> or <code>-y</code> in the command instead of <code>--workspace-id</code> parameter. </p>
+</li>
+</ul>
+<p><strong>Copy files to and from Polly</strong></p>
+<p>Files can be copied to and from a Polly Workspace using the following command.</p>
+<pre><code>polly files copy --workspace-id <workspaceid> --source <path/to/source/file> --destination <path/to/destination/file></code></pre>
+
+<p>This command will copy an individual file from source to destination. The transfer can be from or to Polly Workspace depending on the source and destination defined. Workspace path should start with <code>polly://</code> followed by the directory structure within the Workspace.</p>
+<p><strong>Note:</strong></p>
+<ul>
+<li>
+<p>If the path contains space in the folder names or file names, provide the entire path within double quotes (““).</p>
+</li>
+<li>
+<p>If you are within a Polly environment while accessing Polly CLI (like notebook or CLI job), workspace id can be auto-detected by passing <code>--yes</code> or <code>-y</code> in the command instead of <code>--workspace-id</code> parameter.</p>
+</li>
+</ul>
+<h2 id="docker-management">Docker Management</h2>
+<p>Polly has its own docker repository where dockers can be managed. The advantage of the Polly Docker Repository is that these dockers can also be stored within the same platform as data, code, and analyses and to access the stored dockers all you need is the Polly login credential.</p>
+<p><strong>Docker login and logout</strong></p>
+<p>In order to login/logout of the docker repository you can run the following command:</p>
+<pre><code>polly dockers login</code></pre>
+<pre><code>polly dockers logout</code></pre>
+
+<p>The output generated from the above command should then be run on the terminal.</p>
+<p><strong>Note:</strong></p>
+<ul>
+<li>Add <code>sudo</code> before the command if required according to system settings.</li>
+</ul>
+<p><img alt="Example output" src="../img/PollyCLI/Exampleoutput.png" /> <center><strong>Figure 4.</strong> Example output generated from above commands</center></p>
+<p><strong>Create a Docker Repository</strong></p>
+<p>Docker repository is a collection of dockers where you can publish and access your docker images. Here you can store one or more versions of your docker image. Every docker can have a tag and if a docker with the same tag is pushed again, it will overwrite the older docker after saving its older version that can still be accessed and used.</p>
+<p>There can be multiple such repositories for an organization and only the members of your organization with Polly login credentials can assess them.</p>
+<p>Use the following command to create a docker repository:</p>
+<pre><code>polly dockers create --name ,< docker_repository_name > --description < description of the repository ></code></pre>
+
+<p><img alt="Docker Repository Generation" src="../img/PollyCLI/dockerrepogeneration.png" /> <center><strong>Figure 5.</strong> Docker Repository Generation</center></p>
+<p><strong>List docker repositories</strong></p>
+<p>You can list all the stored docker repositories in your organization by using this command. </p>
+<pre><code>polly dockers list --all</code></pre>
+
+<p><img alt="Polly Docker List" src="../img/PollyCLI/dockerlist.png" /> <center><strong>Figure 6.</strong> Polly Docker List</center></p>
+<p><strong>List docker repositories commits</strong></p>
+<p>You can list specific repository to view the various commits or tags stored within it through the Polly docker commit list. </p>
+<pre><code>polly dockers commit-list --name < docker_repository_name > --all</code></pre>
+
+<p><img alt="Polly Docker Commit List" src="../img/PollyCLI/dockercommit.png" /> <center><strong>Figure 7.</strong> Docker Commit List</center></p>
+<p>In order to reduce the indecision when there are multiple dockers with the same name and same tag, you can distinguish them by their unique identifier which is assigned to every docker commit. In case the unique identifier is not passed in the command, the latest version of the docker with that tag will be used.</p>
+<p>You can go back to older commit as well if required by using its tag and unique identity listed in the Polly docker commit list.</p>
+<p><strong>Polly Dockers Path</strong></p>
+<p>Typical path of a docker on Polly is </p>
+<pre><code>docker.polly.elucidata.io/< organization >/< dockername >:< tag ></code></pre>
+
+<p><strong>Note:</strong></p>
+<ul>
+<li>You can have two dockers with the same tag as well, in which case, the latest commit for that tag will be called by default if you call that docker. To call the docker with an older commit, commit hash will be required to specify in the path. </li>
+</ul>
+<pre><code>docker.polly.elucidata.io/< organization >/< dockername >@< commit_hash ></code></pre>
+
+<p>The following example contains 2 docker images with the same tag. The latest image has the tag “active“. The active image can just be called by using the usual path. </p>
+<pre><code>docker.polly.elucidata.io/elucidata/16June:latest</code></pre>
+
+<p>The image with the inactive tag can be called by specifying the commit hash.</p>
+<pre><code>docker.polly.elucidata.io/elucidata/16June@sha256:5747316366b8cc9e3021cd7286f42b2d6d81e3d743e2ab571f55bcd5df788cc8</code></pre>
+
+<p><img alt="Example Dockers with tags status" src="../img/PollyCLI/Exampletags.png" /> <center><strong>Figure 8.</strong> Example of Docker with different tag status</center></p>
+<p><strong>Pull/push of dockers</strong></p>
+<p>The commands for docker’s pull/push are the same commands that you use for pulling and pushing from any other docker registry. The only difference is the path of the docker.</p>
+<p>Example commands to pull a docker would be:</p>
+<pre><code>docker.polly.elucidata.io/elucidata/16June:latest</code></pre>
+
+<pre><code>docker pull docker.polly.elucidata.io/elucidata/16june@sha256:5747316366b8cc9e3021cd7286f42b2d6d81e3d743e2ab571f55bcd5df788cc8</code></pre>
+
+<h2 id="running-dockerized-jobs">Running Dockerized Jobs</h2>
+<p>Polly CLI can run dockerized jobs on managed Polly infrastructure. Polly infrastructure will scale computational resources with increased usage. All you need to do is submit a job and rest is taken care of by Polly. </p>
+<h2 id="create-job-description-json-file">Create job description JSON file</h2>
+<p>JSON file is needed to describe the job to be run on Polly. This file should contain the information about the computational resources (machine), docker image, the name of the job and specific commands (if required) to be run after the docker has been run, as keys. Text can be copy pasted from the example below to create the JSON file.</p>
+<pre><code>{
+ "machineType" : "gp",
+ "cpu": 1,
+ "memory": "1Gi",
+ "image": "docker/whalesay",
+ "tag": "latest",
+ "name": "Single Cell RNA",
+ "command": [
+     "cowsay","hello world"
+ ]
+}</code></pre>
+
+<p><strong>machineType</strong></p>
+<p>Name of the machine required to run the job needs to be mentioned as per the following table.</p>
+<table>
+<thead>
+<tr>
+<th>machineType</th>
+<th>No. of vCPUs</th>
+<th>Memory (RAM)</th>
+<th>No. of GPUs</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>gp</td>
+<td>4</td>
+<td>16 GB</td>
+<td>-</td>
+</tr>
+<tr>
+<td>ci2xlarge</td>
+<td>16</td>
+<td>32 GB</td>
+<td>-</td>
+</tr>
+<tr>
+<td>ci3xlarge</td>
+<td>36</td>
+<td>72 GB</td>
+<td>-</td>
+</tr>
+<tr>
+<td>mi2xlarge</td>
+<td>4</td>
+<td>32 GB</td>
+<td>-</td>
+</tr>
+<tr>
+<td>mi3xlarge</td>
+<td>8</td>
+<td>64 GB</td>
+<td>-</td>
+</tr>
+<tr>
+<td>mi4xlarge</td>
+<td>16</td>
+<td>122 GB</td>
+<td>-</td>
+</tr>
+<tr>
+<td>gpusmall</td>
+<td>16</td>
+<td>61 GB</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>More machines (including some with GPUs) will be added soon. If you need a specific machine to be added to the list, please contact us at <a href="mailto:polly@elucidata.io">polly@elucidata.io</a>.</p>
+<p>If computational power required is less than 2 vCPUs and 8 GB RAM, use the keys <strong>“cpu”</strong> and <strong>“memory”</strong> in the JSON file instead of the key <strong>“machineType”</strong>. If all 3 keys are present, <strong>“machineType”</strong> takes priority and the machine will be assigned accordingly. In the example JSON (image) mentioned above, machine selected will be <strong>“gp”</strong> with 4 vCPUs and 16 GB RAM and <strong>NOT</strong> 1vCPU and 1 GB RAM.</p>
+<ul>
+<li>
+<p><strong>cpu:</strong> Mention the number of CPUs needed here. For smaller jobs, just a part of the CPU can also be chosen. For example, if 0.1 vCPUs are required for the job, the number of CPUs can be mentioned as <strong>“100m”</strong>. If more than 2 CPUs are required for the job, use the key <strong>“machineType”</strong> to choose the relevant machine instead of <strong>“cpu”</strong> and <strong>“memory”</strong>.</p>
+</li>
+<li>
+<p><strong>memory:</strong> RAM required needs to be mentioned in text (eg - “1Gi” or “500 Mi”) in this key. If memory needed is more than 8 GB, use the key <strong>“machineType”</strong> to choose the relevant machine instead of <strong>“cpu”</strong> and <strong>“memory”</strong>.</p>
+</li>
+<li>
+<p><strong>image</strong>: The path to the docker image present in DockerHub or ECR needs to be mentioned in this key.</p>
+</li>
+<li>
+<p><strong>tag:</strong> Tag of the docker image needs to be mentioned in this key.</p>
+</li>
+<li>
+<p><strong>name:</strong> Name you want to provide to the job has to be mentioned in this key.</p>
+</li>
+<li>
+<p><strong>command:</strong> Any commands to be executed after the docker has been run can be mentioned in this key.</p>
+</li>
+</ul>
+<h2 id="docker-building-guidelines">Docker Building Guidelines</h2>
+<p>While creating a docker to be run on Polly, the following must be taken care of.</p>
+<ul>
+<li>
+<p>Dockers must be present in either Docker Hub or Amazon ECR. </p>
+</li>
+<li>
+<p>Soon you will be able to have Dockers directly on Polly.</p>
+</li>
+<li>
+<p>Only self contained dockers can be run on Polly. A self contained docker is one which has the code to get input files as well as upload output files back contained in the docker.</p>
+</li>
+<li>
+<p>Public as well as private dockers are supported. In order to run private dockers, “secret” should be passed as a key in the JSON file. If your private dockers are on Polly itself, you don't require to generate this secret.</p>
+</li>
+<li>
+<p>To get the secret key for the private docker, the following steps need to be followed.</p>
+<ul>
+<li>
+<p>For MacOS, you need to remove the key value pair "credsStore": "osxkeychain" from the config.json file present in the directory <code>/Users/&lt; username &gt;/.docker</code>.</p>
+</li>
+<li>
+<p>You need to be logged in to DockerHub or ECR through the terminal. If not, you will need to log in.</p>
+</li>
+<li>
+<p>Run the command <code>sudo polly</code> on the terminal. </p>
+</li>
+<li>
+<p>Select the option miscellaneous followed by create secret for docker. </p>
+</li>
+<li>
+<p>Provide the path to the docker config file (the usual path for docker config is <code>/Users/&lt; username &gt;/.docker/config.json</code> in Mac and <code>/home/&lt; username &gt;/.docker/config.json</code> in Linux). Relative paths are not supported. </p>
+</li>
+<li>
+<p>Select the account in which the docker to be run is present. </p>
+</li>
+<li>
+<p>Copy the long text string (secret key) output to the JSON file in the key “secret”.</p>
+</li>
+</ul>
+</li>
+</ul>
+<pre><code>{
+  "cpu": 1,
+  "memory": "1Gi",
+  "image": "docker/whalesay",
+  "tag": "latest",
+  "Secret": "ewoAImF1dVnphR0ZzWjNWd2RHRTZSVkJKUXlOcFlXMGsiCgkw==",
+  "name": "exampleName",
+  "command": [
+      "cowsay","hello world"
+  ]</code></pre>
+
+<ul>
+<li>
+<p><strong>Passing Environment variables:</strong> Two types of Environment variables can be passed in the json file.</p>
+<ul>
+<li>
+<p><strong>Normal environment variables</strong> are saved in a database for future references. These can be passed in the parameter <strong>"env”</strong> in the json file.</p>
+</li>
+<li>
+<p><strong>Private environment variables</strong> are not saved in any database. These can be used for passing credentials in the json file. These can be passed in the parameter <strong>“secret_env”</strong> in the json file.</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Note:</strong></p>
+<ul>
+<li>The value of Environment variables should always be string. For example, the correct way to assign Environment variable is <code>{“parallel_threads” : “2”}</code> and <strong>NOT</strong> <code>{“parallel_threads” : 2}</code>.</li>
+</ul>
+<pre><code>{
+ "cpu": "100m",
+ "memory": "64Mi",
+ "image": "your_docker",
+ "tag": "latest",
+ "env": {
+   "ENV1": "ENV_VALUE1",
+   "ENV2": "ENV_VALUE2"
+ },
+ "secret_env": {
+   "SECRET_ENV1": "SECRET_ENV_VALUE1",
+   "SECRET_ENV2": "SECRET_ENV_VALUE2"
+ },
+ "name": "docker running"
+}</code></pre>
+
+<ul>
+<li><a href="https://gist.github.com/GeorgeSabu/8a3251e263d93b08413ce2c56d8af45d" title="https://gist.github.com/GeorgeSabu/8a3251e263d93b08413ce2c56d8af45d">Here</a> is an example gist showing how input data for a job can be taken from and output stored back to Polly Workspaces.</li>
+</ul>
+<h2 id="execute-job">Execute Job</h2>
+<p>To execute the job, execute the following command</p>
+<pre><code>polly jobs submit</code></pre>
+
+<p>On executing this command, you will be asked to enter the id of the workspace where the job should be run and the path to the job description JSON file. With this, the job will be submitted to run and Job ID will be created. This Job ID will be needed to check the status and the logs of the submitted job.</p>
+<p><strong>Note:</strong>   </p>
+<ul>
+<li>You do not need to create a new Workspace for running a job. You can simply list the older Workspaces and run a job in an already created Workspace.</li>
+</ul>
+<p><img alt="Submit Jobs" src="../img/PollyCLI/4.png" title="Submit Jobs" /> <center><strong>Figure 9.</strong> Submit Jobs</center></p>
+<h2 id="monitor-job-status">Monitor Job status</h2>
+<p><strong>Get job status </strong></p>
+<ul>
+<li>The following command can be used to view the status of a particular job.</li>
+</ul>
+<pre><code>polly jobs status --workspace-id <workspace id> --job-id <job id></code></pre>
+
+<p><img alt="Single Job Status" src="../img/PollyCLI/5.png" title="Single Job Status" /> <center><strong>Figure 10.</strong> Single Job Status</center></p>
+<ul>
+<li>The following command can be used to view the statuses of all the jobs in a workspace.</li>
+</ul>
+<pre><code>polly jobs status --workspace-id <workspace id></code></pre>
+
+<p>A prompt to enter job id will appear which when kept blank gets all the job statuses in a workspaces.</p>
+<p><img alt="All Job Statuses in a Workspace" src="../img/PollyCLI/6.png" title="All Job Statuses in a Workspace" /> <center><strong>Figure 11.</strong> All Job Statuses in a Workspace</center></p>
+<ul>
+<li>If you are within a Polly environment while accessing Polly CLI (like notebook or CLI job), workspace id can be auto-detected by passing <code>--yes</code> or <code>-y</code> in the command instead of <code>--workspace-id</code> parameter.</li>
+</ul>
+<p><strong>Get job logs</strong></p>
+<p>To view the logs of any job, use the following command:</p>
+<pre><code>polly jobs logs --workspace-id <workspace id> --job-id <job id></code></pre>
+
+<p>This will give the logs for the job. In case the job is still running, it will give the logs generated till that instant.</p>
+<p><img alt="Job Logs" src="../img/PollyCLI/7.png" title="Job Logs" /> <center><strong>Figure 12.</strong> Job Logs</center></p>
+<p><strong>Note:</strong>  </p>
+<ul>
+<li>If you are within a Polly environment while accessing Polly CLI (like notebook or CLI job), workspace id can be auto-detected by passing <code>--yes</code> or <code>-y</code> in the command instead of <code>--workspace-id</code> parameter.</li>
+</ul>
+<h2 id="polly-cli-help">Polly CLI help</h2>
+<p>If help is needed for any command, just type <code>--help</code> at the end of the command and execute.</p>
+<p><img alt="Polly CLI Help" src="../img/PollyCLI/8.png" title="Polly CLI Help" /> <center><strong>Figure 13.</strong> Polly CLI Help</center></p>
+<h2 id="some-useful-gists">Some useful gists</h2>
+<ul>
+<li>
+<p><a href="https://gist.github.com/GeorgeSabu/8a3251e263d93b08413ce2c56d8af45d">Accessing Polly files in and out of a job</a></p>
+</li>
+<li>
+<p><a href="https://gist.github.com/GeorgeSabu/e89891da1d86fbaa3afa0655a4ede899">Running a cluster of jobs with different parameters</a></p>
+</li>
+<li>
+<p><a href="https://gist.github.com/GeorgeSabu/4fbc359fa9ee2bf4d3cb05df3b60db81">Bash script to identify when a job finishes</a></p>
+</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Polly Notebooks.html" class="btn btn-neutral float-right" title="Notebooks">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Apps/Data Studio/CCLE Correlation Analysis.html" class="btn btn-neutral" title="CCLE Correlation Analysis"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Apps/Data Studio/CCLE Correlation Analysis.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="Polly Notebooks.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>

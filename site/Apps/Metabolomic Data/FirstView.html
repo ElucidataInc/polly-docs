@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/elucidata.ico">
+  
+  <title>FirstView - Polly Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "FirstView";
+    var mkdocs_page_input_path = "Apps/Metabolomic Data/FirstView.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../index.html" class="icon icon-home"> Polly Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../index.html">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Getting Started</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Getting Started/Workspaces.html">Workspaces</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Apps</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Introduction.html">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Host Apps.html">Host Apps</a>
+                </li>
+                <li class=" current">
+                    
+    <span class="caption-text">Metabolomic Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="El-MAVEN Phi Relative LC-MS.html">El-MAVEN Phi Relative LC-MS</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="MetScape.html">MetScape</a>
+                </li>
+                <li class="toctree-l3 current">
+                    
+    <a class="current" href="FirstView.html">FirstView</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l4"><a href="#introduction">Introduction</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#overview">Overview</a></li>
+        
+            <li><a class="toctree-l5" href="#scope-of-the-app">Scope of the App</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l4"><a href="#getting-started">Getting Started</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#user-input">User Input</a></li>
+        
+            <li><a class="toctree-l5" href="#steps-in-data-processing">Steps in data processing</a></li>
+        
+            <li><a class="toctree-l5" href="#caveats">Caveats</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l4"><a href="#tutorial">Tutorial</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#upload-files">Upload files</a></li>
+        
+            <li><a class="toctree-l5" href="#visualization">Visualization</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="Untargeted Pipeline.html">Untargeted Pipeline</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="Dual Mode Visualization.html">Dual Mode Data Visualization</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="QuantFit.html">QuantFit</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="El-MAVEN.html">El-MAVEN</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="Labeled LC-MSMS Workflow.html">Labeled LC-MS/MS Workfow</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="Labeled LC-MS Workflow.html">Labeled LC-MS Workflow</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="CompoundDiscoverer QuantFit.html">Compound Discoverer<sup>TM</sup> QuantFit</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Screening Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Screening Data/CRISPR Screening.html">CRISPR Screening</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Screening Data/High Throughput Drug Screening.html">High Throughput Drug Screening</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Sequencing Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Sequencing Data/RNA Seq Workflow.html">RNA Seq Workflow</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Proteomic Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Proteomic Data/Proteomics Workflow.html">Proteomics Workflow</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Lipidomic Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Lipidomics Data/Lipidomics Visualization Dashboard.html">Lipidomics Visualization Dashboard</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Multi-omic Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Multi-omic Data/IntOmix.html">IntOmix</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Data Studio</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Data Studio/Data Studio.html">Introduction</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Data Studio/CCLE Correlation Analysis.html">CCLE Correlation Analysis</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Scaling Compute</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Scaling compute/Polly CLI.html">Polly CLI</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Scaling compute/Polly Notebooks.html">Notebooks</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../Data Lake.html">Data Lake</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../Release Notes.html">Release Notes</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Polly Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Metabolomic Data &raquo;</li>
+        
+      
+        
+          <li>Apps &raquo;</li>
+        
+      
+    
+    <li>FirstView</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="introduction">Introduction</h1>
+<h2 id="overview">Overview</h2>
+<p><a href="https://resources.elucidata.io/elmaven">El-MAVEN</a>, our open source LC-MS data processing engine is optimized for isotopomer labeling and untargeted metabolomic profiling experiments. You can view the mass spectra, align chromatograms, perform peak-feature detection and alignment for labeled and unlabeled MS data. FirstView enables you to have a first look at your data using basic visualizations to get preliminary insights.</p>
+<h2 id="scope-of-the-app">Scope of the App</h2>
+<ul>
+<li>Provides visualizations for both labeled and unlabeled data</li>
+<li>Provides visualizations on both raw and log<sub>2</sub> transformed intensities</li>
+<li>View intensity plot for each metabolite</li>
+<li>View Isotope plot for each metabolite in case of labeled data</li>
+<li>View heat map for the entire dataset</li>
+</ul>
+<p><img alt="Workflow Schematic" src="../../img/FirstView/Workflowschematic.png" /> <center><strong>Figure 1.</strong> FirstView</center></p>
+<h1 id="getting-started">Getting Started</h1>
+<h2 id="user-input">User Input</h2>
+<p>There are two ways to upload files to FirstView:</p>
+<p><strong>El-MAVEN FirstView interface</strong></p>
+<p>It allows you to directly push El-MAVEN output to FirstView as shown in Figure 2.</p>
+<p><img alt="El-MAVEN FirstView Interface" src="../../img/FirstView/EFInterface.png" /> <center><strong>Figure 2.</strong> El-MAVEN FirstView Interface</center></p>
+<p><strong>Application upload interface</strong></p>
+<p>To use FirstView from Polly, you only require the El-MAVEN Output file:</p>
+<p><img alt="El-MAVEN Output FIle" src="../../img/FirstView/Outputfile.png" /> <center><strong>Figure 3.</strong> El-MAVEN Output FIle</center></p>
+<h2 id="steps-in-data-processing">Steps in data processing</h2>
+<ul>
+<li>Upload data to FirstView</li>
+<li>Visualize the intensity plot for each metabolite</li>
+<li>Visualize the isotope plot for each metabolite</li>
+<li>Visualize the heat map for the entire dataset</li>
+</ul>
+<h2 id="caveats">Caveats</h2>
+<ul>
+<li>The El-MAVEN output should be generated using a compound database</li>
+<li>For labeled data, the intensities in the Isotope Plot are <strong>NOT</strong> corrected for natural abundance</li>
+<li>Log<sub>2</sub> Transformation does not change the Isotope Plot</li>
+<li>For unlabeled data, the Isotope Plot section will be blank</li>
+</ul>
+<h1 id="tutorial">Tutorial</h1>
+<h2 id="upload-files">Upload files</h2>
+<p><strong>El-MAVEN FirstView Interface</strong></p>
+<p>Once you have derived a peak table containing the list of metabolites. You can click on the <em>Polly</em> Icon at the Menu Bar to export the data directly to PollyTM FirstView. Provide your Polly login credentials and a window will pop-up which allows you to select the peak table to be uploaded to FirstView. You can select the workspace from the list of your existing Polly Workspaces or choose to create a new one from this menu itself and then click on <em>Upload.</em> Once the files are uploaded, click on <em>Go to FirstView</em> and you would be redirected to FirstView.</p>
+<p><img alt="El-MAVEN FirstView Interface" src="../../img/FirstView/Elmaven.png" /> <center><strong>Figure 4.</strong> El-MAVEN FirstView Interface</center></p>
+<p><strong>Application upload interface</strong></p>
+<p>Alternatively, select FirstView from the dashboard under the <em>Metabolomics Data</em> Tab.</p>
+<p><img alt="Polly Dashboard" src="../../img/FirstView/Dashboard1.png" /> <center><strong>Figure 5.</strong> Polly Dashboard</center></p>
+<p>Create a <em>New Workspace</em> or choose the existing one from the drop down and provide the <em>Name of the Session</em> to be redirected to FirstView's upload page as shown in Figure 6.</p>
+<p><img alt="Workspace selection" src="../../img/FirstView/Selection1.png" /> <center><strong>Figure 6.</strong> Workspace selection</center></p>
+<p><img alt="Upload page of FirstView" src="../../img/FirstView/Uploadpage.png" /> <center><strong>Figure 7.</strong> Upload page of FirstView</center></p>
+<p>Upload your intensity file by either clicking on <em>Browse</em> or using the drag and drop functionality.</p>
+<h2 id="visualization">Visualization</h2>
+<p>The visualization interface provides the data summary (number of samples, groups and metabolites present in the uploaded data) and normalization on the left side whereas the rest of the interface provides the generated plots.</p>
+<p><strong>Intensity Plot</strong></p>
+<p>The Intensity Plot displays the intensity values either raw or log<sub>2</sub> transformed, for a given metabolite across all samples. For labeled data, the intensity for all isotopologues are displayed in different colors in stacked bar plots as illustrated in Figure 8. below.</p>
+<p><img alt="Intensity Plot with raw intensities" src="../../img/FirstView/Intensityplot.png" /> <center><strong>Figure 8.</strong> Intensity Plot with raw intensities</center></p>
+<p>Click on the drop down to visualize the intensity for a different metabolite.</p>
+<p><img alt="Drop down to Intensity Plot with raw intensities" src="../../img/FirstView/Intensityplot2.png" /> <center><strong>Figure 9.</strong> Drop down to Intensity Plot with raw intensities</center></p>
+<p>To see a normalized Intensity Plot, select the <em>Log2 Transformed</em> option in <em>Normalization</em> section. The plot would get updated to accommodate the normalized intensities.</p>
+<p><img alt="Intensity Plot with normalized intensities" src="../../img/FirstView/Intensityplot3.png" /> <center><strong>Figure 10.</strong> Intensity Plot with normalized intensities</center></p>
+<p><strong>Isotope Plot</strong></p>
+<p>Click on <em>Isotope Plot</em> option beside Intensity Plot to see a fractional enrichment vs sample plot. The values seen are calculated as:</p>
+<p>intensity of parent or isotopologue / sum (intensity of metabolite for a sample)</p>
+<p><img alt="Isotope Plot with raw intensities" src="../../img/FirstView/Isotopeplot.png" /> <center><strong>Figure 11.</strong> Isotope Plot with raw intensities</center></p>
+<p><strong>Heat map</strong></p>
+<p>Click on Heat map option beside Isotope Plot to open the heat map. Heat map is a graphical representation of data where the individual values contained in a matrix are represented as different colors corresponding to the intensity. Here, the heat map represents intensity value of each metabolite corresponding to the number of samples in the data.</p>
+<p><img alt="Heat map with raw intensities" src="../../img/FirstView/Heatmap1.png" /> <center><strong>Figure 12.</strong> Heat map with raw intensities</center></p>
+<p>You can view this plot with both raw intensities and normalized intensities by choosing the desired normalization option from the left section of the page. Hovering over the plot will display the specific values.</p>
+<p><img alt="Heat map with normalized intensities" src="../../img/FirstView/Heatmap2.png" /> <center><strong>Figure 13.</strong> Heat map with normalized intensities</center></p>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Untargeted Pipeline.html" class="btn btn-neutral float-right" title="Untargeted Pipeline">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="MetScape.html" class="btn btn-neutral" title="MetScape"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="MetScape.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="Untargeted Pipeline.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

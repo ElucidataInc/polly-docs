@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/elucidata.ico">
+  
+  <title>Proteomics Workflow - Polly Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Proteomics Workflow";
+    var mkdocs_page_input_path = "Apps/Proteomic Data/Proteomics Workflow.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../index.html" class="icon icon-home"> Polly Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../index.html">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Getting Started</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Getting Started/Workspaces.html">Workspaces</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Apps</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Introduction.html">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Host Apps.html">Host Apps</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Metabolomic Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Metabolomic Data/El-MAVEN Phi Relative LC-MS.html">El-MAVEN Phi Relative LC-MS</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Metabolomic Data/MetScape.html">MetScape</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Metabolomic Data/FirstView.html">FirstView</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Metabolomic Data/Untargeted Pipeline.html">Untargeted Pipeline</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Metabolomic Data/Dual Mode Visualization.html">Dual Mode Data Visualization</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Metabolomic Data/QuantFit.html">QuantFit</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Metabolomic Data/El-MAVEN.html">El-MAVEN</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Metabolomic Data/Labeled LC-MSMS Workflow.html">Labeled LC-MS/MS Workfow</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Metabolomic Data/Labeled LC-MS Workflow.html">Labeled LC-MS Workflow</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Metabolomic Data/CompoundDiscoverer QuantFit.html">Compound Discoverer<sup>TM</sup> QuantFit</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Screening Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Screening Data/CRISPR Screening.html">CRISPR Screening</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Screening Data/High Throughput Drug Screening.html">High Throughput Drug Screening</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Sequencing Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Sequencing Data/RNA Seq Workflow.html">RNA Seq Workflow</a>
+                </li>
+    </ul>
+                </li>
+                <li class=" current">
+                    
+    <span class="caption-text">Proteomic Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3 current">
+                    
+    <a class="current" href="Proteomics Workflow.html">Proteomics Workflow</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l4"><a href="#introduction">Introduction</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#overview">Overview</a></li>
+        
+            <li><a class="toctree-l5" href="#scope-of-the-app">Scope of the app</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l4"><a href="#getting-started">Getting Started</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#user-input">User input</a></li>
+        
+            <li><a class="toctree-l5" href="#steps-involved-in-data-processing">Steps involved in data processing</a></li>
+        
+            <li><a class="toctree-l5" href="#caveats">Caveats</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l4"><a href="#tutorial">Tutorial</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#upload-files">Upload files</a></li>
+        
+            <li><a class="toctree-l5" href="#pre-processing">Pre-processing</a></li>
+        
+            <li><a class="toctree-l5" href="#pca">PCA</a></li>
+        
+            <li><a class="toctree-l5" href="#pathway-search">Pathway Search</a></li>
+        
+            <li><a class="toctree-l5" href="#differential-expression-analysis">Differential Expression Analysis</a></li>
+        
+            <li><a class="toctree-l5" href="#x2k-analysis">X2K analysis</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l4"><a href="#references">References</a></li>
+    
+
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Lipidomic Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Lipidomics Data/Lipidomics Visualization Dashboard.html">Lipidomics Visualization Dashboard</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Multi-omic Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Multi-omic Data/IntOmix.html">IntOmix</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Data Studio</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Data Studio/Data Studio.html">Introduction</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Data Studio/CCLE Correlation Analysis.html">CCLE Correlation Analysis</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Scaling Compute</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Scaling compute/Polly CLI.html">Polly CLI</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Scaling compute/Polly Notebooks.html">Notebooks</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../Data Lake.html">Data Lake</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../Release Notes.html">Release Notes</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Polly Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Proteomic Data &raquo;</li>
+        
+      
+        
+          <li>Apps &raquo;</li>
+        
+      
+    
+    <li>Proteomics Workflow</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="introduction">Introduction</h1>
+<h2 id="overview">Overview</h2>
+<p>Proteomics is a methodical approach used to identify and understand protein expression patterns at a given time in response to a specific stimulus coupled with functional protein networks that exist at the level of the cell, tissue, or whole organism. This has grown into a popular and promising field  for the identification and characterization of cellular gene products (<em>i.e.</em> proteins) that are present, absent, or altered under certain environmental, physiological and pathophysiological conditions. With the onset of robust and reliable mass spectrometers which help provide methodical analysis and quantification of complex protein mixtures, it is also important to standardize methods to process this data and perform in-depth analysis resulting in a meaningful outcome. Proteomics Workflow provides a platform to analyze any proteomics data states ranging from pre-processing to in-depth pathway analysis. </p>
+<h2 id="scope-of-the-app">Scope of the app</h2>
+<ul>
+<li>Systematic downstream analysis of Proteomics data with ease of switching interfaces.</li>
+<li>Visualize abundance plots for gene(s) against predefined or custom pathway databases.</li>
+<li>Perform PCA for quality check.</li>
+<li>Perform differential expression using different statistical methods and identify most differentially expressed proteins.</li>
+<li>Perform global pathway analysis using X2K (Expression to Kinase) with adjustable parameters.</li>
+</ul>
+<p><img alt="ProteoicsWorkflow" src="../../img/Proteomics/Workflowschematic.png" /> <center><strong>Figure 1.</strong> Proteomics Workflow</center></p>
+<h1 id="getting-started">Getting Started</h1>
+<h2 id="user-input">User input</h2>
+<p>Proteomics Workflow requires two files:</p>
+<p><strong>Abundance File</strong></p>
+<p>This file should contain normalized abundance values, protein names, and their corresponding accessions along with the gene symbols. The input abundance file should have <em>Accession</em>, <em>Gene Symbol</em> and <em>Abundances</em> column.</p>
+<p><img alt="Abundances file" src="../../img/Proteomics/Abundancefile.png" /> <center><strong>Figure 2.</strong> Abundance file</center></p>
+<p><strong>Metadata File</strong></p>
+<p>The metadata file should contain sample cohort mapping for the samples present in the abundance file. It consists of two columns, <em>SampleName</em> which contains the samples present in the abundance file and <em>Cohort</em> which contains the cohort information for each sample. This file should be in .csv format.</p>
+<p><img alt="Cohort file" src="../../img/Proteomics/Cohortfile.png" /> <center><strong>Figure 3.</strong> Cohort file</center></p>
+<h2 id="steps-involved-in-data-processing">Steps involved in data processing</h2>
+<ul>
+<li>Upload abundance and the metadata files.</li>
+<li>Perform normalization of data.</li>
+<li>Perform pathway analysis using in-house KEGG, HMDB and Reactome databases or upload a custom database.</li>
+<li>Perform X2K analysis and visualize enrichment plots</li>
+</ul>
+<h2 id="caveats">Caveats</h2>
+<ul>
+<li>The input file format has to be exactly same as the demo data.</li>
+</ul>
+<h1 id="tutorial">Tutorial</h1>
+<h2 id="upload-files">Upload files</h2>
+<p>Select <em>Proteomics Workflow</em> from the dashboard under the <em>Proteomics Data</em> tab. You can either <em>Add New</em> Workspace or <em>Select a Workspace</em>  which is an already existing workspace as shown in Figure 4. After entering workspace details, you will be redirected to the app.</p>
+<p><img alt="Polly Dashboard" src="../../img/Proteomics/Dashboard1.png" /></p>
+<p><img alt="Polly Dashboard" src="../../img/Proteomics/Selection1.png" /> <center><strong>Figure 4.</strong> Polly Dashboard and Proteomics Workflow</center></p>
+<p>Upload the abundance and cohort file in the upload space and click on <em>Go</em>.</p>
+<p><img alt="Upload Interface" src="../../img/Proteomics/Uploadinterface.png" /> <center><strong>Figure 5.</strong> Upload interface</center></p>
+<h2 id="pre-processing">Pre-processing</h2>
+<p>The pre-processing section extracts and displays only the protein abundances column for all samples. To perform control normalization, select the cohort using the drop down and click on <em>Normalize</em> as shown in Figure 6. Control normalization normalizes every cohort with respect to the cohort selected in the <em>Control Cohort</em> section. </p>
+<p><img alt="Pre-processing Section" src="../../img/Proteomics/Preprocessing.png" /> <center><strong>Figure 6.</strong> Pre-processing</center></p>
+<h2 id="pca">PCA</h2>
+<p>Principal component analysis (PCA) simplifies the complexity in high-dimensional data while retaining trends and patterns. It does this by transforming the data into fewer dimensions, which act as summaries of features. High-dimensional data are very common in biology and arise when multiple features, such as expression of many genes, are measured for each sample. PCA is an unsupervised learning method similar to clustering wherein it finds patterns without reference to prior knowledge about whether the samples come from different treatment groups or have phenotypic differences. PCA reduces data by geometrically projecting them onto lower dimensions called principal components (PCs), with the goal of finding the best summary of the data using a limited number of PCs. The first PC is chosen to minimize the total distance between the data and their projection onto the PC. The second (and subsequent) PCs are selected similarly, with the additional requirement that they be uncorrelated with all previous PCs. The PCA Plot interface allows visualizing PC1 to PC11 using the drop-down menu's labeled <em>PC on x axis</em> and <em>PC on y axis</em>. The input data for the PCA Plot is the Log<sub>2</sub> Control Normalized Abundances.</p>
+<p><img alt="PCA Section" src="../../img/Proteomics/PCA.png" /> <center><strong>Figure 7.</strong> PCA</center></p>
+<h2 id="pathway-search">Pathway Search</h2>
+<p>The Pathway Search interface helps in visualizing the abundance of proteins across different cohorts belonging to a particular pathway. The following customization are possible in the Pathway Search interface:</p>
+<ul>
+<li><em>Choose Pathway Database:</em> KEGG, HMDB, Reactome pathways are available by default and can be selected using the drop down under <em>Choose Pathway Database.</em> Alternatively, custom pathways can be added using the upload option on the right side. The custom pathway file should be in .csv format and should contain the pathway names as well as the proteins involved in the pathway. A sample pathway file can be downloaded by clicking on <em>Download a sample pathway file</em>. </li>
+<li><em>Pathway:</em> The pathway to be visualized can be selected from the list of pathways present in the selected database. Multiple pathways can be selected simultaneously. </li>
+<li><em>Protein Name:</em> The protein to be visualized can be selected from the drop down menu. Only the proteins involved in the pathway selected will show up in this menu. Selecting one protein will add all its phosphosites present in the data to the plot as well. Multiple proteins can be selected simultaneously.</li>
+</ul>
+<p><img alt="Pathway Search Tab" src="../../img/Proteomics/Pathwaysearch.png" /> <center><strong>Figure 8.</strong> Pathway Search</center></p>
+<h2 id="differential-expression-analysis">Differential Expression Analysis</h2>
+<p>The differential analysis supports three methods to perform differential expression; t-test, limma, and One-Way ANOVA. You can select this from the <em>Statistical test</em> drop down menu. There are two methods  to perform <em>p</em>-value correction; Benjamini-Hochberg and Bonferroni correction. By default Benjamini-Hochberg correction procedure is used however, it is possible to perform either Bonferroni correction procedure or both the methods simultaneously or remove them altogether. The cohorts to be used can be selected from the drop down menu's labeled <em>Cohort A</em> and <em>Cohort B</em>. The input data for the differential expression analysis is the Log<sub>2</sub> Control Normalized Abundances. The <em>p</em>-value and log<sub>2</sub> fold change cutoff parameters can be changed either before or after the plot has been prepared. Clicking on <em>Go!</em> will display a volcano plot prepared between the two selected cohorts using the cutoff parameters defined. You can specify the cohorts for comparison and adjust the parameters of <em>p-</em>value and log<sub>2</sub> fold change using the drop downs and seek bar as shown in Figure 9. </p>
+<p><img alt="Differential Expression Analysis Tab" src="../../img/Proteomics/Diffexp1.png" /></p>
+<p><img alt="Differential Expression Analysis Tab" src="../../img/Proteomics/Diffexp2.png" /> <center><strong>Figure 9.</strong> Differential Expression Analysis</center></p>
+<h2 id="x2k-analysis">X2K analysis</h2>
+<p>An X2K analysis involves measuring transcription factors regulating differentially expressed genes which further associates it to PPIs or Protein-Protein interactions thereby creating a subnetwork. A Kinase Enrichment analysis is done on the nodes of this subnetwork. </p>
+<p>The X2K analysis is done after the differential expression is carried out. The differentially expressed data is used as an input for X2K analysis. Here, differential expression is performed where significant genes (<em>p</em>-value &lt; 0.05) are selected. These significant genes are ordered on the basis of their log<sub>2</sub>FC value. You can select top 'n' of the ordered values based on up and downregulation of genes. Finally, on the selected number of genes, X2K is performed. </p>
+<p><img alt="X2K Tab" src="../../img/Proteomics/X2K1.png" /> <center><strong>Figure 10.</strong> X2K analysis</center></p>
+<p><img alt="TFEA plots" src="../../img/Proteomics/TFEA1.png" /></p>
+<p><img alt="TFEA plots" src="../../img/Proteomics/TFEA2.png" /> <center><strong>Figure 11.</strong> TFEA plots</center></p>
+<p><strong>KSEA</strong></p>
+<p>KSEA (Kinase–Substrate Enrichment Analysis) is one of the several methods used to study biological signaling processes by understanding kinase regulation. This is of increasing interest due to the potential of developing kinase-altering therapies as biological signaling processes have been observed to form the molecular pathogenesis of many diseases. KSEA works by scoring each kinase based on the relative hyper-phosphorylation or dephosphorylation of the majority of its substrates, as identified from phosphosite-specific Kinase–Substrate (K–S) databases. The negative or positive value of the score, in turn, implies a decrease or increase in the kinase’s overall activity relative to the control. The KSEA interface allows identification and visualization of kinase-level annotations from their quantitative phosphoproteomics data sets. The bars in the KSEA bar plot are red for kinases which are significantly enriched.</p>
+<p>KSEA is performed after a method is chosen for differential expression in the drop-down menu labeled <em>Statistical Test</em>. It is possible to choose either t-test or limma. The results of the differential expression analysis is then used as the input for KSEA. The input is formed in the following manner:</p>
+<ul>
+<li>One-way ANOVA or other statistical test as selected is performed and significant phosphosites are chosen</li>
+<li>Differential expression analysis is performed and fold changes and <em>p</em>-values are calculated</li>
+<li>Protein and phosphosites are separated into multiple rows</li>
+</ul>
+<p><img alt="KEA plot" src="../../img/Proteomics/KEA.png" /> <center><strong>Figure 12.</strong> KEA plot</center></p>
+<p><img alt="X2K plot" src="../../img/Proteomics/X2Kplot.png" /> <center><strong>Figure 13.</strong> X2K plot</center></p>
+<h1 id="references">References</h1>
+<ul>
+<li>
+<p>Clarke DJB, Kuleshov MV, Schilder BM, Torre D, Duffy ME, Keenan AB, Lachmann A, Feldmann AS, Gundersen GW, Silverstein MC, Wang Z, Ma'ayan A. eXpression2Kinases (X2K) Web: linking expression signatures to upstream cell signaling networks. Nucleic Acids Res. 2018 Jul 2;46(W1):W171-W179</p>
+</li>
+<li>
+<p>Chen EY, Xu H, Gordonov S, Lim MP, Perkins MH, Ma'ayan A. Expression2Kinases: mRNA profiling linked to multiple upstream regulatory layers. Bioinformatics. 28:105 (2012)</p>
+</li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Lipidomics Data/Lipidomics Visualization Dashboard.html" class="btn btn-neutral float-right" title="Lipidomics Visualization Dashboard">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Sequencing Data/RNA Seq Workflow.html" class="btn btn-neutral" title="RNA Seq Workflow"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Sequencing Data/RNA Seq Workflow.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Lipidomics Data/Lipidomics Visualization Dashboard.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

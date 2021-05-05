@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../img/elucidata.ico">
+  
+  <title>Host Apps - Polly Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "Host Apps";
+    var mkdocs_page_input_path = "Apps/Host Apps.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../index.html" class="icon icon-home"> Polly Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../index.html">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Getting Started</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Getting Started/Workspaces.html">Workspaces</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Apps</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="Introduction.html">Introduction</a>
+                </li>
+                <li class=" current">
+                    
+    <a class="current" href="Host Apps.html">Host Apps</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l3"><a href="#host-apps">Host Apps</a></li>
+    
+
+    <li class="toctree-l3"><a href="#shiny-applications">Shiny Applications</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l4" href="#machine-configurations-available">Machine configurations available</a></li>
+        
+            <li><a class="toctree-l4" href="#languages-supported">Languages Supported</a></li>
+        
+            <li><a class="toctree-l4" href="#writing-a-shiny-application">Writing a Shiny Application</a></li>
+        
+            <li><a class="toctree-l4" href="#hosting-a-shiny-application-on-polly">Hosting a Shiny Application on Polly</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l3"><a href="#other-web-applications">Other Web Applications</a></li>
+    
+
+    <li class="toctree-l3"><a href="#desktop-applications">Desktop Applications</a></li>
+    
+
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Metabolomic Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="Metabolomic Data/El-MAVEN Phi Relative LC-MS.html">El-MAVEN Phi Relative LC-MS</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="Metabolomic Data/MetScape.html">MetScape</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="Metabolomic Data/FirstView.html">FirstView</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="Metabolomic Data/Untargeted Pipeline.html">Untargeted Pipeline</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="Metabolomic Data/Dual Mode Visualization.html">Dual Mode Data Visualization</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="Metabolomic Data/QuantFit.html">QuantFit</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="Metabolomic Data/El-MAVEN.html">El-MAVEN</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="Metabolomic Data/Labeled LC-MSMS Workflow.html">Labeled LC-MS/MS Workfow</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="Metabolomic Data/Labeled LC-MS Workflow.html">Labeled LC-MS Workflow</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="Metabolomic Data/CompoundDiscoverer QuantFit.html">Compound Discoverer<sup>TM</sup> QuantFit</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Screening Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="Screening Data/CRISPR Screening.html">CRISPR Screening</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="Screening Data/High Throughput Drug Screening.html">High Throughput Drug Screening</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Sequencing Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="Sequencing Data/RNA Seq Workflow.html">RNA Seq Workflow</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Proteomic Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="Proteomic Data/Proteomics Workflow.html">Proteomics Workflow</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Lipidomic Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="Lipidomics Data/Lipidomics Visualization Dashboard.html">Lipidomics Visualization Dashboard</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Multi-omic Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="Multi-omic Data/IntOmix.html">IntOmix</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Data Studio</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="Data Studio/Data Studio.html">Introduction</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="Data Studio/CCLE Correlation Analysis.html">CCLE Correlation Analysis</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Scaling Compute</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Scaling compute/Polly CLI.html">Polly CLI</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Scaling compute/Polly Notebooks.html">Notebooks</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Data Lake.html">Data Lake</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../Release Notes.html">Release Notes</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../index.html">Polly Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../index.html">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Apps &raquo;</li>
+        
+      
+    
+    <li>Host Apps</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="host-apps">Host Apps</h1>
+<p>Polly can host Shiny applications, other web applications, and desktop applications. This means all your applications can reside on a single platform and can be shared with your colleagues easily. The following are the advantages of hosting applications on Polly: </p>
+<ul>
+<li>
+<p>Get the Shiny application to run locally and leave the rest to Polly.</p>
+</li>
+<li>
+<p>The applications scale automatically on the Polly infrastructure for multiple users to use simultaneously.</p>
+</li>
+<li>
+<p>Access to the application is controlled by Polly authentication. Only users in your organization with required Polly authorization can access the applications.</p>
+</li>
+<li>
+<p>Have input and output data along with analysis stored at the same location in a Polly Workspace.</p>
+</li>
+<li>
+<p>Share the analyses along with input and output data by simply sharing the Workspace. </p>
+</li>
+<li>
+<p>Additional benefits for Shiny apps</p>
+<ul>
+<li>Restorability: Polly provides an infrastructure to store a state of UI elements of the Shiny app. If any saved state has been restored, the app would redo the computations required to get back to the saved state automatically. </li>
+</ul>
+</li>
+</ul>
+<h1 id="shiny-applications">Shiny Applications</h1>
+<p><img alt="Image1" src="../img/Host Apps/Dashboard1.png" /></p>
+<p><img alt="Image2" src="../img/Host Apps/Image2.png" /></p>
+<h2 id="machine-configurations-available">Machine configurations available</h2>
+<p>The following are the machine configurations available on Polly for hosting shiny apps: </p>
+<table>
+<thead>
+<tr>
+<th>vCPUs</th>
+<th>Memory (GBs)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>2</td>
+</tr>
+<tr>
+<td>2</td>
+<td>4</td>
+</tr>
+<tr>
+<td>2</td>
+<td>6</td>
+</tr>
+<tr>
+<td>2</td>
+<td>8</td>
+</tr>
+<tr>
+<td>4</td>
+<td>4</td>
+</tr>
+<tr>
+<td>4</td>
+<td>8</td>
+</tr>
+</tbody>
+</table>
+<p>If you need any other machine configuration, please contact us at <a href="mailto:polly@elucidata.io">polly@elucidata.io</a>.</p>
+<h2 id="languages-supported">Languages Supported</h2>
+<p>We support various versions of R and Python for Shiny App development.</p>
+<p>Versions of R available: </p>
+<ul>
+<li>
+<p>3.5.2</p>
+</li>
+<li>
+<p>3.6.0</p>
+</li>
+<li>
+<p>3.6.1</p>
+</li>
+<li>
+<p>3.6.2</p>
+</li>
+</ul>
+<p>Contact us at <a href="mailto:polly@elucidata.io">polly@elucidata.io</a> in case you need a different version and we will add for you.</p>
+<p>Versions of Python available : </p>
+<ul>
+<li>
+<p>2.7.16</p>
+</li>
+<li>
+<p>3.5.9</p>
+</li>
+<li>
+<p>3.6.10</p>
+</li>
+<li>
+<p>3.7.6</p>
+</li>
+<li>
+<p>3.8.1</p>
+</li>
+</ul>
+<p>Contact us at <a href="mailto:polly@elucidata.io">polly@elucidata.io</a> in case you need a different version and we will add for you.</p>
+<p>The Shiny apps run on the base dockers maintained by Polly.</p>
+<p>Custom dockers with other languages can also be used on Polly. To add custom dockers for Shiny apps, fill <a href="https://forms.gle/qsMxhxBAPsHHnqny6">this form</a> and we will get back to you in a day with the docker ready on Polly.</p>
+<p><a href="https://gist.github.com/GeorgeSabu/43d3e8437f4b745c96d29b433b9356ee">This gist</a> will help in getting the file dependencies that are required for docker building.</p>
+<h2 id="writing-a-shiny-application">Writing a Shiny Application</h2>
+<ul>
+<li>
+<p>Packrat is used for R dependencies. Install packrat using the following command to avail all the Polly advantages.</p>
+<p><pre><code>remotes::install_github("GeorgeSabu/packrat")</code></pre></p>
+</li>
+<li>
+<p>Install R dependencies required for Shiny Application using packrat by referring this documentation.</p>
+</li>
+<li>
+<p>The mapping between the name of requirement files and the corresponding Python versions (check the Python versions supported by Polly) is mentioned here. Any Python dependency has to be added in the requirement files. </p>
+<ul>
+<li>
+<p>2.7.16 → requirements2.txt </p>
+</li>
+<li>
+<p>3.5.9 → requirements3.5.txt</p>
+</li>
+<li>
+<p>3.6.10 → requirements3.6.txt</p>
+</li>
+<li>
+<p>3.7.6 → requirements3.7.txt</p>
+</li>
+<li>
+<p>3.8.1 → requirements3.txt</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Install Shiny executing the mentioned command. Note that installation using this command will ensure that you get all the Polly benefits. </p>
+<p><pre><code>remotes::install_github("GeorgeSabu/shiny")</code></pre></p>
+</li>
+<li>
+<p>Write the Shiny application in the usual way.</p>
+</li>
+</ul>
+<h2 id="hosting-a-shiny-application-on-polly">Hosting a Shiny Application on Polly</h2>
+<ul>
+<li>
+<p>Share the Github or Bitbucket Repository with the Shiny Application with the organization <code>Elucidatainc</code>.</p>
+</li>
+<li>
+<p>Mail the following details to <a href="mailto:polly@elucidata.io">polly@elucidata.io</a></p>
+<ul>
+<li>
+<p>Name of the Application</p>
+</li>
+<li>
+<p>A brief description of the application (upto 255 characters)</p>
+</li>
+<li>
+<p>Link to the Github or Bitbucket Repo</p>
+</li>
+<li>
+<p>Memory (RAM) and Number CPUs required for the application</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="other-web-applications">Other Web Applications</h1>
+<p>Any web application that can be dockerized can be hosted on Polly.</p>
+<p>Here are the steps to host Web Applications on Polly: </p>
+<ul>
+<li>
+<p>Dockerize the Application and make sure that it runs locally.</p>
+</li>
+<li>
+<p>Share the docker file through Github or Bitbucket with the organization <code>Elucidatainc</code>.</p>
+</li>
+<li>
+<p>Mail the following details to <a href="mailto:polly@elucidata.io">polly@elucidata.io</a></p>
+<ul>
+<li>
+<p>Name of the Application</p>
+</li>
+<li>
+<p>A brief description of the application (upto 255 characters)</p>
+</li>
+<li>
+<p>Link to the Github or Bitbucket Repo</p>
+</li>
+<li>
+<p>Memory (RAM) and Number CPUs required for the application</p>
+</li>
+</ul>
+</li>
+</ul>
+<h1 id="desktop-applications">Desktop Applications</h1>
+<p>Any desktop application that can be dockerized can be hosted on Polly.</p>
+<p>Here are the steps to host Web Applications on Polly: </p>
+<ul>
+<li>
+<p>Dockerize the Application using the base docker </p>
+<p><pre><code>mithoopolly/gui_desktop_base_apps:bionic</code></pre>.</p>
+</li>
+<li>
+<p>To run the docker locally, execute the following command.</p>
+<p><pre><code>docker run --privileged -p 8080:8080 --shm-size=1g <docker image></code></pre></p>
+</li>
+<li>
+<p>Share the docker file through Github or Bitbucket with the organization <code>Elucidatainc</code>.</p>
+</li>
+<li>
+<p>Mail the following details to <a href="mailto:polly@elucidata.io">polly@elucidata.io</a></p>
+<ul>
+<li>
+<p>Name of the Application</p>
+</li>
+<li>
+<p>A brief description of the application (upto 255 characters)</p>
+</li>
+<li>
+<p>Link to the Github or Bitbucket Repo</p>
+</li>
+<li>
+<p>Memory (RAM) and Number CPUs required for the application</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><strong>Note:</strong></p>
+<ul>
+<li>To host Windows application on Polly, <a href="https://wiki.winehq.org/Ubuntu">wine</a> can be used. <a href="https://bitbucket.org/elucidatainc/elmaven_on_web/src/master/">Here</a> is an example repo of applications that have been hosted on Polly. </li>
+</ul>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="Metabolomic Data/El-MAVEN Phi Relative LC-MS.html" class="btn btn-neutral float-right" title="El-MAVEN Phi Relative LC-MS">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="Introduction.html" class="btn btn-neutral" title="Introduction"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="Introduction.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="Metabolomic Data/El-MAVEN Phi Relative LC-MS.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '..';</script>
+    <script src="../js/theme.js" defer></script>
+      <script src="../search/main.js" defer></script>
+
+</body>
+</html>
