@@ -61,20 +61,12 @@ jobs:
 workflows:
   main:
     jobs:
-      - testdocs_build:
-          filters:
-            branches:
-              only:
-                - develop
+      - testdocs_build
 
       - testdocs_deploy:
           context: polly-docs
           requires:
             - testdocs_build
-          filters:
-            branches:
-              only:
-                - develop
 
       - docs_build:
           filters:
