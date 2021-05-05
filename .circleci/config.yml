@@ -47,7 +47,7 @@ jobs:
           name: Store to bucket
           command: |
             cd site 
-            aws s3 cp . s3://$<< parameters.AWS_CI_BUCKET >> --profile misc --metadata '{"Strict-Transport-Security":"max-age=31536000; includeSubDomains","X-Frame-Options":"SAMEORIGIN"}'
+            aws s3 cp . s3://$<< parameters.AWS_CI_BUCKET >> --profile misc --metadata '{"Strict-Transport-Security":"max-age=31536000; includeSubDomains"}'
 
   testdocs_build:
     <<: *Build
