@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/elucidata.ico">
+  
+  <title>El-MAVEN Phi Relative LC-MS - Polly Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "El-MAVEN Phi Relative LC-MS";
+    var mkdocs_page_input_path = "Apps/Metabolomic Data/El-MAVEN Phi Relative LC-MS.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../index.html" class="icon icon-home"> Polly Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../index.html">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Getting Started</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Getting Started/Workspaces.html">Workspaces</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Apps</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Introduction.html">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Host Apps.html">Host Apps</a>
+                </li>
+                <li class=" current">
+                    
+    <span class="caption-text">Metabolomic Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3 current">
+                    
+    <a class="current" href="El-MAVEN Phi Relative LC-MS.html">El-MAVEN Phi Relative LC-MS</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l4"><a href="#introduction">Introduction</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#overview">Overview</a></li>
+        
+            <li><a class="toctree-l5" href="#scope-of-the-app">Scope of the App</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l4"><a href="#getting-started">Getting Started</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#user-input">User input</a></li>
+        
+            <li><a class="toctree-l5" href="#steps-involved-in-data-processing">Steps involved in data processing</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l4"><a href="#tutorial">Tutorial</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#msconvert">MSConvert</a></li>
+        
+            <li><a class="toctree-l5" href="#el-maven">El-MAVEN</a></li>
+        
+            <li><a class="toctree-l5" href="#el-maven-phi-relative-lc-ms-integration">El-MAVEN Phi Relative LC-MS Integration</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l4"><a href="#videos">Videos</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#frequently-asked-questions-faqs">Frequently Asked Questions (FAQs)</a></li>
+        
+        </ul>
+    
+
+    </ul>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="MetScape.html">MetScape</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="FirstView.html">FirstView</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="Untargeted Pipeline.html">Untargeted Pipeline</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="Dual Mode Visualization.html">Dual Mode Data Visualization</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="QuantFit.html">QuantFit</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="El-MAVEN.html">El-MAVEN</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="Labeled LC-MSMS Workflow.html">Labeled LC-MS/MS Workfow</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="Labeled LC-MS Workflow.html">Labeled LC-MS Workflow</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="CompoundDiscoverer QuantFit.html">Compound Discoverer<sup>TM</sup> QuantFit</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Screening Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Screening Data/CRISPR Screening.html">CRISPR Screening</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Screening Data/High Throughput Drug Screening.html">High Throughput Drug Screening</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Sequencing Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Sequencing Data/RNA Seq Workflow.html">RNA Seq Workflow</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Proteomic Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Proteomic Data/Proteomics Workflow.html">Proteomics Workflow</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Lipidomic Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Lipidomics Data/Lipidomics Visualization Dashboard.html">Lipidomics Visualization Dashboard</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Multi-omic Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Multi-omic Data/IntOmix.html">IntOmix</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Data Studio</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Data Studio/Data Studio.html">Introduction</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Data Studio/CCLE Correlation Analysis.html">CCLE Correlation Analysis</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Scaling Compute</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Scaling compute/Polly CLI.html">Polly CLI</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Scaling compute/Polly Notebooks.html">Notebooks</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../Data Lake.html">Data Lake</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../Release Notes.html">Release Notes</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Polly Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Metabolomic Data &raquo;</li>
+        
+      
+        
+          <li>Apps &raquo;</li>
+        
+      
+    
+    <li>El-MAVEN Phi Relative LC-MS</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="introduction">Introduction</h1>
+<h2 id="overview">Overview</h2>
+<p>Quantification of pathway activity with metabolic flux studies has become an integral part of understanding cellular phenotypes and mechanisms of action. Labeled studies with isotope tracers have emerged as key protocols to gain a deeper understanding of cellular metabolism. Processing and analysis of labeled LC-MS data follows a two-part protocol beginning with peak curation followed by downstream analysis. In this workflow, peak curation is performed using <a href="https://resources.elucidata.io/elmaven">El-MAVEN</a>. Peaks curated using automated peak picking on El-MAVEN can be pushed directly to Phi Relative LC-MS app using the built-in integration. The Phi Relative Labeled LC-MS app allows you to process labeled LC-MS targeted data with insightful visualizations. The application performs natural abundance (NA) correction and provides fractional enrichment, pool totals and NA corrected intensity visualizations across selected cohorts.</p>
+<h2 id="scope-of-the-app">Scope of the App</h2>
+<ul>
+<li>Raw data to visualizations in less than 5 minutes.</li>
+<li>Process high-resolution and low-resolution data of up to 100 samples.</li>
+<li>Analyze single labeled <sup>2</sup>D, <sup>13</sup>C, <sup>15</sup>N and <sup>34</sup>S data.</li>
+<li>Automated peak picking with manual curation.</li>
+<li>Quality Check of samples to identify and reject outliers.</li>
+<li>Perform NA Correction, calculate Fractional Enrichment and Pool Total values.</li>
+</ul>
+<p><img alt="El-MAVEN Phi workflow schematic" src="../../img/EPI/Workflow.png" /> <center><strong>Figure 1.</strong> El-MAVEN Phi Relative LC-MS workflow</center></p>
+<h1 id="getting-started">Getting Started</h1>
+<h2 id="user-input">User input</h2>
+<p>El-MAVEN Phi Relative LC-MS requires two types of files:</p>
+<p><strong>Raw MS files</strong></p>
+<p>These files are instrument generated and can be in different formats such as:</p>
+<ul>
+<li>.RAW (Thermofisher)</li>
+<li>.RAW (Waters)</li>
+<li>.d (Agilent)</li>
+<li>.d (Bruker)</li>
+<li>.wiff (ABSciex)</li>
+</ul>
+<p><strong>Compound Database</strong></p>
+<p>Compound database is a .csv file that consists of two mandatory columns, <em>compound</em> which contains metabolite names and <em>formula</em> which contains the metabolite formula. Additionally, you can the HMDB or KEGG ID in the column <em>id</em> or retention time in the column <em>rt</em> if known. Any other information present in this file is ignored by El-MAVEN and PollyPhiTM Relative LC-MS.</p>
+<p><img alt="Compound Database" src="../../img/EPI/CompoundDatabase.png" /> <center><strong>Figure 2.</strong> Compound Database </center></p>
+<h2 id="steps-involved-in-data-processing">Steps involved in data processing</h2>
+<ul>
+<li>Convert instrument specific files to .mzML or .mzXML format using MSConvert</li>
+<li>Perform peak annotation in El-MAVEN</li>
+<li>Push data to PollyPhiTM Relative LC-MS using the built-in integration</li>
+<li>Visualize fractional enrichment, pool total and NA corrected intensity plots for each metabolite across cohorts</li>
+<li>Visualize PCA and Correlation Plot and remove outliers if any</li>
+<li>Visualize EIC and reject metabolites or specific labels if required</li>
+</ul>
+<h1 id="tutorial">Tutorial</h1>
+<h2 id="msconvert"><a href="http://proteowizard.sourceforge.net/download.html">MSConvert</a></h2>
+<p>MSConvert is a command-line/ GUI tool that is used to convert between various mass spectroscopy data formats, developed and maintained by ProteoWizard. Raw data files obtained from mass spectrometers need to be converted to certain acceptable formats before processing in El-MAVEN. msConvert supports the following formats:</p>
+<ul>
+<li>.mzML</li>
+<li>.mzXML</li>
+<li>.RAW (Thermofisher)</li>
+<li>.RAW (Waters)</li>
+<li>.d (Agilent)</li>
+<li>.d (Bruker)</li>
+<li>.wiff (ABSciex)</li>
+</ul>
+<p><img alt="MSConvert GUI" src="../../img/EPI/MSConvertGUI.png" /> <center> <strong>Figure 3.</strong> MSConvert GUI </center></p>
+<p><strong>NOTE:</strong></p>
+<ul>
+<li>Zlib compression is enabled by default in msConvert. El-MAVEN now supports Zlib compression.</li>
+</ul>
+<h2 id="el-maven">El-MAVEN</h2>
+<p>Once sample files are ready for processing, launch El-MAVEN. El-MAVEN consists of a sample space and EIC window as shown in Figure 4.</p>
+<p><img alt="El-MAVEN UI" src="../../img/EPI/El-MAVENUI.png" /> <center> <strong>Figure 4.</strong> El-MAVEN UI</center></p>
+<p><strong>Load Samples and Compound Database</strong></p>
+<p>You can load the sample by going to <em>Load Samples|Workspaces|Peaks</em> option in the Sample space menu. Then navigate to the folder containing the sample data and select all .mzXML or .mzML files. A loading bar displays the progress at the bottom. When the samples have loaded, you should see a sample panel on the left side. If it is not displayed automatically, click on the Samples Widget button on the widget toolbar. El-MAVEN automatically assigns a color to every sample. You can select/deselect any sample by clicking the checkbox on the left of the sample name or completely remove it from the <em>Remove sample</em> option. To mark samples as blank, click on the <em>Mark the Blanks</em> icon in the <em>Samples</em> menu. This will change the color of the marked samples to black to easily differentiate them from other samples. Multiple blanks can be marked together.</p>
+<p><img alt="El-MAVEN toolbars" src="../../img/EPI/El-MAVENToolbars.png" /> <center> <strong>Figure 5.</strong> El-MAVEN toolbars </center></p>
+<p><img alt="After uploading the samples" src="../../img/EPI/AfterUploadingSamples.png" /> <center> <strong>Figure 6.</strong> After uploading the samples </center></p>
+<p>To load the compound database, click on <em>Compounds</em> tab in the sample space, import standard database file from Library Manager, select the appropriate .csv file.</p>
+<p><img alt="Uploading compound database" src="../../img/EPI/UploadingCompoundDatabase.png" /> <center> <strong>Figure 7.</strong> Uploading compound database</center></p>
+<p><strong>Adjust Global Settings</strong></p>
+<p>Global Settings can be changed from the <em>Options</em> dialog. There are 9 tabs in the dialog. Each of these tabs has parameters related to a different module in El-MAVEN.</p>
+<p><img alt="Options dialog" src="../../img/EPI/OptionsDialog.png" /> <center> <strong>Figure 8.</strong> Options dialog </center></p>
+<p>you has an option to set <em>Ionization</em> mode to <em>Positive, Negative or Neutral</em> on the top left corner.</p>
+<p>The <em>[m/z]</em> option scans the groups to find any specific m/z value and plot its corresponding EIC. The <em>+/-</em> option to its right is to specify the expected mass resolution error in parts per million (ppm).</p>
+<p><img alt="Set m/z value" src="../../img/EPI/Setmz1.png" /></p>
+<p><img alt="Set m/z value" src="../../img/EPI/Setmz2.png" /> <center> <strong>Figure 9.</strong> Set m/z value </center></p>
+<p><strong>Alignment</strong></p>
+<p>Prolonged use of the LC column can lead to a drift in retention time across samples. Alignment shifts the peak RTs in every sample to correct for this drift and brings the peaks closer to median RT of the group. <em>Alignment visualization</em> can be used to judge the extent of deviation from median RT.</p>
+<p><img alt="Peaks before alignment" src="../../img/EPI/PeaksBeforeAlign.png" /> <center> <strong>Figure 10.</strong> Peaks before alignment </center></p>
+<p>In the above visualization, each box represents a peak from the selected group at its current RT. Samples are said to be perfectly aligned when all peak boxes lie on the same vertical axis. The peaks are considerably scattered in the above image and therefore the samples should be aligned for better grouping of peaks. Pre-alignment, the peaks were scattered while the aligned peaks lie nearly on the same axis.</p>
+<p>You can run alignment again with different parameters if required. Alignment settings can be adjusted using the <em>Align</em> button. This example was set to OBI-Warp algorithm.</p>
+<p><img alt="OBI-Warp Algorithm" src="../../img/EPI/ObiWarpAlgo.png" /> <center> <strong>Figure 11.</strong> OBI-Warp Algorithm </center></p>
+<p>Post-alignment the peaks in the group should appear closer to the median RT of the group.</p>
+<p><img alt="Peak group after alignment" src="../../img/EPI/AfterAlignment.png" /> <center> <strong>Figure 12.</strong> Peak group after alignment </center></p>
+<p>Watch the demo video below for more information.</p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+    <iframe src="https://www.youtube.com/embed/Zu5N1Vawrm4" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
+
+<p><br></p>
+<p><strong>Isotope Settings</strong></p>
+<p>If the samples are labeled, check on <em>Report Isotopic Peaks</em> and select the isotopic tracer and set the parameters for isotope filtering.</p>
+<p><img alt="Isotope selection" src="../../img/EPI/IsotopeSelection.png" /> <center> <strong>Figure 13.</strong> Isotope selection </center></p>
+<p><strong>Peak Curation</strong></p>
+<p>Generally there are two broad workflows to curate peaks in El-MAVEN:</p>
+<ul>
+<li><strong>Manual Peak Curation using Compound DB widget</strong>: To use manual curation using the compound DB widget, you have to iterate over all the compounds in the compound DB, as highlighted in the images below.</li>
+</ul>
+<p><img alt="Compound selection" src="../../img/EPI/CompoundSelection.png" /> <center> <strong>Figure 14.</strong> Compound selection </center></p>
+<p>Once on a compound, El-MAVEN shows the highest ranked group for that m/z. you can now choose a group or reject it. You can read more about the bookmarks table <a href="https://github.com/ElucidataInc/ElMaven/wiki/Introduction-to-ElMaven-UI#5-eic-window">here</a>.</p>
+<p><img alt="Double click on peak group to get details on Bookmark table" src="../../img/EPI/BookmarkTable.png" /> <center> <strong>Figure 15.</strong> Double click on peak group to get details on Bookmark table </center></p>
+<ul>
+<li><strong>Automated Peak Curation:</strong> Clicking the <em>Peaks</em> icon on the top opens the Feature Detection Selection dialog. For Labeled LC-MS analysis, check on <em>‘Compound Database Search’</em> algorithm. In case compound database has the RT information, you can check on <em>Match Retention Time</em> option. In the Group Filtering dialog, you can set the parameters by using the slide bar.</li>
+</ul>
+<p><img alt="Automated peak detection" src="../../img/EPI/AutomatedPeakDetection.png" /> <center> <strong>Figure 16.</strong> Automated peak detection </center></p>
+<p><img alt="Group filtering dialog" src="../../img/EPI/GroupFilteringTab.png" /> <center> <strong>Figure 17.</strong> Group filtering dialog </center></p>
+<p>After setting the parameters, click on Find Peaks. You can read more about the peak detection settings <a href="https://github.com/ElucidataInc/ElMaven/wiki/Introduction-to-ElMaven-UI#peak-detection">here</a>.</p>
+<h2 id="el-maven-phi-relative-lc-ms-integration">El-MAVEN Phi Relative LC-MS Integration</h2>
+<p><strong>Export data to Phi Relative LC-MS</strong></p>
+<p>You can push the curated data to the cloud with the Polly Widget for the labeled LC-MS workflow. Click on th ewidget and enter your Polly credentials to create a folder on Polly to export files.</p>
+<p><img alt="Peak Table" src="../../img/EPI/PeakTable.png" /> <center> <strong>Figure 18.</strong> Peak Table </center></p>
+<p>After curating the detected metabolites, go to option to export the data directly to <em>PollyPhi</em>.</p>
+<p><img alt="El-MAVEN PollyPhiTM Interface" src="../../img/EPI/EPI.png" /> <center> <strong>Figure 19.</strong> El-MAVEN Phi Interface </center></p>
+<p>You can select the peak table and/or create a new workspace to be pushed to PollyPhi for Flux analysis and hit on <em>Upload</em>. This will take a while. Click on Start Fluxing. After giving the command to upload, you would receive an email containing the link to the analysis which can be accessed anytime. After clicking on <em>Start Fluxing</em>, you will be redirected to the GSheet interface where cohort information has to be entered.</p>
+<p><img alt="Automated email with analysis link" src="../../img/EPI/EmailLink.png" /> <center> <strong>Figure 20.</strong> Automated email with analysis link </center></p>
+<p><img alt="PollyPhiTM GSheet" src="../../img/EPI/PollyPhiGsheet.png" /> <center> <strong>Figure 21.</strong> GSheet Interface </center></p>
+<p><strong>Visualization Interface</strong></p>
+<p>After this, you will land on the <em>Visualization Interface</em>. This interface allows you to visualize NA Corrected Intensities, Fractional Enrichment and Pool Total values.</p>
+<ul>
+<li>You can switch between the metabolites from the metabolite carousel at the top of the interface.</li>
+<li>You can remove any isotopologues they don’t wish to visualize from the plots by clicking on the label.</li>
+<li>You can visualize the position of the metabolite on the metabolism pathway. If HMDB ID is not provided or not detected, you will the see complete central carbon metabolism pathway.</li>
+<li>You can select cohorts for visualization by clicking on the <em>Settings</em> icon present on the top right corner.</li>
+</ul>
+<p><img alt="PollyPhiTM Visualization" src="../../img/EPI/PollyPhiViz1.png" /></p>
+<p><img alt="PollyPhiTM Visualization" src="../../img/EPI/PollyPhiViz2.png" /> <center> <strong>Figure 22.</strong> Visualization interface </center></p>
+<p><strong>Quality Check Interface</strong></p>
+<p>This interface allows you to visualize sample outliers with the help of a PCA (Principle Component Analysis) plot and a Correlation Plot.</p>
+<p><img alt="QC Interface" src="../../img/EPI/QCInterface.png" /> <center> <strong>Figure 23.</strong> QC Interface </center></p>
+<p>To reject any outliers, you can hover over the data points and click on <em>Remove Sample</em>. To apply this change, click on <em>Update</em> towards the bottom right of the screen upon which the outliers will be removed from the quality check plots and the subsequent analyses as well.</p>
+<p>Below the plots, you can view the list of the samples that have been rejected. The rejected samples can be added back to the plots and the subsequent analyses by clicking on the cross icon present alongside each sample. To finalize this selection, click on <em>Update</em> towards the bottom right of the screen upon which the outliers will be added back to the plots and the subsequent analyses as well.</p>
+<p><strong>Peak Picking Interface</strong></p>
+<p>After annotating peaks, a new window with the list of detected metabolites their peaks and intensities are shown. You can click on any metabolite and find the peak of interest in EIC. Hover on any peak to view its <em>Sample Name</em>, <em>Quality</em>, <em>Retention Time</em> and <em>Intensity</em>.</p>
+<p><img alt="Peak picking Interface" src="../../img/EPI/PeakPickingInterface.png" /> <center> <strong>Figure 24.</strong> Peak picking Interface </center></p>
+<p>This interface allows you to visualize the EIC plot and reject metabolites or isotopologues with erroneous peaks. You can visualize EIC plot by selecting the metabolite of interest from the metabolite drop down. EIC plot of a particular isotopologue can be visualized by selecting the label from the list of labels. You can reject an erroneous peak by clicking on <em>Reject Label</em>. All isotopologues of a metabolite can also be rejected by clicking on <em>Reject Metabolite</em>. To accept a rejected isotopologue or a metabolite by clicking on <em>Accept Label</em> or <em>Accept Metabolite</em> respectively.</p>
+<p><strong>Note:</strong></p>
+<ul>
+<li>Label M0 corresponds to C12 PARENT, M1 to C13-label-1 and so on.</li>
+</ul>
+<h1 id="videos">Videos</h1>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+    <iframe src="https://www.youtube.com/embed/9foLye20BLA" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
+
+<p><br></p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+    <iframe src="https://www.youtube.com/embed/LiMoEGXbMyo" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
+
+<p><br></p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+    <iframe src="https://www.youtube.com/embed/tw8kWfMhc3Q" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
+
+<p><br></p>
+<h2 id="frequently-asked-questions-faqs">Frequently Asked Questions (FAQs)</h2>
+<table>
+<thead>
+<tr>
+<th><strong>S.No.</strong></th>
+<th><strong>Questions</strong></th>
+<th><strong>Answers</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1.</td>
+<td><strong>My files are not in .mzXML or .mzML format. What should I do?</strong></td>
+<td>You can easily convert your raw files to .mzXML or .mzML using MSConvert.</td>
+</tr>
+<tr>
+<td>2.</td>
+<td><strong>What is the compound database?</strong></td>
+<td>The compound database is a .csv file which contains the metabolite of interest and their formulas. It can also contain retention time and KEGG/HMDB ID's though they are not mandatory.</td>
+</tr>
+<tr>
+<td>3.</td>
+<td><strong>Can I use El-MAVEM Phi Relative LC-MS to analyze unlabeled data?</strong></td>
+<td>No. El-MAVEN Phi Relative LC-MS is built to analyze labeled data.</td>
+</tr>
+<tr>
+<td>4.</td>
+<td><strong>Can I use public datasets on El-MAVEN Phi Relative LC-MS?</strong></td>
+<td>Yes. All you need is to convert the instrument specific raw files to .mzXML or .mzML format and a compound database.</td>
+</tr>
+<tr>
+<td>5.</td>
+<td><strong>Can I check the quality of my samples in El-MAVEN Phi Relative LC-MS?</strong></td>
+<td>Yes. you can check quality of your dataset using PCA and Correlation Plot.</td>
+</tr>
+<tr>
+<td>6.</td>
+<td><strong>Can I reject any metabolites from the analysis?</strong></td>
+<td>On the Peak Picking Interfac, click on <em>Reject Metabolite</em> to reject any particular metabolite from your analysis.</td>
+</tr>
+<tr>
+<td>7.</td>
+<td><strong>Can I reject any label of a selected metabolite from the analysis?</strong></td>
+<td>As mentioned above, you can use the <em>Reject Metabolite</em> option for any specific isotopologue as well.</td>
+</tr>
+<tr>
+<td>8.</td>
+<td><strong>Is there any limit on the file size tha can be uploaded on El-MAVEN Phi Relative LC-MS?</strong></td>
+<td>No. You can upload data irrespective of its size.</td>
+</tr>
+<tr>
+<td>9.</td>
+<td><strong>How can I edit parameters for natural abundance correction?</strong></td>
+<td>El-MAVEN Phi Relative LC-MS does not allow you to edit the natural abundance correction parameters. To have more flexibility over your analysis, please refer to <a href="https://docs.elucidata.io/Apps/Metabolomic%20Data/Labeled%20LC-MS%20Workflow.html">Labeled LC-MS Workflow</a>.</td>
+</tr>
+<tr>
+<td>10.</td>
+<td><strong>Can the values be normalized based on the external standards I have?</strong></td>
+<td>Yes. To support user specific customizations, you can use <a href="https://docs.elucidata.io/Scaling%20compute/Polly%20Notebooks.html">Polly Notebooks</a>.</td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="MetScape.html" class="btn btn-neutral float-right" title="MetScape">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Host Apps.html" class="btn btn-neutral" title="Host Apps"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Host Apps.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="MetScape.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>

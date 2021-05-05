@@ -1,6 +1,6 @@
 version: 2.1
 aliases:
-- &app_workspace_dir  ~/pollyDocs
+  - &app_workspace_dir ~/pollyDocs
 
 defaults: &defaults
   working_directory: *app_workspace_dir
@@ -47,7 +47,7 @@ jobs:
           name: Store to bucket
           command: |
             cd site 
-            aws s3 sync . s3://$<< parameters.AWS_CI_BUCKET >> --profile misc 
+            aws s3 cp . s3://$<< parameters.AWS_CI_BUCKET >> --profile misc --metadata '{"Strict-Transport-Security":"max-age=31536000; includeSubDomains","X-Frame-Options":"SAMEORIGIN"}'
 
   testdocs_build:
     <<: *Build
@@ -66,7 +66,7 @@ workflows:
             branches:
               only:
                 - develop
-          
+
       - testdocs_deploy:
           context: polly-docs
           requires:
@@ -81,7 +81,7 @@ workflows:
             branches:
               only:
                 - master
-          
+
       - docs_deploy:
           AWS_CI_BUCKET: DOC_BUCKET
           context: polly-docs
@@ -91,4 +91,3 @@ workflows:
             branches:
               only:
                 - master
-          

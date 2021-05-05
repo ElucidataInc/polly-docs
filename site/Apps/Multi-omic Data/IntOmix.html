@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  
+  <link rel="shortcut icon" href="../../img/elucidata.ico">
+  
+  <title>IntOmix - Polly Documentation</title>
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  
+  <script>
+    // Current page data
+    var mkdocs_page_name = "IntOmix";
+    var mkdocs_page_input_path = "Apps/Multi-omic Data/IntOmix.md";
+    var mkdocs_page_url = null;
+  </script>
+  
+  <script src="../../js/jquery-2.1.1.min.js" defer></script>
+  <script src="../../js/modernizr-2.8.3.min.js" defer></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> 
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+      <div class="wy-side-nav-search">
+        <a href="../../index.html" class="icon icon-home"> Polly Documentation</a>
+        <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+	<ul class="current">
+	  
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../index.html">Home</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Getting Started</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Getting Started/Workspaces.html">Workspaces</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Apps</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../Introduction.html">Introduction</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../Host Apps.html">Host Apps</a>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Metabolomic Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Metabolomic Data/El-MAVEN Phi Relative LC-MS.html">El-MAVEN Phi Relative LC-MS</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Metabolomic Data/MetScape.html">MetScape</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Metabolomic Data/FirstView.html">FirstView</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Metabolomic Data/Untargeted Pipeline.html">Untargeted Pipeline</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Metabolomic Data/Dual Mode Visualization.html">Dual Mode Data Visualization</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Metabolomic Data/QuantFit.html">QuantFit</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Metabolomic Data/El-MAVEN.html">El-MAVEN</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Metabolomic Data/Labeled LC-MSMS Workflow.html">Labeled LC-MS/MS Workfow</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Metabolomic Data/Labeled LC-MS Workflow.html">Labeled LC-MS Workflow</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Metabolomic Data/CompoundDiscoverer QuantFit.html">Compound Discoverer<sup>TM</sup> QuantFit</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Screening Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Screening Data/CRISPR Screening.html">CRISPR Screening</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Screening Data/High Throughput Drug Screening.html">High Throughput Drug Screening</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Sequencing Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Sequencing Data/RNA Seq Workflow.html">RNA Seq Workflow</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Proteomic Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Proteomic Data/Proteomics Workflow.html">Proteomics Workflow</a>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Lipidomic Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Lipidomics Data/Lipidomics Visualization Dashboard.html">Lipidomics Visualization Dashboard</a>
+                </li>
+    </ul>
+                </li>
+                <li class=" current">
+                    
+    <span class="caption-text">Multi-omic Data</span>
+    <ul class="subnav">
+                <li class="toctree-l3 current">
+                    
+    <a class="current" href="IntOmix.html">IntOmix</a>
+    <ul class="subnav">
+            
+    <li class="toctree-l4"><a href="#introduction">Introduction</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#overview">Overview</a></li>
+        
+            <li><a class="toctree-l5" href="#scope-of-the-app">Scope of the App</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l4"><a href="#getting-started">Getting Started</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#user-input">User input</a></li>
+        
+            <li><a class="toctree-l5" href="#steps-in-data-processing">Steps in data processing</a></li>
+        
+            <li><a class="toctree-l5" href="#caveats">Caveats</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l4"><a href="#tutorial">Tutorial</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#upload-files">Upload files</a></li>
+        
+            <li><a class="toctree-l5" href="#parameter-interface">Parameter Interface</a></li>
+        
+            <li><a class="toctree-l5" href="#pathway-dashboard">Pathway Dashboard</a></li>
+        
+            <li><a class="toctree-l5" href="#option-and-information">Option and Information</a></li>
+        
+            <li><a class="toctree-l5" href="#analyze-your-data">Analyze your data</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l4"><a href="#details-about-the-app">Details about the app</a></li>
+    
+        <ul>
+        
+            <li><a class="toctree-l5" href="#finding-a-module">Finding a module</a></li>
+        
+        </ul>
+    
+
+    <li class="toctree-l4"><a href="#videos">Videos</a></li>
+    
+
+    <li class="toctree-l4"><a href="#references">References</a></li>
+    
+
+    <li class="toctree-l4"><a href="#frequently-asked-questions-faqs">Frequently Asked Questions (FAQs)</a></li>
+    
+
+    </ul>
+                </li>
+    </ul>
+                </li>
+                <li class="">
+                    
+    <span class="caption-text">Data Studio</span>
+    <ul class="subnav">
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Data Studio/Data Studio.html">Introduction</a>
+                </li>
+                <li class="toctree-l3">
+                    
+    <a class="" href="../Data Studio/CCLE Correlation Analysis.html">CCLE Correlation Analysis</a>
+                </li>
+    </ul>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <span class="caption-text">Scaling Compute</span>
+    <ul class="subnav">
+                <li class="">
+                    
+    <a class="" href="../../Scaling compute/Polly CLI.html">Polly CLI</a>
+                </li>
+                <li class="">
+                    
+    <a class="" href="../../Scaling compute/Polly Notebooks.html">Notebooks</a>
+                </li>
+    </ul>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../Data Lake.html">Data Lake</a>
+	    </li>
+          
+            <li class="toctree-l1">
+		
+    <a class="" href="../../Release Notes.html">Release Notes</a>
+	    </li>
+          
+        </ul>
+      </div>
+      &nbsp;
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../index.html">Polly Documentation</a>
+      </nav>
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../index.html">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Multi-omic Data &raquo;</li>
+        
+      
+        
+          <li>Apps &raquo;</li>
+        
+      
+    
+    <li>IntOmix</li>
+    <li class="wy-breadcrumbs-aside">
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main">
+            <div class="section">
+              
+                <h1 id="introduction">Introduction</h1>
+<h2 id="overview">Overview</h2>
+<p>The recent development of various omics technologies in biology has increased the systems level analytical methods. It includes complete genome, transcriptome, proteome and metabolome analysis with various high-throughput technologies, including microarrays, Next-Generation Sequencing (NGS) and mass spectrometry. Multi-omics data integration provides an opportunity to understand the cellular or tissue level environment as a whole. IntOmix is an application specifically geared towards integrated network analysis of multi-omics with a focus on the identification of significantly changing metabolic network modules between two experimental conditions. The integration of the data generated by these two approaches can give simultaneous information about metabolomic changes along with the transcriptional changes.</p>
+<h2 id="scope-of-the-app">Scope of the App</h2>
+<ul>
+<li>Go from differentially expressed data to visualisations of pathway-level changes in less than 5 minutes.</li>
+<li>Process single or multi-omics data.</li>
+<li>Search for publications based on keywords added and significantly perturbed genes or metabolites by adding/editing keywords before or after optimization.</li>
+<li>Compare insights obtained from the data with existing literature.</li>
+<li>Compare results obtained from the same data at different parameters.</li>
+<li>Download results as publication-quality figures in various formats such as .png, .jpeg, .pdf or .xgmml.</li>
+</ul>
+<p><img alt="Polly&lt;sup&gt;TM&lt;/sup&gt; IntOmix schematic" src="../../img/IntOmix/intomix_workflow_schematic.png" /> <center><strong>Figure 1.</strong> IntOmix</center></p>
+<h1 id="getting-started">Getting Started</h1>
+<h2 id="user-input">User input</h2>
+<p>IntOmix requires two types of .csv input files:</p>
+<ul>
+<li>Metabolite differential expression file</li>
+<li>Gene differential expression file</li>
+</ul>
+<p>Both the input files consist of information about log<sub>2</sub> fold change and the <em>p</em>-value of each gene or metabolite. In case of comparisons between multiple cohorts, you can also provide the name of the cohorts in the columns <em>state1</em> and <em>state2</em> as shown in Figure 2. You can also use files without the cohort information as shown in Figure 3.</p>
+<p><img alt="Sample input files" src="../../img/IntOmix/intomix_sample_input_files.png" /> <center><strong>Figure 2.</strong> Sample input files</center></p>
+<p><img alt="Files without cohort information" src="../../img/IntOmix/intomix_files_wo_cohort_info.png" /> <center><strong>Figure 3.</strong> Files without cohort information</center></p>
+<h2 id="steps-in-data-processing">Steps in data processing</h2>
+<ul>
+<li>Upload differentially expressed metabolomics/transcriptomics/genomics files.</li>
+<li>Set parameters to perform the optimization of the network.</li>
+<li>Perform Pathway Enrichment analysis.</li>
+<li>Perform cross-cohort comparison to find common genes and metabolites across the various analysis.</li>
+</ul>
+<p><strong>Note:</strong></p>
+<ul>
+<li>You can run the app using any single file as input if required.</li>
+</ul>
+<h2 id="caveats">Caveats</h2>
+<ul>
+<li>KEGG or HMDB ID for metabolites and gene id for genes is required to map these on the pathway map.</li>
+<li>If <em>state 1</em> and <em>state 2</em> columns are not present in the input files, the entire data will be treated as if from one comparison with the default cohort names, <em>Cohort1</em> and <em>Cohort2</em>.</li>
+<li>In case there are blank cells for <em>p</em>-value or log<sub>2</sub> fold change in the input files, the corresponding metabolites or genes are dropped before optimization and a notice is shown to that effect.</li>
+<li>Currently, we only support reactions from <em>Homo sapiens</em>, <em>Mus musculus</em>, <em>Drosophila melanogaster</em> and Chinese hamster ovary.</li>
+<li>At a time only one keyword can be annotated as the primary keyword.</li>
+<li>Publication Search module requires at least one keyword to be annotated as the primary keyword.</li>
+<li>To utilize the Cross Cohort Comparison functionality, run your analysis at least twice at different parameters.</li>
+</ul>
+<h1 id="tutorial">Tutorial</h1>
+<p>Select <em>IntOmix</em> from the dashboard under the <em>Multi-omic Data</em> Tab as shown in Figure 4. Create a <em>New Workspace</em> or choose an existing one from thr drop-down and provide a <em>Name of the Session</em> to be redirected to IntOmix's upload page.</p>
+<p><img alt="Polly Dashboard and Workspace selection" src="../../img/IntOmix/Dashboard1.png" /></p>
+<p><img alt="Polly Dashboard and Workspace selection" src="../../img/IntOmix/Selection1.png" /> <center><strong>Figure 4.</strong> Polly Dashboard and Workspace selection</center></p>
+<h2 id="upload-files">Upload files</h2>
+<p>The file upload interface allows you to upload input files to be processed in IntOmix as shown in Figure 5.</p>
+<p><img alt="File Upload interface" src="../../img/IntOmix/intomix_uploads_page.png" /> <center><strong>Figure 5.</strong> File Upload interface</center></p>
+<p>Click on <em>Upload .csv Files</em> to upload the differential expression files in the format mentioned above and then click on <em>Continue to Dashboard.</em></p>
+<h2 id="parameter-interface">Parameter Interface</h2>
+<p>This interface allows you to adjust parameters to be used to generate the optimized network.</p>
+<ul>
+<li>You can select cohorts as per your requirements.</li>
+<li>The organism will be detected automatically based on data input if the gene file has been uploaded.</li>
+<li>You can either proceed with the default parameters or specify the values. To know more about the significance of the parameters, refer to the <a href="https://docs.elucidata.io/Apps/Multi-omic%20Data/IntOmix.html#details-about-the-app">Details of the App</a> section.</li>
+<li>To isolate keywords from a paragraph, copy it on the left side of the <em>Add Keywords</em> section and click on <em>Filter Keywords</em>. The isolated keywords will be displayed below.</li>
+<li>To add specific keywords, write them on the right side of the <em>Add Keywords</em> section separated by a comma and click on Add Keywords.</li>
+<li>Click on any particular keyword to annotate it as the primary keyword. The primary keyword selection can be changed on the next interface as well as we can see in Figure 6.</li>
+<li>After specifying all the required parameters, click on <em>Get Started</em> to process your data.</li>
+</ul>
+<p><img alt="Set parameter interface" src="../../img/IntOmix/intomix_set_parameters.png" /> <center><strong>Figure 6.</strong> Set parameter interface</center></p>
+<p><strong>Note:</strong></p>
+<ul>
+<li>Processing of data requires as much time as specified to optimize the significantly perturbed networks present in the data.</li>
+</ul>
+<p><img alt="Optimization and map generation" src="../../img/IntOmix/intomix_optimization_and_map_gen.png" /> <center><strong>Figure 7.</strong> Optimization and map generation</center></p>
+<h2 id="pathway-dashboard">Pathway Dashboard</h2>
+<p>After data processing, a KEGG map is generated based on the input parameters. The most significantly changing genes and metabolites between the two conditions are captured in the form of a network module. This network module is overlaid on the KEGG pathway to effectively visualize the overall topology of the variations between the two conditions. Hovering on any node or edge will display a dialog box with information about the selected gene or metabolite as shown in Figure 8. You can also zoom in, zoom out, select nodes or edges on the interactive map or download it in one of the several formats available.</p>
+<p><img alt="Hovering on metabolites and genes provides further information" src="../../img/IntOmix/intomix_metabs_and_genes_hovering.png" /> <center><strong>Figure 8.</strong> Hovering on metabolites and genes provides further information.</center></p>
+<p>You can add all metabolites and genes which do not satisfy the parameters specified for the optimized network.</p>
+<h2 id="option-and-information">Option and Information</h2>
+<p>In the <em>Option &amp; Information</em> pop-up window as shown in Figure 9, you can select <em>All Others</em> option to add all genes and metabolites in the data to the generated map. The genes and metabolites have color ranging from red-green scale . All upregulated metabolites or genes are represented by a shade of red and downregulated metabolites or genes as a shade of green. The missing metabolites and genes are represented by shade of blue.</p>
+<p><img alt="Pathway map containing all metabolites and genes in the input files" src="../../img/IntOmix/Overallpathwaymap1.png" /> <center><strong>Figure 9.</strong> Pathway map containing all metabolites and genes in the input files.</center></p>
+<h2 id="analyze-your-data">Analyze your data</h2>
+<p>After the KEGG network is created, the predefined set of queries can be selected from <em>Analyze your Data</em> option which gives you more insights on the results derived.</p>
+<p><strong>What are the key pathways?</strong></p>
+<p>This option enables you to find the key pathways that are perturbed in the data. The results of this query are based on two scoring methods; pathway enrichment and topology analysis. Pathway enrichment analysis refers to the quantitative approach based on the concentration of metabolites present. Gene set enrichment analysis is one of the famous algorithms used for enrichment analysis. In Polly<sup>TM</sup> IntOmix, R packages such as <em>globaltest</em> and <em>GlobalAncova</em> are used to analyze the pathway enrichment. Similarly, for topology analysis, betweenness centrality and degree centrality are considered as key parameters to find the most influential and important pathways in the whole subnetwork.</p>
+<p><img alt="Pathway Enrichment module" src="../../img/IntOmix/intomix_pathway_enrichment_plot.png" /> <center><strong>Figure 10.</strong> Pathway Enrichment module</center></p>
+<p><strong>How do publicly available results correlate with my results?</strong></p>
+<p>This question enables you to select any gene or metabolite that is significantly differentially expressed in their data along with the specified primary keyword. Using both of these as the input, IntOmix will display a list of relevant publications that you can read more to gain insights about their data and generate hypotheses.</p>
+<p><img alt="Publication Search module" src="../../img/IntOmix/intomix_literature.jpg" /> <center><strong>Figure 11.</strong> Publication Search module.</center></p>
+<p><strong>How do my other comparisons compare with my results?</strong></p>
+<p>Using this question you can compare the analysis of the same data using different parameters. The output of this question is displayed as a Venn diagram wherein the intersection contains the common genes and metabolites found in both the set of analyses. This helps you understand how a single parameter or a group of parameters affect their analysis.</p>
+<p><img alt="Cross Cohort Comparison" src="../../img/IntOmix/intomix_cohort_comparison.png" /> <center><strong>Figure 12.</strong> Cross Cohort Comparison</center></p>
+<p>Watch the demo video below for more information.</p>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+    <iframe src="https://www.youtube.com/embed/ISsKc81FQqM" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
+
+<p><br></p>
+<h1 id="details-about-the-app">Details about the app</h1>
+<p>IntOmix is based on <a href="https://www.cell.com/immunity/fulltext/S1074-7613(15)00080-1?_returnURL=https%3A%2F%2Flinkinghub.elsevier.com%2Fretrieve%2Fpii%2FS1074761315000801%3Fshowall%3Dtrue">CoMBI-T</a> i.e., Concordant Metabolomics Integration with Transcription pipeline to utilize the multiple omics techniques (metabolomics and transcriptomics) to focus on the identification of significantly altering metabolic network modules between two experimental conditions under investigation. This network includes both metabolites and enzymes. The most co-ordinately responsive sub-network is identified using the integrated network analysis and also, the novel points of metabolic rewiring are revealed.</p>
+<h2 id="finding-a-module">Finding a module</h2>
+<p>After making a network, one can find a connected module that contains the most significantly changed genes and metabolites. Internally, this is done by first scoring nodes and edges based on their <em>p</em>-values in such a way that positive scores correspond to significant <em>p</em>-values and negative scores correspond to insignificant changes. Then the problem of finding a connected subgraph with maximum summary weight is solved.</p>
+<p>The <em>FDR values</em> and <em>Score for absent metabolites</em> options control the size of the module. Increasing/decreasing the <em>FDR for reactions</em> (<em>FDR for metabolites</em>) value makes adding reactions (metabolites) to a module easier/harder.</p>
+<p>It is recommended to start from the default values and then gradually change them depending on the results. Default FDR values are generated so that the module will be the size of ~100 reactions.</p>
+<h1 id="videos">Videos</h1>
+<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
+    <iframe src="https://www.youtube.com/embed/Qhdp82moWsQ" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
+</div>
+
+<p><br></p>
+<h1 id="references">References</h1>
+<ul>
+<li>Sergushichev, Alexey A., et al. "GAM: a web-service for integrated transcriptional and metabolic network analysis." Nucleic acids research 44.W1 (2016): W194-W200.</li>
+<li>Goeman, Jelle J., and Peter Bühlmann. "Analyzing gene expression data in terms of gene sets: methodological issues." Bioinformatics 23.8 (2007): 980-987.</li>
+<li>Hummel, Manuela, Reinhard Meister, and Ulrich Mansmann. "GlobalANCOVA: exploration and assessment of gene group effects." Bioinformatics 24.1 (2007): 78-85.</li>
+<li>Jha, Abhishek K., et al. "Network integration of parallel metabolic and transcriptional data reveals metabolic modules that regulate macrophage polarization." <em>Immunity</em> 42.3 (2015): 419-430.</li>
+</ul>
+<h1 id="frequently-asked-questions-faqs">Frequently Asked Questions (FAQs)</h1>
+<table data-number-column="false" style="margin: 24px 0px 0px; border-collapse: collapse; width: 679px; border: 1px solid rgb(193, 199, 208); table-layout: fixed;" data-mkd-display="block" data-mkd-tablehasheader="false"><colgroup style="box-sizing: border-box;" data-mkd-display="block"><col style="box-sizing: border-box; width: 51px;" data-mkd-display="block"><col style="box-sizing: border-box; width: 225px;" data-mkd-display="block"><col style="box-sizing: border-box; width: 402px;" data-mkd-display="block"></colgroup><tbody style="border-bottom: none; box-sizing: border-box;" data-mkd-display="block"><tr style="box-sizing: border-box;" data-mkd-display="block" data-mkd-index="1" data-mkd-index-row="1"><th rowspan="1" colspan="1" class="ak-renderer-tableHeader-sortable-column" data-colwidth="58" style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(193, 199, 208); border-image: initial; padding: 8px; text-align: left; vertical-align: top; box-sizing: border-box; min-width: 48px; font-weight: normal; background-clip: padding-box; background-color: rgb(240, 240, 240); cursor: pointer; position: relative;" data-mkd-display="block" data-mkd-index="1" data-mkd-index-cell="1"><p style="margin: 0px; padding: 0px; font-size: 1em; line-height: 1.714; letter-spacing: -0.005em; box-sizing: border-box;" data-mkd-display="block"><strong style="box-sizing: border-box;" data-mkd-display="inline">S. No.</strong></p><figure class="ak-renderer-tableHeader-sorting-icon ak-renderer-tableHeader-sorting-icon__no-order" style="box-sizing: border-box; margin: 0px; opacity: 0; transition: opacity 0.2s ease-in-out 0s;" data-mkd-display="block"><div style="margin: 0px; padding: 0px; box-sizing: border-box;" data-mkd-display="block"><figure class="sc-lnmtFM fvkDRB" style="display: flex; position: absolute; height: 28px; width: 28px; margin: 6px; right: 0px; top: 0px; border: 2px solid rgb(255, 255, 255); border-radius: 4px; background-color: rgb(244, 245, 247); -webkit-box-pack: center; justify-content: center; -webkit-box-align: center; align-items: center; box-sizing: border-box;" data-mkd-display="block"><svg width="8" height="12" class="sorting-icon-svg__no_order" fill-opacity="0.5" data-mkd-display="block"><g fill="none" fill-rule="evenodd" data-mkd-display="block"><path d="M-8-6h24v24H-8z" data-mkd-display="block"></path><path d="M3 8.509V1c0-.552.449-1 1-1 .552 0 1 .448 1 1V8.51l1.217-1.206a1.05 1.05 0 011.477 0 1.03 1.03 0 01.004 1.463l-.003.002-2.956 2.93a1.053 1.053 0 01-1.478 0L.305 8.767a1.03 1.03 0 01.001-1.464 1.05 1.05 0 011.477 0L3 8.508z" fill="#42526E" data-mkd-display="block"></path></g></svg></figure></div></figure></th><th rowspan="1" colspan="1" class="ak-renderer-tableHeader-sortable-column" data-colwidth="252" style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(193, 199, 208); border-image: initial; padding: 8px; text-align: left; vertical-align: top; box-sizing: border-box; min-width: 48px; font-weight: normal; background-clip: padding-box; background-color: rgb(240, 240, 240); cursor: pointer; position: relative;" data-mkd-display="block" data-mkd-index="2" data-mkd-index-cell="2"><p style="margin: 0px; padding: 0px; font-size: 1em; line-height: 1.714; letter-spacing: -0.005em; box-sizing: border-box;" data-mkd-display="block"><strong style="box-sizing: border-box;" data-mkd-display="inline">Question</strong></p><figure class="ak-renderer-tableHeader-sorting-icon ak-renderer-tableHeader-sorting-icon__no-order" style="box-sizing: border-box; margin: 0px; opacity: 0; transition: opacity 0.2s ease-in-out 0s;" data-mkd-display="block"><div style="margin: 0px; padding: 0px; box-sizing: border-box;" data-mkd-display="block"><figure class="sc-lnmtFM fvkDRB" style="display: flex; position: absolute; height: 28px; width: 28px; margin: 6px; right: 0px; top: 0px; border: 2px solid rgb(255, 255, 255); border-radius: 4px; background-color: rgb(244, 245, 247); -webkit-box-pack: center; justify-content: center; -webkit-box-align: center; align-items: center; box-sizing: border-box;" data-mkd-display="block"><svg width="8" height="12" class="sorting-icon-svg__no_order" fill-opacity="0.5" data-mkd-display="block"><g fill="none" fill-rule="evenodd" data-mkd-display="block"><path d="M-8-6h24v24H-8z" data-mkd-display="block"></path><path d="M3 8.509V1c0-.552.449-1 1-1 .552 0 1 .448 1 1V8.51l1.217-1.206a1.05 1.05 0 011.477 0 1.03 1.03 0 01.004 1.463l-.003.002-2.956 2.93a1.053 1.053 0 01-1.478 0L.305 8.767a1.03 1.03 0 01.001-1.464 1.05 1.05 0 011.477 0L3 8.508z" fill="#42526E" data-mkd-display="block"></path></g></svg></figure></div></figure></th><th rowspan="1" colspan="1" class="ak-renderer-tableHeader-sortable-column" data-colwidth="449" style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(193, 199, 208); border-image: initial; padding: 8px; text-align: left; vertical-align: top; box-sizing: border-box; min-width: 48px; font-weight: normal; background-clip: padding-box; background-color: rgb(240, 240, 240); cursor: pointer; position: relative;" data-mkd-display="block" data-mkd-index="3" data-mkd-index-cell="3" data-mkd-pos="last"><p style="margin: 0px; padding: 0px; font-size: 1em; line-height: 1.714; letter-spacing: -0.005em; box-sizing: border-box;" data-mkd-display="block"><strong style="box-sizing: border-box;" data-mkd-display="inline">Answer</strong></p><figure class="ak-renderer-tableHeader-sorting-icon ak-renderer-tableHeader-sorting-icon__no-order" style="box-sizing: border-box; margin: 0px; opacity: 0; transition: opacity 0.2s ease-in-out 0s;" data-mkd-display="block"><div style="margin: 0px; padding: 0px; box-sizing: border-box;" data-mkd-display="block"><figure class="sc-lnmtFM fvkDRB" style="display: flex; position: absolute; height: 28px; width: 28px; margin: 6px; right: 0px; top: 0px; border: 2px solid rgb(255, 255, 255); border-radius: 4px; background-color: rgb(244, 245, 247); -webkit-box-pack: center; justify-content: center; -webkit-box-align: center; align-items: center; box-sizing: border-box;" data-mkd-display="block"><svg width="8" height="12" class="sorting-icon-svg__no_order" fill-opacity="0.5" data-mkd-display="block"><g fill="none" fill-rule="evenodd" data-mkd-display="block"><path d="M-8-6h24v24H-8z" data-mkd-display="block"></path><path d="M3 8.509V1c0-.552.449-1 1-1 .552 0 1 .448 1 1V8.51l1.217-1.206a1.05 1.05 0 011.477 0 1.03 1.03 0 01.004 1.463l-.003.002-2.956 2.93a1.053 1.053 0 01-1.478 0L.305 8.767a1.03 1.03 0 01.001-1.464 1.05 1.05 0 011.477 0L3 8.508z" fill="#42526E" data-mkd-display="block"></path></g></svg></figure></div></figure></th></tr><tr style="box-sizing: border-box;" data-mkd-display="block" data-mkd-index="2" data-mkd-index-row="2"><td rowspan="1" colspan="1" data-colwidth="58" style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(193, 199, 208); border-image: initial; padding: 8px; box-sizing: border-box; min-width: 48px; vertical-align: top; background-clip: padding-box;" data-mkd-display="block" data-mkd-index="1" data-mkd-index-cell="1"><p style="margin: 0px; padding: 0px; font-size: 1em; line-height: 1.714; letter-spacing: -0.005em; box-sizing: border-box;" data-mkd-display="block">1.</p></td><td rowspan="1" colspan="1" data-colwidth="252" style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(193, 199, 208); border-image: initial; padding: 8px; box-sizing: border-box; min-width: 48px; vertical-align: top; background-clip: padding-box;" data-mkd-display="block" data-mkd-index="2" data-mkd-index-cell="2"><p style="margin: 0px; padding: 0px; font-size: 1em; line-height: 1.714; letter-spacing: -0.005em; box-sizing: border-box;" data-mkd-display="block"><strong style="box-sizing: border-box;" data-mkd-display="inline">What is Polly<sup style="box-sizing: border-box;" data-mkd-display="inline">TM</sup>&nbsp;IntOmix?</strong></p></td><td rowspan="1" colspan="1" data-colwidth="449" style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(193, 199, 208); border-image: initial; padding: 8px; box-sizing: border-box; min-width: 48px; vertical-align: top; background-clip: padding-box;" data-mkd-display="block" data-mkd-index="3" data-mkd-index-cell="3" data-mkd-pos="last"><p style="margin: 0px; padding: 0px; font-size: 1em; line-height: 1.714; letter-spacing: -0.005em; box-sizing: border-box;" data-mkd-display="block">Polly<sup style="box-sizing: border-box;" data-mkd-display="inline">TM</sup>&nbsp;IntOmix is an application specifically geared towards integrated network analysis of multi-omics with a focus on the identification of significantly changing metabolic network modules between two experimental conditions.</p></td></tr><tr style="box-sizing: border-box;" data-mkd-display="block" data-mkd-index="3" data-mkd-index-row="3"><td rowspan="1" colspan="1" data-colwidth="58" style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(193, 199, 208); border-image: initial; padding: 8px; box-sizing: border-box; min-width: 48px; vertical-align: top; background-clip: padding-box;" data-mkd-display="block" data-mkd-index="1" data-mkd-index-cell="1"><p style="margin: 0px; padding: 0px; font-size: 1em; line-height: 1.714; letter-spacing: -0.005em; box-sizing: border-box;" data-mkd-display="block">2.</p></td><td rowspan="1" colspan="1" data-colwidth="252" style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(193, 199, 208); border-image: initial; padding: 8px; box-sizing: border-box; min-width: 48px; vertical-align: top; background-clip: padding-box;" data-mkd-display="block" data-mkd-index="2" data-mkd-index-cell="2"><p style="margin: 0px; padding: 0px; font-size: 1em; line-height: 1.714; letter-spacing: -0.005em; box-sizing: border-box;" data-mkd-display="block"><strong style="box-sizing: border-box;" data-mkd-display="inline">How can I test&nbsp;Polly<sup style="box-sizing: border-box;" data-mkd-display="inline">TM</sup>&nbsp;IntOmix if I don't have my own data?</strong></p></td><td rowspan="1" colspan="1" data-colwidth="449" style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(193, 199, 208); border-image: initial; padding: 8px; box-sizing: border-box; min-width: 48px; vertical-align: top; background-clip: padding-box;" data-mkd-display="block" data-mkd-index="3" data-mkd-index-cell="3" data-mkd-pos="last"><p style="margin: 0px; padding: 0px; font-size: 1em; line-height: 1.714; letter-spacing: -0.005em; box-sizing: border-box;" data-mkd-display="block">You can download the demo data set by clicking on the Download Demo Files button on&nbsp;Polly<sup style="box-sizing: border-box;" data-mkd-display="inline">TM</sup>&nbsp;IntOmix Upload page.</p></td></tr><tr style="box-sizing: border-box;" data-mkd-display="block" data-mkd-index="4" data-mkd-index-row="4"><td rowspan="1" colspan="1" data-colwidth="58" style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(193, 199, 208); border-image: initial; padding: 8px; box-sizing: border-box; min-width: 48px; vertical-align: top; background-clip: padding-box;" data-mkd-display="block" data-mkd-index="1" data-mkd-index-cell="1"><p style="margin: 0px; padding: 0px; font-size: 1em; line-height: 1.714; letter-spacing: -0.005em; box-sizing: border-box;" data-mkd-display="block">3.</p></td><td rowspan="1" colspan="1" data-colwidth="252" style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(193, 199, 208); border-image: initial; padding: 8px; box-sizing: border-box; min-width: 48px; vertical-align: top; background-clip: padding-box;" data-mkd-display="block" data-mkd-index="2" data-mkd-index-cell="2"><p style="margin: 0px; padding: 0px; font-size: 1em; line-height: 1.714; letter-spacing: -0.005em; box-sizing: border-box;" data-mkd-display="block"><strong style="box-sizing: border-box;" data-mkd-display="inline">Can I run Polly<sup>TM</sup> IntOmix if I only have the metabolomics or transcriptomics data?</strong></p></td><td rowspan="1" colspan="1" data-colwidth="449" style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(193, 199, 208); border-image: initial; padding: 8px; box-sizing: border-box; min-width: 48px; vertical-align: top; background-clip: padding-box;" data-mkd-display="block" data-mkd-index="3" data-mkd-index-cell="3" data-mkd-pos="last"><p style="margin: 0px; padding: 0px; font-size: 1em; line-height: 1.714; letter-spacing: -0.005em; box-sizing: border-box;" data-mkd-display="block">Yes. Even though Polly<sup>TM</sup> IntOmix is designed for integrating multi-omics data, you can run the metabolomics or transcriptomics data by itself.</p></td></tr><tr style="box-sizing: border-box;" data-mkd-display="block" data-mkd-index="5" data-mkd-index-row="5"><td rowspan="1" colspan="1" data-colwidth="58" style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(193, 199, 208); border-image: initial; padding: 8px; box-sizing: border-box; min-width: 48px; vertical-align: top; background-clip: padding-box;" data-mkd-display="block" data-mkd-index="1" data-mkd-index-cell="1"><p style="margin: 0px; padding: 0px; font-size: 1em; line-height: 1.714; letter-spacing: -0.005em; box-sizing: border-box;" data-mkd-display="block">4.</p></td><td rowspan="1" colspan="1" data-colwidth="252" style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(193, 199, 208); border-image: initial; padding: 8px; box-sizing: border-box; min-width: 48px; vertical-align: top; background-clip: padding-box;" data-mkd-display="block" data-mkd-index="2" data-mkd-index-cell="2"><p style="margin: 0px; padding: 0px; font-size: 1em; line-height: 1.714; letter-spacing: -0.005em; box-sizing: border-box;" data-mkd-display="block"><strong style="box-sizing: border-box;" data-mkd-display="inline">What is the function of the Filter Keywords tab?</strong></p></td><td rowspan="1" colspan="1" data-colwidth="449" style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(193, 199, 208); border-image: initial; padding: 8px; box-sizing: border-box; min-width: 48px; vertical-align: top; background-clip: padding-box;" data-mkd-display="block" data-mkd-index="3" data-mkd-index-cell="3" data-mkd-pos="last"><p style="margin: 0px; padding: 0px; font-size: 1em; line-height: 1.714; letter-spacing: -0.005em; box-sizing: border-box;" data-mkd-display="block">Filter Keywords is a function that filters keywords from any text or paragraph input. You can copy and paste text and then click on Filter Keywords.</p></td></tr><tr style="box-sizing: border-box;" data-mkd-display="block" data-mkd-index="6" data-mkd-index-row="6"><td rowspan="1" colspan="1" data-colwidth="58" style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(193, 199, 208); border-image: initial; padding: 8px; box-sizing: border-box; min-width: 48px; vertical-align: top; background-clip: padding-box;" data-mkd-display="block" data-mkd-index="1" data-mkd-index-cell="1"><p style="margin: 0px; padding: 0px; font-size: 1em; line-height: 1.714; letter-spacing: -0.005em; box-sizing: border-box;" data-mkd-display="block">5.</p></td><td rowspan="1" colspan="1" data-colwidth="252" style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(193, 199, 208); border-image: initial; padding: 8px; box-sizing: border-box; min-width: 48px; vertical-align: top; background-clip: padding-box;" data-mkd-display="block" data-mkd-index="2" data-mkd-index-cell="2"><p style="margin: 0px; padding: 0px; font-size: 1em; line-height: 1.714; letter-spacing: -0.005em; box-sizing: border-box;" data-mkd-display="block"><strong style="box-sizing: border-box;" data-mkd-display="inline">Can I add keywords manually?</strong></p></td><td rowspan="1" colspan="1" data-colwidth="449" style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(193, 199, 208); border-image: initial; padding: 8px; box-sizing: border-box; min-width: 48px; vertical-align: top; background-clip: padding-box;" data-mkd-display="block" data-mkd-index="3" data-mkd-index-cell="3" data-mkd-pos="last"><p style="margin: 0px; padding: 0px; font-size: 1em; line-height: 1.714; letter-spacing: -0.005em; box-sizing: border-box;" data-mkd-display="block">Yes, you can add keywords manually and then click on Add Keywords.</p></td></tr><tr style="box-sizing: border-box;" data-mkd-display="block" data-mkd-index="7" data-mkd-index-row="7"><td rowspan="1" colspan="1" data-colwidth="58" style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(193, 199, 208); border-image: initial; padding: 8px; box-sizing: border-box; min-width: 48px; vertical-align: top; background-clip: padding-box;" data-mkd-display="block" data-mkd-index="1" data-mkd-index-cell="1"><p style="margin: 0px; padding: 0px; font-size: 1em; line-height: 1.714; letter-spacing: -0.005em; box-sizing: border-box;" data-mkd-display="block">6.</p></td><td rowspan="1" colspan="1" data-colwidth="252" style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(193, 199, 208); border-image: initial; padding: 8px; box-sizing: border-box; min-width: 48px; vertical-align: top; background-clip: padding-box;" data-mkd-display="block" data-mkd-index="2" data-mkd-index-cell="2"><p style="margin: 0px; padding: 0px; font-size: 1em; line-height: 1.714; letter-spacing: -0.005em; box-sizing: border-box;" data-mkd-display="block"><strong style="box-sizing: border-box;" data-mkd-display="inline">How many keywords can be selected at one time?</strong></p></td><td rowspan="1" colspan="1" data-colwidth="449" style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(193, 199, 208); border-image: initial; padding: 8px; box-sizing: border-box; min-width: 48px; vertical-align: top; background-clip: padding-box;" data-mkd-display="block" data-mkd-index="3" data-mkd-index-cell="3" data-mkd-pos="last"><p style="margin: 0px; padding: 0px; font-size: 1em; line-height: 1.714; letter-spacing: -0.005em; box-sizing: border-box;" data-mkd-display="block">There is no limit to adding keywords however, at a time only one keyword can be selected as the primary keyword. The primary keyword can be changed by clicking on Edit without optimizing the pathway map.</p></td></tr><tr style="box-sizing: border-box;" data-mkd-display="block" data-mkd-index="8" data-mkd-index-row="8"><td rowspan="1" colspan="1" data-colwidth="58" style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(193, 199, 208); border-image: initial; padding: 8px; box-sizing: border-box; min-width: 48px; vertical-align: top; background-clip: padding-box;" data-mkd-display="block" data-mkd-index="1" data-mkd-index-cell="1"><p style="margin: 0px; padding: 0px; font-size: 1em; line-height: 1.714; letter-spacing: -0.005em; box-sizing: border-box;" data-mkd-display="block">7.</p></td><td rowspan="1" colspan="1" data-colwidth="252" style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(193, 199, 208); border-image: initial; padding: 8px; box-sizing: border-box; min-width: 48px; vertical-align: top; background-clip: padding-box;" data-mkd-display="block" data-mkd-index="2" data-mkd-index-cell="2"><p style="margin: 0px; padding: 0px; font-size: 1em; line-height: 1.714; letter-spacing: -0.005em; box-sizing: border-box;" data-mkd-display="block"><strong style="box-sizing: border-box;" data-mkd-display="inline">How can I get more information about any gene or metabolite once the map is generated?</strong></p></td><td rowspan="1" colspan="1" data-colwidth="449" style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(193, 199, 208); border-image: initial; padding: 8px; box-sizing: border-box; min-width: 48px; vertical-align: top; background-clip: padding-box;" data-mkd-display="block" data-mkd-index="3" data-mkd-index-cell="3" data-mkd-pos="last"><p style="margin: 0px; padding: 0px; font-size: 1em; line-height: 1.714; letter-spacing: -0.005em; box-sizing: border-box;" data-mkd-display="block">You can hover over a particular node or edge to get more details about the component of interest.</p></td></tr><tr style="box-sizing: border-box;" data-mkd-display="block" data-mkd-index="9" data-mkd-index-row="9"><td rowspan="1" colspan="1" data-colwidth="58" style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(193, 199, 208); border-image: initial; padding: 8px; box-sizing: border-box; min-width: 48px; vertical-align: top; background-clip: padding-box;" data-mkd-display="block" data-mkd-index="1" data-mkd-index-cell="1"><p style="margin: 0px; padding: 0px; font-size: 1em; line-height: 1.714; letter-spacing: -0.005em; box-sizing: border-box;" data-mkd-display="block">8.</p></td><td rowspan="1" colspan="1" data-colwidth="252" style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(193, 199, 208); border-image: initial; padding: 8px; box-sizing: border-box; min-width: 48px; vertical-align: top; background-clip: padding-box;" data-mkd-display="block" data-mkd-index="2" data-mkd-index-cell="2"><p style="margin: 0px; padding: 0px; font-size: 1em; line-height: 1.714; letter-spacing: -0.005em; box-sizing: border-box;" data-mkd-display="block"><strong style="box-sizing: border-box;" data-mkd-display="inline">How can I visualize all of the genes or metabolites that are present in my data but not in the optimized network?</strong></p></td><td rowspan="1" colspan="1" data-colwidth="449" style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(193, 199, 208); border-image: initial; padding: 8px; box-sizing: border-box; min-width: 48px; vertical-align: top; background-clip: padding-box;" data-mkd-display="block" data-mkd-index="3" data-mkd-index-cell="3" data-mkd-pos="last"><p style="margin: 0px; padding: 0px; font-size: 1em; line-height: 1.714; letter-spacing: -0.005em; box-sizing: border-box;" data-mkd-display="block">Clicking on the pop-up window on the right side of the screen opens up a menu named Option &amp; Information in which selecting All Others will display all the genes and metabolites present in the data on the pathway map. The genes and metabolites that satisfy the parameters selected in the previous menu have a color palette of red-green and the ones that do not are displayed as shades of purple.</p></td></tr><tr style="box-sizing: border-box;" data-mkd-display="block" data-mkd-index="10" data-mkd-index-row="10"><td rowspan="1" colspan="1" data-colwidth="58" style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(193, 199, 208); border-image: initial; padding: 8px; box-sizing: border-box; min-width: 48px; vertical-align: top; background-clip: padding-box;" data-mkd-display="block" data-mkd-index="1" data-mkd-index-cell="1"><p style="margin: 0px; padding: 0px; font-size: 1em; line-height: 1.714; letter-spacing: -0.005em; box-sizing: border-box;" data-mkd-display="block">9.</p></td><td rowspan="1" colspan="1" data-colwidth="252" style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(193, 199, 208); border-image: initial; padding: 8px; box-sizing: border-box; min-width: 48px; vertical-align: top; background-clip: padding-box;" data-mkd-display="block" data-mkd-index="2" data-mkd-index-cell="2"><p style="margin: 0px; padding: 0px; font-size: 1em; line-height: 1.714; letter-spacing: -0.005em; box-sizing: border-box;" data-mkd-display="block"><strong style="box-sizing: border-box;" data-mkd-display="inline">How can I see the key pathways present in my data?</strong></p></td><td rowspan="1" colspan="1" data-colwidth="449" style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(193, 199, 208); border-image: initial; padding: 8px; box-sizing: border-box; min-width: 48px; vertical-align: top; background-clip: padding-box;" data-mkd-display="block" data-mkd-index="3" data-mkd-index-cell="3" data-mkd-pos="last"><p style="margin: 0px; padding: 0px; font-size: 1em; line-height: 1.714; letter-spacing: -0.005em; box-sizing: border-box;" data-mkd-display="block">Clicking on the pop-up window on the left side of the screen opens up a menu named Analyze your data which contains a list of questions that you can ask regarding their data. Clicking on What are the key pathways will open the Pathway Enrichment module that assigns a score to perturbed pathways based on enrichment and topology.</p></td></tr><tr style="box-sizing: border-box;" data-mkd-display="block" data-mkd-index="11" data-mkd-index-row="11"><td rowspan="1" colspan="1" data-colwidth="58" style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(193, 199, 208); border-image: initial; padding: 8px; box-sizing: border-box; min-width: 48px; vertical-align: top; background-clip: padding-box;" data-mkd-display="block" data-mkd-index="1" data-mkd-index-cell="1"><p style="margin: 0px; padding: 0px; font-size: 1em; line-height: 1.714; letter-spacing: -0.005em; box-sizing: border-box;" data-mkd-display="block">10.</p></td><td rowspan="1" colspan="1" data-colwidth="252" style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(193, 199, 208); border-image: initial; padding: 8px; box-sizing: border-box; min-width: 48px; vertical-align: top; background-clip: padding-box;" data-mkd-display="block" data-mkd-index="2" data-mkd-index-cell="2"><p style="margin: 0px; padding: 0px; font-size: 1em; line-height: 1.714; letter-spacing: -0.005em; box-sizing: border-box;" data-mkd-display="block"><strong style="box-sizing: border-box;" data-mkd-display="inline">How can I effectively use the query "How do publicly available results correlate with my results?" to get insights into my data?</strong></p></td><td rowspan="1" colspan="1" data-colwidth="449" style="border-width: 1px 0px 0px 1px; border-style: solid; border-color: rgb(193, 199, 208); border-image: initial; padding: 8px; box-sizing: border-box; min-width: 48px; vertical-align: top; background-clip: padding-box;" data-mkd-display="block" data-mkd-index="3" data-mkd-index-cell="3" data-mkd-pos="last"><p style="margin: 0px; padding: 0px; font-size: 1em; line-height: 1.714; letter-spacing: -0.005em; box-sizing: border-box;" data-mkd-display="block">To use this feature effectively, you need to select one keyword as mentioned on the parameter page and one gene or metabolite of interest from the target list of the generated map. This combination (keyword and gene/metabolite) will be searched for in public databases to get the most relevant publications.</p></td></tr></tbody></table>
+              
+            </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../Data Studio/Data Studio.html" class="btn btn-neutral float-right" title="Introduction">Next <span class="icon icon-circle-arrow-right"></span></a>
+      
+      
+        <a href="../Lipidomics Data/Lipidomics Visualization Dashboard.html" class="btn btn-neutral" title="Lipidomics Visualization Dashboard"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+    
+  </div>
+
+  Built with <a href="http://www.mkdocs.org">MkDocs</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+      
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" style="cursor: pointer">
+    <span class="rst-current-version" data-toggle="rst-current-version">
+      
+      
+        <span><a href="../Lipidomics Data/Lipidomics Visualization Dashboard.html" style="color: #fcfcfc;">&laquo; Previous</a></span>
+      
+      
+        <span style="margin-left: 15px"><a href="../Data Studio/Data Studio.html" style="color: #fcfcfc">Next &raquo;</a></span>
+      
+    </span>
+</div>
+    <script>var base_url = '../..';</script>
+    <script src="../../js/theme.js" defer></script>
+      <script src="../../search/main.js" defer></script>
+
+</body>
+</html>
