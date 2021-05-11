@@ -10,7 +10,7 @@ The Admin Dashboard allows you to create and manage accounts for your group. To 
 
 ## Create New User
 
-To create a new user click on the *Create New User* button highlighted below.
+To create a new user click on the *Create New User* button highlighted as shown below.
 
 ![Create new user](../img/Admin_Dashboard/02_Admin_Dashboard_Overview.png) <center>**Figure 2.** Create new user</center>
 
@@ -36,7 +36,7 @@ Click on *Reset Password* in the modal window that opens up on the right. A succ
 
 ## Search User
 
-To search users use the search bar highlighted below. Search works on both the name and email id stored.
+To search users use the search bar highlighted as shown below. Search works on both the name and email id stored.
 
 ![Search user](../img/Admin_Dashboard/06_Admin_Dashboard_Search_Users.png) <center>**Figure 6.** Search user</center> 
 
