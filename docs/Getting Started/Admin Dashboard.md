@@ -20,6 +20,10 @@ A modal window will open up on the right. For each new account you will have to 
 
 **Note:**
 
+*   There is a limit to how many users can be added to a group as stipulated by your license agreement. Exceeding this will display an error. To extend the limit, reach out to our team at [polly@elucidata.io](mailto:polly@elucidata.io).
+
+*   Only active user accounts are counted as part of this limit. Active and inactive user accounts are explained [here](#disable-user).
+
 *   While the first name, last name and role can be modified in the future, the email id once assigned cannot be modified. In case there is an error with the email id, delete the user following the steps mentioned [here](#delete-user) and create a new user with the correct details.
 
 ## Reset Password
@@ -59,6 +63,10 @@ The admin dashboard will update to show the account status as *Inactive*.
 To enable an account click on the meatball menu for the relevant user and then click on *Enable*.
 
 ![Enable user](../img/Admin_Dashboard/10_Admin_Dashboard_Enable_User.png) <center>**Figure 10.** Enable user</center> 
+
+**Note:**
+
+*   As mentioned above, a disbaled user account is not counted as part of the group account limit.
 
 ## Delete User
 
