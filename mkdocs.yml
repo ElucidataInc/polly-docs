@@ -7,6 +7,7 @@ nav:
       - Prequisites of UI and CLI: Getting Started/Prerequisites.md
   - QuickStart:
       - Accessing The Platform: Getting Started/index1.md
+      - Admin Dashboard: Getting Started/Admin Dashboard.md
       - Your Workspaces: Getting Started/Your Workspaces2.md
       - Your Data and Analyses: Getting Started/Your Data.md
       - Your Collaborations: Getting Started/Your Collaborations.md
