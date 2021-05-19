@@ -1,5 +1,44 @@
 #Release Notes
 
+<!--April 23rd, 2021-->
+
+<details open>
+<summary><font size="+1"><b>April 23rd, 2021</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>Introduced an Admin Dashboard to provide account administrators the convenience to manage their accounts.</li>
+    <li>Added 10.120 new curated transcriptomics and single cell datasets to various Data Lake.</li>
+  </ul>
+  <p class="update-button">Update</p>
+  <ul>
+    <li>HTML as a data file can now be opened through workspace itself.</li>
+    <li>Resolved an issue to make Dropbox work seamlessly with workspaces.</li>
+  </ul>
+</details>
+
+<hr>
+
+<!--April 9th, 2021-->
+
+<details>
+<summary><font size="+1"><b>April 9th, 2021</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>Created Shiny and Studio application for feature level search of GEO Datasets.</li>
+    <li>Added 11,177 new curated transcriptomics datasets to TCGA Data Lake.</li>
+  </ul>
+  <p class="update-button">Update</p>
+  <ul>
+    <li>PDF as a data file can now be opened through workspace itself.</li>
+    <li>Resolved an issue to make Google Drive work seamlessly with workspaces.</li>
+  </ul>
+</details>
+
+<hr>
+
+
 <!--March 26th, 2021-->
 
 <details open>
