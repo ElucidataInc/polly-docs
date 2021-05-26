@@ -220,6 +220,70 @@ On the right side, another collapsible dialogue box gets opened when you select 
 
 ![Options and Information of Reusable scripts](../img/Notebooks/32.png) <center>**Figure 26.** Options and Information of Reusable scripts</center>
 
+#Google Slides Integration
+
+Reports serve as the culmination of each analysis where all plots and insights generated are added in a way that is easy to understand and draw conclusions from when shared with collaborators or even used as a point of reference for something done earlier. Presence of reports for each analysis ordered sequentially promotes reproducibility across the laboratory or the organization and reduces the manual labor involved in knowledge transfer.
+
+To ensure that you do not spend a lot of time downloading plots and arranging them in a pre-defined order with the insights generated each time for a study, we have integrated Polly with Google Slides.
+
+**Note:**
+
+*   The Google Slides integration is only available through Polly Notebooks as of now.
+
+##Using the Integration
+
+To use this integration, click on the *Polly Offerings* tab after you have generated your plots of interest as highlighted below.
+
+![Polly offerings](../img/Notebooks/GSlide_01_Reporting_PollyOfferings.png) <center>**Figure 27.** Polly offerings</center>
+
+Click on *Export Charts to GSlide* as highlighted below.
+
+![Export charts to GSlide integration](../img/Notebooks/GSlide_02_Reporting_ExportChartsToGSlide.png) <center>**Figure 28.** Export charts to GSlides integration</center>
+
+To proceed, this integration will require access to your Google account. This is needed so as to store the slide deck mapped to an account of your choice. Select the account to provide access to and click on *Allow*. 
+
+![Choose an account](../img/Notebooks/GSlide_03_Reporting_Authorization1.png) <center>**Figure 29.** Choose an account</center>
+
+![Confirm access to Google account](../img/Notebooks/GSlide_04_Reporting_Authorization2.png) <center>**Figure 30.** Confirm access to Google account</center>
+
+You will see a loading screen while the charts are being sent to Google Slides. You will automatically be redirected to the specific slide deck created.
+
+![Loading screen](../img/Notebooks/GSlide_05_Reporting_LoadingScreen.png) <center>**Figure 31.** Loading screen</center>
+
+The slide deck created will be named the same as your Polly Notebook. Each chart will be added as an image to a new slide. You can specify themes, add insights as text, resize or crop charts as usual.
+
+![New slide deck created](../img/Notebooks/GSlide_06_Reporting_GSlide1.png) <center>**Figure 32.** New slide deck created</center>
+
+![Charts are added as an image](../img/Notebooks/GSlide_07_Reporting_GSlide2.png) <center>**Figure 33.** Charts are added as an image</center>
+
+![Each slide will contain one chart](../img/Notebooks/GSlide_08_Reporting_GSlide3.png) <center>**Figure 34.** Each slide will contain one chart</center>
+
+**Note:**
+
+*   Any slide decks created using this integration can be accessed by logging into the authorized Google account and going to Google Slides [here](https://www.google.com/slides/about/). 
+
+*   The slide decks can be shared with your collaborators individually or as a publicly accessible link with either view or edit access. For a detailed documentation on Google Slides click [here](https://support.google.com/a/users/answer/9282488).
+
+*   The security and privacy of any such slide deck created is regulated through Google’s access control policies.
+
+##Revoke Access
+
+To revoke the access for this integration, go to your account settings [here](https://www.google.com/account/about/) and click on *Security* on the left panel. You will see the integration listed as *gslideChartsIntegration* under *Third-party apps with account access*. Click on the integration as highlighted below.
+
+![Third-party apps with account access list](../img/Notebooks/GSlide_09_Reporting_RevokeAuthorization1.png) <center>**Figure 35.** Third-party apps with account access list</center>
+
+![gslideChartsIntegration](../img/Notebooks/GSlide_10_Reporting_RevokeAuthorization2.png) <center>**Figure 36.** gslideChartsIntegration</center>
+
+Click on *Revoke Access*.
+
+![Revoke access](../img/Notebooks/GSlide_11_Reporting_RevokeAuthorization3.png) <center>**Figure 37.** Revoke access</center>
+
+Click on *Ok*.
+
+![Confirm revoke access](../img/Notebooks/GSlide_12_Reporting_RevokeAuthorization4.png) <center>**Figure 38.** Confirm revoke access</center>
+
+This will revoke access and as a result you will not be able to use the integration. To use it again, you will have to allow access as mentioned [here](#using-the-integration).
+
 #Videos
 
 <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
