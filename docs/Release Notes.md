@@ -1,10 +1,22 @@
 #Release Notes
 
+<!--June 18th, 2021-->
+
+<details open>
+<summary><font size="+1"><b>June 18th, 2021</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>Added 12,200 new curated transcriptomics and single cell datasets to various Data Lake.</li>
+  </ul>
+</details>
+
+<hr>
 
 <!--June 4th, 2021-->
 
 <details open>
-<summary><font size="+1"><b>April 23rd, 2021</b></font></summary>
+<summary><font size="+1"><b>June 4th, 2021</b></font></summary>
 <br>
   <p class="new-button">New</p>
   <ul>
