@@ -4,7 +4,7 @@
 <!--June 4th, 2021-->
 
 <details open>
-<summary><font size="+1"><b>April 23rd, 2021</b></font></summary>
+<summary><font size="+1"><b>June 4th, 2021</b></font></summary>
 <br>
   <p class="new-button">New</p>
   <ul>
@@ -13,7 +13,7 @@
   </ul>
   <p class="update-button">Update</p>
   <ul>
-    <li>Resolved issue in Lipidomics , Dual Mode and Polly El-MAVEN applications.</li>
+    <li>Resolved issue in Lipidomics, Dual Mode and Polly El-MAVEN Applications.</li>
   </ul>
 </details>
 
@@ -23,17 +23,17 @@
 <!--May 21st, 2021-->
 
 <details>
-<summary><font size="+1"><b>April 23rd, 2021</b></font></summary>
+<summary><font size="+1"><b>May 21st, 2021</b></font></summary>
 <br>
   <p class="new-button">New</p>
   <ul>
     <li>Introduced Google Slide Intergration with Polly Notebooks.</li>
-     <li>Added reporting feature using markdown in Dual Mode Visulaization Application.</li>
+     <li>Added Reporting feature using Markdown in Dual Mode Visulaization Application.</li>
     <li>Added 23.350 new curated transcriptomics and single cell datasets to various Data Lake.</li>
   </ul>
   <p class="update-button">Update</p>
   <ul>
-    <li>Added Scree Plot under Quality check in Dual Mode Visualization Application.
+    <li>Added Scree Plot under Quality Check in Dual Mode Visualization Application.
     <li>Resolved forgot password issue.</li>
   </ul>
 </details>
