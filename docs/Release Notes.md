@@ -1,5 +1,66 @@
 #Release Notes
 
+
+<!--June 4th, 2021-->
+
+<details open>
+<summary><font size="+1"><b>June 4th, 2021</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>Made Dual Mode Visualizatopn application and Untargeted Pipeline Application lighter for heavy datasets to avoid memory leakage.</li>
+    <li>Added 3.350 new curated transcriptomics and single cell datasets to various Data Lake.</li>
+  </ul>
+  <p class="update-button">Update</p>
+  <ul>
+    <li>Resolved issue in Lipidomics, Dual Mode and Polly El-MAVEN applications.</li>
+  </ul>
+</details>
+
+<hr>
+
+
+<!--May 21st, 2021-->
+
+<details>
+<summary><font size="+1"><b>April 23rd, 2021</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>Introduced Google Slide Intergration with Polly Notebooks.</li>
+     <li>Added reporting feature using markdown in Dual Mode Visulaization Application.</li>
+    <li>Added 23.350 new curated transcriptomics and single cell datasets to various Data Lake.</li>
+  </ul>
+  <p class="update-button">Update</p>
+  <ul>
+    <li>Added Scree Plot under Quality check in Dual Mode Visualization Application.
+    <li>Resolved forgot password issue.</li>
+  </ul>
+</details>
+
+<hr>
+
+
+
+<!--May 7th, 2021-->
+
+<details>
+<summary><font size="+1"><b>May 7th, 2021</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>El-MAVEN latest beta version is now available on Polly.</li>
+    <li>Added 25.120 new curated transcriptomics and single cell datasets to various Data Lake.</li>
+  </ul>
+  <p class="update-button">Update</p>
+  <ul>
+    <li>Added two-way ANOVA capability in Dual Mode visualization Application along with combining multiple conditions or cohorts while performing differential expression.</li>
+  </ul>
+</details>
+
+<hr>
+
+
 <!--April 23rd, 2021-->
 
 <details open>
