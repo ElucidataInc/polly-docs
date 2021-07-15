@@ -118,9 +118,11 @@ To access, filter, and search through the metadata schema, the function mentione
 Refer to the Queries section to understand how you could write a query in SQL. The columns returned would depend on the query that was written. The output of the function is a dataframe or a JSON depending on the operations used in the query. 
 
 #### 4. Downloading any dataset
-To download any dataset, the following function can be used to get the signed URL of the dataset. The key/repo id of this OmixAtlas can be identified by calling the get_all_omixatlas() function. The _id can be obtained from querying the metadata at the dataset level using query_metadata(“<query written in SQL>”) to get the _id column.
+To download any dataset, the following function can be used to get the signed URL of the dataset. 
 
-<pre><code> download_data(”[repo_name OR repo_id]”, “[value_of _id_column_for_a_dataset]”)</code></pre>
+<pre><code> download_data(”[repo_name OR repo_id]”, “[dataset_id]”)</code></pre>
+
+The <code>[repo_name OR repo_id]</code> of this OmixAtlas can be identified by calling the <code>get_all_omixatlas()</code> function. The <code>[dataset_id]</code> can be obtained by querying the metadata at the dataset level using <code>query_metadata(“[query written in SQL]”)</code>.
 
 The output of this function is a *signed URL*. The data can be downloaded by clicking on this URL. The output data is in .gct format except for single cell data.
   
