@@ -1,8 +1,8 @@
 ## About Polly Library
-Polly Libraries give access to the various capabilities on Polly like querying, filtering and accessing the data on Polly OmixAtlas. 
+Polly Libraries give access to the various capabilities on Polly like querying, filtering and accessing the data on Polly OmixAtlas. It allows access to data in OmixAtlas over any computational platform (like DataBricks, SageMaker, Poly, etc.) of your choice. These functionalities can be accessed through functions in python and [bash](https://docs.elucidata.io/Scaling%20compute/Polly%20CLI%201.html)
 
 ## About Polly Python 
-Polly Python library provides conv
+Polly Python library provides convenient access to the above-mentioned functionalities through function in Python language.
 
 ## Installation
 ### Install Polly Python using pip
@@ -155,5 +155,5 @@ with open("[name_of_file].csv",'wb') as f:
 
 Operators  | Functions performed | Ouput
 ------------- | ------------- | ------------
-= |  Equal to operator which can be used to find matching strings with values in the columns | DataFrame
-!= | Not equal to operator which can be used to non-matching strings with values in the columns | DataFrame
+= |  *Equal to* operator which can be used to find matching strings with values in the columns | DataFrame
+!= | *Not equal to* operator which can be used to non-matching strings with values in the columns | DataFrame
