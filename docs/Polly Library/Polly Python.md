@@ -122,16 +122,7 @@ To download any dataset, the following function can be used to get the signed UR
 
 <pre><code> download_data(”[repo_name OR repo_id]”, “[value_of _id_column_for_a_dataset]”)</code></pre>
 
-The output of this function is a *signed URL*. The data from this URL can be downloaded using requests library/other libraries in python.
-
-E.g. Download the data from the URL as a .csv using *requests* library
-
-<pre><code>import requests
-url = "example.com"
-
-r = requests.get(url)  
-with open("[name_of_file].csv",'wb') as f:
-    f.write(r.content)</code></pre>
+The output of this function is a *signed URL*. The data can be downloaded by clicking on this URL. The output data is in .gct format except for single cell data.
   
 ### Queries
 #### The syntax for querying the dataset level metadata:
