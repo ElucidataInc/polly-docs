@@ -155,5 +155,5 @@ with open("[name_of_file].csv",'wb') as f:
 
 Operators  | Functions performed | Ouput
 ------------- | ------------- | ------------
-<pre><code> = </code></pre> |  Equal to operator which can be used to find matching strings with values in the columns | DataFrame
-<pre><code>!=</code></pre> | Not equal to operator which can be used to non-matching strings with values in the columns | DataFrame
+= |  Equal to operator which can be used to find matching strings with values in the columns | DataFrame
+!= | Not equal to operator which can be used to non-matching strings with values in the columns | DataFrame
