@@ -33,7 +33,7 @@ Authentication of the account is required to be able to access the capabilities 
 ### Using the token
 The following code is required to add the authentication function in the Polly Python library
 
-<pre><code>AUTH_TOKEN = "[value_copied_using_the_above_steps]"
+<pre><code>AUTH_TOKEN = "[authentication_token_copied]"
 library_client = OmixAtlas(AUTH_TOKEN)</code></pre>
 
 ## OmixAtlas
@@ -153,4 +153,7 @@ with open("[name_of_file].csv",'wb') as f:
 
 ### Operators
 
-  
+Operators  | Functions performed | Ouput
+------------- | ------------- | ------------
+<pre><code> = </code></pre> |  Equal to operator which can be used to find matching strings with values in the columns | DataFrame
+<pre><code>!=</code></pre> | Not equal to operator which can be used to non-matching strings with values in the columns | DataFrame
