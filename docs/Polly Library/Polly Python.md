@@ -128,21 +128,21 @@ The output of this function is a *signed URL*. The data can be downloaded by cli
   
 ### Queries
 #### The syntax for querying the dataset level metadata:
-<pre><code> query = “SELECT [column_name] FROM liver_atlas_files WHERE [column_name]='[value]’” </code></pre>
+<pre><code> query = “SELECT [column_name] FROM [files] WHERE [column_name]='[value]’” </code></pre>
 
 ####The syntax for querying the sample level metadata:
 ##### For all samples except Single Cell
-<pre><code>query = “SELECT [column_name] FROM liver_atlas_gct_metadata WHERE [column_name]='[value]’”</code></pre>
+<pre><code>query = “SELECT [column_name] FROM [gct_metadata] WHERE [column_name]='[value]’”</code></pre>
 
 ##### For samples in Single Cell
-<pre><code>query = “SELECT [column_name] FROM liver_atlas_h5ad_metadata WHERE [column_name]='[value]’”</code></pre>
+<pre><code>query = “SELECT [column_name] FROM [h5ad_metadata] WHERE [column_name]='[value]’”</code></pre>
 
 #### The syntax for querying the feature level metadata:
 ##### For all features except Single Cell
-<pre><code>query = “SELECT [column_name] FROM liver_atlas_gct_data WHERE [column_name]='[value]’”</code></pre>
+<pre><code>query = “SELECT [column_name] FROM [gct_data] WHERE [column_name]='[value]’”</code></pre>
 
 ##### For features in Single Cell
-<pre><code>query = “SELECT [column_name] FROM liver_atlas_h5ad_data WHERE [column_name]='[value]’”</code></pre>
+<pre><code>query = “SELECT [column_name] FROM [h5ad_data] WHERE [column_name]='[value]’”</code></pre>
 
 ### Operators
 
