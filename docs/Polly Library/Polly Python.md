@@ -7,7 +7,7 @@ Polly Python library provides convenient access to the above-mentioned functiona
 ## Installation
 ### Install Polly Python using pip
 
-<pre><code>pip install [version] </code></pre>
+<pre><code>pip install polly-python</code></pre>
 
 ## Getting started
 ### Import from libraries
