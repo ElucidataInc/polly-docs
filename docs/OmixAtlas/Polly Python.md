@@ -22,13 +22,15 @@ from json import dumps</code></pre>
 Authentication of the account is required to be able to access the capabilities of the Polly Python library.
 
 ### Copying the token for authentication
+To get this token, follow the steps below:
+
 1. Go to [Polly](https://polly.elucidata.io)
 
-2. Click the *User Options* icon from the left-most panel
+2. Click the **User Options** icon from the left-most panel
 
-3. Click on *Authentication* on the panel that appears
+3. Click on **Authentication** on the panel that appears
 
-4. Click on *Copy* to copy the authentication token
+4. Click on **Copy** to copy the authentication token
 
 ### Using the token
 The following code is required to add the authentication function in the Polly Python library
@@ -80,9 +82,9 @@ The output of this function would be JSON containing
 }</code></pre>
 
 #### 2. Get the summary of any OmixAtlas
-The following function details a particular OmixAtlas. The key/repo id of this OmixAtlas can be identified by calling the get_all_omixatlas() function.
+The following function details a particular OmixAtlas. The **repo_name/repo_id** of this OmixAtlas can be identified by calling the <code>get_all_omixatlas()</code> function.
 
-<pre><code>omixatlas_summary(”[repo_id OR repo_name]”)</code></pre>
+<pre><code>omixatlas_summary("[repo_id OR repo_name]")</code></pre>
 The output of this function would be JSON containing
 
 <pre><code>{'data': 
@@ -114,23 +116,56 @@ The output of this function would be JSON containing
 #### 3. Querying the data and the metadata
 To access, filter, and search through the metadata schema, the function mentioned below can be used:
 
-<pre><code> query_metadata(“[query_written_in_SQL]”) </code></pre>
+<pre><code> query_metadata("[query_written_in_SQL]") </code></pre>
 Refer to the Queries section to understand how you could write a query in SQL. The columns returned would depend on the query that was written. The output of the function is a dataframe or a JSON depending on the operations used in the query. 
 
 #### 4. Downloading any dataset
 To download any dataset, the following function can be used to get the signed URL of the dataset. 
 
-<pre><code> download_data(”[repo_name OR repo_id]”, “[dataset_id]”)</code></pre>
+<pre><code> download_data("[repo_name OR repo_id]", "[dataset_id]")</code></pre>
 
-The <code>[repo_name OR repo_id]</code> of this OmixAtlas can be identified by calling the <code>get_all_omixatlas()</code> function. The <code>[dataset_id]</code> can be obtained by querying the metadata at the dataset level using <code>query_metadata(“[query written in SQL]”)</code>.
+The <code>[repo_name OR repo_id]</code> of this OmixAtlas can be identified by calling the <code>get_all_omixatlas()</code> function. The <code>[dataset_id]</code> can be obtained by querying the metadata at the dataset level using <code>query_metadata("[query written in SQL]")</code>.
 
-The output of this function is a *signed URL*. The data can be downloaded by clicking on this URL. The output data is in .gct format except for single cell data.
-  
+The output of this function is a *signed URL*. The data can be downloaded by clicking on this URL. 
+
+> **_NOTE:_** This signed URL expires after 60 minutes from when it is generated.
+
+<br>The output data is in .gct/h5ad format. This data can be parsed into a data frame for better accessibility using the following code:
+
+##### Downloading .gct as a data frame
+<pre><code>url = library_client.download_data("[repo_id OR repo_name]", "[dataset_id]").get('data')
+file_name = "[dataset_id].gct"
+os.system(f"wget -O '{file_name}' '{url}'")
+from cmapPy.pandasGEXpress.parse_gct import parse
+data = parse(file_name)</code></pre>
+
+##### Downloading h5ad as a data frame
+<pre><code>url = library_client.download_data("[repo_id OR repo_name]", "[dataset_id]").get('data')
+file_name = "[dataset_id].h5ad"
+os.system(f"wget -O '{file_name}' '{url}'")
+import scanpy as sc
+data = sc.read_h5ad(file_name)</code></pre>
+
+### Metadata Schema
+The data available within OmixAtlas is curated within 5 indexes/tables on the basis of the information it contains. These five indexes are:
+
+**Dataset level metadata (index: files)**: Contains curated fields like drug, disease, tissue organism, etc for each dataset.
+
+**Sample level metadata (index: gct_metadata)**: As the name suggests, this contains sample level metadata information for all samples except single-cell samples. It contains curated fields like cell lines, experimental design, etc for each sample except single-cell samples.
+
+**Sample level metadata for single-cell (index: h5ad_metadata)**: This table only contains metadata information for single-cell samples. It contains curated fields like cell line, gene counts, UMI counts for each sample.
+
+**Feature level metadata (index: gct_data)**: This table contains feature level metadata information for all data except single-cell.  It contains the gene/molecule symbol along with the feature intensity for each sample.
+
+**Feature level metadata for single-cell (index: h5ad_data)**: This table contains feature level metadata information for all single-cell data.  It contains the gene/molecule symbol studied in an experiment along with the cell type and expression value.
+
+To understand relevant information that is used for querying refer to the curated metadata schema [here]().
+
 ### Queries
 #### The syntax for querying the dataset level metadata:
 <pre><code> query = “SELECT [column_name] FROM [files] WHERE [column_name]='[value]’” </code></pre>
 
-####The syntax for querying the sample level metadata:
+#### The syntax for querying the sample level metadata:
 ##### For all samples except Single Cell
 <pre><code>query = “SELECT [column_name] FROM [gct_metadata] WHERE [column_name]='[value]’”</code></pre>
 
@@ -145,8 +180,37 @@ The output of this function is a *signed URL*. The data can be downloaded by cli
 <pre><code>query = “SELECT [column_name] FROM [h5ad_data] WHERE [column_name]='[value]’”</code></pre>
 
 ### Operators
+The following operators can be used to define the conditions in the above mentioned queries:
 
-Operators  | Functions performed | Ouput
-------------- | ------------- | ------------
-= |  *Equal to* operator which can be used to find matching strings with values in the columns | DataFrame
-!= | *Not equal to* operator which can be used to non-matching strings with values in the columns | DataFrame
+Operators  | Functions performed 
+------------- | ------------- 
+<code>=</code> |  **Equal to** operator which can be used to find matching strings with values in the columns
+<code><></code> | **Not equal to** operator which can be used to find non-matching strings with values in the columns
+<code>></code> | **Greater than** operator which can be used **ONLY** for integer based columns
+<code><</code> | **Less than** operator which can be used **ONLY** for integer based columns
+<code>>=</code> | **Greater than or equal to** operator which can be used **ONLY** for integer based columns
+<code><=</code> | **Less than or equal to** operator which can be used **ONLY** for integer based columns
+<code>IS NULL</code> | Check if the field value is <code>NULL</code>.
+<code>IS NOT NULL</code> | Check if the field value is <code>NOT NULL</code>.
+<code>AND</code> | All values across the parameters searched for have to be present in a dataset for it to be returned as a match when the AND operator is used. <br>e.g. “organism = ‘Homo sapiens' AND disease = 'Carcinoma, Hepatocellular’” would only return datasets that belong to homo sapiens and have the disease as hepatocellular carcinoma.
+<code>OR</code> | Atleast any one value across the parameters searched for have to be present in a dataset for it to be returned as a match when the OR operator is used. <br>e.g. “organism = ‘Homo sapiens' OR disease = 'Carcinoma, Hepatocellular’” would return datasets that belong to homo sapiens or have the disease as hepatocellular carcinoma or match both criteria. 
+<code>GROUP BY</code> | The <code>GROUP BY</code> statement groups rows that have the same values into summary rows. The GROUP BY statement is often used with aggregate functions (COUNT, MAX, MIN, SUM, AVG) to group the result-set by one or more columns.
+<code>HAVING</code> | Use the HAVING clause to aggregate inside each bucket based on aggregation functions (COUNT, AVG, SUM, MIN, and MAX). The HAVING clause filters results from the GROUP BY clause
+<code>MATCH QUERY(<column_name>,'value')</code> | It works like a fuzzy search. If you add a string for a parameter with this operator, it would return all possible result match each word in the string. The search output is returned with a “Relevance Score” using which the output is sorted. <br>e.g. “MATCH_QUERY(description,'Transcriptomics profiling')” would return all datasets having “transcriptomics profiling” , “Transcriptomics” and “profiling” as possible terms within their description. Each dataset would be scored on the basis of matching of the searched string with the information present within the dataset.
+<code>MATCH PHRASE(<column_name>,'value')</code> | This can be used for exact phrase match with the information being searched for. <br>e.g. “MATCH_PHRASE(description,'Transcriptomics profiling')” would only return the datasets that have “Transcriptomics profiling” within their description.
+<code>MULTI MATCH</code> | 
+<code>COUNT(*)</code> | 
+<code>AVG</code> | 
+<code>LIMIT</code> | The response of any query returns 200 entries by default. You can extend this by defining the LIMIT of the results you want to query to be able to return.
+<code>ORDER BY</code> | Can only be used to sort the search results using integer based parameters in the schema. Sorting on the basis of Dataset ID, Number of Samples, Score of the data is available at the dataset-level metadata. ASC or DESC can be used to define whether you want to order the rows in ascending or descending order respectively
+<code>SCORE</code> | 
+
+## Example Use Cases
+
+### Querying datasets in Liver OmixAtlas
+1. To identify datasets belonging to the tissue **Liver**, disease **Liver cirrhosis** and organism **Homo sapiens**
+<pre><code>query = "select * from liveromix_atlas_files WHERE disease = 'liver cirrhosis' AND tissue = 'liver' AND organism = 'Homo Sapiens' LIMIT 0,2000"</code></pre>
+
+### Querying samples in Liver OmixAtlas
+
+### Querying features in Liver OmixAtlas
