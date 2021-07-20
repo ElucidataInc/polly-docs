@@ -28,11 +28,11 @@ Here is the list of different data types available in the Liver OmixAtlas :
 
 Some metadata fields are common across all data types and sources whereas others are data type or source specific. The structure of data and metadata for each source and data type is described below:
 
-## Common Metadata Fields Across Data Types
+# Common Metadata Fields Across Data Types
 
 All the common metadata fields are curated in a consistent manner regardless of the source of the data. All the data in the Omix Atlas can be queried using these curated fields.
 
-### 1.1 Dataset Level Fields 
+## 1.1 Dataset Level Fields 
 
 All the datasets in the liver omix atlas has been annotated for unique id, description, organism, disease, tissue, experimental conditions, source, publication and curated for datatype, drug, cell line, cell type. These annotations helps in defining and mapping the characteristics of each data. These values has been standardized across all the datasets and are aligned with the FAIR guidelines. The dataset level mapping helps in narrowing down a dataset of interest.  
 
@@ -53,7 +53,7 @@ All the datasets in the liver omix atlas has been annotated for unique id, descr
 | total_num_cells | Int | Number of cells in the experiment | 100 | This curated field is available only for Single cell studies | 
 
 
-### 1.2 Sample Level Fields 
+## 1.2 Sample Level Fields 
 
 Sample level annotations directly defines the biological characteristics of each sample. All the samples in the liver omix atlas has been curated for disease, cell line, drug, cell type, genetic modifications, modified gene and tissue. The datasets can be queried using these fields as well. 
 
@@ -69,7 +69,7 @@ Sample level annotations directly defines the biological characteristics of each
 | kw_curated_modified_gene | String | A gene or list of genes modified in the sample | TP53, COL18A1, PRKAA2 | All the wildtype samples will have this field as "none" |
 | kw_curated_tissue | String | A tissue or a list of tissues from which the sample has been obtained | Liver, Kidney, Brain, Colon |
 
-### 1.3 Feature Level Fields 
+## 1.3 Feature Level Fields 
 
 The datasets has also been annotated for features of each sample which provides description about the gene being studied, unique identifier, path to the doc.
 
@@ -91,7 +91,7 @@ The datasets has also been annotated for features of each sample which provides 
 | Value | List | Feature intensity of a sample | 0.000243683270913317, 0.000549465175768581 |
 | Dataset | List | Path to the dataset | discover-prod-datalake-v1@@@liver_atlas@@data@@SingleCell@@GSE124395_GPL16791.h5ad |
 
-### 1.4 Specific metadata fields from various sources
+## 1.4 Specific metadata fields from various sources
 
 All the source specific fields which are mentioned in the following section are not curated by Polly and are present as they are in the source. Data in the Atlas can be queried using these fields as well. These fields may not be present in all the data on the source and hence as a result may not be present for all the data on Liver Omix Atlas as well.
 
@@ -237,7 +237,7 @@ All the source specific fields which are mentioned in the following section are 
 | new_tumor_event_dx_indicator | List | New tumor after initial treatment. | YES, No |
 | treatment_outcome_first_course | List | Definition of the disease state on the basis of recurrence of tumor. | [Unknown], Complete, Remission/Response |
 
-### 1.5 Molecular Identifiers
+## 1.5 Molecular Identifiers
 
 Molecular identifiers have been standardized for identifying molecules of interest from various sources. The following are the molecular identifiers used for the data in Omix Atlas.
 
