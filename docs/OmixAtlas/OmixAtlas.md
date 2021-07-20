@@ -1,3 +1,5 @@
+## OmixAtlas
+#### The largest repository of ML-ready multi-omics data
 Every year, vast amounts of biological multi-omics data are being generated and deposited on public repositories by academic labs and organizations worldwide. These data hold tremendous potential for reuse and discovery but are scattered across multiple, disparate sources and lack standardization. Thus, the availability of data does not equate to its easy usability. This makes the need for an efficient means of exploring molecular data an immediate necessity. 
 Additionally, no single type of data, be it metabolomic, proteomic or genomic, will be sufficient to capture the complexity of biological phenomena. Adopting an integrated approach could significantly aid the ability to gain a more holistic and accurate understanding of human physiology and disease pathology at the molecular level. 
 OmixAtlas aims to address these issues by providing access to ML-ready biology-centric data from public repositories.
