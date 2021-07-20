@@ -1,4 +1,4 @@
-# User-facing curation for data and curation in Liver OmixAtlas
+# Data Schema for Liver OmixAtlas
 
 All types of data on Polly goes through Polly Curation process and are stored as tabular files or H5AD files (for single cell data) as described here. All data on Liver Omix Atlas have the metadata curated and harmonized using controlled vocabularies. There is data from various sources in the Liver OmixAtlas as follows :
 
