@@ -226,3 +226,4 @@ Operators  | Functions performed
 ### 5.3 Querying features in Liver OmixAtlas
 1. Identify features in single cell data
 <pre><code>query = "SELECT * FROM liveromix_atlas_h5ad_data"</code></pre>
+  

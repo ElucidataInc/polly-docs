@@ -1,5 +1,5 @@
 
-# What is Liver OmixAtlas?
+# What is OmixAtlas?
 
 Every year, vast amounts of biological multi-omics data are being generated and deposited on public repositories by academic labs and organizations worldwide. These data hold tremendous potential for reuse and discovery but are scattered across multiple, disparate sources and lack standardization. Thus, the availability of data does not equate to its easy usability. This makes the need for an efficient means of exploring molecular data an immediate necessity. 
 
