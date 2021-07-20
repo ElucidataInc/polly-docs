@@ -25,7 +25,7 @@
   </ul>
   <p class="update-button">Update</p>
   <ul>
-    <li>Resolved issue in Lipidomics , Dual Mode and Polly El-MAVEN applications.</li>
+    <li>Resolved issue in Lipidomics, Dual Mode and Polly El-MAVEN Applications.</li>
   </ul>
 </details>
 
@@ -35,17 +35,17 @@
 <!--May 21st, 2021-->
 
 <details>
-<summary><font size="+1"><b>April 23rd, 2021</b></font></summary>
+<summary><font size="+1"><b>May 21st, 2021</b></font></summary>
 <br>
   <p class="new-button">New</p>
   <ul>
     <li>Introduced Google Slide Intergration with Polly Notebooks.</li>
-     <li>Added reporting feature using markdown in Dual Mode Visulaization Application.</li>
+     <li>Added Reporting feature using Markdown in Dual Mode Visulaization Application.</li>
     <li>Added 23.350 new curated transcriptomics and single cell datasets to various Data Lake.</li>
   </ul>
   <p class="update-button">Update</p>
   <ul>
-    <li>Added Scree Plot under Quality check in Dual Mode Visualization Application.
+    <li>Added Scree Plot under Quality Check in Dual Mode Visualization Application.
     <li>Resolved forgot password issue.</li>
   </ul>
 </details>
@@ -80,12 +80,12 @@
   <p class="new-button">New</p>
   <ul>
     <li>Introduced an Admin Dashboard to provide account administrators the convenience to manage their accounts.</li>
-    <li>Added 10.120 new curated transcriptomics and single cell datasets to various Data Lake.</li>
+    <li>Added 10,120 new curated transcriptomics and single cell datasets to various Data Lake.</li>
   </ul>
   <p class="update-button">Update</p>
   <ul>
-    <li>HTML as a data file can now be opened through workspace itself.</li>
-    <li>Resolved an issue to make Dropbox work seamlessly with workspaces.</li>
+    <li>HTML as a data file can now be opened through Workspace itself.</li>
+    <li>Resolved an issue to make Dropbox work seamlessly with Workspaces.</li>
   </ul>
 </details>
 
@@ -98,13 +98,13 @@
 <br>
   <p class="new-button">New</p>
   <ul>
-    <li>Created Shiny and Studio application for feature level search of GEO Datasets.</li>
+    <li>Created Shiny and Studio applicationS for feature level search of GEO Datasets.</li>
     <li>Added 11,177 new curated transcriptomics datasets to TCGA Data Lake.</li>
   </ul>
   <p class="update-button">Update</p>
   <ul>
-    <li>PDF as a data file can now be opened through workspace itself.</li>
-    <li>Resolved an issue to make Google Drive work seamlessly with workspaces.</li>
+    <li>PDF as a data file can now be opened through Workspace itself.</li>
+    <li>Resolved an issue to make Google Drive work seamlessly with Workspaces.</li>
   </ul>
 </details>
 
@@ -113,7 +113,7 @@
 
 <!--March 26th, 2021-->
 
-<details open>
+<details>
 <summary><font size="+1"><b>March 26th, 2021</b></font></summary>
 <br>
   <p class="new-button">New</p>

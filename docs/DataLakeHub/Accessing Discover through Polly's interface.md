@@ -74,18 +74,18 @@ Data Lake Applications are built on top of data lakes to query and explore relev
 
 ##### 2.1.2.1 Proprietary applications
 
-*   **[Polly Discover Application:](https://docs.elucidata.io/Data%20Lake.html#discover)**
+*   **[Polly Discover Application:](https://docs.elucidata.io/Apps/Polly%20Discover%20Application.html)**
 
     It is a platform for visualization, analytics, and exploration for bulk transcriptomics data curated from GEO. It offers users an interactive dashboard for analysis and visualization of transcriptomics data. Currently, the platform handles gene expression microarray and RNA-seq data and supports three species human, mouse, and rat.  
     <br />
 
-*   **[Single Cell Visualization:](https://docs.elucidata.io/Data%20Lake.html#single-cell-visualization)**
+*   **[Single Cell Visualization:](https://docs.elucidata.io/Apps/Single%20Cell%20Visualization.html)**
 
     It is a comprehensive visualization platform for single-cell transcriptomics data. The app helps visualise cells and the association of different genes with the metadata.  
     <br />
 
 
-*   **[GTEx Application](https://docs.elucidata.io/Data%20Lake.html#gtex)**
+*   **[GTEx Application](https://docs.elucidata.io/Apps/GTEX%20Discover.html)**
 
     GTEx Application is is a platform for visualization, analytics, and exploration of transcriptomics data from GTEx.  
     <br />
