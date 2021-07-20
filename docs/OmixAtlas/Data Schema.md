@@ -28,7 +28,7 @@ Here is the list of different data types available in the Liver OmixAtlas :
 
 Some metadata fields are common across all data types and sources whereas others are data type or source specific. The structure of data and metadata for each source and data type is described below:
 
-# Common Metadata Fields Across Data Types
+## 1 Common Metadata Fields Across Data Types
 
 All the common metadata fields are curated in a consistent manner regardless of the source of the data. All the data in the Omix Atlas can be queried using these curated fields.
 
@@ -91,11 +91,11 @@ The datasets has also been annotated for features of each sample which provides 
 | Value | List | Feature intensity of a sample | 0.000243683270913317, 0.000549465175768581 |
 | Dataset | List | Path to the dataset | discover-prod-datalake-v1@@@liver_atlas@@data@@SingleCell@@GSE124395_GPL16791.h5ad |
 
-## 1.4 Specific metadata fields from various sources
+## 2 Specific metadata fields from various sources
 
 All the source specific fields which are mentioned in the following section are not curated by Polly and are present as they are in the source. Data in the Atlas can be queried using these fields as well. These fields may not be present in all the data on the source and hence as a result may not be present for all the data on Liver Omix Atlas as well.
 
-### 1.4.1 CCLE (Sample level fields) 
+### 2.1 CCLE (Sample level fields) 
 
 | Field    | Type   |Description                     |Example values              | Exception            |
 | :---------- | :---------- |:----------------------------------- | :----------------------------------- | :----------------------------------- |
@@ -107,7 +107,7 @@ All the source specific fields which are mentioned in the following section are 
 | age | List | Age of the patient from whom the cell line has been obtained | 8, 52, 56,43,28 |
 | year | List | Year in which the sample was deposited | 2015, 2018 |
 
-### 1.4.2 DepMap (Sample level fields) 
+### 2.2 DepMap (Sample level fields) 
 
 | Field    | Type   |Description                     |Example values              | Exception            |
 | :---------- | :---------- |:----------------------------------- | :----------------------------------- | :----------------------------------- |
@@ -119,7 +119,7 @@ All the source specific fields which are mentioned in the following section are 
 | age | List | Age of the patient from whom the cell line has been obtained | 8, 52, 56,43,28 |
 | primary_tissue | List | Source tissue of cell line | Liver, Colon, Breast, Kidney |
 
-### 1.4.3 LINCS (Sample level fields) 
+### 2.3 LINCS (Sample level fields) 
 
 | Field    | Type   |Description                     |Example values              | Exception            |
 | :---------- | :---------- |:----------------------------------- | :----------------------------------- | :----------------------------------- |
@@ -134,7 +134,7 @@ All the source specific fields which are mentioned in the following section are 
 | curated_cohort_id | List | The cohort of the sample | 2 |
 | curated_cohort_name | List | Name of the group of samples | trt_cp - Gsk-429286a, ctl_vehicle - none |
 
-### 1.4.4 MetaboLights (Sample level fields) 
+### 2.4 MetaboLights (Sample level fields) 
 
 | Field    | Type   |Description                     |Example values              | Exception            |
 | :---------- | :---------- |:----------------------------------- | :----------------------------------- | :----------------------------------- |
@@ -155,7 +155,7 @@ All the source specific fields which are mentioned in the following section are 
 | additional sample data_tumor_type | List | Type of cancer donor is suffering from. | adenocarcinoma, lung adenocarcinoma, non-small cell lung cancer |
 | factors_obesity | List | Type of obesity related disease donor is suffering from.  | insulin-sensitive (HOMA-IR<3) obese individual, liver dysfunction in obesity |
 
-### 1.4.5 Metabolomics Workbench (Sample level fields)
+### 2.5 Metabolomics Workbench (Sample level fields)
 
 | Field    | Type   |Description                     |Example values              | Exception            |
 | :---------- | :---------- |:----------------------------------- | :----------------------------------- | :----------------------------------- | 
@@ -165,7 +165,7 @@ All the source specific fields which are mentioned in the following section are 
 | Additional sample data.BMI | List | Body Mass Index of the patient | 43.3, 27, 34 |
 | Additional sample data.AGE | List | Age of the patient | 45,72,83,34 |
 
-### 1.4.6 GEO - Single Cell (Sample level fields)
+### 2.6 GEO - Single Cell (Sample level fields)
 
 | Field    | Type   |Description                     |Example values              | Exception            |
 | :---------- | :---------- |:----------------------------------- | :----------------------------------- | :----------------------------------- | 
@@ -183,7 +183,7 @@ All the source specific fields which are mentioned in the following section are 
 | cell type clust | List | Cluster of cell type which has been studied during the experiment. | C01_CD8-LEF1, C05_CD8-GZMK |
 | gender | List | Gender identity of the donor organism | Male, Female |
 
-### 1.4.7 GEO - Transcriptomics (Sample level fields)
+### 2.7 GEO - Transcriptomics (Sample level fields)
 
 | Field    | Type   |Description                     |Example values              | Exception            |
 | :---------- | :---------- |:----------------------------------- | :----------------------------------- | :----------------------------------- | 
@@ -194,7 +194,7 @@ All the source specific fields which are mentioned in the following section are 
 | curated_cohort_name | List | Name of the group of samples providing information about experimental condition/tissue/cell line/treatment. | Noodle diet; WAT_N-group; WAT_Noodle diet, hepatocellular carcinoma; liver cancer cells; hepg2_0Ã‚Âµg/ml_H |
 | title | List | Description about the type/genotype/origin/experimental condition of the sample | hepg2_0Âµg/ml_H1 |
 
-### 1.4.8 GTEX (Sample level fields)
+### 2.8 GTEX (Sample level fields)
 
 | Field    | Type   |Description                     |Example values              | Exception            |
 | :---------- | :---------- |:----------------------------------- | :----------------------------------- | :----------------------------------- | 
@@ -204,7 +204,7 @@ All the source specific fields which are mentioned in the following section are 
 | SMNABTCH | List | Batch ID | BP-43375, BP-43529 |
 | DTHHRDY | List | List the cause of death of the patient | Fast death of natural causes, Ventilator Case, Intermediate death |
 
-### 1.4.9 TCGA (Sample level fields)
+### 2.9 TCGA (Sample level fields)
 
 | Field    | Type   |Description                     |Example values              | Exception            |
 | :---------- | :---------- |:----------------------------------- | :----------------------------------- | :----------------------------------- | 
@@ -237,11 +237,11 @@ All the source specific fields which are mentioned in the following section are 
 | new_tumor_event_dx_indicator | List | New tumor after initial treatment. | YES, No |
 | treatment_outcome_first_course | List | Definition of the disease state on the basis of recurrence of tumor. | [Unknown], Complete, Remission/Response |
 
-## 1.5 Molecular Identifiers
+## 3 Molecular Identifiers
 
 Molecular identifiers have been standardized for identifying molecules of interest from various sources. The following are the molecular identifiers used for the data in Omix Atlas.
 
-### 1.5.1 CCLE
+### 3.1 CCLE
 
 | Field    | Type   |
 | :---------- | :---------- |
@@ -251,7 +251,7 @@ Molecular identifiers have been standardized for identifying molecules of intere
 | Metabolomics | Refmet |
 | Proteomics | RPPA Antibody ids |
 
-### 1.5.2 DepMap
+### 3.2 DepMap
 
 | Field    | Type   |
 | :---------- | :---------- |
@@ -261,13 +261,13 @@ Molecular identifiers have been standardized for identifying molecules of intere
 | Metabolomics | Refmet |
 | Proteomics | RPPA Antibody ids |
 
-### 1.5.3 LINCS, GTEX & GEO
+### 3.3 LINCS, GTEX & GEO
 
 | Field    | Type   |
 | :---------- | :---------- |
 | Transcriptomics | HUGO Gene Symbol |
 
-### 1.5.4 TCGA
+### 3.4 TCGA
 | Field    | Type   |
 | :---------- | :---------- |
 | Mutation | HUGO Gene Symbol |
