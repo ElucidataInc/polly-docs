@@ -220,9 +220,9 @@ Operators  | Functions performed
 <pre><code>query = "SELECT * FROM liveromix_atlas_files WHERE disease = 'liver cirrhosis' AND tissue = 'liver' AND organism = 'Homo Sapiens' LIMIT 0,2000"</code></pre>
 
 ### 5.2 Querying samples in Liver OmixAtlas
-1. Identify samples (non-single cell) where cell_type is <code>hepatocyte</code>
+1. Identify samples (non single cell) where cell_type is **hepatocyte**
 <pre><code>query = "SELECT sample_id, kw_curated_disease, kw_curated_cell_line, kw_curated_drug, kw_curated_cell_type, kw_curated_genetic_mod_type, kw_curated_modified_gene FROM liveromix_atlas_gct_metadata WHERE kw_curated_cell_type = 'hepatocyte' LIMIT 0,4000"</code></pre>
 
 ### 5.3 Querying features in Liver OmixAtlas
 1. Identify features in single cell data
-<pre><code># query = "SELECT * FROM liver_atlas_h5ad_data"</code></pre>
+<pre><code>query = "SELECT * FROM liveromix_atlas_h5ad_data"</code></pre>
