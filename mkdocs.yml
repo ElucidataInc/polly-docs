@@ -16,8 +16,9 @@ nav:
       - Index of DataLakes: DataLakeHub/About Repositores.md
       - Accessing Data Programmagtically: DataLakeHub/Accessing Discover programmatically.md
       - Accessing Data Through UI: DataLakeHub/Accessing Discover through Polly's interface.md
-  - Polly Library:
-      - Polly Python: Polly Library/Polly Python.md
+  - OmixAtlas:
+      - About OmixAtlas: OmixAtlas/OmixAtlas.md 
+      - Polly Python: OmixAtlas/Polly Python.md
   - Analyses:
     - Polly Notebooks:
       - About Polly Notebooks: Scaling compute/Polly Notebooks5.md
