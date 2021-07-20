@@ -4,13 +4,13 @@ Polly Libraries give access to the various capabilities on Polly like querying, 
 ## About Polly Python 
 Polly Python library provides convenient access to the above-mentioned functionalities through function in Python language.
 
-## Installation
-### Install Polly Python using pip
+## 1 Installation
+### 1.1 Install Polly Python using pip
 
 <pre><code>pip install polly-python</code></pre>
 
-## Getting started
-### Import from libraries
+## 2 Getting started
+### 2.1 Import from libraries
 
 The following libraries need to be imported over the development environment to access the data.
 
@@ -18,35 +18,35 @@ The following libraries need to be imported over the development environment to 
 import pandas as pd
 from json import dumps</code></pre>
 
-## Authentication
+## 3 Authentication
 Authentication of the account is required to be able to access the capabilities of the Polly Python library.
 
-### Copying the token for authentication
+### 3.1 Copying authentication token
 To get this token, follow the steps below:
 
-1. Go to [Polly](https://polly.elucidata.io)
+1. Go to [Polly](https://polly.elucidata.io)<br>
 
-2. Click the **User Options** icon from the left-most panel
+2. Click the **User Options** icon from the left-most panel<br>
 
-3. Click on **Authentication** on the panel that appears
+3. Click on **Authentication** on the panel that appears<br>
 
-4. Click on **Copy** to copy the authentication token
+4. Click on **Copy** to copy the authentication token<br>
 
-### Using the token
+### 3.2 Using the token
 The following code is required to add the authentication function in the Polly Python library
 
 <pre><code>AUTH_TOKEN = "[authentication_token_copied]"
 library_client = OmixAtlas(AUTH_TOKEN)</code></pre>
 
-## OmixAtlas
-### Calling a function
+## 4 Accessing data in OmixAtlas
+### 4.1 Calling a function
 Use the response from the authentication token to call any function. E.g.
 <pre><code>output = library_client.[function()]</code></pre>
 
 The output of the functions is in JSON and/or data frame formats. You can print/download this output.
 
-### Functions in Polly Python
-#### 1. Get details of all OmixAtlases
+### 4.2 Functions in Polly Python
+#### 4.2.1 Get details of all OmixAtlases
 The following function details all the OmixAtlases accessible by you.
 
 <pre><code> get_all_omixatlas() </code></pre>
@@ -81,7 +81,7 @@ The output of this function would be JSON containing
   ]
 }</code></pre>
 
-#### 2. Get the summary of any OmixAtlas
+#### 4.2.2 Get summary of an OmixAtlas
 The following function details a particular OmixAtlas. The **repo_name/repo_id** of this OmixAtlas can be identified by calling the <code>get_all_omixatlas()</code> function.
 
 <pre><code>omixatlas_summary("[repo_id OR repo_name]")</code></pre>
@@ -113,13 +113,13 @@ The output of this function would be JSON containing
   }
 }</code></pre>
 
-#### 3. Querying the data and the metadata
+#### 4.2.3 Querying the data and the metadata
 To access, filter, and search through the metadata schema, the function mentioned below can be used:
 
 <pre><code> query_metadata("[query_written_in_SQL]") </code></pre>
 Refer to the Queries section to understand how you could write a query in SQL. The columns returned would depend on the query that was written. The output of the function is a dataframe or a JSON depending on the operations used in the query. 
 
-#### 4. Downloading any dataset
+#### 4.2.4 Downloading any dataset
 To download any dataset, the following function can be used to get the signed URL of the dataset. 
 
 <pre><code> download_data("[repo_name OR repo_id]", "[dataset_id]")</code></pre>
@@ -132,21 +132,21 @@ The output of this function is a *signed URL*. The data can be downloaded by cli
 
 <br>The output data is in .gct/h5ad format. This data can be parsed into a data frame for better accessibility using the following code:
 
-##### Downloading .gct as a data frame
+##### 4.2.4.1 Downloading .gct as a data frame
 <pre><code>url = library_client.download_data("[repo_id OR repo_name]", "[dataset_id]").get('data')
 file_name = "[dataset_id].gct"
 os.system(f"wget -O '{file_name}' '{url}'")
 from cmapPy.pandasGEXpress.parse_gct import parse
 data = parse(file_name)</code></pre>
 
-##### Downloading h5ad as a data frame
+##### 4.2.4.2 Downloading h5ad as a data frame
 <pre><code>url = library_client.download_data("[repo_id OR repo_name]", "[dataset_id]").get('data')
 file_name = "[dataset_id].h5ad"
 os.system(f"wget -O '{file_name}' '{url}'")
 import scanpy as sc
 data = sc.read_h5ad(file_name)</code></pre>
 
-### Data Schema
+### 4.3 Data Schema
 The data available within OmixAtlas is curated within 5 indexes/tables on the basis of the information it contains. These five indexes are:
 
 **Dataset level metadata (index: files)**: Contains curated fields like drug, disease, tissue organism, etc for each dataset.
@@ -161,7 +161,7 @@ The data available within OmixAtlas is curated within 5 indexes/tables on the ba
 
 To find relevant information that can be used for querying, refer the curated data schema [here](https://docs.elucidata.io/OmixAtlas/Data%20Schema.html).
 
-### Queries
+### 4.4 Writing a query
 The complete syntax for searching and aggregating data is as follows:
 
 <pre><code>SELECT [DISTINCT] (* | expression) [[AS] alias] [, ...]
@@ -172,24 +172,24 @@ FROM index_name
 [ORDER BY expression [IS [NOT] NULL] [ASC | DESC] [, ...]]
 [LIMIT [offset, ] size]</code></pre>
 
-#### The syntax for querying the dataset level metadata:
+#### 4.4.1 Querying the dataset level metadata:
 <pre><code> query = "SELECT [column_name] FROM [files] WHERE [column_name]='[value]'" </code></pre>
 
-#### The syntax for querying the sample level metadata:
+#### 4.4.2 Querying the sample level metadata:
 ##### For all samples except Single Cell
 <pre><code>query = "SELECT [column_name] FROM [gct_metadata] WHERE [column_name]='[value]'"</code></pre>
 
 ##### For samples in Single Cell
 <pre><code>query = "SELECT [column_name] FROM [h5ad_metadata] WHERE [column_name]='[value]'"</code></pre>
 
-#### The syntax for querying the feature level metadata:
+#### 4.4.3 Querying the feature level metadata:
 ##### For all features except Single Cell
 <pre><code>query = "SELECT [column_name] FROM [gct_data] WHERE [column_name]='[value]'"</code></pre>
 
 ##### For features in Single Cell
 <pre><code>query = "SELECT [column_name] FROM [h5ad_data] WHERE [column_name]='[value]'"</code></pre>
 
-### Operators
+### 4.5 Writing conditions with operators
 The following operators can be used to define the conditions in the above mentioned queries:
 
 Operators  | Functions performed 
@@ -213,12 +213,12 @@ Operators  | Functions performed
 <code>LIMIT</code> | **NOTE: The response of any query returns 200 entries by default**. <br>You can extend this by defining the LIMIT of the results you want to query to be able to return.
 <code>ORDER BY</code> | Can only be used to sort the search results using integer based parameters in the schema. Sorting on the basis of dataset_id, number of samples, <code>_score</code> of the data is available at the dataset-level metadata. <code>ASC</code> or <code>DESC</code> can be used to define whether you want to order the rows in ascending or descending order respectively
 
-## Example Use Cases
+## 5 Example Use Cases
 
-### Querying datasets in Liver OmixAtlas
+### 5.1 Querying datasets in Liver OmixAtlas
 1. To identify datasets belonging to the tissue **Liver**, disease **Liver cirrhosis** and organism **Homo sapiens**
 <pre><code>query = "select * from liveromix_atlas_files WHERE disease = 'liver cirrhosis' AND tissue = 'liver' AND organism = 'Homo Sapiens' LIMIT 0,2000"</code></pre>
 
-### Querying samples in Liver OmixAtlas
+### 5.2 Querying samples in Liver OmixAtlas
 
-### Querying features in Liver OmixAtlas
+### 5.3 Querying features in Liver OmixAtlas
