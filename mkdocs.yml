@@ -19,6 +19,7 @@ nav:
   - OmixAtlas:
       - About OmixAtlas: OmixAtlas/OmixAtlas.md 
       - Polly Python: OmixAtlas/Polly Python.md
+      - Data Schema: OmixAtlas/Data Schema.md
   - Analyses:
     - Polly Notebooks:
       - About Polly Notebooks: Scaling compute/Polly Notebooks5.md
