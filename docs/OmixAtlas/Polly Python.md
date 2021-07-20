@@ -146,7 +146,7 @@ os.system(f"wget -O '{file_name}' '{url}'")
 import scanpy as sc
 data = sc.read_h5ad(file_name)</code></pre>
 
-### Metadata Schema
+### Data Schema
 The data available within OmixAtlas is curated within 5 indexes/tables on the basis of the information it contains. These five indexes are:
 
 **Dataset level metadata (index: files)**: Contains curated fields like drug, disease, tissue organism, etc for each dataset.
@@ -159,7 +159,7 @@ The data available within OmixAtlas is curated within 5 indexes/tables on the ba
 
 **Feature level metadata for single-cell (index: h5ad_data)**: This table contains feature level metadata information for all single-cell data.  It contains the gene/molecule symbol studied in an experiment along with the cell type and expression value.
 
-To understand relevant information that is used for querying refer to the curated metadata schema [here]().
+To find relevant information that can be used for querying, refer the curated data schema [here](https://docs.elucidata.io/OmixAtlas/Data%20Schema.html).
 
 ### Queries
 The complete syntax for searching and aggregating data is as follows:
