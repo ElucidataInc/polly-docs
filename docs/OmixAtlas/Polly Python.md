@@ -1,13 +1,13 @@
 ## About Polly Library
-Polly Libraries give access to the various capabilities on Polly like querying, filtering and accessing the data on Polly OmixAtlas. 
+Polly Libraries give access to the various capabilities on Polly like querying, filtering and accessing the data on Polly OmixAtlas. It allows access to data in OmixAtlas over any computational platform (like DataBricks, SageMaker, Polly, etc.) of your choice. These functionalities can be accessed through functions in python and [bash](https://docs.elucidata.io/Scaling%20compute/Polly%20CLI%201.html) which can be used over a Terminal.
 
 ## About Polly Python 
-Polly Python library provides conv
+Polly Python library provides convenient access to the above-mentioned functionalities through function in Python language.
 
 ## Installation
 ### Install Polly Python using pip
 
-<pre><code>pip install [version] </code></pre>
+<pre><code>pip install polly-python</code></pre>
 
 ## Getting started
 ### Import from libraries
@@ -118,42 +118,35 @@ To access, filter, and search through the metadata schema, the function mentione
 Refer to the Queries section to understand how you could write a query in SQL. The columns returned would depend on the query that was written. The output of the function is a dataframe or a JSON depending on the operations used in the query. 
 
 #### 4. Downloading any dataset
-To download any dataset, the following function can be used to get the signed URL of the dataset. The key/repo id of this OmixAtlas can be identified by calling the get_all_omixatlas() function. The _id can be obtained from querying the metadata at the dataset level using query_metadata(“<query written in SQL>”) to get the _id column.
+To download any dataset, the following function can be used to get the signed URL of the dataset. 
 
-<pre><code> download_data(”[repo_name OR repo_id]”, “[value_of _id_column_for_a_dataset]”)</code></pre>
+<pre><code> download_data(”[repo_name OR repo_id]”, “[dataset_id]”)</code></pre>
 
-The output of this function is a *signed URL*. The data from this URL can be downloaded using requests library/other libraries in python.
+The <code>[repo_name OR repo_id]</code> of this OmixAtlas can be identified by calling the <code>get_all_omixatlas()</code> function. The <code>[dataset_id]</code> can be obtained by querying the metadata at the dataset level using <code>query_metadata(“[query written in SQL]”)</code>.
 
-E.g. Download the data from the URL as a .csv using *requests* library
-
-<pre><code>import requests
-url = "example.com"
-
-r = requests.get(url)  
-with open("[name_of_file].csv",'wb') as f:
-    f.write(r.content)</code></pre>
+The output of this function is a *signed URL*. The data can be downloaded by clicking on this URL. The output data is in .gct format except for single cell data.
   
 ### Queries
 #### The syntax for querying the dataset level metadata:
-<pre><code> query = “SELECT [column_name] FROM liver_atlas_files WHERE [column_name]='[value]’” </code></pre>
+<pre><code> query = “SELECT [column_name] FROM [files] WHERE [column_name]='[value]’” </code></pre>
 
 ####The syntax for querying the sample level metadata:
 ##### For all samples except Single Cell
-<pre><code>query = “SELECT [column_name] FROM liver_atlas_gct_metadata WHERE [column_name]='[value]’”</code></pre>
+<pre><code>query = “SELECT [column_name] FROM [gct_metadata] WHERE [column_name]='[value]’”</code></pre>
 
 ##### For samples in Single Cell
-<pre><code>query = “SELECT [column_name] FROM liver_atlas_h5ad_metadata WHERE [column_name]='[value]’”</code></pre>
+<pre><code>query = “SELECT [column_name] FROM [h5ad_metadata] WHERE [column_name]='[value]’”</code></pre>
 
 #### The syntax for querying the feature level metadata:
 ##### For all features except Single Cell
-<pre><code>query = “SELECT [column_name] FROM liver_atlas_gct_data WHERE [column_name]='[value]’”</code></pre>
+<pre><code>query = “SELECT [column_name] FROM [gct_data] WHERE [column_name]='[value]’”</code></pre>
 
 ##### For features in Single Cell
-<pre><code>query = “SELECT [column_name] FROM liver_atlas_h5ad_data WHERE [column_name]='[value]’”</code></pre>
+<pre><code>query = “SELECT [column_name] FROM [h5ad_data] WHERE [column_name]='[value]’”</code></pre>
 
 ### Operators
 
 Operators  | Functions performed | Ouput
 ------------- | ------------- | ------------
-<pre><code> = </code></pre> |  Equal to operator which can be used to find matching strings with values in the columns | DataFrame
-<pre><code>!=</code></pre> | Not equal to operator which can be used to non-matching strings with values in the columns | DataFrame
+= |  *Equal to* operator which can be used to find matching strings with values in the columns | DataFrame
+!= | *Not equal to* operator which can be used to non-matching strings with values in the columns | DataFrame
