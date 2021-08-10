@@ -39,6 +39,7 @@ nav:
       - Application Features: Apps/Introduction.md
       - Host Apps: Apps/Host Apps.md
       - Polly-PeakML: Apps/Metabolomic Data/Polly-PeakML.md
+      - Proteomics Compound Screening Application: Apps/Proteomic Data/Compound_Screening_Application.md
       - CCLE Correlation Analysis Preset: Apps/CCLE Correlation Analysis.md
       - Compound Discoverer<sup>TM</sup> QuantFit: Apps/Metabolomic Data/CompoundDiscoverer QuantFit.md
       - CRISPR Screening: Apps/Screening Data/CRISPR Screening.md
