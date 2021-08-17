@@ -33,3 +33,8 @@ Elucidata’s Liver OmixAtlas addresses the above issues by ensuring that the me
   a) Liver Omix Atlas is made available on Polly’s data infrastrucutre, which allows querying of the data through point and click solutions and advanced querying through polly libraries. Code-based advanced access means that you can use these data on Polly or outside of Polly on a platform of your choice.
 
 
+# OmixAtlas Case Studies
+
+1. [Integrative single-cell transcriptome analysis reveals a subpopulation of fibroblasts associated with favorable prognosis of liver cancer patients](`Case Studies`/`Single Cell Integration`/`Single Cell Integration.md`)
+2. Predicting survivability of patients with  Hepatocellular Carcinoma using multi-omics data 
+3. [Automated cell-type annotation in a liver single cell transcriptomics data](`Case Studies`/`Celltype Identification`/Celltype_identification.md)
