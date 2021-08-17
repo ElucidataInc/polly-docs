@@ -10,20 +10,6 @@ Normal and tumor single cell datasets are shown to *readily integrate* due to th
 
 In order to evaluate the clinical significance of those markers, we utilise curated transcriptomics data for liver hepatocellular carcinoma to perform survival analysis in cancer patients. The overall analysis showed that overexpression of **SPARCL1** is associated with favourable prognosis of liver cancer patients. 
 
-## Contents:
-* [1. Querying Biomedical Molecular data](#1.-Querying-Biomedical-Molecular-data)
-    * [1.1 On Polly Liver OmixAtlas](#1.1-On-Polly-Liver-OmixAtlas)
-        * [1.1.1 Install Polly Python](#1.1.1-Install-Polly-Python)
-        * [1.1.2 Connect to Polly OmixAtlas](#1.1.2-Connect-to-Polly-OmixAtlas)
-        * [1.1.3 Get Liver OmixAtlas Summary](#1.1.3-Get-Liver-OmixAtlas-Summary)
-        * [1.1.4 Querying Single Cell RNASeq data on Liver OmixAtlas](#1.1.4-Querying-Single-Cell-RNASeq-data-on-Liver-OmixAtlas)
-        * [1.1.5 Querying Bulk RNASeq data on Liver OmixAtlas](#1.1.5-Querying-Bulk-RNASeq-data-on-Liver-OmixAtlas)  
-    * [1.2 Outside Polly](#1.2-Outside-Polly)
-        * [1.2.1 Querying Single Cell RNASeq data on NCBI GEO](#1.2.1-Querying-Single-Cell-RNASeq-data-on-NCBI-GEO)
-        * [1.2.2 Querying Bulk RNASeq data on TCGA](#1.2.2-Querying-Bulk-RNASeq-data-on-TCGA)
-* [Single Cell data integration](#Single-Cell-data-integration)
-* [Survival analysis using bulk RNASeq data](#Survival-analysis-using-bulk-RNASeq-data)
-
 ### Import functions
 
 Jump to [Appendix](#Appendix) to install the necessary R and Python packages
