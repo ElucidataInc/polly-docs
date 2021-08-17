@@ -22,7 +22,7 @@ nav:
       - Data Schema: OmixAtlas/Data Schema.md
       - Case Studies: 
         - Cell-type annotation of single cell transcriptomics data using marker based methods: OmixAtlas/Case Studies/Celltype Identification/Celltype_identification.md
-        - Integrative single-cell transcriptome analysis reveals a subpopulation of fibroblasts associated with favorable prognosis of liver cancer patients: docs/OmixAtlas/Case Studies/Single Cell Integration/Single Cell Integration.md
+        - Integrative single-cell transcriptome analysis reveals a subpopulation of fibroblasts associated with favorable prognosis of liver cancer patients: OmixAtlas/Case Studies/Single Cell Integration/Single Cell Integration.md
   - Analyses:
     - Polly Notebooks:
       - About Polly Notebooks: Scaling compute/Polly Notebooks5.md
