@@ -33,3 +33,6 @@ Elucidata’s Liver OmixAtlas addresses the above issues by ensuring that the me
   a) Liver Omix Atlas is made available on Polly’s data infrastrucutre, which allows querying of the data through point and click solutions and advanced querying through polly libraries. Code-based advanced access means that you can use these data on Polly or outside of Polly on a platform of your choice.
 
 
+# OmixAtlas Case Studies
+
+1. [Single Cell Data Integration to predict survivability of liver cancer patients](`Case Studies`/`Single Cell Integration`/`Single Cell Integration.md`)
