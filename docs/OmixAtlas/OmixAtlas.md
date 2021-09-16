@@ -36,5 +36,5 @@ Elucidata’s Liver OmixAtlas addresses the above issues by ensuring that the me
 # OmixAtlas Case Studies
 
 1. [Integrative single-cell transcriptome analysis reveals a subpopulation of fibroblasts associated with favorable prognosis of liver cancer patients](`Case Studies`/`Single Cell Integration`/`Single Cell Integration.md`)
-2. Predicting survivability of patients with  Hepatocellular Carcinoma using multi-omics data 
+2. [Predicting survivability of patients with  Hepatocellular Carcinoma using multi-omics data](`Case Studies`/HCC_survival_prediction-Polly_case_study/HCC_survival_prediction-Polly_case_study.md) 
 3. [Automated cell-type annotation in a liver single cell transcriptomics data](`Case Studies`/`Celltype Identification`/Celltype_identification.md)
