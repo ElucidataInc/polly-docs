@@ -8,8 +8,12 @@ The major challenge of cell-based strategy lies in the determination of cell typ
 
 Cluster-based methods use the pre-computed clusters to identify markers within each cluster. The markers are then use for cell type identification from reference databases which contain a plethora of manually curated marker to cell-type mappings.
 
-
 ### Import functions
+
+#### Please follow the instructions below
+
+**1. Check the appendix section below to install necessary packages**  
+**2. Refresh the kernel after installation is complete**  
 
 
 ```sos
@@ -52,31 +56,8 @@ get_seurat_obj = function(adata) {
 
 
 ```sos
-!pip3 install polly-python --user
+!sudo pip3 install polly-python --quiet
 ```
-
-    Looking in indexes: https://pypi.org/simple, http://54.245.179.143:80/
-    Collecting polly-python
-      Downloading https://files.pythonhosted.org/packages/a5/5c/3a3d40cdd4d61e99e7da4a0c2899a6d5e81c093667abf25aba2f157d18db/polly_python-0.0.4-py3-none-any.whl
-    Requirement already satisfied: pandas in /usr/local/lib/python3.6/dist-packages (from polly-python) (1.1.5)
-    Requirement already satisfied: requests in /usr/local/lib/python3.6/dist-packages (from polly-python) (2.25.1)
-    Requirement already satisfied: certifi in /usr/local/lib/python3.6/dist-packages (from polly-python) (2020.6.20)
-    Requirement already satisfied: idna in /usr/local/lib/python3.6/dist-packages (from polly-python) (2.8)
-    Collecting postpy2 (from polly-python)
-      Downloading https://files.pythonhosted.org/packages/7e/25/d98f5ea87d937bf44963be78b504dbb3ddea1c6ddfcc0985b02d062b41dd/postpy2-0.0.6-py3-none-any.whl
-    Collecting python-magic (from polly-python)
-      Downloading https://files.pythonhosted.org/packages/d3/99/c89223c6547df268596899334ee77b3051f606077317023617b1c43162fb/python_magic-0.4.24-py2.py3-none-any.whl
-    Requirement already satisfied: urllib3 in /usr/local/lib/python3.6/dist-packages (from polly-python) (1.26.3)
-    Requirement already satisfied: chardet in /usr/local/lib/python3.6/dist-packages (from polly-python) (3.0.4)
-    Requirement already satisfied: pytz>=2017.2 in /usr/local/lib/python3.6/dist-packages (from pandas->polly-python) (2019.3)
-    Requirement already satisfied: python-dateutil>=2.7.3 in /usr/local/lib/python3.6/dist-packages (from pandas->polly-python) (2.8.0)
-    Requirement already satisfied: numpy>=1.15.4 in /usr/local/lib/python3.6/dist-packages (from pandas->polly-python) (1.19.5)
-    Requirement already satisfied: six>=1.5 in /usr/local/lib/python3.6/dist-packages (from python-dateutil>=2.7.3->pandas->polly-python) (1.14.0)
-    Installing collected packages: python-magic, postpy2, polly-python
-    Successfully installed polly-python-0.0.4 postpy2-0.0.6 python-magic-0.4.24
-    [33mWARNING: You are using pip version 19.2.3, however version 21.1.3 is available.
-    You should consider upgrading via the 'pip install --upgrade pip' command.[0m
-
 
 
 ```sos
@@ -93,7 +74,7 @@ LiverOmixAltasID = "1615965444377"
 
 
 ```sos
-REFRESH_TOKEN="eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAifQ.PjS7n0ExVq2ciJnp_uHu5SW2f1Bx1a56aDQNXKgYbVr62DaFlPbcG-ETZ4X6CH2kefjUc4U0h2hzri_lMewpobm0-NKbZJUk0-XBpcNYW0aqEuSdDN_lgnNXIKjTFWHilPQfnweqHKwcmxC2FBOvaj6w3rk0Um3TY2L7H5cEppGe0pqdyc2nGYPNIJ6O9zNMtXxVPkb_TqUVSye48wG7hSNE7nafXZIirZlhvMnuSdYOycKqti9XJbmSB2DB7oMfeqJyiGXywA6c5HSpaxfSO_Mq09XKaXrCnA8ZvRl-v-OEmfhjJCabJeRPSLOApMH7TUhYLc7CME_VMekK0QpWgQ.y4irbtLWSaMtWwdk.Wj7Y2YioY7m9qaoRc934IfZ6CpQ5UXdttWb8onXpsHKqWEc-KTRufdDZPrvOvJc3bJ9InULISS0GAtQzb2wZ_t-1JOKkujm6pl1hZZKl7ynm7cfx4xE23XX8_Qlp6eZsIHn1RQWm9NZq2SzjU5NZWYYLhiSwuO_yElIuPouUanNJqRoXqFK4oKaIAKKHJvPC4iH765qmTiKBJ-StMfvKSyED4kskwA1GJnrdwMd8aP-BmuXvPnU0MzI91wkS4sQIIZcXnbG23INUGJmt_5t3xzCJjgDt-tbRFl0w2949726HJkDPqrVlsOs5uiXbtLNu1UQt94HDscqbIl0BgOAYwAZEvEFa5hRnAGElo5g7AM2YkpX7pVcz1Ne4OegCwvYrDUaH83xoUguNHrC13uQxtjaGqJgNGSDKWuadZdAA1J9YU0uMI8Qngsb-8Ed2Pgr0XArpO1sQhamlDrkjDA6qXXMXT3rM7dEdiKvrtIyWKDim6wcGesVO8FMHXl_dsT9q_991ePVf5c0N82rUohh-0qW-uUGZ350uk0n_KxHdjFDPYr_GZIzmIlxxMegGSgfqe5Z0KbwzWp-a11_1wpO5ts3YQOYmUofzemCna3Psv0ooYNf6qF9KtIGG71rgOJXtxohAwijc1uo7B0MJVAydP3nIFz1GSyYh4dy6WwToeDMKVAvnbAR5MSDVC0fI1orOVuhH0JAZsBq0lV7n5dSC5GmWjAuJkRrHKyOS17LcrgLsmarDVhThXs-84hP2pvyI0TBIHrLfeflstgauT0FEu_z4lzyfGyvkHjJw7V6pyjrRWgUzbP6NNbNVG3njMLPG0Gjm0yaieIzWBtRctVVOZjsuhQTkt7C3nbJPSqC3LApLt_bRDrDIqrLJkrwBQLX9CRsVM72DnSHBQu7nYPP6v14F45ZGtToORWNJ3vf5v0dJqRWWx6YBVXjgx77wylAM98PH4E4LcKysjvmranma-8WQ8l9yIRz7HmnIGbYGIE6xU7KSRvPtgRdVKoD9zzqk5hYn4ncquweDi6o-9sRxs6dM7HMslznCi-mzrdfH_xw43LRTAH-9QWSAAuAnUNS1oShVhHlZhzNjVxHHKq9rD_Ot5bA1CD8Mt-h_P9Hf_S65-3fKCSSrp8xXCe0EkfqYJfYO2VsjiRBPiWFKXEU_4ywNv9TQiszqQaDVdH8TV4PMevWdMPj-tLRNh5D81YRlh7wF8eq8Tj9DFVI5zbMbnQsgHmVzxXJ8G-SsJW41i1P5_BZcwDMaOFWAvdLtUsIHEvJjo8Ut6SRMlx7Pmn0TcBEFzB8oPwHrm9KSz26NfoEnpRidn84sCfs8tDM.piZrXCf1tDWIFBt0RrTPYg"
+#REFRESH_TOKEN = "ENTER REFRESH TOKEN WITHIN THE DOUBLE QUOTES"
 repo_client = OmixAtlas(REFRESH_TOKEN)
 ```
 
@@ -312,7 +293,7 @@ DimPlot(object = seurat, reduction = "tsne", group.by = "clusters", cols = Discr
 ```
 
 
-![png](output_24_0.png)
+![png](output_23_0.png)
 
 
 ## 3. Finding cluster biomarkers
@@ -371,7 +352,7 @@ DoHeatmap(seurat.subset, features = liver.markers.subset$gene)
 
 
 
-![png](output_30_1.png)
+![png](output_29_1.png)
 
 
 ## 4 . Automated cell type curation using biomarker genes
@@ -487,12 +468,14 @@ DimPlot(object = seurat, reduction = "tsne", group.by = "Type", cols = DiscreteP
 ```
 
 
-![png](output_36_0.png)
+![png](output_35_0.png)
 
 
 ## Appendix
 
 ### Package installation
+
+*NOTE : For R packages, the cells must be run in the following order as shown below*
 
 
 ```sos

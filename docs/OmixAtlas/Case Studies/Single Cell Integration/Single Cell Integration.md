@@ -12,7 +12,10 @@ In order to evaluate the clinical significance of those markers, we utilise cura
 
 ### Import functions
 
-Jump to [Appendix](#Appendix) to install the necessary R and Python packages
+#### Please follow the instructions below
+
+**1. Check the appendix section below to install necessary packages**  
+**2. Refresh the kernel after installation is complete**  
 
 
 ```sos
@@ -97,7 +100,7 @@ from polly.omixatlas import OmixAtlas
 
 
 ```sos
-REFRESH_TOKEN="eyJjdHkiOiJKV1QiLCJlbmMiOiJBMjU2R0NNIiwiYWxnIjoiUlNBLU9BRVAifQ.PjS7n0ExVq2ciJnp_uHu5SW2f1Bx1a56aDQNXKgYbVr62DaFlPbcG-ETZ4X6CH2kefjUc4U0h2hzri_lMewpobm0-NKbZJUk0-XBpcNYW0aqEuSdDN_lgnNXIKjTFWHilPQfnweqHKwcmxC2FBOvaj6w3rk0Um3TY2L7H5cEppGe0pqdyc2nGYPNIJ6O9zNMtXxVPkb_TqUVSye48wG7hSNE7nafXZIirZlhvMnuSdYOycKqti9XJbmSB2DB7oMfeqJyiGXywA6c5HSpaxfSO_Mq09XKaXrCnA8ZvRl-v-OEmfhjJCabJeRPSLOApMH7TUhYLc7CME_VMekK0QpWgQ.y4irbtLWSaMtWwdk.Wj7Y2YioY7m9qaoRc934IfZ6CpQ5UXdttWb8onXpsHKqWEc-KTRufdDZPrvOvJc3bJ9InULISS0GAtQzb2wZ_t-1JOKkujm6pl1hZZKl7ynm7cfx4xE23XX8_Qlp6eZsIHn1RQWm9NZq2SzjU5NZWYYLhiSwuO_yElIuPouUanNJqRoXqFK4oKaIAKKHJvPC4iH765qmTiKBJ-StMfvKSyED4kskwA1GJnrdwMd8aP-BmuXvPnU0MzI91wkS4sQIIZcXnbG23INUGJmt_5t3xzCJjgDt-tbRFl0w2949726HJkDPqrVlsOs5uiXbtLNu1UQt94HDscqbIl0BgOAYwAZEvEFa5hRnAGElo5g7AM2YkpX7pVcz1Ne4OegCwvYrDUaH83xoUguNHrC13uQxtjaGqJgNGSDKWuadZdAA1J9YU0uMI8Qngsb-8Ed2Pgr0XArpO1sQhamlDrkjDA6qXXMXT3rM7dEdiKvrtIyWKDim6wcGesVO8FMHXl_dsT9q_991ePVf5c0N82rUohh-0qW-uUGZ350uk0n_KxHdjFDPYr_GZIzmIlxxMegGSgfqe5Z0KbwzWp-a11_1wpO5ts3YQOYmUofzemCna3Psv0ooYNf6qF9KtIGG71rgOJXtxohAwijc1uo7B0MJVAydP3nIFz1GSyYh4dy6WwToeDMKVAvnbAR5MSDVC0fI1orOVuhH0JAZsBq0lV7n5dSC5GmWjAuJkRrHKyOS17LcrgLsmarDVhThXs-84hP2pvyI0TBIHrLfeflstgauT0FEu_z4lzyfGyvkHjJw7V6pyjrRWgUzbP6NNbNVG3njMLPG0Gjm0yaieIzWBtRctVVOZjsuhQTkt7C3nbJPSqC3LApLt_bRDrDIqrLJkrwBQLX9CRsVM72DnSHBQu7nYPP6v14F45ZGtToORWNJ3vf5v0dJqRWWx6YBVXjgx77wylAM98PH4E4LcKysjvmranma-8WQ8l9yIRz7HmnIGbYGIE6xU7KSRvPtgRdVKoD9zzqk5hYn4ncquweDi6o-9sRxs6dM7HMslznCi-mzrdfH_xw43LRTAH-9QWSAAuAnUNS1oShVhHlZhzNjVxHHKq9rD_Ot5bA1CD8Mt-h_P9Hf_S65-3fKCSSrp8xXCe0EkfqYJfYO2VsjiRBPiWFKXEU_4ywNv9TQiszqQaDVdH8TV4PMevWdMPj-tLRNh5D81YRlh7wF8eq8Tj9DFVI5zbMbnQsgHmVzxXJ8G-SsJW41i1P5_BZcwDMaOFWAvdLtUsIHEvJjo8Ut6SRMlx7Pmn0TcBEFzB8oPwHrm9KSz26NfoEnpRidn84sCfs8tDM.piZrXCf1tDWIFBt0RrTPYg"
+#REFRESH_TOKEN = "ENTER REFRESH TOKEN WITHIN THE DOUBLE QUOTES"
 repo_client = OmixAtlas(REFRESH_TOKEN)
 ```
 
@@ -2604,11 +2607,11 @@ DimPlot(liver.combined.sct, reduction = "umap", group.by = 'Type', cols = Discre
 ```
 
 
-![png](output_90_0.png)
+![png](output_89_0.png)
 
 
 
-![png](output_90_1.png)
+![png](output_89_1.png)
 
 
 Marker analysis of fibroblast population
@@ -2639,43 +2642,43 @@ VlnPlot(liver.combined.sct, features = "GPR4", idents = c("7","15"))
 ```
 
 
-![png](output_94_0.png)
+![png](output_93_0.png)
 
 
 
-![png](output_94_1.png)
+![png](output_93_1.png)
 
 
 
-![png](output_94_2.png)
+![png](output_93_2.png)
 
 
 
-![png](output_94_3.png)
+![png](output_93_3.png)
 
 
 
-![png](output_94_4.png)
+![png](output_93_4.png)
 
 
 
-![png](output_94_5.png)
+![png](output_93_5.png)
 
 
 
-![png](output_94_6.png)
+![png](output_93_6.png)
 
 
 
-![png](output_94_7.png)
+![png](output_93_7.png)
 
 
 
-![png](output_94_8.png)
+![png](output_93_8.png)
 
 
 
-![png](output_94_9.png)
+![png](output_93_9.png)
 
 
 We observed that fibrogenic genes (e.g., COL1A1, COL1A2, COL3A1 ) and proteoglycan encoding genes (e.g., LUM, BGN ) were overexpressed in cluster 15. Cluster 7, however showed high overall expression of SPARCL1, GJA4. 
@@ -3446,24 +3449,26 @@ ggsurvplot(surv[[1]], data=surv[[2]], pval=T, risk.table=T, title=paste("GPR4"))
 ```
 
 
-![png](output_110_0.png)
+![png](output_109_0.png)
 
 
 
-![png](output_110_1.png)
+![png](output_109_1.png)
 
 
 
-![png](output_110_2.png)
+![png](output_109_2.png)
 
 
 
-![png](output_110_3.png)
+![png](output_109_3.png)
 
 
 ## Appendix
 
 ### Package installations
+
+*NOTE : For R packages, the cells must be run in the following order as shown below*
 
 
 ```sos
