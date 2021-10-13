@@ -1,5 +1,62 @@
 #Release Notes
 
+<!--September, 2021-->
+
+<details open>
+<summary><font size="+1"><b>September, 2021</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>New compute machines Mi5xlarge, Mi6xlarge, Mi7xlarge, GPU small and GPU medium added to EL-MAVEN.</li>
+  </ul>
+  <p class="update-button">Update</p>
+  <ul>
+    <li>Resolved a bug that caused an error in SQL query on “’” expansion.</li>
+    <li>gnomAD was enriched with 96 thousand new dataset of WES and WGS type.</li>
+    <li>Fixed table view bugs and enhanced UI on Discover.</li>
+    <li>New datasets totaling 48 thousand were added to Immport, HPA, CPTAC and GTex.</li>
+    <li>Auto-curated tags totaling 770 thousand were added to polly datasets.</li>
+    <li>A bug affecting folder deletion was fixed.</li>
+  </ul>
+</details>
+
+<hr>
+
+<!--August, 2021-->
+
+<details open>
+<summary><font size="+1"><b>August, 2021</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>Introduced Polly Python Libraries facilitating powerful search capabilities across dataset, sample, and feature level metadata on any computational environment through code.</li>
+    <li>Introduced “View Only Access” on Polly Workspaces – an enterprise grade permission giving more control to admins. </li>
+    <li>Enabled Voila Dashboards with Polly Notebooks.</li> 
+    <li>Introduced an application resource monitor on EL-Maven, enabling users to monitor the progress of a job and make decisions about requirement of a bigger instance.</li>
+  </ul>
+  <p class="update-button">Update</p>
+  <ul>
+    <li>Over 155 thousand datasets were added to LINCS OmixAtlas on Polly.</li>
+  </ul>
+</details>
+
+<hr>
+
+
+<!--July, 2021-->
+
+<details open>
+<summary><font size="+1"><b>July, 2021</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>Liver OmixAltas released.</li>
+  </ul>
+</details>
+
+<hr>
+
+
 <!--June 18th, 2021-->
 
 <details open>
