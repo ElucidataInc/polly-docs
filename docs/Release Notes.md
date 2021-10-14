@@ -7,15 +7,16 @@
 <br>
   <p class="new-button">New</p>
   <ul>
-    <li>New compute machines Mi5xlarge, Mi6xlarge, Mi7xlarge, GPU small and GPU medium added to EL-MAVEN.</li>
+    <li>New compute machines Mi5xlarge (32 vCPU, 250GB RAM), Mi6xlarge (64 vCPU, 500GB RAM), Mi7xlarge (64 vCPU, 970GB RAM), GPUsmall (1 GPU, 8 vCPU, 60GB RAM) and GPUmedium (4 GPU, 32 vCPU, 240GB RAM) were added to EL-MAVEN.</li>
+    <li>Introduced Polly Files (beta version), a desktop application for transferring files between computer and Polly Workspaces.</li>
   </ul>
   <p class="update-button">Update</p>
   <ul>
     <li>Resolved a bug that caused an error in SQL query on “’” expansion.</li>
-    <li>gnomAD was enriched with 96 thousand new dataset of WES and WGS type.</li>
-    <li>Fixed table view bugs and enhanced UI on Discover.</li>
-    <li>New datasets totaling 48 thousand were added to Immport, HPA, CPTAC and GTex.</li>
-    <li>Auto-curated tags totaling 770 thousand were added to polly datasets.</li>
+    <li>gnomAD was enriched with 96,000 new datasets of WES and WGS type.</li>
+    <li>Fixed table view bugs and enhanced UI on OmixAtlas.</li>
+    <li>New datasets totalling 48,000 were added to Immport, HPA, CPTAC and GTex.</li>
+    <li>Auto-curated tags totalling 770,000 were added to polly datasets.</li>
     <li>A bug affecting folder deletion was fixed.</li>
   </ul>
 </details>
@@ -29,14 +30,14 @@
 <br>
   <p class="new-button">New</p>
   <ul>
-    <li>Introduced Polly Python Libraries facilitating powerful search capabilities across dataset, sample, and feature level metadata on any computational environment through code.</li>
+    <li>Introduced Polly Python Library facilitating powerful search capabilities across dataset, sample, and feature level metadata on any computational environment through code.</li>
     <li>Introduced “View Only Access” on Polly Workspaces – an enterprise grade permission giving more control to admins. </li>
-    <li>Enabled Voila Dashboards with Polly Notebooks.</li> 
-    <li>Introduced an application resource monitor on EL-Maven, enabling users to monitor the progress of a job and make decisions about requirement of a bigger instance.</li>
+    <li>Enabled Voila Dashboards within Polly Notebooks.</li> 
+    <li>Introduced an application resource monitor on EL-Maven, enabling users to monitor the progress of a job and make decisions about requirement of a bigger machine.</li>
   </ul>
   <p class="update-button">Update</p>
   <ul>
-    <li>Over 155 thousand datasets were added to LINCS OmixAtlas on Polly.</li>
+    <li>Over 155,000 datasets were added to LINCS OmixAtlas on Polly.</li>
   </ul>
 </details>
 
