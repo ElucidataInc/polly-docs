@@ -216,14 +216,119 @@ Operators  | Functions performed
 ## 5 Example Use Cases
 
 ### 5.1 Querying datasets in Liver OmixAtlas
-1. Identify datasets belonging to the tissue **Liver**, disease **Liver cirrhosis** and organism **Homo sapiens**
-<pre><code>query = "SELECT * FROM liveromix_atlas_files WHERE disease = 'liver cirrhosis' AND tissue = 'liver' AND organism = 'Homo Sapiens' LIMIT 0,2000"</code></pre>
+1. To identify datasets belonging to the tissue Liver, disease Liver cirrhosis and organism Homo sapiens
+
+    ```
+        query = """SELECT * FROM liveromix_atlas_files 
+                            WHERE disease = 'liver cirrhosis'
+                            AND tissue = "liver"
+                            AND organism="Homo sapiens"
+                            """
+    ```
+
+2. To identify all datasets belonging to a Hepatocellular Carcinoma disease in Human and Mouse
+
+    ```
+        query = """SELECT * FROM liveromix_atlas_files 
+                            WHERE disease = 'Carcinoma, Hepatocellular'
+                            AND ( organism="Homo sapiens" or organism="Mus musculus") 
+                          """
+    ```
+
+3. To identify type of data, tissue, and data description of all the datasets belonging to a Hepatocellular Carcinoma disease in Human and Mouse
+
+    ```
+        query = """SELECT dataset_id,description,tissue,kw_data_type 
+                            FROM liveromix_atlas_files 
+                            WHERE disease = 'Carcinoma, Hepatocellular'
+                            AND ( organism="Homo sapiens" or organism="Mus musculus") 
+                          """
+    ```
+
+4. Identify all transcriptome datasets in Hepatocellular Carcinoma disease in Human and Mouse
+
+    ```
+        query = """SELECT * FROM liveromix_atlas_files 
+                        WHERE disease = 'Carcinoma, Hepatocellular'
+                        AND ( organism="Homo sapiens" or organism="Mus musculus") 
+                        AND ( kw_data_type = "Transcriptomics")
+                      """
+    ```
+
+5. Identify all transcriptome datasets from GEO in Hepatocellular Carcinoma disease in Human and Mouse
+
+    ```
+        query = """SELECT * FROM liveromix_atlas_files 
+                        WHERE disease = 'Carcinoma, Hepatocellular'
+                        AND ( organism="Homo sapiens" or organism="Mus musculus") 
+                        AND ( kw_data_type = "Transcriptomics")
+                        AND ( dataset_source = "GEO")
+                      """
+    ```
+
+6. Select all methylation, miRNA, and transcriptomics datasets for Hepatocellular Carcinoma disease in Human and Mouse
+
+    ```
+        query = """SELECT * FROM liveromix_atlas_files 
+                        WHERE dataset_source = 'TCGA'
+                        AND (kw_data_type = 'Methylation' 
+                            OR kw_data_type = 'MiRNA'
+                            OR kw_data_type = 'Transcriptomics'
+                            )
+                        AND ( organism="Homo sapiens" or organism="Mus musculus")
+                      """
+    ```
 
 ### 5.2 Querying samples in Liver OmixAtlas
-1. Identify samples (non single cell) where cell_type is **hepatocyte**
-<pre><code>query = "SELECT sample_id, kw_curated_disease, kw_curated_cell_line, kw_curated_drug, kw_curated_cell_type, kw_curated_genetic_mod_type, kw_curated_modified_gene FROM liveromix_atlas_gct_metadata WHERE kw_curated_cell_type = 'hepatocyte' LIMIT 0,4000"</code></pre>
+1. Select a sample with a GEO ID
+
+    ```
+        query = """SELECT * 
+                FROM liveromix_atlas_gct_metadata 
+                WHERE kw_column  = 'GSM798352'
+                """
+    ```
+
+2. Identify all samples in which "CYP1B1" gene has been knocked out
+
+    ```
+        query = """SELECT *
+                FROM liveromix_atlas_gct_metadata 
+                WHERE kw_curated_genetic_mod_type = 'knockout'
+                AND kw_curated_modified_gene = "CYP1B1"
+                """
+    ```
+
+3. Identify all samples where gene "YAP1" has been knocked in, in hepatocype cell line
+
+    ```
+        query = """SELECT kw_curated_cell_line,kw_curated_drug,kw_curated_genetic_mod_type,kw_curated_modified_gene,kw_curated_cell_type
+                    FROM liveromix_atlas_gct_metadata 
+                    WHERE kw_curated_genetic_mod_type = 'knockin'
+                    AND kw_curated_cell_type = "hepatocyte"
+                    AND kw_curated_modified_gene = "YAP1"
+                """
+    ```
+
+4. Identify all samples of 'Carcinoma, Hepatocellular' disease that have been treated with some drug
+
+    ```
+        query = """SELECT kw_curated_cell_line,kw_curated_drug,kw_curated_tissue,kw_curated_disease
+                FROM liveromix_atlas_gct_metadata 
+                WHERE kw_curated_disease = 'Carcinoma, Hepatocellular'
+                AND kw_curated_drug <> "none"
+                """
+    ```
 
 ### 5.3 Querying features in Liver OmixAtlas
-1. Identify features in single cell data
-<pre><code>query = "SELECT * FROM liveromix_atlas_h5ad_data"</code></pre>
+1. Identify all samples in which the gene “YAP1” is upregulated
+
+    ```
+        query = """SELECT *
+                    FROM liveromix_atlas_gct_data 
+                    WHERE kw_index = 'YAP1'
+                    AND kw_column.kw_expression > 0 
+                """
+    ```
+
   
