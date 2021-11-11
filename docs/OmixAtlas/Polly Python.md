@@ -135,14 +135,14 @@ The output of this function is a *signed URL*. The data can be downloaded by cli
 ##### 4.2.4.1 Downloading .gct as a data frame
 <pre><code>url = library_client.download_data("[repo_id OR repo_name]", "[dataset_id]").get('data')
 file_name = "[dataset_id].gct"
-os.system(f"wget -O '{file_name}' '{url}'")
+os.system(f"wget -O '{file_name}' '{url['attributes']['download_url']}'") 
 from cmapPy.pandasGEXpress.parse_gct import parse
 data = parse(file_name)</code></pre>
 
 ##### 4.2.4.2 Downloading h5ad as a data frame
 <pre><code>url = library_client.download_data("[repo_id OR repo_name]", "[dataset_id]").get('data')
 file_name = "[dataset_id].h5ad"
-os.system(f"wget -O '{file_name}' '{url}'")
+os.system(f"wget -O '{file_name}' '{url['attributes']['download_url']}'") 
 import scanpy as sc
 data = sc.read_h5ad(file_name)</code></pre>
 
