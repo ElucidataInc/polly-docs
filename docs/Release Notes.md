@@ -1,4 +1,21 @@
 # Release Notes
+<!--October, 2021-->
+
+<details open>
+<summary><font size="+1"><b>October, 2021</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>In addition to Liver OmixAtlas, polly now has GDC, GEO, cBioPortal, PharmacoDB, LINCS and Metabolomics OmixAtlases.</li>
+  </ul>
+  <p class="update-button">Update</p>
+  <ul>
+    <li>Added 17500 datasets on Polly</li>
+    <li>Genotype, age and gender annotation were added to 3,900,000 GEO samples</li>
+  </ul>
+</details>
+
+<hr>
 
 <!--September, 2021-->
 
