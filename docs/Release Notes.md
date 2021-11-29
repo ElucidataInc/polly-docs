@@ -7,7 +7,6 @@
   <p class="new-button">New</p>
   <ul>
     <li>Workspace contents like files, analyses, reports can now be sorted in workspaces based on name, created date, last modified, author, and type.</li>
-    <li>Details page for datasets which contain sample level meta data are found on polly. Datasets can also be requested and downloaded on Polly.</li>
     <li>15,000 Microarray and WES (Whole Exome Sequencing) datasets from PPMI have been curated and added to Polly.</li>
     <li>Dataset Overview (containing Title, Publication, Abstract, Tags for the Data, sample information as summary plots and table, processed data as a table) for every dataset can be viewed using the “View Details” option beside datasets in OmixAtlases.</li>
     <li>The Datasets (gct, h5ad, vcf) files can be downloaded from the Options Menu in the Card view or from the View Details Page.</li>
