@@ -1,4 +1,26 @@
 # Release Notes
+<!--November, 2021-->
+
+<details open>
+<summary><font size="+1"><b>November, 2021</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>Workspace contents like files, analyses, reports can now be sorted in workspaces based on name, created date, last modified, author, and type.</li>
+    <li>15,000 Microarray and WES (Whole Exome Sequencing) datasets from PPMI have been curated and added to Polly.</li>
+    <li>Dataset Overview (containing Title, Publication, Abstract, Tags for the Data, sample information as summary plots and table, processed data as a table) for every dataset can be viewed using the “View Details” option beside datasets in OmixAtlases.</li>
+    <li>The Datasets (gct, h5ad, vcf) files can be downloaded from the Options Menu in the Card view or from the View Details Page.</li>
+    <li>Request for Dataset option is available at multiple places within the OmixAtlases.</li>
+  </ul>
+  <p class="update-button">Update</p> 
+  <ul>
+    <li>Resolved a bug in El-MAVEN instance termination.</li>
+    <li>Curation information of 45,000 datasets from gnomAD and DepMap has been updated.</li>
+  </ul>
+</details>
+    
+<hr>
+
 <!--October, 2021-->
 
 <details open>
