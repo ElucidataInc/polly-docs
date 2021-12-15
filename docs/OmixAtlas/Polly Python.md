@@ -14,7 +14,9 @@ Polly Python library provides convenient access to the above-mentioned functiona
 
 The following libraries need to be imported over the development environment to access the data.
 
-<pre><code>from polly.omixatlas import OmixAtlas
+<pre><code>from polly.auth import Polly
+from polly.omixatlas import OmixAtlas
+from polly.workspaces import Workspaces
 import pandas as pd
 from json import dumps</code></pre>
 
@@ -36,12 +38,18 @@ To get this token, follow the steps below:
 The following code is required to add the authentication function in the Polly Python library
 
 <pre><code>AUTH_TOKEN = "[authentication_token_copied]"
-library_client = OmixAtlas(AUTH_TOKEN)</code></pre>
+Polly.auth(AUTH_TOKEN)</code></pre>
 
 ## 4 Accessing data in OmixAtlas
 ### 4.1 Calling a function
-Use the response from the authentication token to call any function. E.g.
-<pre><code>output = library_client.[function()]</code></pre>
+In order to call a functions from a particular class, corresponding object should be defined. 
+
+E.g. for functions related to OmixAtlas, 
+<pre><code>omixatlas = OmixAtlas()
+output = omixatlas.[function()]</code></pre>
+Similarly, for functions related to Workspaces, 
+<pre><code>workspaces = Workspaces()
+output = workspaces.[function()]</code></pre>
 
 The output of the functions is in JSON and/or data frame formats. You can print/download this output.
 
@@ -49,7 +57,7 @@ The output of the functions is in JSON and/or data frame formats. You can print/
 #### 4.2.1 Get details of all OmixAtlases
 The following function details all the OmixAtlases accessible by you.
 
-<pre><code> get_all_omixatlas() </code></pre>
+<pre><code>omixatlas.get_all_omixatlas() </code></pre>
 
 The output of this function would be JSON containing
 <pre><code>{'data':
@@ -84,7 +92,7 @@ The output of this function would be JSON containing
 #### 4.2.2 Get summary of an OmixAtlas
 The following function details a particular OmixAtlas. The **repo_name/repo_id** of this OmixAtlas can be identified by calling the <code>get_all_omixatlas()</code> function.
 
-<pre><code>omixatlas_summary("[repo_id OR repo_name]")</code></pre>
+<pre><code>omixatlas.omixatlas_summary("[repo_id OR repo_name]")</code></pre>
 The output of this function would be JSON containing
 
 <pre><code>{'data':
@@ -116,13 +124,13 @@ The output of this function would be JSON containing
 #### 4.2.3 Querying the data and the metadata
 To access, filter, and search through the metadata schema, the function mentioned below can be used:
 
-<pre><code> query_metadata("[query_written_in_SQL]") </code></pre>
+<pre><code>omixatlas.query_metadata("[query_written_in_SQL]") </code></pre>
 Refer to the Queries section to understand how you could write a query in SQL. The columns returned would depend on the query that was written. The output of the function is a dataframe or a JSON depending on the operations used in the query.
 
 #### 4.2.4 Downloading any dataset
 To download any dataset, the following function can be used to get the signed URL of the dataset.
 
-<pre><code> download_data("[repo_name OR repo_id]", "[dataset_id]")</code></pre>
+<pre><code>omixatlas.download_data("[repo_name OR repo_id]", "[dataset_id]")</code></pre>
 
 The <code>[repo_name OR repo_id]</code> of this OmixAtlas can be identified by calling the <code>get_all_omixatlas()</code> function. The <code>[dataset_id]</code> can be obtained by querying the metadata at the dataset level using <code>query_metadata("[query written in SQL]")</code>.
 
@@ -133,18 +141,42 @@ The output of this function is a *signed URL*. The data can be downloaded by cli
 <br>The output data is in .gct/h5ad format. This data can be parsed into a data frame for better accessibility using the following code:
 
 ##### 4.2.4.1 Downloading .gct as a data frame
-<pre><code>url = library_client.download_data("[repo_id OR repo_name]", "[dataset_id]").get('data')
+<pre><code>url = omixatlas.download_data("[repo_id OR repo_name]", "[dataset_id]").get('data')
 file_name = "[dataset_id].gct"
 os.system(f"wget -O '{file_name}' '{url['attributes']['download_url']}'") 
 from cmapPy.pandasGEXpress.parse_gct import parse
 data = parse(file_name)</code></pre>
 
 ##### 4.2.4.2 Downloading h5ad as a data frame
-<pre><code>url = library_client.download_data("[repo_id OR repo_name]", "[dataset_id]").get('data')
+<pre><code>url = omixatlas.download_data("[repo_id OR repo_name]", "[dataset_id]").get('data')
 file_name = "[dataset_id].h5ad"
 os.system(f"wget -O '{file_name}' '{url['attributes']['download_url']}'") 
 import scanpy as sc
 data = sc.read_h5ad(file_name)</code></pre>
+
+##### 4.2.4.3 Downloading vcf files
+<pre><code>url = omixatlas.download_data("[repo_id OR repo_name]", "[dataset_id]").get('data')
+file_name = "[dataset_id].vcf"
+os.system(f"wget -O '{file_name}' '{url['attributes']['download_url']}'")</code></pre>
+The downloaded vcf file can be further analysed using the docker environment containing Hail package on Polly.
+
+#### 4.2.5 Working with workspaces
+Polly python enables the users to connect OmixAtlas with Workspaces. Currently, there are two functions to create a new workspaces and listing the existing workspaces. The following library needs to be imported for users to work with workspaces.
+
+```
+from polly.workspaces import Workspaces
+```
+
+##### 4.2.5.1 Creating a new workspace
+use `create_workspace` to create a new workspace with desired name
+```
+workspaces.create_workspace("name_of_workspace")
+```
+##### 4.2.5.2 Fetching existing workspaces
+use `fetch_my_workspaces()` to fetch existing workspaces
+```
+workspaces.fetch_my_workspaces()
+```  
 
 ### 4.3 Data Schema
 The data available within OmixAtlas is curated within 5 indexes/tables on the basis of the information it contains. These five indexes are:
@@ -245,7 +277,7 @@ Expanding search feature could be use in the following way
 1. Setting "expand" to `True`: It allows expansion of the query to include disease terms children from the ontology tree. It means no false positive datasets are included in the output while including more true positives.  
 
 ```
-result = library_client.query_metadata(
+result = omixatlas.query_metadata(
     query=user_query,
     experimental_features = {"expand":True, "related_terms":False}
   )
@@ -253,7 +285,7 @@ result = library_client.query_metadata(
 2. Setting "related_terms" to `True`: It allows expansion of query by including immediate parent of the disease term in the ontology tree. It causes maximum expansion but a few false positive datasets may be included.
 
 ```
-result = library_client.query_metadata(
+result = omixatlas.query_metadata(
     query=user_query,
     experimental_features = {"expand":True, "related_terms":True})
 ```
