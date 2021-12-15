@@ -16,9 +16,7 @@ The following libraries need to be imported over the development environment to 
 
 <pre><code>from polly.auth import Polly
 from polly.omixatlas import OmixAtlas
-from polly.workspaces import Workspaces
-import pandas as pd
-from json import dumps</code></pre>
+from polly.workspaces import Workspaces</code></pre>
 
 ## 3 Authentication
 Authentication of the account is required to be able to access the capabilities of the Polly Python library.
