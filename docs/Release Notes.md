@@ -2,6 +2,28 @@
 <!--November, 2021-->
 
 <details open>
+<summary><font size="+1"><b>December, 2021</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>2792 datasets,74713 samples of tissue and cell line have been annotated.</li>
+    <li>Users can authenticate multiple classes (such as OmixAtlas, Workspaces) using a single authentication step in polly python</li>
+  </ul>
+  <p class="update-button">Update</p> 
+  <ul>
+    <li>Resolved a bug in El-MAVEN instance termination.</li>
+    <li>Curation information of 45,000 datasets from gnomAD and DepMap has been updated.</li>
+  </ul>
+</details>
+    
+<hr>
+
+
+
+
+<!--November, 2021-->
+
+<details open>
 <summary><font size="+1"><b>November, 2021</b></font></summary>
 <br>
   <p class="new-button">New</p>
