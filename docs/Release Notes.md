@@ -1,4 +1,31 @@
 # Release Notes
+<!--January, 2022-->
+
+<details open>
+<summary><font size="+1"><b>January, 2022</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>Users can create workspaces and fetch list of workspaces using polly-python.</li>
+    <li>Change in authentication process - Until now, the users had to authenticate each class separately. In this release, a global authentication mechanism has been developed using which users can authenticate multiple classes (such as OmixAtlas, Workspaces) using a single authentication step.</li>
+    <li>Users can publish personal notebook on Polly workspace environment and analyse vcf files using Hail docker.</li>
+    <li>Preview of all standard file types is available on Polly UI. Different file types like xls/xlsx, pdf, html, csv, png/jpg/gif, ipynb can be opened directly on Polly without a third party service.</li>
+  </ul>
+  <p class="update-button">Update</p> 
+  <ul>
+    <li>2792 datasets, 74713 samples have been annotated for tissue and cell line tags.</li>
+    <li>Strain has been added as a queryable field at dataset-level for GEO datasets.</li>
+    <li>A bug in Sort by Relevance when searching over description in OmixAtlas table view was fixed. Other sort related bugs have also been fixed.</li>
+    <li>360k datasets from the UK Biobank were added on Polly.</li>
+    <li>149k Immport lab datasets were added on Polly.</li>
+    <li>59k RCSB datasets were added on Polly.</li>
+    <li>Cell type curated for 229 Single Cell datasets were added to OmixAtlas.</li>
+    <li>Sample level age labels were added to all datasets for TCGA and GEO</li>
+  </ul>
+</details>
+    
+<hr>
+
 <!--November, 2021-->
 
 <details open>
