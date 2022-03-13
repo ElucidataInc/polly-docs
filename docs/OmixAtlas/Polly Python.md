@@ -138,22 +138,59 @@ The output of this function is a *signed URL*. The data can be downloaded by cli
 
 <br>The output data is in .gct/h5ad format. This data can be parsed into a data frame for better accessibility using the following code:
 
-##### 4.2.4.1 Downloading .gct as a data frame
-<pre><code>url = omixatlas.download_data("[repo_id OR repo_name]", "[dataset_id]").get('data')
-file_name = "[dataset_id].gct"
-os.system(f"wget -O '{file_name}' '{url['attributes']['download_url']}'") 
-from cmapPy.pandasGEXpress.parse_gct import parse
-data = parse(file_name)</code></pre>
+##### 4.2.4.1 Downloading .gct and opening it in a data frame
+<pre><code>dataset_id = "GSE100003_GPL15207"
+repo_key = 9 OR "geo"
+file_name = f"{dataset_id}.gct"
+data = client.download_data(repo_key, dataset_id)
+url = data.get('data').get('attributes').get('download_url')
+status = os.system(f"wget -O '{file_name}' '{url}'")
+if status == 0:
+    print("Downloaded data successfully")
+else:
+    raise Exception("Download not successful")
+</code></pre>
 
-##### 4.2.4.2 Downloading h5ad as a data frame
-<pre><code>url = omixatlas.download_data("[repo_id OR repo_name]", "[dataset_id]").get('data')
-file_name = "[dataset_id].h5ad"
-os.system(f"wget -O '{file_name}' '{url['attributes']['download_url']}'") 
-import scanpy as sc
-data = sc.read_h5ad(file_name)</code></pre>
+`repo_key`: (str) repo_id OR repo_name. This is a mandatory field. 
+
+In order to parse the .gct data, a python package called cmapPy can be used in the following manner.
+
+<pre><code>import pandas as pd
+import cmapPy
+from cmapPy.pandasGEXpress.parse_gct import parse
+
+gct_obj = parse(file_name) # Parse the file to create a gct object
+df_real = gct_obj.data_df # Extract the dataframe from the gct object
+col_metadata = gct_obj.col_metadata_df # Extract the column metadata from the gct object
+row_metadata = gct_obj.row_metadata_df # Extract the row metadata from the gct object
+</code></pre>
+
+##### 4.2.4.2 Downloading .h5ad file and opening it in a data frame
+<pre><code>dataset_id = "GSE121001_GPL19057"
+repo_key = 17 OR "sc_data_lake"
+file_name = f"{dataset_id}.h5ad"
+data = client.download_data(repo_key, dataset_id)
+url = data.get('data').get('attributes').get('download_url')
+status = os.system(f"wget -O '{file_name}' '{url}'")
+if status == 0:
+    print("Downloaded data successfully")
+else:
+    raise Exception("Download not successful")
+</code></pre>
+
+In order to parse the .h5ad data, a python package called scanpy can be used in the following manner.
+
+<pre><code>import pandas as pd
+import scanpy
+data = sc.read_h5ad(file_name)
+obs = data.obs.head()
+var = data.var.head()
+</code></pre>
+
+In order to get started with analysis of single cell data on Polly, users can refer to this [notebook](https://github.com/ElucidataInc/polly-python/blob/main/consumption_starter_notebooks/SingleCell-polly-python.ipynb) hosted on our github.
 
 ##### 4.2.4.3 Downloading vcf files
-<pre><code>url = omixatlas.download_data("[repo_id OR repo_name]", "[dataset_id]").get('data')
+<pre><code>url = omixatlas.download_data("repo_key", "[dataset_id]").get('data')
 file_name = "[dataset_id].vcf"
 os.system(f"wget -O '{file_name}' '{url['attributes']['download_url']}'")</code></pre>
 The downloaded vcf file can be further analysed using the docker environment containing Hail package on Polly.
