@@ -187,8 +187,10 @@ workspaces.download_to_workspaces(workspace_id = int, workspace_path = str)
 ```
 ##### 4.2.5.4 Save dataset from OmixAtlas to workspace
 Use `save_to_workspace(repo_id, dataset_id, workspace_id, workspace_path)` to save datasets from an OmixAtlas to a workspace
+
+Example to save the dataset_id 'GSE101127_GPL1355' from repo_id 1615965444377 to a workspace_id 8025 in a folder named 'data'
 ```
-workspaces.save_to_workspace(repo_id = str, dataset_id = str, workspace_id = int, workspace_path = str)
+omixatlas.save_to_workspace('1615965444377', 'GSE101127_GPL1355', 8025, 'data')
 ```
 #### 4.2.6 Working with data schema
 
@@ -208,38 +210,80 @@ The data available within OmixAtlas is curated within 5 indexes/tables on the ba
 To find relevant information that can be used for querying, refer the curated data schema [here](https://docs.elucidata.io/OmixAtlas/Data%20Schema.html).
 
 ##### 4.2.6.2 Functions to interact with Schema
-
 To enable users to interact with the schema of a particular OmixAtlas, functions for visualizing, updating and inserting schema is released. Updating and inseting schema is allowed for users who have data-admin credentials only.
 
-###### 4.2.6.2.1 Visualise schema
-Use `visualize_schema(repo_id, schema_level, data_type)` to extract the schema of an OmixAtlas.
+###### 4.2.6.2.1 Get schema
+Use `get_schema(repo_key, schema_level, source, data_type)` to extract the schema of an OmixAtlas.
+
+Example to fetch dataset and sample level schema for all datatypes from all sources in GEO Omixatlas
 
 ```
-omixatlas.visualize_schema(repo_id = str, schema_level = list, data_type = str)
+schema = omixatlas.get_schema("geo", ['dataset', 'sample'], "all", "all")
 ```
-In the above function, repo_id is a mandatory input. The default value of schema_level is ['dataset', 'sample']. The default value of data_type is 'others', which will fetch the schema of all datatypes except single cell. To fetch the schema for single cell datatype from an OmixAtlas, the user should use 'single_cell'. 
+to fetch the dataframe with dataset level metadata,
+
+```
+schema.dataset
+```
+to fetch the dataframe with sample level metadata,
+```
+schema.sample
+```
+
+`repo_key`: (str) repo_id OR repo_name. This is a mandatory field. 
+
+`schema_level`: (list) The default value is ['dataset', 'sample']. The users can use ['dataset'] OR ['sample'] to fetch the schema of dataset OR sample level metadata respectively.
+
+`source`: (str) is the source from where data is ingested into the Omixatlas.
+
+`data_type`:  (str) is the datatype for which user wants to get the schema for. The default value is 'all', which will fetch the schema of all datatypes except single cell. To fetch the schema for single cell datatype from an OmixAtlas, the user should use 'single_cell'.
 
 ###### 4.2.6.2.2 Update schema
-
-Use `update_schema(repo_id, payload)` to update the existing schema of an OmixAtlas.
+Use `update_schema(repo_key, payload)` to update the existing schema of an OmixAtlas.
 
 ```
-omixatlas.update_schema(repo_id = str, payload = dict)
+omixatlas.update_schema(repo_key, payload)
 ```
-The payload above should be a JSON file which should be as per the structure defined for schema. Only data-admin will have the authentication to update the schema.
+
+`repo_key`: (str) repo_id OR repo_name. This is a mandatory field.
+
+`payload`: (dict) The payload is a JSON file which should be as per the structure defined for schema. Only data-admin will have the authentication to update the schema.
 
 ###### 4.2.6.2.3 Insert schema
-
-Use `insert_schema(repo_id, payload)` to insert a new schema to an OmixAtlas.
+Use `insert_schema(repo_key, payload)` to insert a new schema to an OmixAtlas.
 
 ```
-omixatlas.insert_schema(repo_id = str, payload = dict)
+omixatlas.insert_schema(repo_key, payload)
 ```
-The payload above should be a JSON file which should be as per the structure defined for schema. Only data-admin will have the authentication to update the schema.
+
+`repo_key`: (str) repo_id OR repo_name. This is a mandatory field.
+
+`payload`: (dict) The payload is a JSON file which should be as per the structure defined for schema. Only data-admin will have the authentication to update the schema.
+
+#### 4.2.7 File format converter functions
+Several datatypes are ingested on Polly after conversion to gct file format. In order to enable consumption of different datatypes, bioinformaticians often use certain open-source packages. 
+
+##### 4.2.7.1 Consumption of mutation data using maftools
+With advances in Cancer Genomics, Mutation Annotation Format (MAF) is being widely accepted and used to store somatic variants detected. Mutation datatype on Polly from TCGA and cBioportal repository can now be consumed using an R package called maftools [Github](https://github.com/PoisonAlien/maftools),  [Bioconductor](https://bioconductor.org/packages/release/bioc/vignettes/maftools/inst/doc/maftools.html). This package attempts to summarize, analyze, annotate and visualize MAF files in an efficient manner from either TCGA sources or any in-house studies as long as the data is in MAF format.
+
+Polly users can use the following functions to convert the .gct datatype to .maf datatype for downstream analysis using maftools.
+```
+omixatlas.format_converter(repo_key, dataset_id, to)
+```
+repo_key: (str) repo_id OR repo_name 
+
+dataset_id: (str) dataset_id in the repository
+
+to: (str) output file format
+
+For example: 
+```
+omixatlas.format_converter("cbioportal", "ACC_2019_Mutation_ACYC-FMI-19", "maf")
+```
 
 ### 4.3 Writing a query
 
-polly-python v0.0.7 is compatible with both storage infrastructures - `v1` and `v2`. In order to facilitate querying on both infrastructures, there are two different API versions as well, `v1` and `v2`, available in polly-python which refer to infrastructure used for query. This could be specified by setting `query_api_version` to 'v1' or 'v2' while passing the query to a function. By default, queries are made against v1. If users want to use `v2` then they will have to pass an additional argument `query_api_version='v2'` in the `query_metadata` function. The querying on these two infrastructures is different and will be discussed in two different sections below.
+The polly-python library versions 0.0.7 to 0.0.9 are compatible with both storage infrastructures - `v1` and `v2`. In order to facilitate querying on both infrastructures, there are two different API versions as well, `v1` and `v2`, available in polly-python which refer to infrastructure used for query. This could be specified by setting `query_api_version` to 'v1' or 'v2' while passing the query to a function. By default, queries are made against v1. If users want to use `v2` then they will have to pass an additional argument `query_api_version='v2'` in the `query_metadata` function. The querying on these two infrastructures is different and will be discussed in two different sections below.
 
 
 #### 4.3.1 Writing a query in V1 storage infrastructure
@@ -455,7 +499,7 @@ SELECT [ ALL | DISTINCT ] select_expression [, ...]
 [ LIMIT [ count | ALL ] ]
 </code></pre>
 
-Some example queries have been given in our github page - https://github.com/ElucidataInc/polly-python/blob/main/polly-python-query-examples.ipynb
+Some example queries have been given in a notebook on our [github](https://github.com/ElucidataInc/polly-python/blob/main/polly-python-query-examples.ipynb)
 
 #### 4.3.3 Writing conditions with operators
 The following operators can be used to define the conditions in the above mentioned queries:
