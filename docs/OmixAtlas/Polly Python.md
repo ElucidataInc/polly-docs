@@ -296,6 +296,18 @@ omixatlas.update_schema(repo_key, payload)
 
 `payload`: (dict) The payload is a JSON file which should be as per the structure defined for schema. Only data-admin will have the authentication to update the schema.
 
+`payload` can be loaded from the JSON file in which schema is defined in the following manner:
+
+```
+import json
+ 
+# Opening JSON file
+schema = open('schema_file.json')
+ 
+# returns JSON object as a dictionary
+payload = json.load(schema)
+```
+
 ###### 4.2.6.2.3 Insert schema
 Use `insert_schema(repo_key, payload)` to insert a new schema to an OmixAtlas.
 
@@ -306,6 +318,19 @@ omixatlas.insert_schema(repo_key, payload)
 `repo_key`: (str) repo_id OR repo_name. This is a mandatory field.
 
 `payload`: (dict) The payload is a JSON file which should be as per the structure defined for schema. Only data-admin will have the authentication to update the schema.
+
+`payload` can be loaded from the JSON file in which schema is defined in the following manner:
+
+```
+import json
+ 
+# Opening JSON file
+schema = open('schema_file.json')
+ 
+# returns JSON object as a dictionary
+payload = json.load(schema)
+```
+
 
 #### 4.2.7 File format converter functions
 Several datatypes are ingested on Polly after conversion to gct file format. In order to enable consumption of different datatypes, bioinformaticians often use certain open-source packages. 
