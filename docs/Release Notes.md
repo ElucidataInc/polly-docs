@@ -1,4 +1,37 @@
 # Release Notes
+<!--March, 2022-->
+
+<details open>
+<summary><font size="+1"><b>March, 2022</b></font></summary>
+<br>
+  <p class="new-button">New</p>
+  <ul>
+    <li>Users can now host docker based applications and add their own notebook environments using Polly CLI.</li>
+    <li>Users can launch opensource notebooks from GitHub directly on Polly’s compute environment.</li>
+    <li>Users can save dataset from OmixAtlas to workspace as well as upload/download files and folders to/from workspace using polly-python.</li>
+    <li>Users can filter the schema in an Omixatlas specific to the source & data_type using polly-python.</li>
+    <li>Users can access the installed version of polly-python inside python shell or jupyter notebook cell.</li>
+    <li>Users can create cohorts for TCGA Transcriptomics and Mutation data using polly-python.</li>
+    <li>Users can now create an Omixatlas using polly-python.</li>
+    <li>Users can query datasets, samples and features on polly-python across multiple OmixAtlases at once. Find examples here.</li>
+    <li>Recommended disease ontologies are displayed when a user queries disease field in OmixAtlas.</li>
+    <li>Users can now copy/move files (except analysis files) or folder across workspaces and folders on Polly frontend.</li>
+    <li>Users can now launch notebooks situated within folders or sub-folders.</li>
+    <li>Users can also filter folders from workspace contents.</li>
+  </ul>
+  <p class="update-button">Update</p> 
+  <ul>
+    <li>polly-python users can now access schema functions via both repo_id and repo_name.</li>
+    <li>polly-python users can easily convert .gct file format to .maf file format in TCGA and cBioportal repositories using a file format converter function.</li>
+    <li>211 Single Cell datasets were added to OmixAtlas with cluster-level cell type annotation.</li>
+    <li>For 3.5k GEO datasets platform field was updated on Polly.</li>
+    <li>Users can now also preview tsv files along with other files types on Polly.</li>
+    <li>Cell types were added for fetal single cell atlas in Polly.</li>
+  </ul>
+</details>
+    
+<hr>
+
 <!--January, 2022-->
 
 <details open>
