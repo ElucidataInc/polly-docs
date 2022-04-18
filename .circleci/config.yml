@@ -17,6 +17,7 @@ jobs:
       - run:
           name: Installing all Dependencies
           command: |
+            pip install 'jinja2==3.0.0'
             pip install 'mkdocs==1.0.4'
       - run:
           name: convert markdown to html
