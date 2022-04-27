@@ -451,6 +451,11 @@ This function deletes an existing cohort.
 ```
 cohort.delete_cohort()
 ```
+##### 4.2.8.12 Check validity of a cohort
+This function is for validating a cohort. This functions returns a boolean result depending on the validity of the cohort. 
+```
+cohort.is_valid()
+```
 
 ### 4.3 Writing a query
 
