@@ -141,7 +141,7 @@ Constraints on the parameters:-
 1. display_name:  Alphanumeric characters are allowed and the length constraint is between 1 to 30 characters.
 2. description: All characters are allowed and the length constraint is between 1 to 100 characters.
 3. image_url: Users can also enter the path of image_url that they want to showcase on the newly created Omixatlas tile. If the image_url is not provided then the system puts up a default image on the tile of the newly created Omixatlas. Example: https://elucidatainc.github.io/PublicAssets/discover-fe-assets/omixatlas_hex.svg
-4. repo_name: Lowercase alphanumeric (separated by _) is allowed and between 1 to 30 characters.
+4. repo_name: Lowercase alphanumeric characters (separated by _) is allowed and between 1 to 30 characters.
 
 ##### 4.2.2.2 Update an Omixatlas
 Data-admin can update the following metadata of an Omixatlas:-
@@ -157,6 +157,7 @@ omixatlas.update(repo_key, display_name = <Updated display_name string>, descrip
 component_1 = {"data_type":<datatype string>, "component_id":<integer value of the component id>}
 // example: {"data_type":["Transcriptomics"], "component_id":78}</code></pre>
 
+Constraints on components: Components will be a dictionary that will have two mandatory key-value pairs that are data_type and component_id.
 
 #### 4.2.3 Querying the data and the metadata
 To access, filter, and search through the metadata schema, the function mentioned below can be used:
