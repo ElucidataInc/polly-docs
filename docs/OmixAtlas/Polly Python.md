@@ -16,7 +16,8 @@ The following libraries need to be imported over the development environment to 
 
 <pre><code>from polly.auth import Polly
 from polly.omixatlas import OmixAtlas
-from polly.workspaces import Workspaces</code></pre>
+from polly.workspaces import Workspaces
+from polly.cohort import Cohort</code></pre>
 
 ## 3 Authentication
 Authentication of the account is required to be able to access the capabilities of the Polly Python library.
@@ -48,11 +49,18 @@ output = omixatlas.[function()]</code></pre>
 Similarly, for functions related to Workspaces, 
 <pre><code>workspaces = Workspaces()
 output = workspaces.[function()]</code></pre>
+And, for functions related to Cohorts, 
+<pre><code>cohort = Cohort()
+output = cohort.[function()]</code></pre>
 
 The output of the functions is in JSON and/or data frame formats. You can print/download this output.
 
 ### 4.2 Functions in Polly Python
-#### 4.2.1 Get details of all OmixAtlases
+
+
+#### 4.2.1 Summary of Omixatlases
+
+##### 4.2.1.1 Get details of all OmixAtlases
 The following function details all the OmixAtlases accessible by you.
 
 <pre><code>omixatlas.get_all_omixatlas() </code></pre>
@@ -87,7 +95,7 @@ The output of this function would be JSON containing
   ]
 }</code></pre>
 
-#### 4.2.2 Get summary of an OmixAtlas
+##### 4.2.1.2 Get summary of an OmixAtlas
 The following function details a particular OmixAtlas. The **repo_name/repo_id** of this OmixAtlas can be identified by calling the <code>get_all_omixatlas()</code> function.
 
 <pre><code>omixatlas.omixatlas_summary("[repo_id OR repo_name]")</code></pre>
@@ -118,6 +126,37 @@ The output of this function would be JSON containing
     'sample_count': 123
   }
 }</code></pre>
+
+#### 4.2.2 Create and update an Omixatlas
+
+##### 4.2.2.1 Create an Omixatlas
+Data-admin can create an Omixatlas using polly-python. The function create takes in four parameters as described below.
+<pre><code>from polly.omixatlas import OmixAtlas
+omixatlas = OmixAtlas()
+new_repo = omixatlas.create("[display_name]", "[description]", 
+                          repo_name ="[repo_name]" (optional), 
+                          image_url = "[image_url]" (optional))</code></pre>
+
+Constraints on the parameters:-
+1. display_name:  Alphanumeric characters are allowed and the length constraint is between 1 to 30 characters.
+2. description: All characters are allowed and the length constraint is between 1 to 100 characters.
+3. image_url: Users can also enter the path of image_url that they want to showcase on the newly created Omixatlas tile. If the image_url is not provided then the system puts up a default image on the tile of the newly created Omixatlas. Example: https://elucidatainc.github.io/PublicAssets/discover-fe-assets/omixatlas_hex.svg
+4. repo_name: Lowercase alphanumeric (separated by _) is allowed and between 1 to 30 characters.
+
+##### 4.2.2.2 Update an Omixatlas
+Data-admin can update the following metadata of an Omixatlas:-
+
+a. Metadata for an existing Omixatlas. The attributes that can be updated are  
+display_name, description, and image_url.
+b. Adding components(i.e. Apps, Python Notebooks) to an existing Omixatlas.
+
+<pre><code>from polly.omixatlas import OmixAtlas
+omixatlas = OmixAtlas()
+omixatlas.update(repo_key, display_name = <Updated display_name string>, description = <Updated description string>,)
+                image_url = <image_url string>, components = [component_1])
+component_1 = {"data_type":<datatype string>, "component_id":<integer value of the component id>}
+// example: {"data_type":["Transcriptomics"], "component_id":78}</code></pre>
+
 
 #### 4.2.3 Querying the data and the metadata
 To access, filter, and search through the metadata schema, the function mentioned below can be used:
@@ -351,6 +390,66 @@ to: (str) output file format
 For example: 
 ```
 omixatlas.format_converter("cbioportal", "ACC_2019_Mutation_ACYC-FMI-19", "maf")
+```
+
+#### 4.2.8 Working with Cohorts
+Cohort class of polly-python enables users to create cohorts, add/remove datasets or samples from them, merge the dataset, sample, feature and data-matrix level metadata across all samples of the cohort, delete a cohort etc.
+Currently, this function is enabled in the following omixatlas: TCGA, Depmap, LINCS, cBioportal, CPTAC, Immport and GDC.
+##### 4.2.8.1 Create a cohort
+Cohort creation is enabled in the local environment - be it in the polly notebook environment or user's local. The minimum requirement for a cohort is to have a cohort.meta file inside the cohort that defines the .pco format. The cohort.meta file is encrypted in base64 format for keeping the metadata consistent and protected.
+```
+cohort.create_cohort(local_path=”<path>”,cohort_name=”name”,description=”description”, 
+                    repo_key=”repo_key” (optional), sample_id=list (optional))
+```
+##### 4.2.8.2 Add samples to a cohort
+This function allows users to add samples to the cohort.
+```
+cohort.add_to_cohort(repo_key=”<repo_id or repo_name>”,sample_id=[“sample_id1”,…])
+```
+##### 4.2.8.3 Remove samples from a cohort
+This function removes the samples from a cohort. 
+```
+cohort.remove_from_cohort(sample_id=[“sample_id1”,…]))
+```
+##### 4.2.8.4 Return metadata and summary of a cohort
+It returns a tuple with the first value as cohort metadata information (name, description and number of dataset(s) or sample(s) in the cohort) and the second value as dataframe containing the source, dataset_id or sample_id  and data type available in the cohort.
+```
+cohort.summarize_cohort(sample_id=[“sample_id1”,…]))
+```
+##### 4.2.8.5 Load a Cohort into an object
+This function loads an already existing cohort into a newly instantiated object for working on the cohort.
+```
+cohort.load_cohort(local_path=”path to cohort”)
+```
+##### 4.2.8.6 Edit the name and description of a cohort
+This feature is used for renaming cohort_name and/or cohort description from cohort level metadata.
+```
+cohort.edit_cohort(new_cohort_name=”new_name”,new_cohort_description=”new description”)
+```
+##### 4.2.8.7 Merge dataset level metadata of all the samples in the cohort
+Function to merge the dataset level metadata from all the GCT files in a cohort. Returns a pandas Dataframe containing the merged data for analysis.
+```
+cohort.merge_data("dataset")
+```
+##### 4.2.8.8 Merge sample level metadata of all the samples in the cohort
+Function to merge the sample level metadata from all the GCT files in a cohort. Returns a pandas Dataframe containing the merged data for analysis.
+```
+cohort.merge_data("sample")
+```
+##### 4.2.8.9 Merge feature level metadata of all the samples in the cohort
+Function to merge the feature level metadata from all the GCT files in a cohort. Returns a pandas Dataframe containing the merged data for analysis.
+```
+cohort.merge_data("feature")
+```
+##### 4.2.8.10 Merge data matrix of all the samples in the cohort
+Function to merge the data-matrix level metadata from all the GCT files in a cohort. Returns a pandas Dataframe containing the merged data for analysis.
+```
+cohort.merge_data("data_matrix")
+```
+##### 4.2.8.11 Delete the cohort object
+This function deletes an existing cohort.
+```
+cohort.delete_cohort()
 ```
 
 ### 4.3 Writing a query
