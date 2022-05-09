@@ -14,7 +14,7 @@ nav:
   - Discover:
       - About Discover: DataLakeHub/About Discover.md
       - Index of DataLakes: DataLakeHub/About Repositores.md
-      - Accessing Data Programmagtically: DataLakeHub/Accessing Discover programmatically.md
+      - Accessing Data Programmatically: DataLakeHub/Accessing Discover programmatically.md
       - Accessing Data Through UI: DataLakeHub/Accessing Discover through Polly's interface.md
   - OmixAtlas:
       - About OmixAtlas: OmixAtlas/OmixAtlas.md 
