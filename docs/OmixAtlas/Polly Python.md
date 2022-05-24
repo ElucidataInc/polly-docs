@@ -14,9 +14,10 @@ Polly Python library provides convenient access to the above-mentioned functiona
 
 The following libraries need to be imported over the development environment to access the data.
 
-<pre><code>from polly.omixatlas import OmixAtlas
-import pandas as pd
-from json import dumps</code></pre>
+<pre><code>from polly.auth import Polly
+from polly.omixatlas import OmixAtlas
+from polly.workspaces import Workspaces
+from polly.cohort import Cohort</code></pre>
 
 ## 3 Authentication
 Authentication of the account is required to be able to access the capabilities of the Polly Python library.
@@ -36,20 +37,33 @@ To get this token, follow the steps below:
 The following code is required to add the authentication function in the Polly Python library
 
 <pre><code>AUTH_TOKEN = "[authentication_token_copied]"
-library_client = OmixAtlas(AUTH_TOKEN)</code></pre>
+Polly.auth(AUTH_TOKEN)</code></pre>
 
 ## 4 Accessing data in OmixAtlas
 ### 4.1 Calling a function
-Use the response from the authentication token to call any function. E.g.
-<pre><code>output = library_client.[function()]</code></pre>
+In order to call a functions from a particular class, corresponding object should be defined. 
+
+E.g. for functions related to OmixAtlas, 
+<pre><code>omixatlas = OmixAtlas()
+output = omixatlas.[function()]</code></pre>
+Similarly, for functions related to Workspaces, 
+<pre><code>workspaces = Workspaces()
+output = workspaces.[function()]</code></pre>
+And, for functions related to Cohorts, 
+<pre><code>cohort = Cohort()
+output = cohort.[function()]</code></pre>
 
 The output of the functions is in JSON and/or data frame formats. You can print/download this output.
 
 ### 4.2 Functions in Polly Python
-#### 4.2.1 Get details of all OmixAtlases
+
+
+#### 4.2.1 Summary of Omixatlases
+
+##### 4.2.1.1 Get details of all OmixAtlases
 The following function details all the OmixAtlases accessible by you.
 
-<pre><code> get_all_omixatlas() </code></pre>
+<pre><code>omixatlas.get_all_omixatlas() </code></pre>
 
 The output of this function would be JSON containing
 <pre><code>{'data':
@@ -81,10 +95,10 @@ The output of this function would be JSON containing
   ]
 }</code></pre>
 
-#### 4.2.2 Get summary of an OmixAtlas
+##### 4.2.1.2 Get summary of an OmixAtlas
 The following function details a particular OmixAtlas. The **repo_name/repo_id** of this OmixAtlas can be identified by calling the <code>get_all_omixatlas()</code> function.
 
-<pre><code>omixatlas_summary("[repo_id OR repo_name]")</code></pre>
+<pre><code>omixatlas.omixatlas_summary("[repo_id OR repo_name]")</code></pre>
 The output of this function would be JSON containing
 
 <pre><code>{'data':
@@ -113,18 +127,54 @@ The output of this function would be JSON containing
   }
 }</code></pre>
 
+#### 4.2.2 Create and update an Omixatlas
+
+##### 4.2.2.1 Create an Omixatlas
+Data-admin can create an Omixatlas using polly-python. The function create takes in four parameters as described below.
+<pre><code>from polly.omixatlas import OmixAtlas
+omixatlas = OmixAtlas()
+new_repo = omixatlas.create("[display_name]", "[description]", 
+                          repo_name ="[repo_name]" (optional), 
+                          image_url = "[image_url]" (optional))</code></pre>
+
+Constraints on the parameters:-
+1. display_name:  Alphanumeric characters are allowed and the length constraint is between 1 to 30 characters.
+2. description: All characters are allowed and the length constraint is between 1 to 100 characters.
+3. image_url: Users can also enter the path of image_url that they want to showcase on the newly created Omixatlas tile. If the image_url is not provided then the system puts up a default image on the tile of the newly created Omixatlas. Example: https://elucidatainc.github.io/PublicAssets/discover-fe-assets/omixatlas_hex.svg
+4. repo_name: Lowercase alphanumeric characters (separated by _) is allowed and between 1 to 30 characters.
+
+##### 4.2.2.2 Update an Omixatlas
+Data-admin can update the following metadata of an Omixatlas:-
+
+a. Metadata for an existing Omixatlas. The attributes that can be updated are  
+display_name, description, and image_url.
+b. Adding components(i.e. Apps, Python Notebooks) to an existing Omixatlas.
+
+<pre><code>from polly.omixatlas import OmixAtlas
+omixatlas = OmixAtlas()
+omixatlas.update(repo_key, display_name = <Updated display_name string>, description = <Updated description string>,)
+                image_url = <image_url string>, components = [component_1])
+component_1 = {"data_type":<datatype string>, "component_id":<integer value of the component id>}
+// example: {"data_type":["Transcriptomics"], "component_id":78}</code></pre>
+
+Constraints on components: Components will be a dictionary that will have two mandatory key-value pairs that are data_type and component_id.
+
 #### 4.2.3 Querying the data and the metadata
 To access, filter, and search through the metadata schema, the function mentioned below can be used:
 
-<pre><code> query_metadata("[query_written_in_SQL]") </code></pre>
+<pre><code>omixatlas.query_metadata("[query_written_in_SQL]") </code></pre>
 Refer to the Queries section to understand how you could write a query in SQL. The columns returned would depend on the query that was written. The output of the function is a dataframe or a JSON depending on the operations used in the query.
 
 #### 4.2.4 Downloading any dataset
 To download any dataset, the following function can be used to get the signed URL of the dataset.
 
-<pre><code> download_data("[repo_name OR repo_id]", "[dataset_id]")</code></pre>
+<pre><code>omixatlas.download_data("repo_key", "[dataset_id]")</code></pre>
 
-The <code>[repo_name OR repo_id]</code> of this OmixAtlas can be identified by calling the <code>get_all_omixatlas()</code> function. The <code>[dataset_id]</code> can be obtained by querying the metadata at the dataset level using <code>query_metadata("[query written in SQL]")</code>.
+`repo_key`: (str) repo_id OR repo_name from where the data needs to be downloaded.
+
+`dataset_id`: (str) dataset_id which the user wants to download.
+
+The <code>[repo_name OR repo_id]</code> of an OmixAtlas can be identified by calling the <code>get_all_omixatlas()</code> function. The <code>[dataset_id]</code> can be obtained by querying the metadata at the dataset level using <code>query_metadata("[query written in SQL]")</code>.
 
 The output of this function is a *signed URL*. The data can be downloaded by clicking on this URL.
 
@@ -132,175 +182,327 @@ The output of this function is a *signed URL*. The data can be downloaded by cli
 
 <br>The output data is in .gct/h5ad format. This data can be parsed into a data frame for better accessibility using the following code:
 
-##### 4.2.4.1 Downloading .gct as a data frame
-<pre><code>url = library_client.download_data("[repo_id OR repo_name]", "[dataset_id]").get('data')
-file_name = "[dataset_id].gct"
-os.system(f"wget -O '{file_name}' '{url['attributes']['download_url']}'")
-from cmapPy.pandasGEXpress.parse_gct import parse
-data = parse(file_name)</code></pre>
+##### 4.2.4.1 Downloading .gct and opening it in a data frame
+<pre><code>dataset_id = "GSE100003_GPL15207" #dataset which user wants to download.
+repo_key = 9 OR "geo" #repo_id OR repo_name from which dataset should be downloaded from.
+file_name = f"{dataset_id}.gct"
+data = client.download_data(repo_key, dataset_id)
+url = data.get('data').get('attributes').get('download_url')
+status = os.system(f"wget -O '{file_name}' '{url}'")
+if status == 0:
+    print("Downloaded data successfully")
+else:
+    raise Exception("Download not successful")
+</code></pre>
 
-##### 4.2.4.2 Downloading h5ad as a data frame
-<pre><code>url = library_client.download_data("[repo_id OR repo_name]", "[dataset_id]").get('data')
-file_name = "[dataset_id].h5ad"
-os.system(f"wget -O '{file_name}' '{url['attributes']['download_url']}'")
-import scanpy as sc
-data = sc.read_h5ad(file_name)</code></pre>
+In order to parse the .gct data, a python package called cmapPy can be used in the following manner.
+
+<pre><code>import pandas as pd
+import cmapPy
+from cmapPy.pandasGEXpress.parse_gct import parse
+
+gct_obj = parse(file_name) # Parse the file to create a gct object
+df_real = gct_obj.data_df # Extract the dataframe from the gct object
+col_metadata = gct_obj.col_metadata_df # Extract the column metadata from the gct object
+row_metadata = gct_obj.row_metadata_df # Extract the row metadata from the gct object
+</code></pre>
+
+##### 4.2.4.2 Downloading .h5ad file and opening it in a data frame
+<pre><code>dataset_id = "GSE121001_GPL19057" #dataset which user wants to download.
+repo_key = 17 OR "sc_data_lake" #repo_id OR repo_name from which dataset should be downloaded from.
+file_name = f"{dataset_id}.h5ad"
+data = client.download_data(repo_key, dataset_id)
+url = data.get('data').get('attributes').get('download_url')
+status = os.system(f"wget -O '{file_name}' '{url}'")
+if status == 0:
+    print("Downloaded data successfully")
+else:
+    raise Exception("Download not successful")
+</code></pre>
+
+In order to parse the .h5ad data, a python package called scanpy can be used in the following manner.
+
+<pre><code>import pandas as pd
+import scanpy
+data = sc.read_h5ad(file_name)
+obs = data.obs.head()
+var = data.var.head()
+</code></pre>
+
+In order to get started with analysis of single cell data on Polly, users can refer to this [notebook](https://github.com/ElucidataInc/polly-python/blob/main/consumption_starter_notebooks/SingleCell-polly-python.ipynb) hosted on our github.
+
+##### 4.2.4.3 Downloading vcf files
+<pre><code>dataset_id = "gnomad_v2.1.1_genome_TP53" #dataset which user wants to download.
+repo_key = 1628836648493 OR "gnomad" #repo_id OR repo_name from which dataset should be downloaded from.
+file_name = f"{dataset_id}.vcf"
+data = client.download_data(repo_key, dataset_id)
+url = data.get('data').get('attributes').get('download_url')
+status = os.system(f"wget -O '{file_name}' '{url}'")
+if status == 0:
+    print("Downloaded data successfully")
+else:
+    raise Exception("Download not successful")</code></pre>
+
+The downloaded vcf file can be further analysed using the docker environment containing Hail package on Polly.
 
 #### 4.2.5 Working with workspaces
-Polly python provides two functions to create new workspaces and listing existing workspaces
-Following library need to be imported to work with workspaces
+Polly python enables the users to connect OmixAtlas with Workspaces. Currently, there are two functions to create a new workspaces and listing the existing workspaces. The following library needs to be imported for users to work with workspaces.
 
 ```
-from polly import new_workspaces
-
-library_client = new_workspaces.Workspaces(AUTH_TOKEN)
+from polly.workspaces import Workspaces
 ```
-`AUTH_TOKEN` here is the authentication token described in section 3.1 and 3.2
 
-##### 4.2.5.1 Creating new workspace
-use `create_workspace` to create a new workspace with desired name
+##### 4.2.5.1 Creating a new workspace
+Use `create_workspace` to create a new workspace with desired name
 ```
-library_client.create_workspace("name_of_workspace")
+workspaces.create_workspace("name_of_workspace")
 ```
 ##### 4.2.5.2 Fetching existing workspaces
-use `fetch_my_workspaces()` to fetch existing workspaces
+Use `fetch_my_workspaces()` to fetch existing workspaces
 ```
-library_client.fetch_my_workspaces()
+workspaces.fetch_my_workspaces()
 ```  
+##### 4.2.5.3 Upload files and folders to workspaces
+Use `upload_to_workspaces(workspace_id, workspace_path, local_path)` to upload files or folder to a workspace
+```
+workspaces.upload_to_workspaces(workspace_id = int, workspace_path = str, local_path = str)
+```
+##### 4.2.5.4 Download files and folders from workspaces
+Use `download_from_workspaces(workspace_id, workspace_path)` to download files or folder from a workspace
+```
+workspaces.download_to_workspaces(workspace_id = int, workspace_path = str)
+```
+##### 4.2.5.4 Save dataset from OmixAtlas to workspace
+Use `save_to_workspace(repo_id, dataset_id, workspace_id, workspace_path)` to save datasets from an OmixAtlas to a workspace
 
+Example to save the dataset_id 'GSE101127_GPL1355' from repo_id 1615965444377 to a workspace_id 8025 in a folder named 'data'
+```
+omixatlas.save_to_workspace('1615965444377', 'GSE101127_GPL1355', 8025, 'data')
+```
+#### 4.2.6 Working with data schema
 
-### 4.3 Data Schema
+##### 4.2.6.1 Introduction of Data Schema
 The data available within OmixAtlas is curated within 5 indexes/tables on the basis of the information it contains. These five indexes are:
 
-**Dataset level metadata (index: files)**: Contains curated fields like drug, disease, tissue organism, etc for each dataset.
+***Dataset level metadata (index: files)***: Contains curated fields like drug, disease, tissue organism, etc for each dataset.
 
-**Sample level metadata (index: gct_metadata)**: As the name suggests, this contains sample level metadata information for all samples except single-cell samples. It contains curated fields like cell lines, experimental design, etc for each sample except single-cell samples.
+***Sample level metadata (index: gct_metadata)***: As the name suggests, this contains sample level metadata information for all samples except single-cell samples. It contains curated fields like cell lines, experimental design, etc for each sample except single-cell samples.
 
-**Sample level metadata for single-cell (index: h5ad_metadata)**: This table only contains metadata information for single-cell samples. It contains curated fields like cell line, gene counts, UMI counts for each sample.
+***Sample level metadata for single-cell (index: h5ad_metadata)***: This table only contains metadata information for single-cell samples. It contains curated fields like cell line, gene counts, UMI counts for each sample.
 
-**Feature level metadata (index: gct_data)**: This table contains feature level metadata information for all data except single-cell.  It contains the gene/molecule symbol along with the feature intensity for each sample.
+***Feature level metadata (index: gct_data)***: This table contains feature level metadata information for all data except single-cell.  It contains the gene/molecule symbol along with the feature intensity for each sample.
 
-**Feature level metadata for single-cell (index: h5ad_data)**: This table contains feature level metadata information for all single-cell data.  It contains the gene/molecule symbol studied in an experiment along with the cell type and expression value.
+***Feature level metadata for single-cell (index: h5ad_data)***: This table contains feature level metadata information for all single-cell data.  It contains the gene/molecule symbol studied in an experiment along with the cell type and expression value.
 
 To find relevant information that can be used for querying, refer the curated data schema [here](https://docs.elucidata.io/OmixAtlas/Data%20Schema.html).
 
-### 4.4 Writing a query
+##### 4.2.6.2 Functions to interact with Schema
+To enable users to interact with the schema of a particular OmixAtlas, functions for visualizing, updating and inserting schema is released. Updating and inseting schema is allowed for users who have data-admin credentials only.
 
-> **NOTE:** Two API versions, v1 and v2, are currently available in polly-python which refer to infrastructure used for query. This could be specified by setting `query_api_version` to 'v1' or 'v2' while passing the query to a function. For example, `query_api_version='v2'` makes the query against version 2. By default, queries are made against v2. However, not all features are compatible with V2. This document specifies the version compatibility while describing a function or feature.
+###### 4.2.6.2.1 Get schema
+Use `get_schema(repo_key, schema_level, source, data_type)` to extract the schema of an OmixAtlas.
+
+Example to fetch dataset and sample level schema for all datatypes from all sources in GEO Omixatlas
+
+```
+schema = omixatlas.get_schema("geo", ['dataset', 'sample'], "all", "all")
+```
+to fetch the dataframe with dataset level metadata,
+
+```
+schema.dataset
+```
+to fetch the dataframe with sample level metadata,
+```
+schema.sample
+```
+
+`repo_key`: (str) repo_id OR repo_name. This is a mandatory field. 
+
+`schema_level`: (list) The default value is ['dataset', 'sample']. The users can use ['dataset'] OR ['sample'] to fetch the schema of dataset OR sample level metadata respectively.
+
+`source`: (str) is the source from where data is ingested into the Omixatlas.
+
+`data_type`:  (str) is the datatype for which user wants to get the schema for. The default value is 'all', which will fetch the schema of all datatypes except single cell. To fetch the schema for single cell datatype from an OmixAtlas, the user should use 'single_cell'.
+
+###### 4.2.6.2.2 Update schema
+Use `update_schema(repo_key, payload)` to update the existing schema of an OmixAtlas.
+
+```
+omixatlas.update_schema(repo_key, payload)
+```
+
+`repo_key`: (str) repo_id OR repo_name. This is a mandatory field.
+
+`payload`: (dict) The payload is a JSON file which should be as per the structure defined for schema. Only data-admin will have the authentication to update the schema.
+
+`payload` can be loaded from the JSON file in which schema is defined in the following manner:
+
+```
+import json
+ 
+# Opening JSON file
+schema = open('schema_file.json')
+ 
+# returns JSON object as a dictionary
+payload = json.load(schema)
+```
+
+###### 4.2.6.2.3 Insert schema
+Use `insert_schema(repo_key, payload)` to insert a new schema to an OmixAtlas.
+
+```
+omixatlas.insert_schema(repo_key, payload)
+```
+
+`repo_key`: (str) repo_id OR repo_name. This is a mandatory field.
+
+`payload`: (dict) The payload is a JSON file which should be as per the structure defined for schema. Only data-admin will have the authentication to update the schema.
+
+`payload` can be loaded from the JSON file in which schema is defined in the following manner:
+
+```
+import json
+ 
+# Opening JSON file
+schema = open('schema_file.json')
+ 
+# returns JSON object as a dictionary
+payload = json.load(schema)
+```
+
+
+#### 4.2.7 File format converter functions
+Several datatypes are ingested on Polly after conversion to gct file format. In order to enable consumption of different datatypes, bioinformaticians often use certain open-source packages. 
+
+##### 4.2.7.1 Consumption of mutation data using maftools
+With advances in Cancer Genomics, Mutation Annotation Format (MAF) is being widely accepted and used to store somatic variants detected. Mutation datatype on Polly from TCGA and cBioportal repository can now be consumed using an R package called maftools [Github](https://github.com/PoisonAlien/maftools),  [Bioconductor](https://bioconductor.org/packages/release/bioc/vignettes/maftools/inst/doc/maftools.html). This package attempts to summarize, analyze, annotate and visualize MAF files in an efficient manner from either TCGA sources or any in-house studies as long as the data is in MAF format.
+
+Polly users can use the following functions to convert the .gct datatype to .maf datatype for downstream analysis using maftools.
+```
+omixatlas.format_converter(repo_key, dataset_id, to)
+```
+repo_key: (str) repo_id OR repo_name 
+
+dataset_id: (str) dataset_id in the repository
+
+to: (str) output file format
+
+For example: 
+```
+omixatlas.format_converter("cbioportal", "ACC_2019_Mutation_ACYC-FMI-19", "maf")
+```
+
+#### 4.2.8 Working with Cohorts
+Cohort class of polly-python enables users to create cohorts, add/remove datasets or samples from them, merge the dataset, sample, feature and data-matrix level metadata across all samples of the cohort, delete a cohort etc.
+Currently, this function is enabled in the following omixatlas: TCGA, Depmap, LINCS, cBioportal, CPTAC, Immport and GDC.
+##### 4.2.8.1 Create a cohort
+Cohort creation is enabled in the local environment - be it in the polly notebook environment or user's local. The minimum requirement for a cohort is to have a cohort.meta file inside the cohort that defines the .pco format. The cohort.meta file is encrypted in base64 format for keeping the metadata consistent and protected.
+```
+cohort.create_cohort(local_path=”<path>”,cohort_name=”name”,description=”description”, 
+                    repo_key=”repo_key” (optional), sample_id=list (optional))
+```
+##### 4.2.8.2 Add samples to a cohort
+This function allows users to add samples to the cohort.
+```
+cohort.add_to_cohort(repo_key=”<repo_id or repo_name>”,sample_id=[“sample_id1”,…])
+```
+##### 4.2.8.3 Remove samples from a cohort
+This function removes the samples from a cohort. 
+```
+cohort.remove_from_cohort(sample_id=[“sample_id1”,…]))
+```
+##### 4.2.8.4 Return metadata and summary of a cohort
+It returns a tuple with the first value as cohort metadata information (name, description and number of dataset(s) or sample(s) in the cohort) and the second value as dataframe containing the source, dataset_id or sample_id  and data type available in the cohort.
+```
+cohort.summarize_cohort(sample_id=[“sample_id1”,…]))
+```
+##### 4.2.8.5 Load a Cohort into an object
+This function loads an already existing cohort into a newly instantiated object for working on the cohort.
+```
+cohort.load_cohort(local_path=”path to cohort”)
+```
+##### 4.2.8.6 Edit the name and description of a cohort
+This feature is used for renaming cohort_name and/or cohort description from cohort level metadata.
+```
+cohort.edit_cohort(new_cohort_name=”new_name”,new_cohort_description=”new description”)
+```
+##### 4.2.8.7 Merge dataset level metadata of all the samples in the cohort
+Function to merge the dataset level metadata from all the GCT files in a cohort. Returns a pandas Dataframe containing the merged data for analysis.
+```
+cohort.merge_data("dataset")
+```
+##### 4.2.8.8 Merge sample level metadata of all the samples in the cohort
+Function to merge the sample level metadata from all the GCT files in a cohort. Returns a pandas Dataframe containing the merged data for analysis.
+```
+cohort.merge_data("sample")
+```
+##### 4.2.8.9 Merge feature level metadata of all the samples in the cohort
+Function to merge the feature level metadata from all the GCT files in a cohort. Returns a pandas Dataframe containing the merged data for analysis.
+```
+cohort.merge_data("feature")
+```
+##### 4.2.8.10 Merge data matrix of all the samples in the cohort
+Function to merge the data-matrix level metadata from all the GCT files in a cohort. Returns a pandas Dataframe containing the merged data for analysis.
+```
+cohort.merge_data("data_matrix")
+```
+##### 4.2.8.11 Delete the cohort object
+This function deletes an existing cohort.
+```
+cohort.delete_cohort()
+```
+##### 4.2.8.12 Check validity of a cohort
+This function is for validating a cohort. This functions returns a boolean result depending on the validity of the cohort. 
+```
+cohort.is_valid()
+```
+
+### 4.3 Writing a query
+
+The polly-python library versions 0.0.7 to 0.0.9 are compatible with both storage infrastructures - `v1` and `v2`. In order to facilitate querying on both infrastructures, there are two different API versions as well, `v1` and `v2`, available in polly-python which refer to infrastructure used for query. This could be specified by setting `query_api_version` to 'v1' or 'v2' while passing the query to a function. By default, queries are made against v1. If users want to use `v2` then they will have to pass an additional argument `query_api_version='v2'` in the `query_metadata` function. The querying on these two infrastructures is different and will be discussed in two different sections below.
+
+
+#### 4.3.1 Writing a query in V1 storage infrastructure
 
 The complete syntax for searching and aggregating data is as follows:
 
 <pre><code>SELECT [DISTINCT] (* | expression) [[AS] alias] [, ...]
-[ WITH with_query [, ...] ]
-SELECT [ ALL | DISTINCT ] select_expression [, ...]
-[ FROM from_item [, ...] ]
-[ WHERE condition ]
-[ GROUP BY [ ALL | DISTINCT ] grouping_element [, ...] ]
-[ HAVING condition ]
-[ { UNION | INTERSECT | EXCEPT } [ ALL | DISTINCT ] select ]
-[ ORDER BY expression [ ASC | DESC ] [ NULLS FIRST | NULLS LAST] [, ...] ]
-[ OFFSET count [ ROW | ROWS ] ]
-[ LIMIT [ count | ALL ] ]
+FROM { index_name | {[repo_id]|[repo_name]}.{datasets|samples|features} }
+[WHERE predicates]
+[GROUP BY expression [, ...]
+ [HAVING predicates]]
+[ORDER BY expression [IS [NOT] NULL] [ASC | DESC] [, ...]]
+[LIMIT [offset, ] size]
 </code></pre>
 
-
-#### 4.4.1 Querying the dataset level metadata:
+##### 4.3.1.1 Querying the dataset level metadata:
 <pre><code> query = "SELECT [column_name] FROM [files] WHERE [column_name]='[value]'"
  query = "SELECT [column_name] FROM [repo_name].datasets WHERE [column_name]='[value]'"
  query = "SELECT [column_name] FROM [repo_id].datasets WHERE [column_name]='[value]'"
 </code></pre>
 
-#### 4.4.2 Querying the sample level metadata:
-##### For all samples except Single Cell
+##### 4.3.1.2 Querying the sample level metadata:
+###### For all samples except Single Cell
 <pre><code>query = "SELECT [column_name] FROM [gct_metadata] WHERE [column_name]='[value]'"
 query = "SELECT [column_name] FROM [repo_name].samples WHERE [column_name]='[value]'"
 query = "SELECT [column_name] FROM [repo_id].samples WHERE [column_name]='[value]'"
 </code></pre>
 
-##### For samples in Single Cell
+###### For samples in Single Cell
 <pre><code>query = "SELECT [column_name] FROM [h5ad_metadata] WHERE [column_name]='[value]'"</code></pre>
 
-#### 4.4.3 Querying the feature level metadata:
-##### For all features except Single Cell
+##### 4.3.1.3 Querying the feature level metadata:
+###### For all features except Single Cell
 <pre><code>query = "SELECT [column_name] FROM [gct_data] WHERE [column_name]='[value]'"
 query = "SELECT [column_name] FROM [repo_name].features WHERE [column_name]='[value]'"
 query = "SELECT [column_name] FROM [repo_id].features WHERE [column_name]='[value]'"
 </code></pre>
 
-##### For features in Single Cell
+###### For features in Single Cell
 <pre><code>query = "SELECT [column_name] FROM [h5ad_data] WHERE [column_name]='[value]'"</code></pre>
 
-#### 4.4.4 Querying available tables in an altas
-
-The tables available for querying in an atlas could be shown by using the following command
-
-```
-query = "SHOW TABLES IN repo_name "
-```
-For example, all the tables in `liveromix_atlas` could be known by constructing following query and passing it to 'query_metadata'
-
-```
-query = "SHOW TABLES IN liveromix_atlas "
-library_client.query_metadata(
-    query,
-    query_api_version="v2"  
-)
-
-```
-#### 4.4.5 Description of a table
-
-To obtain the names of columns in a table, use following query
-
-```
-query = "DESCRIBE repo_name.table_name"
-```
-For example, to know the dataset columns in `liveromix_atlas`, following code can be used
-
-```
-query = " DESCRIBE liveromix_atlas.datasets "
-library_client.query_metadata(
-    query,
-    query_api_version="v2"    
-)
-
-```  
-#### 4.4.6 Querying expression matrices of datasets
-
-The expression matrices of the datasets can be queried. To do this, the value of `kw_data_table_name` column for a dataset can be used in conjunction with the `expr_tables` prefix.
-
-For example, to search dataset “GSE54234_GPL13912” in liveromix_atlas, the query will look like
-
-```
-SELECT * FROM expr_tables.liveromix_atlas__gse54234_gpl13912 WHERE ...
-
-```  
-For getting the columns to search in the above example, a query can be constructed to describe `expr_tables.liveromix_atlas__gse54234_gpl13912` table as explained in section 4.4.5
-
-### 4.5 Writing conditions with operators
-The following operators can be used to define the conditions in the above mentioned queries:
-
-Operators  | Functions performed
-------------- | -------------
-<code>=</code> |  **Equal to** operator which can be used to find matching strings with values in the columns
-<code><></code> | **Not equal to** operator which can be used to find non-matching strings with values in the columns
-<code>></code> | **Greater than** operator which can be used **ONLY** for integer based columns
-<code><</code> | **Less than** operator which can be used **ONLY** for integer based columns
-<code>>=</code> | **Greater than or equal to** operator which can be used **ONLY** for integer based columns
-<code><=</code> | **Less than or equal to** operator which can be used **ONLY** for integer based columns
-<code>IS NULL</code> | Check if the field value is <code>NULL</code>.
-<code>IS NOT NULL</code> | Check if the field value is <code>NOT NULL</code>.
-<code>AND</code> | All values across the parameters searched for have to be present in a dataset for it to be returned as a match when the AND operator is used. <br><br>e.g. “organism = ‘Homo sapiens' AND disease = 'Carcinoma, Hepatocellular’” would only return datasets that belong to homo sapiens and have the disease as hepatocellular carcinoma.
-<code>OR</code> | Atleast any one value across the parameters searched for have to be present in a dataset for it to be returned as a match when the OR operator is used. <br><br>e.g. <code>organism = 'Homo sapiens' OR disease = 'Carcinoma, Hepatocellular'</code> would return datasets that belong to homo sapiens or have the disease as hepatocellular carcinoma or match both criteria.
-<code>MATCH QUERY(<column_name>,'value')</code> | It works like a fuzzy search. If you add a string for a parameter with this operator, it would return all possible results matching each word in the string. The search output is returned with a “Score” using which the output is sorted. <br><br>e.g. <code>MATCH_QUERY(description,'Transcriptomics profiling')</code> would return all datasets having <code>transcriptomics profiling</code> , <code>Transcriptomics</code> and <code>profiling</code> as possible terms within their description. Each dataset would be scored on the basis of matching of the searched string with the information present within the dataset. It works with API version V1 only hence `query_api_version="v1"` must be passed along with the query.
-<code>MATCH PHRASE(<column_name>,'value')</code> | This can be used for exact phrase match with the information being searched for. <br><br>e.g. <code>MATCH_PHRASE(description,'Transcriptomics profiling')</code> would only return the datasets that have <code>Transcriptomics profiling</code> within their description. It works with API version V1 only hence `query_api_version="v1"` must be passed along with the query.
-<code>MULTI MATCH('query'='value', 'column_name'='value)</code> | This can be used to search for text in multiple fields, use <code>MULTI MATCH('query'='value', 'column_name'='value)</code>. <br><br>e.g. <code>MULTI MATCH('query'='Stem Cells', 'fields'='tissue','description')</code> would return datasets that have <code>"Stem Cell"</code> in either <code>tissue</code> OR <code>description</code> fields.
-<code>GROUP BY</code> | The <code>GROUP BY</code> operator groups rows that have the same values into summary rows. The GROUP BY statement is often used with aggregate functions (COUNT, MAX, MIN, SUM, AVG) to group the result-set by one or more columns.
-<code>HAVING</code> | Use the HAVING clause to aggregate inside each bucket based on aggregation functions (COUNT, AVG, SUM, MIN, and MAX). The HAVING clause filters results from the GROUP BY clause
-<code>COUNT(*)</code> | This counts each row present in a table/index being queried.<br><br> **NOTE: The output of this query would return a JSON stating the total number of rows in the table**
-<code>LIMIT</code> | **NOTE: The response of any query returns 200 entries by default**. <br>You can extend this by defining the LIMIT of the results you want to query to be able to return.
-<code>ORDER BY</code> | Can only be used to sort the search results using integer based parameters in the schema. Sorting on the basis of dataset_id, number of samples, <code>_score</code> of the data is available at the dataset-level metadata. <code>ASC</code> or <code>DESC</code> can be used to define whether you want to order the rows in ascending or descending order respectively
-
-## 5 Experimental Expanding Search Feature
+##### 4.3.1.4 Experimental Expanding Search Feature
 A disease is described by many different names in the literature. If we search it with a keyword, datasets annotated with related keywords for the same disease are missed in the output. For example, if 'nash' is searched for disease, 'non-alcoholic fatty liver disease', 'nonalcoholic steatohepatitis', 'nash-non-alcoholic steatohepatitis', 'non-alcoholic steatohepatitis' are missed although they are valid hits for disease keyword 'nash'.
 
 To address this, we have included an experimental feature which allows expansion of disease query to include additional similar keywords based on ontology mapping. The query written in the Polly Python Library is expanded on the basis of the ontology tree mapping available in the following resources
@@ -319,29 +521,25 @@ To address this, we have included an experimental feature which allows expansion
 
 Expanding search feature could be use in the following way
 
-> Note: Experimental search feature currently only works with API v1. For this reason, `query_api_version="v1"` must be included while using this feature.    
-
 1. Setting "expand" to `True`: It allows expansion of the query to include disease terms children from the ontology tree. It means no false positive datasets are included in the output while including more true positives.  
 
 ```
-result = library_client.query_metadata(
+result = omixatlas.query_metadata(
     query=user_query,
-    experimental_features = {"expand":True, "related_terms":False},
-    query_api_version="v1"
+    experimental_features = {"expand":True, "related_terms":False}
   )
 ```
 2. Setting "related_terms" to `True`: It allows expansion of query by including immediate parent of the disease term in the ontology tree. It causes maximum expansion but a few false positive datasets may be included.
 
 ```
-result = library_client.query_metadata(
+result = omixatlas.query_metadata(
     query=user_query,
-    experimental_features = {"expand":True, "related_terms":True},
-    query_api_version="v1")
+    experimental_features = {"expand":True, "related_terms":True})
 ```
 
-## 6 Example Use Cases
+##### 4.3.1.5 Example queries
 
-### 6.1 Querying datasets in Liver OmixAtlas
+###### 4.3.1.5.1 Querying datasets in Liver OmixAtlas
 1. To identify datasets belonging to the tissue Liver, disease Liver cirrhosis and organism Homo sapiens
 
     ```
@@ -406,7 +604,7 @@ result = library_client.query_metadata(
     ```
 In all the examples above `liveromix_atlas_files` could be used in place of `liveromix_atlas.datasets`
 
-### 6.2 Querying samples in Liver OmixAtlas
+###### 4.3.1.5.2 Querying samples in Liver OmixAtlas
 1. Select a sample with a GEO ID
 
     ```
@@ -448,7 +646,7 @@ In all the examples above `liveromix_atlas_files` could be used in place of `liv
     ```
 In all the examples above `liveromix_atlas_gct_metadata` could be used in place of `liveromix_atlas.samples`
 
-### 6.3 Querying features in Liver OmixAtlas
+###### 4.3.1.5.3 Querying features in Liver OmixAtlas
 1. Identify all samples in which the gene “YAP1” is upregulated
 
     ```
@@ -459,3 +657,47 @@ In all the examples above `liveromix_atlas_gct_metadata` could be used in place 
                 """
     ```
 In this example `liveromix_atlas_gct_data` could be used in place of `liveromix_atlas.features`
+
+
+
+#### 4.3.2 Writing a query in V2.1 storage infrastructure
+
+The complete syntax for searching and aggregating data is as follows:
+
+<pre><code>[ WITH with_query [, ...] ]
+SELECT [ ALL | DISTINCT ] select_expression [, ...]
+[ FROM from_item [, ...] ]
+[ WHERE condition ]
+[ GROUP BY [ ALL | DISTINCT ] grouping_element [, ...] ]
+[ HAVING condition ]
+[ { UNION | INTERSECT | EXCEPT } [ ALL | DISTINCT ] select ]
+[ ORDER BY expression [ ASC | DESC ] [ NULLS FIRST | NULLS LAST] [, ...] ]
+[ OFFSET count [ ROW | ROWS ] ]
+[ LIMIT [ count | ALL ] ]
+</code></pre>
+
+Some example queries have been given in a notebook on our [github](https://github.com/ElucidataInc/polly-python/blob/main/polly-python-query-examples.ipynb)
+
+#### 4.3.3 Writing conditions with operators
+The following operators can be used to define the conditions in the above mentioned queries:
+
+Operators  | Functions performed
+------------- | -------------
+<code>=</code> |  **Equal to** operator which can be used to find matching strings with values in the columns
+<code><></code> | **Not equal to** operator which can be used to find non-matching strings with values in the columns
+<code>></code> | **Greater than** operator which can be used **ONLY** for integer based columns
+<code><</code> | **Less than** operator which can be used **ONLY** for integer based columns
+<code>>=</code> | **Greater than or equal to** operator which can be used **ONLY** for integer based columns
+<code><=</code> | **Less than or equal to** operator which can be used **ONLY** for integer based columns
+<code>IS NULL</code> | Check if the field value is <code>NULL</code>.
+<code>IS NOT NULL</code> | Check if the field value is <code>NOT NULL</code>.
+<code>AND</code> | All values across the parameters searched for have to be present in a dataset for it to be returned as a match when the AND operator is used. <br><br>e.g. “organism = ‘Homo sapiens' AND disease = 'Carcinoma, Hepatocellular’” would only return datasets that belong to homo sapiens and have the disease as hepatocellular carcinoma.
+<code>OR</code> | Atleast any one value across the parameters searched for have to be present in a dataset for it to be returned as a match when the OR operator is used. <br><br>e.g. <code>organism = 'Homo sapiens' OR disease = 'Carcinoma, Hepatocellular'</code> would return datasets that belong to homo sapiens or have the disease as hepatocellular carcinoma or match both criteria.
+<code>MATCH QUERY(<column_name>,'value')</code> | It works like a fuzzy search. If you add a string for a parameter with this operator, it would return all possible results matching each word in the string. The search output is returned with a “Score” using which the output is sorted. <br><br>e.g. <code>MATCH_QUERY(description,'Transcriptomics profiling')</code> would return all datasets having <code>transcriptomics profiling</code> , <code>Transcriptomics</code> and <code>profiling</code> as possible terms within their description. Each dataset would be scored on the basis of matching of the searched string with the information present within the dataset.
+<code>MATCH PHRASE(<column_name>,'value')</code> | This can be used for exact phrase match with the information being searched for. <br><br>e.g. <code>MATCH_PHRASE(description,'Transcriptomics profiling')</code> would only return the datasets that have <code>Transcriptomics profiling</code> within their description.
+<code>MULTI MATCH('query'='value', 'column_name'='value)</code> | This can be used to search for text in multiple fields, use <code>MULTI MATCH('query'='value', 'column_name'='value)</code>. <br><br>e.g. <code>MULTI MATCH('query'='Stem Cells', 'fields'='tissue','description')</code> would return datasets that have <code>"Stem Cell"</code> in either <code>tissue</code> OR <code>description</code> fields.
+<code>GROUP BY</code> | The <code>GROUP BY</code> operator groups rows that have the same values into summary rows. The GROUP BY statement is often used with aggregate functions (COUNT, MAX, MIN, SUM, AVG) to group the result-set by one or more columns.
+<code>HAVING</code> | Use the HAVING clause to aggregate inside each bucket based on aggregation functions (COUNT, AVG, SUM, MIN, and MAX). The HAVING clause filters results from the GROUP BY clause
+<code>COUNT(*)</code> | This counts each row present in a table/index being queried.<br><br> **NOTE: The output of this query would return a JSON stating the total number of rows in the table**
+<code>LIMIT</code> | **NOTE: The response of any query returns 200 entries by default**. <br>You can extend this by defining the LIMIT of the results you want to query to be able to return.
+<code>ORDER BY</code> | Can only be used to sort the search results using integer based parameters in the schema. Sorting on the basis of dataset_id, number of samples, <code>_score</code> of the data is available at the dataset-level metadata. <code>ASC</code> or <code>DESC</code> can be used to define whether you want to order the rows in ascending or descending order respectively
