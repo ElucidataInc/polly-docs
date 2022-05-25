@@ -1,8 +1,9 @@
+# Accessing OmixAtlas
 ![01_OA](../img/OmixAtlas-Images/01_OA_landing_page.png)
 
 The OmixAtlas landing page offers an overview of the various public and proprietary OmixAtlases available on Polly. The numbers of total and normal samples are displayed under each OmixAtlas. A search feature is also available to browse the collection of OmixAtlases.
 
-OA SUMMARY PAGE
+## OA SUMMARY PAGE
 ![02_OA](../img/OmixAtlas-Images/02_OA_summary_page.png)
 
 Once the user chooses an OmixAtlas, a summary page offers an overview of the OmixAtlas.The number of total datasets is visible just above the search bar. General details such as the number of tissues, diseases, organisms, etc. are displayed above a graphical summary as shown in the figure. To view 
