@@ -49,21 +49,20 @@ To download a dataset, the user can click on the three dots next to the chosen d
 ![14_DUI_B](../img/OmixAtlas-Images/14_Dataset_UI_b.png)
 
 # VIEW DETAILS
-1. Screenshot
-![15_VD](../img/OmixAtlas-Images/15_View_details.png)
+1. Dataset Overview
 
-
-2. Dataset Overview
 On clicking the view details option from the dropdown menu of the respective dataset from the results page, users are directed to the view details page. There are three main sections starting with the dataset overview that includes the abstract, the number of samples, the link to the source and the metadata tags associated with the dataset.
+
+![15_VD](../img/OmixAtlas-Images/15_View_details.png)
  
-3. Metadata
+2. Sample Metadata
 The metadata section comes next. Here, a dashboard showcasing charts is displayed for different metadata attributes such as disease, cell type and tissue type. There is also an option to view the metadata in a tabular format - a comprehensive snapshot of the biological characteristics of samples used in the dataset. 
  
 ![16_MD_A](../img/OmixAtlas-Images/16_Metadata_a.png)
 ![17_MD_B](../img/OmixAtlas-Images/17_Metadata_b.png)
 
 
-4. Processed Data
+3. Processed Data
 
 Finally, the processed data with normalized values is presented as a table that is available for downloading. 
 ![18_PD](../img/OmixAtlas-Images/18_Processed_data.png)
