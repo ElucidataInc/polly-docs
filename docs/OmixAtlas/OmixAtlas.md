@@ -20,7 +20,7 @@ Take a data-centric approach to research with ML-ready biomolecular data on Omix
 4. Integratability: OmixAtlas is made available on Polly’s data infrastructure, which allows querying of the data through point and click solutions and advanced querying through polly libraries. Code-based advanced access means that you can use these data on Polly or outside of Polly on a platform of your choice.
 
 # How is OmixAtlas different from available biomedical data repositories?
-- The data in OmixAtlas are curated through Polly’s ML-based curation workflow that structures different types of data, harmonizes metadata, and makes the data analysis ready. All data available in OmixAtlas can be queried and directly used in downstream statistical or ML-based analyses. With OmixAtlas one can:
+The data in OmixAtlas are curated through Polly’s ML-based curation workflow that structures different types of data, harmonizes metadata, and makes the data analysis ready. All data available in OmixAtlas can be queried and directly used in downstream statistical or ML-based analyses. With OmixAtlas one can:
 
 - Access data from heterogeneous sources: OmixAtlas has over 26 data types from over 30 public repositories and other sources in one central location. You can access study, samples, data files, and associated metadata all in one place.
 
@@ -31,6 +31,13 @@ Take a data-centric approach to research with ML-ready biomolecular data on Omix
 - Access and analyze data on any computational environment: Stream data to your compute infrastructure from OmixAtlas. Focus on analysis while OmixAtlas takes care of data storage and management.
 
 - Manage in-house data at scale with Enterprise OmixAtlas: Harmonize proprietary data using the scalable curation infrastructure of Polly, making it ML-ready for discovering new insights.
+
+# How can OmixAtlas benefit the user?
+|**Working with multi-omics data**|**How our OmixAtlases can help**|
+| :-: | :-: |
+|Finding multi-omics data relevant to me can take weeks as data is semi-structured and scattered across several sources|Access to thousands of tissue-derived or disease specific multi-omics datasets from multiple sources in one place|
+|Enriching my data and preparing it for machine learning applications takes time and effort that could be better spent on insight discovery|OmixAtlas data is processed through a standard pipeline and enriched with harmonized, scientifically relevant metadata, ready for machine learning applications|
+|I want access to curated data but don’t want to switch to another computational platform|OmixAtlas data can be accessed and analyzed on your own existing computational infrastructure|
 
 # OmixAtlas Case Studies
 
