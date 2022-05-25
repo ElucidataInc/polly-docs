@@ -1,10 +1,10 @@
 
-# APPLICATIONS
+# Applications
 ![19_AP_A](../img/OmixAtlas-Images/19_Applications_a.png)
 
 ![20_AP_B](../img/OmixAtlas-Images/20_Applications_b.png)
 
-# GENE BASED OMIX ATLAS
+# Gene Based OmixAtlas
 **Currently there are two Gene Based OmixAtlases namely gnomAD and UKBioBank.** 
 
 
