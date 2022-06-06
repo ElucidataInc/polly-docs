@@ -22,7 +22,7 @@ from polly.cohort import Cohort</code></pre>
 ## 3 Authentication
 Authentication of the account is required to be able to access the capabilities of the Polly Python library.
 
-### 3.1 Copying authentication token
+### 3.1 Copying authentication token or key
 To get this token, follow the steps below:
 
 1. Go to [Polly](https://polly.elucidata.io)<br>
@@ -31,13 +31,19 @@ To get this token, follow the steps below:
 
 3. Click on **Authentication** on the panel that appears<br>
 
-4. Click on **Copy** to copy the authentication token<br>
+4. Click on **Copy** to copy the authentication token or key<br>
 
 ### 3.2 Using the token
 The following code is required to add the authentication function in the Polly Python library
 
 <pre><code>AUTH_TOKEN = "[authentication_token_copied]"
 Polly.auth(AUTH_TOKEN)</code></pre>
+
+### 3.3 Using the key
+Go to authentication keys and input the name, description to generate a key. This can be copied and used as shown below:-
+
+<pre><code>AUTH_KEY = "[authentication_key_copied]"
+Polly.auth(AUTH_KEY)</code></pre>
 
 ## 4 Accessing data in OmixAtlas
 ### 4.1 Calling a function
