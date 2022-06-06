@@ -40,7 +40,7 @@ The following code is required to add the authentication function in the Polly P
 Polly.auth(AUTH_TOKEN)</code></pre>
 
 ### 3.3 Using the key
-The following code is required to add the authentication function in the Polly Python library
+Go to authentication keys and input the name, description to generate a key. This can be copied and used as shown below:-
 
 <pre><code>AUTH_KEY = "[authentication_key_copied]"
 Polly.auth(AUTH_KEY)</code></pre>
