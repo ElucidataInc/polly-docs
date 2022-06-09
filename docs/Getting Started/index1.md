@@ -25,7 +25,7 @@ You can sign in Polly with the provided credentials: Username and Password, conn
 
 Once logged in, you do not get automatically logged out and will have to log out manually with the command to log out.
 
-##Navigating through the platform
+## Navigating through the platform
 
 The Polly Landing page provides access to 3 distinct interconnected modules on Polly.
 
@@ -49,16 +49,16 @@ The Polly Landing page provides access to 3 distinct interconnected modules on P
 
 ![Code](../img/Home/code.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
 
-##Getting help on the platform
+## Getting help on the platform
 
 We firmly believe that our greatest achievement is to enable customers and their success on the platform. The customer success team can be reached anytime on [polly@elucidata.io](mailto:polly@elucidata.io) for queries on the product, data analysis and feature requests. We also offer a detailed on-boarding plan to get your team up and running on Polly as well as library of resources, videos and publications.
 
-##Live Chat
+## Live Chat
 
 Our platform uses Intercom as a standard messenger launcher. A text bubble pops up, inquiring if you need help. Polly embeds this support to establish a dedicated customer success manager. Technical support is available from 9 AM to 8 PM EST and CET.
 
 ![Intercom](../img/Home/Chat.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
 
-##Email
+## Email
 
 You can always email the team at [polly@elucidata.io](mailto:polly@elucidata.io) for further support, to send feedback, or to suggest features.
