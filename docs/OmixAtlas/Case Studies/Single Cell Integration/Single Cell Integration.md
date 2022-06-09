@@ -2607,13 +2607,6 @@ DimPlot(liver.combined.sct, reduction = "umap", group.by = 'Type', cols = Discre
 ```
 
 
-![png](output_89_0.png)
-
-
-
-![png](output_89_1.png)
-
-
 Marker analysis of fibroblast population
 
 
@@ -2640,46 +2633,6 @@ VlnPlot(liver.combined.sct, features = "OAZ2", idents = c("7","15"))
 VlnPlot(liver.combined.sct, features = "ADAMTS4", idents = c("7","15"))
 VlnPlot(liver.combined.sct, features = "GPR4", idents = c("7","15"))
 ```
-
-
-![png](output_93_0.png)
-
-
-
-![png](output_93_1.png)
-
-
-
-![png](output_93_2.png)
-
-
-
-![png](output_93_3.png)
-
-
-
-![png](output_93_4.png)
-
-
-
-![png](output_93_5.png)
-
-
-
-![png](output_93_6.png)
-
-
-
-![png](output_93_7.png)
-
-
-
-![png](output_93_8.png)
-
-
-
-![png](output_93_9.png)
-
 
 We observed that fibrogenic genes (e.g., COL1A1, COL1A2, COL3A1 ) and proteoglycan encoding genes (e.g., LUM, BGN ) were overexpressed in cluster 15. Cluster 7, however showed high overall expression of SPARCL1, GJA4. 
 
@@ -3447,22 +3400,6 @@ ggsurvplot(surv[[1]], data=surv[[2]], pval=T, risk.table=T, title=paste("ADAMTS4
 surv = survival_gene_exp("GPR4")
 ggsurvplot(surv[[1]], data=surv[[2]], pval=T, risk.table=T, title=paste("GPR4"))
 ```
-
-
-![png](output_109_0.png)
-
-
-
-![png](output_109_1.png)
-
-
-
-![png](output_109_2.png)
-
-
-
-![png](output_109_3.png)
-
 
 ## Appendix
 
