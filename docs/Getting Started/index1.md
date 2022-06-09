@@ -41,7 +41,7 @@ The Polly Landing page provides access to 3 distinct interconnected modules on P
 
      Polly hosts a suite of apps and production-ready workflows to analyze and process a variety of data with ease. You can build and host your custom workflows from individual components or choose from a suite of ready-to-use workflows on Polly.
 
-![Manage](../img/Home/Apps1.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
+![Manage](../img/Home/Applications.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
 
 *   [Write & Maintain Code](https://docs.elucidata.io/Scaling%20compute/Polly%20Notebooks.html)
 
@@ -63,7 +63,7 @@ We firmly believe that our greatest achievement is to enable customers and their
 
 Our platform uses Intercom as a standard messenger launcher. A text bubble pops up, inquiring if you need help. Polly embeds this support to establish a dedicated customer success manager. Technical support is available from 9 AM to 8 PM EST and CET.
 
-![Intercom](../img/Home/Intercom.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
+![Intercom](../img/Home/Chat.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
 
 ##Email
 
