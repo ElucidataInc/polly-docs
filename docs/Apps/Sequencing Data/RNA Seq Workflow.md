@@ -142,7 +142,7 @@ PCA plot allows you to understand the clustering pattern between biologically gr
 
 ##Heat map
 
-A heat map is a graphical representation of data where the individual values contained in a matrix are represented on a color scale. Here the heat map represents expression value of each gene corresponding to the number of samples in the data. The filter icon can be used to filter out the desired samples and genes. Once the filter is applied, the heat map containing the selected genes and sample would b generated.
+A heat map is a graphical representation of data where the individual values contained in a matrix are represented on a color scale. Here the heat map represents expression value of each gene corresponding to the number of samples in the data. The filter icon can be used to filter out the desired samples and genes. Once the filter is applied, the heat map containing the selected genes and sample would be generated.
 
 ![Heat map](../../img/RNASeq/Screenshot 2020-03-27 at 2.21.54 PM.png) <center>**Figure 12.** Heat map</center>
 
@@ -206,7 +206,7 @@ On selecting all the options along with the target database, click on the option
 
 Enrichr performs the enrichment analysis on the gene set relayed, either in the Differential Expression tab or X2K analysis tab. Enrichment analysis is a computational method for inferring knowledge about an input gene set by comparing it to annotated gene sets representing prior biological knowledge. Enrichment analysis checks whether an input set of genes significantly overlaps with annotated gene sets.
 
-To perfomr the enrichment analysis, select the desired Enrichr database.
+To perform the enrichment analysis, select the desired Enrichr database.
 
 ![Enrichr)](../../img/RNASeq/Screenshot 2020-03-27 at 2.48.42 PM.png) <center>**Figure 17.** Enrichr</center>
 
