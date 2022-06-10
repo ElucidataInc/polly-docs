@@ -55,9 +55,9 @@ The background mapping metadata is a .csv, .xls, .xlsx or .txt file that contain
 
 ##Caveats
 
-*   The intensity file should be the El-MAVEN outout in peak detailed format.
+*   The intensity file should be the El-MAVEN output in peak detailed format.
 *   The fragment mapping metadata file's name should start with "metadata_mq".
-*   The backround mapping metadata file's name should start with "metadata_sample".
+*   The background mapping metadata file's name should start with "metadata_sample".
 
 #Tutorial
 
@@ -69,7 +69,7 @@ Select *Labeled LC-MS/MS Workflow* from the dashboard under the *Metabolomics Da
 
 ##Upload Files
 
-Click on *Upload El-MAVEN Output* and *Upload Cohort FIle* to upload the intensity and metadata files respectively. y or from Polly. This is optional. The metadata is not used in the NA correction, however, if you wants to visualize plots, the sample-cohort mapping would be required. Click on *Run* to proceed.
+Click on *Upload El-MAVEN Output* and *Upload Cohort FIle* to upload the intensity and metadata files respectively. This is optional. The metadata is not used in the NA correction, however, if you wants to visualize plots, the sample-cohort mapping would be required. Click on *Run* to proceed.
 
 ![PollyTM Labeled LC-MS/MS Workflow ￼(Homescreen)](../../img/LabeledLC-MS2Workflow/LabeledLCMSMSHomescreen.png) <center>**Figure 6.** Upload interface</center>
 
