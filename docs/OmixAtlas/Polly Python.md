@@ -2,7 +2,9 @@
 Polly Libraries give access to the various capabilities on Polly like ingesting, querying, filtering, downloading and creating cohorts for the data on OmixAtlas. It allows access to data in OmixAtlas over any computational platform (like DataBricks, SageMaker, Polly, etc.) of your choice. These functionalities can be accessed through functions in python and [bash](https://docs.elucidata.io/Scaling%20compute/Polly%20CLI%201.html) which can be used over a Terminal.
 
 ## About Polly Python
-Polly Python library provides convenient access to the above-mentioned functionalities through function in Python language.
+Polly Python library provides convenient access to the above-mentioned functionalities through function in Python language. A snapshot of it's capabilities as per release v0.1.5 is shown in the image below.
+
+<img src = "../img/polly-python/polly_python_capabilities_v015.png" width="1000" height="900">
 
 ## 1 Installation
 ### 1.1 Install Polly Python using pip
@@ -249,6 +251,30 @@ To access, filter, and search through the metadata schema, the function mentione
 <pre><code>omixatlas.query_metadata("[query_written_in_SQL]") </code></pre>
 Refer to the Queries section to understand how you could write a query in SQL. The columns returned would depend on the query that was written. The output of the function is a dataframe or a JSON depending on the operations used in the query. Some query examples in GEO OmixAtlas is shown in this [github page](https://github.com/ElucidataInc/polly-python/blob/main/Discover/polly_python_query_examples.ipynb).
 
+##### 4.2.3.1 Ontological recommendations integrated with querying
+Ontology recommendation functionality for disease and tissue are added in Polly-Python. For disease the recommendations are derived from MeSH ontology and for tissue we're using Brenda Tissue Ontology (BTO).
+
+In the existing SQL query itslef, the users would now be able to call a function - 'recommend' on disease and tissue column of metadata to get recommendations.
+
+Usage of 'recommend' function -
+```
+recommend(field_name, search_term, key - ['match' | 'related'])
+```
+`field_name`: It can take value: curated_disease, curated_tissue for disease and tissue respectively.
+
+`search_term`: Disease or tissue terms for which recommendations are required.
+
+`key`: Can be "match" which fetches only the terms that have an exact match with the search_term OR "related" which fetches the list of expanded terms synonyms, hypernyms along with match results for the search_term. 
+
+Example:-
+```
+sql_query = """SELECT dataset_id, curated_disease, curated_tissue FROM geo.datasets WHERE 
+        CONTAINS(curated_disease, recommend('curated_disease', 'breast neoplasms', 'related')) AND 
+        CONTAINS(curated_tissue, recommend('curated_tissue', 'breast', 'related'))""" 
+result = omixatlas.query_metadata(sql_query)
+```
+For more details and examplpes, please check this [notebook](https://github.com/ElucidataInc/polly-python/blob/main/Discover/ontology_recommendation_disease_tissue.ipynb) 
+
 #### 4.2.4 Downloading any dataset
 To download any dataset, the following function can be used to get the signed URL of the dataset.
 
@@ -456,7 +482,8 @@ payload = json.load(schema)
 ```
 
 #### 4.2.7 Data Ingestion using Polly Python
-A high level schematic diagram to ingest data on OmixAtlas is shown in the diagram.
+A high level schematic diagram to ingest data on OmixAtlas is shown in the diagram below:-
+<img src = "../img/polly-python/ingestion_case_1.png" width="450" height="750">
 
 ##### 4.2.7.1 Adding datasets to an OmixAtlas:-
 
