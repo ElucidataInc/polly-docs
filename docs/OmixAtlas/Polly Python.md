@@ -1,8 +1,10 @@
 ## About Polly Library
-Polly Libraries give access to the various capabilities on Polly like querying, filtering and accessing the data on Polly OmixAtlas. It allows access to data in OmixAtlas over any computational platform (like DataBricks, SageMaker, Polly, etc.) of your choice. These functionalities can be accessed through functions in python and [bash](https://docs.elucidata.io/Scaling%20compute/Polly%20CLI%201.html) which can be used over a Terminal.
+Polly Libraries give access to the various capabilities on Polly like ingesting, querying, filtering, downloading and creating cohorts for the data on OmixAtlas. It allows access to data in OmixAtlas over any computational platform (like DataBricks, SageMaker, Polly, etc.) of your choice. These functionalities can be accessed through functions in python and [bash](https://docs.elucidata.io/Scaling%20compute/Polly%20CLI%201.html) which can be used over a Terminal.
 
 ## About Polly Python
-Polly Python library provides convenient access to the above-mentioned functionalities through function in Python language.
+Polly Python library provides convenient access to the above-mentioned functionalities through function in Python language. A snapshot of it's capabilities as per release v0.1.5 is shown in the image below.
+
+<img src = "../img/polly-python/polly_python_capabilities_v015.png" width="1000" height="900">
 
 ## 1 Installation
 ### 1.1 Install Polly Python using pip
@@ -74,31 +76,56 @@ The following function details all the OmixAtlases accessible by you.
 The output of this function would be JSON containing
 <pre><code>{'data':
 [
-  {'repo_name': 'name',
-    'repo_id': 'id',
-    'indexes':
+{
+  "repo_name": "geo",
+  "repo_id": "9",
+  "indexes": {
+    "gct_metadata": "geo_gct_metadata",
+    "h5ad_metadata": "geo_h5ad_metadata",
+    "csv": "geo_csv",
+    "files": "geo_files",
+    "ipynb": "geo_ipynb",
+    "gct_data": "geo_gct_data",
+    "h5ad_data": "geo_h5ad_data"
+  },
+  "v2_indexes": {
+    "csv": "geo_csv",
+    "files": "geo_files",
+    "gct_col_metadata": "geo_gct_col_metadata",
+    "gct_row_metadata": "geo_gct_row_metadata",
+    "h5ad_col_metadata": "geo_h5ad_col_metadata",
+    "h5ad_row_metadata": "geo_h5ad_row_metadata",
+    "ipynb": "geo_ipynb",
+    "json": "geo_json"
+  },
+  "sources": [
     {
-      'gct_metadata': 'abc',
-      'h5ad_metadata': 'abc',
-      'csv': 'abc',
-      'files': 'abc',
-      'json': 'abc',
-      'ipynb': 'abc',
-      'gct_data': 'abc',
-      'h5ad_data': 'abc'
+      "geo": 98902
+    }
+  ],
+  "datatypes": [
+    {
+      "transcriptomics": 98863
     },
-    'dataset_count': 123,
-    'disease_count': 123,
-    'diseases': ['abc', 'bcd', 'cde', 'def', 'efg', 'fgh', 'ghi', 'hij', 'ijk'],
-    'organism_count': 123,
-    'organisms': ['abc', 'bcd', 'cde', 'def', 'efg', 'fgh', 'ghi', 'hij', 'ijk'],
-    'sources': ['abc', 'bcd', 'cde', 'def', 'efg', 'fgh', 'ghi', 'hij', 'ijk'],
-    'datatypes': ['abc', 'bcd', 'cde', 'def', 'efg', 'fgh', 'ghi', 'hij', 'ijk'],
-    'sample_count': 123
-    },
+    {
+      "raw counts transcriptomics": 38
+    }
+  ],
+  "dataset_count": 98902,
+  "disease_count": 3760,
+  "tissue_count": 1078,
+  "organism_count": 317,
+  "cell_line_count": 4492,
+  "cell_type_count": 904,
+  "drug_count": 1394,
+  "data_type_count": 2,
+  "data_source_count": 1,
+  "sample_count": 2286352,
+  "normal_sample_count": 1575120
+}
     {...},
     {...}
-  ]
+]
 }</code></pre>
 
 ##### 4.2.1.2 Get summary of an OmixAtlas
@@ -107,36 +134,74 @@ The following function details a particular OmixAtlas. The **repo_name/repo_id**
 <pre><code>omixatlas.omixatlas_summary("[repo_id OR repo_name]")</code></pre>
 The output of this function would be JSON containing
 
-<pre><code>{'data':
-  {
-    'repo_name': 'name',
-    'repo_id': 'id',
-    'indexes':
-    {
-      'gct_metadata': 'abc',
-      'h5ad_metadata': 'abc',
-      'csv': 'abc',
-      'files': 'abc',
-      'json': 'abc',
-      'ipynb': 'abc',
-      'gct_data': 'abc',
-      'h5ad_data': 'abc'
+<pre><code>
+{
+  "data": {
+    "repo_name": "tcga",
+    "repo_id": "15",
+    "indexes": {
+      "gct_metadata": "tcga_gct_metadata",
+      "h5ad_metadata": "tcga_h5ad_metadata",
+      "csv": "tcga_csv",
+      "files": "tcga_files",
+      "ipynb": "tcga_ipynb",
+      "gct_data": "tcga_gct_data",
+      "h5ad_data": "tcga_h5ad_data"
     },
-    'dataset_count': 123,
-    'disease_count': 123,
-    'diseases': ['abc', 'bcd', 'cde', 'def', 'efg', 'fgh', 'ghi', 'hij', 'ijk'],
-    'organism_count': 123,
-    'organisms': ['abc', 'bcd', 'cde', 'def', 'efg', 'fgh', 'ghi', 'hij', 'ijk'],
-    'sources': ['abc', 'bcd', 'cde', 'def', 'efg', 'fgh', 'ghi', 'hij', 'ijk'],
-    'datatypes': ['abc', 'bcd', 'cde', 'def', 'efg', 'fgh', 'ghi', 'hij', 'ijk'],
-    'sample_count': 123
+    "v2_indexes": {
+      "csv": "tcga_csv",
+      "files": "tcga_files",
+      "gct_col_metadata": "tcga_gct_col_metadata",
+      "gct_row_metadata": "tcga_gct_row_metadata",
+      "h5ad_col_metadata": "tcga_h5ad_col_metadata",
+      "h5ad_row_metadata": "tcga_h5ad_row_metadata",
+      "ipynb": "tcga_ipynb",
+      "json": "tcga_json"
+    },
+    "sources": [
+      {
+        "tcga": 55062
+      }
+    ],
+    "datatypes": [
+      {
+        "transcriptomics": 11093
+      },
+      {
+        "mirna": 10468
+      },
+      {
+        "copy number variation": 10411
+      },
+      {
+        "mutation": 8810
+      },
+      {
+        "methylation": 8027
+      },
+      {
+        "proteomics": 6253
+      }
+    ],
+    "dataset_count": 55062,
+    "disease_count": 34,
+    "tissue_count": 58,
+    "organism_count": 1,
+    "cell_line_count": 0,
+    "cell_type_count": 0,
+    "drug_count": 812,
+    "data_type_count": 6,
+    "data_source_count": 1,
+    "sample_count": 47143,
+    "normal_sample_count": 0
   }
-}</code></pre>
+}
+</code></pre>
 
 #### 4.2.2 Create and update an Omixatlas
 
 ##### 4.2.2.1 Create an Omixatlas
-Data-admin can create an Omixatlas using polly-python. The function create takes in four parameters as described below.
+Data-admins can create an Omixatlas using polly-python. The function create takes in four parameters as described below.
 <pre><code>from polly.omixatlas import OmixAtlas
 omixatlas = OmixAtlas()
 new_repo = omixatlas.create("[display_name]", "[description]", 
@@ -144,24 +209,39 @@ new_repo = omixatlas.create("[display_name]", "[description]",
                           image_url = "[image_url]" (optional))</code></pre>
 
 Constraints on the parameters:-
-1. display_name:  Alphanumeric characters are allowed and the length constraint is between 1 to 30 characters.
-2. description: All characters are allowed and the length constraint is between 1 to 100 characters.
-3. image_url: Users can also enter the path of image_url that they want to showcase on the newly created Omixatlas tile. If the image_url is not provided then the system puts up a default image on the tile of the newly created Omixatlas. Example: https://elucidatainc.github.io/PublicAssets/discover-fe-assets/omixatlas_hex.svg
-4. repo_name: Lowercase alphanumeric characters (separated by _) is allowed and between 1 to 30 characters.
+
+`display_name` (str) Alphanumeric characters are allowed and the length constraint is between 1 to 30 characters.
+
+`description` (str) All characters are allowed and the length constraint is between 1 to 100 characters.
+
+`image_url` (str) Users can also enter the path of image_url that they want to showcase on the newly created Omixatlas tile. If the image_url is not provided then the system puts up a default image on the tile of the newly created Omixatlas. [example_image](https://elucidatainc.github.io/PublicAssets/discover-fe-assets/omixatlas_hex.svg)
+
+`repo_name` (str) Lowercase alphanumeric characters (separated by _) is allowed and between 1 to 30 characters.
 
 ##### 4.2.2.2 Update an Omixatlas
 Data-admin can update the following metadata of an Omixatlas:-
 
-a. Metadata for an existing Omixatlas. The attributes that can be updated are  
-display_name, description, and image_url.
+a. Metadata for an existing Omixatlas. The attributes that can be updated are display_name, description, and image_url.
+
 b. Adding components(i.e. Apps, Python Notebooks) to an existing Omixatlas.
 
 <pre><code>from polly.omixatlas import OmixAtlas
 omixatlas = OmixAtlas()
 omixatlas.update(repo_key, display_name = <Updated display_name string>, description = <Updated description string>,)
                 image_url = <image_url string>, components = [component_1])
-component_1 = {"data_type":<datatype string>, "component_id":<integer value of the component id>}
-// example: {"data_type":["Transcriptomics"], "component_id":78}</code></pre>
+                
+component_1 = {"data_type":["string"], "component_id":integer}
+// example:- component_1 = {"data_type":["Transcriptomics"], "component_id":78}</code></pre>
+
+`repo_key` (str or int) Repository ID or repository name of the OmixAtlas 
+
+`display_name` (str) The name to be displayed on the front-end
+
+`description` (str) Description for the OmixAtlas
+
+`image_url` (str) The logo of the OmixAtlas as shown on the front-end. The link provided here should be hosted on a public domain.
+
+`components` Application or notebooks which should be linked with given data types of an OmixAtlas
 
 Constraints on components: Components will be a dictionary that will have two mandatory key-value pairs that are data_type and component_id.
 
@@ -169,16 +249,40 @@ Constraints on components: Components will be a dictionary that will have two ma
 To access, filter, and search through the metadata schema, the function mentioned below can be used:
 
 <pre><code>omixatlas.query_metadata("[query_written_in_SQL]") </code></pre>
-Refer to the Queries section to understand how you could write a query in SQL. The columns returned would depend on the query that was written. The output of the function is a dataframe or a JSON depending on the operations used in the query.
+Refer to the Queries section to understand how you could write a query in SQL. The columns returned would depend on the query that was written. The output of the function is a dataframe or a JSON depending on the operations used in the query. Some query examples in GEO OmixAtlas is shown in this [github page](https://github.com/ElucidataInc/polly-python/blob/main/Discover/polly_python_query_examples.ipynb).
+
+##### 4.2.3.1 Ontological recommendations integrated with querying
+Ontology recommendation functionality for disease and tissue are added in Polly-Python. For disease the recommendations are derived from MeSH ontology and for tissue we're using Brenda Tissue Ontology (BTO).
+
+In the existing SQL query itslef, the users would now be able to call a function - 'recommend' on disease and tissue column of metadata to get recommendations.
+
+Usage of 'recommend' function -
+```
+recommend(field_name, search_term, key - ['match' | 'related'])
+```
+`field_name`: It can take value: curated_disease, curated_tissue for disease and tissue respectively.
+
+`search_term`: Disease or tissue terms for which recommendations are required.
+
+`key`: Can be "match" which fetches only the terms that have an exact match with the search_term OR "related" which fetches the list of expanded terms synonyms, hypernyms along with match results for the search_term. 
+
+Example:-
+```
+sql_query = """SELECT dataset_id, curated_disease, curated_tissue FROM geo.datasets WHERE 
+        CONTAINS(curated_disease, recommend('curated_disease', 'breast neoplasms', 'related')) AND 
+        CONTAINS(curated_tissue, recommend('curated_tissue', 'breast', 'related'))""" 
+result = omixatlas.query_metadata(sql_query)
+```
+For more details and examplpes, please check this [notebook](https://github.com/ElucidataInc/polly-python/blob/main/Discover/ontology_recommendation_disease_tissue.ipynb) 
 
 #### 4.2.4 Downloading any dataset
 To download any dataset, the following function can be used to get the signed URL of the dataset.
 
 <pre><code>omixatlas.download_data("repo_key", "[dataset_id]")</code></pre>
 
-`repo_key`: (str) repo_id OR repo_name from where the data needs to be downloaded.
+`repo_key` (str) repo_id OR repo_name from where the data needs to be downloaded.
 
-`dataset_id`: (str) dataset_id which the user wants to download.
+`dataset_id` (str) dataset_id which the user wants to download.
 
 The <code>[repo_name OR repo_id]</code> of an OmixAtlas can be identified by calling the <code>get_all_omixatlas()</code> function. The <code>[dataset_id]</code> can be obtained by querying the metadata at the dataset level using <code>query_metadata("[query written in SQL]")</code>.
 
@@ -186,7 +290,7 @@ The output of this function is a *signed URL*. The data can be downloaded by cli
 
 > **_NOTE:_** This signed URL expires after 60 minutes from when it is generated.
 
-<br>The output data is in .gct/h5ad format. This data can be parsed into a data frame for better accessibility using the following code:
+<br>The output data is in gct/h5ad/vcf/mmcif format. This data can be parsed into a data frame for better accessibility using the following code:
 
 ##### 4.2.4.1 Downloading .gct and opening it in a data frame
 <pre><code>dataset_id = "GSE100003_GPL15207" #dataset which user wants to download.
@@ -306,30 +410,47 @@ To find relevant information that can be used for querying, refer the curated da
 To enable users to interact with the schema of a particular OmixAtlas, functions for visualizing, updating and inserting schema is released. Updating and inseting schema is allowed for users who have data-admin credentials only.
 
 ###### 4.2.6.2.1 Get schema
-Use `get_schema(repo_key, schema_level, source, data_type)` to extract the schema of an OmixAtlas.
+Use `get_schema(repo_key, schema_level: list (optional), source: str (optional), data_type: str (optional), return_type: (str) (optional)` to extract the schema of an OmixAtlas.
+
+`repo_key` repo_id OR repo_name. This is a mandatory field. 
+
+`schema_level` (optional) depending on the tables present in the OmixAtlas, user can input schema of which table they are interested in. The default value is ['dataset', 'sample']. The users can use ['dataset'] OR ['sample'] to fetch the schema of dataset OR sample level metadata respectively.
+
+`source` (optional) if source specific schema is ingested in the OA, then this field can be used to extract that. 
+
+`data_type` (optional) if data type specific schema is ingested in the OA, then this field can be used to extract that 
+
+`return_type` (optional) takes two inputs dataframe and dict with the default value to be dataframe
 
 Example to fetch dataset and sample level schema for all datatypes from all sources in GEO Omixatlas
 
 ```
-schema = omixatlas.get_schema("geo", ['dataset', 'sample'], "all", "all")
+schema = omixatlas.get_schema("geo", ['dataset', 'sample'], "all", "all", "dict")
 ```
-to fetch the dataframe with dataset level metadata,
+to fetch the dictionary with entire payload of dataset level metadata,
 
 ```
 schema.dataset
 ```
-to fetch the dataframe with sample level metadata,
+to fetch the dictionary with entire payload of sample level metadata,
 ```
 schema.sample
 ```
 
-`repo_key`: (str) repo_id OR repo_name. This is a mandatory field. 
+Similarly, get_schema will give dataframe output for the following:-
 
-`schema_level`: (list) The default value is ['dataset', 'sample']. The users can use ['dataset'] OR ['sample'] to fetch the schema of dataset OR sample level metadata respectively.
+```
+schema = omixatlas.get_schema("geo", ['dataset', 'sample'], "all", "all", "dataframe")
+```
+to fetch the dataframe with summary of dataset level metadata,
 
-`source`: (str) is the source from where data is ingested into the Omixatlas.
-
-`data_type`:  (str) is the datatype for which user wants to get the schema for. The default value is 'all', which will fetch the schema of all datatypes except single cell. To fetch the schema for single cell datatype from an OmixAtlas, the user should use 'single_cell'.
+```
+schema.dataset
+```
+to fetch the dataframe with summary of sample level metadata,
+```
+schema.sample
+```
 
 ###### 4.2.6.2.2 Update schema
 Use `update_schema(repo_key, payload)` to update the existing schema of an OmixAtlas.
@@ -377,51 +498,122 @@ schema = open('schema_file.json')
 payload = json.load(schema)
 ```
 
+#### 4.2.7 Data Ingestion using Polly Python
+A high level schematic diagram to ingest data on OmixAtlas is shown in the diagram below:-
+<img src = "../img/polly-python/ingestion_case_1.png" width="450" height="750">
 
-#### 4.2.7 File format converter functions
-Several datatypes are ingested on Polly after conversion to gct file format. In order to enable consumption of different datatypes, bioinformaticians often use certain open-source packages. 
+##### 4.2.7.1 Adding datasets to an OmixAtlas:-
 
-##### 4.2.7.1 Consumption of mutation data using maftools
-With advances in Cancer Genomics, Mutation Annotation Format (MAF) is being widely accepted and used to store somatic variants detected. Mutation datatype on Polly from TCGA and cBioportal repository can now be consumed using an R package called maftools [Github](https://github.com/PoisonAlien/maftools),  [Bioconductor](https://bioconductor.org/packages/release/bioc/vignettes/maftools/inst/doc/maftools.html). This package attempts to summarize, analyze, annotate and visualize MAF files in an efficient manner from either TCGA sources or any in-house studies as long as the data is in MAF format.
-
-Polly users can use the following functions to convert the .gct datatype to .maf datatype for downstream analysis using maftools.
+Data-admin with appropriate repository level access can ingest data to an OmixAtlas using the following function:- 
 ```
-omixatlas.format_converter(repo_key, dataset_id, to)
+add_datasets(repo_id (int/str), source_folder_path (dict), destination_folder (str) (optional), priority (str) (optiona))
 ```
-repo_key: (str) repo_id OR repo_name 
 
-dataset_id: (str) dataset_id in the repository
+input: 
 
-to: (str) output file format
+`repo_id`: This is the repository ID to which ingestion should be done
 
-For example: 
+`source_folder_path`: This is the dictionary with keys data and metadata. The corresponding value pairs should be the folder containing the file (gct, h5ad, vcf, mmcif etc) for data and folder containing json of dataset level metadata for metadata.
+
+`destination_folder` (optional): This is the folder within S3 when data gets pushed
+
+`priority` (optional): This is the priority flag as per ingestion is being done. Default is 'medium'
+
+output: 
+
+Status of file upload for each dataset in a dataframe
+
 ```
-omixatlas.format_converter("cbioportal", "ACC_2019_Mutation_ACYC-FMI-19", "maf")
+from polly.omixatlas import OmixAtlas
+omixatlas = OmixAtlas()
+
+repo_id = "1657110718820"
+source_folder_path_data = "/import/data_final"
+source_folder_path_metadata = "/import/metadata_final"
+destination_folder = "220707-1426"
+priority = "high"
+source_folder_path = {"data":source_folder_path_data, "metadata":source_folder_path_metadata}
+omixatlas.add_datasets(repo_id, source_folder_path, destination_folder, priority)
 ```
+
+
+One of the ingestion case studies where the user wants to ingest data available in an existing OmixAtlas to a new OmixAtlas is described in this [notebook](https://github.com/ElucidataInc/polly-python/blob/main/Ingest/Data_Ingestion_CaseID_1.ipynb)
+
+##### 4.2.7.2 Deleting a dataset from an OmixAtlas:-
+Data-admin with appropriate repository level access can delete data from an OmixAtlas using the following function:- 
+
+```
+delete_datasets(repo_id: int/str, dataset_ids: list<string>):
+```
+
+input:
+
+`repo_id`: (int/str) This is the repository ID from which dataset should be deleted
+
+`dataset_ids`: (list<string>) dataset_ids that users want to delete
+
+output:
+
+Status of file deletion for each dataset in a dataframe
+
+```
+from polly.omixatlas import OmixAtlas
+omixatlas = OmixAtlas()
+
+repo_id = "1657110718820"
+dataset_ids = ["GSE12345_GPL123", "GSE56789_GPL456"]
+
+omixatlas.delete_datasets(repo_id, dataset_ids)
+```
+
+##### 4.2.7.3 Template for dataset level metadata:-
+In order to ingest the dataset level metadata appropriately in the OmixAtlas, the user needs to ensure the json files contains the keys as per the dataset level schema of the OmixAtlas. A template of the keys can be fetched using the following function:-
+
+```
+from polly.omixatlas import OmixAtlas
+omixatlas = OmixAtlas()
+
+dataset_metadata_template(repo_id: int/str)
+```
+input:
+
+repo_id: This is the repository ID for which user wants to generate template of dataset level metadata.
+
+output: 
+
+A dictionary with all the field names which should be present in the dataset level metadata
+
 
 #### 4.2.8 Working with Cohorts
 Cohort class of polly-python enables users to create cohorts, add/remove datasets or samples from them, merge the dataset, sample, feature and data-matrix level metadata across all samples of the cohort, delete a cohort etc.
-Currently, this function is enabled in the following omixatlas: TCGA, Depmap, LINCS, cBioportal, CPTAC, Immport and GDC.
+This feature is enabled in both types of OmixAtlas:- 
+
+where 1 dataset has 1 sample such as TCGA, Depmap, LINCS, cBioportal, CPTAC, Immport and GDC.
+
+where 1 dataset has multiple samples such as GEO, Metabolomics OmixAtlas etc.
+
+In order to enable cohorting on a given OmixAtlas, please contact polly.support@elucidata.io
+
 ##### 4.2.8.1 Create a cohort
 Cohort creation is enabled in the local environment - be it in the polly notebook environment or user's local. The minimum requirement for a cohort is to have a cohort.meta file inside the cohort that defines the .pco format. The cohort.meta file is encrypted in base64 format for keeping the metadata consistent and protected.
 ```
 cohort.create_cohort(local_path=”<path>”,cohort_name=”name”,description=”description”, 
-                    repo_key=”repo_key” (optional), sample_id=list (optional))
+                    repo_key=”repo_key” (optional), dataset_id=list (optional))
 ```
-##### 4.2.8.2 Add samples to a cohort
-This function allows users to add samples to the cohort.
+##### 4.2.8.2 Add datasets to a cohort
+This function allows users to add datasets to the cohort.
 ```
-cohort.add_to_cohort(repo_key=”<repo_id or repo_name>”,sample_id=[“sample_id1”,…])
+cohort.add_to_cohort(repo_key=”<repo_id or repo_name>”,dataset_id=[“dataset_id1”,…])
 ```
 ##### 4.2.8.3 Remove samples from a cohort
 This function removes the samples from a cohort. 
 ```
-cohort.remove_from_cohort(sample_id=[“sample_id1”,…]))
+cohort.remove_from_cohort(dataset_id=[“dataset_id1”,…]))
 ```
 ##### 4.2.8.4 Return metadata and summary of a cohort
 It returns a tuple with the first value as cohort metadata information (name, description and number of dataset(s) or sample(s) in the cohort) and the second value as dataframe containing the source, dataset_id or sample_id  and data type available in the cohort.
 ```
-cohort.summarize_cohort(sample_id=[“sample_id1”,…]))
+cohort.summarize_cohort(dataset_id=[“dataset_id1”,…]))
 ```
 ##### 4.2.8.5 Load a Cohort into an object
 This function loads an already existing cohort into a newly instantiated object for working on the cohort.
@@ -464,209 +656,28 @@ This function is for validating a cohort. This functions returns a boolean resul
 cohort.is_valid()
 ```
 
+#### 4.2.9 File format converter functions
+Several datatypes are ingested on Polly after conversion to gct file format. In order to enable consumption of different datatypes, bioinformaticians often use certain open-source packages. 
+
+##### 4.2.9.1 Consumption of mutation data using maftools
+With advances in Cancer Genomics, Mutation Annotation Format (MAF) is being widely accepted and used to store somatic variants detected. Mutation datatype on Polly from TCGA and cBioportal repository can now be consumed using an R package called maftools [Github](https://github.com/PoisonAlien/maftools),  [Bioconductor](https://bioconductor.org/packages/release/bioc/vignettes/maftools/inst/doc/maftools.html). This package attempts to summarize, analyze, annotate and visualize MAF files in an efficient manner from either TCGA sources or any in-house studies as long as the data is in MAF format.
+
+Polly users can use the following functions to convert the .gct datatype to .maf datatype for downstream analysis using maftools.
+```
+omixatlas.format_converter(repo_key, dataset_id, to)
+```
+`repo_key`: (str) repo_id OR repo_name 
+
+`dataset_id`: (str) dataset_id in the repository
+
+`to`: (str) output file format
+
+For example: 
+```
+omixatlas.format_converter("cbioportal", "ACC_2019_Mutation_ACYC-FMI-19", "maf")
+```
+
 ### 4.3 Writing a query
-
-The polly-python library versions 0.0.7 to 0.0.9 are compatible with both storage infrastructures - `v1` and `v2`. In order to facilitate querying on both infrastructures, there are two different API versions as well, `v1` and `v2`, available in polly-python which refer to infrastructure used for query. This could be specified by setting `query_api_version` to 'v1' or 'v2' while passing the query to a function. By default, queries are made against v1. If users want to use `v2` then they will have to pass an additional argument `query_api_version='v2'` in the `query_metadata` function. The querying on these two infrastructures is different and will be discussed in two different sections below.
-
-
-#### 4.3.1 Writing a query in V1 storage infrastructure
-
-The complete syntax for searching and aggregating data is as follows:
-
-<pre><code>SELECT [DISTINCT] (* | expression) [[AS] alias] [, ...]
-FROM { index_name | {[repo_id]|[repo_name]}.{datasets|samples|features} }
-[WHERE predicates]
-[GROUP BY expression [, ...]
- [HAVING predicates]]
-[ORDER BY expression [IS [NOT] NULL] [ASC | DESC] [, ...]]
-[LIMIT [offset, ] size]
-</code></pre>
-
-##### 4.3.1.1 Querying the dataset level metadata:
-<pre><code> query = "SELECT [column_name] FROM [files] WHERE [column_name]='[value]'"
- query = "SELECT [column_name] FROM [repo_name].datasets WHERE [column_name]='[value]'"
- query = "SELECT [column_name] FROM [repo_id].datasets WHERE [column_name]='[value]'"
-</code></pre>
-
-##### 4.3.1.2 Querying the sample level metadata:
-###### For all samples except Single Cell
-<pre><code>query = "SELECT [column_name] FROM [gct_metadata] WHERE [column_name]='[value]'"
-query = "SELECT [column_name] FROM [repo_name].samples WHERE [column_name]='[value]'"
-query = "SELECT [column_name] FROM [repo_id].samples WHERE [column_name]='[value]'"
-</code></pre>
-
-###### For samples in Single Cell
-<pre><code>query = "SELECT [column_name] FROM [h5ad_metadata] WHERE [column_name]='[value]'"</code></pre>
-
-##### 4.3.1.3 Querying the feature level metadata:
-###### For all features except Single Cell
-<pre><code>query = "SELECT [column_name] FROM [gct_data] WHERE [column_name]='[value]'"
-query = "SELECT [column_name] FROM [repo_name].features WHERE [column_name]='[value]'"
-query = "SELECT [column_name] FROM [repo_id].features WHERE [column_name]='[value]'"
-</code></pre>
-
-###### For features in Single Cell
-<pre><code>query = "SELECT [column_name] FROM [h5ad_data] WHERE [column_name]='[value]'"</code></pre>
-
-##### 4.3.1.4 Experimental Expanding Search Feature
-A disease is described by many different names in the literature. If we search it with a keyword, datasets annotated with related keywords for the same disease are missed in the output. For example, if 'nash' is searched for disease, 'non-alcoholic fatty liver disease', 'nonalcoholic steatohepatitis', 'nash-non-alcoholic steatohepatitis', 'non-alcoholic steatohepatitis' are missed although they are valid hits for disease keyword 'nash'.
-
-To address this, we have included an experimental feature which allows expansion of disease query to include additional similar keywords based on ontology mapping. The query written in the Polly Python Library is expanded on the basis of the ontology tree mapping available in the following resources
-
-1. [The disease ontology](https://disease-ontology.org/)
-
-2. [Experimental factor ontology](https://www.ebi.ac.uk/efo/)
-
-3. [Mondo Disease Ontology](http://obofoundry.org/ontology/mondo.html)
-
-4. [NCI Thesaurus](https://github.com/NCI-Thesaurus/thesaurus-obo-edition)
-
-5. [Human phenotype ontology](https://hpo.jax.org/)
-
-6. [Ontology for MIRNA Target](https://github.com/OmniSearch/omit)  
-
-Expanding search feature could be use in the following way
-
-1. Setting "expand" to `True`: It allows expansion of the query to include disease terms children from the ontology tree. It means no false positive datasets are included in the output while including more true positives.  
-
-```
-result = omixatlas.query_metadata(
-    query=user_query,
-    experimental_features = {"expand":True, "related_terms":False}
-  )
-```
-2. Setting "related_terms" to `True`: It allows expansion of query by including immediate parent of the disease term in the ontology tree. It causes maximum expansion but a few false positive datasets may be included.
-
-```
-result = omixatlas.query_metadata(
-    query=user_query,
-    experimental_features = {"expand":True, "related_terms":True})
-```
-
-##### 4.3.1.5 Example queries
-
-###### 4.3.1.5.1 Querying datasets in Liver OmixAtlas
-1. To identify datasets belonging to the tissue Liver, disease Liver cirrhosis and organism Homo sapiens
-
-    ```
-        query = """SELECT * FROM liveromix_atlas.datasets
-                            WHERE disease = 'liver cirrhosis'
-                            AND tissue = "liver"
-                            AND organism="Homo sapiens"
-                            """
-    ```
-
-2. To identify all datasets belonging to a Hepatocellular Carcinoma disease in Human and Mouse
-
-    ```
-        query = """SELECT * FROM liveromix_atlas.datasets
-                            WHERE disease = 'Carcinoma, Hepatocellular'
-                            AND ( organism="Homo sapiens" or organism="Mus musculus")
-                          """
-    ```
-
-3. To identify type of data, tissue, and data description of all the datasets belonging to a Hepatocellular Carcinoma disease in Human and Mouse
-
-    ```
-        query = """SELECT dataset_id,description,tissue,kw_data_type
-                            FROM liveromix_atlas.datasets
-                            WHERE disease = 'Carcinoma, Hepatocellular'
-                            AND ( organism="Homo sapiens" or organism="Mus musculus")
-                          """
-    ```
-
-4. Identify all transcriptome datasets in Hepatocellular Carcinoma disease in Human and Mouse
-
-    ```
-        query = """SELECT * FROM liveromix_atlas.datasets
-                        WHERE disease = 'Carcinoma, Hepatocellular'
-                        AND ( organism="Homo sapiens" or organism="Mus musculus")
-                        AND ( kw_data_type = "Transcriptomics")
-                      """
-    ```
-
-5. Identify all transcriptome datasets from GEO in Hepatocellular Carcinoma disease in Human and Mouse
-
-    ```
-        query = """SELECT * FROM liveromix_atlas.datasets
-                        WHERE disease = 'Carcinoma, Hepatocellular'
-                        AND ( organism="Homo sapiens" or organism="Mus musculus")
-                        AND ( kw_data_type = "Transcriptomics")
-                        AND ( dataset_source = "GEO")
-                      """
-    ```
-
-6. Select all methylation, miRNA, and transcriptomics datasets for Hepatocellular Carcinoma disease in Human and Mouse
-
-    ```
-        query = """SELECT * FROM liveromix_atlas.datasets
-                        WHERE dataset_source = 'TCGA'
-                        AND (kw_data_type = 'Methylation'
-                            OR kw_data_type = 'MiRNA'
-                            OR kw_data_type = 'Transcriptomics'
-                            )
-                        AND ( organism="Homo sapiens" or organism="Mus musculus")
-                      """
-    ```
-In all the examples above `liveromix_atlas_files` could be used in place of `liveromix_atlas.datasets`
-
-###### 4.3.1.5.2 Querying samples in Liver OmixAtlas
-1. Select a sample with a GEO ID
-
-    ```
-        query = """SELECT *
-                FROM liveromix_atlas.samples
-                WHERE kw_column  = 'GSM798352'
-                """
-    ```
-
-2. Identify all samples in which "CYP1B1" gene has been knocked out
-
-    ```
-        query = """SELECT *
-                FROM liveromix_atlas.samples
-                WHERE kw_curated_genetic_mod_type = 'knockout'
-                AND kw_curated_modified_gene = "CYP1B1"
-                """
-    ```
-
-3. Identify all samples where gene "YAP1" has been knocked in, in hepatocype cell line
-
-    ```
-        query = """SELECT kw_curated_cell_line,kw_curated_drug,kw_curated_genetic_mod_type,kw_curated_modified_gene,kw_curated_cell_type
-                    FROM liveromix_atlas.samples
-                    WHERE kw_curated_genetic_mod_type = 'knockin'
-                    AND kw_curated_cell_type = "hepatocyte"
-                    AND kw_curated_modified_gene = "YAP1"
-                """
-    ```
-
-4. Identify all samples of 'Carcinoma, Hepatocellular' disease that have been treated with some drug
-
-    ```
-        query = """SELECT kw_curated_cell_line,kw_curated_drug,kw_curated_tissue,kw_curated_disease
-                FROM liveromix_atlas.samples
-                WHERE kw_curated_disease = 'Carcinoma, Hepatocellular'
-                AND kw_curated_drug <> "none"
-                """
-    ```
-In all the examples above `liveromix_atlas_gct_metadata` could be used in place of `liveromix_atlas.samples`
-
-###### 4.3.1.5.3 Querying features in Liver OmixAtlas
-1. Identify all samples in which the gene “YAP1” is upregulated
-
-    ```
-        query = """SELECT *
-                    FROM liveromix_atlas.features
-                    WHERE kw_index = 'YAP1'
-                    AND kw_column.kw_expression > 0
-                """
-    ```
-In this example `liveromix_atlas_gct_data` could be used in place of `liveromix_atlas.features`
-
-
-
-#### 4.3.2 Writing a query in V2.1 storage infrastructure
 
 The complete syntax for searching and aggregating data is as follows:
 
@@ -682,7 +693,106 @@ SELECT [ ALL | DISTINCT ] select_expression [, ...]
 [ LIMIT [ count | ALL ] ]
 </code></pre>
 
-Some example queries have been given in a notebook on our [github](https://github.com/ElucidataInc/polly-python/blob/main/polly-python-query-examples.ipynb)
+Some example queries have been given in a [notebook](https://github.com/ElucidataInc/polly-python/blob/main/polly-python-query-examples.ipynb) on our [github page](https://github.com/ElucidataInc/polly-python)
+
+#### 4.3.1.1 Querying the dataset level metadata:
+<pre><code> query = "SELECT [column_name] FROM [files] WHERE [column_name]='[value]'"
+ query = "SELECT [column_name] FROM [repo_name].datasets WHERE [column_name]='[value]'"
+ query = "SELECT [column_name] FROM [repo_id].datasets WHERE [column_name]='[value]'"
+</code></pre>
+
+#### 4.3.1.2 Querying the sample level metadata:
+##### For all samples except Single Cell
+<pre><code>query = "SELECT [column_name] FROM [gct_metadata] WHERE [column_name]='[value]'"
+query = "SELECT [column_name] FROM [repo_name].samples WHERE [column_name]='[value]'"
+query = "SELECT [column_name] FROM [repo_id].samples WHERE [column_name]='[value]'"
+</code></pre>
+
+##### For samples in Single Cell
+<pre><code>query = "SELECT [column_name] FROM [h5ad_metadata] WHERE [column_name]='[value]'"</code></pre>
+
+#### 4.3.1.3 Querying the feature level metadata:
+##### For all features except Single Cell
+<pre><code>query = "SELECT [column_name] FROM [gct_data] WHERE [column_name]='[value]'"
+query = "SELECT [column_name] FROM [repo_name].features WHERE [column_name]='[value]'"
+query = "SELECT [column_name] FROM [repo_id].features WHERE [column_name]='[value]'"
+</code></pre>
+
+##### For features in Single Cell
+<pre><code>query = "SELECT [column_name] FROM [h5ad_data] WHERE [column_name]='[value]'"</code></pre>
+
+
+#### 4.3.1.4 Example queries
+
+##### 4.3.1.4.1 Querying datasets in GEO OmixAtlas
+1. To identify datasets belonging to the tissue Breast, disease Breast Neoplasms and organism Homo sapiens
+
+    ```
+        query = """SELECT * FROM geo.datasets
+                            WHERE CONTAINS(curated_disease, 'Breast Neoplasms')
+                            AND CONTAINS(curated_tissue, 'Breast')
+                            AND CONTAINS(curated_organism, 'Homo sapiens')
+                            """
+    ```
+
+2. Fetch datasets from Depmap which has gene dependency information according to CRISPR screening experiments
+
+    ```
+        query = """ SELECT dataset_id FROM depmap.datasets
+        WHERE
+            data_type = 'Gene dependency' AND
+            data_repository_version = '2021_Q4' AND
+            platform = 'CRISPR Screening'"""
+    ```
+
+
+3. Identify all transcriptome datasets in Hepatocellular Carcinoma disease in Human and Mouse
+
+    ```
+        query = """SELECT * FROM geo.datasets
+                            WHERE CONTAINS(curated_disease, 'Carcinoma, Hepatocellular')
+                            AND (CONTAINS(curated_organism, 'Homo sapiens' OR CONTAINS(curated_organism, 'Mus musculus')
+                            AND data_type LIKE '%Transcriptomics%')
+                      """
+    ```
+
+##### 4.3.1.4.2 Querying samples in GEO OmixAtlas
+1. Get the name of samples, dataset ID and extract_protocol_ch1 where spectroscopy is mentioned in the extract_protocol_ch1
+
+    ```
+        query = """SELECT name, src_dataset_id, extract_protocol_ch1 FROM geo.samples
+         WHERE LOWER(extract_protocol_ch1) LIKE '%spectroscopy%'"""
+    ```
+
+2. IGet the name of disease and number of samples where information about particular disease is curated
+
+    ```
+        query = """SELECT curated_disease, COUNT(*) AS count FROM geo.samples 
+        GROUP BY curated_disease ORDER BY count DESC """
+    ```
+
+##### 4.3.1.4.3 Querying data matrix in GEO OmixAtlas
+1. Fetch data matrix for selected genes for a dataset ID of interest
+
+    ```
+        gene = ('hbb-y', 'fth1', 'bbip1', 'actb')
+        query = f"SELECT * FROM data_matrices.geo__GSE4230_GPL1261 WHERE 
+        LOWER(rid) IN {gene}"
+    ```
+
+##### 4.3.1.4.4 Other Query Examples
+1. Select a few feature level metadata for selected genes from Mutation datasets of TCGA where dataset_id contains BRCA
+
+    ```
+    query = """SELECT src_dataset_id, disease, protein_position, amino_acids, sequencer, impact, variant_class, consequence, name
+        FROM tcga.features AS features
+        JOIN (
+        SELECT dataset_id AS dataset_id, curated_disease AS disease FROM tcga.datasets WHERE data_type LIKE 'Mutation') AS datasets
+        ON features.src_dataset_id = datasets.dataset_id
+        WHERE hugo_symbol IN ('TP53','PIK3CA','CDH1','GATA3') AND features.src_dataset_id LIKE '%BRCA%'
+        ORDER BY features.src_dataset_id"""
+    ```
+2. Some cross OmixAtlas querying for Mutation datasets can be found in this [notebook](https://github.com/ElucidataInc/polly-python/blob/main/Discover/Mutation_data_querying%20.ipynb). Here, we have shown query across TCGA, cBioportal and CPTAC OmixAtlas on Polly.
 
 #### 4.3.3 Writing conditions with operators
 The following operators can be used to define the conditions in the above mentioned queries:
