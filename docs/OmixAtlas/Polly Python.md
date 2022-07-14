@@ -410,30 +410,47 @@ To find relevant information that can be used for querying, refer the curated da
 To enable users to interact with the schema of a particular OmixAtlas, functions for visualizing, updating and inserting schema is released. Updating and inseting schema is allowed for users who have data-admin credentials only.
 
 ###### 4.2.6.2.1 Get schema
-Use `get_schema(repo_key, schema_level, source, data_type)` to extract the schema of an OmixAtlas.
+Use `get_schema(repo_key, schema_level: list (optional), source: str (optional), data_type: str (optional), return_type: (str) (optional)` to extract the schema of an OmixAtlas.
+
+`repo_key` repo_id OR repo_name. This is a mandatory field. 
+
+`schema_level` (optional) depending on the tables present in the OmixAtlas, user can input schema of which table they are interested in. The default value is ['dataset', 'sample']. The users can use ['dataset'] OR ['sample'] to fetch the schema of dataset OR sample level metadata respectively.
+
+`source` (optional) if source specific schema is ingested in the OA, then this field can be used to extract that. 
+
+`data_type` (optional) if data type specific schema is ingested in the OA, then this field can be used to extract that 
+
+`return_type` (optional) takes two inputs dataframe and dict with the default value to be dataframe
 
 Example to fetch dataset and sample level schema for all datatypes from all sources in GEO Omixatlas
 
 ```
-schema = omixatlas.get_schema("geo", ['dataset', 'sample'], "all", "all")
+schema = omixatlas.get_schema("geo", ['dataset', 'sample'], "all", "all", "dict")
 ```
-to fetch the dataframe with dataset level metadata,
+to fetch the dictionary with entire payload of dataset level metadata,
 
 ```
 schema.dataset
 ```
-to fetch the dataframe with sample level metadata,
+to fetch the dictionary with entire payload of sample level metadata,
 ```
 schema.sample
 ```
 
-`repo_key`: (str) repo_id OR repo_name. This is a mandatory field. 
+Similarly, get_schema will give dataframe output for the following:-
 
-`schema_level`: (list) The default value is ['dataset', 'sample']. The users can use ['dataset'] OR ['sample'] to fetch the schema of dataset OR sample level metadata respectively.
+```
+schema = omixatlas.get_schema("geo", ['dataset', 'sample'], "all", "all", "dataframe")
+```
+to fetch the dataframe with summary of dataset level metadata,
 
-`source`: (str) is the source from where data is ingested into the Omixatlas.
-
-`data_type`:  (str) is the datatype for which user wants to get the schema for. The default value is 'all', which will fetch the schema of all datatypes except single cell. To fetch the schema for single cell datatype from an OmixAtlas, the user should use 'single_cell'.
+```
+schema.dataset
+```
+to fetch the dataframe with summary of sample level metadata,
+```
+schema.sample
+```
 
 ###### 4.2.6.2.2 Update schema
 Use `update_schema(repo_key, payload)` to update the existing schema of an OmixAtlas.
