@@ -2,7 +2,7 @@
 
 ##Overview
 
-Quantification of pathway activity with metabolic flux studies has become an integral part of understanding cellular phenotypes and mechanisms of action. Labeled studies with isotope tracers have emerged as key protocols to gain a deeper understanding of cellular metabolism. Processing and analysis of labeled LC-MS data follows a two-part protocol beginning with peak curation followed by downstream analysis. In this workflow, peak curation is performed using [El-MAVEN](https://resources.elucidata.io/elmaven). Peaks curated using automated peak picking on El-MAVEN can be pushed directly to Phi Relative LC-MS app using the built-in integration. The Phi Relative Labeled LC-MS app allows you to process labeled LC-MS targeted data with insightful visualizations. The application performs natural abundance (NA) correction and provides fractional enrichment, pool totals and NA corrected intensity visualizations across selected cohorts.
+Quantification of pathway activity with metabolic flux studies has become an integral part of understanding cellular phenotypes and mechanisms of action. Labeled studies with isotope tracers have emerged as key protocols to gain a deeper understanding of cellular metabolism. Processing and analysis of labeled LC-MS data follows a two-part protocol beginning with peak curation followed by downstream analysis. In this workflow, peak curation is performed using El-MAVEN. Peaks curated using automated peak picking on El-MAVEN can be pushed directly to Phi Relative LC-MS app using the built-in integration. The Phi Relative Labeled LC-MS app allows you to process labeled LC-MS targeted data with insightful visualizations. The application performs natural abundance (NA) correction and provides fractional enrichment, pool totals and NA corrected intensity visualizations across selected cohorts.
 
 ##Scope of the App
 
@@ -201,25 +201,6 @@ This interface allows you to visualize the EIC plot and reject metabolites or is
 
 *   Label M0 corresponds to C12 PARENT, M1 to C13-label-1 and so on.
 
-#Videos
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-    <iframe src="https://www.youtube.com/embed/9foLye20BLA" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-</div>
-
-<br>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-    <iframe src="https://www.youtube.com/embed/LiMoEGXbMyo" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-</div>
-
-<br>
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-    <iframe src="https://www.youtube.com/embed/tw8kWfMhc3Q" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-</div>
-
-<br>
 
 ##Frequently Asked Questions (FAQs)
 
