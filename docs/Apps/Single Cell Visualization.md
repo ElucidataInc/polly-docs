@@ -4,12 +4,9 @@
 
 Upon opening the Discover application on Polly, choose a relevant data repository which hosts single cell data. 
 
-![Polly Discover](../img/Discover/Discover.png)
+![Polly Discover](../img/Discover/01_Polly_Dashboard.png)
 
 After selecting a repository, you’ll be able to view a filtering interface which provides **parameters** that you can use to filter the datasets within the selected repository. Once you select a dataset you can access the integrated tools attached with the repository. You can use Single Cell Visualization application for further analysis of single cell data.
-
-
-![single cell App](../img/Discover/single_2.png)
 
 The app will open and you should see the overview page which contains a brief overview of the application, scope and caveats as shown below.
 
