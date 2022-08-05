@@ -389,6 +389,23 @@ Example to save the dataset_id 'GSE101127_GPL1355' from repo_id 1615965444377 to
 ```
 omixatlas.save_to_workspace('1615965444377', 'GSE101127_GPL1355', 8025, 'data')
 ```
+##### 4.2.5.6 Copy data from one workspace to another
+This function enables user to create a copy of a file or folder contained in a workspace. The copy of the file/folder gets created in the specified destination workspace.
+
+```
+from polly.workspaces import Workspaces
+workspaces = Workspaces(token)
+
+workspaces.create_copy(source_id, source_path, destination_id, destination_path)
+```
+`source_id`(int) : workspace id of the source workspace where the file/folder exists.
+
+`source_path` (str): file/folder path on the source workspace to be copied.
+
+`destination_id`(int) : workspace id of the destination workspace where the file/folder is to be copied.
+
+`destination_path` (str):optional parameter to specify the destination path.
+
 #### 4.2.6 Working with data schema
 
 ##### 4.2.6.1 Introduction of Data Schema
