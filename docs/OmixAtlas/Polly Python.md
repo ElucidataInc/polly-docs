@@ -411,15 +411,17 @@ workspaces.create_copy(source_id, source_path, destination_id, destination_path)
 ##### 4.2.6.1 Introduction of Data Schema
 The data available within OmixAtlas is curated within 5 indexes/tables on the basis of the information it contains. These five indexes are:
 
-***Dataset level metadata (index: files)***: Contains curated fields like drug, disease, tissue organism, etc for each dataset.
+***Dataset level metadata for all datatypes (index: files)***: Contains curated fields like drug, disease, tissue organism, etc for each dataset.
 
-***Sample level metadata (index: gct_metadata)***: As the name suggests, this contains sample level metadata information for all samples except single-cell samples. It contains curated fields like cell lines, experimental design, etc for each sample except single-cell samples.
+***Sample level metadata for gct files (index: gct_metadata)***: As the name suggests, this contains sample level metadata information for all samples except single-cell samples. It contains curated fields like cell lines, experimental design, etc for each sample except single-cell samples.
 
-***Sample level metadata for single-cell (index: h5ad_metadata)***: This table only contains metadata information for single-cell samples. It contains curated fields like cell line, gene counts, UMI counts for each sample.
+***Sample level metadata for h5ad files (index: h5ad_metadata)***: This table only contains metadata information for single-cell samples. It contains curated fields like cell line, gene counts, UMI counts for each sample.
 
-***Feature level metadata (index: gct_data)***: This table contains feature level metadata information for all data except single-cell.  It contains the gene/molecule symbol along with the feature intensity for each sample.
+***Feature level metadata for gct files (index: gct_row_metadata)***: This table contains feature level metadata information for all data except single-cell.  It contains the gene/molecule symbol along with the feature intensity for each sample.
 
-***Feature level metadata for single-cell (index: h5ad_data)***: This table contains feature level metadata information for all single-cell data.  It contains the gene/molecule symbol studied in an experiment along with the cell type and expression value.
+***Feature level metadata for h5ad files (index: h5ad_data)***: This table contains feature level metadata information for all single-cell data.  It contains the gene/molecule symbol studied in an experiment along with the cell type and expression value.
+
+***Variant related metadata in vcf files (index: variant_data)***: This table contains the schema for variant related information present in vcf files.
 
 To find relevant information that can be used for querying, refer the curated data schema [here](https://docs.elucidata.io/OmixAtlas/Data%20Schema.html).
 
