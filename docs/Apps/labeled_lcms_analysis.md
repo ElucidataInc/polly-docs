@@ -32,11 +32,11 @@ The cohort file should be in .csv format as shown in Figure 3. This file should 
 
 Select *Labeled LC-MS Analysis* from the dashboard under the Studio Presets tab.
 
-![Polly Dashboard](../img/Labeled LC-MS Preset/03_Polly_Dashboard.png) <center>**Figure 3.** Polly Dashboard</center>
+![Polly Dashboard](../img/Labeled LC-MS Preset/labeled_lcms_preset_3.png) <center>**Figure 3.** Polly Dashboard</center>
 
 Select an existing Workspace from the drop-down and provide the Name of the Session to be redirected to *Labeled LC-MS Analysis* preset's upload page.
 
-![Preset selection](../img/Labeled LC-MS Preset/04_Preset_Selection.png) <center>**Figure 4.** Preset selection</center>
+![Preset selection](../img/Labeled LC-MS Preset/labeled_lcms_preset_4.png) <center>**Figure 4.** Preset selection</center>
 
 
 ## NA Correction
@@ -45,9 +45,9 @@ This tab allows you to upload the input files required for processing through th
 Isotopologue identification and quantification of thousands of metabolites in the metabolomics experiments can provide a wealth of data for modeling the flux through metabolic networks. But before isotopologue intensity data can be properly interpreted, the contributions from isotopic natural abundance must be factored out (deisotoped). This is referred to as natural abundance (NA) correction.
 
 
-![NA Correction Parameters](../img/Labeled LC-MS Preset/05_Parameters.png) <center>**Figure 5.** Parameters</center>
+![NA Correction Parameters](../img/Labeled LC-MS Preset/labeled_lcms_preset_5.png) <center>**Figure 5.** Parameters</center>
 
-![Uploading files](../img/Labeled LC-MS Preset/06_Uploading_Figures.png) <center>**Figure 6.** Uploading files</center>
+![Uploading files](../img/Labeled LC-MS Preset/labeled_lcms_preset_6.png) <center>**Figure 6.** Uploading files</center>
 
 The various analysis parameters for performing NA Correction shown in Figure 5 are defined below:
 

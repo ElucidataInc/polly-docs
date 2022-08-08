@@ -49,11 +49,11 @@ This is a .csv file wherein the first column presents the samples and would incl
 
 Select *RNA Seq Workflow* from the dashboard under the *Screening and Sequencing Data* tab.
 
-![Polly Dashboard](../../img/RNASeq/04_Polly_Dashboard.png) <center>**Figure 4.** Polly Dashboard</center>
+![Polly Dashboard](../../img/RNASeq/Dashboard1.png) <center>**Figure 4.** Polly Dashboard</center>
 
 Create a *New Workspace* or choose the existing one from the drop down and provide the *Name of the Session* to be redirected to *RNA Seq Workflow*'s upload page
 
-![Workspace selection](../../img/RNASeq/05_Workspace_Selection.png) <center>**Figure 5.** Workspace selection</center>
+![Workspace selection](../../img/RNASeq/Selection1.png) <center>**Figure 5.** Workspace selection</center>
 
 ##Upload Files
 
@@ -142,7 +142,7 @@ PCA plot allows you to understand the clustering pattern between biologically gr
 
 ##Heat map
 
-A heat map is a graphical representation of data where the individual values contained in a matrix are represented on a color scale. Here the heat map represents expression value of each gene corresponding to the number of samples in the data. The filter icon can be used to filter out the desired samples and genes. Once the filter is applied, the heat map containing the selected genes and sample would be generated.
+A heat map is a graphical representation of data where the individual values contained in a matrix are represented on a color scale. Here the heat map represents expression value of each gene corresponding to the number of samples in the data. The filter icon can be used to filter out the desired samples and genes. Once the filter is applied, the heat map containing the selected genes and sample would b generated.
 
 ![Heat map](../../img/RNASeq/Screenshot 2020-03-27 at 2.21.54 PM.png) <center>**Figure 12.** Heat map</center>
 
@@ -206,7 +206,7 @@ On selecting all the options along with the target database, click on the option
 
 Enrichr performs the enrichment analysis on the gene set relayed, either in the Differential Expression tab or X2K analysis tab. Enrichment analysis is a computational method for inferring knowledge about an input gene set by comparing it to annotated gene sets representing prior biological knowledge. Enrichment analysis checks whether an input set of genes significantly overlaps with annotated gene sets.
 
-To perform the enrichment analysis, select the desired Enrichr database.
+To perfomr the enrichment analysis, select the desired Enrichr database.
 
 ![Enrichr)](../../img/RNASeq/Screenshot 2020-03-27 at 2.48.42 PM.png) <center>**Figure 17.** Enrichr</center>
 

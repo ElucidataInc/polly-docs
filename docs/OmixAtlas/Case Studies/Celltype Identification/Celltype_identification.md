@@ -292,6 +292,10 @@ seurat = get_seurat_obj(adata.pred)
 DimPlot(object = seurat, reduction = "tsne", group.by = "clusters", cols = DiscretePalette(20), label = TRUE)
 ```
 
+
+![png](output_23_0.png)
+
+
 ## 3. Finding cluster biomarkers
 
 A one vs all comparison is performed between clusters to identify marker genes.
@@ -345,6 +349,12 @@ DoHeatmap(seurat.subset, features = liver.markers.subset$gene)
 
     Centering and scaling data matrix
     
+
+
+
+![png](output_29_1.png)
+
+
 ## 4 . Automated cell type curation using biomarker genes
 
 Marker gene database-based annotation takes advantage of cell type atlases. Literature- and scRNA-seq analysis-derived markers have been assembled into reference cell type hierarchies and marker lists. In this approach, basic scoring systems are used to ascribe cell types at the cluster level in the query dataset.
@@ -456,6 +466,10 @@ rownames(seurat@meta.data) <- rows
 ```sos
 DimPlot(object = seurat, reduction = "tsne", group.by = "Type", cols = DiscretePalette(12))
 ```
+
+
+![png](output_35_0.png)
+
 
 ## Appendix
 
