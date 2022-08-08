@@ -1,15 +1,15 @@
 #Overview
 
-The applications on Polly are built to process and visualize experimental data ranging from mass-spec based omics to sequencing-based omics, from dual-mode data visualization to the analysis of CRISPR screening. Despite the variety and specificity of the apps present on Polly, there are a couple of features common across all apps. These features are built to help you get started with minimal effort, analyze and share results and processed data with your collaborators with ease.
+The applications on Polly are built to process and visualize experimental data ranging from mass-spec based omics to sequencing-based omics, from dual-mode data visualization to the analysis of CRISPR screening. Though despite the variety and specificity of the apps present on Polly, there are a couple of features common across all apps. These features are built to help you get started with minimal effort, analyze and share results and processed data with your collaborators with ease.
 
 ##Demo Data
 
 To help you get started even if you do not have your own data, every app on Polly has demo data uploaded as shown in Figure 1, Figure 2 and Figure 3. Moreover the demo data also serves as a reference point for the input files and their format required for each app.
 
-![Demo Data for FirstView](../img/AppIntroduction/01_Application_feature_demodata.png) <center>**Figure 1.** Demo Data for Dual Mode Data Visualization</center>
+![Demo Data for FirstView](../img/AppIntroduction/DemoDataFV.png) <center>**Figure 1.** Demo Data for FirstView</center>
 
 
-![Demo data for MetScape](../img/AppIntroduction/02_Application_feature_demodata.png) <center>**Figure 2.** Demo data for Proteomics Workflow</center>
+![Demo data for MetScape](../img/AppIntroduction/DemoDataMS.png) <center>**Figure 2.** Demo data for MetScape</center>
 
 
 ![Demo data for Labeled LC-MS app](../img/AppIntroduction/DemoDataLLCMS.png)<center>**Figure 3.** Demo data for Labeled LC-MS app</center>
@@ -18,7 +18,7 @@ To help you get started even if you do not have your own data, every app on Poll
 
 All Polly <!-- ([El-MAVEN Phi Relative LC-MS](../El-MAVEN Phi Relative LC-MS), [FirstView](../FirstView), [MetScape](../MetScape), [QuantFit](../QuantFit), [CRISPR Screening](../CRISPR Screening) and [IntOmix](../IntOmix)) --> <!-- ([Dual Mode Data Visualization](../Dual Mode Data Visualization), [Labeled LC-MS Workflow](../Labeled LC-MS  Workflow), [Labeled LC-MS/MS Workflow](../Labeled LC-MS/MS Workflow), [Untargeted Pipeline](../Untargeted Pipeline), [High Throughput Drug Screening](../High Throughput Drug Screening), [RNA Seq Workflow](../RNA Seq Workflow), [Proteomics Workflow](../Proteomics Workflow) and [Lipidomics Visualization Dashboard](../Lipidomics Visualization Dashboard)) --> applications provide you the option to upload data from local storage as shown in Figure 4 and Figure 5.
 
-![Upload data from local storage for MetScape](../img/AppIntroduction/04_Application_feature_uploaddata.png)<center>**Figure 4.** Upload data from local storage for Dual Mode Data Visualization</center>
+![Upload data from local storage for MetScape](../img/AppIntroduction/UploadDataMetScape.png)<center>**Figure 4.** Upload data from local storage for MetScape</center>
 
 ![Upload data from local storage for Labeled LC-MS app](../img/AppIntroduction/UploadDataLLCMSLocal.png)<center>**Figure 5.** Upload data from local storage for Labeled LC-MS app</center>
 
@@ -63,3 +63,7 @@ To ensure that you do not spend a lot of time downloading plots and arranging th
 **Customization**
 
 The major advantage with our implementation is customization and ease of use. With our framework, we can implement an OCR for you on the app of your choice within **1 week**. You can customize the structure of the report, any text to be included and the plots themselves. Plots not on the app can be added as well as the existing plots modified according to your requirements. 
+
+Currently, custom OCR is integrated in the following apps:
+
+*   [MetScape](https://docs.elucidata.io/Apps/Metabolomic%20Data/MetScape.html#one-click-reportbeta)

@@ -50,9 +50,9 @@ The metadata file contains the sample to cohort mapping information that will be
 
 Go to the dashboard and select Untargeted Pipeline under the *Metabolomcis Data* tab. Create a *New workspace* or choose from the existing ones and provide a *Name of the Session* to be redirected to the upload page.
 
-![Polly Dashboard](../../img/UntargetedPipeline/04_Polly_Dashboard.png)<center>**Figure 4.** Polly Dashboard</center>
+![Polly Dashboard](../../img/UntargetedPipeline/Dashboard1.png)<center>**Figure 4.** Polly Dashboard</center>
 
-![Untargeted Pipeline](../../img/UntargetedPipeline/05_Untargeted_Pipeline.png)<center>**Figure 5.** Untargeted Pipeline</center>
+![Untargeted Pipeline](../../img/UntargetedPipeline/Selection1.png)<center>**Figure 5.** Untargeted Pipeline</center>
 
 ##Upload Files
 
