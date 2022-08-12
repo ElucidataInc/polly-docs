@@ -56,6 +56,7 @@ nav:
   - Release Notes: Release Notes.md
 theme: 
   name: readthedocs
+  custom_dir: custom_theme/
   analytics: 
     gtag: 'G-PQXHC1FNVZ'
 site_favicon: img/elucidata.ico
