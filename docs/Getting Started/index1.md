@@ -1,6 +1,6 @@
 ###   **Sign up for the platform**
 
-To sign in to the Polly platform, you must have an account. Account credentials can be generated for both temporary, limited access as well as enterprise accounts. Reach out to our team at [polly@elucidata.io](mailto:polly@elucidata.io) for your login credentials.
+To sign in to the Polly platform, you must have an account. Account credentials can be generated for both temporary, limited access as well as enterprise accounts. Reach out to our team at [polly.support@elucidata.io](mailto:polly.support@elucidata.io) for your login credentials.
 
 **Note:**
 
