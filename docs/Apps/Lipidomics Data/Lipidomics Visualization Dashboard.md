@@ -57,11 +57,11 @@ The *species metadata file* is optional. It is helpful to classify the lipid spe
 ##Upload Files
 
 Select *Lipidomics Visulalization Dashboard* from the dashboard under the *Lipidomics Data* Tab.                              
-![Polly Dashboard](../../img/Lipidomics/Dashboard1.png) <center>**Figure 5.** Polly Dashboard</center>
+![Polly Dashboard](../../img/Lipidomics/05_Polly_Dashboard (1).png) <center>**Figure 5.** Polly Dashboard</center>
 
 Create a *New Workspace* or choose the existing one from the drop down and provide the *Name of the session* to be redirected to *Lipidomics Visualization Dashboard's* upload page.
 
-![Workspace Selection](../../img/Lipidomics/Selection1.png) <center>**Figure 6.** Workspace Selection</center>
+![Workspace Selection](../../img/Lipidomics/06_Workspace_Selection.png) <center>**Figure 6.** Workspace Selection</center>
 
 ##Upload Interface
 
