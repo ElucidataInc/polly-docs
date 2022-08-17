@@ -2,7 +2,7 @@
 Polly Libraries give access to the various capabilities on Polly like ingesting, querying, filtering, downloading and creating cohorts for the data on OmixAtlas. It allows access to data in OmixAtlas over any computational platform (like DataBricks, SageMaker, Polly, etc.) of your choice. These functionalities can be accessed through functions in python and [bash](https://docs.elucidata.io/Scaling%20compute/Polly%20CLI%201.html) which can be used over a Terminal.
 
 ## About Polly Python
-Polly Python library provides convenient access to the above-mentioned functionalities through function in Python language. A snapshot of it's capabilities as per release v0.1.5 is shown in the image below.
+Polly Python library provides convenient access to the above-mentioned functionalities through function in Python language. A snapshot of it's capabilities as per release v0.1.6 is shown in the image below.
 
 <img src = "../img/polly-python/polly_python_capabilities_v015.png" width="1000" height="900">
 
@@ -389,20 +389,39 @@ Example to save the dataset_id 'GSE101127_GPL1355' from repo_id 1615965444377 to
 ```
 omixatlas.save_to_workspace('1615965444377', 'GSE101127_GPL1355', 8025, 'data')
 ```
+##### 4.2.5.6 Copy data from one workspace to another
+This function enables user to create a copy of a file or folder contained in a workspace. The copy of the file/folder gets created in the specified destination workspace.
+
+```
+from polly.workspaces import Workspaces
+workspaces = Workspaces(token)
+
+workspaces.create_copy(source_id, source_path, destination_id, destination_path)
+```
+`source_id`(int) : workspace id of the source workspace where the file/folder exists.
+
+`source_path` (str): file/folder path on the source workspace to be copied.
+
+`destination_id`(int) : workspace id of the destination workspace where the file/folder is to be copied.
+
+`destination_path` (str):optional parameter to specify the destination path.
+
 #### 4.2.6 Working with data schema
 
 ##### 4.2.6.1 Introduction of Data Schema
 The data available within OmixAtlas is curated within 5 indexes/tables on the basis of the information it contains. These five indexes are:
 
-***Dataset level metadata (index: files)***: Contains curated fields like drug, disease, tissue organism, etc for each dataset.
+***Dataset level metadata for all datatypes (index: files)***: Contains curated fields like drug, disease, tissue organism, etc for each dataset.
 
-***Sample level metadata (index: gct_metadata)***: As the name suggests, this contains sample level metadata information for all samples except single-cell samples. It contains curated fields like cell lines, experimental design, etc for each sample except single-cell samples.
+***Sample level metadata for gct files (index: gct_metadata)***: As the name suggests, this contains sample level metadata information for all samples except single-cell samples. It contains curated fields like cell lines, experimental design, etc for each sample except single-cell samples.
 
-***Sample level metadata for single-cell (index: h5ad_metadata)***: This table only contains metadata information for single-cell samples. It contains curated fields like cell line, gene counts, UMI counts for each sample.
+***Sample level metadata for h5ad files (index: h5ad_metadata)***: This table only contains metadata information for single-cell samples. It contains curated fields like cell line, gene counts, UMI counts for each sample.
 
-***Feature level metadata (index: gct_data)***: This table contains feature level metadata information for all data except single-cell.  It contains the gene/molecule symbol along with the feature intensity for each sample.
+***Feature level metadata for gct files (index: gct_row_metadata)***: This table contains feature level metadata information for all data except single-cell.  It contains the gene/molecule symbol along with the feature intensity for each sample.
 
-***Feature level metadata for single-cell (index: h5ad_data)***: This table contains feature level metadata information for all single-cell data.  It contains the gene/molecule symbol studied in an experiment along with the cell type and expression value.
+***Feature level metadata for h5ad files (index: h5ad_data)***: This table contains feature level metadata information for all single-cell data.  It contains the gene/molecule symbol studied in an experiment along with the cell type and expression value.
+
+***Variant related metadata in vcf files (index: variant_data)***: This table contains the schema for variant related information present in vcf files.
 
 To find relevant information that can be used for querying, refer the curated data schema [here](https://docs.elucidata.io/OmixAtlas/Data%20Schema.html).
 
@@ -414,7 +433,15 @@ Use `get_schema(repo_key, schema_level: list (optional), source: str (optional),
 
 `repo_key` repo_id OR repo_name. This is a mandatory field. 
 
-`schema_level` (optional) depending on the tables present in the OmixAtlas, user can input schema of which table they are interested in. The default value is ['dataset', 'sample']. The users can use ['dataset'] OR ['sample'] to fetch the schema of dataset OR sample level metadata respectively.
+`schema_level` (optional) Table names for the OmixAtlas as per response of `query_metadata` function for the following query: `SHOW TABLES IN <repo_name>` For example:
+
+`datasets`, `samples` and `features` for gct files in geo OmixAtlas (`geo`)
+
+`samples_singlecell` and `features_singlecell` for h5ad files in Single Cell OmixAtlas (`sc_data_lake`)
+
+`variant_data` for vcf files in gnomad OmixAtlas (`gnomad`)
+
+This is an optional parameter, and by default schema for all the tables will be fetched.
 
 `source` (optional) if source specific schema is ingested in the OA, then this field can be used to extract that. 
 
@@ -422,34 +449,40 @@ Use `get_schema(repo_key, schema_level: list (optional), source: str (optional),
 
 `return_type` (optional) takes two inputs dataframe and dict with the default value to be dataframe
 
-Example to fetch dataset and sample level schema for all datatypes from all sources in GEO Omixatlas
+Example to fetch dataset, sample and feature level schema for all datatypes from all sources in GEO Omixatlas in dictionary format
 
 ```
-schema = omixatlas.get_schema("geo", ['dataset', 'sample'], "all", "all", "dict")
-```
+schema = omixatlas.get_schema("geo", ['datasets', 'samples', 'features'], "all", "all", "dict")
+
 to fetch the dictionary with entire payload of dataset level metadata,
 
-```
-schema.dataset
-```
+`schema.datasets`
+
 to fetch the dictionary with entire payload of sample level metadata,
-```
-schema.sample
+
+`schema.samples`
+
+to fetch the dictionary with entire payload of feature level metadata,
+
+`schema.features`
 ```
 
 Similarly, get_schema will give dataframe output for the following:-
 
 ```
-schema = omixatlas.get_schema("geo", ['dataset', 'sample'], "all", "all", "dataframe")
-```
+schema = omixatlas.get_schema("geo", ['datasets', 'samples', 'features'], "all", "all", "dataframe")
+
 to fetch the dataframe with summary of dataset level metadata,
 
-```
-schema.dataset
-```
+`schema.datasets`
+
 to fetch the dataframe with summary of sample level metadata,
-```
-schema.sample
+
+`schema.samples`
+
+to fetch the dataframe with entire payload of feature level metadata,
+
+`schema.features`
 ```
 
 ###### 4.2.6.2.2 Update schema
@@ -656,10 +689,73 @@ This function is for validating a cohort. This functions returns a boolean resul
 cohort.is_valid()
 ```
 
-#### 4.2.9 File format converter functions
+#### 4.2.9 Reporting related functions
+This will enable users to generate reports, link reports to a dataset in OmixAtlas and fetch reports linked with dataset in an OmixAtlas
+
+##### 4.2.9.1 Link reports to a dataset in any OmixAtlas
+Org admins can now link a report (html or pdf file format) present in a workspace with the specified datasets in an OmixAtlas. Once a report is linked to a dataset in OmixAtlas, it can be fetched both from front-end and polly-python.
+
+```
+from polly.omixatlas import OmixAtlas
+omixatlas = OmixAtlas(token)
+
+omixatlas.link_report(repo_key, dataset_id, workspace_id, workspace_path, access_key)
+```
+`repo_key`(str): repo_name or repo_id of the repository to be linked
+
+`dataset_id`(str): to which the report should be linked
+
+`workspace_id`(int): where the report is located
+
+`workspace_path`(str): specific folder path and file name of the report which should be linked
+
+`access_key`(str): “private" or "public" depending access type to be granted. If public, then anyone with a Polly account with the link will be able to see the report. If private, then only the individuals who have access to the workspace where reports is stored will be able to see them.
+
+This function returns a success message along with the link which can be used to view the report.
+
+##### 4.9.2 Fetch linked reports to a given dataset in OmixAtlas
+
+This function will enable users to fetch the list of reports linked to a given dataset in an OmixAtlas.
+
+```
+from polly.omixatlas import OmixAtlas
+omixatlas = OmixAtlas(token)
+
+omixatlas.fetch_linked_reports(repo_key, dataset_id)
+```
+`repo_key`(str): repo_name or repo_id of the repository 
+
+`dataset_id`(str): for which the reports should be fetched
+
+This function returns a dataframe containing information on who added the report, when it was added and the link.
+
+##### 4.9.3 Generate Report for a dataset in GEO
+
+This is a MVP release to minimise time taken by users to determine relevance of a dataset in their research, we’re enabling auto-generation of reports. These reports will contain dataset and sample level metadata along with some graphs showing how the samples are distributed. It will help them figure out which cohorts could be of interest in a given dataset. This template can be modified and we’re open to user’s feedback.
+
+In future, we’ll enable users to make custom template so that they can support needs of an Enterprise OmixAtlas as well.
+
+This report is available on the user’s local path as well as an option to upload the report to workspaces is given.
+
+```
+from polly.omixatlas import OmixAtlas
+omixatlas = OmixAtlas(token)
+
+omixatlas.generate_report(repo_key, dataset_id, workspace_id, workspace_path)
+```
+
+`repo_key`(str): repo_name/repo_id for which the report is to be generated
+
+`dataset_id`(str): dataset_id for which the report is to be generated.
+
+`workspace_id`(int): workspace_id to where the report is to be uploaded.
+
+`workspace_path`(str) (Optional Parameter): workspace_path to upload the report to.
+
+#### 4.2.10 File format converter functions
 Several datatypes are ingested on Polly after conversion to gct file format. In order to enable consumption of different datatypes, bioinformaticians often use certain open-source packages. 
 
-##### 4.2.9.1 Consumption of mutation data using maftools
+##### 4.2.10.1 Consumption of mutation data using maftools
 With advances in Cancer Genomics, Mutation Annotation Format (MAF) is being widely accepted and used to store somatic variants detected. Mutation datatype on Polly from TCGA and cBioportal repository can now be consumed using an R package called maftools [Github](https://github.com/PoisonAlien/maftools),  [Bioconductor](https://bioconductor.org/packages/release/bioc/vignettes/maftools/inst/doc/maftools.html). This package attempts to summarize, analyze, annotate and visualize MAF files in an efficient manner from either TCGA sources or any in-house studies as long as the data is in MAF format.
 
 Polly users can use the following functions to convert the .gct datatype to .maf datatype for downstream analysis using maftools.

@@ -200,15 +200,6 @@ pool total of a metabolite in a sample = sum (all corrected intensities for a me
          * Fractional contribution = Sum(Label * Fractional Enrichment)/ total number of carbons.
     Eg: for glycine, fractional contribution = (0 * FE0 + 1 * FE1 + 2 * FE2)/2, where FE = Fractional Enrichment
 
-#Videos
-
-<div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; max-width: 100%; height: auto;">
-    <iframe src="https://www.youtube.com/embed/FarXheRsZ-4" frameborder="0" allowfullscreen style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;"></iframe>
-</div>
-
-<br>
-
-
 #References
 
 *   Midani FS, Wynn ML, Schnell S. The importance of accurately correcting for the natural abundance of stable isotopes. *Anal Biochem*. 2017;520:27–43. doi:10.1016/j.ab.2016.12.011

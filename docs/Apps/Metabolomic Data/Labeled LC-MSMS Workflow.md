@@ -55,21 +55,21 @@ The background mapping metadata is a .csv, .xls, .xlsx or .txt file that contain
 
 ##Caveats
 
-*   The intensity file should be the El-MAVEN outout in peak detailed format.
+*   The intensity file should be the El-MAVEN output in peak detailed format.
 *   The fragment mapping metadata file's name should start with "metadata_mq".
-*   The backround mapping metadata file's name should start with "metadata_sample".
+*   The background mapping metadata file's name should start with "metadata_sample".
 
 #Tutorial
 
 Select *Labeled LC-MS/MS Workflow* from the dashboard under the *Metabolomics Data* Tab as shown in Figure 5. Create a *New Workspace* or choose from the existing ones from the drop-down and provide the *Name of the Session* to be redirected to Labeled LC-MS/MS Workflow's upload page.
 
-![Polly Dashboard](../../img/LabeledLC-MS2Workflow/Dashboard1.png)
+![Polly Dashboard](../../img/LabeledLC-MS2Workflow/05_Polly_Dashboard.png)
 
-![LabeledLCMSMSWorkflow](../../img/LabeledLC-MS2Workflow/Selection1.png) <center>**Figure 5.** Polly Dashboard and Labeled LC-MS/MS Workflow</center>
+![LabeledLCMSMSWorkflow](../../img/LabeledLC-MS2Workflow/05_Labeled_LC-MS_Workflow.png) <center>**Figure 5.** Polly Dashboard and Labeled LC-MS/MS Workflow</center>
 
 ##Upload Files
 
-Click on *Upload El-MAVEN Output* and *Upload Cohort FIle* to upload the intensity and metadata files respectively. y or from Polly. This is optional. The metadata is not used in the NA correction, however, if you wants to visualize plots, the sample-cohort mapping would be required. Click on *Run* to proceed.
+Click on *Upload El-MAVEN Output* and *Upload Cohort FIle* to upload the intensity and metadata files respectively. This is optional. The metadata is not used in the NA correction, however, if you wants to visualize plots, the sample-cohort mapping would be required. Click on *Run* to proceed.
 
 ![PollyTM Labeled LC-MS/MS Workflow ￼(Homescreen)](../../img/LabeledLC-MS2Workflow/LabeledLCMSMSHomescreen.png) <center>**Figure 6.** Upload interface</center>
 

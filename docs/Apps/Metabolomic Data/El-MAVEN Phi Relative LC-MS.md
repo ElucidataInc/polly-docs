@@ -33,7 +33,7 @@ These files are instrument generated and can be in different formats such as:
 
 **Compound Database**
 
-Compound database is a .csv file that consists of two mandatory columns, *compound* which contains metabolite names and *formula* which contains the metabolite formula. Additionally, you can the HMDB or KEGG ID in the column *id* or retention time in the column *rt* if known. Any other information present in this file is ignored by El-MAVEN and PollyPhiTM Relative LC-MS.
+Compound database is a .csv file that consists of two mandatory columns, *compound* which contains metabolite names and *formula* which contains the metabolite formula. Additionally, you can add the HMDB or KEGG ID in the column *id* or retention time in the column *rt* if known. Any other information present in this file is ignored by El-MAVEN and PollyPhiTM Relative LC-MS.
 
 ![Compound Database](../../img/EPI/CompoundDatabase.png) <center>**Figure 2.** Compound Database </center>
 
@@ -90,7 +90,7 @@ Global Settings can be changed from the *Options* dialog. There are 9 tabs in th
 
 ![Options dialog](../../img/EPI/OptionsDialog.png) <center> **Figure 8.** Options dialog </center>
 
-you has an option to set *Ionization* mode to *Positive, Negative or Neutral* on the top left corner.
+You have an option to set *Ionization* mode to *Positive, Negative or Neutral* on the top left corner.
 
 The *[m/z]* option scans the groups to find any specific m/z value and plot its corresponding EIC. The *+/-* option to its right is to specify the expected mass resolution error in parts per million (ppm).
 
@@ -200,7 +200,6 @@ This interface allows you to visualize the EIC plot and reject metabolites or is
 **Note:**
 
 *   Label M0 corresponds to C12 PARENT, M1 to C13-label-1 and so on.
-
 
 ##Frequently Asked Questions (FAQs)
 
