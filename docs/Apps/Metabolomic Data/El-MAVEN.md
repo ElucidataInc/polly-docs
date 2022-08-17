@@ -2,7 +2,7 @@
 
 ##Overview
 
-Polly is capable of hosting any desktop applications that can be dockerized. One such desktop application is [El-MAVEN](https://resources.elucidata.io/elmaven).
+Polly is capable of hosting any desktop applications that can be dockerized. One such desktop application is El-MAVEN.
 
 It is an open-source LC-MS data processing engine that is optimal for isotopomer labeling and untargeted metabolomic profiling experiments. Currently El-MAVEN exists as a desktop application that runs on Windows, Linux, and Mac systems. The software can be used to view the mass spectra, align chromatograms, perform peak-feature detection, and alignment for labeled and unlabeled mass spectrometry data. The aim of this software package is to reduce the complexity of metabolomics analysis by using a highly intuitive interface for exploring and validating metabolomics data.
 
