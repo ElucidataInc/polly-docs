@@ -8,7 +8,7 @@ We firmly believe that our greatest achievement is to enable customers and their
 
 Our platform uses Intercom as a standard messenger launcher. A text bubble pops up, inquiring if you need help. Polly embeds this support to establish a dedicated customer success manager.
 
-![Intercom](../img/Home/Intercom.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
+![Intercom](../img/Home/JSM.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
 
 ##Email
 
