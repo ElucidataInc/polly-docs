@@ -4,7 +4,7 @@
 <details open>
 <summary><font size="+1"><b>August, 2022</b></font></summary>
 <br>
- 
+  <p class="new-button">New</p>
   <ul>
     <li>The Nextflow integration with Polly CLI allows users to run any Nextflow bioinformatics pipeline with parallel processing on Polly’s scalable computational infrastructure.
     <li>OmixAtlases are now available as shareable links through Workspaces.
@@ -26,7 +26,7 @@
 </ul>
                 </ul>
   
-Updates:- 
+  <p class="update-button">Update</p>
 
 These are the major Polly Python updates to existing functionalities: 
 <ul>
