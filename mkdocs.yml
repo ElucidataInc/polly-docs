@@ -54,8 +54,10 @@ nav:
     - Security and Data Transfer: TechEcosystem/Data Security.md
     - Data Recovery: TechEcosystem/polly_disaster_recovery_mar_2021.md
   - Release Notes: Release Notes.md
+  - Getting Help: Getting help.md
 theme: 
   name: readthedocs
+  custom_dir: custom_theme/
   analytics: 
     gtag: 'G-PQXHC1FNVZ'
 site_favicon: img/elucidata.ico

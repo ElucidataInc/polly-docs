@@ -3,7 +3,7 @@ The size of the data varies from few MBs to hundreds of GBs, and in order to pro
 
 ![Menu to select various machine configurations](../img/Notebooks/Machine.png) <center>**Figure 8.** Menu to select various machine configurations</center>
 
-Most of the machine configuration are already specified to cover the wide variety of use cases. More machine configuration can also be made available on request (contact us at [polly@elucidata.io](polly@elucidata.io)). The general machine configurations are divided into three broad categories:
+Most of the machine configuration are already specified to cover the wide variety of use cases. More machine configuration can also be made available on request (contact us at (polly@elucidata.io)) <p><a href="mailto:polly.support@elucidata.io"> </a></p>. The general machine configurations are divided into three broad categories:
 
 *   **General purpose:** Configurations from 1 to 4 CPU cores and 2 to 16 GB RAM fall under this category. The various configurations are:
 

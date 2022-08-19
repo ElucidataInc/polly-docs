@@ -8,7 +8,7 @@ Polly-PeakML is a novel machine-learning tool that enables the curation of peak 
 
 ##Scope
 
-* Make use of [El-MAVEN](https://resources.elucidata.io/elmaven) for automated peak-picking and displaying curated results.
+* Make use of El-MAVEN for automated peak-picking and displaying curated results.
 * Raw data to curated peak-groups in minutes.
 * Process high-resolution and low-resolution data of up to 100 samples.
 
