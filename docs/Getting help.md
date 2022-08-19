@@ -6,7 +6,7 @@ We firmly believe that our greatest achievement is to enable customers and their
 
 ##Live Chat
 
-Our platform uses Intercom as a standard messenger launcher. A text bubble pops up, inquiring if you need help. Polly embeds this support to establish a dedicated customer success manager. Technical support is available from 9 AM to 8 PM EST and CET.
+Our platform uses Intercom as a standard messenger launcher. A text bubble pops up, inquiring if you need help. Polly embeds this support to establish a dedicated customer success manager. 
 
 ![Intercom](../img/Home/JSM.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
 
