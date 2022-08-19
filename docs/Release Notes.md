@@ -17,13 +17,16 @@
           <li>Get auto-generated metadata summaries for datasets present on the GEO OmixAtlas by giving the GEO accession ID as an input. This helps to improve findability and estimate the relevance of the dataset.  <br>
           <li>Cell line recommendations are now available, to select multiple related cell lines. Users can start the search with a disease, tissue or cell line and receive recommendations for related or matching cell lines.  <br>
           <li>The recommend functionality is available for disease, tissue and cell lines at sample level metadata queries as well.  <br>
+          <li> Get auto-generated metadata summaries for datasets present on the GEO OmixAtlas by giving the GEO accession ID as an input. This helps to improve findability and estimate the relevance of the dataset. <br>
+          <li>Cell line recommendations are now available, to select multiple related cell lines. Users can start the search with a disease, tissue or cell line and receive recommendations for related or matching cell lines. <br>
+          <li> The recommend functionality is available for disease, tissue and cell lines at sample level metadata queries as well. <br>
          </ul> 
-    <li> New datasets from the following reporsitories have been added to Polly OmixAtlases in the last month: </li>
+     <li> New datasets from the following reporsitories have been added to Polly OmixAtlases in the last month: </li>
     <ul>     
-    <li> DepMap -  4312 <br>
-    <li> GEO -  922 <br>
-         <li> GEO Raw Counts -  1273 <br>
-         <li> Single Cell Data -  240 <br>
+    <li> depmap  -  4312 <br>
+    <li> geo  -  922 <br>
+         <li> geo_raw_counts  -  1273 <br>
+         <li> sc_data_lake  -  240 <br>
 </ul>        
  <br>
   <p class="update-button">Update</p>
