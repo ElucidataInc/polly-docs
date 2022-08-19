@@ -1,47 +1,4 @@
 # Release Notes
-<!--August, 2022-->
-
-<details open>
-<summary><font size="+1"><b>August, 2022</b></font></summary>
-<br>
-  <p class="new-button">New</p>
-  <ul>
-    <li>The Nextflow integration with Polly CLI allows users to run Bioinformatics pipelines with parallel processing and at scale. It also provides users with interactive reports, timelines, DAGs, and trace documents.</li>
-    <li>OmixAtlases are now available as shareable links through Workspaces.</li>
-    <li> 797 clinical datasets from MIMIC are now available on Polly, labeled for four metadata fields “Drug, Dose, Frequency, and Strength.”</li> 
-    <li> With the recent Polly Python version release, users can now: <br>
-        <ul>
-          <li>Copy files/folders in workspaces. <br>
-          <li>Add datasets to and delete datasets from OmixAtlases. <br>
-          <li>Link and fetch reports to a dataset on any OmixAtlas. <br>
-          <li>Get auto-generated metadata summaries for datasets present on the GEO OmixAtlas by giving the GEO accession ID as an input. This helps to improve findability and estimate the relevance of the dataset.  <br>
-          <li>Cell line recommendations are now available, to select multiple related cell lines. Users can start the search with a disease, tissue or cell line and receive recommendations for related or matching cell lines.  <br>
-          <li>The recommend functionality is available for disease, tissue and cell lines at sample level metadata queries as well.  <br>
-          <li> Get auto-generated metadata summaries for datasets present on the GEO OmixAtlas by giving the GEO accession ID as an input. This helps to improve findability and estimate the relevance of the dataset. <br>
-          <li>Cell line recommendations are now available, to select multiple related cell lines. Users can start the search with a disease, tissue or cell line and receive recommendations for related or matching cell lines. <br>
-          <li> The recommend functionality is available for disease, tissue and cell lines at sample level metadata queries as well. <br>
-         </ul> 
-     <li> New datasets from the following reporsitories have been added to Polly OmixAtlases in the last month: </li>
-    <ul>     
-    <li> depmap  -  4312 <br>
-    <li> geo  -  922 <br>
-         <li> geo_raw_counts  -  1273 <br>
-         <li> sc_data_lake  -  240 <br>
-</ul>        
- <br>
-  <p class="update-button">Update</p>
-  
-  <li> These are the major Polly Python updates to existing functionalities: 
-  <ul>
-<li> The complete schema for tables in an OmixAtlas can be fetched in the form of a dictionary.</li>
-<li> Schema for feature level metadata is now available.
-<li> Schema for single cell and .vcf data types can be retrieved.
-<li> Ontology recommendations for sample-level queries have been enabled.
-  </ul>
-</details>
-    
-<hr>
-
 <!--March, 2022-->
 
 <details open>
