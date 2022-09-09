@@ -1,4 +1,27 @@
 # Release Notes
+
+<!--September, 2022-->
+
+<details open>
+<summary><font size="+1"><b>September, 2022</b></font></summary>
+<br>
+  <ul>
+    <li>Microbiome data is now supported on OmixAtlases. The data can be searched and queried on Polly and can be downloaded in the form of a BIOM file.
+    <li>‘Cancer Stage’ is the newest metadata field and it has been curated for  974 datasets on GEO.
+    <li>Reports present in workspaces can now be linked to datasets in OmixAtlases. 
+                </ul>
+  
+  <p class="update-button">Update</p>
+
+<ul>
+<li>‘Select All’ is now an option for the filter results while searching and filtering datasets on the OmixAtlas UI. 
+<li>Identify datasets that do not contain data matrices on the OmixAtlases through the new ‘Metadata-only’ labels.
+<li>Send requests to obtain data matrices for specific datasets. 
+  </ul>
+</details>
+    
+<hr>
+
 <!--August, 2022-->
 
 <details open>
