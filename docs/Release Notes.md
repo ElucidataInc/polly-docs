@@ -1,6 +1,6 @@
 # Release Notes
 
-<!--September, 2022-->
+<!--September 19, 2022-->
 
 <details open>
 <summary><font size="+1"><b>September, 2022</b></font></summary>
@@ -35,7 +35,7 @@
     
 <hr>
 
-<!--September, 2022-->
+<!--September 5, 2022-->
 
 <details open>
 <summary><font size="+1"><b>September, 2022</b></font></summary>
