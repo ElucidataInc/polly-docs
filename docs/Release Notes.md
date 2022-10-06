@@ -3,7 +3,7 @@
 <!--September 19, 2022-->
 
 <details open>
-<summary><font size="+1"><b>September, 2022</b></font></summary>
+<summary><font size="+1"><b>September 19, 2022</b></font></summary>
 <br>
     <p class="update-button">Update</p>
   <ul>
@@ -38,7 +38,7 @@
 <!--September 5, 2022-->
 
 <details open>
-<summary><font size="+1"><b>September, 2022</b></font></summary>
+<summary><font size="+1"><b>September 5, 2022</b></font></summary>
 <br>
   <ul>
     <li>Microbiome data is now supported on OmixAtlases. The data can be searched and queried on Polly and can be downloaded in the form of a BIOM file.
