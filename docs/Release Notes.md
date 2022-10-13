@@ -1,10 +1,46 @@
 # Release Notes
 
-<!--September, 2022-->
+<!--September 19, 2022-->
 
 <details open>
-<summary><font size="+1"><b>September, 2022</b></font></summary>
+<summary><font size="+1"><b>September 19, 2022</b></font></summary>
 <br>
+    <p class="update-button">Update</p>
+  <ul>
+    <li>.nf files can now be uploaded to workspaces.
+    <li>New machines are available to run jobs:-
+      <ul>
+        <li>mix5xlarge: 16 vCPUs, 512.0 GiB RAM  & 2TB storage
+        <li>mix6xlarge: 24 vCPUs, 768.0 GiB & 2TB storage
+        <li>mix7xlarge: 64 vCPUs, 1024.0 GiB & 3TB storage
+                </ul>
+    <li>A new version of Polly-CLI is available. It includes performance improvements and bug fixes related to job logs. 
+    <li>If the OmixAtlas has multiple sources and/or datatypes, user can now put a schema specific to all the sources and/or datatypes. They will also be able to query the table as specific to source and/or datatype as defined in the schema.
+    <li>1500 curated CPTAC datasets have been added to Polly.
+    <li>Cohort creation is now enabled for all types of Public and Enterprise OmixAtlas
+    <li>Cell line ontology recommendations are now available on polly-pyhton and the front-end of the OmixAtlases on Polly.
+    <li>Card View on the OmixAtlas now allows sorting via recency of data ingestion.
+    <li>A View Details Page is now available for the new Expression Atlas datasets.
+      <li><b>Polly-python:</b>
+       <ul>
+          <li>The data matrix within h5ad files (single cell data) can now be queried.
+          <li>The curation library is integrated with polly-python which will enable the users to recognise entities in a given text, standardize entity and tag the entities in a text with standardized nomenclature/ontology.
+          <li>The replace_schema feature allows users to replace the existing schema entirely. 
+          <li>Schema validation functions have been released to enable users to validate the schema prior to inserting/updating or replacing the schema.
+          <li>Older reports linked to datasets in any OmixAtlas can now be deleted and newer ones can be linked to the same datasets.
+          <li>The rows and columns that appear in the results of query_metadata are now sorted alphabetically to make browsing through the dataframe easier.
+          <li>Ingestion of the following file types/extensions is enabled in OmixAtlases - biom, zip, tar.gz, gct.bz, vcf.bgz, fcs, fs.
+  </ul>
+</details>
+    
+<hr>
+
+<!--September 5, 2022-->
+
+<details open>
+<summary><font size="+1"><b>September 5, 2022</b></font></summary>
+<br>
+   <p class="new-button">New</p>
   <ul>
     <li>Microbiome data is now supported on OmixAtlases. The data can be searched and queried on Polly and can be downloaded in the form of a BIOM file.
     <li>‘Cancer Stage’ is the newest metadata field and it has been curated for  974 datasets on GEO.
