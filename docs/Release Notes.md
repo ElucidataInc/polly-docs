@@ -21,7 +21,7 @@
     <li>Cell line ontology recommendations are now available on polly-pyhton and the front-end of the OmixAtlases on Polly.
     <li>Card View on the OmixAtlas now allows sorting via recency of data ingestion.
     <li>A View Details Page is now available for the new Expression Atlas datasets.
-     <li>Polly-python:
+      <li><b>Polly-python:</b>
        <ul>
           <li>The data matrix within h5ad files (single cell data) can now be queried.
           <li>The curation library is integrated with polly-python which will enable the users to recognise entities in a given text, standardize entity and tag the entities in a text with standardized nomenclature/ontology.
@@ -40,6 +40,7 @@
 <details open>
 <summary><font size="+1"><b>September 5, 2022</b></font></summary>
 <br>
+   <p class="new-button">New</p>
   <ul>
     <li>Microbiome data is now supported on OmixAtlases. The data can be searched and queried on Polly and can be downloaded in the form of a BIOM file.
     <li>‘Cancer Stage’ is the newest metadata field and it has been curated for  974 datasets on GEO.
