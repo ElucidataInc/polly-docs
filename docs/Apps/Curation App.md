@@ -36,7 +36,7 @@ Select Curation Icon from Polly homepage as shown in Figure 1.
 
 ![](../img/polly-applications/curation-fig-1.png)
 
-<Center><b>Figure 1 - Curation App Icon</b></Center>
+<p align=center><b>Figure 1 - Curation App Icon</b></p>
 
 ## Reviewer Window
 
@@ -48,13 +48,13 @@ Click on the Curation Configs icon. Create a new curation UI or edit an existing
 
 ![](../img/polly-applications/curation-fig-2.png)
 
-<Center><b>Figure 2 - Curation UI</b></Center>
+<p align=center><b>Figure 2 - Curation UI</b></p>
 
 Click on create Curation Config to create a new UI for custom curation fields.
 
 ![](../img/polly-applications/curation-fig-3.png) 
 
-<Center><b>Figure 3 - Create new curation UI</b></Center>
+<p align=center><b>Figure 3 - Create new curation UI</b></p>
 
 Add the required details, here you can add custom fields, the format of input and create a curation type on your own.
 
@@ -74,7 +74,7 @@ After filling up the required details, click on the submit button and the new UI
 
 ![](../img/polly-applications/curation-fig-4.png)
 
-<Center><b>Figure 4 - Input Fields</b></Center>
+<p align=center><b>Figure 4 - Input Fields</b></p>
 
 ### **Edit existing curation UI**
 
@@ -82,13 +82,13 @@ Click on the existing UI
 
 ![](../img/polly-applications/curation-fig-5.png)
 
-<Center><b>Figure 5 - Edit Curation UI</b></Center>
+<p align=center><b>Figure 5 - Edit Curation UI</b></p>
 
 Click on the edit fields and edit the field names according to your requirements
 
 ![](../img/polly-applications/curation-fig-6.png)
 
-<Center><b>Figure 6 - Edit Curation UI</b></Center>
+<p align=center><b>Figure 6 - Edit Curation UI</b></p>
 
 Once the UI has been created you can go back to the homepage of the curation app and start creating collections and add datasets to the collection.
 
@@ -106,26 +106,26 @@ Click on atlas icon, you will reach following page
 
 ![](../img/polly-applications/curation-fig-7.png)
 
-<Center><b>Figure 7 - Select Omixatlas</b></Center>
+<p align=center><b>Figure 7 - Select Omixatlas</b></p>
 
 - Select any OmixAtlas, for example - GEO
 
 ![](../img/polly-applications/curation-fig-8.png)
 
-<Center><b>Figure 8 - GEO OmixAtlas</b></Center>
+<p align=center><b>Figure 8 - GEO OmixAtlas</b></p>
 
 - Select datasets of your interest using filter buttons
   - Example - You need neoplasm samples for liver in humans, click on all the filters and click on add to collection button.
 
 ![](../img/polly-applications/curation-fig-9.png)
 
-<Center><b>Figure 9 - Select Desired Datasets</b></Center>
+<p align=center><b>Figure 9 - Select Desired Datasets</b></p>
 
 - You can either select existing collection or create a new collection
 
 ![](../img/polly-applications/curation-fig-10.png)
 
-<Center><b>Figure 10 - Create New Collection</b></Center>
+<p align=center><b>Figure 10 - Create New Collection</b></p>
 
 While creating a new collection you need to add following details (If the required curation UI is not available you can create a new customized UI, the steps are explained above)
 
@@ -139,13 +139,13 @@ Click on the submit button to create the collection
 
 ![](../img/polly-applications/curation-fig-11.png)
 
-<Center><b>Figure 11 - Create New Collection</b></Center>
+<p align=center><b>Figure 11 - Create New Collection</b></p>
 
 After the collection is created, go back to the curation app and click on the desired collection card for datasets assignment.
 
 ![](../img/polly-applications/curation-fig-12.png)
 
-<Center><b>Figure 12 - Collection Card on Curation App</b></Center>
+<p align=center><b>Figure 12 - Collection Card on Curation App</b></p>
 
 **Add datasets to existing collection**
 
@@ -153,7 +153,7 @@ You can also select the desired datasets and add to the existing collection eith
 
 ![](../img/polly-applications/curation-fig-13.png)
 
-<Center><b>Figure 13 - Add Datasets to Collection</b></Center>
+<p align=center><b>Figure 13 - Add Datasets to Collection</b></p>
 
 ### **Assign Datasets**
 
@@ -161,13 +161,13 @@ Click on the collection created, you will reach the page shown in Figure 14.
 
 ![](../img/polly-applications/curation-fig-14.png)
 
-<Center><b>Figure 14 - View Iterations</b></Center>
+<p align=center><b>Figure 14 - View Iterations</b></p>
 
 Click on View Iterations button, you will reach the page shown in Figure 15
 
 ![](../img/polly-applications/curation-fig-15.png)
 
-<Center><b>Figure 15 - Assign Datasets</b></Center>
+<p align=center><b>Figure 15 - Assign Datasets</b></p>
 
 You can assign the datasets to a curator by filling out the details in prompted window as shown below
 
@@ -183,7 +183,7 @@ Curators - The email ids of the curators to whom the datasets will be assigned (
 
 ![](../img/polly-applications/curation-fig-16.png)
 
-<Center><b>Figure 16 - Assign Datasets</b></Center>
+<p align=center><b>Figure 16 - Assign Datasets</b></p>
 
 After the datasets are assigned to the curators, one iteration is created.
 
@@ -202,7 +202,7 @@ After the assignment the journey of datasets is as followed
 
 ![](../img/polly-applications/curation-fig-17.png)
 
-<Center><b>Figure 17 - Data Journey</b></Center>
+<p align=center><b>Figure 17 - Data Journey</b></p>
 
 ### **Statistics Overview**
 
@@ -210,7 +210,7 @@ This page comes under each collection where you can visualise status for curated
 
 ![](../img/polly-applications/curation-fig-18.png)
 
-<Center><b>Figure 18 - Statistics Overview</b></Center>
+<p align=center><b>Figure 18 - Statistics Overview</b></p>
 
 ### **Review Window**
 
@@ -218,7 +218,7 @@ In this window, you can analyze the status of datasets according to consensus (m
 
 ![](../img/polly-applications/curation-fig-19.png)
 
-<Center><b>Figure 19 - Consensus Status</b></Center>
+<p align=center><b>Figure 19 - Consensus Status</b></p>
 
 Click on the dataset id to check the annotated labels by both the curators
 
@@ -228,7 +228,7 @@ Click on Reject button if the labels are wrong
 
 ![](../img/polly-applications/curation-fig-20.png)
 
-<Center><b>Figure 20 - Reviewer Window</b></Center>
+<p align=center><b>Figure 20 - Reviewer Window</b></p>
 
 ### **Bulk Approve/Reject**
 
@@ -238,7 +238,7 @@ The rejected datasets are discarded and are sent for recuration.
 
 ![](../img/polly-applications/curation-fig-21.png)
 
-<Center><b>Figure 21 - Bulk Approve/Reject</b></Center>
+<p align=center><b>Figure 21 - Bulk Approve/Reject</b></p>
 
 ### **Export Datasets**
 
@@ -254,7 +254,7 @@ Append Labels to OmixAtlases - Select Yes if the labels are to be updated in the
 
 ![](../img/polly-applications/curation-fig-22.png)
 
-<Center><b>Figure 22 - Export Data/ Append labels to OmixAtlases</b></Center>
+<p align=center><b>Figure 22 - Export Data/ Append labels to OmixAtlases</b></p>
 
 ### **Active Learning**
 
@@ -266,19 +266,19 @@ While creating a new collection you can enable active learning as shown in Figur
 
 ![](../img/polly-applications/curation-fig-23.png)
 
-<Center><b>Figure 23 - Enable Active Learning</b></Center>
+<p align=center><b>Figure 23 - Enable Active Learning</b></p>
 
 If you have reviewer rights then you will be able to view consensus, model score and model consensus as shown in Figure 24.
 
 ![](../img/polly-applications/curation-fig-24.png)
 
-<Center><b>Figure 24 - Model Consensus</b></Center>
+<p align=center><b>Figure 24 - Model Consensus</b></p>
 
 You will also be able to view the performance of the model in the overall statistics page of the collection as shown in Figure 25.
 
 ![](../img/polly-applications/curation-fig-25.png)
 
-<Center><b>Figure 25 - Model Performance</b></Center>
+<p align=center><b>Figure 25 - Model Performance</b></p>
 
 ## Curator Screen
 
@@ -286,7 +286,7 @@ Click on the curation icon in the Polly home page and you will be redirected to 
 
 ![](../img/polly-applications/curation-fig-26.png)
 
-<Center><b>Figure 26 - Open Collection</b></Center>
+<p align=center><b>Figure 26 - Open Collection</b></p>
 
 **Status Statistics**
 
@@ -294,7 +294,7 @@ As a curator you can view the status of the curated data for each iteration in a
 
 ![](../img/polly-applications/curation-fig-27.png)
 
-<Center><b>Figure 27 - Status Statistics</b></Center>
+<p align=center><b>Figure 27 - Status Statistics</b></p>
 
 **Iteration**
 
@@ -302,7 +302,7 @@ Click on the view iterations as shown in Figure 27 and click on show all button 
 
 ![](../img/polly-applications/curation-fig-28.png)
 
-<Center><b>Figure 28 - Iteration</b></Center>
+<p align=center><b>Figure 28 - Iteration</b></p>
 
 **Curation Window**
 
@@ -310,7 +310,7 @@ Upon clicking on the dataset id, the page will be redirected to the curation win
 
 ![](../img/polly-applications/curation-fig-29.png)
 
-<Center><b>Figure 29 - Curation Window</b></Center>
+<p align=center><b>Figure 29 - Curation Window</b></p>
 
 **Active Learning Curation Window**
 
@@ -318,19 +318,19 @@ In the curator window, a curator can view the model scores. On the basis of mode
 
 ![](../img/polly-applications/curation-fig-30.png)
 
-<Center><b>Figure 30 - Model Score</b></Center>
+<p align=center><b>Figure 30 - Model Score</b></p>
 
 Click on the dataset link, a curation window as shown in Figure 31 will open. Click on model predictions to apply active learning
 
 ![](../img/polly-applications/curation-fig-31.png)
 
-<Center><b>Figure 31 - Active Learning Curation Window</b></Center>
+<p align=center><b>Figure 31 - Active Learning Curation Window</b></p>
 
 A new window with the labels predicted by model will appear, check all the labels and click on apply predictions. After labeling the datasets with correct labels click on mark as complete or save progress.
 
 ![](../img/polly-applications/curation-fig-32.png)
 
-<Center><b>Figure 32 - Model Predictions</b></Center>
+<p align=center><b>Figure 32 - Model Predictions</b></p>
 
 
 ## Curator Performance Chart
@@ -339,7 +339,7 @@ As a reviewer you can also do the analysis of performance of each curator by com
 
 ![](../img/polly-applications/curation-fig-33.png)
 
-<Center><b>Figure 33 - Curator Performance Chart</b></Center>
+<p align=center><b>Figure 33 - Curator Performance Chart</b></p>
 
 **Terminologies**
 
