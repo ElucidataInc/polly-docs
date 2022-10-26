@@ -7,7 +7,7 @@ Polly workspaces allow you to reduce clutter and organize your data in a folder 
 To access workspaces, 
 1. Click on the workspace card:
 
-    ![Panels](../img/Workspace/2.png)
+    ![Panels](../img/Workspace/2.png) <p align=center>**Figure 2.** Workspace Panel View</p>
 
     There are 3 panels on the workspace interface.
 
@@ -19,7 +19,7 @@ To access workspaces,
 
 2. Click on the side bar to view workspaces: Workspace card view:
 
-    ![](../img/Workspace/2.1.png) <p align=center>**Figure 2.** Workspace Cardview</p>
+    ![](../img/Workspace/2.1.png) <p align=center>**Figure 3.** Workspace Cardview</p>
 
 
 
@@ -27,15 +27,15 @@ To access workspaces,
 
 You can create a new workspace on Polly by clicking on *New Workspace* on the left panel of workspace interface or on the workspace card view page
 
-![New Workspace1](../img/Workspace/3.png) <p align=center>**Figure 3.**</p>
+![New Workspace1](../img/Workspace/3.png)
 
-![New workspace2](../img/Workspace/4.png) <p align=center>**Figure 4.**</p>
+![New workspace2](../img/Workspace/4.png) <p align=center>**Figure 4.** Creating a New Workspace</p>
 
 Enter the Name of the workspace, custom tags and description (if any) and click on save. Users can add tags while creating a new workspace. These tags can be used later to search and identify workspaces.
 
 The new workspace will be created. You can find the newly created workspace with the list of all your workspaces on the left panel.
 
-![Workspace Information](../img/Workspace/5.png) <p align=center>**Figure 5.**</p>
+![Workspace Information](../img/Workspace/5.png) <p align=center>**Figure 5.** Add Name, Tags, Description of a Workspace</p>
 
 ## Watching a Workspace
 
@@ -175,5 +175,4 @@ The user also has the option to make the file link global i.e anyone with the li
 
 ### Video
 
-
-https://www.youtube.com/watch?v=P8TvifgmLf4&list=PLA_38j1m5-Y7PcqysIC3eehBjTHT-O1dT&index=4&t=3s
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/P8TvifgmLf4/0.jpg)](http://www.youtube.com/watch?v=P8TvifgmLf4)
