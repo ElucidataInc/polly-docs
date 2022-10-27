@@ -34,8 +34,7 @@
     | Mutation | A mutation is **a change in the DNA sequence of an organism**. Mutations can result from errors in DNA replication during cell division, exposure to mutagens or molecular instability. | TCGA, cBioPortal, CPTAC, Liver OA |
     | Copy Number Variation | Copy number variation is **a type of structural change** where a region of DNA ( \>\> 10bp ), which is duplicated , deleted, inverted or is any aberrant structure. | GDC, CPTAC, cBioPortal, TCGA |
     | Proteomics | Is the **study of the proteome** —the set of proteins that are produced by the cell,tissue under specific circumstances. The main platforms available are ELISA (enzyme linked immunosorbent assay) Elispot (enzyme linked immunosorbent spot) and RPPA (reverse phase protein array) | CPTAC, TCGA, ImmPort, Liver OA |
-    | Gene Dependency
-    | Algorithm generated score to define the gene required for the cancer to proliferate/survive | DepMap |
+    | Gene Dependency| Algorithm generated score to define the gene required for the cancer to proliferate/survive | DepMap |
     | Lipidomics | Is the **study of the lipidome** —the complete set of lipids that are produced by the cell, tissue under specific circumstances. | Metabolomics, TEDDY, CPTAC. Liver OA |
     | Drug Response | The measurement ( IC50 ) of how much substance is required to inhibit a biological process like proliferation/survivability | PharmacoDB |
     | Metabolomics | Is the **study of the metabolome** —the complete set of metabolites that are produced by the cell,tissue under specific circumstances. | TEDDY, CPTAC, Liver OA, Metabolomics |
@@ -53,7 +52,6 @@
     | Gene Effect | The measurement of the effect size of knocking out a gene, normalized against the distributions of non-essential and pan-essential genes | DepMap, Liver OA |
     | Gene Expression Reliability | A reliability score is set for all genes and indicates the level of reliability of the analyzed protein expression pattern based on available protein/RNA/gene characterization data. | HPA |
     | Exome Sequencing | Sequencing exome which is the coding region of the genome |
-    |
     | Structural Biology | Is the 3D structural coordinates of a protein which may also have ligand/small molecule bound | RCSB |
     | Lab measurement | Non-omics data like those from **blood clinical chemistry results** like blood reports that have Whole Blood Count, Red Blood Count, lipid profile | ImmPort |
     | SNP array | SNP array is **a type of DNA microarray which is used to detect polymorphisms within a population**. A single nucleotide polymorphism (SNP), a variation at a single site in DNA, is the most frequent type of variation in the genome. | GEO |
@@ -63,27 +61,27 @@
     We have the following use cases for curated data -
 
     - Enabling target discovery using publicly available data
-    - Aggregate data from public and propreitary data
-    - Set up bioinformatics processing pipelines to convert raw data to usable formats
-    - Data infrastructure on Polly makes data findable for reuse and insight generation
+        - Aggregate data from public and propreitary data
+        - Set up bioinformatics processing pipelines to convert raw data to usable formats
+        - Data infrastructure on Polly makes data findable for reuse and insight generation
 
-    ![](../img/Tech_Ecosystem/usecase-1.png)
+        ![](../img/Tech_Ecosystem/usecase-1.png)
 
     - Enabling curation of high-throughput drug screen data
-    - Centralized data management, processed data and metadata are stored together
-    - Generates experiment level/project level reports
+        - Centralized data management, processed data and metadata are stored together
+        - Generates experiment level/project level reports
 
-    ![](../img/Tech_Ecosystem/usecase-2.png)
+        ![](../img/Tech_Ecosystem/usecase-2.png)
 
     - Knowledge graph generation on Polly
-    - Aggregate data from public and proprietary data
-    - Create richer knowledge graphs across 35 million auto curated entities on Polly
-    - Use over 50 billion data points to form relationships over curated metadata
+        - Aggregate data from public and proprietary data
+        - Create richer knowledge graphs across 35 million auto curated entities on Polly
+        - Use over 50 billion data points to form relationships over curated metadata
 
-    ![](../img/Tech_Ecosystem/usecase-3.png)
+        ![](../img/Tech_Ecosystem/usecase-3.png)
 
     - ETL pipelines support from our Subject matter experts
-    - Access to large group of bioinformatics and software experts
-    - Utilize extensive experience in developing and deploying pipelines for wide variety of pharmaceutical and biotech startups
+        - Access to large group of bioinformatics and software experts
+        - Utilize extensive experience in developing and deploying pipelines for wide variety of pharmaceutical and biotech startups
 
-    ![](../img/Tech_Ecosystem/usecase-4.png)
+        ![](../img/Tech_Ecosystem/usecase-4.png)
