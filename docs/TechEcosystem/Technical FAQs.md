@@ -1,6 +1,6 @@
 ### Technical Sales FAQs
 
-1. **What is the data audit?**
+1. **What is data audit?**
 
     The process of data audit begins with a discovery call to understand the data requirements of the prospective customer. The data requirements are captured via questionnaire. Using the points noted in the questionnaire. Accordingly, data audit is performed,
 
