@@ -55,7 +55,7 @@ nav:
       - RNA Seq Workflow: Apps/Sequencing Data/RNA Seq Workflow.md
       - Single Cell Visualization: Apps/Single Cell Visualization.md
       - Untargeted Pipeline: Apps/Metabolomic Data/Untargeted Pipeline.md
-      - CURATION APP: Apps/Curation App.md
+      - Curation App: Apps/Curation App.md
   - Tech Ecosystem:
     - Polly Architecture: TechEcosystem/Polly Architecture.md
     - Security and Data Transfer: TechEcosystem/Data Security.md
