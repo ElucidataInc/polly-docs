@@ -382,7 +382,7 @@ Use `download_from_workspaces(workspace_id, workspace_path)` to download files o
 ```
 workspaces.download_to_workspaces(workspace_id = int, workspace_path = str)
 ```
-##### 4.2.5.4 Save dataset from OmixAtlas to workspace
+##### 4.2.5.5 Save dataset from OmixAtlas to workspace
 Use `save_to_workspace(repo_id, dataset_id, workspace_id, workspace_path)` to save datasets from an OmixAtlas to a workspace
 
 Example to save the dataset_id 'GSE101127_GPL1355' from repo_id 1615965444377 to a workspace_id 8025 in a folder named 'data'
@@ -425,10 +425,48 @@ The data available within OmixAtlas is curated within 5 indexes/tables on the ba
 
 To find relevant information that can be used for querying, refer the curated data schema [here](https://docs.elucidata.io/OmixAtlas/Data%20Schema.html).
 
-##### 4.2.6.2 Functions to interact with Schema
+##### 4.2.6.2 What is controlled by the schema of an OmixAtlas?
+<ul>
+    <li>Only the fields included in the schema will be available for querying using polly-python.
+    <li>Fields available in the filter panels and size of filters displayed in the front-end.
+    <li>Fields available in the table view of an OmixAtlas.
+    <li>Fields which are of array type. Based on this property, the type of SQL query for that field will vary.
+    <li>Fields which are curated by Elucidata.
+    <li>Display name and description for each field.
+    <li>Enabling ontology recommendations in the filter panel.
+                </ul>
+
+##### 4.2.6.3 Name of schema types to be used which defining the schema
+<ul>  
+  <li>Dataset-level:
+<ul>
+  <li>for all file types,`files`
+</ul>
+<li>Sample-level:
+<ul>
+<li>for gct files: `gct_metadata`
+<li>for h5ad files:`h5ad_metadata`
+<li>for biom files: `biom_col_metadata`
+</ul>
+<li>Feature-level:
+<ul>
+<li>for gct files,`gct_row_metadata`
+<li>for h5ad files,`h5ad_data`
+<li>for biom: `biom_row_metadata`
+</ul>
+<li>Variant data
+<ul>
+<li>for vcf files: `vcf_variant_data`
+<li>for vcf.bgz files: `vcf_variant_data`
+</ul>
+
+##### 4.2.6.4 Attributes of the schema
+
+
+##### 4.2.6.5 Functions to interact with Schema
 To enable users to interact with the schema of a particular OmixAtlas, functions for visualizing, updating and inserting schema is released. Updating and inseting schema is allowed for users who have data-admin credentials only.
 
-###### 4.2.6.2.1 Get schema
+###### 4.2.6.5.1 Get schema
 Use `get_schema(repo_key, schema_level: list (optional), source: str (optional), data_type: str (optional), return_type: (str) (optional)` to extract the schema of an OmixAtlas.
 
 `repo_key` repo_id OR repo_name. This is a mandatory field. 
@@ -485,7 +523,7 @@ to fetch the dataframe with entire payload of feature level metadata,
 `schema.features`
 ```
 
-###### 4.2.6.2.2 Update schema
+###### 4.2.6.5.2 Update schema
 Use `update_schema(repo_key, payload)` to update the existing schema of an OmixAtlas.
 
 ```
@@ -508,7 +546,7 @@ schema = open('schema_file.json')
 payload = json.load(schema)
 ```
 
-###### 4.2.6.2.3 Insert schema
+###### 4.2.6.5.3 Insert schema
 Use `insert_schema(repo_key, payload)` to insert a new schema to an OmixAtlas.
 
 ```
@@ -530,6 +568,7 @@ schema = open('schema_file.json')
 # returns JSON object as a dictionary
 payload = json.load(schema)
 ```
+
 
 #### 4.2.7 Data Ingestion using Polly Python
 A high level schematic diagram to ingest data on OmixAtlas is shown in the diagram below:-
