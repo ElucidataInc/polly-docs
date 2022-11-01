@@ -425,45 +425,7 @@ The data available within OmixAtlas is curated within 5 indexes/tables on the ba
 
 To find relevant information that can be used for querying, refer the curated data schema [here](https://docs.elucidata.io/OmixAtlas/Data%20Schema.html).
 
-##### 4.2.6.2 What is controlled by the schema of an OmixAtlas?
-<ul>
-    <li>Only the fields included in the schema will be available for querying using polly-python.
-    <li>Fields available in the filter panels and size of filters displayed in the front-end.
-    <li>Fields available in the table view of an OmixAtlas.
-    <li>Fields which are of array type. Based on this property, the type of SQL query for that field will vary.
-    <li>Fields which are curated by Elucidata.
-    <li>Display name and description for each field.
-    <li>Enabling ontology recommendations in the filter panel.
-                </ul>
-
-##### 4.2.6.3 Name of schema types to be used which defining the schema
-<ul>  
-  <li>Dataset-level:
-<ul>
-  <li>for all file types,`files`
-</ul>
-<li>Sample-level:
-<ul>
-<li>for gct files: `gct_metadata`
-<li>for h5ad files:`h5ad_metadata`
-<li>for biom files: `biom_col_metadata`
-</ul>
-<li>Feature-level:
-<ul>
-<li>for gct files,`gct_row_metadata`
-<li>for h5ad files,`h5ad_data`
-<li>for biom: `biom_row_metadata`
-</ul>
-<li>Variant data
-<ul>
-<li>for vcf files: `vcf_variant_data`
-<li>for vcf.bgz files: `vcf_variant_data`
-</ul>
-
-##### 4.2.6.4 Attributes of the schema
-
-
-##### 4.2.6.5 Functions to interact with Schema
+##### 4.2.6.2 Functions to interact with Schema
 To enable users to interact with the schema of a particular OmixAtlas, functions for visualizing, updating and inserting schema is released. Updating and inseting schema is allowed for users who have data-admin credentials only.
 
 ###### 4.2.6.5.1 Get schema
