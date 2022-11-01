@@ -1,5 +1,19 @@
 # Release Notes
 
+<!--October 28, 2022-->
+
+<details open>
+<summary><font size="+1"><b>October 28, 2022</b></font></summary>
+<br>
+       <p class="new-button">New</p>
+  <ul>
+    <li>Users can now run jobs, cancel jobs and fetch status of jobs.
+    <li>There is a new function for schema validation.
+    <li>Users can download dataset level metadata.
+    <li>Users can geenrate a merged GCT file from a cohort.
+  </ul>
+</details>
+<hr>
 <!--October 11, 2022-->
 
 <details open>
