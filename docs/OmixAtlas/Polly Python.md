@@ -382,7 +382,7 @@ Use `download_from_workspaces(workspace_id, workspace_path)` to download files o
 ```
 workspaces.download_to_workspaces(workspace_id = int, workspace_path = str)
 ```
-##### 4.2.5.4 Save dataset from OmixAtlas to workspace
+##### 4.2.5.5 Save dataset from OmixAtlas to workspace
 Use `save_to_workspace(repo_id, dataset_id, workspace_id, workspace_path)` to save datasets from an OmixAtlas to a workspace
 
 Example to save the dataset_id 'GSE101127_GPL1355' from repo_id 1615965444377 to a workspace_id 8025 in a folder named 'data'
@@ -440,17 +440,14 @@ To find relevant information that can be used for querying, refer the curated da
 - Dataset-level:
   - for all file types, files
 - Sample-level:
-
   - for gct files: gct\_metadata
   - for h5ad files:h5ad\_metadata
   - for biom files: biom\_col\_metadata
 - Feature-level:
-
   - for gct files,gct\_row\_metadata
   - for h5ad files,h5ad\_data
   - for biom: biom\_row\_metadata
 - Variant data
-
   - for vcf files: vcf\_variant\_data
   - for vcf.bgz files: vcf\_variant\_data
 
@@ -724,6 +721,20 @@ output:
 
 A dictionary with all the field names which should be present in the dataset level metadata
 
+##### 4.2.7.4 Download dataset level metadata:-
+
+This function is used to download the dataset level metadata into a json file. The keys of the json file is kept as original_name in the schema.
+```
+1 from polly.omixatlas import OmixAtlas
+2 omixatlas = OmixAtlas (AUTH_TOKEN)
+3 omixatlas.download_metadata(repo_key, dataset_id, file_path)
+``` 
+Argument description:-
+```
+repo_key (str): repo_name/repo_id of the repository where data exists.
+dataset_id (str): dataset_id of the dataset for which the metadata to be downloaded
+file_path (str): the system destination path where the dataset level metadata should be downloaded.
+```
 
 #### 4.2.8 Working with Cohorts
 Cohort class of polly-python enables users to create cohorts, add/remove datasets or samples from them, merge the dataset, sample, feature and data-matrix level metadata across all samples of the cohort, delete a cohort etc.
@@ -811,11 +822,11 @@ cohort.create_merged_gct(file_path,file_name: optional)
 ```
 
 Argument description:-
-
+```
 file_path (str): path where the merged gct file should be saved
 
 file_name (str): (optional) file name of the merged gct. By default, the cohort name will be used
-
+```
 
 #### 4.2.9 Reporting related functions
 This will enable users to generate reports, link reports to a dataset in OmixAtlas and fetch reports linked with dataset in an OmixAtlas
@@ -888,13 +899,14 @@ from polly import Omixatlas
 omixatlas = Omixatlas()
 omixatlas.delete_linked_report(repo_key: str, dataset_id: str, report_id: str)
 ```
-
+Argument description:-
+```
 repo_key (str): repo_name/repo_id of the repository which is linked.
 
 dataset_id (str): dataset_id of the dataset to be linked.
 
 report_id (str): report id associated with the report in workspaces that is to be deleted. This id can be found when invoking the fetch_linked_report() function.
-
+```
 
 
 #### 4.2.10 File format converter functions
@@ -938,9 +950,9 @@ obj.annotate_with_ontology("mus musculus with BRCA gene knocked out") [Tag(name=
 ```
 
 Argument description:-
-
+```
 - text(str): any text or description from which the user wants to identify and tag entities/keywords.
-
+```
 ##### 4.2.11.2 Standardise entity
 Given a text and the type of entity it is, users can get the Polly compatible ontology for the text such as the MESH ontology. The function also returns a dictionary containing keys and values of the entity type, ontology (such as NCBI, MeSH), ontology ID (such as the MeSH ID), the score (confidence score), and synonyms if any
 
@@ -957,12 +969,12 @@ obj.standardise_entity("Mus musculus","species")
 ```
 
 Argument description:-
-
+```
 - text(str): text or word to be standardised.
 entity_type(str): the type of entity the given text is such as “species“, “disease“. It can be any one of the supported entity types.
 - threshold(int) (Optional Parameter): filter out entities with confidence score less than the threshold. It is recommended to use the default value.
 - context(str) (Optional Parameter): text/description to indicate the context in which the text appears. It's used internally for expanding abbreviations.
-
+```
 ##### 4.2.11.3. Recognise entities in a given text
 Users can simply recognise entities (BIOBERT NER model) in a given text without any ontology standardisation (unlike the annotate_with_ontology function above which normalises as well) . A list of spans of identified entities are returned.
 
@@ -1024,7 +1036,7 @@ query = "SELECT [column_name] FROM [repo_id].features WHERE [column_name]='[valu
 ##### For features in Single Cell
 <pre><code>query = "SELECT [column_name] FROM [h5ad_data] WHERE [column_name]='[value]'"</code></pre>
 
-#### 4.3.1.5 Query specific to source and datatype in an OmixAtlas
+#### 4.3.1.4 Query specific to source and datatype in an OmixAtlas
 
 If the schema of the repository has multiple source and data types then querying for the specific source and/or datatype is enabled in this release.
 
@@ -1177,9 +1189,10 @@ job.submit_job(workspace_id,job_file)
 ```
 
 Argument description:-
-
+```
 - workspace_id (str/int): the id of the workspace where the job has to submitted.
 - job_file (str) : a json file path which contains the description of a job
+```
 Example job file
 ```
 {
@@ -1208,10 +1221,10 @@ job.job_cancel(workspace_id, job_id)
 ```
 
 Argument description:-
-
+```
 - workspace_id (str/int): the id of the workspace where the job has to submitted.
 - job_id (str) : job id to be cancelled
- 
+ ```
 
 ### 5.3 Job Status check
 
@@ -1229,11 +1242,11 @@ job.job_status(workspace_id, job_id)
 ```
 
 Argument description:-
-
+```
 - workspace_id (str/int): the id of the workspace where the job has to submitted.
 - job_id (str) : job id
  
-
+```
 #### 5.3.2. Checking status of all jobs in the workspace
 
 ```
@@ -1246,5 +1259,6 @@ job.job_status(workspace_id)
 ```
 
 Argument description:-
-
+```
 - workspace_id (str/int): the id of the workspace.
+```
