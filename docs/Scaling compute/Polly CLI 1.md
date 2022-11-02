@@ -71,7 +71,9 @@ Open the terminal on the system and execute the following command to log in.
 
 Enter the Polly Username and Password when prompted.
 
-![Polly Login](../img/PollyCLI/1_a.png "Polly Login") (../img/PollyCLI/1_b.png "Polly Login") <center>**Figure 1.** Polly Login</center>
+![Polly Login](../img/PollyCLI/1_a.png "Polly Login") 
+![Polly Login](../img/PollyCLI/1_b.png "Polly Login") <center>**Figure 1.** Polly Login</center>
+
 
 Once logged in, you will stay logged in the system and won’t need to log in again even if a new terminal is opened or the system is restarted. You will only need to log in again if you manually log out from the system.
 
