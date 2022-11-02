@@ -425,7 +425,51 @@ The data available within OmixAtlas is curated within 5 indexes/tables on the ba
 
 To find relevant information that can be used for querying, refer the curated data schema [here](https://docs.elucidata.io/OmixAtlas/Data%20Schema.html).
 
-##### 4.2.6.2 Functions to interact with Schema
+##### 4.2.6.2 What is controlled by the schema of an OmixAtlas?
+
+- Only the fields included in the schema will be available for querying using polly-python.
+- Fields available in the filter panels and size of filters displayed in the front-end.
+- Fields available in the table view of an OmixAtlas.
+- Fields which are of array type. Based on this property, the type of SQL query for that field will vary.
+- Fields which are curated by Elucidata.
+- Display name and description for each field.
+- Enabling ontology recommendations in the filter panel.
+
+##### **4.2.6.3 Name of schema types to be used which defining the schema**
+
+- Dataset-level:
+  - for all file types, files
+- Sample-level:
+  - for gct files: gct\_metadata
+  - for h5ad files:h5ad\_metadata
+  - for biom files: biom\_col\_metadata
+- Feature-level:
+  - for gct files,gct\_row\_metadata
+  - for h5ad files,h5ad\_data
+  - for biom: biom\_row\_metadata
+- Variant data
+  - for vcf files: vcf\_variant\_data
+  - for vcf.bgz files: vcf\_variant\_data
+
+##### **4.2.6.4 Attributes of the schema**
+
+| **Field Attribute** | **Description** | **Input** | **Conditions** |
+| --- | --- | --- | --- |
+| field\_name | This is the field name that'll be used for querying on polly-python | string |1. Lowercase only <br> 2. Start with alphabets<br>3. Cannot include special characters except `_`<br>4. Cannot be longer than 255 characters<br>5. Cannot be reserved SQL keywords<ul><li>[Reserved DDL keywords](https://docs.aws.amazon.com/athena/latest/ug/reserved-words.html#list-of-ddl-reserved-words)</li><li>[Reserved DML keywords](https://docs.aws.amazon.com/athena/latest/ug/reserved-words.html#list-of-reserved-words-sql-select)</li></ul> 6. Only Plain ASCII is recommended to avoid subtle irritations (accents vs unaccented characters, etc)|
+| original\_name | This is the attribute that needs to be matched with the dataset metadata in JSON file or sample/feature metadata field name in gct/h5ad file | string | Should match with data present in json, gct or h5ad filesmin\_length=1, max\_length=50 |
+| type | What kind of data do you want to store in this field, this will affect what kind of queries you'll be able to perform in this field. | text<br>integer<br>object<br>boolean<br>float | |
+| is\_keyword | Whether to store this field as a keyword in Elasticsearch. It must be 1 if need to show it as a filter on GUI or use this field for any aggregations.<br><br>Keyword fields can be used for sorting, aggregations, and term-level (exact match) queries on the frontend.<br><br>If your field is not a keyword, it will not be possible to sort your data based on that value (if/when frontend supports it).<br><br>If your field is not a keyword, it will not be possible to get the number of unique values of that field, or get the most frequently occurring values of that field. | boolean | |
+| is\_array | Whether this field would be a list of values | boolean | |
+| is\_filter | Whether to show this field as filter on GUI. | boolean | For these fields, is\_keyword must be 1. |
+| is\_column | Whether to show this field in GUI Table as a column. | boolean | |
+| is\_curated | Whether this field has been curated by Elucidata. | boolean | |
+| filter\_size | This specifies maximum values for a filter you want to show on GUI. is\_filter and is\_keyword should be set as 1 | integer | Lower limit: 1 and Upper limit: 3000 |
+| display\_name | User-friendly name to be shown on front-end | string | min\_length=1, max\_length=50 |
+| description | Any information about the field you want to show to the User. | string | min\_length=1, max\_length=300 |
+| is\_ontology | If ontology recommendations to be added in filter panel for disease, tissue or cell-lines | boolean | If is\_ontology is 1, then is\_filter and is\_keyword must be 1 too. |
+| is\_reserved | This field is used to demarcate the system generated fields from others which the user has input. | boolean | All the fields which the users have put should have 0 |
+
+##### 4.2.6.5 Functions to interact with Schema
 To enable users to interact with the schema of a particular OmixAtlas, functions for visualizing, updating and inserting schema is released. Updating and inseting schema is allowed for users who have data-admin credentials only.
 
 ###### 4.2.6.5.1 Get schema
@@ -531,6 +575,66 @@ schema = open('schema_file.json')
 payload = json.load(schema)
 ```
 
+###### 4.2.6.5.4 Replace Schema
+Replace the existing schema with the new schema of a given OmixAtlas. The old Schema in this case will be completely overridden by the new schema.
+
+```
+import json 
+from polly.omixatlas import OmixAtlas
+omixatlas = OmixAtlas(token) 
+repo_id = "<repo_id>"
+with open("<path_of_the_file>/<filename>", "r") as file: 
+  schema_data = json.load(file) 
+
+res = omixatlas.replace_schema(repo_id, schema_data) 
+```
+
+###### 4.2.6.5.5. Schema Validation
+
+This function is to be used for validating the schema before it’s uploaded to the table of an OmixAtlas
+
+```
+from polly.omixatlas import OmixAtlas
+omixatlas = OmixAtlas (AUTH_TOKEN)
+import json
+
+schema = open('schema_file.json') # Opening JSON file
+
+payload = json.load(schema) # returns JSON object as a dictionary
+
+omixatlas.validate_schema(payload)
+```
+
+##### 4.2.6.6 Preparing the schema in csv file
+A template example of a csv file used to prepare the schema can be found here:
+[](https://github.com/ElucidataInc/polly-python/blob/main/Ingest/dataset_schema_case_id_1.csv)[polly-python/dataset_schema_case_id_1.csv at main · ElucidataInc/polly-python](https://github.com/ElucidataInc/polly-python/blob/main/Ingest/dataset_schema_case_id_1.csv)
+
+##### 4.2.6.7 Preparing the schema payload to be inserted to an OmixAtlas
+
+The code to be used to generate the schema payload using the csv file above can be found in this notebook (refer to generating schema payload section) :
+[](https://github.com/ElucidataInc/polly-python/blob/main/Ingest/Data_Ingestion_CaseID_1.ipynb)[polly-python/Data_Ingestion_CaseID_1.ipynb at main · ElucidataInc/polly-python](https://github.com/ElucidataInc/polly-python/blob/main/Ingest/Data_Ingestion_CaseID_1.ipynb) 
+
+##### 4.2.6.8 Fetching the schema of an existing OmixAtlas
+In order to fetch the schema payload of any existing OmixAtlas, please use get\_schema function of polly-python. Know more in section 4.2.6.2.1 of[ ](https://docs.elucidata.io/OmixAtlas/Polly%20Python.html)[Polly Python - Polly Documentation](https://docs.elucidata.io/OmixAtlas/Polly%20Python.html)
+
+```get_schema(repo_id, schema_level: list (optional), source: str (optional), data_type: str (optional), return_type: (str) (optional)```
+
+```
+from polly.omixatlas import OmixAtlas
+omixatlas = OmixAtlas()
+schema = omixatlas.get_schema (repo_id,["datasets", "samples", "features"],source="all", data_type="all",return_type="dict")
+# to fetch dataset level schema 
+schema.datasets
+# to fetch sample level schema 
+schema.samples
+# to fetch feature level schema
+schema.features
+```
+##### 4.2.6.9 How does the schema look like?
+![](../img/OmixAtlas-Images/27_sample_level_schema.png)
+#### This is how the sample level schema of repo\_id 1658207836083 will look like. Here source is “all” and datatype is also “all”
+![](../img/OmixAtlas-Images/28_sample_level_schema_fields.png)
+#### For each of the 50 fields in the schema, the displayed attributes need to be filled.
 
 #### 4.2.7 Data Ingestion using Polly Python
 A high level schematic diagram to ingest data on OmixAtlas is shown in the diagram below:-
@@ -617,6 +721,20 @@ output:
 
 A dictionary with all the field names which should be present in the dataset level metadata
 
+##### 4.2.7.4 Download dataset level metadata:-
+
+This function is used to download the dataset level metadata into a json file. The keys of the json file is kept as original_name in the schema.
+```
+1 from polly.omixatlas import OmixAtlas
+2 omixatlas = OmixAtlas (AUTH_TOKEN)
+3 omixatlas.download_metadata(repo_key, dataset_id, file_path)
+``` 
+Argument description:-
+```
+repo_key (str): repo_name/repo_id of the repository where data exists.
+dataset_id (str): dataset_id of the dataset for which the metadata to be downloaded
+file_path (str): the system destination path where the dataset level metadata should be downloaded.
+```
 
 #### 4.2.8 Working with Cohorts
 Cohort class of polly-python enables users to create cohorts, add/remove datasets or samples from them, merge the dataset, sample, feature and data-matrix level metadata across all samples of the cohort, delete a cohort etc.
@@ -690,6 +808,26 @@ This function is for validating a cohort. This functions returns a boolean resul
 cohort.is_valid()
 ```
 
+##### 4.2.8.13 Create a merged gct file from a Cohort
+
+This function is used to create a merged gct file from a cohort
+
+```
+from polly.cohort import Cohort
+cohort = Cohort()
+
+cohort.load_cohort(“cohort_path”)
+
+cohort.create_merged_gct(file_path,file_name: optional)
+```
+
+Argument description:-
+```
+file_path (str): path where the merged gct file should be saved
+
+file_name (str): (optional) file name of the merged gct. By default, the cohort name will be used
+```
+
 #### 4.2.9 Reporting related functions
 This will enable users to generate reports, link reports to a dataset in OmixAtlas and fetch reports linked with dataset in an OmixAtlas
 
@@ -714,7 +852,7 @@ omixatlas.link_report(repo_key, dataset_id, workspace_id, workspace_path, access
 
 This function returns a success message along with the link which can be used to view the report.
 
-##### 4.9.2 Fetch linked reports to a given dataset in OmixAtlas
+##### 4.2.9.2 Fetch linked reports to a given dataset in OmixAtlas
 
 This function will enable users to fetch the list of reports linked to a given dataset in an OmixAtlas.
 
@@ -730,7 +868,7 @@ omixatlas.fetch_linked_reports(repo_key, dataset_id)
 
 This function returns a dataframe containing information on who added the report, when it was added and the link.
 
-##### 4.9.3 Generate Report for a dataset in GEO
+##### 4.2.9.3 Generate Report for a dataset in GEO
 
 This is a MVP release to minimise time taken by users to determine relevance of a dataset in their research, we’re enabling auto-generation of reports. These reports will contain dataset and sample level metadata along with some graphs showing how the samples are distributed. It will help them figure out which cohorts could be of interest in a given dataset. This template can be modified and we’re open to user’s feedback.
 
@@ -753,6 +891,24 @@ omixatlas.generate_report(repo_key, dataset_id, workspace_id, workspace_path)
 
 `workspace_path`(str) (Optional Parameter): workspace_path to upload the report to.
 
+##### 4.2.9.4 Delete Reports
+This function can be used by Org Admin to delete the file in workspaces with the specified dataset in OmixAtlas.
+
+```
+from polly import Omixatlas 
+omixatlas = Omixatlas()
+omixatlas.delete_linked_report(repo_key: str, dataset_id: str, report_id: str)
+```
+Argument description:-
+```
+repo_key (str): repo_name/repo_id of the repository which is linked.
+
+dataset_id (str): dataset_id of the dataset to be linked.
+
+report_id (str): report id associated with the report in workspaces that is to be deleted. This id can be found when invoking the fetch_linked_report() function.
+```
+
+
 #### 4.2.10 File format converter functions
 Several datatypes are ingested on Polly after conversion to gct file format. In order to enable consumption of different datatypes, bioinformaticians often use certain open-source packages. 
 
@@ -772,6 +928,68 @@ omixatlas.format_converter(repo_key, dataset_id, to)
 For example: 
 ```
 omixatlas.format_converter("cbioportal", "ACC_2019_Mutation_ACYC-FMI-19", "maf")
+```
+
+#### 4.2.11 Curation functions
+Curation functions are able to recognise different entities given a text, normalise them based on certain nomenclature such as Polly compatible ontologies. Entities that  are supported are:  "disease", "drug", "species", "tissue", "cell_type", "cell_line", "gene".
+
+Notebook link https://github.com/ElucidataInc/PublicAssets/blob/master/internal-user/Polly_notebook_IPC_lib_polly_implementation_dev_test_cases.ipynb
+
+##### 4.2.11.1 Identify/tag the entities in a text with standardized nomenclature
+
+Given a text, users can identify and tag entities in a text. Each entity/tag recognised in the text contains the name( word in the text identified), entity_type and the ontology_id.
+
+```
+from polly.auth import Polly 
+from polly.curation import Curation 
+Polly.auth(Token)
+obj = Curation()
+obj.annotate_with_ontology (text)
+#For example
+obj.annotate_with_ontology("mus musculus with BRCA gene knocked out") [Tag(name='BRCA1', ontology_id='HGNC: 1100', entity_type= 'gene')]
+```
+
+Argument description:-
+```
+- text(str): any text or description from which the user wants to identify and tag entities/keywords.
+```
+##### 4.2.11.2 Standardise entity
+Given a text and the type of entity it is, users can get the Polly compatible ontology for the text such as the MESH ontology. The function also returns a dictionary containing keys and values of the entity type, ontology (such as NCBI, MeSH), ontology ID (such as the MeSH ID), the score (confidence score), and synonyms if any
+
+```
+from polly.auth import Polly 
+from polly.curation import Curation 
+Polly.auth(Token) 
+obj = Curation()
+obj.standardise_entity(text, entity_type)
+#For example 
+obj.standardise_entity("Mus musculus","species")
+
+{'ontology': 'NCBI', 'ontology_id': 'txid10090', 'name': 'Mus musculus', 'entity_type': 'species', 'score': None, 'synonym': None}
+```
+
+Argument description:-
+```
+- text(str): text or word to be standardised.
+entity_type(str): the type of entity the given text is such as “species“, “disease“. It can be any one of the supported entity types.
+- threshold(int) (Optional Parameter): filter out entities with confidence score less than the threshold. It is recommended to use the default value.
+- context(str) (Optional Parameter): text/description to indicate the context in which the text appears. It's used internally for expanding abbreviations.
+```
+##### 4.2.11.3. Recognise entities in a given text
+Users can simply recognise entities (BIOBERT NER model) in a given text without any ontology standardisation (unlike the annotate_with_ontology function above which normalises as well) . A list of spans of identified entities are returned.
+
+```
+from polly.auth import Polly
+from polly.curation import Curation 
+Polly.auth(Token)
+obj = Curation()
+obj.recognise_entity(text)
+#For example
+obj.recognise_entity("Adeno carcinoma was observed")
+[{"keyword": 'Adeno carcinoma, 'entity_type': 'disease',
+'span_begin': 13,
+'span_end': 27,
+'score': 0.9999943971633911}]
 ```
 
 ### 4.3 Writing a query
@@ -818,10 +1036,44 @@ query = "SELECT [column_name] FROM [repo_id].features WHERE [column_name]='[valu
 ##### For features in Single Cell
 <pre><code>query = "SELECT [column_name] FROM [h5ad_data] WHERE [column_name]='[value]'"</code></pre>
 
+#### 4.3.1.4 Query specific to source and datatype in an OmixAtlas
 
-#### 4.3.1.4 Example queries
+If the schema of the repository has multiple source and data types then querying for the specific source and/or datatype is enabled in this release.
 
-##### 4.3.1.4.1 Querying datasets in GEO OmixAtlas
+```
+from polly import Omixatlas
+omixatlas = Omixatlas()
+query = """SELECT * FROM repo_name.source_name_in_schema.datatype_name_in_schema.datasets WHERE CONTAINS(curated_disease, 'Multiple Myeloma')
+results-omixatlas.query_metadata(query)
+
+results
+```
+
+For clearer understanding of this feature, let’s look at a case:-
+
+In the schema shown below for repo_id: 1659450268526, we can see there are 3 different sources. Out of these sources, the source lincs has 2 datatypes - mutation and transcriptomics
+
+![](../img/OmixAtlas-Images/29_dataset_level_schema.png)
+
+<p align=center>dataset level schema of repo_id 1659450268526
+</p>
+
+Query examples which will be supported in the above context:-
+
+1 query = """SELECT * FROM 1659450268526.geo.datasets WHERE CONTAINS(curated_disease, 'Multiple Myeloma') """
+
+2 query = """SELECT * FROM 1659450268526.lincs.datasets WHERE CONTAINS(curated_disease, 'Multiple Myeloma') """
+
+3 query = """SELECT * FROM 1659450268526.lincs.transcriptomics.datasets WHERE CONTAINS(curated_disease, 'Multiple Myeloma') """
+
+
+The response to these queries will have a dataframe with columns which are specific to the source and datatype as per the schema shown above.  
+
+A detailed notebook and technical note describing these queries will be updated in the documentation.
+
+#### 4.3.1.6 Example queries
+
+##### 4.3.1.6.1 Querying datasets in GEO OmixAtlas
 1. To identify datasets belonging to the tissue Breast, disease Breast Neoplasms and organism Homo sapiens
 
     ```
@@ -853,7 +1105,7 @@ query = "SELECT [column_name] FROM [repo_id].features WHERE [column_name]='[valu
                       """
     ```
 
-##### 4.3.1.4.2 Querying samples in GEO OmixAtlas
+##### 4.3.1.6.2 Querying samples in GEO OmixAtlas
 1. Get the name of samples, dataset ID and extract_protocol_ch1 where spectroscopy is mentioned in the extract_protocol_ch1
 
     ```
@@ -868,7 +1120,7 @@ query = "SELECT [column_name] FROM [repo_id].features WHERE [column_name]='[valu
         GROUP BY curated_disease ORDER BY count DESC """
     ```
 
-##### 4.3.1.4.3 Querying data matrix in GEO OmixAtlas
+##### 4.3.1.6.3 Querying data matrix in GEO OmixAtlas
 1. Fetch data matrix for selected genes for a dataset ID of interest
 
     ```
@@ -877,7 +1129,7 @@ query = "SELECT [column_name] FROM [repo_id].features WHERE [column_name]='[valu
         LOWER(rid) IN {gene}"
     ```
 
-##### 4.3.1.4.4 Other Query Examples
+##### 4.3.1.6.4 Other Query Examples
 1. Select a few feature level metadata for selected genes from Mutation datasets of TCGA where dataset_id contains BRCA
 
     ```
@@ -891,7 +1143,7 @@ query = "SELECT [column_name] FROM [repo_id].features WHERE [column_name]='[valu
     ```
 2. Some cross OmixAtlas querying for Mutation datasets can be found in this [notebook](https://github.com/ElucidataInc/polly-python/blob/main/Discover/Mutation_data_querying%20.ipynb). Here, we have shown query across TCGA, cBioportal and CPTAC OmixAtlas on Polly.
 
-#### 4.3.3 Writing conditions with operators
+#### 4.3.2 Writing conditions with operators
 The following operators can be used to define the conditions in the above mentioned queries:
 
 Operators  | Functions performed
@@ -914,3 +1166,99 @@ Operators  | Functions performed
 <code>COUNT(*)</code> | This counts each row present in a table/index being queried.<br><br> **NOTE: The output of this query would return a JSON stating the total number of rows in the table**
 <code>LIMIT</code> | **NOTE: The response of any query returns 200 entries by default**. <br>You can extend this by defining the LIMIT of the results you want to query to be able to return.
 <code>ORDER BY</code> | Can only be used to sort the search results using integer based parameters in the schema. Sorting on the basis of dataset_id, number of samples, <code>_score</code> of the data is available at the dataset-level metadata. <code>ASC</code> or <code>DESC</code> can be used to define whether you want to order the rows in ascending or descending order respectively
+
+## 5. Jobs
+Polly CLI jobs can now be initiated, managed and have a status-checked for from Polly Python. This lets users run jobs on the Polly cloud infrastructure by scaling computation resources as per need. Users can start and stop tasks and even monitor jobs.
+
+### 5.1 Submitting a job
+
+With this, the job will be submitted to run and Job ID will be created. This Job ID will be needed to check the status and the logs of the submitted job.
+
+```
+from polly.auth import Polly;
+from polly.jobs import jobs; 
+job = jobs()
+
+Polly.auth(AUTH_TOKEN)
+job = jobs()
+
+job_file = "<json_job_file>"
+workspace_id = <worspace_id>
+
+job.submit_job(workspace_id,job_file)
+```
+
+Argument description:-
+```
+- workspace_id (str/int): the id of the workspace where the job has to submitted.
+- job_file (str) : a json file path which contains the description of a job
+```
+Example job file
+```
+{
+  "cpu": "100m",
+  "memory": "64Mi",
+  "image": "docker/whalesay",
+  "tag": "latest",
+  "name": "exampleName",
+  "command": [
+      "cowsay",
+      "hello world"
+  ]
+}
+```
+
+### 5.2 Cancelling a job
+
+This function is used to cancel an ongoing job.
+
+```
+from polly.auth import Polly;
+from polly.jobs import jobs; 
+Polly.auth(AUTH_TOKEN)
+job = jobs()
+job.job_cancel(workspace_id, job_id)
+```
+
+Argument description:-
+```
+- workspace_id (str/int): the id of the workspace where the job has to submitted.
+- job_id (str) : job id to be cancelled
+ ```
+
+### 5.3 Job Status check
+
+#### 5.3.1 This function is to be used for checking status of a job.
+
+```
+from polly.auth import Polly;
+from polly.jobs import jobs; 
+job = jobs()
+
+Polly.auth(token_s)
+
+job = jobs()
+job.job_status(workspace_id, job_id)
+```
+
+Argument description:-
+```
+- workspace_id (str/int): the id of the workspace where the job has to submitted.
+- job_id (str) : job id
+ 
+```
+#### 5.3.2. Checking status of all jobs in the workspace
+
+```
+from polly.auth import Polly;
+from polly.jobs import jobs; job = jobs()
+Polly.auth(AUTH_TOKEN)
+
+job = jobs()
+job.job_status(workspace_id)
+```
+
+Argument description:-
+```
+- workspace_id (str/int): the id of the workspace.
+```
