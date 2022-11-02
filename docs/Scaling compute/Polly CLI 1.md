@@ -126,6 +126,18 @@ You will be asked to select which Workspaces to list:
 
 Workspace ID will be required for transferring data and running jobs.   
 
+Alternatively, interactive Polly menu could be used for listing or creating workspaces as shown below:-
+![Interactive Polly Menu](../img/PollyCLI/4.png "Interactive Polly Menu") <center>**Figure 4.** Interactive Polly Menu</center>
+
+When list option is chosen
+
+![List Workspaces](../img/PollyCLI/5.png "List Workspaces") <center>**Figure 5.** List Workspaces</center>
+
+To create a new workspace
+
+![Create Workspaces](../img/PollyCLI/6.png "Create Workspace") <center>**Figure 6.** Create Workspace</center>
+
+
 ##Data Transfer
 
 Polly CLI can be used to transfer large data to and from Polly Workspaces. Upto **5 TBs** of data can be transferred in one go. 
