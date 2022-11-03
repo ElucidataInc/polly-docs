@@ -35,6 +35,22 @@ Relevant keywords from dataset descriptions have been harmonized using controlle
 ![10_DS_B](../img/OmixAtlas-Images/10_Description_search_b.png)
 ![11_DS_C](../img/OmixAtlas-Images/11_Description_search_c.png)
 
+# Search Bar
+This search bar is driven by Elasticsearch where users can search for keywords which are present across:
+Source metadata fields such as title, description and overall design and 
+Curated metadata fields such as tissue, drug, cell line, cell type, disease, organism, gene, gene modification and dataset id. 
+It allows fuzzy search as well. For example, "transcriptomics" in the search keyword will show results for "transcriptome" or "transcript" as well.
+
+This search bar supports the following operations to help users with some advanced operations such as AND (&), OR (|), NOT (~), EXACT (“text”)
+
+While parsing the search keyword, the algorithm assigns the following priority for different operators:- Brackets () > AND (&) > OR (|) > NOT (~)
+
+Some of the Search examples are as follows:-
+(ITIH1 upregulation |  FN1 downregulation) & “Fatty liver” 
+“Tyrosine kinase inhibitor” & NAFLD & (African | European)
+(Hepatocellular carcinoma | HCC) ~ Radiotherapy
+CDK7 & “CBM signaling pathway” & inhibition
+(somatic mutation) & (hepatocellular | renal) & (cancer | carcinoma)
 
 # Search for Disease based on Ontology
 The disease ontology based recommendation uses ontology tree mapping to shortlist exact and relevant matches to the keyword entered on the disease level metadata filter. The controlled vocabulary used is from MESH & MONDO disease ontologies.

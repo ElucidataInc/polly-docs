@@ -19,6 +19,11 @@ The following dependencies are required to be installed before installing Polly 
     *   Linux: For installation on Linux, follow the steps mentioned [here](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04).
 
     *   Mac: For installation on Mac, follow the steps mentioned [here](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-and-create-a-local-development-environment-on-macos).
+    *   Windows: For installation on Windows, follow the steps mentioned below - 
+1. Install nodejs from https://nodejs.org/en/download/
+2. Install git from https://git-scm.com/download/win
+3. In the Command Prompt, install polly cli with: <pre><code>npm install -g @elucidatainc/pollycli
+
 
 **Commands to install**
 
@@ -31,6 +36,10 @@ To install Polly CLI, run the following commands on Terminal / Command prompt:
 *   Mac: 
 
     <pre><code>npm install -g @elucidatainc/pollycli</code></pre>
+    
+*   Windows: 
+
+    <pre><code>npm install -g @elucidatainc/pollycli</code></pre>
 
 **Commands to uninstall**
 
@@ -41,6 +50,10 @@ To uninstall Polly CLI, run the following commands on Terminal / Command prompt:
     <pre><code>sudo npm uninstall -g @elucidatainc/pollycli</code></pre>
 
 *   Mac: 
+
+    <pre><code>npm uninstall -g @elucidatainc/pollycli</code></pre>
+   
+*   Windows: 
 
     <pre><code>npm uninstall -g @elucidatainc/pollycli</code></pre>
 
@@ -58,7 +71,9 @@ Open the terminal on the system and execute the following command to log in.
 
 Enter the Polly Username and Password when prompted.
 
-![Polly Login](../img/PollyCLI/1.png "Polly Login") <center>**Figure 1.** Polly Login</center>
+![Polly Login](../img/PollyCLI/1_a.png "Polly Login") 
+![Polly Login](../img/PollyCLI/1_b.png "Polly Login") <center>**Figure 1.** Polly Login</center>
+
 
 Once logged in, you will stay logged in the system and won’t need to log in again even if a new terminal is opened or the system is restarted. You will only need to log in again if you manually log out from the system.
 

@@ -13,10 +13,10 @@ nav:
       - Your Collaborations: Getting Started/Your Collaborations.md
   - OmixAtlas:
       - About OmixAtlas: OmixAtlas/OmixAtlas.md 
-      - Polly Python: OmixAtlas/Polly Python.md
       - Data Schema: OmixAtlas/Data Schema.md
       - Accessing OmixAtlas: OmixAtlas/Accessing OmixAtlas.md
       - Applications: OmixAtlas/Applications.md
+      - Polly Python: OmixAtlas/Polly Python.md
   - Analyses:
     - Polly Notebooks:
       - About Polly Notebooks: Scaling compute/Polly Notebooks5.md
@@ -32,6 +32,12 @@ nav:
       - Running Dockerized Jobs: TechEcosystem/Running Dockerized Jobs.md
       - Jobs Execution: TechEcosystem/Job Execution.md
       - Gists: TechEcosystem/Gists2.md
+    - Polly Workflow:
+      - Nextflow: Apps/Polly Workflow/Nextflow.md
+      - Build Nextflow Pipeline: Apps/Polly Workflow/Build Nextflow Pipeline.md
+      - Execute-in-terminal/Polly-CLI: Apps/Polly Workflow/Execute-in-terminal or Polly-CLI.md
+      - Execute Nextflow pipelines: Apps/Polly Workflow/Execute Nextflow pipelines.md
+      - Reading Nextflow Output: Apps/Polly Workflow/Reading Nextflow Output.md
     - Polly Applications: 
       - Application Features: Apps/Introduction.md
       - Host Apps: Apps/Host Apps.md
@@ -49,10 +55,12 @@ nav:
       - RNA Seq Workflow: Apps/Sequencing Data/RNA Seq Workflow.md
       - Single Cell Visualization: Apps/Single Cell Visualization.md
       - Untargeted Pipeline: Apps/Metabolomic Data/Untargeted Pipeline.md
+      - Curation App: Apps/Curation App.md
   - Tech Ecosystem:
     - Polly Architecture: TechEcosystem/Polly Architecture.md
     - Security and Data Transfer: TechEcosystem/Data Security.md
     - Data Recovery: TechEcosystem/polly_disaster_recovery_mar_2021.md
+    - Technical FAQs: TechEcosystem/Technical FAQs.md
   - Release Notes: Release Notes.md
   - Getting Help: Getting help.md
 theme: 
