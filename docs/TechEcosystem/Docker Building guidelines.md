@@ -25,8 +25,7 @@ While creating a docker to be run on Polly, the following must be taken care of.
     *   Copy the long text string (secret key) output to the JSON file in the key “secret”.
 
 <pre><code>{
-  "cpu": 1,
-  "memory": "1Gi",
+  "machineType": "gp",
   "image": "docker/whalesay",
   "tag": "latest",
   "Secret": "ewoAImF1dVnphR0ZzWjNWd2RHRTZSVkJKUXlOcFlXMGsiCgkw==",
@@ -46,8 +45,7 @@ While creating a docker to be run on Polly, the following must be taken care of.
 *   The value of Environment variables should always be string. For example, the correct way to assign Environment variable is `{“parallel_threads” : “2”}` and **NOT** `{“parallel_threads” : 2}`.
 
 <pre><code>{
- "cpu": "100m",
- "memory": "64Mi",
+ "machineType": "gp",
  "image": "your_docker",
  "tag": "latest",
  "env": {

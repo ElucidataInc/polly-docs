@@ -6,7 +6,7 @@ Polly Notebook provides a Jupyter-like interface on the cloud. Some of the featu
 
 *   **Ready-to-code platform:** Installing and maintaining environments for every notebook can be a frustrating overhead. We provide custom docker environments that come pre-installed with modules commonly used in bioinformatics. You can also add your own custom docker environments.
 
-*   **Cloud storage:** With Polly Notebooks, you can store your data files and notebooks in a single place that will be ready to run in less than 5 minutes from anywhere in the world. No need to fetch your code from Bitbucket anymore!
+*   **Cloud storage:** With Polly Notebooks, you can store your data files and notebooks in a single place. No need to fetch your code from Bitbucket anymore!
 
 *   **Share and collaborate on your Workspaces:** Polly allows sharing of workspaces so you can review and refer notebooks within your team. 
 
@@ -181,75 +181,6 @@ Additionally, you can also launch a new notebook by selecting the *New* button p
 *File Explorer* window also allows you to view, edit or create various file types in an interactive manner. The *Text File* option in the New button can be used to create a new text file. For viewing or editing a file, you can click on the file and a text editor will open in a new tab of the browser. You can view or edit the file and save the changes made in the file. The text editor also allows you to select a programming language from the Language tab to edit and convert the file format.
 
 ![Opening a file using a Text editor](../img/Notebooks/Languages.jpeg) <center>**Figure 18.** Opening a file using a Text editor</center>
-
-##Accessing Workspace files in Notebook
-
-**Accessing individual files using Python and R functions**
-
-For carrying on analysis, if you require any input files which are available in Polly Workspaces, those files can be fetched using a set of commands. You can list all the files present in the Workspace and then select the individual file by the following command:
-
-<pre><code>## Lists all the files present in the project
-list_project_file()
-## The file will be downloaded in the current working directory
-download_project_file('sample_file.csv')
-</code></pre>
-
-After finishing the analysis, you can push back the newly generated output files again to the Workspace using the following command
-
-<pre><code>## Save the file to the project
-save_file_to_project('sample_file.csv')
-</code></pre>
-
-![Accessing individual files in a notebook](../img/Notebooks/25.png) <center>**Figure 19.** Accessing individual files in a notebook</center>
-
-**Note:**
-
-*    These functions cannot access files within folders in workspace. To access those files, use CLI commands.
-
-
-**Accessing files and directories using CLI commands**
-
-The contents of any directory within a Workspace can be listed using the following command on a notebook terminal or a bash cell.
-
-<pre><code>polly files list --workspace-path "<path/to/the/directory>" -y
-</code></pre>
-
-Here, the path of the directory has to start with “polly://”. To view the contents within a folder called “Data” in the workspace, the following command will have to be executed on the notebook terminal.
-
-<pre><code>polly files list --workspace-path "polly://Data" -y
-</code></pre>
-
-To access the directory in the notebook, the following command will have to be executed on the notebook terminal or a bash cell.
-
-<pre><code>polly files sync -s "<path/to/the/project/directory>" -d "<absolute/path/to/the/notebook/directory>" -y
-</code></pre>
-
-Here, `-s` refers to source and `-d` refers to destination. If the folder called “Data” is to be accessed from Workspace in the notebook folder called “Input”, execute the following command.
-
-<pre><code>polly files sync -s "polly://Data" -d "Input" -y
-</code></pre>
-
-To save notebook directories back to the Workspace, keep the source as notebook directory and destination as Polly Workspace in the same command as mentioned above.
-
-<pre><code>polly files sync -s "<absolute/path/to/the/notebook/directory>" -d "<path/to/the/project/directory>" -y
-</code></pre>
-
-To save the folder called “Output” back to Polly Workspace, use the following command.
-
-<pre><code>polly files sync -s "Output" -d "polly://" -y</code></pre>
-
-Similarly, if an individual file needs to be accessed in a notebook, use the following command
-
-<pre><code>polly files copy -s "" -d "" -y
-</code></pre>
-
-Here, `-s` refers to source and `-d` refers to destination. If the file called “Input1.csv” is to be accessed from Workspace folder “Data” in the notebook folder called “Input”, execute the following command.
-
-<pre><code>polly files copy -s "polly://Data/Input1" -d "Input/Input1.csv" -y</code></pre>
-
-An individual file can be saved back to workspace by interchanging source and destination in the mentioned command. 
-
-<pre><code>polly files copy -s "Input/Input1.csv" -d "polly://Data/Input1" -y</code></pre>
 
 
 ##Installing Packages
