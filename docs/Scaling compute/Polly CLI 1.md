@@ -1,14 +1,14 @@
-#What is Polly CLI?
+# What is Polly CLI?
 
 Polly CLI (Command Line Interface) is a tool that enables you to interact with Polly services using commands in your command-line shell. Polly CLI lets you upload data and run jobs on the Polly cloud infrastructure by scaling computation resources as per need. You can start and stop jobs, monitor them and view logs. 
 
-##Required System Configurations
+## Required System Configurations
 
 Polly CLI can work on any Unix based system (Linux and Mac distributions). It does not work on Windows. We will be releasing a Windows version soon. It can be used on local computers as well as cloud instances and servers. 
 
 There are no specific machine configurations required for Polly CLI. It can work on a system with as low as 512 MB RAM and 1 CPU.
 
-##Installation 
+## Installation 
 
 **Dependencies Required for Polly CLI**
 
@@ -22,7 +22,7 @@ The following dependencies are required to be installed before installing Polly 
     *   Windows: For installation on Windows, follow the steps mentioned below - 
 1. Install nodejs from https://nodejs.org/en/download/
 2. Install git from https://git-scm.com/download/win
-3. In the Command Prompt, install polly cli with: <pre><code>npm install -g @elucidatainc/pollycli
+3. In the Command Prompt, install polly cli with: <pre><code>npm install -g @elucidatainc/pollycli</code></pre>
 
 
 **Commands to install**
@@ -125,18 +125,6 @@ You will be asked to select which Workspaces to list:
 ![List Workspaces](../img/PollyCLI/3.png "List Workspaces") <center>**Figure 3.** List Workspaces</center>
 
 Workspace ID will be required for transferring data and running jobs.   
-
-Alternatively, interactive Polly menu could be used for listing or creating workspaces as shown below:-
-![Interactive Polly Menu](../img/PollyCLI/4a.png "Interactive Polly Menu") <center>**Figure 4.** Interactive Polly Menu</center>
-
-When list option is chosen
-
-![List Workspaces](../img/PollyCLI/5a.png "List Workspaces") <center>**Figure 5.** List Workspaces</center>
-
-To create a new workspace
-
-![Create Workspaces](../img/PollyCLI/6a.png "Create Workspace") <center>**Figure 6.** Create Workspace</center>
-
 
 ##Data Transfer
 
