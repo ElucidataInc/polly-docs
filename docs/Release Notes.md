@@ -1,5 +1,39 @@
 # Release Notes
+<!--November 7, 2022-->
 
+<details open>
+<summary><font size="+1"><b>November 7, 2022</b></font></summary>
+<br>
+       <p class="new-button">New</p>
+  <ul>
+    <li>Using the cost dashboard on the Polly Admin panel, an organization admin can track the compute cost for every user based on several parameters - machine type, usage of apps, jobs and notebooks, etc.
+    <li>Users can now reorganize the notebooks within workspaces, at their convenience, by creating and cloning notebooks inside folders.
+    <li>Users will receive notifications detailing the data sources and types of the new datasets ingested into the OmixAtlas that they have subscribed to.
+    <li>The free text search bar on OmixAtlases enables search for keywords across dataset-level metadata fields. E.g., title, description, summary, tissue, drug, disease, etc., depending on the schema of the OmixAtlas.
+In this release, it supports even more precise and advanced search operations using logical operators:      
+      <ul>
+        <li>And &  
+        <li>Or |
+        <li>Not ~
+        <li>Group ()
+        <li>Exact match ""
+                </ul>
+            </ul>
+<br>
+       <p class="update-button">Update</p>
+  <ul>
+         <li>Using the schema management module of Polly-python, users can customize the following on the OmixAtlas: 
+                <ul>
+                       <li>columns for table view 
+                       <li>filters
+                       <li>availability of ontology recommendations 
+                       <li>search fields 
+                </ul>
+                <li>Curated metadata from the curation app can also be exported as a .csv file apart from .json.  
+                <li>New users can accept the End User License Agreement (EULA) directly on the Polly platform during their first login. 
+       </ul>
+</details>
+<hr>
 <!--October 28, 2022-->
 
 <details open>
@@ -14,28 +48,46 @@
   </ul>
 </details>
 <hr>
-<!--October 11, 2022-->
+<!--October 10, 2022-->
 
 <details open>
-<summary><font size="+1"><b>October 11, 2022</b></font></summary>
+<summary><font size="+1"><b>October 10, 2022</b></font></summary>
 <br>
        <p class="new-button">New</p>
   <ul>
     <li>A card view layout page is available where you can sort and filter workspace cards. Tags can be attached with workspaces for better findability.
     <li>Users can mark workspaces as favorites and also watch workspaces to start receiving notifications specific to them. They can be sorted by their creation date for easier access.
-    <li>The curation app can be accessed through the side navigation bar on Polly. Users can now switch between admin, reviewer, and curator roles via admin/reviewer view and curator view directly from the UI.
-    <li>The following can be used to improve the search experience on the OmixAtlas UI:    
+    <li>The curation app can be accessed through the side navigation bar on Polly. Users can now switch between reviewer view and curator view directly from the UI.
+    <li>With the newly deployed ingestion dashboard, users can track all ingestion runs made to OmixAtlas in real-time, view logs in the event of a failure, and list the completed ingestion runs.     
       <ul>
-        <li>multiple dataset-level metadata fields for searching keywords
-        <li>search-keywords mixed with the following operators: And &, Or |, Not ~, Brackets ( ), Exact match ""
+        <li>With the newly deployed ingestion dashboard, users can track all ingestion runs made to OmixAtlas in real-time, view logs in the event of a failure, and list the completed ingestion runs. 
+        <li>Track running time and logs is possible for failed/rescheduled jobs too.
                 </ul>
-    <li>Ingestion Monitoring Dashboard - To enable users (IPC, CUS, customers) to ingest the data into OmixAtlases to monitor the status of ingestion jobs on Polly. 
-    <li>Track running time and logs for failed/rescheduled jobs too.
-    <li>Schedule jobs and apps(notebooks and shiny) on separate nodes to optimize/reduce cost for both groups and increase stability.
+    <li>Schedule compute jobs and apps(notebooks and shiny) on separate nodes to optimize/reduce cost for both groups and increase stability. 
     <li>Support for multiple docker images in the same Nextflow workflow is available.
-    <li>The drug labels for Tier 2 datasets on GEO OA are now more accurate and relevant. All datasets and samples are now annotated with Pubchem identifiers (a change from CHEBI) and encompass a wider range of drug classes (including monoclonal antibodies).
-    <li>The disease labels for Tier 2 datasets on GEO OA are also more accurate and will lead to an improved cohorting and search experience.
-  </ul>
+    <li>The drug labels for Tier 2 datasets on GEO OA are now more accurate and relevant. 
+           <ul>
+                  <li>All datasets and samples are now annotated with Pubchem identifiers (a change from CHEBI) and encompass a wider range of drug classes (including monoclonal antibodies).
+                  <li>The more accurate disease labels for Tier 2 datasets on GEO OA will lead to an improved cohorting and search experience.
+           </ul>
+            </ul>
+         <b>Polly-python:</b>
+       <ul>
+          <li>The curation library is integrated with polly-python which will enable users to recognize entities in a given text, standardize them and tag them in a text with standardized nomenclature/ontology.
+          <li>Schema management-related functions are now upgraded to enable users to update and replace schema. Update schema is to be used to make minor edits in the existing schema, and replace schema is to be used for completely replacing the existing schema of an OmixAtlas. 
+          <li>Schema validation functions have been released to enable users to validate the schema prior to inserting/updating or replacing the schema.
+          <li>Results of query_metadata are now sorted alphabetically across the columns to improve the UX of browsing in the data frame
+          <li>The following file types/extensions can be ingested - biom, zip, tar.gz, gct.bz, vcf.bgz, fcs, fs.
+       </ul>
+     <br>  
+       <p class="update-button">Update</p>
+  <ul>
+         <li>Data Addition: 
+                <ul>
+                       <li>30k datasets were added from HugeAMP and OpenGWAS. 
+                       <li>HTAN single cell studies were added.
+                </ul>
+       </ul>
 </details>
 <hr>
 <!--September 19, 2022-->
