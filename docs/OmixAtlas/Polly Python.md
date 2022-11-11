@@ -730,11 +730,11 @@ This function is used to download the dataset level metadata into a json file. T
 3 omixatlas.download_metadata(repo_key, dataset_id, file_path)
 ``` 
 Argument description:-
-```
+
 repo_key (str): repo_name/repo_id of the repository where data exists.
 dataset_id (str): dataset_id of the dataset for which the metadata to be downloaded
 file_path (str): the system destination path where the dataset level metadata should be downloaded.
-```
+
 
 #### 4.2.8 Working with Cohorts
 Cohort class of polly-python enables users to create cohorts, add/remove datasets or samples from them, merge the dataset, sample, feature and data-matrix level metadata across all samples of the cohort, delete a cohort etc.
@@ -822,11 +822,11 @@ cohort.create_merged_gct(file_path,file_name: optional)
 ```
 
 Argument description:-
-```
+
 file_path (str): path where the merged gct file should be saved
 
 file_name (str): (optional) file name of the merged gct. By default, the cohort name will be used
-```
+
 
 #### 4.2.9 Reporting related functions
 This will enable users to generate reports, link reports to a dataset in OmixAtlas and fetch reports linked with dataset in an OmixAtlas
@@ -900,13 +900,13 @@ omixatlas = Omixatlas()
 omixatlas.delete_linked_report(repo_key: str, dataset_id: str, report_id: str)
 ```
 Argument description:-
-```
+
 repo_key (str): repo_name/repo_id of the repository which is linked.
 
 dataset_id (str): dataset_id of the dataset to be linked.
 
 report_id (str): report id associated with the report in workspaces that is to be deleted. This id can be found when invoking the fetch_linked_report() function.
-```
+
 
 
 #### 4.2.10 File format converter functions
@@ -933,7 +933,7 @@ omixatlas.format_converter("cbioportal", "ACC_2019_Mutation_ACYC-FMI-19", "maf")
 #### 4.2.11 Curation functions
 Curation functions are able to recognise different entities given a text, normalise them based on certain nomenclature such as Polly compatible ontologies. Entities that  are supported are:  "disease", "drug", "species", "tissue", "cell_type", "cell_line", "gene".
 
-Notebook link https://github.com/ElucidataInc/PublicAssets/blob/master/internal-user/Polly_notebook_IPC_lib_polly_implementation_dev_test_cases.ipynb
+[Notebook link](https://github.com/ElucidataInc/PublicAssets/blob/master/internal-user/Polly_notebook_IPC_lib_polly_implementation_dev_test_cases.ipynb)
 
 ##### 4.2.11.1 Identify/tag the entities in a text with standardized nomenclature
 
@@ -950,9 +950,9 @@ obj.annotate_with_ontology("mus musculus with BRCA gene knocked out") [Tag(name=
 ```
 
 Argument description:-
-```
+
 - text(str): any text or description from which the user wants to identify and tag entities/keywords.
-```
+
 ##### 4.2.11.2 Standardise entity
 Given a text and the type of entity it is, users can get the Polly compatible ontology for the text such as the MESH ontology. The function also returns a dictionary containing keys and values of the entity type, ontology (such as NCBI, MeSH), ontology ID (such as the MeSH ID), the score (confidence score), and synonyms if any
 
@@ -969,12 +969,12 @@ obj.standardise_entity("Mus musculus","species")
 ```
 
 Argument description:-
-```
+
 - text(str): text or word to be standardised.
 entity_type(str): the type of entity the given text is such as “species“, “disease“. It can be any one of the supported entity types.
 - threshold(int) (Optional Parameter): filter out entities with confidence score less than the threshold. It is recommended to use the default value.
 - context(str) (Optional Parameter): text/description to indicate the context in which the text appears. It's used internally for expanding abbreviations.
-```
+
 ##### 4.2.11.3. Recognise entities in a given text
 Users can simply recognise entities (BIOBERT NER model) in a given text without any ontology standardisation (unlike the annotate_with_ontology function above which normalises as well) . A list of spans of identified entities are returned.
 
@@ -991,6 +991,100 @@ obj.recognise_entity("Adeno carcinoma was observed")
 'span_end': 27,
 'score': 0.9999943971633911}]
 ```
+#### 4.2.12 Jobs
+Polly CLI jobs can now be initiated, managed and have a status-checked for from Polly Python. This lets users run jobs on the Polly cloud infrastructure by scaling computation resources as per need. Users can start and stop tasks and even monitor jobs.
+
+##### 4.2.12.1. Submitting a job
+
+With this, the job will be submitted to run and Job ID will be created. This Job ID will be needed to check the status and the logs of the submitted job.
+
+```
+from polly.auth import Polly;
+from polly.jobs import jobs; 
+job = jobs()
+
+Polly.auth(AUTH_TOKEN)
+job = jobs()
+
+job_file = "<json_job_file>"
+workspace_id = <worspace_id>
+
+job.submit_job(workspace_id,job_file)
+```
+
+Argument description:-
+
+- workspace_id (str/int): the id of the workspace where the job has to submitted.
+- job_file (str) : a json file path which contains the description of a job
+
+Example job file
+```
+{
+  "cpu": "100m",
+  "memory": "64Mi",
+  "image": "docker/whalesay",
+  "tag": "latest",
+  "name": "exampleName",
+  "command": [
+      "cowsay",
+      "hello world"
+  ]
+}
+```
+
+##### 4.2.12.2. Cancelling a job
+
+This function is used to cancel an ongoing job.
+
+```
+from polly.auth import Polly;
+from polly.jobs import jobs; 
+Polly.auth(AUTH_TOKEN)
+job = jobs()
+job.job_cancel(workspace_id, job_id)
+```
+
+Argument description:-
+
+- workspace_id (str/int): the id of the workspace where the job has to submitted.
+- job_id (str) : job id to be cancelled
+
+
+##### 4.2.12.3. Job Status check
+
+###### 4.2.12.3.1. This function is to be used for checking status of a job.
+
+```
+from polly.auth import Polly;
+from polly.jobs import jobs; 
+job = jobs()
+
+Polly.auth(token_s)
+
+job = jobs()
+job.job_status(workspace_id, job_id)
+```
+
+Argument description:-
+
+- workspace_id (str/int): the id of the workspace where the job has to submitted.
+- job_id (str) : job id
+ 
+
+###### 4.2.12.3.2. Checking status of all jobs in the workspace
+
+```
+from polly.auth import Polly;
+from polly.jobs import jobs; job = jobs()
+Polly.auth(AUTH_TOKEN)
+
+job = jobs()
+job.job_status(workspace_id)
+```
+
+Argument description:-
+
+- workspace_id (str/int): the id of the workspace.
 
 ### 4.3 Writing a query
 
@@ -1167,98 +1261,4 @@ Operators  | Functions performed
 <code>LIMIT</code> | **NOTE: The response of any query returns 200 entries by default**. <br>You can extend this by defining the LIMIT of the results you want to query to be able to return.
 <code>ORDER BY</code> | Can only be used to sort the search results using integer based parameters in the schema. Sorting on the basis of dataset_id, number of samples, <code>_score</code> of the data is available at the dataset-level metadata. <code>ASC</code> or <code>DESC</code> can be used to define whether you want to order the rows in ascending or descending order respectively
 
-## 5. Jobs
-Polly CLI jobs can now be initiated, managed and have a status-checked for from Polly Python. This lets users run jobs on the Polly cloud infrastructure by scaling computation resources as per need. Users can start and stop tasks and even monitor jobs.
 
-### 5.1 Submitting a job
-
-With this, the job will be submitted to run and Job ID will be created. This Job ID will be needed to check the status and the logs of the submitted job.
-
-```
-from polly.auth import Polly;
-from polly.jobs import jobs; 
-job = jobs()
-
-Polly.auth(AUTH_TOKEN)
-job = jobs()
-
-job_file = "<json_job_file>"
-workspace_id = <worspace_id>
-
-job.submit_job(workspace_id,job_file)
-```
-
-Argument description:-
-```
-- workspace_id (str/int): the id of the workspace where the job has to submitted.
-- job_file (str) : a json file path which contains the description of a job
-```
-Example job file
-```
-{
-  "cpu": "100m",
-  "memory": "64Mi",
-  "image": "docker/whalesay",
-  "tag": "latest",
-  "name": "exampleName",
-  "command": [
-      "cowsay",
-      "hello world"
-  ]
-}
-```
-
-### 5.2 Cancelling a job
-
-This function is used to cancel an ongoing job.
-
-```
-from polly.auth import Polly;
-from polly.jobs import jobs; 
-Polly.auth(AUTH_TOKEN)
-job = jobs()
-job.job_cancel(workspace_id, job_id)
-```
-
-Argument description:-
-```
-- workspace_id (str/int): the id of the workspace where the job has to submitted.
-- job_id (str) : job id to be cancelled
- ```
-
-### 5.3 Job Status check
-
-#### 5.3.1 This function is to be used for checking status of a job.
-
-```
-from polly.auth import Polly;
-from polly.jobs import jobs; 
-job = jobs()
-
-Polly.auth(token_s)
-
-job = jobs()
-job.job_status(workspace_id, job_id)
-```
-
-Argument description:-
-```
-- workspace_id (str/int): the id of the workspace where the job has to submitted.
-- job_id (str) : job id
- 
-```
-#### 5.3.2. Checking status of all jobs in the workspace
-
-```
-from polly.auth import Polly;
-from polly.jobs import jobs; job = jobs()
-Polly.auth(AUTH_TOKEN)
-
-job = jobs()
-job.job_status(workspace_id)
-```
-
-Argument description:-
-```
-- workspace_id (str/int): the id of the workspace.
-```
