@@ -355,6 +355,20 @@ else:
 
 The downloaded vcf file can be further analysed using the docker environment containing Hail package on Polly.
 
+##### 4.2.4.4 Download dataset level metadata:-
+
+This function is used to download the dataset level metadata into a json file. The keys of the json file is kept as original_name in the schema.
+```
+1 from polly.omixatlas import OmixAtlas
+2 omixatlas = OmixAtlas (AUTH_TOKEN)
+3 omixatlas.download_metadata(repo_key, dataset_id, file_path)
+``` 
+Argument description:-
+
+repo_key (str): repo_name/repo_id of the repository where data exists.
+dataset_id (str): dataset_id of the dataset for which the metadata to be downloaded
+file_path (str): the system destination path where the dataset level metadata should be downloaded.
+
 #### 4.2.5 Working with workspaces
 Polly python enables the users to connect OmixAtlas with Workspaces. Currently, there are two functions to create a new workspaces and listing the existing workspaces. The following library needs to be imported for users to work with workspaces.
 
@@ -721,19 +735,47 @@ output:
 
 A dictionary with all the field names which should be present in the dataset level metadata
 
-##### 4.2.7.4 Download dataset level metadata:-
+##### 4.2.7.4 Updating metadata and/or datasets uploaded to an omixatlas:
+```update_datasets(repo_id (int/str), source_folder_path (dict), destination_folder (str) (optional), priority (str) (optiona))```
 
-This function is used to download the dataset level metadata into a json file. The keys of the json file is kept as original_name in the schema.
+input: 
+
+```repo_id```: This is the repository ID to which ingestion should be done
+
+```source_folder_path```: This is the dictionary with keys ```data``` and ```metadata```. The corresponding value pairs should be the folder containing the file (gct, h5ad, vcf, mmcif etc) for data and folder containing json of dataset level metadata for metadata. The user can provide either data or metadata or both depending on which files the user wants to update. 
+
+```destination_folder``` (optional): This is the folder within S3 when data gets pushed
+
+```priority``` (optional): This is the priority flag as per ingestion is being done. Default is 'medium'
+
+output: 
+
+Status of file update for each dataset in a dataframe
+
 ```
-1 from polly.omixatlas import OmixAtlas
-2 omixatlas = OmixAtlas (AUTH_TOKEN)
-3 omixatlas.download_metadata(repo_key, dataset_id, file_path)
-``` 
-Argument description:-
+#incase the user wants to update both metadata and data
+from polly.omixatlas import OmixAtlas
+omixatlas = OmixAtlas()
 
-repo_key (str): repo_name/repo_id of the repository where data exists.
-dataset_id (str): dataset_id of the dataset for which the metadata to be downloaded
-file_path (str): the system destination path where the dataset level metadata should be downloaded.
+repo_id = "1657110718820"
+source_folder_path_data = "/import/data_final"
+source_folder_path_metadata = "/import/metadata_final"
+destination_folder = "220707-1426"
+priority = "high"
+source_folder_path = {"data":source_folder_path_data, "metadata":source_folder_path_metadata}
+omixatlas.update_datasets(repo_id, source_folder_path, destination_folder, priority)
+
+#incase the user wants to update only the metadata
+source_folder_path = {"metadata":source_folder_path_metadata}
+omixatlas.update_datasets(repo_id, source_folder_path, destination_folder, priority)
+
+#incase the user wants to update only data 
+source_folder_path = {"data":source_folder_path_data}
+omixatlas.update_datasets(repo_id, source_folder_path, destination_folder, priority)
+```
+
+Note: 
+1. metadata/data files will not be updated if they have never been uploaded onto the omixatlas before. 
 
 
 #### 4.2.8 Working with Cohorts
