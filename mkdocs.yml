@@ -21,16 +21,15 @@ nav:
       - Capabilities Diagram: Polly Python/Capabilities Diagram.md
       - Installation and Authentication: Polly Python/Installation and Authentication.md
       - Querying using SQL: Polly Python/Queries/About Queries.md
-          - Source/Datatype specific queries: Polly Python/Queries/Specific queries.md
-          - Ontology Recommendations: Polly Python/Queries/Ontology Recommendations.md
           - Basic query examples: Polly Python/Queries/Basic query examples.md
+          - Ontology Recommendations: Polly Python/Queries/Ontology Recommendations.md
           - Advanced Query Examples: Polly Python/Queries/Advanced Query Examples.md
       - OmixAtlas: Polly Python/OmixAtlas.md
       - Workspaces: Polly Python/Workspaces.md
-      - Cohorts: Polly Python/Cohorts.md
-      - Curation: Polly Python/Curation.md
-      - Jobs: Polly Python/Jobs.md
-      - Validation Library: Polly Python/Validation.md
+      - Working with Cohorts: Polly Python/Cohorts.md
+      - Data Curation: Polly Python/Curation.md
+      - Running Jobs: Polly Python/Jobs.md
+      - Data Validation: Polly Python/Validation.md
       - New User Onboarding: Polly Python/New User Onboarding.md
   - Analyses:
     - Polly Notebooks:
