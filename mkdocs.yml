@@ -63,8 +63,11 @@ nav:
     - Technical FAQs: TechEcosystem/Technical FAQs.md
   - Release Notes: Release Notes.md
   - Getting Help: Getting help.md
-theme: 
-  name: readthedocs
+theme:
+  name: material
+  logo: assets/logo-white.svg
+  palette:
+    primary: deep purple
   custom_dir: custom_theme/
   analytics: 
     gtag: 'G-PQXHC1FNVZ'
