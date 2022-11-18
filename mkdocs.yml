@@ -17,14 +17,14 @@ nav:
       - Accessing OmixAtlas: OmixAtlas/Accessing OmixAtlas.md
       - Applications: OmixAtlas/Applications.md
       - Polly Python: OmixAtlas/Polly Python.md
-  - Polly Python: Polly Python/About PollyPy.md
+  - Polly Python: 
       - Capabilities Diagram: Polly Python/Capabilities Diagram.md
       - Installation and Authentication: Polly Python/Installation and Authentication.md
-      - Querying using SQL: Polly Python/Queries/About Queries.md
+      - Querying using SQL: 
           - Basic query examples: Polly Python/Queries/Basic query examples.md
           - Ontology Recommendations: Polly Python/Queries/Ontology Recommendations.md
           - Advanced Query Examples: Polly Python/Queries/Advanced Query Examples.md
-      - OmixAtlas: Polly Python/OmixAtlas.md
+      - OmixAtlas:
           - Basic Functions: Polly Python/OmixAtlas/Basic Functions.md
           - Data Management Functions: Polly Python/OmixAtlas/Data Management Functions.md
           - Schema Management Functions: Polly Python/OmixAtlas/Schema Management Functions.md
