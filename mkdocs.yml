@@ -26,8 +26,8 @@ nav:
           - Advanced Query Examples: Polly Python/Queries/Advanced Query Examples.md
       - OmixAtlas:
           - Basic Functions: Polly Python/OmixAtlas/Basic Functions.md
-          - Data Management Functions: Polly Python/OmixAtlas/Data Management Functions.md
-          - Schema Management Functions: Polly Python/OmixAtlas/Schema Management Functions.md
+          - Data Management: Polly Python/OmixAtlas/Data Management.md
+          - Schema Management: Polly Python/OmixAtlas/Schema Management.md
           - Reports: Polly Python/OmixAtlas/Reports.md
       - Workspaces: Polly Python/Workspaces.md
       - Working with Cohorts: Polly Python/Cohorts.md
