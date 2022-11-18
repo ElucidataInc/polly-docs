@@ -14,6 +14,14 @@ from polly.cohort import Cohort</code></pre>
 ## Authentication
 Authentication of the account is required to be able to access the capabilities of the Polly Python library.
 
+### Using auto-generated tokens (recommended)
+Run this code to automatically authenticate.
+
+<pre><code>import os
+from polly.auth import Polly
+AUTH_TOKEN = (os.environ['POLLY_REFRESH_TOKEN'])
+Polly.auth(AUTH_TOKEN)</code></pre>
+
 ### Copying authentication token or key
 To get this token, follow the steps below:
 
@@ -36,3 +44,17 @@ Go to authentication keys and input the name, description to generate a key. Thi
 
 <pre><code>AUTH_KEY = "[authentication_key_copied]"
 Polly.auth(AUTH_KEY)</code></pre>
+
+## Calling a function
+
+In order to call a functions from a particular class, corresponding object should be defined. 
+
+E.g. for functions related to OmixAtlas, 
+<pre><code>omixatlas = OmixAtlas()
+output = omixatlas.[function()]</code></pre>
+Similarly, for functions related to Workspaces, 
+<pre><code>workspaces = Workspaces()
+output = workspaces.[function()]</code></pre>
+And, for functions related to Cohorts, 
+<pre><code>cohort = Cohort()
+output = cohort.[function()]</code></pre>
