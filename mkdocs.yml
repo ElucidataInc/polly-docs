@@ -19,7 +19,7 @@ nav:
       - Polly Python: OmixAtlas/Polly Python.md
   - Polly Python: 
       - Capabilities Diagram: Polly Python/Capabilities Diagram.md
-      - Installation and Authentication: Polly Python/Installation and Authentication.md
+      - Getting Started: Polly Python/Getting Started.md
       - Querying using SQL: 
           - Basic query examples: Polly Python/Queries/Basic query examples.md
           - Ontology Recommendations: Polly Python/Queries/Ontology Recommendations.md
