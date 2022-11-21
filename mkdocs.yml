@@ -26,6 +26,7 @@ nav:
           - Advanced Query Examples: Polly Python/Queries/Advanced Query Examples.md
       - OmixAtlas:
           - Basic Functions: Polly Python/OmixAtlas/Basic Functions.md
+          - Downloading Datasets: Polly Python/OmixAtlas/Download Data.md
           - Data Management: Polly Python/OmixAtlas/Data Management.md
           - Schema Management: Polly Python/OmixAtlas/Schema Management.md
           - Reports: Polly Python/OmixAtlas/Reports.md
@@ -88,6 +89,8 @@ theme:
     - navigation.top
   palette:
     primary: deep purple
+plugins:
+  - mkdocstrings
 site_favicon: img/elucidata.ico
 extra:
   analytics:
