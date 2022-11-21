@@ -1,3 +1,5 @@
+::: docstrings.cohort
+
 Cohort class of polly-python enables users to create cohorts, add/remove datasets or samples from them, merge the dataset, sample, feature and data-matrix level metadata across all samples of the cohort, delete a cohort etc.
 This feature is enabled in both types of OmixAtlas:- 
 
