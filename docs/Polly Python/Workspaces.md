@@ -15,7 +15,7 @@ Fetch existing workspaces
 ```
 workspaces.fetch_my_workspaces()
 ```  
-##### upload_to_workspaces()
+### upload_to_workspaces()
 Upload files or folder to a workspace
 ```
 workspaces.upload_to_workspaces(workspace_id = int, workspace_path = str, local_path = str)
