@@ -66,11 +66,11 @@ nav:
 theme:
   name: material
   logo: assets/logo-white.svg
+  favicon: img/elucidata.ico
   features:
     - navigation.top
   palette:
     primary: deep purple
-site_favicon: img/elucidata.ico
 extra:
   analytics:
     provider: google
