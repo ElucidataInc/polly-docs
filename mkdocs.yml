@@ -17,14 +17,19 @@ nav:
       - Accessing OmixAtlas: OmixAtlas/Accessing OmixAtlas.md
       - Applications: OmixAtlas/Applications.md
       - Polly Python: OmixAtlas/Polly Python.md
-  - Polly Python: Polly Python/About PollyPy.md
+  - Polly Python: 
       - Capabilities Diagram: Polly Python/Capabilities Diagram.md
-      - Installation and Authentication: Polly Python/Installation and Authentication.md
-      - Querying using SQL: Polly Python/Queries/About Queries.md
-          - Basic query examples: Polly Python/Queries/Basic query examples.md
+      - Getting Started: Polly Python/Getting Started.md
+      - Querying using SQL: 
+          - SQL Query Syntax: Polly Python/Queries/SQL Query Syntax.md
+          - Query Examples: Polly Python/Queries/Query Examples.md
           - Ontology Recommendations: Polly Python/Queries/Ontology Recommendations.md
-          - Advanced Query Examples: Polly Python/Queries/Advanced Query Examples.md
-      - OmixAtlas: Polly Python/OmixAtlas.md
+      - OmixAtlas:
+          - Basic Functions: Polly Python/OmixAtlas/Basic Functions.md
+          - Downloading Datasets: Polly Python/OmixAtlas/Download Data.md
+          - Data Management: Polly Python/OmixAtlas/Data Management.md
+          - Schema Management: Polly Python/OmixAtlas/Schema Management.md
+          - Reports: Polly Python/OmixAtlas/Reports.md
       - Workspaces: Polly Python/Workspaces.md
       - Working with Cohorts: Polly Python/Cohorts.md
       - Data Curation: Polly Python/Curation.md
@@ -89,3 +94,11 @@ extra:
   analytics:
     provider: google
     property: 'G-PQXHC1FNVZ'
+plugins:
+  - mkdocstrings
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
