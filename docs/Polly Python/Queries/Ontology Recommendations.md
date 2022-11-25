@@ -19,4 +19,6 @@ sql_query = """SELECT dataset_id, curated_disease, curated_tissue FROM geo.datas
         CONTAINS(curated_tissue, recommend('curated_tissue', 'breast', 'related'))""" 
 result = omixatlas.query_metadata(sql_query)
 ```
-For more details and examplpes, please check this [notebook](https://github.com/ElucidataInc/polly-python/blob/main/Discover/ontology_recommendation_disease_tissue.ipynb) 
+
+For more details and examples, please check this [notebook](https://github.com/ElucidataInc/polly-python/blob/main/Discover/ontology_recommendation_disease_tissue.ipynb) 
+

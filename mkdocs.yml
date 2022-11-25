@@ -21,9 +21,9 @@ nav:
       - Capabilities Diagram: Polly Python/Capabilities Diagram.md
       - Getting Started: Polly Python/Getting Started.md
       - Querying using SQL: 
-          - Basic query examples: Polly Python/Queries/Basic query examples.md
+          - SQL Query Syntax: Polly Python/Queries/SQL Query Syntax.md
+          - Query Examples: Polly Python/Queries/Query Examples.md
           - Ontology Recommendations: Polly Python/Queries/Ontology Recommendations.md
-          - Advanced Query Examples: Polly Python/Queries/Advanced Query Examples.md
       - OmixAtlas:
           - Basic Functions: Polly Python/OmixAtlas/Basic Functions.md
           - Downloading Datasets: Polly Python/OmixAtlas/Download Data.md
@@ -96,3 +96,9 @@ extra:
   analytics:
     provider: google
     property: 'G-PQXHC1FNVZ'
+markdown_extensions:
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
