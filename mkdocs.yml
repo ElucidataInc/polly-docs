@@ -85,17 +85,17 @@ nav:
 theme:
   name: material
   logo: assets/logo-white.svg
+  favicon: img/elucidata.ico
   features:
     - navigation.top
   palette:
     primary: deep purple
-site_favicon: img/elucidata.ico
+plugins:
+  - mkdocstrings
 extra:
   analytics:
     provider: google
     property: 'G-PQXHC1FNVZ'
-plugins:
-  - mkdocstrings
 markdown_extensions:
   - pymdownx.highlight:
       anchor_linenums: true

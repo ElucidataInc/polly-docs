@@ -1,3 +1,4 @@
+
 ::: polly.Download
     options:
       show_source: false
@@ -73,5 +74,3 @@ else:
 ```
 
 The downloaded vcf file can be further analysed using the docker environment containing Hail package on Polly.
-
-### download_metadata
