@@ -91,6 +91,7 @@ theme:
   palette:
     primary: deep purple
 plugins:
+  - search
   - mkdocstrings
 extra:
   analytics:
