@@ -1,4 +1,4 @@
-##What are workspaces?
+## What are workspaces?
 
 Polly workspaces allow you to reduce clutter and organize your data in a folder system of choice. This can be accessed by clicking on the *Workspaces* card.
 
@@ -16,39 +16,54 @@ There are 3 panels on the workspace interface.
 
 ##Creating a workspace
 
-You can create a new workspace on Polly by clicking on *New Workspace* on the left panel.
+You can create a new workspace on Polly by clicking on *New Workspace* on the left panel of workspace interface or on the workspace card view page.
 
-![New Workspace1](../img/Workspace/3.png) <center>**Figure 3.** Creating New Workspace</center>
+![New workspace2](../img/Workspace/3.png)
+![New workspace2](../img/Workspace/4.png) <center>**Figure 3.** Creating New Workspace</center>
 
-Enter the *Name of the workspace* and *description* (if any) and click on *save*. The new workspace will be created. You can find the newly created workspace with the list of all your workspaces on the left panel.
+Enter the *Name of the workspace*, *Custom tags*  and *description* (if any) and click on *save*. Users can add tags while creating a new workspace. These tags can be used later to search and identify workspaces. 
 
-![New workspace2](../img/Workspace/4.png) <center>**Figure 4.** Workspace Description</center>
+The new workspace will be created. You can find the newly created workspace with the list of all your workspaces on the left panel.
 
-The information about the contents of the workspace can be seen on the right panel.
+![Workspace Information](../img/Workspace/5.png) <center>**Figure 4.** Workspace Information</center>
 
-![Workspace Information](../img/Workspace/5.png) <center>**Figure 5.** Workspace Information</center>
 
 While the description of workspace and other information can be accessed through the *Info* option
 
-![Workspace Information](../img/Workspace/5.5.png) <center>**Figure 6.** Workspace Info option</center>
+![Workspace Information](../img/Workspace/5.5.png) <center>**Figure 5.** Workspace Info option</center>
 
-##Content within a workspace
+## Watching a Workspace
+
+Users can watch a particular workspace by clicking on the 'eye' icon. This feature allows the user to monitor changes made in the workspace.
+
+![Watching a Workspace](../img/Workspace/6.png) <center>**Figure 6.** Watching a Workspace</center>
+
+## Mark a Workspace as Favourite
+
+Users can mark a particular workspace as their favourite by clicking on the 'star' icon. This feature makes it easier for the user to filter frequently used workspaces.
+
+![Mark a Workspace as Favourite](../img/Workspace/7a.png) <center>**Figure 7.** Marking a Workspace as Favourite</center>
+
+## Content within a workspace
 
 A workspace contains all your data, [analyses](https://docs.elucidata.io/Apps/Introduction.html),[notebooks](https://docs.elucidata.io/Scaling%20compute/Polly%20Notebooks.html), and [reports](https://docs.elucidata.io/Apps/Introduction.html#reports). They can be accessed through the middle panel.
 
-![Workspace Content](../img/Workspace/6.png) <center>**Figure 7.** Workspace Contents</center>
+![Middle Panel](../img/Workspace/12.png) <center>**Figure 8.** Workspace contents</center>
 
-
-##Filtering the content
+## Filtering the content
 
 In order to reduce the clutter, workspaces allow you to filter the content you want to display within the middle panel. Click on *Filter icon* above the middle panel where you can select/deselect the file type you would want to show in the workspace. Once the selection is done click on *Apply* to confirm your selections.
 
+![Edit workspace](../img/Workspace/13.png) 
 ![Content Filtering](../img/Workspace/8.png) <center>**Figure 9.** Content Filtering</center>
 
 
-##Creating a New folder
+## Creating a New folder
 
 Polly workspace allows you to organize and manage your data in folders and subfolders. To create a folder, click on the *cloud upload icon* and select *Create a New Folder* from the dropdown menu.
+
+
+![Folder Creation](../img/Workspace/14.png) <center>**Figure 10.** Create Folder</center>
 
 ![Folder Creation](../img/Workspace/9.png) <center>**Figure 10.**  Create Folder</center>
 
@@ -71,18 +86,17 @@ Double click on the folder name to look at its contents.
 
 The purple section in the middle panel shows the path of the directory you are in. You can click on the name of any folder within the path to select the folder you want to browse to.
 
-![Navigation2](../img/Workspace/12.png) <center>**Figure 13.** Folder Navigation Path</center>
+
 
 
 ##Editing your workspace
 
 The menu beside the workspace name shows the menu items to edit your workspace details.
 
-![Edit workspace](../img/Workspace/13.png) <center>**Figure 14.** Workspace Edition</center>
+
 
 Select *Edit Details* within the menu. Rename the workspace and/or change the description of the workspace and click on *Update*. Click *Cancel* to close the tab without saving any changes.
 
-![Edit workspace2](../img/Workspace/14.png) <center>**Figure 15.** Workspace Edit Update</center>
 
 
 ##Logging out of Polly
