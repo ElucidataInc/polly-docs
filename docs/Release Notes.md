@@ -5,7 +5,7 @@
 <summary><font size="+1"><b>December 5, 2022</b></font></summary>
 <br>
        <p class="releases-button">New</p>
-  <ul>
+  <ul> 
     <li>.h5seurat files are now supported on OmixAtlases. 
     <li>3 new fields have been curated for 101k GEO datasets on the platform - cancer stage, chemical treatment and clinical labels.
     <li>On the OmixAtlas, the filter result counts for each category are visible and clickable to enable easy navigation to relevant datasets. For instance, on filtering diseases, users will get 18414 normal samples, 2063 neoplasms and 1374 obesity samples which users can access by just clicking on the respective filter entries.
