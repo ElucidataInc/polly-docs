@@ -1,4 +1,26 @@
 # Release Notes
+<!--December 5, 2022-->
+
+<details open>
+<summary><font size="+1"><b>December 5, 2022</b></font></summary>
+<br>
+       <p class="releases-button">New</p>
+  <ul>
+    <li>.h5seurat files are now supported on OmixAtlases. 
+    <li>3 new fields have been curated for 101k GEO datasets on the platform - cancer stage, chemical treatment and clinical labels.
+    <li>On the OmixAtlas, the filter result counts for each category are visible and clickable to enable easy navigation to relevant datasets. For instance, on filtering diseases, users will get 18414 normal samples, 2063 neoplasms and 1374 obesity samples which users can access by just clicking on the respective filter entries.
+    <li>The OmixAtlas table view can be expanded now since the metadata fields visible on the view can be customized through the schema. This offers flexibility for locating useful datasets.
+    <li>Curation admins can track the time spent by each curator on the curation app per task or as a whole on the dashboard. 
+    <li>Collections for curation can now be created for Gene and Drug based OmixAtlases as well.  
+                </ul>
+<br>
+       <p class="update-button">Update</p>
+  <ul>
+         <li>Ontology recommendation on OmixAtlases has been improved. Now, the recommendations will be more relevant, accurate and with more unique suggestions. 
+         <li>40k RNA-seq datasets from GEO were added to a new OmixAtlas.
+       </ul>
+</details>
+<hr>
 <!--November 7, 2022-->
 
 <details open>
