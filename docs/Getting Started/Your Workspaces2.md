@@ -5,9 +5,10 @@ Polly workspaces allow you to reduce clutter and organize your data in a folder 
 ![Homepage](../img/Workspace/1.png) <p align=center>**Figure 1.** Polly Homepage</p>
 
 To access workspaces, 
+
 1. Click on the workspace card:
 
-    ![Panels](../img/Workspace/2.png) <p align=center>**Figure 2.** Workspace Panel View</p>
+![Panels](../img/Workspace/2.png) <p align=center>**Figure 2.** Workspace Panel View</p>
 
     There are 3 panels on the workspace interface.
 
