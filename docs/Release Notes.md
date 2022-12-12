@@ -4,7 +4,7 @@
 <details open>
 <summary><font size="+1"><b>December 5, 2022</b></font></summary>
 <br>
-       <p class="releases-button">New</p>
+       <p class="releases-button">Releases</p>
   <ul> 
     <li>.h5seurat files are now supported on OmixAtlases. 
     <li>3 new fields have been curated for 101k GEO datasets on the platform - cancer stage, chemical treatment and clinical labels.
