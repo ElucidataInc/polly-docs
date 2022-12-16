@@ -2,4 +2,4 @@ Polly Libraries give access to the various capabilities on Polly like ingesting,
 
 A snapshot of it's capabilities is shown in the image below.
 
-<img src = "../img/polly-python/capabilities_diagram.png" width="1000" height="900">
+<img src = "../img/polly-python/capabilities_diagram.png" width="1500" height="900">
