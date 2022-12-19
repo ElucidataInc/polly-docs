@@ -48,7 +48,7 @@ Usage:
         Args:
              display_name (str): display name of the omixatlas.
              description (str): description of the omixatlas.
-             repo_name (str): repo_name which is used to create index in db.
+             repo_key (str/int): repo_key(repo_name/repo_id) for that Omixatlas
              image_url (str): Url of the icon for omixatlas. Optional Parameter.
              initials (str): Initials shown in the icon of omixatlas. Optional Parameter.
              explorer_enabled (bool): Default True. Optional Parameter.
