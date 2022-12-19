@@ -20,7 +20,7 @@ The OmixAtlas class contains functions to add, update, or delete datasets in an 
         """
 
     def save_to_workspace(
-        self, repo_key: str, dataset_id: str, workspace_id: int, workspace_path: str
+        self, repo_id: str, dataset_id: str, workspace_id: int, workspace_path: str
     ) -> json:
         """Function to save data from OmixAtlas to workspaces
 
@@ -36,7 +36,7 @@ The OmixAtlas class contains functions to add, update, or delete datasets in an 
 
     def add_datasets(
         self,
-        repo_key: int,
+        repo_id: int,
         source_folder_path: dict,
         destination_folder_path="",
         priority="low",
@@ -59,7 +59,7 @@ The OmixAtlas class contains functions to add, update, or delete datasets in an 
 
     def update_datasets(
         self,
-        repo_key: int,
+        repo_id: int,
         source_folder_path: dict,
         destination_folder_path="",
         priority="low",
@@ -80,7 +80,7 @@ The OmixAtlas class contains functions to add, update, or delete datasets in an 
             pd.DataFrame: DataFrame showing Upload Status of Files
         """
 
-    def delete_datasets(self, repo_key: int, dataset_ids: list):
+    def delete_datasets(self, repo_id: int, dataset_ids: list):
         """This function is used to delete data from an omixatlas
 
         Args:
