@@ -25,7 +25,7 @@ The OmixAtlas class contains functions to add, update, or delete datasets in an 
         """Function to save data from OmixAtlas to workspaces
 
         Args:
-            repo_key (str/int): repo_key(repo_name/repo_id) of the Omixatlas
+            repo_id (str): repo_id of the Omixatlas
             dataset_id (str): dataset id that needs to be saved
             workspace_id (int): workspace id in which the dataset needs to be saved
             workspace_path (str): path where the workspace resides
@@ -44,7 +44,7 @@ The OmixAtlas class contains functions to add, update, or delete datasets in an 
         """This function is used to add data to an omixatlas
 
         Args:
-            repo_key (str/int): repo_key(repo_name/repo_id) for that Omixatlas
+            repo_id (str/int): repo_id for that Omixatlas
             source_folder_path (dict): source folder path from data and metadata files are fetched.
             destination_folder_path (str, optional): Destination folder structure in s3. Defaults to "".
             priority (str, optional): Priority at which this data has to be inserted. Defaults to "low".
@@ -67,7 +67,7 @@ The OmixAtlas class contains functions to add, update, or delete datasets in an 
         """This function is used to update data/metadata to an omixatlas
 
         Args:
-            repo_key (str/int): repo_key(repo_name/repo_id) for that Omixatlas
+            repo_id (str/int): repo_id for that Omixatlas
             source_folder_path (dict): source folder path from data and metadata files are fetched.
             destination_folder_path (str, optional): Destination folder structure in s3. Defaults to "".
             priority (str, optional): Priority at which this data has to be inserted. Defaults to "low".
@@ -84,7 +84,7 @@ The OmixAtlas class contains functions to add, update, or delete datasets in an 
         """This function is used to delete data from an omixatlas
 
         Args:
-            repo_key (str/int): repo_key(repo_name/repo_id) for that Omixatlas
+            repo_id (str/int): repo_id for that Omixatlas
             dataset_ids (list): dataset_ids that users want to delete
 
         Raises:
