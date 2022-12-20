@@ -55,3 +55,16 @@ class jobs:
         Returns:
             dataframe with job id, job name and status sorted as per created timestamp
         """
+
+    def job_logs(self, project_id: any, job_id: str, mode="all"):
+        """
+        Get logs of a job.
+
+        Arguments:
+            project_id (str): workspace_id
+            job_id (str): job_id
+        Keyword Arguments:
+            mode (str): either 'latest' or 'all' logs.
+        Raises:
+            RequestException
+        """

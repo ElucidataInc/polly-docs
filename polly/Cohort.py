@@ -28,7 +28,7 @@ Usage:
                   local_path (str): local path to instantiate the cohort.
                   cohort_name (str): identifier name for the cohort.
                   description (str): description about the cohort.
-                  repo_key (str): repo_key(repo_name/repo_id) for the omixatlas from where datasets or samples is to be added.
+                  repo_key (str/int): repo_key(repo_name/repo_id) for the omixatlas from where datasets or samples is to be added.
                   entity_id (list): list of dataset_id or sample_id to be added to the cohort.
 		  
             Returns:
@@ -45,7 +45,7 @@ Usage:
         This function is used to add datasets or samples to a cohort.
 	
         Args:
-              repo_key (str): repo_key(repo_name OR repo_id) for the omixatlas where datasets or samples belong.
+              repo_key (str/int): repo_key(repo_name OR repo_id) for the omixatlas where datasets or samples belong.
               entity_id (list): list of dataset ID or sample ID to be added to the cohort.
 	      
         Returns:

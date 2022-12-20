@@ -22,7 +22,7 @@ Usage:
 
     def omixatlas_summary(
         self,
-        key: str,
+        repo_key: str,
         query_api_version="v2",
         count_by_source=True,
         count_by_data_type=True):
@@ -30,7 +30,7 @@ Usage:
         """
         This function will return you a object that contain information about a given Omixatlas.
         Args:
-              key (str) : repo_id or repo_name.
+            repo_key (str/int): repo_key(repo_name/repo_id)
         Returns:
             It will return a object like JSON. (see examples)
         """
@@ -48,7 +48,7 @@ Usage:
         Args:
              display_name (str): display name of the omixatlas.
              description (str): description of the omixatlas.
-             repo_name (str): repo_name which is used to create index in db.
+             repo_name (str): repo_name for that Omixatlas
              image_url (str): Url of the icon for omixatlas. Optional Parameter.
              initials (str): Initials shown in the icon of omixatlas. Optional Parameter.
              explorer_enabled (bool): Default True. Optional Parameter.
@@ -71,7 +71,7 @@ Usage:
         """
         This function is used to update an omixatlas.
         Args: 
-             repo_name (str/int): repo_name/repo_id for that Omixatlas
+             repo_key (str/int): repo_key(repo_name/repo_id) for that Omixatlas
              display_name (str): display name of the omixatlas. Optional Parameter
              description (str): description of the omixatlas. Optional Parameter
              image_url (str): Url of the icon for omixatlas. Optional Parameter

@@ -24,7 +24,7 @@ class Reports:
        This report is available on the user’s local path as well as an option to upload the report to workspaces is given.
  
        Args:
-           Repo_key (str): repo_name/repo_id for which the report is to be generated
+           repo_key (str): repo_key(repo_name/repo_id) for which the report is to be generated
            Dataset_id (str): dataset_id for which the report is to be generated
            Workspace_id (str): workspace_id to where the report is to be uploaded
            workspace_path (str): workspace_path to which the report is to be uploaded
@@ -49,7 +49,7 @@ class Reports:
        Once a report is linked to a dataset in OmixAtlas, it can be fetched both from front-end and polly-python.
  
        Args:
-           Repo_key (str): repo_name/repo_id of the repository to be linked
+           repo_key (str): repo_key(repo_name/repo_id) of the repository to be linked
            Dataset_id (str): dataset_id of the dataset to be linked
            Workspace_id (str): workspace_id for the file which is to be linked
            Workspace_path (str): workspace_path for the file which is to be linked
@@ -66,7 +66,7 @@ class Reports:
        Fetch linked reports for a dataset_id in a repository. 
  
        Args:
-           Repo_key (str): repo_name/repo_id of the repository for which to fetch the report
+           repo_key (str): repo_key(repo_name/repo_id) of the repository for which to fetch the report
            Dataset_id (str): dataset_id of the dataset which to fetch the reports.
  
        Raises:
@@ -83,7 +83,7 @@ class Reports:
        Delete the link of the report in workspaces with the specified dataset in OmixAtlas. On success displays a success message.
  
        Arguments:
-           Repo_key (str): repo_name/repo_id of the repository which is linked.
+           repo_key (str): repo_key(repo_name/repo_id) of the repository which is linked.
            Dataset_id (str): dataset_id of the dataset to be unlinked
            Report_id (str): report id associated with the report in workspaces that is to be deleted. This id can be found when invoking the fetch_linked_report() function.
  

@@ -17,7 +17,7 @@ Usage:
         dictionary if new source and datatype dictionaries are passed
 
         Args:
-            repo_key (str): repo_id OR repo_name. This is a mandatory field.
+            repo_key (str/int): repo_key(repo_name/repo_id)
             body (dict): The payload is a JSON file which should be as per the structure defined for\
             schema. Only data-admin will have the authentication to update the schema
         
@@ -34,7 +34,7 @@ Usage:
         """Update Schema for an existing OmixAtlas
 
         Args:
-            repo_key (str): repo_id OR repo_name
+            repo_key (str/int): repo_key(repo_name/repo_id)
             body (dict): The payload is a JSON file which should be as per the structure defined for\
                 schema. Only data-admin will have the authentication to update the schema.
 
@@ -50,7 +50,7 @@ Usage:
         """Insert the Schema for an OmixAtlas
 
         Args:
-            repo_key (str): repo_id OR repo_name.
+            repo_key (str/int): repo_key(repo_name/repo_id)
             body (dict):  The payload is a JSON file which should be as per the structure defined for \
                 schema. Only data-admin will have the authentication to update the schema.
 
@@ -71,7 +71,7 @@ Usage:
         """ Function to Get Schema For an OmixAtlas
 
         Args:
-            repo_key (str): repo_id OR repo_name. This is a mandatory field
+            repo_key (str/int): repo_key(repo_name/repo_id)
             schema_level (list, optional): The default value is all the table names for the repo.
             Defaults to [].Users can also a specific table name on which they want to query the schema.
             Users can table names using `SHOW TABLES IN <repo>` query.
