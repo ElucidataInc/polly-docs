@@ -1,6 +1,8 @@
 class Basic:
     """
-The OmixAtlas class contains functions which can be used to view omixatlases, create or update them.
+   OmixAtlas class enables users to interact with functional properties of the omixatlas such as \
+   create and update an Omixatlas, get summary of it's contents, add, insert, update the schema, \
+   add, update or delete datasets, query metadata, download data, save data to workspace etc.\
 
 Args:
     token (str): token copy from polly.
@@ -17,7 +19,7 @@ Usage:
         Args:
               None
         Returns:
-            It will return a list of json objects. (See Examples)
+            It will return a list of JSON objects. (See Examples)
         """
 
     def omixatlas_summary(
@@ -28,11 +30,11 @@ Usage:
         count_by_data_type=True):
          
         """
-        This function will return you a object that contain information about a given Omixatlas.
+        This function will return you a object that contain summary of a given Omixatlas.
         Args:
             repo_key (str/int): repo_key(repo_name/repo_id)
         Returns:
-            It will return a object like JSON. (see examples)
+            It will return a JSON object. (see examples)
         """
 
     def create(
