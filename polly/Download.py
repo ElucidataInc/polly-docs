@@ -23,8 +23,8 @@ The OmixAtlas class contains functions to download gct, h5ad, and vcf files, and
 
     def download_metadata(self, repo_key: str, dataset_id: str, file_path: str) -> None:
         """
-        This function is used to download the dataset level metadata into a json file.
-        
+        This function is used to download the dataset level metadata into a json file. 
+        The key of a given field in the downloaded JSON is original_name attribute of that field in schema.        
         Args:
             repo_key (str): repo_key(repo_name/repo_id) of the repository which is linked.
             dataset_id(str): dataset_id of the dataset to be linked.
