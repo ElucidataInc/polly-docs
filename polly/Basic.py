@@ -48,14 +48,14 @@ Usage:
         """
         This function is used to create a new omixatlas.
         Args:
-             display_name (str): display name of the omixatlas.
+             display_name (str): Display name of the omixatlas as shown on the GUI.
              description (str): description of the omixatlas.
-             repo_name (str): repo_name for that Omixatlas
-             image_url (str): Url of the icon for omixatlas. Optional Parameter.
-             initials (str): Initials shown in the icon of omixatlas. Optional Parameter.
-             explorer_enabled (bool): Default True. Optional Parameter.
-             studio_presets (list): Optional Paramter.
-             components (list): Optional Parameter.
+             repo_name (str, optional): repo_name which is used to create index in database.
+             image_url (str, optional): URL of the image which should be kept as the icon for omixatlas. 
+             initials (str, optional): Initials shown in the icon of omixatlas.
+             explorer_enabled (bool, optional): Default True. 
+             studio_presets (list, optional): Optional Paramter.
+             components (list, optional): Optional Parameter.
         Returns:
              Dataframe after creation of omixatlas.
         Raises:
@@ -73,10 +73,9 @@ Usage:
         """
         This function is used to update an omixatlas.
         Args: 
-             repo_key (str/int): repo_key(repo_name/repo_id) for that Omixatlas
-             display_name (str): display name of the omixatlas. Optional Parameter
-             description (str): description of the omixatlas. Optional Parameter
-             image_url (str): Url of the icon for omixatlas. Optional Parameter
-             components (list): List of components to be added. Optional Parameter
+             display_name (str, optional): Display name of the omixatlas as shown on the GUI.
+             description (str, optional): Description of the omixatlas.
+             image_url (str, optional): URL of the image which should be kept as the icon for omixatlas.
+             components (list, optional): List of components to be added.
         """
         
