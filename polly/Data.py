@@ -22,7 +22,8 @@ The OmixAtlas class contains functions to add, update, or delete datasets in an 
     def save_to_workspace(
         self, repo_id: str, dataset_id: str, workspace_id: int, workspace_path: str
     ) -> json:
-        """Function to save data from OmixAtlas to workspaces
+        """
+        Function to download a dataset from OmixAtlas and save it to Workspaces.
 
         Args:
             repo_id (str): repo_id of the Omixatlas
