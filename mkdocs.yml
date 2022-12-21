@@ -16,7 +16,6 @@ nav:
       - Data Schema: OmixAtlas/Data Schema.md
       - Accessing OmixAtlas: OmixAtlas/Accessing OmixAtlas.md
       - Applications: OmixAtlas/Applications.md
-      - Polly Python: OmixAtlas/Polly Python.md
   - Polly Python: 
       - Capabilities Diagram: Polly Python/Capabilities Diagram.md
       - Getting Started: Polly Python/Getting Started.md

@@ -1,6 +1,4 @@
 
-Some example queries have been given in notebooks [here](https://github.com/ElucidataInc/polly-python/tree/main/Discover)
-
 #### Querying datasets in GEO OmixAtlas
 1. To identify datasets belonging to the tissue Breast, disease Breast Neoplasms and organism Homo sapiens
 
@@ -69,4 +67,7 @@ Some example queries have been given in notebooks [here](https://github.com/Eluc
         WHERE hugo_symbol IN ('TP53','PIK3CA','CDH1','GATA3') AND features.src_dataset_id LIKE '%BRCA%'
         ORDER BY features.src_dataset_id"""
     ```
-2. Some cross OmixAtlas querying for Mutation datasets can be found in this [notebook](https://github.com/ElucidataInc/polly-python/blob/main/Discover/Mutation_data_querying%20.ipynb). Here, we have shown query across TCGA, cBioportal and CPTAC OmixAtlas on Polly.
+
+## Tutorial Notebooks
+
+Example queries have been given in various notebooks in [this](https://github.com/ElucidataInc/polly-python/tree/main/Discover) github folder.
