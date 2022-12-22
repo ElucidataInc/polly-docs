@@ -1,11 +1,9 @@
-1.
-# How to find datasets?
+
+# 1. How to find datasets?
 
 ## 1.1 Search based on operator hints
 
-![](RackMultipart20221222-1-b4yget_html_7d9820053541fd81.png)
-
-Figure 1: Search bar
+![Search Bar](../img/OmixAtlas-Images/1a.png) <center>**Figure 1.** Search Bar</center>
 
 This search bar is driven by Elasticsearch where users can search for keywords which are present across:
 
@@ -59,35 +57,27 @@ Some of the Search examples are as follows:-
 
 - (ITIH1 upregulation | FN1 downregulation) & "Fatty liver"
 
-![](RackMultipart20221222-1-b4yget_html_518b2df8ad148961.png)
-
-Figure 2: Example 1
+![Example](../img/OmixAtlas-Images/2a.png) <center>**Figure 2.** Example 1</center>
 
 - (Hepatocellular carcinoma | HCC) ~ Radiotherapy
 
-![](RackMultipart20221222-1-b4yget_html_3143f8274145263a.png)
+![Example](../img/OmixAtlas-Images/3a.png) <center>**Figure 3.** Example 2</center>
 
-Figure 3: Example 2
 
 - CDK7 & "CBM signaling pathway" & inhibition
 
-![](RackMultipart20221222-1-b4yget_html_67004e449c5f08ab.png)
+![Example](../img/OmixAtlas-Images/4a.png) <center>**Figure 4.** Example 3</center>
 
-Figure 4: Example 3
 
 - (somatic mutation) & (hepatocellular | renal) & (cancer | carcinoma)
 
-![](RackMultipart20221222-1-b4yget_html_badfb609e9fb7827.png)
-
-Figure 5: Example 4
+![Example](../img/OmixAtlas-Images/5a.png) <center>**Figure 5.** Example 4</center>
 
 ## 1.2 Search and Filter based on Ontology
 
 After shortlisting the datasets using a search bar, users can further find the desired datasets using the Filter Datasets function on the left. The total number of datasets related to a filter can be seen in the brackets next to it. These filters are configurable and may be different for different OmixAtlasses.
 
-![](RackMultipart20221222-1-b4yget_html_89b0307a8bfc42e9.png)
-
-Figure 6: Filtering Datasets
+![Filter](../img/OmixAtlas-Images/6a.png) <center>**Figure 6.** Filtering Datasets</center>
 
 For a standard OmixAtlas, following filters are available
 
@@ -101,54 +91,43 @@ Users can filter datasets by searching for desired cell lines using following th
 
 If users choose disease, cell lines related to those diseases are shown and not the disease itself.
 
-![](RackMultipart20221222-1-b4yget_html_3e5bc2c6d4e1b017.png)
+![Filter](../img/OmixAtlas-Images/7a.png) <center>**Figure 7.** Filter by Cell Line</center>
 
-Figure 7: Filter by Cell Line
 
 - Disease
 
 Users can filter the datasets by selecting the disease of interest.
 
-![](RackMultipart20221222-1-b4yget_html_81b445a9a756c38.png)
+![Filter](../img/OmixAtlas-Images/8a.png) <center>**Figure 8.** Filter by Disease</center>
 
-Figure 8: Filter by Disease
 
 - Tissue
 
 Users can filter the datasets by selecting the tissue of interest.
 
-![](RackMultipart20221222-1-b4yget_html_5ec5b058cc334831.png)
-
-Figure 9: Filter by Tissue
+![Filter](../img/OmixAtlas-Images/9a.png) <center>**Figure 9.** Filter by Tissue</center>
 
 - Organism
 
 Users can filter the datasets by selecting the organism of interest.
 
-![](RackMultipart20221222-1-b4yget_html_4c8bba182889a6b5.png)
-
-Figure 10: Filter by Organism
+![Filter](../img/OmixAtlas-Images/10a.png) <center>**Figure 10.** Filter by Organism</center>
 
 - Data Type
 
 Users can filter the datasets by selecting the data type.
 
-![](RackMultipart20221222-1-b4yget_html_31569842142991bd.png)
-
-Figure 11: Filter by Data Type
+![Filter](../img/OmixAtlas-Images/11a.png) <center>**Figure 11.** Filter by Data Type</center>
 
 - Drug
 
 Users can filter the datasets by selecting the drug of interest.
 
-![](RackMultipart20221222-1-b4yget_html_fb38f06f8356112a.png)
-
-Figure 12: Filter by Drug
+![Filter](../img/OmixAtlas-Images/12a.png) <center>**Figure 12.** Filter by Drug</center>
 
 - Platform
 
 Users can filter the datasets by selecting the platform.
 
-![](RackMultipart20221222-1-b4yget_html_dfc7b26f09c2ecb4.png)
+![Filter](../img/OmixAtlas-Images/13a.png) <center>**Figure 13.** Filter by Platform</center>
 
-Figure 13: Filter by Platform
