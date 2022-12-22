@@ -7,10 +7,12 @@ Polly workspaces allow you to reduce clutter and organize your data in a folder 
 To access workspaces, 
 
 1. Click on the workspace card:
+Click on the side bar to view workspaces: Workspace card view:
 
-![Panels](../img/Workspace/2.png) <p align=center>**Figure 2.** Workspace Panel View</p>
+![](../img/Workspace/2.1.png) <p align=center>**Figure 2.** Workspace Cardview</p>
 
-    There are 3 panels on the workspace interface.
+
+ 2. There are 3 panels on the workspace interface.
 
     *    The left panel allows you to create a new workspace and access all your workspaces.
 
@@ -18,10 +20,7 @@ To access workspaces,
 
     *    The panel on the right shows you the details around the content within the workspace.
 
-2. Click on the side bar to view workspaces: Workspace card view:
-
-    ![](../img/Workspace/2.1.png) <p align=center>**Figure 3.** Workspace Cardview</p>
-
+![Panels](../img/Workspace/2.png) <p align=center>**Figure 3.** Workspace Panel View</p>
 
 
 ## Creating a workspace
@@ -42,7 +41,7 @@ The new workspace will be created. You can find the newly created workspace with
 
 Users can watch a particular workspace by clicking on the ‘eye’ icon. This feature allows the user to monitor changes made in the workspace.
 
-![Workspace Information](../img/Workspace/5.5.png) <p align=center>**Figure 6.** Watching a workspace</p>
+![Workspace Information](../img/Workspace/6.1.png) <p align=center>**Figure 6.** Watching a workspace</p>
 
 ## Mark a Workspace as Favorite
 
