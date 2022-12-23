@@ -13,8 +13,11 @@ nav:
       - Your Collaborations: Getting Started/Your Collaborations.md
   - OmixAtlas:
       - About OmixAtlas: OmixAtlas/OmixAtlas.md 
+      - Curating OmixAtlas: OmixAtlas/Curating_OA.md 
       - Data Schema: OmixAtlas/Data Schema.md
       - Accessing OmixAtlas: OmixAtlas/Accessing OmixAtlas.md
+      - How to Find Datasets: OmixAtlas/Find_datasets.md
+      - Polly Python: OmixAtlas/Polly Python.md
       - Applications: OmixAtlas/Applications.md
   - Polly Python: 
       - Capabilities Diagram: Polly Python/Capabilities Diagram.md
