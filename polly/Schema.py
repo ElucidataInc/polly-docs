@@ -17,9 +17,9 @@ Usage:
         dictionary if new source and datatype dictionaries are passed
 
         Args:
-            repo_key (str): repo_id OR repo_name. This is a mandatory field.
-            body (dict): The payload is a JSON file which should be as per the structure defined for\
-            schema. Only data-admin will have the authentication to update the schema
+            repo_key (str): repo_id OR repo_name of the OmixAtlas. Users can get this by running get_all_omixatlas function.
+            body (dict): The payload should be a JSON file for a specific table as per the structure defined for schema. 
+            Only data-admin at organisation level will have the authentication to replace the schema.
         
         Raises:
             apiErrorException: Some Issue in Replacing the Schema for the OmixAtlas.
@@ -34,25 +34,26 @@ Usage:
         """Update Schema for an existing OmixAtlas
 
         Args:
-            repo_key (str): repo_id OR repo_name
-            body (dict): The payload is a JSON file which should be as per the structure defined for\
-                schema. Only data-admin will have the authentication to update the schema.
+            repo_key (str): repo_id OR repo_name of the OmixAtlas. Users can get this by running get_all_omixatlas function.
+            body (dict): The payload should be a JSON file for a specific table as per the structure defined for schema. 
+            Only data-admin at organisation level will have the authentication to update the schema.
 
         Raises:
             apiErrorException: Some Issue in Inserting the Schema for the OmixAtlas.
             paramException: Parameter Functions are not passed correctly.
 
         Returns:
-            dict: Dict containing the Updated Schema
+            dict: Dict containing the updated Schema
         """
 
     def insert_schema(self, repo_key: str, body: dict) -> dict:
-        """Insert the Schema for an OmixAtlas
+        """ 
+        This function is used to insert the Schema in a newly created OmixAtlas.
 
         Args:
-            repo_key (str): repo_id OR repo_name.
-            body (dict):  The payload is a JSON file which should be as per the structure defined for \
-                schema. Only data-admin will have the authentication to update the schema.
+            repo_key (str): repo_id OR repo_name of the OmixAtlas. Users can get this by running get_all_omixatlas function.
+            body (dict):  The payload should be a JSON file for a specific table as per the structure defined for schema. 
+            Only data-admin at organisation level will have the authentication to insert the schema.
 
         Raises:
             apiErrorException: Some Issue in Inserting the Schema for the OmixAtlas.
@@ -68,21 +69,22 @@ Usage:
         data_type="",
         return_type="dataframe",
     ) -> dict:
-        """ Function to Get Schema For an OmixAtlas
+        """ 
+        Function to get the Schema of all the tables in an OmixAtlas. Any user can get the schema of an OmixAtlas.
 
         Args:
-            repo_key (str): repo_id OR repo_name. This is a mandatory field
-            schema_level (list, optional): The default value is all the table names for the repo.
-            Defaults to [].Users can also a specific table name on which they want to query the schema.
-            Users can table names using `SHOW TABLES IN <repo>` query.
-            Also backward compatible with previous schema_level values of ['dataset', 'sample'].
-            source (str, optional): is the source from where data is ingested into the OmixAtlas. 
-                                    Defaults to "".
-            The default value is 'all', which will fetch the schema of all sources.
-            data_type (str, optional): is the datatype for which user wants to get the schema for.
-            The default value is 'all', which will fetch the schema of all datatypes. Defaults to "".
-            return_type (str, optional): Defaults to "dataframe". Users can also get output in dict
-                                         format
+             repo_key (str): repo_id OR repo_name. This is a mandatory field.
+             schema_level (list, optional): Table name for which users want to get the schema. \
+             Users can get the table names by querying `SHOW TABLES IN <repo_name>` using query_metadata function.\
+             The default value is all the table names for the repo.
+             source (str, optional): Source for which user wants to fetch the schema. 
+             The default value is all the sources in the schema.
+             data_type (str, optional): Datatype for which user wants to fetch the schema. 
+             The default value is all the datatypes in the schema.
+             return_type (str, optional): For users who intend to query should use "dataframe" output. 
+             For users, who want to perform schema management, they should get the output in "dict" format. 
+             Dataframe format doesn't give the complete schema, it only shows the information \
+             which aids users for writing queryies. Default value is "dataframe". 
 
         Raises:
             paramException: When Function Parameter passed are not in the right format.

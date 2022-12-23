@@ -18,6 +18,7 @@ nav:
       - Accessing OmixAtlas: OmixAtlas/Accessing OmixAtlas.md
       - How to Find Datasets: OmixAtlas/Find_datasets.md
       - Polly Python: OmixAtlas/Polly Python.md
+      - Applications: OmixAtlas/Applications.md
   - Polly Python: 
       - Capabilities Diagram: Polly Python/Capabilities Diagram.md
       - Getting Started: Polly Python/Getting Started.md
@@ -37,7 +38,7 @@ nav:
       - Running Jobs: Polly Python/Jobs.md
       - Data Validation: Polly Python/Validation.md
       - New User Onboarding: Polly Python/New User Onboarding.md
-  - Analyses:
+  - Polly Compute:
     - Polly Notebooks:
       - About Polly Notebooks: Scaling compute/Polly Notebooks5.md
       - Accessing Polly Notebooks: Scaling compute/Polly Notebooks1.md
@@ -76,6 +77,7 @@ nav:
       - Single Cell Visualization: Apps/Single Cell Visualization.md
       - Untargeted Pipeline: Apps/Metabolomic Data/Untargeted Pipeline.md
       - Curation App: Apps/Curation App.md
+     - Billing and Usage: Apps/Billing.md 
   - Tech Ecosystem:
     - Polly Architecture: TechEcosystem/Polly Architecture.md
     - Security and Data Transfer: TechEcosystem/Data Security.md

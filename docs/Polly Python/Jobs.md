@@ -296,3 +296,122 @@ job.cancel_job(12345, "a51187d93aea402b8f40789404398bfb")
 Not able to get the status of the Job(s)
 Unexpected exception formatting exception. Falling back to standard exception
 ``` 
+### job_logs()
+
+```py
+# logs are not generated yet 
+job.job_logs("14832","a8e49e1d545c493f9cddf60f90baac2d")
+```
+
+    Error: Not able to find the logs. It seems to be not generated yet
+
+```py
+# parameter checks -> incorrect job id 
+job.job_logs("14832","a8e49e1d545c493f9cddf60fzzzzzz")
+```
+
+    Error: Not able to get the log of the job
+
+
+
+    ---------------------------------------------------------------------------
+
+    InvalidJobFunctionParameterException      Traceback (most recent call last)
+
+    Input In [24], in <cell line: 2>()
+          1 # parameter checks -> incorrect job id 
+    ----> 2 job.job_logs("14832","a8e49e1d545c493f9cddf60fzzzzzz")
+
+
+    File /usr/local/lib/python3.10/site-packages/polly/jobs.py:274, in jobs.job_logs(self, project_id, job_id, mode)
+        272 except Exception as err:
+        273     print("Error: Not able to get the log of the job")
+    --> 274     raise err
+
+
+    File /usr/local/lib/python3.10/site-packages/polly/jobs.py:237, in jobs.job_logs(self, project_id, job_id, mode)
+        235 parameter_check_dict["job_id"] = job_id
+        236 parameter_check_dict["mode"] = mode
+    --> 237 self._parameter_check_for_jobs(parameter_check_dict)
+        238 if isinstance(project_id, int):
+        239     project_id = str(project_id)
+
+
+    File /usr/local/lib/python3.10/site-packages/polly/jobs.py:597, in jobs._parameter_check_for_jobs(self, paramter_dict)
+        595 elif keys == "job_id":
+        596     job_id = values
+    --> 597     self._check_job_id(job_id, project_id)
+        598 elif keys == "mode":
+        599     mode = values
+
+
+    File /usr/local/lib/python3.10/site-packages/polly/jobs.py:609, in jobs._check_job_id(self, job_id, project_id)
+        607     raise InvalidParameterException("Missing/invalid datatype for job id")
+        608 if not self._is_valid_job_id(project_id, job_id):
+    --> 609     raise InvalidJobFunctionParameterException("Job id")
+
+
+    InvalidJobFunctionParameterException: The specified Job id could not be found. Inspect and try again.
+
+
+
+```py
+# parameter checks -> incorrect mode
+job.job_logs("14832","a8e49e1d545c493f9cddf60f90baac2d","kjb,yjv")
+```
+
+    Error: Not able to get the log of the job
+
+
+
+    ---------------------------------------------------------------------------
+
+    InvalidParameterException                 Traceback (most recent call last)
+
+    Input In [26], in <cell line: 2>()
+          1 # parameter checks -> incorrect mode
+    ----> 2 job.job_logs("14832","a8e49e1d545c493f9cddf60f90baac2d","kjb,yjv")
+
+
+    File /usr/local/lib/python3.10/site-packages/polly/jobs.py:274, in jobs.job_logs(self, project_id, job_id, mode)
+        272 except Exception as err:
+        273     print("Error: Not able to get the log of the job")
+    --> 274     raise err
+
+
+    File /usr/local/lib/python3.10/site-packages/polly/jobs.py:237, in jobs.job_logs(self, project_id, job_id, mode)
+        235 parameter_check_dict["job_id"] = job_id
+        236 parameter_check_dict["mode"] = mode
+    --> 237 self._parameter_check_for_jobs(parameter_check_dict)
+        238 if isinstance(project_id, int):
+        239     project_id = str(project_id)
+
+
+    File /usr/local/lib/python3.10/site-packages/polly/jobs.py:601, in jobs._parameter_check_for_jobs(self, paramter_dict)
+        599 mode = values
+        600 if mode not in DATA_LOG_MODES:
+    --> 601     raise InvalidParameterException(
+        602         f"valid mode values are : {DATA_LOG_MODES}"
+        603     )
+
+
+    InvalidParameterException: Empty or Invalid Parameters = valid mode values are : ['latest', 'all'].
+
+
+
+```py
+# parameter checks -> no job id provided
+job.job_logs("14832")
+```
+
+
+    ---------------------------------------------------------------------------
+
+    TypeError                                 Traceback (most recent call last)
+
+    Input In [27], in <cell line: 2>()
+          1 # parameter checks -> incorrect mode
+    ----> 2 job.job_logs("14832")
+
+
+    TypeError: jobs.job_logs() missing 1 required positional argument: 'job_id'
