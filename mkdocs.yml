@@ -77,7 +77,7 @@ nav:
       - Single Cell Visualization: Apps/Single Cell Visualization.md
       - Untargeted Pipeline: Apps/Metabolomic Data/Untargeted Pipeline.md
       - Curation App: Apps/Curation App.md
-     - Billing and Usage: Apps/Billing.md 
+      - Billing and Usage: Apps/Billing.md 
   - Tech Ecosystem:
     - Polly Architecture: TechEcosystem/Polly Architecture.md
     - Security and Data Transfer: TechEcosystem/Data Security.md
