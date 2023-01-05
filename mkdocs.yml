@@ -17,27 +17,8 @@ nav:
       - Data Schema: OmixAtlas/Data Schema.md
       - Accessing OmixAtlas: OmixAtlas/Accessing OmixAtlas.md
       - How to Find Datasets: OmixAtlas/Find_datasets.md
-      - Polly Python: OmixAtlas/Polly Python.md
       - Applications: OmixAtlas/Applications.md
-  - Polly Python: 
-      - Capabilities Diagram: Polly Python/Capabilities Diagram.md
-      - Getting Started: Polly Python/Getting Started.md
-      - Querying using SQL: 
-          - SQL Query Syntax: Polly Python/Queries/SQL Query Syntax.md
-          - Query Examples: Polly Python/Queries/Query Examples.md
-          - Ontology Recommendations: Polly Python/Queries/Ontology Recommendations.md
-      - OmixAtlas:
-          - Basic Functions: Polly Python/OmixAtlas/Basic Functions.md
-          - Downloading Datasets: Polly Python/OmixAtlas/Download Data.md
-          - Data Management: Polly Python/OmixAtlas/Data Management.md
-          - Schema Management: Polly Python/OmixAtlas/Schema Management.md
-          - Reports: Polly Python/OmixAtlas/Reports.md
-      - Workspaces: Polly Python/Workspaces.md
-      - Working with Cohorts: Polly Python/Cohorts.md
-      - Data Curation: Polly Python/Curation.md
-      - Running Jobs: Polly Python/Jobs.md
-      - Data Validation: Polly Python/Validation.md
-      - New User Onboarding: Polly Python/New User Onboarding.md
+  - Polly Python: '!import https://github.com/ElucidataInc/polly-python-code?branch=multirepo_plugin_docs&extra_imports=["polly/*"]'
   - Polly Compute:
     - Polly Notebooks:
       - About Polly Notebooks: Scaling compute/Polly Notebooks5.md
@@ -95,7 +76,13 @@ theme:
     primary: deep purple
 plugins:
   - search
-  - mkdocstrings
+  - mkdocstrings:
+      default_hander: python
+      handlers:
+        python:
+          paths:
+            - ./temp_dir/polly-python/polly
+  - multirepo
 extra:
   analytics:
     provider: google
