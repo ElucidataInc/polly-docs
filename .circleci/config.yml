@@ -21,6 +21,7 @@ jobs:
             pip install 'mkdocs==1.3.0'
             pip install 'mkdocs-material==8.5.10'
             pip install 'mkdocstrings[python]'
+            pip install 'mkdocs-multirepo-plugin'
       - run:
           name: convert markdown to html
           command: |
