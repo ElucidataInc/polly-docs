@@ -77,7 +77,7 @@ theme:
 plugins:
   - search
   - mkdocstrings:
-      default_hander: python
+      default_handler: python
       handlers:
         python:
           paths:
