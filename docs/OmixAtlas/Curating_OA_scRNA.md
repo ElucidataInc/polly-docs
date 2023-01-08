@@ -66,7 +66,7 @@
 
 Cell-type labels are assigned at the cell cluster level based on expression signatures using ontology or controlled vocabularies. For datasets, where cell-type annotations are not available from the source (mainly GEO datasets), we manually curate the cell-type information based on the differential marker expression for clusters. In cases where cell type annotations are already available in datasets at source, datasets are not manually re-curated.
 
-#### **Process flow:**![](RackMultipart20230105-1-c8jebh_html_4bc6d9e79751d236.png)
+![Process Flow](../img/OmixAtlas-Images/1_C.png) <center>**Figure 1.** Process Flow</center>
 
 #### **I) Manual identification of the cell types and markers from Publications** -
 
@@ -92,6 +92,8 @@ Internal curators determine if a particular dataset can be curated for cell type
 #### II) Metadata addition- Annotation of clusters
 
 The process of cell-type cluster annotation for curatable datasets is based on the general scRNASeq general[workflow](https://scanpy-tutorials.readthedocs.io/en/latest/pbmc3k.html) using the Scanpy library with steps as shown below in the figure:
+                             
+![Homepage](../img/OmixAtlas-Images/2_C.png) <center>**Figure 2.** Workflow</center>
 
 UMAP/tSNE plots are generated as a result of single-cell raw count processing. By visualization of clusters with UMAP/t-SNE plots, cell type cluster annotation is done.
 
