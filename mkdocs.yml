@@ -13,7 +13,8 @@ nav:
       - Your Collaborations: Getting Started/Your Collaborations.md
   - OmixAtlas:
       - About OmixAtlas: OmixAtlas/OmixAtlas.md 
-      - Curating OmixAtlas: OmixAtlas/Curating_OA.md 
+      - Curating OmixAtlas - Bulk RNAseq: OmixAtlas/Curating_OA_bRNAseq.md 
+      - Curating OmixAtlas - Single Cell: OmixAtlas/Curating_OA_scRNA.md 
       - Data Schema: OmixAtlas/Data Schema.md
       - Accessing OmixAtlas: OmixAtlas/Accessing OmixAtlas.md
       - How to Find Datasets: OmixAtlas/Find_datasets.md
