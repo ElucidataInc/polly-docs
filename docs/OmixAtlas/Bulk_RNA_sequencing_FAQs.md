@@ -38,7 +38,7 @@ All GEO RNA-Seq datasets on Polly are processed using the Kallisto Pipeline. The
 
 **Process flow**
 
-![](RackMultipart20230112-1-ep1uzj_html_e95051302e35596c.png)
+![Process flow](../img/OmixAtlas-Images/1_1.png) <center>**Figure 1.** Process Flow</center>
 
 #### Details of the processing steps:
 
