@@ -15,6 +15,7 @@ nav:
       - About OmixAtlas: OmixAtlas/OmixAtlas.md 
       - Curating OmixAtlas - Bulk RNAseq: OmixAtlas/Curating_OA_bRNAseq.md 
       - Curating OmixAtlas - Single Cell: OmixAtlas/Curating_OA_scRNA.md 
+      - Bulk RNA Sequencing FAQs: OmixAtlas/Bulk_RNA_sequencing_FAQs.md
       - Data Schema: OmixAtlas/Data Schema.md
       - Accessing OmixAtlas: OmixAtlas/Accessing OmixAtlas.md
       - How to Find Datasets: OmixAtlas/Find_datasets.md
