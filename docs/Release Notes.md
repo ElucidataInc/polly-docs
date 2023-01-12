@@ -1,4 +1,35 @@
 # Release Notes
+<!--January 6, 2023-->
+
+<details open>
+<summary><font size="+1"><b>January 6, 2023</b></font></summary>
+<br>
+       <p class="Releases-button">Releases</p>
+  <ul> 
+    <li>For HTML files in the workspaces, users can download the dependencies (images, folders, CSS files, linked HTML files, etc.) via the UI. 
+    <li>Deleted files/folders from workspaces can be retrieved for up to 15 days.
+    <li>Drug ontology recommendation will be available via polly-python. For drugs, structurally similar drugs will be returned and for genes of interest drugs which target the gene will be returned.
+    <li>The following fields have been updated for all GEO single-cell datasets:
+           <ul>
+                  <li>Datasets level: Tissue, Disease, Cell Line, Organism, Gene, Strain, Drug.
+                  <li>Sample Level: Tissue, Strain, Disease, Drug, Genotype, Cell Line, Control Perturbation.
+           </ul>
+    <li>Sample-level cancer stage and dataset level treatment and clinical labels were added to the new BulkRNASeq OmixAtlas with >42k datasets (Kallisto raw counts). 
+    <li>Users now have an option to move datasets from the Bulk RNA-Seq and Single Cell OmixAtlases to their organization’s OmixAtlases by themselves.
+    <li>Users can request for additional services such as curation and QC directly from the OmixAtlas UI.
+                </ul>
+<br>
+       <p class="update-button">Update</p>
+  <ul>
+         <li>The workspace search is faster, offering better results based on the user’s query.
+         <li>New singe-cell datasets from Broad SC Portal, ExpressionAtlas and Covid19 Atlas have been added to the Single-Cell OmixAtlas.
+         <li>The speed of dataset ingestion for Bulk RNA-seq data has been improved 30x. 100 datasets are currently being added per day.
+         <li>Higher anndata version (>=0.8) is supported while indexing .h5ad files.
+         <li>Arrays can now be stored in sample level metadata (.gct files).
+         <li>Improved visibility of sample level metadata in the Details Page for better understanding a dataset.
+       </ul>
+</details>
+<hr>
 <!--December 5, 2022-->
 
 <details open>
