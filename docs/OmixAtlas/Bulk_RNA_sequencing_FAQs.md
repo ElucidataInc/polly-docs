@@ -21,7 +21,9 @@ All datasets are available with raw counts data matrix and associated metadata. 
 
 ### Which pipeline is used for processing the RNASeq data?
 
-All GEO RNA-Seq datasets on Polly are processed using the Kallisto Pipeline. The data is processed using the following reference genome, annotation, and complementary DNA sequence data from Ensembl release 107 for each organism. However, approximately 12% of the datasets have been processed with the Ensemble release V90. These will be reprocessed in future based on the Ensemble release V107.
+All Bulk RNA-Seq Datasets on Polly are processed using a Kallisto pipeline. The data is processed with the following reference genome, annotation, and complementary DNA sequence data from Ensembl release 107 for each organism. 
+
+**Note**: approximately 12% of datasets on the Bulk RNA-Seq OmixAtlas are currently processed with the Ensemble release V90. These will be reprocessed based on the Ensemble release V107 in future versions
 
 1. **Homo Sapiens** Ensembl release 107, 90
   1. Genome sequence (fasta)
@@ -55,9 +57,9 @@ All GEO RNA-Seq datasets on Polly are processed using the Kallisto Pipeline. The
 11. Transcript-level expression counts are generated using Kallisto by mapping all the reads that pass quality control to the genome. Command: "kallisto quant" . All counts are reported on the gene level by taking a simple sum of Transcript-level counts. (NOTE: Kallisto pseudo counts are rounded to integer values)
 12. For every SRR accession, the generated counts are collected into a single (.gct) file and multiple SRR counts per GSM ID (sample) are aggregated.
 13. At the feature level, the Ensembl gene IDs are mapped to the respective HGNC symbol, MGI Symbol or RGI symbol. Counts for duplicate genes are dropped using Mean Average Deviation Score.
-14. Each sample is then annotated with relevant metadata using our custom curation models for fields like disease, tissue, cell line, drug etc.
+14. Each sample is then annotated with relevant metadata using Polly’s curation models for a standard fields **disease, tissue, cell line, drug, cell type, organism.** 
 15. If requested, the counts matrix is normalized using DESeq2 VST (Variance Stabilizing Transformation).
-16. GCT having Raw Counts is pushed to the Omix Atlas - Bulk RNASeq OmixAtlas.
+16. GCT having Raw Counts are pushed to the Omix Atlas - Bulk RNASeq OmixAtlas.
 
 ### Tools Used for the processing:
 
@@ -81,28 +83,28 @@ All GEO RNA-Seq datasets on Polly are processed using the Kallisto Pipeline. The
 
 ### **Which fields are curated for bulk RNASeq data Data?**
 
-On Polly, all datasets and the corresponding samples are available with six standard metadata fields which are curated using Polly's proprietary NLP-based Polly-BERT models and harmonized with specific biomedical ontologies. Such fields are Organism, Disease, Tissue, Cell Line, Cell Type and Drug. In addition to these fields, other metadata fields are also available which are extracted from the source metadata. Metadata is available at 3 levels:
+Polly's NLP-based curation models are used to curate all datasets and their corresponding samples, which are then harmonised using specific biomedical ontologies. These fields include - Organism, Disease, Tissue, Cell Line, Cell Type and Drug. 
+In addition to these fields, various other metadata fields are captured from the source publication and annotated at 3 levels:
 
 - Dataset-level metadata - General information about the experiment, subject and transformations, for eg, organism, experiment type, and disease under study.
 - Sample-level metadata - Captures information for each sample. Eg. Drug, tissue
 - Feature-level metadata: Provides molecular/gene information that is consistent across samples.
 
-### How frequently data is added to the Bulk RNASeq OA?
+### How frequently is the Bulk RNASeq Atlas updated?
 
 New datasets will be added to the source Bulk RNASeq OA at a frequency of once per week.
 
-### Can raw data be accessed for a sample?
+### Can raw data be accessed for a sample on Polly?
 
-Raw data can be accessed through the SRA links available in columns starting with the name "relation".
+Raw data can be accessed through the SRA links available in metadata tables on the OmixAtlas UI. Users can navigate to the column name - "relation" to access the link.
 
-### Are source fields retained for a dataset?
+### Are all metadata fields from the source retained?
 
-All source fields are captured in the GCT file which users can visualize through applications. However, fields available for searching through UI and Polly-python are restricted by schema due to performance constraints.
+All metadata fields from the source publication are captured in the GCT file and can be visualized through applications. However, only the fields described in the OmixAtlas schema are available for querying through the UI and Polly-python.
 
-### Are external data requests directly added to Bulk RNAseq OA?
+### Can users request for datasets on Polly?
 
-Users can request Bulk RNASeq datasets from GEO which are not available in the source Bulk RNASeq OmixAtlas to be added to the destination atlas. Upon request, these datasets will be added directly to the user's destination Atlas for which the TAT is 4 days for up to 10 datasets and 10 days for up to 100 datasets. The scope of the data request is as follows:
+Bulk RNASeq datasets from GEO which are not available on Polly can be requested to be added to a user's OmixAtlas. Upon request, these datasets will be added directly to your atlas within 4 days. The following requests are in scope:
 
 1. Raw data files (fastq) are available on GEO
-2. The dataset belongs to the Bulk RNA-Seq data type (not Single Cell)
-3. Standard metadata fields at the dataset and sample level will be auto curated
+2. The dataset belongs to the Bulk RNA-Seq data type.
