@@ -4,6 +4,7 @@ Polly's Monitoring Dashboard will allow users to track and monitor all ingestion
 
 
 ![Accessing the dashboard](../img/Monitoring_Dashboard/1.png) <center>**Figure 1.** Dashboard</center> 
+
 All of your ingestions, whether they are running, completed or errored, are displayed when you first access the dashboard.
 
 ### Ingestion runs:
@@ -14,7 +15,7 @@ Each run displayed on the dashboard will include information such as,
 
 For eg:
 
-![Accessing the dashboard](../img/Monitoring_Dashboard/9.png)
+![](../img/Monitoring_Dashboard/9.png)
 
 2. Status - whether run is pending, in progress, completed or errored.
 3. Priority - The urgency with which an ingestion run is introduced depends on its priority.
