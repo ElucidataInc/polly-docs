@@ -2,6 +2,8 @@
 
 Polly's Monitoring Dashboard will allow users to track and monitor all ingestions and runs made to the Omix Atlases mapped to your Org. This tool allows you to keep track of all your ingestion runs, view logs in the event of a failure, and categorize your runs.
 
+
+![Accessing the dashboard](../img/Monitoring_Dashboard/1.png) <center>**Figure 1.** Dashboard</center> 
 All of your ingestions, whether they are running, completed or errored, are displayed when you first access the dashboard.
 
 ### Ingestion runs:
@@ -12,7 +14,7 @@ Each run displayed on the dashboard will include information such as,
 
 For eg:
 
-
+![Accessing the dashboard](../img/Monitoring_Dashboard/9.png)
 
 2. Status - whether run is pending, in progress, completed or errored.
 3. Priority - The urgency with which an ingestion run is introduced depends on its priority.
@@ -30,9 +32,17 @@ To select and categorize your runs, utilize these five filters available.
  <li>**All runs** - view all ingestion runs performed by the organization's employees on the OAs to which the user has access
     - The level of access will determine the visibility of the OAs ingestions
 </ul></li>
+
+![Filter](../img/Monitoring_Dashboard/2.png) <center>**Figure 2.** Runs Filter</center>
+
 2. The Priority of the Ingestion Runs are categorized as **High, Medium,** and **Low** in the second filter. The urgency with which an ingestion run will be consumed depends on its priority. It will be easier to prepare for potential delays if you are aware of the ingestion run's priority.
 
+![Filter](../img/Monitoring_Dashboard/3.png) <center>**Figure 3.** Priority Filter</center>
+
 3. Third, Filter has bifurcation for **In progress Runs and All runs that are completed or stopped, or in progress**.
+
+![Filter](../img/Monitoring_Dashboard/4.png) <center>**Figure 4.** Run Type Filter</center>
+
 4. The fourth filter will classify the results according to status:
 
 - **Completed** - This is the optimal status, which means that all tasks in the ingestion run were successfully completed.
@@ -40,9 +50,17 @@ To select and categorize your runs, utilize these five filters available.
 - **Errored** - This state denotes that at least one or more ingestion run jobs failed before they could complete; the dataset has otherwise been processed, and nothing is ongoing.
 - **Pending** - This status indicates that the run is still awaiting ingestion to begin (only been registered in-queue)
 
+![Filter](../img/Monitoring_Dashboard/5.png) <center>**Figure 5.** Status Filter</center>
+
 5. The last filter is to use the calendar to list the runs according to when they were triggered.
 
+
+![Filter](../img/Monitoring_Dashboard/6.png) <center>**Figure 6.** Date Filter</center>
+
 ### View the Details page:
+
+
+![View details](../img/Monitoring_Dashboard/7.png) <center>**Figure 7.** View Details</center>
 
 The top section shows the run name, the number of datasets being added to the OA, who started the run, and the amount of time that has passed ( since the run started )
 
@@ -53,6 +71,9 @@ Then, at the bottom half of the page, there are two sections: one is titled "Dat
 ### To check the logs:
 
 Click on the log tab
+
+![Logs Tab](../img/Monitoring_Dashboard/8.png) <center>**Figure 8.** Logs Tab</center>
+
 
 There are three items under the logs tab: a search option, a button to download all logs, and a part where logs are presented.
 
