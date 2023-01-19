@@ -15,8 +15,9 @@ nav:
       - Monitoring Dashboard: Getting Started/Monitoring_Dashboard.md
   - OmixAtlas:
       - About OmixAtlas: OmixAtlas/OmixAtlas.md 
-      - Curating OmixAtlas - Bulk RNAseq: OmixAtlas/Curating_OA_bRNAseq.md 
-      - Curating OmixAtlas - Single Cell: OmixAtlas/Curating_OA_scRNA.md 
+      - Curating OmixAtlas: OmixAtlas/Curating OA/Curating_OA.md 
+          - Curating OmixAtlas - Bulk RNAseq: OmixAtlas/Curating OA/Curating_OA_BulkRNAseq.md 
+          - Curating OmixAtlas - Single Cell: OmixAtlas/Curating OA/Curating_OA_scRNA.md 
       - Data Schema: OmixAtlas/Data Schema.md
       - Data Workflow - Bulk RNAseq: OmixAtlas/Data_Workflow.md
       - Bulk RNA Sequencing FAQs: OmixAtlas/Bulk_RNA_sequencing_FAQs.md
