@@ -3,25 +3,7 @@
 The OmixAtlas landing page offers an overview of the various public and proprietary OmixAtlases available on Polly.
 
 
-## 1. OmixAtlas Homepage
-
-Following information is displayed on the homepage of Omixatlas -
-
-### 1.1 Number of Omixatlases
-
-This indicates the total number of OmixAtlases present on Polly.
-
-### 1.2 ML ready datasets
-
-This indicates the number of ML-ready datasets available on Polly.
-
-### 1.3 Data sources
-
-This number indicates the number of data sources for the datasets on Polly.
-
-### 1.4 Types of Omics data
-
-This number indicates the types of Omics data present on Polly.
+## 1. OmixAtlas homepage
 
 ![Homepage](../img/OmixAtlas-Images/1.png) <center>**Figure 1.** OmmixAtlas Homepage</center>
 
@@ -31,7 +13,7 @@ This number indicates the types of Omics data present on Polly.
 The numbers of total and normal samples are displayed under each OmixAtlas. A search feature is also available to browse the collection of OmixAtlases.
 
 
-## 2. OmixAtlas Summary Page
+## 2. OmixAtlas summary page
 
 Once the user chooses an OmixAtlas, a summary page offers an overview of the OmixAtlas.The number of total datasets is visible just above the search bar (refer to A in Figure 2). General details such as the number of tissues, diseases, organisms, drugs, cell types and cell lines are displayed above a graphical summary as shown in the figure (refer to C in Figure 2).
 
@@ -52,7 +34,7 @@ The graph on top right indicates the distribution of data by data type. Figure 4
 ![Distribution by Type](../img/OmixAtlas-Images/4.png) <center>**Figure 4.** Distribution of Data by Type</center>
 
 
-### 2.3 Top 10 Diseases
+### 2.3 Top 10 diseases
 
 The graph on bottom left indicates the top 10 diseases (based on number of datasets) present in the OmixAtlas distribution of data by data type. Figure 5 shows the graph from two different OmixAtlases.
 
@@ -60,7 +42,7 @@ The graph on bottom left indicates the top 10 diseases (based on number of datas
 
 Figure 5: Top 10 Diseases
 
-### 2.4 Top 10 Organisms
+### 2.4 Top 10 organisms
 
 The graph on bottom right indicates the top 10 organisms (based on number of datasets) present in the OmixAtlas distribution of data by data type. Figure 6 shows the graph from two different OmixAtlases.
 
@@ -71,14 +53,14 @@ The graph on bottom right indicates the top 10 organisms (based on number of dat
 
 There are two formats that users can see datasets - Card view and Table view.
 
-### 3.1 Card View
+### 3.1 Card view
 
-In this view, datasets are arranged as a list of horizontal cards. Each card contains a short summary of the dataset followed by color-coded metadata tags that define the characteristics of the dataset. Metadata information includes ontology backed annotations such as organism, disease, tissue, drug, cell type, cell line, etc. Card view offers a first-pass view of all the datasets that are queryable and searchable on an OmixAtlas. The search bar can be used to search for keywords that are present across source metadata (title, description etc) and curated metadata (such as drug, tissue, cell type etc) [Link here].The search results can be narrowed down using the dynamic filtering options on the left side.
+In this view, datasets are arranged as a list of horizontal cards. Each card contains a summary of the dataset followed by color-coded metadata tags that define the characteristics of the dataset. Metadata information includes ontology backed annotations such as organism, disease, tissue, drug, cell type, cell line, etc. Card view offers a first-pass view of all the datasets that are queryable and searchable on an OmixAtlas. The search bar can be used to search for keywords that are present across source metadata (title, description etc) and curated metadata (such as drug, tissue, cell type etc).The search results can be narrowed down using the dynamic filtering options on the left side.
 
 ![CardView](../img/OmixAtlas-Images/7.png) <center>**Figure 7.** Card View (A - Request a Dataset, B - Search Bar, C - Filter options, D - Collapsable filter, E - Switch between Card View and Table View, F - Sorting Function)</center>
 
 
-#### 3.1.1 Datasets under Card View
+#### 3.1.1 Datasets under card view
 
 The individual dataset consists under card view consists of the following -
 
@@ -94,7 +76,7 @@ c. Overall Design: This section describes the study design and methodology taken
 
 ![Design](../img/OmixAtlas-Images/10.png) <center>**Figure 10.** Overall Design</center>
 
-#### 3.1.2 Options under Card View
+#### 3.1.2 Options under card view
 
 There is an Options function on top right under the individual card containing the dataset.
 
@@ -115,7 +97,7 @@ Upon clicking, users can choose from the following -
 ![Download](../img/OmixAtlas-Images/14.png) <center>**Figure 14.** Download Function under Card View</center>
 
 
-### 3.2 Table View
+### 3.2 Table view
 
 In table view, the results are organized as tables on the OmixAtlas interface with metadata fields presented as columns. Users can sort across metadata fields such as dataset id, no. of samples, description, drugs, cell type, cell line, disease and so on. The results show up in order of relevance to their search query. There is also a sorting function available next to the column header to view the sorted results in ascending or descending order.
 
@@ -138,29 +120,29 @@ Each curated dataset in OmixAtlas is curated into different fields that are also
 - Yellow - Data Type
 - Mustard - Source
 
-## 4. Sorting Data
+## 4. Sorting data
 
-### 4.1 Card View
+### 4.1 Card view
 
 Under the card view, datasets can be sorted by Relevance, Dataset ID, Number of Samples and Recent Datasets from top right drop-down menu.
 
 ![Sorting](../img/OmixAtlas-Images/17.png) <center>**Figure 17.** Sorting Function under Card View</center>
 
 
-### 4.2 Table View
+### 4.2 Table view
 
 Under the table view, datasets can be sorted by the sorting function available next to the column header to view the sorted results in ascending or descending order.
 
 ![Sorting](../img/OmixAtlas-Images/18.png) <center>**Figure 18.** Sorting using Column Header</center>
 
-## 5. View Details
+## 5. View details
 
 On clicking the view details option from the dropdown menu of the respective dataset from the results page, users are directed to the view details page. There are three main sections that can be seen on the left side of the page and described below.
 
 ![Details](../img/OmixAtlas-Images/19.png) <center>**Figure 19.** Dataset Details</center>
 
 
-### 5.1 Dataset Overview
+### 5.1 Dataset overview
 
 Dataset overview includes the description of the dataset, number of samples, link to the source and the metadata tags associated with the dataset.
 
@@ -180,14 +162,14 @@ The tabular format consists of a comprehensive snapshot of the biological charac
 ![Metadata](../img/OmixAtlas-Images/22.png) <center>**Figure 22.** Metadata in Tabular Format</center>
 
 
-### 5.3 Processed Data
+### 5.3 Processed data
 
 The processed data with normalized values is presented as a table that is available for downloading.
 
 ![Processed](../img/OmixAtlas-Images/23.png) <center>**Figure 23.** Processed Data</center>
 
 
-## 6. Request a Dataset
+## 6. Request a dataset
 
 If the dataset is not present, users can request a dataset to be added to OmixAtlas by going to the 'Request a Dataset' function on top right of OmixAtlas summary page. Users need to fill a short form to request a dataset that needs to be added.
 
