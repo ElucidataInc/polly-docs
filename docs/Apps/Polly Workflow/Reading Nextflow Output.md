@@ -1,4 +1,4 @@
-### Reading Nextflow Output
+### Nextflow Output
 
 Note the workflow ID - go to the workspace you had entered before - you will see a folder created with the workflow ID there which will have the html and trace files.
 
