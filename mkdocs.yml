@@ -44,8 +44,7 @@ nav:
     - Polly Workflow:
       - Nextflow: Apps/Polly Workflow/Nextflow.md
       - Build Nextflow Pipeline: Apps/Polly Workflow/Build Nextflow Pipeline.md
-      - Execute-in-terminal/Polly-CLI: Apps/Polly Workflow/Execute-in-terminal or Polly-CLI.md
-      - Execute Nextflow pipelines: Apps/Polly Workflow/Execute Nextflow pipelines.md
+      - Running Nextflow pipelines: Apps/Polly Workflow/Execute Nextflow pipelines.md
       - Nextflow Output: Apps/Polly Workflow/Reading Nextflow Output.md
     - Polly Applications: 
       - Application Features: Apps/Introduction.md
