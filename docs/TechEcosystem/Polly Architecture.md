@@ -1,4 +1,4 @@
-Polly is a cloud based Software as a Service (SAAS) solution. Below diagram details out various layers of Polly.
+Polly is a cloud based Software as a Service (SaaS) solution. Below diagram details out various layers of Polly.
 
 ![Polly Architecture](../img/Architecture/PollyArchitecture_v1.png) <center>**Figure 1.** Polly Architecture</center>
 
