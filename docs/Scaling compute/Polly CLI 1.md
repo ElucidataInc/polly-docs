@@ -74,6 +74,11 @@ Enter the Polly Username and Password when prompted.
 ![Polly Login](../img/PollyCLI/1_a.png "Polly Login") 
 ![Polly Login](../img/PollyCLI/1_b.png "Polly Login") <center>**Figure 1.** Polly Login</center>
 
+Alternatively, user can login using the interactive command prompt.
+
+The password is hidden when user types for security purposes.
+
+![Polly Login](../img/PollyCLI/1a.png "Polly Login") <center>**Figure 2.** Polly Login</center>
 
 Once logged in, you will stay logged in the system and won’t need to log in again even if a new terminal is opened or the system is restarted. You will only need to log in again if you manually log out from the system.
 
@@ -90,6 +95,10 @@ When you are in the Polly environment, you can log in to Polly CLI without the n
 Execute the following command to log out
 
 <pre><code>polly logout</code></pre>
+
+Alternatively, user can also logout using interactive command prompt.
+
+![Polly Logout](../img/PollyCLI/2a.png "Polly Login") <center>**Figure 3.** Polly Logout</center>
 
 **Note:**
 
@@ -109,7 +118,11 @@ To create a new workspace, use the following command.
 
 You will be asked to name the Workspace and provide a description. Once the workspace is created, the workspace name and ID will be shown on the screen. This workspace ID will be needed while creating a JSON file for running jobs.
 
-![Create Workspace](../img/PollyCLI/2.png "Create Workspace") <center>**Figure 2.** Create Workspace</center>
+![Create Workspace](../img/PollyCLI/2.png "Create Workspace") <center>**Figure 4.** Create Workspace</center>
+
+Alternatively, workspaces can also be created using interactive command prompt.
+
+![Create Workspace](../img/PollyCLI/3a.png "Create Workspace") <center>**Figure 5.** Create Workspace</center>
 
 **View Workspaces**
 
