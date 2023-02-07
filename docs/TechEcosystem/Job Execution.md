@@ -8,7 +8,11 @@ On executing this command, you will be asked to enter the id of the workspace wh
 
 *   You do not need to create a new Workspace for running a job. You can simply list the older Workspaces and run a job in an already created Workspace.
 
-![Submit Jobs](../img/PollyCLI/4.png "Submit Jobs") <center>**Figure 9.** Submit Jobs</center>
+![Submit Jobs](../img/PollyCLI/4.png "Submit Jobs") <center>**Figure 1.** Submit Jobs</center>
+
+Alternatively, users can submit a job using interactive command prompt as shown below.
+
+![Submit Jobs](../img/PollyCLI/11a.png "Submit Jobs") <center>**Figure 2.** Submit Jobs</center>
 
 ##Monitor Job status
 
@@ -18,7 +22,7 @@ On executing this command, you will be asked to enter the id of the workspace wh
 
 <pre><code>polly jobs status --workspace-id <workspace id> --job-id <job id></code></pre>
 
-![Single Job Status](../img/PollyCLI/5.png "Single Job Status") <center>**Figure 10.** Single Job Status</center>
+![Single Job Status](../img/PollyCLI/5.png "Single Job Status") <center>**Figure 3.** Single Job Status</center>
 
 *   The following command can be used to view the statuses of all the jobs in a workspace.
 
@@ -26,9 +30,13 @@ On executing this command, you will be asked to enter the id of the workspace wh
 
 A prompt to enter job id will appear which when kept blank gets all the job statuses in a workspaces.
 
-![All Job Statuses in a Workspace](../img/PollyCLI/6.png "All Job Statuses in a Workspace") <center>**Figure 11.** All Job Statuses in a Workspace</center>
+![All Job Statuses in a Workspace](../img/PollyCLI/6.png "All Job Statuses in a Workspace") <center>**Figure 4.** All Job Statuses in a Workspace</center>
 
 *   If you are within a Polly environment while accessing Polly CLI (like notebook or CLI job), workspace id can be auto-detected by passing `--yes` or `-y` in the command instead of `--workspace-id` parameter.
+
+Alternatively, users can check jobs status using interactive commnd prompt.
+
+![All Job Statuses in a Workspace](../img/PollyCLI/12a.png "All Job Statuses in a Workspace") <center>**Figure 5.**Job Status in a Workspace</center>
 
 **Get job logs**
 
@@ -38,7 +46,11 @@ To view the logs of any job, use the following command:
 
 This will give the logs for the job. In case the job is still running, it will give the logs generated till that instant.
 
-![Job Logs](../img/PollyCLI/7.png "Job Logs") <center>**Figure 12.** Job Logs</center>
+![Job Logs](../img/PollyCLI/7.png "Job Logs") <center>**Figure 6.** Job Logs</center>
+
+Alternatively, users can log jobs status using interactive commnd prompt.
+
+![ Job log in a Workspace](../img/PollyCLI/13a.png "All Job Statuses in a Workspace") <center>**Figure 7.** Job logs</center>
 
 **Note:**  
 

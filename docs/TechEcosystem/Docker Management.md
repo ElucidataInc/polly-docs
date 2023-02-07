@@ -13,7 +13,7 @@ The output generated from the above command should then be run on the terminal.
 
 *   Add `sudo` before the command if required according to system settings.
 
-![Example output](../img/PollyCLI/Exampleoutput.png) <center>**Figure 4.** Example output generated from above commands</center>
+![Example output](../img/PollyCLI/Exampleoutput.png) <center>**Figure 1.** Example output generated from above commands</center>
 
 **Create a Docker Repository**
 
@@ -25,7 +25,11 @@ Use the following command to create a docker repository:
 
 <pre><code>polly dockers create --name ,< docker_repository_name > --description < description of the repository ></code></pre>
 
-![Docker Repository Generation](../img/PollyCLI/dockerrepogeneration.png) <center>**Figure 5.** Docker Repository Generation</center>
+![Docker Repository Generation](../img/PollyCLI/dockerrepogeneration.png) <center>**Figure 2.** Docker Repository Generation</center>
+
+Alternatively, users can create a docker repository using interactive command prompt as shown below.
+
+![Docker Repository Generation](../img/PollyCLI/14a.png) <center>**Figure 3.** Docker Repository Generation</center>
 
 
 **List docker repositories**
@@ -34,8 +38,11 @@ You can list all the stored docker repositories in your organization by using th
 
 <pre><code>polly dockers list --all</code></pre>
 
-![Polly Docker List](../img/PollyCLI/dockerlist.png) <center>**Figure 6.** Polly Docker List</center>
+![Polly Docker List](../img/PollyCLI/dockerlist.png) <center>**Figure 4.** Polly Docker List</center>
 
+Alternatively, users can list all the docker repositories using interactive command prompt as shown below.
+
+![Polly Docker List](../img/PollyCLI/15a.png) <center>**Figure 5.**Polly Docker List</center>
 
 **List docker repositories commits**
 
@@ -43,12 +50,15 @@ You can list specific repository to view the various commits or tags stored with
 
 <pre><code>polly dockers commit-list --name < docker_repository_name > --all</code></pre>
 
-![Polly Docker Commit List](../img/PollyCLI/dockercommit.png) <center>**Figure 7.** Docker Commit List</center>
+![Polly Docker Commit List](../img/PollyCLI/dockercommit.png) <center>**Figure 6.** Docker Commit List</center>
 
 In order to reduce the indecision when there are multiple dockers with the same name and same tag, you can distinguish them by their unique identifier which is assigned to every docker commit. In case the unique identifier is not passed in the command, the latest version of the docker with that tag will be used.
 
 You can go back to older commit as well if required by using its tag and unique identity listed in the Polly docker commit list.
 
+Alternatively, users can list all the commit-list using interactive command prompt as shown below.
+
+![Polly Docker List](../img/PollyCLI/16a.png) <center>**Figure 7.**Docker Commit List</center>
 
 **Polly Dockers Path**
 
@@ -82,7 +92,11 @@ Example commands to pull a docker would be:
 
 <pre><code>docker pull docker.polly.elucidata.io/elucidata/16june@sha256:5747316366b8cc9e3021cd7286f42b2d6d81e3d743e2ab571f55bcd5df788cc8</code></pre>
 
+**Update Docker**
 
+Alternatively, users can update the docker using interactive command prompt as shown below.
+
+![Polly Docker List](../img/PollyCLI/17a.png) <center>**Figure 9.**Update Docker List</center>
 ##Polly CLI help
 
 If help is needed for any command, just type `--help` at the end of the command and execute.

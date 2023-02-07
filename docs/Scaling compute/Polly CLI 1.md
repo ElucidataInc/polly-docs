@@ -135,7 +135,11 @@ You will be asked to select which Workspaces to list:
 *   *all:* On selecting this, all the Workspaces will be listed.
 *   *latest or oldest:* On selecting this you will be asked to enter the number of workspaces as shown in the image below.
 
-![List Workspaces](../img/PollyCLI/3.png "List Workspaces") <center>**Figure 3.** List Workspaces</center>
+![List Workspaces](../img/PollyCLI/3.png "List Workspaces") <center>**Figure 6.** List Workspaces</center>
+
+Alternatively, workspaces can be listed using the interactive command prompt. Workspaces can be listed according to users preference - All, latest or oldest.  
+
+![List Workspaces](../img/PollyCLI/7a.png "List Workspaces") <center>**Figure 7.** List Workspaces</center>
 
 Workspace ID will be required for transferring data and running jobs.   
 
@@ -199,6 +203,24 @@ This command will copy an individual file from source to destination. The transf
 *   If the path contains space in the folder names or file names, provide the entire path within double quotes (““).
 
 *   If you are within a Polly environment while accessing Polly CLI (like notebook or CLI job), workspace id can be auto-detected by passing `--yes` or `-y` in the command instead of `--workspace-id` parameter.
+
+**Sync files**
+
+Interactive command prompt can be used to sync files from user's local directory to Polly workspace.
+
+![Sync](../img/PollyCLI/8a.png "List Workspaces") <center>**Figure 8.** Sync files from local directory to Polly workspace</center>
+
+**List Workspace files**
+
+Users can use interactive command prompt to list down a files from a particular workspace as shown below-
+
+![Sync](../img/PollyCLI/9a.png "List Workspaces") <center>**Figure 9.** List files from a workspace</center>
+
+**Copy files**
+
+Users can copy files from Polly workspace to local directory using the interactive command prompt.
+
+![Sync](../img/PollyCLI/10a.png "List Workspaces") <center>**Figure 9.** Copy files</center>
 
 
 
