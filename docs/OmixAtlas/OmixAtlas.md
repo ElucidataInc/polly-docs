@@ -1,7 +1,7 @@
 
 ## 1. What is OmixAtlas?
 
-Vast and diverse biological data are generated every year and deposited in repositories by academic labs and organizations worldwide. These data hold tremendous potential for reuse and drug discovery but are scattered across multiple, disparate sources and lack standardization. Thus, the availability of data does not equate to its easy usability.
+Vast and diverse biological data are being generated every year and deposited in repositories by academic labs and organizations worldwide. These data hold tremendous potential for reuse and drug discovery but are scattered across multiple, disparate sources and lack standardization. Thus, the availability of data does not equate to its easy usability.
 
 Additionally, no single type of data, be it metabolomic, proteomic or genomic, will be sufficient to capture the complexity of biological phenomena. These challenges to integrate different data types to increase usability of vast amounts of data needs to be addressed. OmixAtlas aims to address these issues by ensuring that the metadata from different data types and across different data sources have been curated and harmonized and made ready for downstream machine learning and analytical applications.
 
