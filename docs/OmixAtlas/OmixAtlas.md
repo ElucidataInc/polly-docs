@@ -33,7 +33,7 @@ All datasets on Polly go through a 2-step process:
 #
 
 
-### 3.2 Key Features
+### 3.2 Key features
 
 1. **Multi-omics data in one place:** OmixAtlas provides access to over 26 different data types from over 30 data sources.
 2. **Continuously evolving** : In keeping with the rapid pace of biological data generation, the OmixAtlas is updated with a frequency that is in sync with the source repositories, wherever applicable.
@@ -50,27 +50,6 @@ The data in OmixAtlas are curated through Polly's ML-based curation workflow tha
 - **Access and analyze data on any computational environment** : Stream data to your compute infrastructure from OmixAtlas. Focus on analysis while OmixAtlas takes care of data storage and management.
 - **Manage in-house data at scale with Enterprise OmixAtlas** : Harmonize proprietary data using the scalable curation infrastructure of Polly, making it ML-ready for discovering new insights.
 
-## 5. Which OAs are currently present on Polly?
+## 5. Types of OmixAtlasses
 
-1. Liver OmixAtlas
-2. GEO OmixAtlas
-3. TCGA OmixAtlas
-4. GTEx OmixAtlas
-5. Single Cell OmixAtlas
-6. Metabolomics OmixAtlas
-7. HPA OmixAtlas
-8. DepMap Omixatlas
-9. PharmacoDB OmixAtlas
-10. LINCS OmixAtlas
-11. CPTAC OmixAtlas
-12. cBioPortal OmixAtlas
-13. ImmPort OmixAtlas
-14. gnomAD OmixAtlas
-15. UKBiobank
-16. HugeGWAS
-17. OpenGWAS
-18. GDC OmixAtlas
-19. TEDDY OmixAtlas
-20. RCSB OmixAtlas
-21. PRIDE OmixAtlas
-22. CCLE OmixAtlas
+There are two major 
