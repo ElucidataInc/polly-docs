@@ -52,4 +52,5 @@ The data in OmixAtlas are curated through Polly's ML-based curation workflow tha
 
 ## 5. Types of OmixAtlasses
 
-There are two major 
+There are two types of OmixAtlasses - 
+1. Source Atlas - 
