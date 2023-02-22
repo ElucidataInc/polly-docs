@@ -36,7 +36,7 @@ Other than the search bar, users can filter the datasets using configurable filt
 
 Select the dataset of interest, click on 'Options', and then click on 'Analyze'.
 
-![Selecting dataset](../img/Phantasus/1.png) <center>**Figure 1.** Selectind Dataset</center>
+![Selecting dataset](../img/Phantasus/1.png) <center>**Figure 1.** Selecting Dataset</center>
 
 #### Step 2 - Open the Phantasus application
 

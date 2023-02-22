@@ -1,4 +1,31 @@
 # Release Notes
+<!--January 30, 2023-->
+
+<details open>
+<summary><font size="+1"><b>January 30, 2023</b></font></summary>
+<br>
+       <p class="Releases-button">Releases</p>
+  <ul> 
+    <li>For base dockers, python, R and pollyglot, memory & CPU utilization will be displayed within the notebooks.  
+    <li>Users will be informed when they utilize 70% of the memory in their notebooks.
+    <li>The notebook loading page will show the time it will take to load notebooks 
+    <li>Drug ontolology recommendation is now available on the OmixAtlas UI. Structurally similar drugs will be recommended when users search for drugs and on searching for genes, drugs that target the gene will be suggested.
+    <li>OmixAtlas cards on the OmixAtlas home page have tags that differentiate source and destination OmixAtlases.  
+    <li>The Single-Cell OmixAtlas has been created with 1840 cell-type curated datasets from multiple sources, including high value publications.
+    <li>Manually curated labels for age, gender, donor and sampling site have been added to the Single-Cell OmixAtlas.
+    <li>Files, notebooks and analyses can be pinned on workspaces for easy accessibility. 
+    <li>The link_report_url function on polly-python can be used to link a dataset_id to a URL. 
+                </ul>
+<br>
+       <p class="update-button">Update</p>
+  <ul>
+         <li>The waiting time for viewing datasets that are being ingested, via the ingestion monitoring dashboard, will only be 2 minutes.
+         <li>Reports linked to datasets can now be previewed instead of being downloaded and then viewed.
+         <li>The schema is automatically validated before inserting a new schema or updating the existing schema of an OmixAtlas.
+         <li>In the download metadata function, users now have the option to select the keys to be field_name or original_name. 
+       </ul>
+</details>
+<hr>
 <!--January 6, 2023-->
 
 <details open>
@@ -8,7 +35,7 @@
   <ul> 
     <li>For HTML files in the workspaces, users can download the dependencies (images, folders, CSS files, linked HTML files, etc.) via the UI. 
     <li>Deleted files/folders from workspaces can be retrieved for up to 15 days.
-    <li>Drug ontology recommendation will be available via polly-python. For drugs, structurally similar drugs will be returned and for genes of interest drugs which target the gene will be returned.
+    <li>Drug ontology recommendation will be available via polly-python. Structurally similar drugs will be recommended when users search for drugs and on searching for genes, drugs that target the gene will be suggested. 
     <li>The following fields have been updated for all GEO single-cell datasets:
            <ul>
                   <li>Datasets level: Tissue, Disease, Cell Line, Organism, Gene, Strain, Drug.
