@@ -7,22 +7,6 @@ The OmixAtlas landing page offers an overview of the various public and propriet
 
 Following information is displayed on the homepage of Omixatlas -
 
-### 1.1 Number of Omixatlases
-
-This indicates the total number of OmixAtlases present on Polly.
-
-### 1.2 ML ready datasets
-
-This indicates the number of ML-ready datasets available on Polly.
-
-### 1.3 Data sources
-
-This number indicates the number of data sources for the datasets on Polly.
-
-### 1.4 Types of Omics data
-
-This number indicates the types of Omics data present on Polly.
-
 ![Homepage](../img/OmixAtlas-Images/1.png) <center>**Figure 1.** OmmixAtlas Homepage</center>
 
 
@@ -192,4 +176,12 @@ The processed data with normalized values is presented as a table that is availa
 If the dataset is not present, users can request a dataset to be added to OmixAtlas by going to the 'Request a Dataset' function on top right of OmixAtlas summary page. Users need to fill a short form to request a dataset that needs to be added.
 
 ![Request](../img/OmixAtlas-Images/24.png) <center>**Figure 24.** Request a Dataset</center>
+
+## 7. Polly Basic
+
+With two types of OmixAtlasses - Source and Destination, users can move the dataset from source to their destinaiton atlas using Polly credits.
+
+![Move Data](../img/OmixAtlas-Images/25.png) <center>**Figure 25.** Move Dataset</center>
+
+After clicking 'Move Data', users get a notification via email when the dataset is moved.
 
