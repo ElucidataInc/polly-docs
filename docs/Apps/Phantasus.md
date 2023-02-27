@@ -55,7 +55,7 @@ As shown in the above figure, rows on the heatmap correspond to genes. The colum
 
 #### Adjusting expression values
 
-Adjusting expression values to the log scale is an essential step in the analysis that helps in the normalization of the data. Raw data on OmixAtlas has gene counts that are not normalized. Data imported from OmixAtlas is normalized by default on Phantasus. Data is normalized using Variance Stabilization Transformation (VST) method. VST aims to generate a matrix of values for which variance is constant across the range of mean values, especially for low mean.
+Adjusting expression values to the log scale is an essential step in the analysis that helps in the normalization of the data. Raw data on OmixAtlas has gene counts that are not normalized. Data imported from OmixAtlas is normalized by default on Phantasus. **Data is normalized using Variance Stabilization Transformation (VST) method. VST aims to generate a matrix of values for which variance is constant across the range of mean values, especially for low mean.**
 
 #### Checking scale through box plots
 
