@@ -177,6 +177,18 @@ The user also has the option to make the file link global i.e anyone with the li
 
 ![](../img/Workspace/25.png)  <p align=center>**Figure 24.** Changing the URL access to restricted/global</p>
 
+## Workspace Handling Guidelines and Limits
+
+File supported per workspace ranges from 20000 to 30000
+
+Workspace constraints for smooth usage are as follows:
+<ul>
+   <li>Search: There will be minimal to no impact
+   <li>Copy: 100 - 110 GB total size with a cap of 100 files within a folder are allowed if done from UI
+   <li>Move: Conditions are similar to that of copy
+   <li>Delete: There will be no impact
+      </ul>
+
 ### Video
 
 [![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/P8TvifgmLf4/0.jpg)](http://www.youtube.com/watch?v=P8TvifgmLf4)

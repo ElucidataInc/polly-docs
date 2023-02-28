@@ -2,8 +2,9 @@
 
 The OmixAtlas landing page offers an overview of the various public and proprietary OmixAtlases available on Polly.
 
+## 1. OmixAtlas Homepage
 
-## 1. OmixAtlas homepage
+Following information is displayed on the homepage of Omixatlas -
 
 ![Homepage](../img/OmixAtlas-Images/1.png) <center>**Figure 1.** OmmixAtlas Homepage</center>
 
@@ -174,4 +175,12 @@ The processed data with normalized values is presented as a table that is availa
 If the dataset is not present, users can request a dataset to be added to OmixAtlas by going to the 'Request a Dataset' function on top right of OmixAtlas summary page. Users need to fill a short form to request a dataset that needs to be added.
 
 ![Request](../img/OmixAtlas-Images/24.png) <center>**Figure 24.** Request a Dataset</center>
+
+## 7. Polly Basic
+
+With two types of OmixAtlasses - Source and Destination, users can move the dataset from source to their destinaiton atlas using Polly credits.
+
+![Move Data](../img/OmixAtlas-Images/25.png) <center>**Figure 25.** Move Dataset</center>
+
+After clicking 'Move Data', users get a notification via email when the dataset is moved.
 
