@@ -12,23 +12,22 @@
 | Cell line | This field represents the cell line from which the samples were extracted. List of the population of modified cells used for the study. Cell line labels already present in the source metadata are normalized using synonyms present in the cell line ontology we use. <br/> Cell line labels are annotated in cases where the authors have cultured a particular cell line or bought it from organizations such as ATCC and then used in further experiments. Eg. MDAMB-231, HEK-293 <br/> Key specifications for cell line metadata annotations are as follows: <ul><li> All labels are harmonized with The Cellosaurus Ontology </li><li> Dual Channel datasets where the author has studied two different cases in a single sample are not curated for cell line metadata </li><li> Datasets with numerical metadata are not annotated </li><ul> | [The Cellosaurus](https://web.expasy.org/cellosaurus/) | Cell Line | curated\_cell\_line |
 | **Other metadata fields** | | |
 | **Field** | **Description** | **GUI Display Name** | **Polly-Python Display Name** |
-| Cell Type Annotation Available | This field indicates whether cell type annotation is available or not. <br/> 1. "True" - Curated <br/> 2. "False" - Not curated <br/> 3. "Not Curatable" | Cell Type Annotation Available | celltype\_annotation\_available |
 | Abstract | This field provides the abstract of the publication associated with the dataset. | NA | abstract |
-| Author | This field provides the name of the author who published the dataset. | NA | author |
-| Gene | This field provides the gene(s) studied in the dataset. | NA | curated\_gene |
-| Strain | This field provides the names of the strain/genetic variants of the organism from which the samples are taken.The strain label is annotated for the strain of mice and rats used during the experimental process with reference to the strain attribute. Eg. for the strain attribute - wild-derived, curated label for strain name is CASA/RkJ | NA | curated\_strain |
-| Year | This field provides the year in which the dataset or study is published. | NA | year |
-| Data Type | This field provides the type of biomolecular data represented/studied in the dataset. | Data Type | data\_type |
-| Dataset ID | This field provides the unique id for the dataset/study to represent a group of samples. | Dataset ID | dataset\_id |
-| Source | This field provides the name of the source repository from where the dataset is fetched. | Source | dataset\_source |
-| Description | This field provides a brief description of the experiment or the study. | Description | description |
-| Summary | This field provides a detailed summary of the publication (can be the abstract) or a summary of the experiment. | Summary | summary |
-| Overall design | This field provides information on the overall design of the experiment as given by the author. | Overall Design | overall\_design |
+| Year | This field provides the year in which the dataset or study is published. | Year | year |
+| Gene | This field provides the gene(s) studied in the dataset. | Gene | curated_gene |
+| Single cell chemistry | This field represents the sequencing method/platform used for sequencing the single cell genome. | Single cell chemsitry | curated_single_cell_chemistry |
+| Sampling technique | This field represents the method/procedure used for collecting samples. | Sampling technique | curated_sampling_technique |
+| Sampling storage technique | This field represents the method/technique used for preservation or storage of sample for analysis. | Sampling storage technique | curated_storage_technique |
+| Donor dataset | This field indicates whether the dataset has donor or not. | Donor dataset | curated_dataset_has_donor |
+| Summary | This field provides a detailed summary of the publication (can be the abstract) or a summary of the experiment. | Summary (Available for datasets from GEO only) | summary |
+| Overall design | This field provides information on the overall design of the experiment as given by the author. | Overall Design (Available for datasets from GEO only) | overall_design |
 | Publication | This field provides the link to the publication associated with the dataset. If the associated publication information is not available, then this field provides the link to the data source providing more information on the dataset. | NA | publication |
-| Platform | This field represents the platform that was used to assess the single cell data. | NA | platform |
-| Number of Cells | This field represents the number of cells/observations in the dataset. | Number of Cells | total\_num\_cells |
-| Samples | This field represents the total number of samples in a dataset. | Samples | total\_num\_samples |
-| Manually curated fields | This field represents the manually curated fields for the dataset. Dictionary has info about which fields were curated manually. Keys in the dictionary are: <br/> 1. dataset\_level <br/> 2. sample\_level <br/> 3. cell\_type\_curatable | NA | manually\_curated\_fields |
+| Source | This field provides the name of the source repository from where the dataset is fetched. | Source | dataset_source |
+| Description | This field provides a brief description of the experiment or the study. | <ul><li> Title (view details page & card view) </li><li> Description (Table view) | description |
+| Data Type | This field provides the type of biomolecular data represented/studied in the dataset. | NA | data_type |
+| Dataset ID | This field provides the unique id for the dataset/study to represent a group of samples. | Dataset ID | dataset_id |
+| Number of Cells | This field represents the number of cells/observations in the dataset. | Number of Cells | total_num_cells |
+| Samples | This field represents the total number of samples in a dataset. | Samples | total_num_samples |
 
 #### 2. Sample Level Metadata
 
@@ -56,11 +55,9 @@
 
 | **Field** | **Description** | **Polly-Python Display Name** |
 | --- | --- | --- |
-| Data ID | This field represents the unique ID for this data entity on Polly. | Data ID |
-| Gene IDs | This field represents the ID of the feature - gene ID, protein ID etc. | Gene IDs |
-| Highly variable gene | This field indicates whether the gene is highly variable.For highly variable genes - True; otherwise -False. | highly\_variable |
-| Number of cells | This field represents the number of cells which are containing the gene. | n\_cells |
-| Name | This field represents the name of the gene/feature as per the source. | Name |
+| Feature ID | This field represents the ID of the feature (gene, metabolite, protein etc) being measured. | feature_id |
+| Highly variable gene | This field indicates whether the gene is highly variable. <br>For highly variable genes - True; otherwise -False. | highly_variable |
+| Number of cells | This field represents the number of cells which are containing the gene. | n_cells |
 
 ### Cell Type Annotation for single cell datasets: Manual Curation Process
 
