@@ -49,7 +49,7 @@ Raw counts data is stored in the .raw slot of the AnnData object and processed c
 
 **Processing**
 
-![](RackMultipart20230310-1-nh1p3h_html_6236b03f1980aed7.png)
+![Homepage](../img/OmixAtlas-Images/sc1.png) <center>**Figure 1.** Processing Steps</center>
 
 Data processing is based on a general scRNA-seq analysis[workflow](https://scanpy-tutorials.readthedocs.io/en/latest/pbmc3k.html) using the Scanpy library and includes the following steps:
 
@@ -103,7 +103,7 @@ All datasets are available on Polly in the[H5AD](https://broadinstitute.github.i
 - **var** contains the gene metadata ['highly\_variable', 'gene\_ids', 'n\_cells']
 - **uns** contains unstructured metadata
 
-![](RackMultipart20230310-1-nh1p3h_html_e69a37cce4ee1d7a.png)
+![Homepage](../img/OmixAtlas-Images/sc2.png)
 
 ### Which fields are curated for Single-cell Data?
 
@@ -119,7 +119,7 @@ Cell-type labels are assigned at the cell cluster level based on expression sign
 
 **Process for cell type manual curation**
 
-![](RackMultipart20230310-1-nh1p3h_html_4bc6d9e79751d236.png)
+![Homepage](../img/OmixAtlas-Images/sc3.png)
 
 **I) Identifying cell types and markers information from Publications -** Internal curators at Elucidata determine if a particular dataset can be curated for cell type by going through the publications associated with the dataset.
 
@@ -157,4 +157,8 @@ All source fields are captured in the H5AD file which users can visualize throug
 
 ### Are external data requests directly added to Single Cell OmixAtlas?
 
-Users can request for single-cell RNASeq datasets from GEO which are not available in the source Single Cell RNASeq OmixAtlas to be added to the destination atlas. Upon request, these datasets will be added directly to the user's destination Atlas as early as possible.
+Users can request for single-cell RNASeq datasets from GEO or non GEO sources which are not available in the source Single Cell RNASeq OmixAtlas to be added to the destination atlas. Upon request, these datasets will be added directly to the user’s destination Atlas as early as possible.
+
+- Single cell RNAseq dataset from GEO which is not available on Source Atlas - TAT is upto 10 datasets in 10 working days
+- Single cell RNAseq dataset from non-GEO public source (with raw counts available) - TAT is upto 10 datasets in 10 working days
+- Single cell RNAseq dataset from non-GEO public source (with raw counts unavailable, fastq files available) - TAT is upto 10 datasets in 20 working days
