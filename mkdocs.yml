@@ -22,6 +22,7 @@ nav:
       - Data Schema: OmixAtlas/Data Schema.md
       - Data Workflow - Bulk RNAseq: OmixAtlas/Data_Workflow.md
       - Bulk RNA Sequencing FAQs: OmixAtlas/Bulk_RNA_sequencing_FAQs.md
+      - Single Cell RNA Sequencing FAQs: OmixAtlas/scRNA_seq_FAQs.md
       - Accessing OmixAtlas: OmixAtlas/Accessing OmixAtlas.md
       - How to Find Datasets: OmixAtlas/Find_datasets.md
       - Applications: OmixAtlas/Applications.md
