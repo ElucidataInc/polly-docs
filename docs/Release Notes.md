@@ -1,4 +1,32 @@
 # Release Notes
+<!--February 27, 2023-->
+
+<details open>
+<summary><font size="+1"><b>February 27, 2023</b></font></summary>
+<br>
+       <p class="Releases-button">Releases</p>
+  <ul> 
+    <li>When users search for keywords on the OmixAtlas search bar, they will also get results that match all the available sample-level metadata.   
+    <li>Abstracts are now available for datasets in the the Bulk RNA-seq OmixAtlas. 
+    <li>.gct files can now be directly downloaded from Phantasus when accessed through the user’s Destination OmixAtlas. 
+    <li>Restricted files, that can only be accessed by users who have access to the workspace in which the file is present, can now be downloaded.
+       </ul>
+       <br>
+       <p class="Polly-python-button">Polly-python</p>
+  <ul>
+    <li>The move_data function can be used to swiftly move data from the source to the destination OmixAtlases without having to download and re-upload the data.  
+    <li>The entire sample level metadata for a dataset can be obtained using the get_metadata function. 
+    <li>To download datasets easily, users can use the new download_dataset() function.
+    <li>Upon changing the schema of an OmixAtlas, users will be alerted of the impact of the specific change. 
+                </ul>
+<br>
+       <p class="update-button">Update</p>
+  <ul>
+         <li>On **polly-python**, upon changing the schema of an OmixAtlas, users will be alerted of the impact of the specific change.The waiting time for viewing datasets that are being ingested, via the ingestion monitoring dashboard, will only be 2 minutes.
+         <li>On the OmixAtlases, the performance of omixatlas summaries, dataset details, datasets search and search filters has been improved to facilitate a smoother experience. 
+       </ul>
+</details>
+<hr>
 <!--January 30, 2023-->
 
 <details open>
