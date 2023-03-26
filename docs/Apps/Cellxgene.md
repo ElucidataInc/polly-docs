@@ -1,8 +1,8 @@
 ## What is Cellxgene?
 
-Cellxgene is an application developed by Celsius Tx to exclusively find, download, explore, analyze, annotate, and publish single-cell sequencing datasets.
+Cellxgene was developed by the Chan Zuckerberg Initiative (CZI) in collaboration with the open-source community. The cellxgene project was started in 2018 as an open-source project under the auspices of CZI, and it is currently maintained and developed by CZI and the wider scientific community.
 
-## When should CellxGene be used?
+## When should Cellxgene be used?
 
 1. **To examine categorical metadata:** Categorical metadata (such as tissue of origin or cell type) can be visualized and examined in a number of ways within cellxgene such as coloring embedding plots (i.e. color UMAP by cell type), looking at cell counts, making selections of cells or viewing the interaction between different categorical metadata fields.
 2. **To find cells where a gene is expressed:** Numerical metadata about gene expression features or the number of genes can be examined on the embedding plot and be used to filter and select cells.
