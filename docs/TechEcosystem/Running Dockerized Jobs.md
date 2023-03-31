@@ -30,7 +30,6 @@ Name of the machine required to run the job needs to be mentioned as per the fol
 | mi7xlarge | 64 | 970 GB | - |
 | gpusmall | 4 | 16 GB | 1 |
 | gpumedium| 32 | 240 GB | 4 |
-| gpularge | 64 | 488 GB | 8 |
 
 
 If you need a specific machine to be added to the list, please contact us at [polly.support@elucidata.io](mailto:polly.support@elucidata.io).

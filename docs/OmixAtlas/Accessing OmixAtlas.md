@@ -184,3 +184,6 @@ With two types of OmixAtlasses - Source and Destination, users can move the data
 
 After clicking 'Move Data', users get a notification via email when the dataset is moved.
 
+## 8. Downloading DE data from Phantasus
+
+After analyzing dataset using Phantasus, users can now doanload DE files in GCT format in the destination atlas. This feature is not provided in the source atlas.

@@ -49,8 +49,6 @@ nav:
       - Nextflow Output: Apps/Polly Workflow/Reading Nextflow Output.md
     - Polly Applications: 
       - Application Features: Apps/Introduction.md
-      - Host Apps: Apps/Host Apps.md
-      - Polly-PeakML: Apps/Metabolomic Data/Polly-PeakML.md
       - Phantasus: Apps/Phantasus.md
       - Cellxgene: Apps/Cellxgene.md
       - Discover: Apps/Polly Discover Application.md
