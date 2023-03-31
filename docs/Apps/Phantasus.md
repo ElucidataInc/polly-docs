@@ -1,6 +1,6 @@
 ## What is Phantasus?
 
-Phantasus is a web application for visual and interactive gene expression analysis. Phantasus is based on Morpheus – a web-based software for heatmap visualization and analysis, which was integrated with an R environment via OpenCPU API. Phantasus supports basic visualization such as heatmaps, filtering methods, R-based methods such as k-means clustering, principal component analysis, and differential expression analysis with the limma package.
+Phantasus is a web application for visual and interactive gene expression analysis. Phantasus is based on Morpheus – a web-based software for heatmap visualization and analysis, which was integrated with an R environment via OpenCPU API. Phantasus supports basic visualization such as heatmaps, filtering methods, R-based methods such as k-means clustering, principal component analysis, and differential expression analysis with the limma package. Detailed documentation of the Phantasus application can be accessed [here](https://artyomovlab.wustl.edu/phantasus/phantasus-tutorial.html).
 
 ## How does Phantasus help in data analysis?
 
@@ -162,3 +162,6 @@ Pathway analysis is done to understand the biological processes that are differe
 A new tab will appear with the results.
 
 ![EnrichR](../img/Phantasus/23.png) <center>**Figure 23.** EnrichR Pathway Analysis</center>
+
+## Reference:
+Kleverov, M., Zenkova, D., Kamenev, V., Sablina, M., Artyomov, M., & Sergushichev, A. (2022). Phantasus: web-application for visual and interactive gene expression analysis. bioRxiv, 2022-12.
