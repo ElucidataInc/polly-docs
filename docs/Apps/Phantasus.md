@@ -163,5 +163,11 @@ A new tab will appear with the results.
 
 ![EnrichR](../img/Phantasus/23.png) <center>**Figure 23.** EnrichR Pathway Analysis</center>
 
+#### Downloading DE analaysis
+
+Users can download the DE analysis from Phantasus accessed in the destination atlas. The file will be downloaded in the GCT format. To do this, select _File/Save Session_. This feature is not available in the source atlas.
+
+![Downlaod dataset](../img/Phantasus/24.png) <center>**Figure 24.** Download DE analysis</center>
+
 ## Reference:
 Kleverov, M., Zenkova, D., Kamenev, V., Sablina, M., Artyomov, M., & Sergushichev, A. (2022). Phantasus: web-application for visual and interactive gene expression analysis. bioRxiv, 2022-12.
