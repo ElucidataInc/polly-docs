@@ -50,6 +50,7 @@ nav:
     - Polly Applications: 
       - Application Features: Apps/Introduction.md
       - Phantasus: Apps/Phantasus.md
+      - Cellxgene: Apps/Cellxgene.md
       - Discover: Apps/Polly Discover Application.md
       - Dual Mode Data Visualization: Apps/Metabolomic Data/Dual Mode Visualization.md
       - El-MAVEN: Apps/Metabolomic Data/El-MAVEN.md
