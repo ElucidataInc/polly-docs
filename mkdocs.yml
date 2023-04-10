@@ -26,8 +26,8 @@ nav:
       - Accessing OmixAtlas: OmixAtlas/Accessing OmixAtlas.md
       - How to Find Datasets: OmixAtlas/Find_datasets.md
       - Applicatons:
-        - Phantasus: OmixAtlas/Phantasus.md
-        - Cellxgene: OmixAtlas/Cellxgene.md
+        - Phantasus: Apps/Phantasus.md
+        - Cellxgene: Apps/Cellxgene.md
   - Polly Python: '!import https://github.com/ElucidataInc/polly-python-code?branch=multirepo_plugin_docs&extra_imports=["polly/*"]'
   - Polly Compute:
     - Polly Notebooks:
