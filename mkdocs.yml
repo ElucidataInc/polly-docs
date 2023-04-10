@@ -25,7 +25,6 @@ nav:
       - Single Cell RNA Sequencing FAQs: OmixAtlas/scRNA_seq_FAQs.md
       - Accessing OmixAtlas: OmixAtlas/Accessing OmixAtlas.md
       - How to Find Datasets: OmixAtlas/Find_datasets.md
-      - Applications: OmixAtlas/Applications.md
   - Polly Python: '!import https://github.com/ElucidataInc/polly-python-code?branch=multirepo_plugin_docs&extra_imports=["polly/*"]'
   - Polly Compute:
     - Polly Notebooks:
