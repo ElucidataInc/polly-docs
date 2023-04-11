@@ -25,7 +25,9 @@ nav:
       - Single Cell RNA Sequencing FAQs: OmixAtlas/scRNA_seq_FAQs.md
       - Accessing OmixAtlas: OmixAtlas/Accessing OmixAtlas.md
       - How to Find Datasets: OmixAtlas/Find_datasets.md
-      - Applications: OmixAtlas/Applications.md
+      - Applicatons:
+        - Phantasus: Apps/Phantasus.md
+        - Cellxgene: Apps/Cellxgene.md
   - Polly Python: '!import https://github.com/ElucidataInc/polly-python-code?branch=multirepo_plugin_docs&extra_imports=["polly/*"]'
   - Polly Compute:
     - Polly Notebooks:
@@ -49,8 +51,6 @@ nav:
       - Nextflow Output: Apps/Polly Workflow/Reading Nextflow Output.md
     - Polly Applications: 
       - Application Features: Apps/Introduction.md
-      - Phantasus: Apps/Phantasus.md
-      - Cellxgene: Apps/Cellxgene.md
       - Discover: Apps/Polly Discover Application.md
       - Dual Mode Data Visualization: Apps/Metabolomic Data/Dual Mode Visualization.md
       - El-MAVEN: Apps/Metabolomic Data/El-MAVEN.md

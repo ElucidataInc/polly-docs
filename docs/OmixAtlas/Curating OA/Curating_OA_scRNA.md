@@ -17,7 +17,7 @@
 | Gene | This field provides the gene(s) studied in the dataset. | Gene | curated_gene |
 | Single cell chemistry | This field represents the sequencing method/platform used for sequencing the single cell genome. | Single cell chemsitry | curated_single_cell_chemistry |
 | Sampling technique | This field represents the method/procedure used for collecting samples. | Sampling technique | curated_sampling_technique |
-| Sampling storage technique | This field represents the method/technique used for preservation or storage of sample for analysis. | Sampling storage technique | curated_storage_technique |
+| Sample storage technique | This field represents the method/technique used for preservation or storage of sample for analysis. | Sampling storage technique | curated_storage_technique |
 | Summary | This field provides a detailed summary of the publication (can be the abstract) or a summary of the experiment. | Summary (Available for datasets from GEO only) | summary |
 | Overall design | This field provides information on the overall design of the experiment as given by the author. | Overall Design (Available for datasets from GEO only) | overall_design |
 | Publication | This field provides the link to the publication associated with the dataset. If the associated publication information is not available, then this field provides the link to the data source providing more information on the dataset. | NA | publication |
@@ -26,7 +26,7 @@
 | Data Type | This field provides the type of biomolecular data represented/studied in the dataset. | NA | data_type |
 | Dataset ID | This field provides the unique id for the dataset/study to represent a group of samples. | Dataset ID | dataset_id |
 | Number of Cells | This field represents the number of cells/observations in the dataset. | Number of Cells | total_num_cells |
-| Samples | This field represents the total number of samples in a dataset. | Samples | total_num_samples |
+| Number of Samples | This field represents the total number of samples in a dataset. | Samples | total_num_samples |
 
 #### 2. Sample Level Metadata
 

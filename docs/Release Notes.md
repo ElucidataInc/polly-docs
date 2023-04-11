@@ -1,4 +1,27 @@
 # Release Notes
+<!--March 27, 2023-->
+
+<details open>
+<summary><font size="+1"><b>March 27, 2023</b></font></summary>
+<br>
+       <p class="Releases-button">Releases</p>
+  <ul> 
+    <li>The Bulk RNA-Seq and Single Cell OmixAtlases have a shortlist page that can be accessed using the shortlist icon on the top left corner of the View Datasets screen. Datasets that users want to shortlist before buying will appear here.
+    <li>Multiple datasets can be selected for shortlisting in one go using the check box feature on each dataset both in Card View and Table View of OmixAtlases. 
+    <li>If users select datasets that they have previously purchased on the source OmixAtlas, they will be notified that the datasets already exist in their atlases.
+    <li>Academic users can sign up directly on Polly, for the Play with Polly project, using their .edu or .ac email addresses.
+    <li>Polly-python supports data ingestion of CSV files which may include: datasets, metadata files, analyses results and so on.
+    <li>The metadata fields ‘year’ and ‘authors’ have been added to all the datasets in the Bulk RNAseq OmixAtlas.
+    <li>Polly is now SOC-2 certified. This means that users' data is secure and protected against data breaches. This certification also overlpas with other industry standards such as ISO 27001, HIPAA, etc.
+       </ul>
+       <br>
+      <p class="update-button">Update</p>
+  <ul>
+         <li>UI improvements have been made to the side navigation bar on Polly, the OmixAtlas page and the OmixAtlas cards.
+         <li>Users will be notified if they are using an older version of polly-python. 
+       </ul>
+</details>
+<hr>
 <!--February 27, 2023-->
 
 <details open>
