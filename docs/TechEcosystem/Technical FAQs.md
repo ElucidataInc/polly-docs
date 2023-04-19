@@ -25,7 +25,7 @@
 
     ![](../img/Tech_Ecosystem/data_audit.png)
 
-2. what are the data types?
+2. **What are the data types?**
 
     | Data types | Description | Repositories |
     | --- | --- | --- |
