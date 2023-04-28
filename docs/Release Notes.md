@@ -1,4 +1,22 @@
 # Release Notes
+<!--April 24, 2023-->
+
+<details open>
+<summary><font size="+1"><b>April 24, 2023</b></font></summary>
+<br>
+       <p class="Releases-button">Releases</p>
+  <ul> 
+    <li>With cell-type ontology recommendations on the OmixAtlas filters, users receive matching and related cells for the cell types they enter. These recommendations contain cells that are hypernyms, hyponyms, or a part of the given cell type. If the user enters the name of a tissue, all the cells that are part of that tissue will be recommended to the user.
+    <li>New datasets on GEO will be added to the Bulk RNASeq OmixAtlas on a weekly basis as they come on to GEO. 
+    <li>The Monitoring Dashboard has been enhanced with optimized filters, improved log availability, and more accurate statuses for runs.
+       </ul>
+       <br>
+      <p class="update-button">Update</p>
+  <ul>
+         <li>The failure issues related to transferring datasets from the Public Data Atlases to the User Data Atlases have been fixed.
+       </ul>
+</details>
+<hr>
 <!--March 27, 2023-->
 
 <details open>
