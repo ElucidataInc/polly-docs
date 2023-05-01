@@ -1,4 +1,22 @@
 # Release Notes
+<!--April 24, 2023-->
+
+<details open>
+<summary><font size="+1"><b>April 24, 2023</b></font></summary>
+<br>
+       <p class="Releases-button">Releases</p>
+  <ul> 
+    <li>With cell-type ontology recommendations on the OmixAtlas filters, users receive matching and related cells for the cell types they enter. These recommendations contain cells that are hypernyms, hyponyms, or a part of the given cell type. If the user enters the name of a tissue, all the cells that are part of that tissue will be recommended to the user.
+    <li>New datasets on GEO will be added to the Bulk RNASeq OmixAtlas on a weekly basis as they come on to GEO. 
+    <li>The Monitoring Dashboard has been enhanced with optimized filters, improved log availability, and more accurate statuses for runs.
+       </ul>
+       <br>
+      <p class="update-button">Update</p>
+  <ul>
+         <li>The failure issues related to transferring datasets from the Public Data Atlases to the User Data Atlases have been fixed.
+       </ul>
+</details>
+<hr>
 <!--March 27, 2023-->
 
 <details open>
@@ -8,11 +26,10 @@
   <ul> 
     <li>The Bulk RNA-Seq and Single Cell OmixAtlases have a shortlist page that can be accessed using the shortlist icon on the top left corner of the View Datasets screen. Datasets that users want to shortlist before buying will appear here.
     <li>Multiple datasets can be selected for shortlisting in one go using the check box feature on each dataset both in Card View and Table View of OmixAtlases. 
-    <li>If users select datasets that they have previously purchased on the source OmixAtlas, they will be notified that the datasets already exist in their atlases.
     <li>Academic users can sign up directly on Polly, for the Play with Polly project, using their .edu or .ac email addresses.
-    <li>Polly-python supports data ingestion of CSV files which may include: datasets, metadata files, analyses results and so on.
+    <li>Polly-python supports data ingestion of .CSV files which may include: datasets, metadata files, analyses results and so on.
     <li>The metadata fields ‘year’ and ‘authors’ have been added to all the datasets in the Bulk RNAseq OmixAtlas.
-    <li>Polly is now SOC-2 certified. This means that users' data is secure and protected against data breaches. This certification also overlpas with other industry standards such as ISO 27001, HIPAA, etc.
+    <li>Polly is now SOC-2 certified. This means that users' data is secure and protected against data breaches. This certification also overlaps with other industry standards such as ISO 27001, HIPAA, etc.
        </ul>
        <br>
       <p class="update-button">Update</p>
@@ -45,7 +62,7 @@
 <br>
        <p class="update-button">Update</p>
   <ul>
-         <li>On **polly-python**, upon changing the schema of an OmixAtlas, users will be alerted of the impact of the specific change.The waiting time for viewing datasets that are being ingested, via the ingestion monitoring dashboard, will only be 2 minutes.
+         <li>On **polly-python**, upon changing the schema of an OmixAtlas, users will be alerted of the impact of the specific change.
          <li>On the OmixAtlases, the performance of omixatlas summaries, dataset details, datasets search and search filters has been improved to facilitate a smoother experience. 
        </ul>
 </details>
@@ -60,7 +77,7 @@
     <li>For base dockers, python, R and pollyglot, memory & CPU utilization will be displayed within the notebooks.  
     <li>Users will be informed when they utilize 70% of the memory in their notebooks.
     <li>The notebook loading page will show the time it will take to load notebooks 
-    <li>Drug ontolology recommendation is now available on the OmixAtlas UI. Structurally similar drugs will be recommended when users search for drugs and on searching for genes, drugs that target the gene will be suggested.
+    <li>Drug ontology recommendation is now available on the OmixAtlas UI. Structurally similar drugs will be recommended when users search for drugs and on searching for genes, drugs that target the gene will be suggested.
     <li>OmixAtlas cards on the OmixAtlas home page have tags that differentiate source and destination OmixAtlases.  
     <li>The Single-Cell OmixAtlas has been created with 1840 cell-type curated datasets from multiple sources, including high value publications.
     <li>Manually curated labels for age, gender, donor and sampling site have been added to the Single-Cell OmixAtlas.
@@ -70,7 +87,6 @@
 <br>
        <p class="update-button">Update</p>
   <ul>
-         <li>The waiting time for viewing datasets that are being ingested, via the ingestion monitoring dashboard, will only be 2 minutes.
          <li>Reports linked to datasets can now be previewed instead of being downloaded and then viewed.
          <li>The schema is automatically validated before inserting a new schema or updating the existing schema of an OmixAtlas.
          <li>In the download metadata function, users now have the option to select the keys to be field_name or original_name. 
@@ -92,7 +108,7 @@
                   <li>Datasets level: Tissue, Disease, Cell Line, Organism, Gene, Strain, Drug.
                   <li>Sample Level: Tissue, Strain, Disease, Drug, Genotype, Cell Line, Control Perturbation.
            </ul>
-    <li>Sample-level cancer stage and dataset level treatment and clinical labels were added to the new BulkRNASeq OmixAtlas with >42k datasets (Kallisto raw counts). 
+    <li>Sample-level cancer stage and dataset-level treatment and clinical labels were added to the new BulkRNASeq OmixAtlas with >42k datasets (Kallisto raw counts). 
     <li>Users now have an option to move datasets from the Bulk RNA-Seq and Single Cell OmixAtlases to their organization’s OmixAtlases by themselves.
     <li>Users can request for additional services such as curation and QC directly from the OmixAtlas UI.
                 </ul>
@@ -100,11 +116,11 @@
        <p class="update-button">Update</p>
   <ul>
          <li>The workspace search is faster, offering better results based on the user’s query.
-         <li>New singe-cell datasets from Broad SC Portal, ExpressionAtlas and Covid19 Atlas have been added to the Single-Cell OmixAtlas.
+         <li>New single-cell datasets from Broad SC Portal, ExpressionAtlas and Covid19 Atlas have been added to the Single-Cell OmixAtlas.
          <li>The speed of dataset ingestion for Bulk RNA-seq data has been improved 30x. 100 datasets are currently being added per day.
          <li>Higher anndata version (>=0.8) is supported while indexing .h5ad files.
          <li>Arrays can now be stored in sample level metadata (.gct files).
-         <li>Improved visibility of sample level metadata in the Details Page for better understanding a dataset.
+         <li>The visibility of sample level metadata in the Details Page has been improved for understanding a dataset better.
        </ul>
 </details>
 <hr>
@@ -118,9 +134,7 @@
     <li>.h5seurat files are now supported on OmixAtlases. 
     <li>3 new fields have been curated for 101k GEO datasets on the platform - cancer stage, chemical treatment and clinical labels.
     <li>On the OmixAtlas, the filter result counts for each category are visible and clickable to enable easy navigation to relevant datasets. For instance, on filtering diseases, users will get 18414 normal samples, 2063 neoplasms and 1374 obesity samples which users can access by just clicking on the respective filter entries.
-    <li>The OmixAtlas table view can be expanded now since the metadata fields visible on the view can be customized through the schema. This offers flexibility for locating useful datasets.
-    <li>Curation admins can track the time spent by each curator on the curation app per task or as a whole on the dashboard. 
-    <li>Collections for curation can now be created for Gene and Drug based OmixAtlases as well.  
+    <li>The OmixAtlas table view can be expanded now since the metadata fields visible on the view can be customized through the schema. This offers flexibility for locating useful datasets. 
                 </ul>
 <br>
        <p class="update-button">Update</p>
@@ -160,7 +174,8 @@ In this release, it supports even more precise and advanced search operations us
                        <li>availability of ontology recommendations 
                        <li>search fields 
                 </ul>
-                <li>Curated metadata from the curation app can also be exported as a .csv file apart from .json.  
+                <li>Curated metadata from the curation app can also be exported as a .
+                       file apart from .json.  
                 <li>New users can accept the End User License Agreement (EULA) directly on the Polly platform during their first login. 
        </ul>
 </details>
