@@ -4,7 +4,7 @@ nav:
   - About Polly: index.md  
   - Before You Start:
       - Privacy Policy: Getting Started/Privacy Policy.md
-      - Prequisites of UI and CLI: Getting Started/Prerequisites.md
+      - Prerequisites of UI and CLI: Getting Started/Prerequisites.md
   - QuickStart:
       - Accessing The Platform: Getting Started/index1.md
       - Your Workspaces: Getting Started/Your Workspaces2.md

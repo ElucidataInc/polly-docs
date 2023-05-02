@@ -1,6 +1,6 @@
 All the data being ingested and/or generated inside Polly is being stored inside AWS. Types of data include input/output files, logs, DB transactional data & static data. No data as of now is being stored outside of the AWS account. Although AWS provides very high durability and reliability for all the data stores, there is still a risk associated with some circumstances like accidental deletion, natural hazard & unwanted access to the AWS account.
 
-## Datastores
+## Data-stores
 
 There are majorly 5 data stores in which the data is being stored currently inside AWS:
 

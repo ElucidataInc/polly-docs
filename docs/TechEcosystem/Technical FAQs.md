@@ -1,6 +1,6 @@
 ### Technical Sales FAQs
 
-1. **What is data audit?**
+#### 1. **What is data audit?**
 
     The process of data audit begins with a discovery call to understand the data requirements of the prospective customer. The data requirements are captured via questionnaire. Using the points noted in the questionnaire. Accordingly, data audit is performed,
 
@@ -25,7 +25,7 @@
 
     ![](../img/Tech_Ecosystem/data_audit.png)
 
-2. what are the data types?
+#### 2. **What are the data types?**
 
     | Data types | Description | Repositories |
     | --- | --- | --- |
@@ -56,7 +56,7 @@
     | Lab measurement | Non-omics data like those from **blood clinical chemistry results** like blood reports that have Whole Blood Count, Red Blood Count, lipid profile | ImmPort |
     | SNP array | SNP array is **a type of DNA microarray which is used to detect polymorphisms within a population**. A single nucleotide polymorphism (SNP), a variation at a single site in DNA, is the most frequent type of variation in the genome. | GEO |
 
-3. What usecases do we have for curated data (prioritise cancer/treatment data)?
+#### 3. What usecases do we have for curated data (prioritise cancer/treatment data)?
 
     We have the following use cases for curated data -
 
