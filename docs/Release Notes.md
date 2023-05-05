@@ -8,7 +8,8 @@
   <ul> 
     <li>With cell-type ontology recommendations on the OmixAtlas filters, users receive matching and related cells for the cell types they enter. These recommendations contain cells that are hypernyms, hyponyms, or a part of the given cell type. If the user enters the name of a tissue, all the cells that are part of that tissue will be recommended to the user.
     <li>New datasets on GEO will be added to the Bulk RNASeq OmixAtlas on a weekly basis as they come on to GEO. 
-    <li>The Monitoring Dashboard has been enhanced with optimized filters, improved log availability, and more accurate statuses for runs.
+    <li>The Monitoring Dashboard has been enhanced with optimized filters, and more accurate statuses for runs.
+    <li>While querying on polly-python, users can now query based on ‘views’ available in the OmixAtlas. This will help generate query responses specific to the dataset source and/or data type mentioned in the schema.
        </ul>
        <br>
       <p class="update-button">Update</p>
