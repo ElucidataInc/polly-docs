@@ -33,7 +33,7 @@ All Bulk RNA-Seq Datasets on Polly are processed using a Kallisto pipeline. The 
 - Genome sequence (fasta)
 **Process flow**
 
-![Process flow](../img/OmixAtlas-Images/1_1.png) <center>**Figure 1.** Process Flow</center>
+![Process flow](../img/OmixAtlas-Images/Group.png) <center>**Figure 1.** Process Flow</center>
 
 #### Details of the processing steps:
 
