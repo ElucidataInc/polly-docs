@@ -71,7 +71,7 @@ All Bulk RNA-Seq Datasets on Polly are processed using a Kallisto pipeline. The 
 
 ### **Do you currently provide or plan to provide alternatives to bulk RNAseq processing?**
 
-We process the bulk RNAseq datasets using the Kallisto pipelines as it is less computationally demanding and has been shown to perform as well as the STAR pipeline [Reference for Comparison of Kallisto and STAR based on the number of detected genes and ability to predict Gene Ontology (GO) biological processes](https://www.nature.com/articles/s41467-018-03751-6#Sec9). If required, we can also process the datasets you purchase using STAR or any other custom pipeline of choice at additional cost. This will be considered a custom pipeline service.
+We process the bulk RNAseq datasets using the Kallisto pipelines as it is less computationally demanding and has been shown to perform as well as the STAR pipeline [Reference](https://www.nature.com/articles/s41467-018-03751-6#Sec9). If required, we can also process the datasets you purchase using STAR or any other custom pipeline of choice at additional cost. This will be considered a custom pipeline service.
 
 ### **Which fields are curated for bulk RNASeq data Data?**
 
@@ -87,7 +87,7 @@ Detailed list of curated fields could be accessed [here](https://docs.elucidata.
 
 ### Are all metadata fields from the source retained?
 
-All metadata fields from the source publication are captured in the GCT file and can be visualized on the details page of a dataset ID or through applications. However, only the fields described in the OmixAtlas schema are available for querying Polly Python.
+All metadata fields from the source publication are captured in the GCT file and can be visualized on the details page of a dataset ID or through applications. However, only the fields described in the OmixAtlas schema are available for querying via Polly Python.
 
 ### Can users request for datasets on Polly?
 
