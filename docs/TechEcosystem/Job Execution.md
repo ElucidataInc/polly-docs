@@ -69,7 +69,8 @@ Alternatively, users can log jobs status using interactive commnd prompt.
 **Note:**  
 
 *   If you are within a Polly environment while accessing Polly CLI (like notebook or CLI job), workspace id can be auto-detected by passing `--yes` or `-y` in the command instead of `--workspace-id` parameter.
-
+*   User can use any alphanumeric key to exit out of the interactive window. 
+*   Interactive window will exit automatically after displaying the jobs status, if remaining jobs are less then 20.
 
 ##Polly CLI help
 
