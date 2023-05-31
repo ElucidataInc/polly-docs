@@ -32,6 +32,12 @@ A prompt to enter job id will appear which when kept blank gets all the job stat
 
 ![All Job Statuses in a Workspace](../img/PollyCLI/6.png "All Job Statuses in a Workspace") <center>**Figure 4.** All Job Statuses in a Workspace</center>
 
+*   The following command can be used to view the status of a particular job.
+`polly jobs status --workspace-id  --job-id`
+
+*   The following command can be used to view the statuses of all the jobs in a workspace.
+`polly jobs status --workspace-id`
+
 *   If you are within a Polly environment while accessing Polly CLI (like notebook or CLI job), workspace id can be auto-detected by passing `--yes` or `-y` in the command instead of `--workspace-id` parameter.
 
 Alternatively, users can check jobs status using interactive commnd prompt.
