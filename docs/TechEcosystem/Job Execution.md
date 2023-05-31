@@ -35,14 +35,22 @@ A prompt to enter job id will appear which when kept blank gets all the job stat
 *   The following command can be used to view the status of a particular job.
 `polly jobs status --workspace-id  --job-id`
 
+![View Job Status](../img/PollyCLI/Job_status_1.png "All Job Statuses in a Workspace") <center>**Figure 5.** View Job Status of a Particular Job</center>
+
 *   The following command can be used to view the statuses of all the jobs in a workspace.
 `polly jobs status --workspace-id`
+
+![View Job Status](../img/PollyCLI/Job_status_2.png "All Job Statuses in a Workspace") <center>**Figure 6.** View Job Status of All Jobs</center>
+
+*   Users can use enter ⏎ to fetch more jobs(in batch 20).
+
+![View Job Status](../img/PollyCLI/Job_status_3.png "All Job Statuses in a Workspace") <center>**Figure 7.** View Job Status of All Jobs</center>
 
 *   If you are within a Polly environment while accessing Polly CLI (like notebook or CLI job), workspace id can be auto-detected by passing `--yes` or `-y` in the command instead of `--workspace-id` parameter.
 
 Alternatively, users can check jobs status using interactive commnd prompt.
 
-![All Job Statuses in a Workspace](../img/PollyCLI/12a.png "All Job Statuses in a Workspace") <center>**Figure 5.**Job Status in a Workspace</center>
+![All Job Statuses in a Workspace](../img/PollyCLI/12a.png "All Job Statuses in a Workspace") <center>**Figure 8.**Job Status in a Workspace</center>
 
 **Get job logs**
 
@@ -52,11 +60,11 @@ To view the logs of any job, use the following command:
 
 This will give the logs for the job. In case the job is still running, it will give the logs generated till that instant.
 
-![Job Logs](../img/PollyCLI/7.png "Job Logs") <center>**Figure 6.** Job Logs</center>
+![Job Logs](../img/PollyCLI/7.png "Job Logs") <center>**Figure 9.** Job Logs</center>
 
 Alternatively, users can log jobs status using interactive commnd prompt.
 
-![ Job log in a Workspace](../img/PollyCLI/13a.png "All Job Statuses in a Workspace") <center>**Figure 7.** Job logs</center>
+![ Job log in a Workspace](../img/PollyCLI/13a.png "All Job Statuses in a Workspace") <center>**Figure 10.** Job logs</center>
 
 **Note:**  
 
