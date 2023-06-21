@@ -10,7 +10,7 @@
            <ul>
                   <li>Dataset Overview: This section provides basic details about the dataset such as PubMed ID, link to the source, authors, summary, etc. 
                   <li>Metadata Table: A table with cleaner and more harmonized metadata columns compared to the data source.
-                  <li>Metadata Charts: A section where you can create interactive sunburst plots with up to 4 metadata fields plotted at a time. By default, the experimental factors field (see below) is represented here.
+                  <li>Metadata Charts: A section where you can create interactive sunburst plots with up to 4 metadata fields plotted at a time. By default, experimental factors are represented in the sunburst plot.
            </ul> 
     <li>Experimental variables that vary within the samples of a dataset are available as a separate field on Polly called `experimental factors`. This field will contain a list of variables. The list of variables can be found on the table view of the Bulk RNAseq OmixAtlas, in the metadata tables of datasets, and in the dataset overview section of the Details page of datasets. 
     <li>Interactive filters and more relevant graphs are available in the summary pages of OmixAtlases.
