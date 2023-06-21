@@ -1,4 +1,35 @@
 # Release Notes
+<!--May 22, 2023-->
+
+<details open>
+<summary><font size="+1"><b>May 22, 2023</b></font></summary>
+<br>
+       <p class="Releases-button">Releases</p>
+  <ul> 
+    <li>The Details page of datasets in the Bulk RNAseq OmixAtlas has been revamped to offer a cleaner interface with information divided into three sections:
+           <ul>
+                  <li>Dataset Overview: This section provides basic details about the dataset such as PubMed ID, link to the source, authors, summary, etc. 
+                  <li>Metadata Table: A table with cleaner and more harmonized metadata columns compared to the data source.
+                  <li>Metadata Charts: A section where you can create interactive sunburst plots with up to 4 metadata fields plotted at a time. By default, experimental factors are represented in the sunburst plot.
+           </ul> 
+    <li>Experimental variables that vary within the samples of a dataset are available as a separate field on Polly called `experimental factors`. This field will contain a list of variables. The list of variables can be found on the table view of the Bulk RNAseq OmixAtlas, in the metadata tables of datasets, and in the dataset overview section of the Details page of datasets. 
+    <li>Interactive filters and more relevant graphs are available in the summary pages of OmixAtlases.
+    <li>The metadata fields available on Polly’s Bulk RNAseq OmixAtlas have been given cleaner, more intuitive, and more harmonized names to make them easier to understand. 
+           <ul>
+                  <li>All the source metadata at the sample level will be available under cleaner and harmonized column names. Eg. `characteristics_ch1_2_treatment` → `treatment` , `characteristics_ch1_1_genotype` → `genotype` , `strain_ch1` becomes `strain`
+                  <li>Merged columns where information was spread across two or more columns. The merged information is present in one unique column name. Eg. `characteristics_ch1_0_cell_type` , `characterstics_ch1_1_cell_type` → `cell_type`
+           </ul>
+       </ul>
+       <br>
+      <p class="update-button">Update</p>
+  <ul>
+         <li>When users return to the Monitoring Dashboard, the filters that they had previously set will be retained.
+         <li>When users attempted to transfer datasets from the public data atlas to the user's data atlas, the ingestion process used to be triggered 15 minutes after the attempt. This gap has been removed, and the ingestion process begins immediately after the transfer has been triggered.
+         <li>OmixAtlas landing pages will load faster than before, almost instantly.
+         <li>The majority of the single cell datasets load on Cellxgene within 25-40 seconds, much faster than before.
+       </ul>
+</details>
+<hr>
 <!--April 24, 2023-->
 
 <details open>
