@@ -1,4 +1,23 @@
 # Release Notes
+<!--June 19, 2023-->
+
+<details open>
+<summary><font size="+1"><b>June 19, 2023</b></font></summary>
+<br>
+       <p class="Releases-button">Releases</p>
+  <ul> 
+    <li>A product tour is available in the help section of the navigation bar on the left side. A series of popup messages highlighting the different features and steps will be offered to the users for their onboarding on Polly.
+    <li>Users now have the choice to log out of all currently open sessions when they change their passwords. 
+       </ul>
+       <br>
+      <p class="update-button">Update</p>
+  <ul>
+         <li>Users will now be able to access the datasets they had shortlisted in the Public Data Atlases even after logging out because the datasets in the shortlist will still be available after the user logs out of the current session.
+         <li>The total number of datasets in the Public Data Atlases that are available is now reflected accurately in the dataset number on the OmixAtlas homepage.
+         <li>When applications are opened, more precise timing and the dataset size are displayed.
+       </ul>
+</details>
+<hr>
 <!--May 22, 2023-->
 
 <details open>
