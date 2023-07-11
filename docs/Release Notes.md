@@ -15,6 +15,8 @@
          <li>Users will now be able to access the datasets they had shortlisted in the Public Data Atlases even after logging out because the datasets in the shortlist will still be available after the user logs out of the current session.
          <li>The total number of datasets in the Public Data Atlases that are available is now reflected accurately in the dataset number on the OmixAtlas homepage.
          <li>When applications are opened, more precise timing and the dataset size are displayed.
+       <li>The quality of data with respect to differentiating empty fields has been improved by ensuring consistency between ‘Normal’ inputs in the disease field and 'none' inputs in other fields. 
+       </li>
        </ul>
 </details>
 <hr>
