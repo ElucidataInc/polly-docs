@@ -1,32 +1,28 @@
-## 5. View details
+How to View Dataset Details?
+============================
 
-On clicking the view details option from the dropdown menu of the respective dataset from the results page, users are directed to the view details page. There are three main sections that can be seen on the left side of the page and described below.
+Users can click the "view details" button on the dataset in the results page to view the details of a specific dataset.
 
-![Details](../img/OmixAtlas-Images/19.png) <center>**Figure 19.** Dataset Details</center>
-
-
-### 5.1 Dataset overview
-
-Dataset overview includes the description of the dataset, number of samples, link to the source and the metadata tags associated with the dataset.
-
-![Overview](../img/OmixAtlas-Images/20.png) <center>**Figure 20.** Dataset Overview</center>
-
-### 5.2 Metadata
-
-The metadata section consists of a dashboard showcasing charts displayed for different metadata attributes such as disease, cell type and tissue type. There is an option to view the metadata either in graphical format or a tabular format.
-
-The graphical format displays pie-charts/histograms for different attributes. Users can click on legends to select and filter the graphs.
-
-![Metadata](../img/OmixAtlas-Images/21.png) <center>**Figure 21.** Metadata in Graphical Format</center>
+![OA_view_1](https://github.com/ElucidataInc/polly-docs/assets/107244183/645c473a-552b-4a2d-bd51-5ac257908190)
 
 
-The tabular format consists of a comprehensive snapshot of the biological characteristics of samples used in the dataset. We plan to make this format more schema driven in the future.
+The top of the page features three main sections, which are described below.
 
-![Metadata](../img/OmixAtlas-Images/22.png) <center>**Figure 22.** Metadata in Tabular Format</center>
+### Dataset Overview
+
+The dataset overview includes the description of the dataset, the number of samples, the link to the source, and the metadata tags associated with the dataset.
+
+![OA_view_2](https://github.com/ElucidataInc/polly-docs/assets/107244183/75622831-6303-4327-b855-ed0df4787969)
+
+### Metadata Table
+
+The metadata table consists of sample details, protocol, source metadata fields, and curated metadata fields.
+
+![OA_view_3](https://github.com/ElucidataInc/polly-docs/assets/107244183/e19fdf14-9570-4f7c-b5be-7e6aa8931552)
 
 
-### 5.3 Processed data
+### Metadata Charts
 
-The processed data with normalized values is presented as a table that is available for downloading.
+Metadata charts consist of the experimental factors along with a sunburst plot. The Sunburst Plot is used to display a hierarchical structure. Each level of the hierarchy is represented by one ring or circle and all rings show how the outer rings relate to the inner rings. To create a sunburst plot, the user can select the metadata in the rings based on their own criteria.
 
-![Processed](../img/OmixAtlas-Images/23.png) <center>**Figure 23.** Processed Data</center>
+![OA_view_4](https://github.com/ElucidataInc/polly-docs/assets/107244183/dcc19e5f-51ba-4ece-8efa-b75d2436b3e1)
