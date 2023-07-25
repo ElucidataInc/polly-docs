@@ -54,3 +54,6 @@ Users can filter the datasets by selecting the drug of interest.
 Users can filter the datasets by selecting the platform.
 
 ![Filter](../img/OmixAtlas-Images/13a.png)
+
+## OmixAtlas Searching and Filtering 
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/bHdl6I2YAoc/0.jpg)](https://www.youtube.com/watch?v=bHdl6I2YAoc)
