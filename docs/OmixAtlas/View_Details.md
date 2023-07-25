@@ -26,3 +26,10 @@ The metadata table consists of sample details, protocol, source metadata fields,
 Metadata charts consist of the experimental factors along with a sunburst plot. The Sunburst Plot is used to display a hierarchical structure. Each level of the hierarchy is represented by one ring or circle and all rings show how the outer rings relate to the inner rings. To create a sunburst plot, the user can select the metadata in the rings based on their own criteria.
 
 ![OA_view_4](https://github.com/ElucidataInc/polly-docs/assets/107244183/dcc19e5f-51ba-4ece-8efa-b75d2436b3e1)
+
+### Cell Type Visualization
+
+Users can see the relative distribution of cell numbers across different cell types when viewing the details of a single-cell RNA-seq dataset before selecting a dataset for analysis.
+
+![OA_view_5](https://github.com/ElucidataInc/polly-docs/assets/107244183/b25cd57b-5594-4c64-8ac9-6e1077ed3a91)
+
