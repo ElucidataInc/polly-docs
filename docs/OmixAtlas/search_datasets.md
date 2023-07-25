@@ -72,5 +72,6 @@ All datasets include the PubMed ID for easy access to the publication. Additiona
 
 ![OA_search_5](https://github.com/ElucidataInc/polly-docs/assets/107244183/88130d99-4bb1-42c8-831e-62d0eabd9848)
 
-
+## OmixAtlas Searching and Filtering 
+[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/bHdl6I2YAoc/0.jpg)](https://www.youtube.com/watch?v=bHdl6I2YAoc)
 
