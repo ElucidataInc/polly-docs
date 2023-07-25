@@ -124,6 +124,14 @@ Based on the marker expression value for each cluster, the cell type is annotate
 2. Marker information: Gene name/names that are differentially expressed in the cluster
   - curated\_marker\_present: Gene name/names that are differentially expressed in the cluster
   - curated\_marker\_absent: Gene name/names that are absent in the cluster
+  - 
+
+### Cell Type Visualization
+
+Users can see the relative distribution of cell numbers across different cell types when viewing the details of a single-cell RNA-seq dataset before selecting a dataset for analysis.
+
+![OA_view_5](https://github.com/ElucidataInc/polly-docs/assets/107244183/ee7df3df-f754-4f29-89d3-e9f9c20323bd)
 
 **NOTE** : For manual cell type curation, datasets should be available on Polly.
                              
+
