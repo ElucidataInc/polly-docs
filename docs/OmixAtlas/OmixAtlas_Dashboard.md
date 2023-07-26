@@ -25,7 +25,7 @@ a. Title: This describes the title of the study the dataset is taken from.
 
 ![OA_3](https://github.com/ElucidataInc/polly-docs/assets/107244183/dbfdd0d8-0d13-4f7b-b882-4e0ef8326387) <center> Dataset Title</center>
 
-b. Summary: This section provides a short summary of the publication. Users can click on the 'more' function to check the full summary.
+b. Summary: This section provides a summary of the publication. Users can click on the 'more' function to check the full summary.
 
 ![OA_4](https://github.com/ElucidataInc/polly-docs/assets/107244183/23a5234d-c4dc-4a18-ab6c-f3908ea96736) <center> Dataset Summary</center>
 
@@ -41,32 +41,37 @@ d. Abstract: This section provides the abstract directly from the publication. U
 
 There is an Options function on the top right under the individual card containing the dataset.
 
-![Options](../img/OmixAtlas-Images/11.png) <center>**Figure 6.** Options under Card View</center>
+![Options](../img/OmixAtlas-Images/11.png) <center> Options under Card View</center>
 
 Upon clicking, users can choose from the following -
 
 - Analyze - upon choosing 'analyze'; there will be options to open the dataset using different applications to analyze the dataset.
 
-![Analyze](../img/OmixAtlas-Images/12.png) <center>**Figure 7.** Analyze function under Card View</center>
+![Analyze](../img/OmixAtlas-Images/12.png) <center>Analyze function under Card View</center>
 
 - Copy to Workspaces - Users can copy the dataset to the desired workspace.
 
-![Copy](../img/OmixAtlas-Images/13.png) <center>**Figure 8.** Copy to Workspaces Function under Card View</center>
+![Copy](../img/OmixAtlas-Images/13.png) <center>Copy to Workspaces Function under Card View</center>
+
+- View Report - Users can view the reports attached to the dataset.
+
+![OA_9](https://github.com/ElucidataInc/polly-docs/assets/107244183/40d745dd-26f9-46e7-ac88-1f7227b4f44d) <center>View Report</center>
+
 
 - Download - Users can download the dataset in case they want to analyze it using a different application.
 
-![Download](../img/OmixAtlas-Images/14.png) <center>**Figure 9.** Download Function under Card View</center>
+![Download](../img/OmixAtlas-Images/14.png) <center>Download Function under Card View</center>
 
 
 ### Table View
 
 On the OmixAtlas interface, the results are arranged in a table view with columns representing the metadata fields. Users can sort through the metadata fields, including the dataset id, sample count, description, drugs, cell type, cell line, disease, and more. The results show up in order of relevance to their search query. Alongside the column header is a sorting function that allows the user to see the results of sorting in either ascending or descending order.
 
-![Table View](../img/OmixAtlas-Images/15.png) <center>**Figure 10.** Table Card View</center>
+![OA_8](https://github.com/ElucidataInc/polly-docs/assets/107244183/49fe7e35-7f82-4a32-91f4-18418e22736d)
 
 By clicking the "Gear" icon and choosing the necessary columns, users can alter the columns in a table. Additionally, users can adjust columns by selecting the "Pin" icon. 
 
-![Customizable Table](../img/OmixAtlas-Images/16.png) <center>**Figure 11.** Customizable Table</center>
+![Customizable Table](../img/OmixAtlas-Images/16.png) <center> Customizable Table</center>
 
 ### Color Codes
 
