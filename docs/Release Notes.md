@@ -1,4 +1,34 @@
 # Release Notes
+<!--July 17, 2023-->
+
+<details open>
+<summary><font size="+1"><b>July 17, 2023</b></font></summary>
+<br>
+       <p class="Releases-button">Releases</p>
+ <ul> 
+    <li>Cell-type distribution numbers are available for single-cell datasets on the revamped details page under the Cell Type Visualization tab. The Metadata Table tab contains a schema-driven and customizable metadata table that can be used to interact with cell-level metadata, while the Dataset Overview tab provides general dataset details.
+    <li>The search results on OmixAtlases have been enhanced, and the keywords found will now be ranked higher. This is because the search bar is equipped with a new NER model that can recognize disease, tissue, drugs, and cell lines.
+<li>GEO accession numbers and PubMed IDs will be highlighted in yellow in the search results when searching for datasets using them. Other text keywords will be highlighted with bold text as they appear in the different description tabs on the cards.
+       </ul>
+  <br>
+      <p class="update-button">Update</p>
+      <ul>
+<li>Switching between card view and table view will be faster than before.
+<li>Polly-python:
+<ul>
+<li>The `query_metadata` function has been optimized for memory utilization.
+<li>The `identify_cohorts` function has been improved. It will:
+<ul>
+        <li>Give distribution of factors to users
+<li>Show number of samples in all cohorts
+<li>Show users how to plot sunburst with custom columns as code in docs
+<li> Print a message when user calls the function with 1 sample and the sunburst is empty
+        </ul>
+<li>polly-python installation will be smoother than before as it has been tested for compatibility for python versions >3.6.
+</li></ul>
+</ul>
+</details>
+<hr>
 <!--June 19, 2023-->
 
 <details open>
