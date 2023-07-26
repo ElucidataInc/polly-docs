@@ -4,7 +4,7 @@ The OmixAtlas landing page offers OmixAtlases under two different sections - Pub
 
 Under public data atlases, there are two source atlases: Bulk RNA-seq and single-cell RNA-seq OmixAtlas. User Data Atlases contain destination atlas and enterprise OmixAtlas.
 
-![Homepage](../img/OmixAtlas-Images/OA_1.png) <center>**Figure 1.** OmixAtlas Homepage</center>
+![Homepage](../img/OmixAtlas-Images/OA_1.png) <center> OmixAtlas Homepage</center>
 
 ## View All Data
 
@@ -14,7 +14,7 @@ Users can view datasets in either the **Card view** or the **Table view** format
 
 Datasets are organized as a list of horizontal cards in this view. Each card includes a description of the dataset, followed by colored metadata tags that specify the dataset's properties. Annotations supported by ontologies such as organism, disease, tissue, drug, cell type, and cell line are included in the metadata information. All of the datasets that are queryable and searchable on an OmixAtlas can be seen in card view at one glance. The search bar can be used to search for keywords that are present across source metadata (title, description, etc.) and curated metadata (such as drug, tissue, cell type, etc.). The search results can be narrowed down using the dynamic filtering options on the left side.
 
-![CardView](../img/OmixAtlas-Images/7.png) <center>**Figure 2.** Card View (A - Request a Dataset, B - Search Bar, C - Filter options, D - Collapsable filter, E - Switch between Card View and Table View, F - Sorting Function)</center>
+![OA_2](https://github.com/ElucidataInc/polly-docs/assets/107244183/f4aeb94c-f24f-40a1-a854-3946a0381f2c) <center>Card View (A - Request a Dataset, B - Search Bar, C - Filter options, D - Collapsable filter, E - Switch between Card View and Table View, F - Sorting Function)</center>
 
 
 #### Datasets under card view
@@ -23,15 +23,19 @@ The individual dataset under card view consists of the following -
 
 a. Title: This describes the title of the study the dataset is taken from.
 
-![Title](../img/OmixAtlas-Images/8.png) <center>**Figure 3.** Dataset Title</center>
+![OA_3](https://github.com/ElucidataInc/polly-docs/assets/107244183/dbfdd0d8-0d13-4f7b-b882-4e0ef8326387) <center> Dataset Title</center>
 
-b. Summary: This section describes the abstract of the study taken from the publication. Users can click on the 'more' function to check the full abstract.
+b. Summary: This section provides a short summary of the publication. Users can click on the 'more' function to check the full summary.
 
-![Title](../img/OmixAtlas-Images/9.png) <center>**Figure 4.** Dataset Summary</center>
+![OA_4](https://github.com/ElucidataInc/polly-docs/assets/107244183/23a5234d-c4dc-4a18-ab6c-f3908ea96736) <center> Dataset Summary</center>
 
 c. Overall Design: This section describes the study design and methodology taken from the publication. Users can click on the 'more' function to check the full study design.
 
-![Design](../img/OmixAtlas-Images/10.png) <center>**Figure 5.** Overall Design</center>
+![OA_5](https://github.com/ElucidataInc/polly-docs/assets/107244183/73c6c6a8-cb4b-4bae-a7d5-0078039c4976) <center> Overall Design</center>
+
+d. Abstract: This section provides the abstract directly from the publication. Users can click on the 'more' function to check the full abstract.
+
+![OA_6](https://github.com/ElucidataInc/polly-docs/assets/107244183/a6df5cf1-08cd-47af-b582-822fa2f8dacc) <center> Abstract</center>
 
 #### Options under card view
 
@@ -90,21 +94,14 @@ From the top right drop-down menu in the card view, datasets can be sorted by Re
 
 Datasets in the table view can be sorted using the sorting function next to the column header to see the results in either ascending or descending order.
 
-![Sorting](../img/OmixAtlas-Images/18.png) <center>**Figure 13.** Sorting using Column Header</center>
+![Sorting](../img/OmixAtlas-Images/18.png) <center> Sorting using Column Header</center>
 
 ## Request a dataset
 
 If the dataset is not present, users can request a dataset to be added to OmixAtlas by going to the 'Request a Dataset' function on the top right of the OmixAtlas summary page. Users need to fill out a short form to request a dataset that needs to be added.
 
-![Request](../img/OmixAtlas-Images/24.png) <center>**Figure 14.** Request a Dataset</center>
+![Request](../img/OmixAtlas-Images/24.png) <center> Request a Dataset</center>
 
-## Polly Basic
-
-With two types of OmixAtlasses - Source and Destination, users can move the dataset from the source to their destination atlas using Polly credits.
-
-![Move Data](../img/OmixAtlas-Images/25.png) <center>**Figure 15.** Move Dataset</center>
-
-After clicking 'Move Data', users get a notification via email when the dataset is moved.
 
 ## Downloading DE data from Phantasus
 
