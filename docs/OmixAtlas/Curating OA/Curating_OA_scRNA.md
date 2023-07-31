@@ -130,7 +130,7 @@ Based on the marker expression value for each cluster, the cell type is annotate
 
 Users can see the relative distribution of cell numbers across different cell types when viewing the details of a single-cell RNA-seq dataset before selecting a dataset for analysis.
 
-![OA_view_5](https://github.com/ElucidataInc/polly-docs/assets/107244183/ee7df3df-f754-4f29-89d3-e9f9c20323bd)
+![Homepage](../img/OmixAtlas-Images/OA_view_5.png) 
 
 **NOTE** : For manual cell type curation, datasets should be available on Polly.
                              
