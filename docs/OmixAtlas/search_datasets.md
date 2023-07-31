@@ -45,7 +45,6 @@ Some of the features of the search are - 
 <li>Out of those, ignore the datasets containing the word "radiotherapy".</li></li></ul>
 
 ### Search Examples
-
 Some of the Search examples are as follows:-
 
 - (ITIH1 upregulation | FN1 downregulation) & "Fatty liver"
@@ -56,11 +55,9 @@ Some of the Search examples are as follows:-
 
 ![Example](../img/OmixAtlas-Images/3a.png) 
 
-
 - CDK7 & "CBM signaling pathway" & inhibition
 
 ![Example](../img/OmixAtlas-Images/4a.png) 
-
 
 - (somatic mutation) & (hepatocellular | renal) & (cancer | carcinoma)
 
@@ -70,7 +67,7 @@ Some of the Search examples are as follows:-
 
 All datasets include the PubMed ID for easy access to the publication. Additionally, the search bar allows users to look for datasets based on the PubMed ID.
 
-![OA_search_5](https://github.com/ElucidataInc/polly-docs/assets/107244183/88130d99-4bb1-42c8-831e-62d0eabd9848)
+![Homepage](../img/OmixAtlas-Images/OA_search_5.png)
 
 ### Dataset Ranking Upon Search
 
