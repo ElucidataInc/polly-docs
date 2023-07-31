@@ -3,7 +3,7 @@ How to View Dataset Details?
 
 Users can click the "view details" button on the dataset in the results page to view the details of a specific dataset.
 
-![OA_view_1](https://github.com/ElucidataInc/polly-docs/assets/107244183/645c473a-552b-4a2d-bd51-5ac257908190)
+![Search Bar](../img/OmixAtlas-Images/OA_view_1.png) 
 
 
 The top of the page features three main sections, which are described below.
