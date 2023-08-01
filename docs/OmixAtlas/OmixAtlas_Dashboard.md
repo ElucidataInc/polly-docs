@@ -14,7 +14,7 @@ Users can view datasets in either the **Card view** or the **Table view** format
 
 Datasets are organized as a list of horizontal cards in this view. Each card includes a description of the dataset, followed by colored metadata tags that specify the dataset's properties. Annotations supported by ontologies such as organism, disease, tissue, drug, cell type, and cell line are included in the metadata information. All of the datasets that are queryable and searchable on an OmixAtlas can be seen in card view at one glance. The search bar can be used to search for keywords that are present across source metadata (title, description, etc.) and curated metadata (such as drug, tissue, cell type, etc.). The search results can be narrowed down using the dynamic filtering options on the left side.
 
-![OA_2](https://github.com/ElucidataInc/polly-docs/assets/107244183/f4aeb94c-f24f-40a1-a854-3946a0381f2c) <center>Card View (A - Request a Dataset, B - Search Bar, C - Filter options, D - Collapsable filter, E - Switch between Card View and Table View, F - Sorting Function)</center>
+![Homepage](../img/OmixAtlas-Images/OA_2.png) <center>Card View (A - Request a Dataset, B - Search Bar, C - Filter options, D - Collapsable filter, E - Switch between Card View and Table View, F - Sorting Function)</center>
 
 
 #### Datasets under card view
@@ -23,19 +23,19 @@ The individual dataset under card view consists of the following -
 
 a. Title: This describes the title of the study the dataset is taken from.
 
-![OA_3](https://github.com/ElucidataInc/polly-docs/assets/107244183/dbfdd0d8-0d13-4f7b-b882-4e0ef8326387) <center> Dataset Title</center>
+![Homepage](../img/OmixAtlas-Images/OA_3.png)  <center> Dataset Title</center>
 
 b. Summary: This section provides a summary of the publication. Users can click on the 'more' function to check the full summary.
 
-![OA_4](https://github.com/ElucidataInc/polly-docs/assets/107244183/23a5234d-c4dc-4a18-ab6c-f3908ea96736) <center> Dataset Summary</center>
+![Homepage](../img/OmixAtlas-Images/OA_4.png)  <center> Dataset Summary</center>
 
 c. Overall Design: This section describes the study design and methodology taken from the publication. Users can click on the 'more' function to check the full study design.
 
-![OA_5](https://github.com/ElucidataInc/polly-docs/assets/107244183/73c6c6a8-cb4b-4bae-a7d5-0078039c4976) <center> Overall Design</center>
+![Homepage](../img/OmixAtlas-Images/OA_5.png) <center> Overall Design</center>
 
 d. Abstract: This section provides the abstract directly from the publication. Users can click on the 'more' function to check the full abstract.
 
-![OA_6](https://github.com/ElucidataInc/polly-docs/assets/107244183/a6df5cf1-08cd-47af-b582-822fa2f8dacc) <center> Abstract</center>
+![Homepage](../img/OmixAtlas-Images/OA_6.png) <center> Abstract</center>
 
 #### Options under card view
 
@@ -55,7 +55,7 @@ Upon clicking, users can choose from the following -
 
 - View Report - Users can view the reports attached to the dataset.
 
-![OA_9](https://github.com/ElucidataInc/polly-docs/assets/107244183/40d745dd-26f9-46e7-ac88-1f7227b4f44d) <center>View Report</center>
+![Homepage](../img/OmixAtlas-Images/OA_9.png) <center>View Report</center>
 
 
 - Download - Users can download the dataset in case they want to analyze it using a different application.
@@ -67,7 +67,7 @@ Upon clicking, users can choose from the following -
 
 On the OmixAtlas interface, the results are arranged in a table view with columns representing the metadata fields. Users can sort through the metadata fields, including the dataset id, sample count, description, drugs, cell type, cell line, disease, and more. The results show up in order of relevance to their search query. Alongside the column header is a sorting function that allows the user to see the results of sorting in either ascending or descending order.
 
-![OA_8](https://github.com/ElucidataInc/polly-docs/assets/107244183/49fe7e35-7f82-4a32-91f4-18418e22736d)
+![Homepage](../img/OmixAtlas-Images/OA_8.png)
 
 By clicking the "Gear" icon and choosing the necessary columns, users can alter the columns in a table. Additionally, users can adjust columns by selecting the "Pin" icon. 
 
@@ -92,7 +92,7 @@ Each curated dataset in OmixAtlas is curated into different fields that are colo
 
 From the top right drop-down menu in the card view, datasets can be sorted by Relevance, Dataset ID, Number of Samples, and Recent Datasets.
 
-![Sorting](../img/OmixAtlas-Images/17.png) <center>**Figure 12.** Sorting Function under Card View</center>
+![Sorting](../img/OmixAtlas-Images/17.png) <center> Sorting Function under Card View</center>
 
 
 ### Table View
