@@ -39,21 +39,11 @@ The Polly Landing page provides access to 3 distinct interconnected modules on P
 
 *   [Use Apps](https://docs.elucidata.io/Apps/Introduction.html)
 
-     Polly hosts a suite of apps and production-ready workflows to analyze and process a variety of data with ease. You can build and host your custom workflows from individual components or choose from a suite of ready-to-use workflows on Polly.
-
-![Manage](../img/Home/Applications.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
-
-*   [Write & Maintain Code](https://docs.elucidata.io/Scaling%20compute/Polly%20Notebooks.html)
-
     Polly enables coding in a range of computational environments with configurable machine sizes and dockerized environments. 
 
 ![Code](../img/Home/code.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
 
-*   [Discover Insights](https://docs.elucidata.io/Data%20Lake.html)
 
-    Polly enables access to proprietary, expert-curated, disease-specific data lakes to accelerate your drug discovery programs. Mine data lakes for public and proprietary data that are harmonized across sources on  Polly Discover. 
-
-![Discover](../img/Home/Discover1.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
 ## Getting help on the platform
 
 We firmly believe that our greatest achievement is to enable customers and their success on the platform. The customer success team can be reached anytime on [polly@elucidata.io](mailto:polly@elucidata.io) for queries on the product, data analysis and feature requests. We also offer a detailed on-boarding plan to get your team up and running on Polly as well as library of resources, videos and publications.
