@@ -27,9 +27,9 @@ Once logged in, you do not get automatically logged out and will have to log out
 
 ## Navigating through the platform
 
-The Polly Landing page provides access to 3 distinct interconnected modules on Polly.
+The Polly Landing page provides access to OmixAtlas - Public Data Atlases and User Data Atlases.
 
-![Polly as a platform](../img/Home/Home1.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
+![Homepage](../img/OmixAtlas-Images/OA_1.png)
 
 *   [Manage Data](https://docs.elucidata.io/Getting%20Started/Workspaces.html)
 
@@ -43,6 +43,15 @@ The Polly Landing page provides access to 3 distinct interconnected modules on P
 
 ![Code](../img/Home/code.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
 
+## Changing Password 
+Users can change the password by accessing user options and clicking on 'Change Password'.
+
+![Code](../img/Home/Change_password.png)
+
+## Subscription End Date
+Users can check their 'Subscription End Date' by accessing user options.
+
+![Code](../img/Home/Subscription.png)
 
 ## Getting help on the platform
 
