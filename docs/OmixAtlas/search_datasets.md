@@ -1,7 +1,7 @@
 
-# 1. How to find datasets?
+# How to find datasets?
 
-## 1.1 Search based on operator hints
+## Search based on operator hints
 
 ![Search Bar](../img/OmixAtlas-Images/1a.png) 
 

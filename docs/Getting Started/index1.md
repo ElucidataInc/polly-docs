@@ -11,7 +11,7 @@ To sign in to the Polly platform, you must have an account. Account credentials 
 
 You can sign in Polly with the provided credentials: Username and Password, connected to your account, and then click *Sign in*. When logging in for the first time, you will be prompted to reset your password. If you do not sign out when you leave Polly, you will be automatically authenticated for your next visit.
 
-![Login](../img/Home/Login.png)
+![Login](../img/Home/Login1.png)
 
 *   **Login through [Polly CLI](https://docs.elucidata.io/Scaling%20compute/Polly%20CLI.html)**
 
@@ -27,9 +27,9 @@ Once logged in, you do not get automatically logged out and will have to log out
 
 ## Navigating through the platform
 
-The Polly Landing page provides access to 3 distinct interconnected modules on Polly.
+The Polly Landing page provides access to OmixAtlas - Public Data Atlases and User Data Atlases.
 
-![Polly as a platform](../img/Home/Home1.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
+![Homepage](../img/OmixAtlas-Images/OA_1.png)
 
 *   [Manage Data](https://docs.elucidata.io/Getting%20Started/Workspaces.html)
 
@@ -39,21 +39,20 @@ The Polly Landing page provides access to 3 distinct interconnected modules on P
 
 *   [Use Apps](https://docs.elucidata.io/Apps/Introduction.html)
 
-     Polly hosts a suite of apps and production-ready workflows to analyze and process a variety of data with ease. You can build and host your custom workflows from individual components or choose from a suite of ready-to-use workflows on Polly.
-
-![Manage](../img/Home/Applications.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
-
-*   [Write & Maintain Code](https://docs.elucidata.io/Scaling%20compute/Polly%20Notebooks.html)
-
     Polly enables coding in a range of computational environments with configurable machine sizes and dockerized environments. 
 
 ![Code](../img/Home/code.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
 
-*   [Discover Insights](https://docs.elucidata.io/Data%20Lake.html)
+## Changing Password 
+Users can change the password by accessing user options and clicking on 'Change Password'.
 
-    Polly enables access to proprietary, expert-curated, disease-specific data lakes to accelerate your drug discovery programs. Mine data lakes for public and proprietary data that are harmonized across sources on  Polly Discover. 
+![Code](../img/Home/Change_password.png)
 
-![Discover](../img/Home/Discover1.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
+## Subscription End Date
+Users can check their 'Subscription End Date' by accessing user options.
+
+![Code](../img/Home/Subscription.png)
+
 ## Getting help on the platform
 
 We firmly believe that our greatest achievement is to enable customers and their success on the platform. The customer success team can be reached anytime on [polly@elucidata.io](mailto:polly@elucidata.io) for queries on the product, data analysis and feature requests. We also offer a detailed on-boarding plan to get your team up and running on Polly as well as library of resources, videos and publications.
