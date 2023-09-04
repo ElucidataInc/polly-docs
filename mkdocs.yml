@@ -14,20 +14,23 @@ nav:
       - Admin Dashboard: Getting Started/Admin Dashboard.md
       - Monitoring Dashboard: Getting Started/Monitoring_Dashboard.md
   - OmixAtlas:
-      - About OmixAtlas: OmixAtlas/OmixAtlas.md 
+      - About OmixAtlas: OmixAtlas/OmixAtlas.md
+      - OmixAtlas Dashboard: OmixAtlas/OmixAtlas_Dashboard.md
+      - Types of OmixAtlas: OmixAtlas/OmixAtlas_types.md
       - Curating OmixAtlas:
         - Curating OmixAtlas: OmixAtlas/Curating OA/Curating_OA.md 
         - Curating OmixAtlas - Bulk RNAseq: OmixAtlas/Curating OA/Curating_OA_BulkRNAseq.md 
         - Curating OmixAtlas - Single Cell: OmixAtlas/Curating OA/Curating_OA_scRNA.md 
-      - Data Schema: OmixAtlas/Data Schema.md
       - Data Workflow - Bulk RNAseq: OmixAtlas/Data_Workflow.md
-      - Bulk RNA Sequencing FAQs: OmixAtlas/Bulk_RNA_sequencing_FAQs.md
-      - Single Cell RNA Sequencing FAQs: OmixAtlas/scRNA_seq_FAQs.md
-      - Accessing OmixAtlas: OmixAtlas/Accessing OmixAtlas.md
-      - How to Find Datasets: OmixAtlas/Find_datasets.md
-      - Applicatons:
+      - How to Find Datasets?: OmixAtlas/search_datasets.md
+      - How to Filter Datasets?: OmixAtlas/Filter_datasets.md
+      - How to View Details?: OmixAtlas/View_Details.md
+      - How to Analyze Datasets?:
         - Phantasus: Apps/Phantasus.md
         - Cellxgene: Apps/Cellxgene.md
+      - FAQs:
+        - Bulk RNA Sequencing FAQs: OmixAtlas/FAQs/Bulk_RNA_sequencing_FAQs.md
+        - Single Cell RNA Sequencing FAQs: OmixAtlas/FAQs/scRNA_seq_FAQs.md
   - Polly Python: '!import https://github.com/ElucidataInc/polly-python-code?branch=multirepo_plugin_docs&extra_imports=["polly/*"]'
   - Polly Compute:
     - Polly Notebooks:
