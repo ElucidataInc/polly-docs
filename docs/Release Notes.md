@@ -1,4 +1,29 @@
 # Release Notes
+<!--August 14, 2023-->
+
+<details open>
+<summary><font size="+1"><b>August 14, 2023</b></font></summary>
+<br>
+       <p class="Releases-button">Releases</p>
+ <ul> 
+<li>Polly-python:
+<ul>
+<li>Users can now perform meta-analysis using Polly-python and a shiny app derived from it. 
+</li></ul>
+</li></ul>
+  <br>
+      <p class="update-button">Update</p>
+      <ul>
+<li>Users can now preview reports and PDFs in the workspace GUI.
+       <li>Datasets can now be moved instantly for consumption on the UI.
+<li>Polly-python:
+<ul>
+<li>Authentication is getting more standard and secure with bearer token-based authentication.
+</li></ul>
+</ul>
+</details>
+<hr>
+
 <!--July 17, 2023-->
 
 <details open>
