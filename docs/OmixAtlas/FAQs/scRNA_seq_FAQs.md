@@ -1,25 +1,24 @@
 # Single Cell RNAseq Omixatlas- FAQs
 
-Single-cell RNA sequencing has emerged as the technique of choice for researchers trying to understand the cellular heterogeneity of tissue systems under physiological and pathological conditions. On Polly, users get access to comprehensive Single-Cell RNA-Seq data which is structured and readily usable, compared to raw data available at single-cell data source repositories. Data curation and management are guided by the FAIR principles (Findable, Accessible, Interoperable and Reusable) and the available data is machine-actionable and analysis-ready.
+## Introduction
 
-### Which sources for Single Cell data are available on Polly?
+Single-cell RNA sequencing has emerged as the technique of choice for researchers trying to understand the cellular heterogeneity of tissue systems under physiological and pathological conditions. Polly provides structured and curated Single-cell RNAseq data in various counts formats as per the need of the research. The data is machine-actionable and analysis-ready for any downstream needs.
 
-Polly's Single Cell OmixAtlas consists of single-cell RNA Sequencing datasets from the following sources:
+Polly can bring in data from a variety of public sources as per the needs as long as the raw counts matrix and metadata are available. Some of the common public sources for Single-cell RNAseq data are:
 
 - [Gene Expression Omnibus](https://www.ncbi.nlm.nih.gov/geo/)
 - [Expression Atlas](https://www.ebi.ac.uk/gxa/home)
 - [Human cell atlas](https://www.humancellatlas.org/)
 - [Single Cell Portal](https://singlecell.broadinstitute.org/single_cell)
 - [Tabula sapiens](https://tabula-sapiens-portal.ds.czbiohub.org/)
-- [HTAN](https://humantumoratlas.org/)
 - [Covid-19 Cell Atlas](https://www.covid19cellatlas.org/)
-- [Zenodo](https://zenodo.org/)
-
-In addition to the sources mentioned above, Polly's single cell OmixAtlas contains 600 high-value landmark datasets. These data come primarily from two sources: the Human Cell Atlas and the Chan Zuckerberg Initiative. In this context, landmark datasets are those that have a large number of cells, are from pivotal publications (high-impact journals like Cell, Nature, Science), and are clinical.
+- [Array Express](https://www.ebi.ac.uk/biostudies/arrayexpress))
+- Publications
 
 ### How is a Single Cell RNA-Seq dataset defined on Polly?
 
 Polly's single cell dataset represent a curated collection of biologically and statistically comparable samples. Each dataset is denoted using a unique ID. For some sources like GEO, SCP, Expression Atlas, Array Express, Polly provides single cell dataset IDs in the same format as the source.
+
 
 **Basic ID format**
 - GEO (Gene Expression Omnibus) - GSE171203\_GPL24247. On Polly, the dataset ID for a GEO dataset follows the same naming convention as GEO, consisting of a series ID as well as a platform ID. Here, GSE171203 is the subseries ID while GPL2424 is the platform ID.
