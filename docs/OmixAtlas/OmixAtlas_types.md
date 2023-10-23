@@ -3,9 +3,10 @@ Types of OmixAtlasses
 
 There are two types of data sources at OmixAtlasses -
 
-1\. Where Elucidata provides all the data to the users and users can find the data themselves and choose their datasets of interest.
+1\. Where Elucidata provides all the data to the users and allows them to independently locate the data and select their preferred datasets.
 
-2\. Where users come to our experts and request the kind of datasets they are interested in. Our experts will find the relevant datasets.
+2\. Where users come to our experts to specify their dataset requirements, and our experts will source the relevant datasets accordingly.
+
 
 For the first data source, we have a new offering called 'Polly Basic'. In this, there are two types of OmixAtlasses - 
 
