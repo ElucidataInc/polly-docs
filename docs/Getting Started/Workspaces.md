@@ -31,7 +31,7 @@ You can create a new workspace on Polly by clicking on *New Workspace* on the le
 
 ![New workspace2](../img/Workspace/4.png) <p align=center>**Figure 4.** Creating a New Workspace</p>
 
-Enter the Name of the workspace, custom tags and description (if any) and click on save. Users can add tags while creating a new workspace. These tags can be used later to search and identify workspaces.
+Enter the Name of the workspace, custom tags and description (if any) and click on create. Users can add tags while creating a new workspace. These tags can be used later to search and identify workspaces.
 
 The new workspace will be created. You can find the newly created workspace with the list of all your workspaces on the left panel.
 
@@ -45,7 +45,7 @@ Users can watch a particular workspace by clicking on the ‘eye’ icon. This f
 
 ## Mark a Workspace as Favorite
 
-Users can mark a particular workspace as their favorite by clicking on the ‘star’ icon. This feature makes it easier for the user to filter frequently used workspaces.
+Users can mark a particular workspace as their favorite by clicking on the ‘star’ icon. This feature allows the user to filter the frequently used workspaces.
 
 ![](../img/Workspace/7.png) <p align=center>**Figure 7.** Mark a workspace as favorite</p>
 
@@ -57,7 +57,7 @@ Users can filter workspace cards of choice using options like:
 
 ![](../img/Workspace/9.png) <p align=center>**Figure 9.** The information about the contents of the workspace can be seen on the right panel.</p>
 
-While the description of workspace and other information can be accessed through the Info option  by clicking on the workspace menu option
+You can access the workspace description and other details by selecting the "Info" option within the  menu
 
 ![](../img/Workspace/10.png) <p align=center>**Figure 10.** Workspace menu option</p>
 
@@ -79,7 +79,7 @@ In order to reduce the clutter, workspaces allow you to filter the content you w
 
 ## Creating a New folder
 
-Polly workspace allows you to organize and manage your data in folders and subfolders. To create a folder, click on the *cloud upload icon* and select *Create a New Folder* from the dropdown menu.
+Polly workspace allows you to categorize your data in folders and subfolders. To create a folder, click on the *cloud upload icon* and select *Create a New Folder* from the dropdown menu.
 
 ![Folder Creation](../img/Workspace/14.png) <p align=center>**Figure 14.**  Create Folder</p>
 
@@ -94,24 +94,24 @@ You can click on the same icon again to upload files within the created folder.
 *    Only the data files can be organized within a folder while the uploaded notebooks and analyses are present separately within the selected workspace.
 
 
-## Navigating through a folder
+## Navigating through the folder
 
 Double click on the folder name to look at its contents.
 
 ![Navigation](../img/Workspace/16.png) <p align=center>**Figure 16.** Folder Navigation</p>
 
-The purple section in the middle panel shows the path of the directory you are in. You can click on the name of any folder within the path to select the folder you want to browse to.
+The purple section in the middle panel displays the path of the directory you are currently navigating. To browse a specific folder, click on the name of that folder within the path.
 
 ![Navigation2](../img/Workspace/17.png) <p align=center>**Figure 17.** Folder Navigation Path</p>
 
 
 ## Editing your workspace
 
-The menu beside the workspace name shows the menu items to edit your workspace details.
+The menu items beside the workspaces can be used to edit your workspace details.
 
 ![Edit workspace](../img/Workspace/18.png) <p align=center>**Figure 18.** Workspace Edit option</p>
 
-Select *Edit Details* within the menu. Rename the workspace and/or change the description of the workspace and click on *Update*. Click *Cancel* to close the tab without saving any changes.
+Select *Edit Details* within the menu. Rename the workspace and/or change the description of the workspace and click on *Save Changes*. Alternatively, Click *Cancel* to close the tab without saving any changes.
 
 ![Edit workspace2](../img/Workspace/19.png) <p align=center>**Figure 19.** Workspace Edit Update</p>
 
@@ -142,7 +142,7 @@ The “Archive” Option appears in the Kebab Menu beside Workspace Name
 
 ![](../img/Workspace/21.3.png)
 
-The drop-down allows users to view, filter and switch between their Active and Archived Workspaces at any point in time.
+The drop-down allows users to view, filter and switch between their Active and Archived Workspaces at any point of the time.
 
 ## Restoring Archived Workspaces
 
@@ -161,17 +161,18 @@ The drop-down allows users to view, filter and switch between their Active and A
 
 ## Preview File And URL
 
-For previewable file types (For example, csv files, notebooks, images, text files) - when a user clicks on a Workspace content to view details, there is an icon to preview and copy the URL of the workspace.
+For previewable file types (For example, csv files, notebooks, images, text files), when a user clicks on a Workspace content to view details, there is an icon to preview and copy the URL of the workspace.
 
 This option enables the user to share any file/folder/notebook without having to share the whole of the workspace.
 
 ![](../img/Workspace/24.png)  <p align=center>**Figure 24.** File Preview option</p>
 
-The URL by default has restricted access, i.e the file can be viewed only by users who a part of the workspace and have the link.
+By default the URL has restricted access, i.e the file can be viewed only by the users who are a part of the workspace and have the link.
 
-The user also has the option to make the file link global i.e anyone with the link on Polly can view the file.
+The user also has the option to make the file link global, enabling anyone with the link on Polly can view the file.
 
 ![](../img/Workspace/25.png)  <p align=center>**Figure 25.** Changing the URL access to restricted/global</p>
+
 
 ### Video
 
