@@ -28,7 +28,7 @@ A modal window will open up on the right. For each new account you will have to 
 
 ## Reset Password
 
-Whenever a new account is created, a temporary password required to log in is sent to the email id. This temporary password expires **30 days** after it has been sent. In case a user does not log in during that time, they will require a new temporary password which can be sent using the reset password option.
+Whenever a new account is created, a temporary password is sent to the associated email address. This temporary password is valid for **30 days**. In case a user does not log in during that time, they will require a fresh password that can be generated using the reset password option.
 
 Click on the meatball menu for the relevant user and then click on *Edit*.
 
