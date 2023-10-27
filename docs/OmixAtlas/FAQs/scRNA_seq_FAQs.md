@@ -113,11 +113,10 @@ Associated barcodes and gene probes are fetched with the raw counts
 **1.3 Curation and Metadata details**
 
 On Polly, every dataset and its corresponding samples are tagged with some metadata labels that provide information on the experimental conditions, associated publication, study description and summary, and other basic metadata fields used for the identification of dataset/samples. <br />
-
 There are three broad categories of metadata available on Polly such as:<br />
 &nbsp; a) *Source Metadata*: Metadata fields that are directly available from the Source and provided in a Polly-compatible format.<br />
 &nbsp; b) *Polly - Curated*: These are curated using Polly’s proprietary NLP-based Polly-BERT models and reviewed by expert bio-curators to ensure high-quality metadata. Some of the Polly curated metadata fields are harmonized using specific biomedical ontologies and the remaining follow a controlled vocabulary.<br />
-&nbsp; c) *Standard identifiers* - Identifier metadata tag for datasets, giving information on the basic attributes of that dataset/study.<br /><br />
+&nbsp; c) *Standard identifiers* - Identifier metadata tag for datasets, giving information on the basic attributes of that dataset/study.<br />
 
 Metadata for every dataset is available at 3 levels:<br />
 &nbsp; I) Dataset-level metadata - General information about the overall experiment/study, for eg, organism, experiment type, and disease under study.<br />
@@ -559,7 +558,7 @@ Adjusted p-value (BH) <bk />
 8. obsp: 'connectivities', 'distances'
 ```
 
- ### 3. Author Processed Data ###<br />
+**3. Author Processed Data** <br />
 
 **3.1. Starting point**<br />
 We take author-submitted raw counts from the sources, where available. The starting point is the h5ad file containing raw unfiltered counts created for the raw counts data.<br />
@@ -633,12 +632,137 @@ Additionally, marker information is also added with gene names that are differen
 
 The processed anndata object is saved in H5AD format and pushed to Polly’s Omixatlas. Further details of the processing performed (parameters/method choices, QC metrics, and associated plots) are bundled as a separate comprehensive HTML report and provided with the data file. <br />
 
- 
-
 3.3. **Curation and Metadata details**
 
 Metadata curation for Polly annotated data is the same as raw counts data (given above). However, there are some additional fields that are present for every author-processed dataset in addition to the existing fields available for raw unfiltered data.<br />
 
 **I Dataset Level Metadata**
 
-    
+**3.4. Cell Annotation method**
+
+Cell annotation of clusters is done using author-provided markers. If the cell type annotations are given at the source, we use the same and normalize the labels using the Cell Ontology. For datasets, where the authors have not provided cell-type annotations mappings, but only the marker genes we manually curate the information based on the differential marker expression for clusters. <br />
+
+Process flow for cell type manual curation: <br />
+
+**Annotation of clusters** - UMAP/tSNE plots are generated as a result of single cell raw count processing (as mentioned in the processing section). By visualization of clusters with UMAP/t-SNE plots, cell type cluster annotation is done.<br />
+
+1. curated_raw_cell_type: Cluster annotation with author-provided raw cell type (cell type terminology used in publication) is based on the marker expression value for each cluster. In publications, the information on cell type and the corresponding marker is present either in the figures (UMAP, T-SNE plots), text, or supplementary files. This annotation is added as a field named curated_raw_cell_type.
+2. curated_cell_type: The raw cell type name is normalized using the Cell Ontology and is curated as the fields named curated_cell_type.<br />
+Additionally, marker information is also added with gene names that are differentially expressed in the cluster<br />
+3. curated_marker_present: Gene name/names that are differentially expressed (present) in the cluster
+4. curated_marker_absent: Gene name/names that are absent in the cluster
+5. curated_cell_ontology_id: The normalized Cell Ontology ID corresponding to the assigned cell type
+
+**3.5. Output H5AD format and details** <br />
+
+Two H5AD files are made available to the user.
+1. Raw unfiltered counts data (Details given above)
+2. Author annotated data: <Dataset_id>_author_annotated.h5ad
+
+The following information will be available in the author_annotated H5AD file:
+1. Raw filtered counts in `<adata.raw>` slot: The expression matrix after filtering out the genes and cells as per the author’s pipeline given in the paper is available in this slot
+2. Processed filtered counts in `<adata.x>` slot: The expression matrix after filtering out the genes and cells and normalizing the counts as per the author’s pipeline given in the paper is available in this slot as: <br />
+a. Float values <br />
+b. Values < 100<br />
+c. Sparse matrices<br />
+
+3. Complete Sample Metadata `<adata.obs>` slot: All the sample/cell level metadata as per the metadata table given above is available in this slot. This includes<br />
+a. Polly-Curated Metadata<br />
+b. QC metrics<br />
+c. Source Metadata<br />
+d. Standard Identifier metadata<br />
+
+4. Embedding data in `<adata.obsm>` slot. This includes the following:
+a. PCA: Principal components minimum<br />
+b. tSNE: Coordinates of the tSNE plot<br />
+c. UMAP: Coordinates of the UMAP plot<br />
+
+- **var** contains the gene metadata [`'highly_variable', 'gene_ids', 'n_cells'`]
+
+- Unstructured metadata in Uns `<adata.uns>` slot: This includes the following:<br />
+
+**FIGURE**
+
+**3.6. Report**
+
+Report templates for raw and Polly-processed datasets:
+
+**Do all the single cell datasets on Polly have cell type annotation?**
+
+Availability of cell type annotation for datasets on Polly is as follows:
+1. Dataset with raw unfiltered counts  - Not Available
+2. Dataset with Polly processed counts - Cell types curated using the author-assisted approach with marker genes and cell type information from the associated publication, with outputs ScType method
+3. Dataset with Author processed counts - Cell types curated using author-provided markers, with manual annotation as provided in the publication (replicating the publication cell count and t-SNE plots)
+
+**Which are the different types of cell annotations available?**
+
+Currently, three types of cell-type annotations are available
+1. Polly processed raw cell type: Author cell type annotation associated with the cell as mentioned in the publication related to the dataset.
+2. Polly processed standardized Cell type: Cell type associated with the cell, corresponding to the Author’s cell type annotation as mentioned in the publication and mapped to cell type ontology.
+3. Author cell type: Cell types curated directly from the publication/source
+
+
+**Are source fields retained for a dataset?** <br />
+All source fields are captured in the H5AD file which users can visualize through applications. However, fields available for searching through UI and Polly-python are restricted by schema due to performance constraints.<br />
+
+**Are external data requests directly added to the Customer’s OmixAtlas?** <br />
+Users can request for single-cell RNASeq datasets from the sources mentioned in the document above to be added to their atlas. Upon request, datasets will be made available in the customer’s Atlas directly.<br />
+
+More details on the SLAs for dataset delivery are given here: SLAs for Single Cell RNASeq Datasets delivery <br />
+
+**Will QC reports be available for data audits/selection?** <br />
+QC reports for a dataset will be generated on demand. Based on the customer requirements, datasets that pass the required QC criteria will be delivered. <br />
+
+The following QC metrics will be captured in the report:<br />
+
+- Minimum total counts per cell: Automatically determined based on the dataset
+- Maximum total counts per cell: Automatically determined based on the dataset
+- Minimum number of genes per cell: Automatically determined based on dataset
+- Maximum number of genes per cell: Automatically determined based on dataset
+- Number of samples
+- Number of cells
+
+*Internal*: We will generate QC reports for the datasets identified in the audit running them through the raw counts pipeline <br />
+- These datasets will be populated in an Atlas and provided to the customer (without the option to download the H5AD file)
+- Customers can look at the details of the dataset (along with the QC report) and decide if they want to buy the dataset or not.
+- In case they want to buy, they send us a request along with their preference (raw counts or Polly processed or author processed) either through Polly or via CSM
+- We then process the dataset as required by the customer and make it available in the customer Atlas (different from the data audit Atlas)
+
+**Is there flexibility to select parameters/tools for Polly processed counts?**
+
+The tools and parameters for processing datasets as per Polly’s processing pipeline are standard. Any changes will be considered a custom request. There are some guardrails such as:
+- Markers for the main cell types, mostly from the main figure, subcluster is a custom request
+- If markers are not available in publications, then we use databases like CellMarkerDB or PanglaoDB ( 30% of datasets might not have markers clearly mentioned)
+
+*Internal*: For internal purposes we do have flexibility in most steps.
+- QC filter (choice between fixed cutoffs or best-practices adaptive cutoffs)
+- Cell filtering level (per sample or whole dataset)Gene filter cutoff (# of cells expressed)
+- Doublet detection (yes/no)
+- Normalization: Size factor (value), log1p (true/false), scaling (true/false)
+- HVG selection: No. of highly variable genes
+- Batch correction method (scanorama, combat, harmony, scVI)
+- Embeddings: # of PCs, # of neighbors for neighborhood graph and clustering
+- Leiden clustering: Resolution parameter
+- DEGs (by cluster): log fold-change and p-value cutoffs
+
+**How will the availability of markers impact the delivery of datasets?** <br />
+We will deliver datasets in such cases too. However, markers used for curation will be as follows:
+
+- We will use CellMarkerDB and PanglaoDB to identify canonical markers
+- If markers are not available in the databases above,  it'll be custom curation
+
+  - Availability of markers will checked and communicated within a day of the dataset request. Whether the curation required will be standard or custom, this information will also be communicated within a day of request
+
+**Is the subcluster information provided for a dataset?**
+- If subclusters are available as metadata, the subcluster information will be added to `author_cell-type`
+- Each dataset will be split by the following parameters whenever applicable. So subcluster may exist as a separate dataset for the following: <br />
+a. Disease<br />
+b. Tissue<br />
+c. Organism<br />
+d. Assay<br />
+
+However the following will be the cases for custom subcluster annotation<br />
+- If a dataset has splits as per patient or group of samples that don’t follow the above metadata split
+- If tissue is annotated with subclusters for eg. Heart Endothelial Cells are subtyped as artery, vein, etc.
+  - Markers will be captured only from the main figure. These may have multiple tissues clustered together for a particular cell type. In cases, where authors have provided sub-cell types in additional figures, those markers are not captured which are specific to the additional UMAP/TSNEs. In order to capture these, it will be considered as a custom annotation.
+  - If the publication’s marker database already has cell subtypes, then those markers will be used.  If not, then it will be a custom annotation
