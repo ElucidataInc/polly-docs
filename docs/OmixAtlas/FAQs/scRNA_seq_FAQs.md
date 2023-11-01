@@ -83,6 +83,13 @@ Single-cell raw count data is typically available in several common file formats
 - Hierarchical Data Format (e.g. h5ad, suerat, h5)
 
 **1.2 Processing details**
+<p align="center"
+   
+![Processing details](../../../docs/img/OmixAtlas-Images/ProcessingFlow.png) 
+
+</p>
+
+<p align="center">Processing Flow</p>
 
 The pipeline for raw counts includes the following steps: <br />
 
@@ -165,6 +172,12 @@ A) General Information: Dataset Summary<br />
 - Size of the data matrix
 - Annotated cell types from Source
 
+
+![Report](../../../docs/img/OmixAtlas-Images/Report.png)
+
+
+<p align="center">Sample information for dataset summary</p>
+
 B ) Experiment design
 - SC chemistry
 - Design
@@ -176,13 +189,23 @@ C) Pre-processing
 
 D) Sample/cell Level Metadata Attributes
 
+![1](../../../docs/img/OmixAtlas-Images/1.png)
+![2](../../../docs/img/OmixAtlas-Images/2.png)
+![4](../../../docs/img/OmixAtlas-Images/4.png)
+
 E) Basic Data QC
 
+
+![5](../../../docs/img/OmixAtlas-Images/5.png)
+
+<bk />
 F ) Data QA Analysis: This section provides a table showing the data-related checks performed internally along with the final output <br />
 &nbsp;&nbsp;i) Metadata QA - Quality checks performed for metadata at the dataset and sample/ &nbsp;&nbsp;cell-level metadata<br />
 &nbsp;&nbsp;ii) Data matrix QA
 
-**2. Polly Processed Data** <br /><br />
+
+<br />
+**2. Polly Processed Data** <br />
 **2.1. Starting point**
 
 For processing SC datasets using Polly’s standardized pipeline, the starting point is the h5ad file containing raw unfiltered counts created for the raw counts data. The inputs for the processing pipeline are:<br />
@@ -463,7 +486,10 @@ QC parameters:
 2. Maximum total counts per cell: Automatically determined based on the dataset
 3. Minimum number of genes per cell: Automatically determined based on dataset
 4. Maximum number of genes per cell: Automatically determined based on dataset
-   **FIGURES**
+
+![6](../../../docs/img/OmixAtlas-Images/6.png)
+![7](../../../docs/img/OmixAtlas-Images/7.png)
+
 
 - Filtering low-expression genes :<br />
   Genes expressed in less than 3.0 cells were removed.
@@ -477,7 +503,10 @@ QC parameters:
 `min_gene_variability_pctl : 85.0 ` <br />
 `n_prin_comps : 30` <br />
 
-**FIGURES**
+
+![8](../../../docs/img/OmixAtlas-Images/8.png)
+
+
 2. **Normalization Parameters**
 
 3. **Highly variable genes parameters**
@@ -506,7 +535,9 @@ Batch Correction Parameters
 `Batch correction applied: True `
 
 `Batch correction method used: scanorama`
-**FIGURE**
+
+![9](../../../docs/img/OmixAtlas-Images/9.png)
+![10](../../../docs/img/OmixAtlas-Images/10.png)
 
 5. **Low-dimensional embeddings of the data** <bk />
 Parameters used for neighborhood graph construction following PCA:<bk />
@@ -539,13 +570,16 @@ Eg.
 11. Melanocyte|+  :  PMEL
 ```
 
-- Cell type predictions made using the author-provided cell types are given. Next to the predictions, the marker genes of the assigned cell type which are differentially expressed in the corresponding cluster are also highlighted (where found). Differentially expressed genes were identified by running the Scanpy *rank_genes_groups* function with the following parameter settings:<bk />
-Statistical test: t-test<bk />
-Log-fold change cutoff<bk />
-Adjusted p-value (BH) <bk />
+- Cell type predictions made using the author-provided cell types are given. Next to the predictions, the marker genes of the assigned cell type which are differentially expressed in the corresponding cluster are also highlighted (where found). Differentially expressed genes were identified by running the Scanpy *rank_genes_groups* function with the following parameter settings:
+<bk />
+Statistical test: t-test
+Log-fold change cutoff
+Adjusted p-value (BH)
 
 8.**Cell-level metadata visualized on 2D UMAP**
 **Figure**
+
+
 **D) AnnData Object Summary**
 ```
 1. AnnData object with n_obs × n_vars = 13506 × 22199 
