@@ -96,6 +96,8 @@ The pipeline for raw counts includes the following steps: <br />
 1. **Fetching Raw Counts**: The starting point for the pipeline is getting the raw counts from the source by <br />
  a. Either downloading data directly from the source  - A text file is created with links for downloading <br />
  b. Downloading manually 
+
+
 Associated barcodes and gene probes are fetched with the raw counts
 
 2. **Preparing Data files**: A JSON file is created for the pipeline to run.<br />
@@ -119,7 +121,9 @@ Associated barcodes and gene probes are fetched with the raw counts
 
 **1.3 Curation and Metadata details**
 
-On Polly, every dataset and its corresponding samples are tagged with some metadata labels that provide information on the experimental conditions, associated publication, study description and summary, and other basic metadata fields used for the identification of dataset/samples. <br />
+On Polly, every dataset and its corresponding samples are tagged with some metadata labels that provide information on the experimental conditions, associated publication, study description and summary, and other basic metadata fields used for the identification of dataset/samples.
+
+
 There are three broad categories of metadata available on Polly such as:<br />
 &nbsp; a) *Source Metadata*: Metadata fields that are directly available from the Source and provided in a Polly-compatible format.<br />
 &nbsp; b) *Polly - Curated*: These are curated using Polly’s proprietary NLP-based Polly-BERT models and reviewed by expert bio-curators to ensure high-quality metadata. Some of the Polly curated metadata fields are harmonized using specific biomedical ontologies and the remaining follow a controlled vocabulary.<br />
@@ -135,6 +139,8 @@ Details on each metadata field present at the dataset, sample, and feature level
 **I Dataset Level Metadata**
 
 **1.4 Output H5AD format and details**
+
+
 H5AD file for raw counts data offering will be available to the user with the following information: <br />
 
 1. Raw counts `<adata.X>` slot: The raw expression matrix is available in this slot, providing information on the genes and cells as provided by the author.  The raw counts will available be as: <br />
@@ -159,6 +165,8 @@ e. scanpy, anndata version<br />
 4. `<adata.uns>` slot: QC Metrics such as mt, n_cells_by_counts, mean_counts, pct_dropout_by_counts & total_counts
 
 **1.5 Report**
+
+
 A detailed data report is available for each dataset which can be viewed /downloaded using the given link. The following information corresponding to the dataset will be available in each report: <br />
 
 A) General Information: Dataset Summary<br />
@@ -204,8 +212,9 @@ F ) Data QA Analysis: This section provides a table showing the data-related che
 &nbsp;&nbsp;ii) Data matrix QA
 
 
-<br />
-**2. Polly Processed Data** <br />
+### 2. Polly Processed Data
+
+
 **2.1. Starting point**
 
 For processing SC datasets using Polly’s standardized pipeline, the starting point is the h5ad file containing raw unfiltered counts created for the raw counts data. The inputs for the processing pipeline are:<br />
@@ -274,7 +283,7 @@ f. **Normalization**
 Normalization is performed to reduce the technical component of variance in the data, arising from differences in sequencing depth across cells. It is performed based on the following choices:<br />
 
 - **Method**: library size/total counts normalization (implemented by `scanpy.pp.normalize` function)
-  - **target_sum**: `None` (this is the default option in scanpy and amounts to setting the library size to the median across all cells; best practices guide discusses the use of alternate fixed thresholds like 104 or 106 can introduce over-dispersion)
+  - **target_sum**: `None` (this is the default option in scanpy and amounts to setting the library size to the median across all cells; [best practices](https://www.sc-best-practices.org/preprocessing_visualization/normalization.html) guide discusses the use of alternate fixed thresholds like 104 or 106 can introduce over-dispersion)
   - **log1p**: `True`
   - **Scaling**: `True, with zero_center=False` (this will be performed after the HVG step)<br />
 
@@ -287,7 +296,7 @@ Feature selection is needed to reduce the effective dimensionality of the datase
 - **Highly Variable Genes (HVG)** are identified using the `scanpy.pp.highly_variable_genes` function with the following settings:
   - HVG method: `"Seurat"` (default, uses the log-normalized counts matrix in X)
   - n_top_genes (# HVGs identified): `2000`
-  - batch_key setting: `"sample"` (this corresponds to batch-aware feature selection providing a lightweight form of batch correction to reduce technical differences between samples, see e.g. best practices guide)
+  - batch_key setting: `"sample"` (this corresponds to batch-aware feature selection providing a lightweight form of batch correction to reduce technical differences between samples, see e.g. [best practices guide](https://www.sc-best-practices.org/cellular_structure/integration.html#batch-aware-feature-selection))
   - subset: `False` - the expression matrix is not subsetted to the HVGs. All genes are retained and a highly_variable column gets added to the .var slot
 
 h. **Batch Effect Correction**
@@ -295,30 +304,22 @@ h. **Batch Effect Correction**
 Batch effect is checked in the data using “sample” as the batch variable
 
 - In a manual workflow, batch effects in the dataset will be checked visually on a UMAP or tSNE as well as the quantitative metrics of batch effects in the data. 
-  - Following quant metrics to be adopted (these are provided through scib and scib-metrics libraries, which were released along with a recent benchmarking study of single-cell data integration methods):<br />
-  i. Adjusted rand index comparing batch labels and leiden clusters (ARI)<br />
-  ii. Normalized mutual information between batch labels and leiden clusters (NMI)<br />
-  iii. Principal component regression variance using batch variable (pcr_batch)<br />
-  iv. Scaled graph integration local inverse Simpson’s index (Graph iLISI)<br />
-  v. Acceptance rate from batch k-BET test (kbet_accept_rate)<br />
+  - Following quant metrics to be adopted (these are provided through [scib](https://scib.readthedocs.io/en/latest/index.html) and [scib-metrics](https://scib-metrics.readthedocs.io/en/stable/index.html) libraries, which were released along with a [recent](https://scib-metrics.readthedocs.io/en/stable/generated/scib_metrics.ilisi_knn.html) benchmarking study of single-cell data integration methods):<br />
+  i. Adjusted rand index comparing batch labels and leiden clusters ([ARI](https://scib-metrics.readthedocs.io/en/stable/generated/scib_metrics.nmi_ari_cluster_labels_leiden.html))<br />
+  ii. Normalized mutual information between batch labels and leiden clusters [(NMI)](https://scib-metrics.readthedocs.io/en/stable/generated/scib_metrics.nmi_ari_cluster_labels_leiden.html)<br />
+  iii. Principal component regression variance using batch variable ([pcr_batch](https://scib.readthedocs.io/en/latest/api/scib.metrics.pcr.html))<br />
+  iv. Scaled graph integration local inverse Simpson’s index ([Graph iLISI](https://scib-metrics.readthedocs.io/en/stable/generated/scib_metrics.ilisi_knn.html))<br />
+  v. Acceptance rate from batch k-BET test ([kbet_accept_rate](https://scib-metrics.readthedocs.io/en/stable/generated/scib_metrics.kbet.html))<br />
+  
 
-  - For i-iii above, values closer to 0 indicate good batch mixing; for iv-v, values closer to 1 indicate the absence of significant batch effects in the data
+  For i-iii above, values closer to 0 indicate good batch mixing; for iv-v, values closer to 1 indicate the absence of significant batch effects in the data
 
-  - Batch correction will be done using Scanorama or scVI, both of which return a corrected matrix as well as a batch-corrected low-d embedding. These methods are shown to perform favorably in a recent comprehensive benchmarking study of SC integration methods. [Based on the quality of batch correction and scalability to large numbers of cells, one of these methods would be adopted for further use in the standard pipeline]
+-  For the standard pipeline, batch integration is performed in the PCA space using **Harmony** method with default settings (via the Scanpy [wrapper](https://scanpy.readthedocs.io/en/stable/generated/scanpy.external.pp.harmony_integrate.html) `sc.external.pp.harmony_integrate`). The batch-corrected PCA representation is stored in the .obsm slot as `"X_harmony"` key. This corrected PCA matrix is used for the subsequent kNN neighbor graph, t-SNE and clustering steps. The underlying expression matrices in X and "normalized_counts" layer remain uncorrected, and retain their sparse format, which avoids a large increase in the effective dataset size.
+-  Following the batch correction step, the quantitative metrics of batch mixing are re-calculated on the adjusted PCA matrix. The pre and post batch correction metrics are saved to the .uns slot (“batch_correction_metrics”) enabling a quantitative assessment of the impact of the batch integration in mitigating batch variation in the data distribution.
+-  Batch correction details are provided in the .uns slot as a dictionary: `adata.uns["batch_correction_details"] = {"batch_correction_applied": True, "method": 'harmony', batch_variable: "sample_id"}`
 
-- Scanorama: Batch-adjusted expression matrix is obtained by running `scanorama.correct_scanpy(adatas, return_dimred=True)` (adatas is a list of sample-wise anndata objects)
-
-- scVI: By default, the scVI model works with an unnormalized counts matrix and expects counts in “counts” layer. scVI returns the batch-corrected and normalized expression matrix. This is obtained by running the following step after model fitting: `SCVI.get_normalized_expression(library_size = median_library_size, return_numpy=True)` (where median_library_size is the median of library sizes across all cells in the matrix)
-
-- No. of training epochs for scVI VAE model is decided based on dataset size as suggested in best practices guide: `max_epochs_scvi = np.min([round((20000 / adata.n_obs) * 400), 400])`
-
-  - The resulting matrix from each batch correction method is added as a new layer (`'<method>_corrected'` key) and does not overwrite the X matrix. If the average batch-mixing score is higher for the post-correction matrix compared with the uncorrected matrix, only then, X is updated with the batch-corrected matrix and used for further downstream analysis. The method used on each dataset is also captured in the uns slot (example: `adata.uns["batch_correction_applied"] = {'method': 'scanorama'})`<br />
-
- Note: Harmony-corrected embedding (output of scanpy wrapper `scanpy.external.pp.harmony_integrate)` would also provided as a separate matrix in the obsm slot ('X_pca_harmony'). However, by default, Harmony does not correct the full expression matrix and only adjusts the PCA representation to mitigate batch differences. 
-
-**i. HVGs are re-computed using the processed, adjusted matrix**
-
-**j. Dimensionality reduction**
+   
+**i. Dimensionality reduction**
 
 This step is necessary to reduce the dimensionality of the data prior to clustering, and to enable visualization for exploratory analysis. Following data embeddings are provided by running the relevant scanpy functions:<br />
 - PCA (n_pcs = 50 top PCs ranked by explained variance): `'X_pca'` in obsm, `'PCs'` in varm slot
@@ -326,13 +327,13 @@ This step is necessary to reduce the dimensionality of the data prior to cluster
 - Uniform Manifold Approximation and Projection (UMAP): `'X_umap'` in obsm slot
 - t-Distributed Stochastic Neighbor Embedding (t-SNE): `'X_tsne'` in obsm slot
 
-**k. Cell clustering**: Clustering is performed on the processed and dimensionally reduced data matrix to identify (probable) similar groups of cells, possibly representing distinct cell types/states. <br />
+**j. Cell clustering**: Clustering is performed on the processed and dimensionally reduced data matrix to identify (probable) similar groups of cells, possibly representing distinct cell types/states. <br />
 
 - Leiden graph-based clustering is performed with a fixed resolution (resolution = 0.8)
   - The nearest-neighbor graph is constructed in the previous dimensionality reduction step. 
   - Cluster labels are added to the obs slot in a ”clusters” column
 
-**l. Cell type annotation of clusters**: This is done based on the marker genes and cell types from the associated publication, using an automated cell type assignment method -ScType. 
+**k. Cell type annotation of clusters**: This is done based on the marker genes and cell types from the associated publication, using an automated cell type assignment method -[ScType](https://www.nature.com/articles/s41467-022-28803-w) 
 
 - ScType implementation - Input
   - A tab-separated file is created with
@@ -341,7 +342,8 @@ This step is necessary to reduce the dimensionality of the data prior to cluster
   - The processed expression matrix in X slot (only the slice of the data corresponding to the supplied marker genes is used for scoring cell types).
 
  - ScType implementation - Output
-  - ScType returns an enrichment score matrix of size `num cell types x num clusters`, based on which each cluster gets assigned the raw cell type with the highest score. 
+  - ScType returns an enrichment score matrix of size `num cell types x num clusters`, based on which each cluster gets assigned the raw cell type with the highest score.
+  - Note: As the expression matrix input to ScType is not batch-corrected, batch differences are accounted for by standardizing (z-scoring) the expression values gene-wise within each individual batch, then concatenating the batches (instead of z-scoring the expression values at the dataset level) before the enrichment score matrix calculation. This ‘batch-aware’ annotation handles corner cases where batch effects in the dataset impacts the marker genes and the cell type annotation in turn 
 
 - Annotated Tags:
   - Following sample-level metadata columns get added to obs (these would be uniform across all cells in each cluster):<br />
@@ -353,10 +355,10 @@ iv. marker_gene_absent: Raw cell type and corresponding absent (under-expressed)
    - Following outputs of the cell annotation step are saved to the uns slot of the anndata object:<br />
 i. A table of raw/author cell type predictions by cluster, providing the corresponding ScType scores and confidence values, along with the subset of marker genes for the assigned cell type which are differentially expressed in the annotated cluster.<br />
 ii. Marker genes dictionary used for the cell type annotation step ({cell_type:[markers]})<br />
+iii. Additionally, differentially expressed genes from one-vs-all comparison per cluster are calculated by calling the sc.tl.rank_genes_groups function separately on each individual batch, then aggregating the DGE results across all batches per cluster. This handles batch effects in the normalized data matrix and ensures robust cluster-level markers are selected. DE genes are aggregated and ranked by # of batches in which the gene is DE, the combined p-value (Fisher’s method), and the mean t-test score, in that order. The DGE results are automatically saved to the .uns slot as a single dataframe `("rank_genes_groups")`. 
 
-In addition to the above outputs, the differentially expressed genes from one-vs-all comparison per cluster, calculated at the above step, would also get automatically saved to the .uns slot (as `'rank_genes_groups'`)<br />
 
-**m. Saving the data**
+**l. Saving the data**
 
 The parameter dictionary will be saved to the uns slot, after adding a time stamp as the “time_stamp” key to the params dict. The X matrix will be converted to csc_matrix format and the processed anndata object will be saved in H5AD format and pushed to Polly’s omixatlas. Further, details of the processing performed (parameters/method choices, QC metrics, and associated plots) are bundled as a separate comprehensive HTML report and provided with the data file.
 
@@ -394,6 +396,8 @@ ScType returns an enrichment score matrix of size `num cell types x num clusters
 Annotated information: 
 
 - Following sample-level metadata columns are added to the obs slot (these would be uniform across all cells in each cluster):
+
+  
 a. polly_raw_cell_type: Raw cell type associated with the cell <br />
 b. polly_curated_cell_type:  Cell type associated with the cell, curated with standard ontology <br />
 c. curated_cell_ontology_id: The normalized Cell Ontology ID corresponding to the assigned cell type<br />
@@ -510,6 +514,8 @@ QC parameters:
 2. **Normalization Parameters**
 
 3. **Highly variable genes parameters**
+
+
 &nbsp; HVG flavor <br />
 &nbsp; HVG selection method <br />
 &nbsp; batch_key <br />
@@ -540,17 +546,23 @@ Batch Correction Parameters
 ![10](../../../docs/img/OmixAtlas-Images/10.png)
 
 5. **Low-dimensional embeddings of the data** <bk />
+
+
 Parameters used for neighborhood graph construction following PCA:<bk />
 - Number of PCs used for cell-cell distance computation
 - Number of neighbors
 - For rendering UMAP and tSNE, default scanpy parameter settings were used.
 
 6. **Unsupervised cell clustering**<bk />
+
+
 Clustering parameters:
 - resolution
 - number of clusters
 
 7. **Cell type annotation of clusters**
+
+
 - Method used
 - List of markers was used for cell type annotation (note that the trailing + or - indicates whether the corresponding marker genes are over-expressed (present) or under-expressed (absent) in cells of that type)
 <bk />
@@ -571,13 +583,17 @@ Eg.
 ```
 
 - Cell type predictions made using the author-provided cell types are given. Next to the predictions, the marker genes of the assigned cell type which are differentially expressed in the corresponding cluster are also highlighted (where found). Differentially expressed genes were identified by running the Scanpy *rank_genes_groups* function with the following parameter settings:
-<bk />
-Statistical test: t-test
-Log-fold change cutoff
-Adjusted p-value (BH)
+
+  
+- Statistical test: t-test
+- Log-fold change cutoff
+- Adjusted p-value (BH)
+![i](../../../docs/img/OmixAtlas-Images/i.png)
+![ii](../../../docs/img/OmixAtlas-Images/ii.png)
+
 
 8.**Cell-level metadata visualized on 2D UMAP**
-**Figure**
+![iii](../../../docs/img/OmixAtlas-Images/iii.png)
 
 
 **D) AnnData Object Summary**
@@ -591,6 +607,10 @@ Adjusted p-value (BH)
 7. layers: 'counts'
 8. obsp: 'connectivities', 'distances'
 ```
+
+
+![iv](../../../docs/img/OmixAtlas-Images/iv.png)
+
 
 **3. Author Processed Data** <br />
 
@@ -608,7 +628,8 @@ The processing includes the following steps:<br />
 - Raw h5ad containing unfiltered counts loaded in X slot, along with sample and feature level metadata<br />
 
 Once data is prepared, processing starts based on a general scRNA-seq analysis workflow using the Scanpy library. The following steps are included in the workflow:
-**FIGURE**
+![v](../../../docs/img/OmixAtlas-Images/v.png)
+
 
 **2. Quality control:** The QC step involves filtering low-quality cells and genes from the dataset. Quality control metrics are calculated using the calculate_qc_metrics function. Different metrics are as follows.<br />
 
@@ -624,7 +645,6 @@ Once data is prepared, processing starts based on a general scRNA-seq analysis w
 | | n_cells_by_counts | Number of cells in the expression of a gene is measured in |
 | | pct_dropout_by_counts | Percentage of cells the gene does not appear in |
 
-<br />
 
 Filtering of cells and genes is done based on Scanpy parameters (Basic QC) and author-based parameters
 - Filtering based on Scanpy Parameters: The criteria for filtering cells/genes include the following:
@@ -677,6 +697,7 @@ Metadata curation for Polly annotated data is the same as raw counts data (given
 Cell annotation of clusters is done using author-provided markers. If the cell type annotations are given at the source, we use the same and normalize the labels using the Cell Ontology. For datasets, where the authors have not provided cell-type annotations mappings, but only the marker genes we manually curate the information based on the differential marker expression for clusters. <br />
 
 Process flow for cell type manual curation: <br />
+![x](../../../docs/img/OmixAtlas-Images/x.png)
 
 **Annotation of clusters** - UMAP/tSNE plots are generated as a result of single cell raw count processing (as mentioned in the processing section). By visualization of clusters with UMAP/t-SNE plots, cell type cluster annotation is done.<br />
 
@@ -715,7 +736,8 @@ c. UMAP: Coordinates of the UMAP plot<br />
 
 - Unstructured metadata in Uns `<adata.uns>` slot: This includes the following:<br />
 
-**FIGURE**
+![vii](../../../docs/img/OmixAtlas-Images/vii.png)
+
 
 **3.6. Report**
 
