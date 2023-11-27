@@ -3,7 +3,7 @@
 
 Curation is a process of making biological data organized, annotated, and standardized to make it a FAIR (Findable, Accessible, Interoperable, and Reusable) resource.
 
-- **Findable** - to assign an persistent identifier that would make data easy to find by both humans and machines
+- **Findable** - to assign a persistent identifier that would make data easy to find by both humans and machines
 - **Accessible** - to be able to retrieve the data by their identifier using a standard protocol
 - **Interoperable** - to use standardized terms and have references to other data and be machine actionable
 - **Reusable** - to sufficiently describe data for both computers and humans to be able to understand the data
@@ -23,9 +23,9 @@ Curated datasets stored on Polly are a result of a multi-step process that ensur
 
 Manually curating vast volumes of unstructured or semi-structured biomedical data for drug development can be expensive, cumbersome, time-consuming, and resource-intensive. Automating the curation process would ensure the following -
 
-- High data quality
-- Data will be reusable for any kind of analysis
-- Recently added datasets could also be quickly curated
+- Ensuring high data quality.
+- Enabling data reusability for various types of analysis.
+- Facilitating the rapid curation of recently added datasets.
 
 ## Curated Fields on Polly
 
