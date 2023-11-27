@@ -49,6 +49,7 @@
 
 
 **II Sample Level Metadata**
+
 | Field name(Polly-Python) | Original Name(Data) | Display Name (GUI) | Type | Description | Default values | Metadata Category |
 |----|------|----|------|---------|-------|-------|
 | author_cell_type | kw_curated_raw_cell_type | Author cell type | text | Cell types as curated from the publication/source | none | Polly - Curated |
@@ -81,6 +82,7 @@
 
 
 **III Feature Level Metadata**
+
 | Field name(Polly-Python) | Original Name(Data) | Display Name (GUI) | Type | Description | Default values | Metadata Category |
 |----|------|----|------|---------|-------|-------|
 | total_counts | total_counts | Total counts | float | Sum of counts for feature over all cells | Must be populated | Polly - Curated |
@@ -94,6 +96,7 @@
 
 ## Polly Processed Data
 **I. Dataset Level Metadata**
+
 | Field name(Polly-Python) | Original Name(Data) | Display Name (GUI) | Type | Description | Default values | Metadata Category |
 |----|------|----|------|---------|-------|-------|
 | abstract | abstract | Abstract | text | Abstract of the publication associated with the dataset. | Not available | Polly - Curated |
@@ -144,6 +147,7 @@
 
 
 **II Sample Level Metadata**
+
 | Field name(Polly-Python) | Original Name(Data) | Display Name (GUI) | Type | Description | Default values | Metadata Category |
 |----|------|----|------|---------|-------|-------|
 | author_cell_type | kw_curated_raw_cell_type | Author cell type | text | Cell types as curated from the publication/source | none | Polly - Curated |
@@ -184,6 +188,7 @@
 
 
 **III Feature Level Metadata**
+
 | Field name(Polly-Python) | Original Name(Data) | Display Name (GUI) | Type | Description | Default values | Metadata Category |
 |----|------|----|------|---------|-------|-------|
 | total_counts | total_counts | Total counts | float | Sum of counts for feature over all cells | Must be populated | Polly - Curated |
