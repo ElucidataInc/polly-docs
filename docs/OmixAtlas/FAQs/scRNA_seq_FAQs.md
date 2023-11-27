@@ -23,12 +23,12 @@ A Single-cell RNAseq dataset on Polly represents a curated collection of biologi
 **Dataset ID Nomenclature**
 | Source | Source Format | Polly Format |
 | ------ | ------ | ------ |
-| GEO | For every study, there is a series ID and a platform ID given on GEO <br /> _Platform identifier_ : A Platform record is composed of a summary description of the array or sequencer. Each Platform record is assigned a unique GEO Identifier **(GPLxxx)**. <br />  _Series_ : A Series record links together a group of related samples and provides a focal point and description of the whole study. Each Series record is assigned a unique GEO Identifier **(GSExxx)**. <br /> &nbsp;&nbsp; - A Series record can be a SubSeries or  SuperSeries. <br /> &nbsp;&nbsp; - SuperSeries is all the experiments for a single paper/study and &nbsp;&nbsp; is divided into SubSeries which are different technologies. | Format: GSExxxxx_GPLXXXXX <br /> <br /> All dataset IDs on Polly are GEO subseries |
-| Expression Atlas <br /><br /> Human cell atlas <br /><br /> Array Express <br /> | Studies submitted on these databases/portals have unique IDs associated with them <br /> <br /> Eg. E-MTAB-9841, E-HCAD-56, E-GEOD-175929, E-CURD-102 etc. | Datasets for which data is fetched from these sources follow the same nomenclature as that of the source. <br /> <br /> Eg. E-MTAB-9841, E-HCAD-56 etc |
-| Single Cell Portal(SCP) | Studies on SCP have a unique ID associated with them <br /> Eg. SCP2331 | Studies fetched from the Single Cell Portal follow the same nomenclature as that of the source. The unique dataset ID format is SCPxxxxx <br /> <br /> Eg.SCP2331 |
-| Tabula sapiens | Studies associated with Tabula Sapiens Consortium - Human cell atlas of nearly 500,000 cells from 24 organs are available as dataset ID - ‘_Tabula Sapiens- organ name_’ <br /> <br /> Eg. Tabula Sapiens - Spleen | All 24 datasets on Polly are available with a unique dataset ID format as:<br /><br /> '_TS_organ name_' where <br /><br /> TS stands for ‘Tabula Sapiens’ <br /> <br /> Eg. TS_Tongue |
-| Covid-19 Cell Atlas | Studies related to Covid-19 disease: Healthy Donors or Patient Donors <br /> <br /> Dataset Identifiers are unique for each dataset/study. The dataset identifiers can be <br /> &nbsp; - Tissue and/or author name <br /> &nbsp;&nbsp; Eg. Lung parenchyma Vieira Braga et al. <br /> &nbsp; - Key tissue/cell type associated with the study <br /> &nbsp;&nbsp; Eg. Peripheral Blood Mononuclear Cells (PBMCs) <br /> &nbsp; - Other format<br /> &nbsp;&nbsp; Eg. COV028A2 | - For datasets where the associated publication is given: A unique dataset ID as the PMID of the paper <br/><br /> - In case, a publication reference is unavailable, the dataset ID is the same as that on the source |
-| Publication |    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   -    | Studies for which data is taken from publication directly (not from the above sources) are available with a unique dataset ID as the PMID of the paper <br /> <br /> Eg. PMID35664061 | 
+| GEO |For every study, there is a series ID and a platform ID given on GEO.  **Platform identifier**: A Platform record is composed of a summary description of the array or sequencer. Each Platform record is assigned a unique GEO Identifier(GPLxxx). **Series**: A Series record links together a group of related samples and provides a focal point and description of the whole study. Each Series record is assigned a unique GEO Identifier(GSExxx).  - A Series record can be a SubSeries or  SuperSeries.  - SuperSeries is all the experiments for a single paper/study and is divided into SubSeries which are different technologies. | Format: GSExxxxx_GPLXXXXX  All dataset IDs on Polly are GEO subseries |
+| Expression Atlas   Human cell atlas   Array Express  | Studies submitted on these databases/portals have unique IDs associated with them.  Eg. E-MTAB-9841, E-HCAD-56, E-GEOD-175929, E-CURD-102 etc. | Datasets for which data is fetched from these sources follow the same nomenclature as that of the source.  Eg. E-MTAB-9841, E-HCAD-56 etc |
+| Single Cell Portal(SCP) | Studies on SCP have a unique ID associated with them  Eg. SCP2331 | Studies fetched from the Single Cell Portal follow the same nomenclature as that of the source. The unique dataset ID format is SCPxxxxx  Eg.SCP2331 |
+| Tabula sapiens | Studies associated with Tabula Sapiens Consortium - Human cell atlas of nearly 500,000 cells from 24 organs are available as dataset ID - ‘_Tabula Sapiens- organ name_’  Eg. Tabula Sapiens - Spleen | All 24 datasets on Polly are available with a unique dataset ID format as:  '_TS_organ name_' where  TS stands for ‘Tabula Sapiens’  Eg. TS_Tongue |
+| Covid-19 Cell Atlas | Studies related to Covid-19 disease: Healthy Donors or Patient Donors  Dataset Identifiers are unique for each dataset/study. The dataset identifiers can be  - Tissue and/or author name  Eg. Lung parenchyma Vieira Braga et al.  - Key tissue/cell type associated with the study  Eg. Peripheral Blood Mononuclear Cells (PBMCs)  - Other format  Eg. COV028A2 | - For datasets where the associated publication is given: A unique dataset ID as the PMID of the paper  - In case, a publication reference is unavailable, the dataset ID is the same as that on the source |
+| Publication |   -    | Studies for which data is taken from publication directly (not from the above sources) are available with a unique dataset ID as the PMID of the paper  Eg. PMID35664061 | 
 
 
 
@@ -51,71 +51,85 @@ Eg. GSE156793_GPL24676_Kidney, GSE156793_GPL24676_Liver
 ## What are the different options within the Single-cell datasets on Polly
 Based on the needs of the research, Polly can provide a Single-cell dataset as any of the following outputs
 
-**1. Raw unfiltered counts** <br />
-This format contains one H5AD file containing raw counts for unfiltered cells and genes as the data matrix, curated sample level metadata, and normalized feature names. More details are in the subsequent sections. This format is useful if the research needs raw counts to be processed in a custom manner. <br />
+**1. Raw unfiltered counts** 
 
-**2. Polly processed counts** <br />
-This format contains 2 H5AD files.<br />
-a. One H5AD file is the same as mentioned in the Raw unfiltered counts section. <br />
-b. The second one stores the following <br />
-&nbsp;&nbsp;i. processed counts using a consistent pipeline for filtering cells/genes, normalizing the counts, and annotating cell types using the markers from the associated publication. <br />
-&nbsp;&nbsp;ii. Raw counts after filtering out the cells and genes as per consistent Polly’s SC pipeline. <br />
-&nbsp;&nbsp;iii. Curated sample-level metadata and normalized feature names. <br />
-This format ensures the data is post-processed in a consistent format which makes different datasets comparable. This is particularly useful when similar analyses need to be performed across datasets to get an insight. <br />
-More details are in the subsequent sections. <br />
+This format contains one H5AD file containing raw counts for unfiltered cells and genes as the data matrix, curated sample level metadata, and normalized feature names. More details are in the subsequent sections. This format is useful if the research needs raw counts to be processed in a custom manner. 
 
-**3. Author processed counts** <br />
-This format contains 2 H5AD files <br />
-a. One H5AD file is the same as mentioned in the Raw unfiltered counts section (only if raw counts are available at source) <br />
-b. The second one contains counts processed using the publication’s parameters for filtering cells/genes, normalizing the counts, and annotating cell types using the markers from the associated publication. This H5AD file also contains curated sample-level metadata and normalized feature names. <br />
-This format helps replicate the analysis from the associated publication with minimal effort. <br />
-More details are in the subsequent sections.<br />
+
+**2. Polly processed counts** 
+
+This format contains 2 H5AD files.
+
+a. One H5AD file is the same as mentioned in the Raw unfiltered counts section. 
+
+b. The second one stores the following
+
+i. processed counts using a consistent pipeline for filtering cells/genes, normalizing the counts, and annotating cell types using the markers from the associated publication.
+
+ii. Raw counts after filtering out the cells and genes as per consistent Polly’s SC pipeline.
+
+iii. Curated sample-level metadata and normalized feature names. 
+
+This format ensures the data is post-processed in a consistent format which makes different datasets comparable. This is particularly useful when similar analyses need to be performed across datasets to get an insight. 
+
+More details are in the subsequent sections.
+
+**3. Author processed counts** 
+
+This format contains 2 H5AD files 
+
+a. One H5AD file is the same as mentioned in the Raw unfiltered counts section (only if raw counts are available at source) 
+
+b. The second one contains counts processed using the publication’s parameters for filtering cells/genes, normalizing the counts, and annotating cell types using the markers from the associated publication. This H5AD file also contains curated sample-level metadata and normalized feature names. 
+
+This format helps replicate the analysis from the associated publication with minimal effort. 
+
+More details are in the subsequent sections.
 
 
 ### Details
 
-**1. Raws unfiltered counts** <br /><br /> 
+**1. Raws unfiltered counts** 
+
 **1.1. Starting Point** 
 
-Single-cell raw count data is typically available in several common file formats across most public resources. For raw counts, data from the source is fetched in the following formats<br />
+Single-cell raw count data is typically available in several common file formats across most public resources. For raw counts, data from the source is fetched in the following formats
+
 - Matrix Market (MTX) Format
 - Tabular Formats (e.g., CSV, TSV)
 - Hierarchical Data Format (e.g. h5ad, suerat, h5)
 
 **1.2 Processing details**
-<p align="center"
-   
+
+  
 ![Processing details](../../../docs/img/OmixAtlas-Images/ProcessingFlow.png) 
 
-</p>
+Processing Flow
 
-<p align="center">Processing Flow</p>
+The pipeline for raw counts includes the following steps: 
 
-The pipeline for raw counts includes the following steps: <br />
-
-1. **Fetching Raw Counts**: The starting point for the pipeline is getting the raw counts from the source by <br />
- a. Either downloading data directly from the source  - A text file is created with links for downloading <br />
+1. **Fetching Raw Counts**: The starting point for the pipeline is getting the raw counts from the source by
+ a. Either downloading data directly from the source  - A text file is created with links for downloading 
  b. Downloading manually 
-
-
 Associated barcodes and gene probes are fetched with the raw counts
 
-2. **Preparing Data files**: A JSON file is created for the pipeline to run.<br />
-&nbsp;  - A JSON file with all the required input parameters is created. As per the parameters given in the JSON file, further steps in the pipeline are run <br />
-&nbsp;  - In case raw counts are downloaded from the source directly, the file is &nbsp;unzipped and data is arranged in a structured way
+2. **Preparing Data files**: A JSON file is created for the pipeline to run.
+ - A JSON file with all the required input parameters is created. As per the parameters given in the JSON file, further steps in the pipeline are run
+ - In case raw counts are downloaded from the source directly, the file is unzipped and data is arranged in a structured way
 
-3. **Creating h5ad**: With the input as the above JSON file, the pipeline starts to create the initial h5ad.<br />
-- Programmatic checks are performed to ensure the data matrix contains raw counts only<br />
-- If the matrix is not found to be in the correct format (as per the raw count acceptable values), the pipeline stops<br />
-- Pipeline accepts the raw counts as per defined the acceptable values, i.e. integer values and >1000<br />
-- The index for cell data is sample: barcode and information with respect to each sample: barcode (cell id = sample: barcode) is added<br />
-- Feature IDs are converted to Hugo Symbols (or Ensembl IDs where conversion to Hugo symbols is not available or ambiguous)<br />
-- Initial h5ad is created<br />
+3. **Creating h5ad**: With the input as the above JSON file, the pipeline starts to create the initial h5ad.
+- Programmatic checks are performed to ensure the data matrix contains raw counts only
+- If the matrix is not found to be in the correct format (as per the raw count acceptable values), the pipeline stops
+- Pipeline accepts the raw counts as per defined the acceptable values, i.e. integer values and >1000
+- The index for cell data is sample: barcode and information with respect to each sample: barcode (cell id = sample: barcode) is added
+- Feature IDs are converted to Hugo Symbols (or Ensembl IDs where conversion to Hugo symbols is not available or ambiguous)
+- Initial h5ad is created
+
 4. **Metadata Curation**:
-- The curation pipeline adds curated metadata to the file - sample/cell level metadata is added to the h5ad file<br />
-- The curation pipeline generates dataset metadata<br />
+- The curation pipeline adds curated metadata to the file - sample/cell level metadata is added to the h5ad file
+- The curation pipeline generates dataset metadata
 
-5. **QC metrics**: Scanpy QC metrics are calculated and added to the h5ad file<br />
+5. **QC metrics**: Scanpy QC metrics are calculated and added to the h5ad file
 
 6. **Final h5ad**: The final h5ad file is saved, consisting of QC metrics, curated metadata, raw counts matrix
 
@@ -123,53 +137,59 @@ Associated barcodes and gene probes are fetched with the raw counts
 
 On Polly, every dataset and its corresponding samples are tagged with some metadata labels that provide information on the experimental conditions, associated publication, study description and summary, and other basic metadata fields used for the identification of dataset/samples.
 
+There are three broad categories of metadata available on Polly such as:
 
-There are three broad categories of metadata available on Polly such as:<br />
-&nbsp; a) *Source Metadata*: Metadata fields that are directly available from the Source and provided in a Polly-compatible format.<br />
-&nbsp; b) *Polly - Curated*: These are curated using Polly’s proprietary NLP-based Polly-BERT models and reviewed by expert bio-curators to ensure high-quality metadata. Some of the Polly curated metadata fields are harmonized using specific biomedical ontologies and the remaining follow a controlled vocabulary.<br />
-&nbsp; c) *Standard identifiers* - Identifier metadata tag for datasets, giving information on the basic attributes of that dataset/study.<br />
+a) *Source Metadata*: Metadata fields that are directly available from the Source and provided in a Polly-compatible format.
 
-Metadata for every dataset is available at 3 levels:<br />
-&nbsp; I) Dataset-level metadata - General information about the overall experiment/study, for eg, organism, experiment type, and disease under study.<br />
-&nbsp; II) Sample-level metadata - Information about each sample related to Eg. Drug, tissue.<br />
-&nbsp; III) Feature-level metadata: Information on the genes/features that are consistent across samples.  <br /> 
+b) *Polly - Curated*: These are curated using Polly’s proprietary NLP-based Polly-BERT models and reviewed by expert bio-curators to ensure high-quality metadata. Some of the Polly curated metadata fields are harmonized using specific biomedical ontologies and the remaining follow a controlled vocabulary.
 
-Details on each metadata field present at the dataset, sample, and feature level are given below<br />
+c) *Standard identifiers* - Identifier metadata tag for datasets, giving information on the basic attributes of that dataset/study.
 
-**I Dataset Level Metadata**
+Metadata for every dataset is available at 3 levels:
+
+I) Dataset-level metadata - General information about the overall experiment/study, for eg, organism, experiment type, and disease under study.
+
+II) Sample-level metadata - Information about each sample related to Eg. Drug, tissue.
+
+III) Feature-level metadata: Information on the genes/features that are consistent across samples. 
+
+Details on each metadata field present at the dataset, sample, and feature level are given below
+
 
 **1.4 Output H5AD format and details**
 
 
-H5AD file for raw counts data offering will be available to the user with the following information: <br />
+H5AD file for raw counts data offering will be available to the user with the following information: 
 
-1. Raw counts `<adata.X>` slot: The raw expression matrix is available in this slot, providing information on the genes and cells as provided by the author.  The raw counts will available be as: <br />
-a. Integer counts (with an exception of some datasets from Expression Atlas which may contain fractional values)<br />
-b. Values >1000<br />
-c. Values not less than 0<br />
-d. Sparse matrix<br />
+1. Raw counts `<adata.X>` slot: The raw expression matrix is available in this slot, providing information on the genes and cells as provided by the author.  The raw counts will available be as:
 
-2. Complete Sample Metadata in `<adata.obs>` slot: All the cell/sample level metadata information is available in this slot as per the metadata table given above <br />
-a. Polly-Curated Metadata <br />
-b. Scanpy QC metrics - QC metrics include n_genes_by_counts, total_counts, total_counts_mt, and pct_counts_mt.<br />
-c. Source Metadata<br />
-d. Standard Identifier Metadata<br />
+- Integer counts (with an exception of some datasets from Expression Atlas which may contain fractional values)
+- Values >1000
+- Values not less than 0
+- Sparse matrix
 
-3. Processing Details `<adata.uns>` slot: Unstructured metadata on the processing-related details is available in this slot such as: <br />
-a. Tools/packages along with their versions used to convert the matrix from source to H5AD file<br />
-b. curation model version (for eg. PollyBert_v1)<br />
-c. ontology version<br />
-d. raw file formats<br />
-e. scanpy, anndata version<br />
+3. Complete Sample Metadata in `<adata.obs>` slot: All the cell/sample level metadata information is available in this slot as per the metadata table given above 
 
-4. `<adata.uns>` slot: QC Metrics such as mt, n_cells_by_counts, mean_counts, pct_dropout_by_counts & total_counts
+- Polly-Curated Metadata
+- Scanpy QC metrics - QC metrics include n_genes_by_counts, total_counts, total_counts_mt, and pct_counts_mt.
+- Source Metadata
+- Standard Identifier Metadata
+
+4. Processing Details `<adata.uns>` slot: Unstructured metadata on the processing-related details is available in this slot such as:
+- Tools/packages along with their versions used to convert the matrix from source to H5AD file
+- curation model version (for eg. PollyBert_v1)
+- ontology version
+- raw file formats
+- scanpy, anndata version
+
+5. `<adata.uns>` slot: QC Metrics such as mt, n_cells_by_counts, mean_counts, pct_dropout_by_counts & total_counts
 
 **1.5 Report**
 
 
-A detailed data report is available for each dataset which can be viewed /downloaded using the given link. The following information corresponding to the dataset will be available in each report: <br />
+A detailed data report is available for each dataset which can be viewed /downloaded using the given link. The following information corresponding to the dataset will be available in each report:
 
-A) General Information: Dataset Summary<br />
+A) General Information: Dataset Summary
 - Organism
 - Number of cells
 - Number of samples
@@ -183,8 +203,7 @@ A) General Information: Dataset Summary<br />
 
 ![Report](../../../docs/img/OmixAtlas-Images/Report.png)
 
-
-<p align="center">Sample information for dataset summary</p>
+Sample information for dataset summary
 
 B ) Experiment design
 - SC chemistry
@@ -206,35 +225,33 @@ E) Basic Data QC
 
 ![5](../../../docs/img/OmixAtlas-Images/5.png)
 
-<bk />
-F ) Data QA Analysis: This section provides a table showing the data-related checks performed internally along with the final output <br />
-&nbsp;&nbsp;i) Metadata QA - Quality checks performed for metadata at the dataset and sample/ &nbsp;&nbsp;cell-level metadata<br />
-&nbsp;&nbsp;ii) Data matrix QA
 
+F ) Data QA Analysis: This section provides a table showing the data-related checks performed internally along with the final output
+- Metadata QA - Quality checks performed for metadata at the dataset and sample/ &nbsp;&nbsp;cell-level metadata
+- Data matrix QA
 
 ### 2. Polly Processed Data
 
-
 **2.1. Starting point**
 
-For processing SC datasets using Polly’s standardized pipeline, the starting point is the h5ad file containing raw unfiltered counts created for the raw counts data. The inputs for the processing pipeline are:<br />
+For processing SC datasets using Polly’s standardized pipeline, the starting point is the h5ad file containing raw unfiltered counts created for the raw counts data. The inputs for the processing pipeline are:
 
-Raw h5ad file containing unfiltered counts in X slot, along with sample/cell and feature level metadata (HUGO gene symbols as feature IDs, obs columns specifying batch/sample, and other cell level metadata)<br />
+Raw h5ad file containing unfiltered counts in X slot, along with sample/cell and feature level metadata (HUGO gene symbols as feature IDs, obs columns specifying batch/sample, and other cell level metadata)
 
 **2.2. Processing details**
 
-The pipeline includes the following steps:<br />
+The pipeline includes the following steps:
 
 **1. Preparing files**
 
-- Raw h5ad containing unfiltered counts loaded in X slot, along with sample and feature level metadata<br />
-- A JSON file is created with all the required input parameters and method choices for the processing workflow<br />
+- Raw h5ad containing unfiltered counts loaded in X slot, along with sample and feature level metadata
+- A JSON file is created with all the required input parameters and method choices for the processing workflow
 
-**2.Processing Workflow:** Standard pipeline workflow consists of the following stepsguided by best practices recommendations: <br />
+**2.Processing Workflow:** Standard pipeline workflow consists of the following stepsguided by best practices recommendations: 
 
 a. **Data Checks**
 
-Data checks are done such as<br />
+Data checks are done such as
 
 - X contains raw counts
 - X is a sparse matrix in csc_format
@@ -243,7 +260,7 @@ Data checks are done such as<br />
 
  b. **Quality Control**
 
-With the gene expression matrix ready (raw counts matrix), the next step is to filter out low-quality cells and genes before further processing. Filtering of cells is done on a per-sample basis, using adaptive cutoffs per dataset<br />
+With the gene expression matrix ready (raw counts matrix), the next step is to filter out low-quality cells and genes before further processing. Filtering of cells is done on a per-sample basis, using adaptive cutoffs per dataset
 
 - **Cell filtering**
 
@@ -257,7 +274,7 @@ Following the best practices guide, we use ratios instead of hard thresholds. Th
 
 c. **QC metrics calculation**
 
-QC metrics are calculated for ribo & hemo genes as well, but genes are not removed based on these metrics.<br />
+QC metrics are calculated for ribo & hemo genes as well, but genes are not removed based on these metrics.
 
 d. **Doublet detection**
 
@@ -272,7 +289,7 @@ Default parameters for Scrublet:
 
 e. **QC metric re-computation**
 
-Following filtering and doublet removal, the QC metrics are re-computed (using `scanpy.pp.calculate_qc_metrics` function) on the updated filtered matrix and stored in obs/var:<br />
+Following filtering and doublet removal, the QC metrics are re-computed (using `scanpy.pp.calculate_qc_metrics` function) on the updated filtered matrix and stored in obs/var:
 
 - obs: `'total_counts', 'n_genes_by_counts'`, `'pct_counts_in_top_20_genes'`, `'pct_counts_mt'`, `'pct_counts_ribo'`, `'pct_counts_hb'`
 
@@ -280,18 +297,18 @@ Following filtering and doublet removal, the QC metrics are re-computed (using `
 
 f. **Normalization** 
 
-Normalization is performed to reduce the technical component of variance in the data, arising from differences in sequencing depth across cells. It is performed based on the following choices:<br />
+Normalization is performed to reduce the technical component of variance in the data, arising from differences in sequencing depth across cells. It is performed based on the following choices:
 
 - **Method**: library size/total counts normalization (implemented by `scanpy.pp.normalize` function)
   - **target_sum**: `None` (this is the default option in scanpy and amounts to setting the library size to the median across all cells; [best practices](https://www.sc-best-practices.org/preprocessing_visualization/normalization.html) guide discusses the use of alternate fixed thresholds like 104 or 106 can introduce over-dispersion)
   - **log1p**: `True`
-  - **Scaling**: `True, with zero_center=False` (this will be performed after the HVG step)<br />
+  - **Scaling**: `True, with zero_center=False` (this will be performed after the HVG step)
 
-Note: Before normalization, the filtered counts matrix is saved to a separate “counts” layer (`adata.layers["counts"])`, and X is updated with the normalized counts matrix. A copy of the normalized (and optionally log1p) counts matrix will also be saved in a separate “normalized_counts” layer, this will preserve the normalized data prior to scaling and batch correction steps<br />
+Note: Before normalization, the filtered counts matrix is saved to a separate “counts” layer (`adata.layers["counts"])`, and X is updated with the normalized counts matrix. A copy of the normalized (and optionally log1p) counts matrix will also be saved in a separate “normalized_counts” layer, this will preserve the normalized data prior to scaling and batch correction steps
 
 g. **HVG identification**
 
-Feature selection is needed to reduce the effective dimensionality of the dataset, and retain the most informative genes for downstream steps like PCA and neighbor graph<br />
+Feature selection is needed to reduce the effective dimensionality of the dataset, and retain the most informative genes for downstream steps like PCA and neighbor graph
 
 - **Highly Variable Genes (HVG)** are identified using the `scanpy.pp.highly_variable_genes` function with the following settings:
   - HVG method: `"Seurat"` (default, uses the log-normalized counts matrix in X)
@@ -304,12 +321,17 @@ h. **Batch Effect Correction**
 Batch effect is checked in the data using “sample” as the batch variable
 
 - In a manual workflow, batch effects in the dataset will be checked visually on a UMAP or tSNE as well as the quantitative metrics of batch effects in the data. 
-  - Following quant metrics to be adopted (these are provided through [scib](https://scib.readthedocs.io/en/latest/index.html) and [scib-metrics](https://scib-metrics.readthedocs.io/en/stable/index.html) libraries, which were released along with a [recent](https://scib-metrics.readthedocs.io/en/stable/generated/scib_metrics.ilisi_knn.html) benchmarking study of single-cell data integration methods):<br />
-  i. Adjusted rand index comparing batch labels and leiden clusters ([ARI](https://scib-metrics.readthedocs.io/en/stable/generated/scib_metrics.nmi_ari_cluster_labels_leiden.html))<br />
-  ii. Normalized mutual information between batch labels and leiden clusters [(NMI)](https://scib-metrics.readthedocs.io/en/stable/generated/scib_metrics.nmi_ari_cluster_labels_leiden.html)<br />
-  iii. Principal component regression variance using batch variable ([pcr_batch](https://scib.readthedocs.io/en/latest/api/scib.metrics.pcr.html))<br />
-  iv. Scaled graph integration local inverse Simpson’s index ([Graph iLISI](https://scib-metrics.readthedocs.io/en/stable/generated/scib_metrics.ilisi_knn.html))<br />
-  v. Acceptance rate from batch k-BET test ([kbet_accept_rate](https://scib-metrics.readthedocs.io/en/stable/generated/scib_metrics.kbet.html))<br />
+  - Following quant metrics to be adopted (these are provided through [scib](https://scib.readthedocs.io/en/latest/index.html) and [scib-metrics](https://scib-metrics.readthedocs.io/en/stable/index.html) libraries, which were released along with a [recent](https://scib-metrics.readthedocs.io/en/stable/generated/scib_metrics.ilisi_knn.html) benchmarking study of single-cell data integration methods):
+    
+  i. Adjusted rand index comparing batch labels and leiden clusters ([ARI](https://scib-metrics.readthedocs.io/en/stable/generated/scib_metrics.nmi_ari_cluster_labels_leiden.html))
+  
+  ii. Normalized mutual information between batch labels and leiden clusters [(NMI)](https://scib-metrics.readthedocs.io/en/stable/generated/scib_metrics.nmi_ari_cluster_labels_leiden.html)
+  
+  iii. Principal component regression variance using batch variable ([pcr_batch](https://scib.readthedocs.io/en/latest/api/scib.metrics.pcr.html))
+  
+  iv. Scaled graph integration local inverse Simpson’s index ([Graph iLISI](https://scib-metrics.readthedocs.io/en/stable/generated/scib_metrics.ilisi_knn.html))
+  
+  v. Acceptance rate from batch k-BET test ([kbet_accept_rate](https://scib-metrics.readthedocs.io/en/stable/generated/scib_metrics.kbet.html))
   
 
   For i-iii above, values closer to 0 indicate good batch mixing; for iv-v, values closer to 1 indicate the absence of significant batch effects in the data
@@ -321,13 +343,13 @@ Batch effect is checked in the data using “sample” as the batch variable
    
 **i. Dimensionality reduction**
 
-This step is necessary to reduce the dimensionality of the data prior to clustering, and to enable visualization for exploratory analysis. Following data embeddings are provided by running the relevant scanpy functions:<br />
+This step is necessary to reduce the dimensionality of the data prior to clustering, and to enable visualization for exploratory analysis. Following data embeddings are provided by running the relevant scanpy functions:
 - PCA (n_pcs = 50 top PCs ranked by explained variance): `'X_pca'` in obsm, `'PCs'` in varm slot
 - Nearest-neighbor graph in PC space: n_neighbors=50, dimensionality of PC space = 40 or number of top PCs explaining 90% variance, whichever is smaller; `'distances'` and `'connectivities'` in obsp slot
 - Uniform Manifold Approximation and Projection (UMAP): `'X_umap'` in obsm slot
 - t-Distributed Stochastic Neighbor Embedding (t-SNE): `'X_tsne'` in obsm slot
 
-**j. Cell clustering**: Clustering is performed on the processed and dimensionally reduced data matrix to identify (probable) similar groups of cells, possibly representing distinct cell types/states. <br />
+**j. Cell clustering**: Clustering is performed on the processed and dimensionally reduced data matrix to identify (probable) similar groups of cells, possibly representing distinct cell types/states. 
 
 - Leiden graph-based clustering is performed with a fixed resolution (resolution = 0.8)
   - The nearest-neighbor graph is constructed in the previous dimensionality reduction step. 
@@ -346,15 +368,22 @@ This step is necessary to reduce the dimensionality of the data prior to cluster
   - Note: As the expression matrix input to ScType is not batch-corrected, batch differences are accounted for by standardizing (z-scoring) the expression values gene-wise within each individual batch, then concatenating the batches (instead of z-scoring the expression values at the dataset level) before the enrichment score matrix calculation. This ‘batch-aware’ annotation handles corner cases where batch effects in the dataset impacts the marker genes and the cell type annotation in turn 
 
 - Annotated Tags:
-  - Following sample-level metadata columns get added to obs (these would be uniform across all cells in each cluster):<br />
-i. polly_curated_cell_type: Raw cell type associated with the cell<br />
-ii. polly_curated_cell_ontology:  Cell type associated with the cell, curated with standard ontology<br />
-iii. marker_gene_present: Raw cell type and corresponding present (over-expressed) marker genes corresponding to the assigned cell type against each cell<br />
-iv. marker_gene_absent: Raw cell type and corresponding absent (under-expressed) marker genes corresponding to the assigned cell type against each cell<br />
+  - Following sample-level metadata columns get added to obs (these would be uniform across all cells in each cluster):
+    
+i. polly_curated_cell_type: Raw cell type associated with the cell
 
-   - Following outputs of the cell annotation step are saved to the uns slot of the anndata object:<br />
-i. A table of raw/author cell type predictions by cluster, providing the corresponding ScType scores and confidence values, along with the subset of marker genes for the assigned cell type which are differentially expressed in the annotated cluster.<br />
-ii. Marker genes dictionary used for the cell type annotation step ({cell_type:[markers]})<br />
+ii. polly_curated_cell_ontology:  Cell type associated with the cell, curated with standard ontology
+
+iii. marker_gene_present: Raw cell type and corresponding present (over-expressed) marker genes corresponding to the assigned cell type against each cell
+
+iv. marker_gene_absent: Raw cell type and corresponding absent (under-expressed) marker genes corresponding to the assigned cell type against each cell
+
+   - Following outputs of the cell annotation step are saved to the uns slot of the anndata object:
+
+i. A table of raw/author cell type predictions by cluster, providing the corresponding ScType scores and confidence values, along with the subset of marker genes for the assigned cell type which are differentially expressed in the annotated cluster.
+
+ii. Marker genes dictionary used for the cell type annotation step ({cell_type:[markers]})
+
 iii. Additionally, differentially expressed genes from one-vs-all comparison per cluster are calculated by calling the sc.tl.rank_genes_groups function separately on each individual batch, then aggregating the DGE results across all batches per cluster. This handles batch effects in the normalized data matrix and ensures robust cluster-level markers are selected. DE genes are aggregated and ranked by # of batches in which the gene is DE, the combined p-value (Fisher’s method), and the mean t-test score, in that order. The DGE results are automatically saved to the .uns slot as a single dataframe `("rank_genes_groups")`. 
 
 
@@ -364,15 +393,14 @@ The parameter dictionary will be saved to the uns slot, after adding a time stam
 
  **2.3. Curation and Metadata details**
 
-Metadata curation for Polly annotated data is the same as raw counts data (given above). However, there are some additional fields that are present for every polly-processed dataset in addition to the existing fields available for raw unfiltered data.<br />
+Metadata curation for Polly annotated data is the same as raw counts data (given above). However, there are some additional fields that are present for every polly-processed dataset in addition to the existing fields available for raw unfiltered data.
 
-Details on each metadata field present at the dataset, sample, and feature level are given below<br />
+Details on each metadata field present at the dataset, sample, and feature level are given below
 
-**I dataset Level Metadata**
 
 **2.4. Cell Annotation Method**
 
-We have implemented an author-assisted approach for cell type annotation of clusters using an automated cell type assignment method, ScType. The inputs for ScType are the marker genes and cell types curated from the associated publication<br />
+We have implemented an author-assisted approach for cell type annotation of clusters using an automated cell type assignment method, ScType. The inputs for ScType are the marker genes and cell types curated from the associated publication
 
 **Input to ScType implementation:**
 - The marker list is given as a tab-separated file with raw/author cell names and corresponding comma-separated stringified lists of marker genes (one cell type per line, no headers). 
@@ -385,24 +413,23 @@ Example of a TSV file format:
 2 C1\tg3,g4\t-\n 
 3 C2\tg5\t+\n 
 ```
-In the above example, raw cell type C1 has 2 present marker genes (g1, g2) and 2 absent marker genes (g3, g4) mentioned in the publication. Cell type C2 only has a single present marker gene (g5).<br />
+In the above example, raw cell type C1 has 2 present marker genes (g1, g2) and 2 absent marker genes (g3, g4) mentioned in the publication. Cell type C2 only has a single present marker gene (g5).
+
 Note: The suffix tag is optional. If it is not provided, by default the genes are assumed to represent over-expressed markers only.
 
 - Processed expression matrix in X slot (only the slice of the data corresponding to the supplied marker genes is used for scoring cell types).
 
 **Outputs of cell type annotation step:**
-ScType returns an enrichment score matrix of size `num cell types x num clusters,` based on which each cluster gets assigned the raw cell type with the highest score. If the ScType score was <0 for any cluster, that cluster is left unlabeled ('Unidentified' tag).<br />
+ScType returns an enrichment score matrix of size `num cell types x num clusters,` based on which each cluster gets assigned the raw cell type with the highest score. If the ScType score was <0 for any cluster, that cluster is left unlabeled ('Unidentified' tag).
 
 Annotated information: 
 
 - Following sample-level metadata columns are added to the obs slot (these would be uniform across all cells in each cluster):
-
-  
-a. polly_raw_cell_type: Raw cell type associated with the cell <br />
-b. polly_curated_cell_type:  Cell type associated with the cell, curated with standard ontology <br />
-c. curated_cell_ontology_id: The normalized Cell Ontology ID corresponding to the assigned cell type<br />
-d. marker_gene_present: Raw cell type and corresponding present (over-expressed) marker genes corresponding to the assigned cell type against each cell<br />
-e. marker_gene_absent: Raw cell type and corresponding absent (under-expressed) marker genes corresponding to the assigned cell type against each cell<br />
+   - polly_raw_cell_type: Raw cell type associated with the cell
+   - polly_curated_cell_type:  Cell type associated with the cell, curated with standard ontology
+   - curated_cell_ontology_id: The normalized Cell Ontology ID corresponding to the assigned cell type
+   - marker_gene_present: Raw cell type and corresponding present (over-expressed) marker genes corresponding to the assigned cell type against each cell
+   - marker_gene_absent: Raw cell type and corresponding absent (under-expressed) marker genes corresponding to the assigned cell type against each cell
 
 b) and c) above are the results of running the raw cell types (curated_cell_type) through the Polly curation library normalizer.
 
@@ -414,63 +441,62 @@ In addition to the above outputs, the differentially expressed genes from one-vs
 
 **2.5. Output H5AD format and details**
 
-Two H5AD files will be made available to the user. <br />
-1. Raw unfiltered counts data (Details given above) <br />
-2. Polly annotated data:  <Dataset_id>_polly_annotated.h5ad <br />
+Two H5AD files will be made available to the user.
+1. Raw unfiltered counts data (Details given above)
+2. Polly annotated data:  <Dataset_id>_polly_annotated.h5ad
 
  The following information will be available in the H5AD file (Dataset_id>_polly_annotated.h5ad)
 
-1. Raw filtered counts in `<adata.raw>` slot: The expression matrix after filtering out the genes and cells as per Polly's standard processing pipeline is available in this slot<br />
-   a. Integer counts
-   b. Sparse matrix
+1. Raw filtered counts in `<adata.raw>` slot: The expression matrix after filtering out the genes and cells as per Polly's standard processing pipeline is available in this slot
+- Integer counts
+- Sparse matrix
 
-2. Processed filtered counts in `<adata.x>` slot: The expression matrix after filtering out the genes and cells and normalising the counts as per Polly's standard processing is available in this slot as:<br />
-a. Float values <br />
-b. Values < 100<br />
-c. Sparse matrices<br />
+3. Processed filtered counts in `<adata.x>` slot: The expression matrix after filtering out the genes and cells and normalising the counts as per Polly's standard processing is available in this slot as:
+- Float values
+- Values < 100
+- Sparse matrices
 
-3. Complete Sample Metadata `<adata.obs>` slot: All the sample/cell level metadata as per the metadata table given above is available in this slot. This includes<br />
-a. Polly-Curated Metadata <br />
-b. QC metrics<br />
-c. Source Metadata<br />
-d. Standard Identifier metadata <br />
+5. Complete Sample Metadata `<adata.obs>` slot: All the sample/cell level metadata as per the metadata table given above is available in this slot. This includes
+- Polly-Curated Metadata
+- QC metrics
+- Source Metadata
+- Standard Identifier metadata 
 
-4. Embedding data in `<adata.obsm>` slot. This includes the following:
-a. PCA: Principal components minimum<br />
-b. tSNE: Coordinates of the tSNE plot<br />
-c. NN: Nearest Neighbour graph<br />
-d. UMAP: Coordinates of the UMAP plot<br />
+7. Embedding data in `<adata.obsm>` slot. This includes the following:
+- PCA: Principal components minimum
+- tSNE: Coordinates of the tSNE plot
+- NN: Nearest Neighbour graph
+- UMAP: Coordinates of the UMAP plot
 
-5. Unstructured metadata in Uns <adata.uns> slot: This includes the following:<br />
-a. Tools/packages along with their versions used to convert the matrix from source to raw counts H5AD file<br />
-b. Tools/packages along with their versions used to convert the raw counts H5AD file to Polly processed counts H5AD file<br />
-c. processing pipeline version (for eg. polly_scRNASeq_pipeline_v1)<br />
-d. curation model version (for eg. PollyBert_v1)<br />
-e. ontology version<br />
-f. scanpy, anndata version<br />
-g. Parameters used for processing the data (as a dictionary)<br />
-h. Table of sample-wise QC stats (no. of cells pre/post filtering, along with filtering thresholds applied)<br />
-i. Table of no. of predicted doublets against the total number of cells pre-filtering, per sample<br />
-j. A dictionary of markers is available in the publication and employed for cell type curation<br />
-k. Table of cluster-level cell type predictions from the automated method, along with scores and differentially expressed marker genes for each predicted cell type appearing in the corresponding cluster<br />
-l. Batch-correction method that is applied, along with tables of batch mixing and bio conservation metrics computed on uncorrected/corrected expression matrices<br />
+9. Unstructured metadata in Uns <adata.uns> slot: This includes the following:
+- Tools/packages along with their versions used to convert the matrix from source to raw counts H5AD file
+- Tools/packages along with their versions used to convert the raw counts H5AD file to Polly processed counts H5AD file
+- processing pipeline version (for eg. polly_scRNASeq_pipeline_v1)
+- curation model version (for eg. PollyBert_v1)
+- ontology version
+- scanpy, anndata version
+- Parameters used for processing the data (as a dictionary)
+- Table of sample-wise QC stats (no. of cells pre/post filtering, along with filtering thresholds applied)
+- Table of no. of predicted doublets against the total number of cells pre-filtering, per sample
+- A dictionary of markers is available in the publication and employed for cell type curation
+- Table of cluster-level cell type predictions from the automated method, along with scores and differentially expressed marker genes for each predicted cell type appearing in the corresponding cluster
+- Batch-correction method that is applied, along with tables of batch mixing and bio conservation metrics computed on uncorrected/corrected expression matrices
 
- 
-
+  
 **2.6. Report**
 
-A detailed data report is available for each dataset which can be viewed /downloaded using the given link. The following information corresponding to the dataset will be available in each report:<br />
+A detailed data report is available for each dataset which can be viewed /downloaded using the given link. The following information corresponding to the dataset will be available in each report:
 
 **A) Processing Workflow Summary:** Brief information about the steps involved in the processing pipeline
 
-1. Quality Control (QC) Checks: The initial step involves rigorous quality control checks to identify and filter out poor-quality cells and genes. This ensures that only reliable data is used for downstream analyses, leading to more accurate biological interpretations.<br />
-2. Doublet Detection: Doublets, which can arise during sample preparation and confound analysis, were identified and removed using [Doublet Detection Method]. This step ensured the accuracy of subsequent analyses.<br />
-3. Normalization: Normalization was applied to the processed data to eliminate technical variations and enable meaningful comparisons between cells. [Normalization Method] was used to achieve comparable expression levels across cells.<br />
-4. Identification of Highly Variable Genes (HVG): Not all genes are equally informative in single-cell RNA-Seq data. We identify highly variable genes that drive biological variation and use them for downstream analyses, improving the robustness of our results.<br />
-5. Batch Correction: Whenever necessary, batch correction was applied to address potential batch effects present in the dataset. [Batch Correction Method] was used to mitigate batch-related variability, ensuring the biological signal remains intact.<br />
-6. Cell Type Annotation: Cell types were assigned to individual cells using [Cell Type Annotation Method]. By leveraging known marker genes and reference datasets, cells were labeled with their respective biological identities.<br />
+1. Quality Control (QC) Checks: The initial step involves rigorous quality control checks to identify and filter out poor-quality cells and genes. This ensures that only reliable data is used for downstream analyses, leading to more accurate biological interpretations.
+2. Doublet Detection: Doublets, which can arise during sample preparation and confound analysis, were identified and removed using [Doublet Detection Method]. This step ensured the accuracy of subsequent analyses.
+3. Normalization: Normalization was applied to the processed data to eliminate technical variations and enable meaningful comparisons between cells. [Normalization Method] was used to achieve comparable expression levels across cells.
+4. Identification of Highly Variable Genes (HVG): Not all genes are equally informative in single-cell RNA-Seq data. We identify highly variable genes that drive biological variation and use them for downstream analyses, improving the robustness of our results.
+5. Batch Correction: Whenever necessary, batch correction was applied to address potential batch effects present in the dataset. [Batch Correction Method] was used to mitigate batch-related variability, ensuring the biological signal remains intact.
+6. Cell Type Annotation: Cell types were assigned to individual cells using [Cell Type Annotation Method]. By leveraging known marker genes and reference datasets, cells were labeled with their respective biological identities.
 
-**B) General Information:** Dataset Summary<br />
+**B) General Information:** Dataset Summary
 - Organism
 - Number of cells
 - Number of samples
@@ -495,17 +521,16 @@ QC parameters:
 ![7](../../../docs/img/OmixAtlas-Images/7.png)
 
 
-- Filtering low-expression genes :<br />
-  Genes expressed in less than 3.0 cells were removed.
-- Doublet detection and removal: 
-
-&nbsp; Doublet detection performed with scrublet.<br />
-&nbsp; Parameter settings:<br />
-`expected_doublet_rate : 0.06` <br />
-`min_cells : 3.0` <br />
-`min_counts : 2 ` <br />
-`min_gene_variability_pctl : 85.0 ` <br />
-`n_prin_comps : 30` <br />
+- Filtering low-expression genes :
+  - Genes expressed in less than 3.0 cells were removed.
+- Doublet detection and removal:
+   - Doublet detection performed with scrublet.
+   - Parameter settings:
+`expected_doublet_rate : 0.06` 
+`min_cells : 3.0` 
+`min_counts : 2` 
+`min_gene_variability_pctl : 85.0` 
+`n_prin_comps : 30` 
 
 
 ![8](../../../docs/img/OmixAtlas-Images/8.png)
@@ -515,15 +540,14 @@ QC parameters:
 
 3. **Highly variable genes parameters**
 
+  - HVG flavor
+  - HVG selection method
+  - batch_key
+  - Number of top variable features selected 
 
-&nbsp; HVG flavor <br />
-&nbsp; HVG selection method <br />
-&nbsp; batch_key <br />
-&nbsp; Number of top variable features selected <br />
+4. **Batch Correction** 
 
-4. **Batch Correction** <br />
-
-Details on the quantitative metrics computed on the nearest neighbor graph in PC space. <br >
+Details on the quantitative metrics computed on the nearest neighbor graph in PC space.
 - Batch mixing
   - Normalized mutual information between batch and cluster labels (NMI)
   - Adjusted rand index comparing batch and cluster labels (ARI)
@@ -533,7 +557,7 @@ Details on the quantitative metrics computed on the nearest neighbor graph in PC
 - Biological conservation
    - HVG overlap between pre and post correction matrices
    - Conservation of cell cycle scores between pre and post correction matrices
-<br />
+
 Batch Correction Parameters
 
 `Batch variable: sample_id `
@@ -545,16 +569,15 @@ Batch Correction Parameters
 ![9](../../../docs/img/OmixAtlas-Images/9.png)
 ![10](../../../docs/img/OmixAtlas-Images/10.png)
 
-5. **Low-dimensional embeddings of the data** <bk />
+5. **Low-dimensional embeddings of the data** 
 
 
-Parameters used for neighborhood graph construction following PCA:<bk />
+Parameters used for neighborhood graph construction following PCA:
 - Number of PCs used for cell-cell distance computation
 - Number of neighbors
 - For rendering UMAP and tSNE, default scanpy parameter settings were used.
 
-6. **Unsupervised cell clustering**<bk />
-
+6. **Unsupervised cell clustering**
 
 Clustering parameters:
 - resolution
@@ -565,7 +588,7 @@ Clustering parameters:
 
 - Method used
 - List of markers was used for cell type annotation (note that the trailing + or - indicates whether the corresponding marker genes are over-expressed (present) or under-expressed (absent) in cells of that type)
-<bk />
+
 Eg.
 
 ```
@@ -612,26 +635,28 @@ Eg.
 ![iv](../../../docs/img/OmixAtlas-Images/iv.png)
 
 
-**3. Author Processed Data** <br />
+**3. Author Processed Data**
 
-**3.1. Starting point**<br />
-We take author-submitted raw counts from the sources, where available. The starting point is the h5ad file containing raw unfiltered counts created for the raw counts data.<br />
-Raw h5ad file containing unfiltered counts in X slot, along with sample/cell and feature level metadata (HUGO gene symbols as feature IDs, obs columns specifying batch/sample, and other cell level metadata)<br />
+**3.1. Starting point**
 
-**3.2. Processing details**<br />
+We take author-submitted raw counts from the sources, where available. The starting point is the h5ad file containing raw unfiltered counts created for the raw counts data.
 
-For author-annotated data, datasets are processed through the pipeline provided in the paper, thereby, following the author’s analysis provided in the publication. Cell annotation is done using author-provided markers Cells as per the annotation given in the paper (similar number of cells and similar tSNE)<br />
+Raw h5ad file containing unfiltered counts in X slot, along with sample/cell and feature level metadata (HUGO gene symbols as feature IDs, obs columns specifying batch/sample, and other cell level metadata)
 
-The processing includes the following steps:<br />
+**3.2. Processing details**
+
+For author-annotated data, datasets are processed through the pipeline provided in the paper, thereby, following the author’s analysis provided in the publication. Cell annotation is done using author-provided markers Cells as per the annotation given in the paper (similar number of cells and similar tSNE)
+
+The processing includes the following steps:
 
 **1. Preparing data**
-- Raw h5ad containing unfiltered counts loaded in X slot, along with sample and feature level metadata<br />
+- Raw h5ad containing unfiltered counts loaded in X slot, along with sample and feature level metadata
 
 Once data is prepared, processing starts based on a general scRNA-seq analysis workflow using the Scanpy library. The following steps are included in the workflow:
 ![v](../../../docs/img/OmixAtlas-Images/v.png)
 
 
-**2. Quality control:** The QC step involves filtering low-quality cells and genes from the dataset. Quality control metrics are calculated using the calculate_qc_metrics function. Different metrics are as follows.<br />
+**2. Quality control:** The QC step involves filtering low-quality cells and genes from the dataset. Quality control metrics are calculated using the calculate_qc_metrics function. Different metrics are as follows.
 
 | Level | Metric/Parameter | Definition |
 | ---- | ---- | ---- |
@@ -649,31 +674,31 @@ Once data is prepared, processing starts based on a general scRNA-seq analysis w
 Filtering of cells and genes is done based on Scanpy parameters (Basic QC) and author-based parameters
 - Filtering based on Scanpy Parameters: The criteria for filtering cells/genes include the following:
   - Removing genes that are detected in very less cells (< 3 cells)
-  - Removing cells with a very low number of genes (<200 genes)<br />
-     Note: These filters apply only if the source has raw counts.
+  - Removing cells with a very low number of genes (<200 genes)
+    - Note: These filters apply only if the source has raw counts.
 - Quality control based on author analysis: Filtering out high mito% content, and other parameter like UMI counts as mentioned by the author 
   - Removing cells with a high percentage of mitochondrial genes which indicate non-viable cells (> 25% pct_counts_mt).
   - Removing cells with very high total_counts - This can be done by visualizing the distribution of cells using violin plots.
  
-3. **Normalization and log transformation of expression values:** <br />
-    Normalization aims to remove systematic differences in sequencing coverage between libraries such that they do not interfere with comparisons of the expression profiles between cells.<br />
+3. **Normalization and log transformation of expression values:** 
+    Normalization aims to remove systematic differences in sequencing coverage between libraries such that they do not interfere with comparisons of the expression profiles between cells.
  - Total-count normalization (library-size correction) - Normalise total counts per cell to 10,000 (only applies when raw counts are available).
  - Log10 normalization of the matrix.
 
-4. **Highly variable genes:** Identification of highly variable genes based on their expression across the population that represent the biological differences. <br />
+4. **Highly variable genes:** Identification of highly variable genes based on their expression across the population that represent the biological differences. 
 
-5. **Batch correction:** Batch correction to remove unwanted variation due to experimental design.   Systematic differences in the observed expression in cells arising from different batches are referred to as “batch effects”.  If the batch effect is observed, we first use harmony algorithm to correct this. This method does not affect the count matrix. However, if harmony is not effective in providing a good batch correction, then the combat algorithm of Scanpy is used which generates corrected counts, and the count matrix (.X layer) is affected. <br />
+5. **Batch correction:** Batch correction to remove unwanted variation due to experimental design.   Systematic differences in the observed expression in cells arising from different batches are referred to as “batch effects”.  If the batch effect is observed, we first use harmony algorithm to correct this. This method does not affect the count matrix. However, if harmony is not effective in providing a good batch correction, then the combat algorithm of Scanpy is used which generates corrected counts, and the count matrix (.X layer) is affected. 
 
 6. **Dimensionality Reduction**
 - This is done using PCA (Principal Component Analysis) on highly variable genes.
 - Computing the neighbourhood graph of cells using the PCA representation of the data matrix.
 - Embedding the neighbourhood graph in two dimensions using UMAP and tSNE.
 
-7. **Clustering:** Clustering of the neighbourhood graph using the Leiden graph-clustering method.<br />
+7. **Clustering:** Clustering of the neighbourhood graph using the Leiden graph-clustering method.
 
-8. **Cell type annotation of clusters:** Cell annotation of clusters is done using author-provided markers. If the cell type annotations are given at the source, we use the same and normalize the labels using the Cell Ontology. For datasets, where the authors have not provided cell-type annotations mappings, but only the marker genes we manually curate the information based on the differential marker expression for clusters.<br />
+8. **Cell type annotation of clusters:** Cell annotation of clusters is done using author-provided markers. If the cell type annotations are given at the source, we use the same and normalize the labels using the Cell Ontology. For datasets, where the authors have not provided cell-type annotations mappings, but only the marker genes we manually curate the information based on the differential marker expression for clusters.
 
-&nbsp; **Annotation of clusters** - UMAP/tSNE plots are generated as a result of single cell raw count processing (as mentioned in the processing section). By visualization of clusters with UMAP/t-SNE plots, cell type cluster annotation is done.<br />
+**Annotation of clusters** - UMAP/tSNE plots are generated as a result of single cell raw count processing (as mentioned in the processing section). By visualization of clusters with UMAP/t-SNE plots, cell type cluster annotation is done.
 - curated_raw_cell_type: Cluster annotation with author-provided raw cell type (cell type terminology used in publication) is based on the marker expression value for each cluster. In publications, the information on cell type and the corresponding marker is present either in the figures (UMAP, T-SNE plots), text, or supplementary files. This annotation is added as a field named curated_raw_cell_type.
 - curated_cell_type: The raw cell type name is normalized using the Cell Ontology and is curated as the fields named curated_cell_type.
 
@@ -684,31 +709,30 @@ Additionally, marker information is also added with gene names that are differen
 
 9. **Saving the data**
 
-The processed anndata object is saved in H5AD format and pushed to Polly’s Omixatlas. Further details of the processing performed (parameters/method choices, QC metrics, and associated plots) are bundled as a separate comprehensive HTML report and provided with the data file. <br />
+The processed anndata object is saved in H5AD format and pushed to Polly’s Omixatlas. Further details of the processing performed (parameters/method choices, QC metrics, and associated plots) are bundled as a separate comprehensive HTML report and provided with the data file. 
 
 3.3. **Curation and Metadata details**
 
-Metadata curation for Polly annotated data is the same as raw counts data (given above). However, there are some additional fields that are present for every author-processed dataset in addition to the existing fields available for raw unfiltered data.<br />
+Metadata curation for Polly annotated data is the same as raw counts data (given above). However, there are some additional fields that are present for every author-processed dataset in addition to the existing fields available for raw unfiltered data.
 
-**I Dataset Level Metadata**
 
 **3.4. Cell Annotation method**
 
-Cell annotation of clusters is done using author-provided markers. If the cell type annotations are given at the source, we use the same and normalize the labels using the Cell Ontology. For datasets, where the authors have not provided cell-type annotations mappings, but only the marker genes we manually curate the information based on the differential marker expression for clusters. <br />
+Cell annotation of clusters is done using author-provided markers. If the cell type annotations are given at the source, we use the same and normalize the labels using the Cell Ontology. For datasets, where the authors have not provided cell-type annotations mappings, but only the marker genes we manually curate the information based on the differential marker expression for clusters. 
 
-Process flow for cell type manual curation: <br />
+Process flow for cell type manual curation: 
 ![x](../../../docs/img/OmixAtlas-Images/x.png)
 
-**Annotation of clusters** - UMAP/tSNE plots are generated as a result of single cell raw count processing (as mentioned in the processing section). By visualization of clusters with UMAP/t-SNE plots, cell type cluster annotation is done.<br />
+**Annotation of clusters** - UMAP/tSNE plots are generated as a result of single cell raw count processing (as mentioned in the processing section). By visualization of clusters with UMAP/t-SNE plots, cell type cluster annotation is done.
 
 1. curated_raw_cell_type: Cluster annotation with author-provided raw cell type (cell type terminology used in publication) is based on the marker expression value for each cluster. In publications, the information on cell type and the corresponding marker is present either in the figures (UMAP, T-SNE plots), text, or supplementary files. This annotation is added as a field named curated_raw_cell_type.
-2. curated_cell_type: The raw cell type name is normalized using the Cell Ontology and is curated as the fields named curated_cell_type.<br />
-Additionally, marker information is also added with gene names that are differentially expressed in the cluster<br />
+2. curated_cell_type: The raw cell type name is normalized using the Cell Ontology and is curated as the fields named curated_cell_type.
+Additionally, marker information is also added with gene names that are differentially expressed in the cluster
 3. curated_marker_present: Gene name/names that are differentially expressed (present) in the cluster
 4. curated_marker_absent: Gene name/names that are absent in the cluster
 5. curated_cell_ontology_id: The normalized Cell Ontology ID corresponding to the assigned cell type
 
-**3.5. Output H5AD format and details** <br />
+**3.5. Output H5AD format and details** 
 
 Two H5AD files are made available to the user.
 1. Raw unfiltered counts data (Details given above)
@@ -716,25 +740,25 @@ Two H5AD files are made available to the user.
 
 The following information will be available in the author_annotated H5AD file:
 1. Raw filtered counts in `<adata.raw>` slot: The expression matrix after filtering out the genes and cells as per the author’s pipeline given in the paper is available in this slot
-2. Processed filtered counts in `<adata.x>` slot: The expression matrix after filtering out the genes and cells and normalizing the counts as per the author’s pipeline given in the paper is available in this slot as: <br />
-a. Float values <br />
-b. Values < 100<br />
-c. Sparse matrices<br />
+2. Processed filtered counts in `<adata.x>` slot: The expression matrix after filtering out the genes and cells and normalizing the counts as per the author’s pipeline given in the paper is available in this slot as:
+- Float values
+- Values < 100
+- Sparse matrices
 
-3. Complete Sample Metadata `<adata.obs>` slot: All the sample/cell level metadata as per the metadata table given above is available in this slot. This includes<br />
-a. Polly-Curated Metadata<br />
-b. QC metrics<br />
-c. Source Metadata<br />
-d. Standard Identifier metadata<br />
+4. Complete Sample Metadata `<adata.obs>` slot: All the sample/cell level metadata as per the metadata table given above is available in this slot. This includes
+- Polly-Curated Metadata
+- QC metrics
+- Source Metadata
+- Standard Identifier metadata
 
-4. Embedding data in `<adata.obsm>` slot. This includes the following:
-a. PCA: Principal components minimum<br />
-b. tSNE: Coordinates of the tSNE plot<br />
-c. UMAP: Coordinates of the UMAP plot<br />
+5. Embedding data in `<adata.obsm>` slot. This includes the following:
+- PCA: Principal components minimum
+- tSNE: Coordinates of the tSNE plot
+- UMAP: Coordinates of the UMAP plot
 
 - **var** contains the gene metadata [`'highly_variable', 'gene_ids', 'n_cells'`]
 
-- Unstructured metadata in Uns `<adata.uns>` slot: This includes the following:<br />
+- Unstructured metadata in Uns `<adata.uns>` slot: This includes the following:
 
 ![vii](../../../docs/img/OmixAtlas-Images/vii.png)
 
@@ -758,18 +782,18 @@ Currently, three types of cell-type annotations are available
 3. Author cell type: Cell types curated directly from the publication/source
 
 
-**Are source fields retained for a dataset?** <br />
-All source fields are captured in the H5AD file which users can visualize through applications. However, fields available for searching through UI and Polly-python are restricted by schema due to performance constraints.<br />
+**Are source fields retained for a dataset?** 
+All source fields are captured in the H5AD file which users can visualize through applications. However, fields available for searching through UI and Polly-python are restricted by schema due to performance constraints.
 
-**Are external data requests directly added to the Customer’s OmixAtlas?** <br />
-Users can request for single-cell RNASeq datasets from the sources mentioned in the document above to be added to their atlas. Upon request, datasets will be made available in the customer’s Atlas directly.<br />
+**Are external data requests directly added to the Customer’s OmixAtlas?** 
+Users can request for single-cell RNASeq datasets from the sources mentioned in the document above to be added to their atlas. Upon request, datasets will be made available in the customer’s Atlas directly.
 
-More details on the SLAs for dataset delivery are given here: SLAs for Single Cell RNASeq Datasets delivery <br />
+More details on the SLAs for dataset delivery are given here: SLAs for Single Cell RNASeq Datasets delivery 
 
-**Will QC reports be available for data audits/selection?** <br />
-QC reports for a dataset will be generated on demand. Based on the customer requirements, datasets that pass the required QC criteria will be delivered. <br />
+**Will QC reports be available for data audits/selection?** 
+QC reports for a dataset will be generated on demand. Based on the customer requirements, datasets that pass the required QC criteria will be delivered. 
 
-The following QC metrics will be captured in the report:<br />
+The following QC metrics will be captured in the report:
 
 - Minimum total counts per cell: Automatically determined based on the dataset
 - Maximum total counts per cell: Automatically determined based on the dataset
@@ -778,7 +802,7 @@ The following QC metrics will be captured in the report:<br />
 - Number of samples
 - Number of cells
 
-*Internal*: We will generate QC reports for the datasets identified in the audit running them through the raw counts pipeline <br />
+*Internal*: We will generate QC reports for the datasets identified in the audit running them through the raw counts pipeline 
 - These datasets will be populated in an Atlas and provided to the customer (without the option to download the H5AD file)
 - Customers can look at the details of the dataset (along with the QC report) and decide if they want to buy the dataset or not.
 - In case they want to buy, they send us a request along with their preference (raw counts or Polly processed or author processed) either through Polly or via CSM
@@ -801,7 +825,8 @@ The tools and parameters for processing datasets as per Polly’s processing pip
 - Leiden clustering: Resolution parameter
 - DEGs (by cluster): log fold-change and p-value cutoffs
 
-**How will the availability of markers impact the delivery of datasets?** <br />
+**How will the availability of markers impact the delivery of datasets?** 
+
 We will deliver datasets in such cases too. However, markers used for curation will be as follows:
 
 - We will use CellMarkerDB and PanglaoDB to identify canonical markers
@@ -811,13 +836,13 @@ We will deliver datasets in such cases too. However, markers used for curation w
 
 **Is the subcluster information provided for a dataset?**
 - If subclusters are available as metadata, the subcluster information will be added to `author_cell-type`
-- Each dataset will be split by the following parameters whenever applicable. So subcluster may exist as a separate dataset for the following: <br />
-a. Disease<br />
-b. Tissue<br />
-c. Organism<br />
-d. Assay<br />
+- Each dataset will be split by the following parameters whenever applicable. So subcluster may exist as a separate dataset for the following: 
+  - Disease
+  - Tissue
+  - Organism
+  - Assay
 
-However the following will be the cases for custom subcluster annotation<br />
+However the following will be the cases for custom subcluster annotation
 - If a dataset has splits as per patient or group of samples that don’t follow the above metadata split
 - If tissue is annotated with subclusters for eg. Heart Endothelial Cells are subtyped as artery, vein, etc.
   - Markers will be captured only from the main figure. These may have multiple tissues clustered together for a particular cell type. In cases, where authors have provided sub-cell types in additional figures, those markers are not captured which are specific to the additional UMAP/TSNEs. In order to capture these, it will be considered as a custom annotation.

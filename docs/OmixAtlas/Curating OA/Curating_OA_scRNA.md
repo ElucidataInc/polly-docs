@@ -47,6 +47,7 @@
 | total_num_cells | total_num_cells | Cells | integer | Total number of cells in a dataset | integer | Polly - Curated |
 | total_num_samples | total_num_samples | Samples | integer | Total number of samples in a dataset | integer | Polly - Curated |
 
+
 **II Sample Level Metadata**
 | Field name(Polly-Python) | Original Name(Data) | Display Name (GUI) | Type | Description | Default values | Metadata Category |
 |----|------|----|------|---------|-------|-------|
@@ -77,6 +78,7 @@
 | sample_id | sample | Sample ID | text | Unique ID associated with a sample | Must be populated | Standard Identifier |
 | title | title | Title | text | Title of the sample | none | Source Metadata |
 | total_counts | total_counts | Total counts | float | Absolute number of observed transcripts for a cell | Must be populated | Standard Identifier |
+
 
 **III Feature Level Metadata**
 | Field name(Polly-Python) | Original Name(Data) | Display Name (GUI) | Type | Description | Default values | Metadata Category |
@@ -180,6 +182,7 @@
 | polly_curated_cell_type | polly_curated_cell_type | Polly processed standardized Cell type | text | Curated cell type associated with the cell | none | Polly - Curated |
 | curated_cell_ontology_id | curated_cell_ontology_id | Cell ontology ID | text | Curated Cell Ontology ID | none | Polly - Curated |
 
+
 **III Feature Level Metadata**
 | Field name(Polly-Python) | Original Name(Data) | Display Name (GUI) | Type | Description | Default values | Metadata Category |
 |----|------|----|------|---------|-------|-------|
@@ -197,15 +200,6 @@
 | var_norm | var_norm | Variance dispersion | float | variance dispersions per gene | Must be populated | Polly - Curated |
 | highly_variable | highly_variable | Highly variable gene | text | Whether a gene is highly variable | Must be populated | Polly - Curated |
 | highly_variable_nbatches | highly_variable_nbatches | Highly variable in nbatches | integer | no. of batches/samples in which the gene is identified as highly variable | Must be populated | Polly - Curated |
-
-
-
-
-
-
-
-
-
 
 
 ## Author processed counts
