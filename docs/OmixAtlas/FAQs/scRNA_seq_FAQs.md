@@ -21,6 +21,7 @@ A Single-cell RNAseq dataset on Polly represents a curated collection of biologi
 
 
 **Dataset ID Nomenclature**
+
 | Source | Source Format | Polly Format |
 | ------ | ------ | ------ |
 | GEO |For every study, there is a series ID and a platform ID given on GEO.  **Platform identifier**: A Platform record is composed of a summary description of the array or sequencer. Each Platform record is assigned a unique GEO Identifier(GPLxxx). **Series**: A Series record links together a group of related samples and provides a focal point and description of the whole study. Each Series record is assigned a unique GEO Identifier(GSExxx).  - A Series record can be a SubSeries or  SuperSeries.  - SuperSeries is all the experiments for a single paper/study and is divided into SubSeries which are different technologies. | Format: GSExxxxx_GPLXXXXX  All dataset IDs on Polly are GEO subseries |
