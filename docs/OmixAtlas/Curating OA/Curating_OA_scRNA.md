@@ -3,7 +3,7 @@
 ## Raw unfiltered counts
 
 
-**I. Dataset Level Metadata**
+### I. Dataset Level Metadata
 
 | Field name(Polly-Python) | Original Name(Data) | Display Name (GUI) | Type | Description | Default values | Metadata Category |
 |----|------|----|------|---------|-------|-------|
@@ -48,7 +48,7 @@
 | total_num_samples | total_num_samples | Samples | integer | Total number of samples in a dataset | integer | Polly - Curated |
 
 
-**II Sample Level Metadata**
+### II Sample Level Metadata
 
 | Field name(Polly-Python) | Original Name(Data) | Display Name (GUI) | Type | Description | Default values | Metadata Category |
 |----|------|----|------|---------|-------|-------|
@@ -81,7 +81,7 @@
 | total_counts | total_counts | Total counts | float | Absolute number of observed transcripts for a cell | Must be populated | Standard Identifier |
 
 
-**III Feature Level Metadata**
+### III Feature Level Metadata
 
 | Field name(Polly-Python) | Original Name(Data) | Display Name (GUI) | Type | Description | Default values | Metadata Category |
 |----|------|----|------|---------|-------|-------|
@@ -95,7 +95,8 @@
 
 
 ## Polly Processed Data
-**I. Dataset Level Metadata**
+
+### I. Dataset Level Metadata
 
 | Field name(Polly-Python) | Original Name(Data) | Display Name (GUI) | Type | Description | Default values | Metadata Category |
 |----|------|----|------|---------|-------|-------|
@@ -146,7 +147,7 @@
 | polly_raw_cell_type | polly_raw_cell_type | Polly processed raw Cell type | text | Raw cell type associated with the cell | Must be populated | Polly - Curated |
 
 
-**II Sample Level Metadata**
+### II Sample Level Metadata
 
 | Field name(Polly-Python) | Original Name(Data) | Display Name (GUI) | Type | Description | Default values | Metadata Category |
 |----|------|----|------|---------|-------|-------|
@@ -187,7 +188,7 @@
 | curated_cell_ontology_id | curated_cell_ontology_id | Cell ontology ID | text | Curated Cell Ontology ID | none | Polly - Curated |
 
 
-**III Feature Level Metadata**
+### III Feature Level Metadata
 
 | Field name(Polly-Python) | Original Name(Data) | Display Name (GUI) | Type | Description | Default values | Metadata Category |
 |----|------|----|------|---------|-------|-------|
@@ -209,7 +210,7 @@
 
 ## Author processed counts
 
- **I. Dataset Level Metadata**
+### I. Dataset Level Metadata
 
 | **Field** | **Description** | **Ontology** | **GUI Display Name** | **Polly-Python Display Name** |
 | --- | --- | --- | --- | --- |
@@ -237,7 +238,7 @@
 | Number of Cells | This field represents the number of cells/observations in the dataset. | Number of Cells | total_num_cells |
 | Number of Samples | This field represents the total number of samples in a dataset. | Samples | total_num_samples |
 
-#### II. Sample Level Metadata
+### II. Sample Level Metadata
 
 | **Field** | **Description** | **Ontology** | **GUI Display Name** | **Polly-Python Display Name** |
 | --- | --- | --- | --- | --- |
@@ -274,7 +275,7 @@
 | Mitochondrial count | This field represents the percentage of mitochondrial counts in total counts for a cell. | NA | percent\_mito |
 | Title | This field represents the title of the sample, representing the type/genotype/origin/experimental condition of the sample | NA | title |
 
-#### III. Feature Level Metadata
+### III. Feature Level Metadata
 
 | **Field** | **Description** | **Polly-Python Display Name** |
 | --- | --- | --- |
