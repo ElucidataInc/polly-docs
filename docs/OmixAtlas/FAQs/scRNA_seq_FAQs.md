@@ -112,8 +112,8 @@ The pipeline for raw counts includes the following steps:
 1. **Fetching Raw Counts**: The starting point for the pipeline is getting the raw counts from the source by  
 
     - Either downloading data directly from the source  - A text file is created with links for downloading 
-    - Downloading manually
-
+    - Downloading manually  
+    
    Associated barcodes and gene probes are fetched with the raw counts
 
 2. **Preparing Data files**: A JSON file is created for the pipeline to run.  
