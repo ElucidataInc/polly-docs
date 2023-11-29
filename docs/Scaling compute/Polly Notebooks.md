@@ -24,13 +24,13 @@ You can access Polly Notebooks in three ways:
 
 ![New Notebook button to create a new notebook](../img/Notebooks/Create.png) <center>**Figure 2.** *New Notebook* button to create a new notebook</center>
 
-*   **Upload a notebook:** Click on the *Cloud Upload icon* prsent at the top of the middle panel and select the *Upload a Notebook* option.
+*   **Upload a notebook:** Click on the *Upload icon* at the top of the panel and select the *Upload a Notebook* option.
 
-![Upload Notebook button to upload a notebook](../img/Notebooks/Notebookupload.png) <center>**Figure 3.** *Upload Notebook* button to upload a notebook</center>
+![Upload Notebook button to upload a notebook](../img/Notebooks/upload.png) <center>**Figure 3.** *Upload Notebook* button to upload a notebook</center>
 
-The notebook can be uploaded from the local system as well as from the various cloud storage services (Dropbox, Google Drive and Box). To upload from local system, files can be dragged and dropped. To upload from various cloud storage services, select the relevant option, login to the service and select the files to be uploaded.
+The notebook can be uploaded via browse files option or from the local system. To upload from the local system, files can be dragged and dropped. 
 
-![Window to import notebook from local or other cloud storage services](../img/Notebooks/Upload.png) <center>**Figure 4.** Window to import notebook from local or other cloud storage services</center>
+![Window to import notebook from local or other cloud storage services](../img/Notebooks/uploadnb.png) <center>**Figure 4.** Window to import notebook </center>
 
 *   **Open an existing notebook:** Click on the name of any existing notebook to *Edit and Launch* it.
 If you are running the notebook for the first time, the option *Edit and Launch* would appear as a default selection to launch the selected notebook. You are required to select an environment and a machine to run the given notebook, oly after these selections are done you can launch the notebook.
@@ -71,7 +71,7 @@ The various notebook environments supported are as follows:
 
 The size of the data varies from few MBs to hundreds of GBs, and in order to process and analyze this huge data, one would need the computation power from a small machine to a large workstation. Polly Notebook supports configurations having 2 to 72 GB Ram and 1 to 36 CPU cores. The menu to select a machine configuration will pop-up when you creates a new notebook or uploads a notebook and tries to open it for the first time.
 
-![Menu to select various machine configurations](../img/Notebooks/Machine.png) <center>**Figure 8.** Menu to select various machine configurations</center>
+![Menu to select various machine configurations](../img/Notebooks/Machinetype.png) <center>**Figure 8.** Menu to select various machine configurations</center>
 
 Most of the machine configuration are already specified to cover the wide variety of use cases. More machine configuration can also be made available on request (contact us at [polly@elucidata.io](polly@elucidata.io)). The general machine configurations are divided into three broad categories:
 
@@ -80,24 +80,26 @@ Most of the machine configuration are already specified to cover the wide variet
 | Name          | CPU/Cores | RAM   |
 |---------------|-----------|-------|
 | Polly small   | 1         | 2 GB  |
-| Polly medium  | 2         | 4 GB  |
+| PollyN medium | 2         | 4 GB  |
 | Polly large   | 2         | 8 GB  |
-| Polly x-large | 4         | 16 GB |
+| PollyN xlarge | 4         | 16 GB |
 
-*   **Compute Intensive:** Configurations from 16 to 36 CPU cores and 32 to 72 GB RAM fall under this category. The various configurations are:
+*N stands for Notebook
 
-| Name           | CPU/Cores | RAM   |
-|----------------|-----------|-------|
-| Polly 2x-large | 16        | 32 GB |
-| Polly 3x-large | 36        | 72 GB |
-
-*   **Memory-Optimized:** Configurations from 4 to 8 CPU cores and 32 to 64 GB RAM fall under this category. The various configurations are:
+*   **Compute Intensive(CI):** Configurations from 16 to 36 CPU cores and 32 to 72 GB RAM fall under this category. The various configurations are:
 
 | Name           | CPU/Cores | RAM   |
 |----------------|-----------|-------|
-| Polly 2x-large | 4         | 32 GB |
-| Polly 3x-large | 8         | 64 GB |
-| Polly 4x-large | 16        | 120GB |
+| PollyN CI 4x-large | 16        | 32 GB |
+| PollyN CI 9x-large | 36        | 72 GB |
+
+*   **Memory-Optimized(MO):** Configurations from 4 to 8 CPU cores and 32 to 64 GB RAM fall under this category. The various configurations are:
+
+| Name           | CPU/Cores | RAM   |
+|----------------|-----------|-------|
+| PollyN MO x-large | 4         | 32 GB |
+| PollyN MO 2x-large | 8         | 64 GB |
+| PollyN MO 4x-large | 16        | 120GB |
 
 ##Other Useful Features
 
