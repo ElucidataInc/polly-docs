@@ -103,7 +103,7 @@ Single-cell raw count data is typically available in several common file formats
 **1.2 Processing details**
 
   
-![Processing details](../../../docs/img/OmixAtlas-Images/ProcessingFlow.png) 
+![Processing details](../../img/OmixAtlas-Images/ProcessingFlow.png) 
 
 Processing Flow
 
@@ -204,7 +204,7 @@ A) General Information: Dataset Summary
    - Annotated cell types from Source
 
 
-![Report](../../../docs/img/OmixAtlas-Images/Report.png)
+![Report](../../img/OmixAtlas-Images/Report.png)
 
 Sample information for dataset summary
 
@@ -221,14 +221,14 @@ C) Pre-processing
 
 D) Sample/cell Level Metadata Attributes
 
-![1](../../../docs/img/OmixAtlas-Images/1.png)
-![2](../../../docs/img/OmixAtlas-Images/2.png)
-![4](../../../docs/img/OmixAtlas-Images/4.png)
+![1](../../img/OmixAtlas-Images/1.png)
+![2](../../img/OmixAtlas-Images/2.png)
+![4](../../img/OmixAtlas-Images/4.png)
 
 E) Basic Data QC
 
 
-![5](../../../docs/img/OmixAtlas-Images/5.png)
+![5](../../img/OmixAtlas-Images/5.png)
 
 
 F ) Data QA Analysis: This section provides a table showing the data-related checks performed internally along with the final output
@@ -529,8 +529,8 @@ QC parameters:
 3. Minimum number of genes per cell: Automatically determined based on dataset
 4. Maximum number of genes per cell: Automatically determined based on dataset
 
-![6](../../../docs/img/OmixAtlas-Images/6.png)
-![7](../../../docs/img/OmixAtlas-Images/7.png)
+![6](../../img/OmixAtlas-Images/6.png)
+![7](../../img/OmixAtlas-Images/7.png)
 
 
 - Filtering low-expression genes :
@@ -545,7 +545,7 @@ QC parameters:
 `n_prin_comps : 30` 
 
 
-![8](../../../docs/img/OmixAtlas-Images/8.png)
+![8](../../img/OmixAtlas-Images/8.png)
 
 
 2. **Normalization Parameters**
@@ -579,8 +579,8 @@ Batch Correction Parameters
 
 `Batch correction method used: scanorama`
 
-![9](../../../docs/img/OmixAtlas-Images/9.png)
-![10](../../../docs/img/OmixAtlas-Images/10.png)
+![9](../../img/OmixAtlas-Images/9.png)
+![10](../../img/OmixAtlas-Images/10.png)
 
 5. **Low-dimensional embeddings of the data** 
 
@@ -625,12 +625,12 @@ Eg.
 - Statistical test: t-test
 - Log-fold change cutoff
 - Adjusted p-value (BH)
-![i](../../../docs/img/OmixAtlas-Images/i.png)
-![ii](../../../docs/img/OmixAtlas-Images/ii.png)
+![i](../../img/OmixAtlas-Images/i.png)
+![ii](../../img/OmixAtlas-Images/ii.png)
 
 
 8.**Cell-level metadata visualized on 2D UMAP**
-![iii](../../../docs/img/OmixAtlas-Images/iii.png)
+![iii](../../img/OmixAtlas-Images/iii.png)
 
 
 **D) AnnData Object Summary**
@@ -646,7 +646,7 @@ Eg.
 ```
 
 
-![iv](../../../docs/img/OmixAtlas-Images/iv.png)
+![iv](../../img/OmixAtlas-Images/iv.png)
 
 
 **3. Author Processed Data**
@@ -668,7 +668,7 @@ The processing includes the following steps:
 - Raw h5ad containing unfiltered counts loaded in X slot, along with sample and feature level metadata
 
 Once data is prepared, processing starts based on a general scRNA-seq analysis workflow using the Scanpy library. The following steps are included in the workflow:
-![v](../../../docs/img/OmixAtlas-Images/v.png)
+![v](../../img/OmixAtlas-Images/v.png)
 
 
 **2. Quality control:** The QC step involves filtering low-quality cells and genes from the dataset. Quality control metrics are calculated using the calculate_qc_metrics function. Different metrics are as follows.
@@ -741,7 +741,7 @@ Metadata curation for Polly annotated data is the same as raw counts data (given
 Cell annotation of clusters is done using author-provided markers. If the cell type annotations are given at the source, we use the same and normalize the labels using the Cell Ontology. For datasets, where the authors have not provided cell-type annotations mappings, but only the marker genes we manually curate the information based on the differential marker expression for clusters. 
 
 Process flow for cell type manual curation: 
-![x](../../../docs/img/OmixAtlas-Images/x.png)
+![x](../../img/OmixAtlas-Images/x.png)
 
 **Annotation of clusters** - UMAP/tSNE plots are generated as a result of single cell raw count processing (as mentioned in the processing section). By visualization of clusters with UMAP/t-SNE plots, cell type cluster annotation is done.
 
@@ -785,7 +785,7 @@ The following information will be available in the author_annotated H5AD file:
 
 - Unstructured metadata in Uns `<adata.uns>` slot: This includes the following:
 
-![vii](../../../docs/img/OmixAtlas-Images/vii.png)
+![vii](../../img/OmixAtlas-Images/vii.png)
 
 
 **3.6. Report**
