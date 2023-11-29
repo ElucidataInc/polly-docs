@@ -26,7 +26,7 @@ You can access Polly Notebooks in three ways:
 
 *   **Upload a notebook:** Click on the *Upload icon* at the top of the panel and select the *Upload a Notebook* option.
 
-![Upload Notebook button to upload a notebook](../img/Notebooks/upload.png) <center>**Figure 3.** *Upload Notebook* button to upload a notebook</center>
+![Upload Notebook button to upload a notebook](../img/Notebooks/upload.png) <center>**Figure 3.** *Upload Notebook* Click on upload button to upload a notebook</center>
 
 The notebook can be uploaded via browse files option or from the local system. To upload from the local system, files can be dragged and dropped. 
 
