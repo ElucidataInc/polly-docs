@@ -420,6 +420,7 @@ We have implemented an author-assisted approach for cell type annotation of clus
 - Specification on whether the marker gene is present (over-expressed) or absent (under-expressed) in the corresponding cell type is also given in the file.
   - To specify this information along with the marker lists, each cell name in the list is appended with a suffix tag ‘+’ or ‘-’ to indicate whether present or absent marker genes are indicated on that line. If a cell type is associated with both types of markers, these are to be grouped by type and provided in separate lines.
 
+
 Example of a TSV file format:
 ```
 1 C1\tg1,g2\t+\n 
@@ -505,7 +506,9 @@ Two H5AD files will be made available to the user.
 
 A detailed data report is available for each dataset which can be viewed /downloaded using the given link. The following information corresponding to the dataset will be available in each report:
 
-**A) Processing Workflow Summary:** Brief information about the steps involved in the processing pipeline
+**A) Processing Workflow Summary:** 
+
+Brief information about the steps involved in the processing pipeline
 
 1. Quality Control (QC) Checks: The initial step involves rigorous quality control checks to identify and filter out poor-quality cells and genes. This ensures that only reliable data is used for downstream analyses, leading to more accurate biological interpretations.
 2. Doublet Detection: Doublets, which can arise during sample preparation and confound analysis, were identified and removed using [Doublet Detection Method]. This step ensured the accuracy of subsequent analyses.
@@ -514,7 +517,9 @@ A detailed data report is available for each dataset which can be viewed /downlo
 5. Batch Correction: Whenever necessary, batch correction was applied to address potential batch effects present in the dataset. [Batch Correction Method] was used to mitigate batch-related variability, ensuring the biological signal remains intact.
 6. Cell Type Annotation: Cell types were assigned to individual cells using [Cell Type Annotation Method]. By leveraging known marker genes and reference datasets, cells were labeled with their respective biological identities.
 
-**B) General Information:** Dataset Summary
+**B) General Information:** 
+
+Dataset Summary
 
    - Organism
    - Number of cells
