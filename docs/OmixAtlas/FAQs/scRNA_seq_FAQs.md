@@ -109,16 +109,20 @@ Processing Flow
 
 The pipeline for raw counts includes the following steps: 
 
-1. **Fetching Raw Counts**: The starting point for the pipeline is getting the raw counts from the source by
-   - Either downloading data directly from the source  - A text file is created with links for downloading 
-   - Downloading manually 
+1. **Fetching Raw Counts**: The starting point for the pipeline is getting the raw counts from the source by  
+
+    - Either downloading data directly from the source  - A text file is created with links for downloading 
+    - Downloading manually
+
 Associated barcodes and gene probes are fetched with the raw counts
 
-2. **Preparing Data files**: A JSON file is created for the pipeline to run.
-   - A JSON file with all the required input parameters is created. As per the parameters given in the JSON file, further steps in the pipeline are run
-   - In case raw counts are downloaded from the source directly, the file is unzipped and data is arranged in a structured way
+2. **Preparing Data files**: A JSON file is created for the pipeline to run.  
 
-3. **Creating h5ad**: With the input as the above JSON file, the pipeline starts to create the initial h5ad.
+    - A JSON file with all the required input parameters is created. As per the parameters given in the JSON file, further steps in the pipeline are run
+    - In case raw counts are downloaded from the source directly, the file is unzipped and data is arranged in a structured way
+
+4. **Creating h5ad**: With the input as the above JSON file, the pipeline starts to create the initial h5ad.
+ 
    - Programmatic checks are performed to ensure the data matrix contains raw counts only
    - If the matrix is not found to be in the correct format (as per the raw count acceptable values), the pipeline stops
    - Pipeline accepts the raw counts as per defined the acceptable values, i.e. integer values and >1000
@@ -126,13 +130,14 @@ Associated barcodes and gene probes are fetched with the raw counts
    - Feature IDs are converted to Hugo Symbols (or Ensembl IDs where conversion to Hugo symbols is not available or ambiguous)
    - Initial h5ad is created
 
-4. **Metadata Curation**:
-   - The curation pipeline adds curated metadata to the file - sample/cell level metadata is added to the h5ad file
+5. **Metadata Curation**:
+
+    - The curation pipeline adds curated metadata to the file - sample/cell level metadata is added to the h5ad file
    - The curation pipeline generates dataset metadata
 
-5. **QC metrics**: Scanpy QC metrics are calculated and added to the h5ad file
+7. **QC metrics**: Scanpy QC metrics are calculated and added to the h5ad file
 
-6. **Final h5ad**: The final h5ad file is saved, consisting of QC metrics, curated metadata, raw counts matrix
+8. **Final h5ad**: The final h5ad file is saved, consisting of QC metrics, curated metadata, raw counts matrix
 
 **1.3 Curation and Metadata details**
 
