@@ -17,7 +17,7 @@ Polly can bring in data from a variety of public sources as per the needs as lon
 
 ### How is a Single Cell RNA-Seq dataset defined on Polly?
 
-A Single-cell RNAseq dataset on Polly represents a curated collection of biologically and statistically comparable samples. A dataset on Polly is a single entity based on its representation in publication or source.
+A Single-cell RNAseq dataset on Polly represents a curated collection of biologically and statistically comparable samples. A dataset on Polly is a single entity based on its representation in publication or source. 
 
 
 **Dataset ID Nomenclature**
