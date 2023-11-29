@@ -26,11 +26,11 @@ You can access Polly Notebooks in three ways:
 
 *   **Upload a notebook:** Click on the *Upload icon* at the top of the panel and select the *Upload a Notebook* option.
 
-![Upload Notebook button to upload a notebook](../img/Notebooks/upload.png) <center>**Figure 3.** *Upload Notebook* Click on upload button to upload a notebook</center>
+![Upload Notebook button](../img/Notebooks/upload.png) <center>**Figure 3.** *Upload Notebook* </center>
 
 The notebook can be uploaded via browse files option or from the local system. To upload from the local system, files can be dragged and dropped. 
 
-![Window to import notebook from local or other cloud storage services](../img/Notebooks/uploadnb.png) <center>**Figure 4.** Window to import notebook </center>
+![Window to import notebook from local](../img/Notebooks/uploadnb.png) <center>**Figure 4.** Window to drop and browse files </center>
 
 *   **Open an existing notebook:** Click on the name of any existing notebook to *Edit and Launch* it.
 If you are running the notebook for the first time, the option *Edit and Launch* would appear as a default selection to launch the selected notebook. You are required to select an environment and a machine to run the given notebook, oly after these selections are done you can launch the notebook.
@@ -71,7 +71,7 @@ The various notebook environments supported are as follows:
 
 The size of the data varies from few MBs to hundreds of GBs, and in order to process and analyze this huge data, one would need the computation power from a small machine to a large workstation. Polly Notebook supports configurations having 2 to 72 GB Ram and 1 to 36 CPU cores. The menu to select a machine configuration will pop-up when you creates a new notebook or uploads a notebook and tries to open it for the first time.
 
-![Menu to select various machine configurations](../img/Notebooks/Machinetype.png) <center>**Figure 8.** Menu to select various machine configurations</center>
+![ to select various machine configurations](../img/Notebooks/Machinetype.png) <center>**Figure 8.** Menu to select from various machine configurations</center>
 
 Most of the machine configuration are already specified to cover the wide variety of use cases. More machine configuration can also be made available on request (contact us at [polly@elucidata.io](polly@elucidata.io)). The general machine configurations are divided into three broad categories:
 
@@ -124,7 +124,7 @@ There are few other useful features as well that might come handy when using a P
 
 Upon selecting a pre-configured docker environment and a computational machine, a Polly Notebook starts launching on a new tab of the browser. Based upon the type of computational machine chosen while launching a Polly Notebook you will see a progress bar which will tell you that your new notebook is opening.
 
-![Progress bar upon launching a Polly Notebook](../img/Notebooks/16.png) <center>**Figure 10.** Progress bar upon launching a Polly Notebook</center>
+![Progress bar on launching a Polly Notebook](../img/Notebooks/Progressbar.png) <center>**Figure 10.** Progress bar upon launching Polly Notebook</center>
 
 Once the server is ready, you will see the new notebook gets opened on the browser. The interface is very similar to that of a Jupyter notebook.
 
