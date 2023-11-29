@@ -114,7 +114,7 @@ The pipeline for raw counts includes the following steps:
     - Either downloading data directly from the source  - A text file is created with links for downloading 
     - Downloading manually
 
-Associated barcodes and gene probes are fetched with the raw counts
+   Associated barcodes and gene probes are fetched with the raw counts
 
 2. **Preparing Data files**: A JSON file is created for the pipeline to run.  
 
@@ -163,7 +163,6 @@ Details on each metadata field present at the dataset, sample, and feature level
 
 
 **1.4 Output H5AD format and details**
-
 
 H5AD file for raw counts data offering will be available to the user with the following information: 
 
@@ -292,6 +291,7 @@ d. **Doublet detection**
 Detection of probable doublets and filtering out predicted doublets from the counts matrix. This is done using the Scrublet tool, which has a Python implementation. [Scrublet is also being used in the EBI SC Expression Atlas pipeline and has been known to perform better against other methods, particularly in terms of speed and scalability (e.g. this review and study)]
 
 Default parameters for Scrublet:
+
 - Doublet rate: 0.06
 - Min counts: 2 
 - Min cells : 3 
@@ -355,6 +355,7 @@ Batch effect is checked in the data using “sample” as the batch variable
 **i. Dimensionality reduction**
 
 This step is necessary to reduce the dimensionality of the data prior to clustering, and to enable visualization for exploratory analysis. Following data embeddings are provided by running the relevant scanpy functions:
+
 - PCA (n_pcs = 50 top PCs ranked by explained variance): `'X_pca'` in obsm, `'PCs'` in varm slot
 - Nearest-neighbor graph in PC space: n_neighbors=50, dimensionality of PC space = 40 or number of top PCs explaining 90% variance, whichever is smaller; `'distances'` and `'connectivities'` in obsp slot
 - Uniform Manifold Approximation and Projection (UMAP): `'X_umap'` in obsm slot
@@ -414,6 +415,7 @@ Details on each metadata field present at the dataset, sample, and feature level
 We have implemented an author-assisted approach for cell type annotation of clusters using an automated cell type assignment method, ScType. The inputs for ScType are the marker genes and cell types curated from the associated publication
 
 **Input to ScType implementation:**
+
 - The marker list is given as a tab-separated file with raw/author cell names and corresponding comma-separated stringified lists of marker genes (one cell type per line, no headers). 
 - Specification on whether the marker gene is present (over-expressed) or absent (under-expressed) in the corresponding cell type is also given in the file.
   - To specify this information along with the marker lists, each cell name in the list is appended with a suffix tag ‘+’ or ‘-’ to indicate whether present or absent marker genes are indicated on that line. If a cell type is associated with both types of markers, these are to be grouped by type and provided in separate lines.
