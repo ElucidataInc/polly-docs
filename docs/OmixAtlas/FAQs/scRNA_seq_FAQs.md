@@ -114,7 +114,6 @@ The pipeline for raw counts includes the following steps:
     - Either downloading data directly from the source  - A text file is created with links for downloading 
     - Downloading manually  
     
-   Associated barcodes and gene probes are fetched with the raw counts
 
 2. **Preparing Data files**: A JSON file is created for the pipeline to run.  
 
@@ -167,20 +166,20 @@ Details on each metadata field present at the dataset, sample, and feature level
 H5AD file for raw counts data offering will be available to the user with the following information: 
 
 1. Raw counts `<adata.X>` slot: The raw expression matrix is available in this slot, providing information on the genes and cells as provided by the author.  The raw counts will available be as:
-
+   
    - Integer counts (with an exception of some datasets from Expression Atlas which may contain fractional values)
    - Values >1000
    - Values not less than 0
    - Sparse matrix
 
-3. Complete Sample Metadata in `<adata.obs>` slot: All the cell/sample level metadata information is available in this slot as per the metadata table given above 
+2. Complete Sample Metadata in `<adata.obs>` slot: All the cell/sample level metadata information is available in this slot as per the metadata table given above 
 
    - Polly-Curated Metadata
    - Scanpy QC metrics - QC metrics include n_genes_by_counts, total_counts, total_counts_mt, and pct_counts_mt.
    - Source Metadata
    - Standard Identifier Metadata
 
-4. Processing Details `<adata.uns>` slot: Unstructured metadata on the processing-related details is available in this slot such as:
+3. Processing Details `<adata.uns>` slot: Unstructured metadata on the processing-related details is available in this slot such as:
  
    - Tools/packages along with their versions used to convert the matrix from source to H5AD file
    - curation model version (for eg. PollyBert_v1)
@@ -188,7 +187,7 @@ H5AD file for raw counts data offering will be available to the user with the fo
    - raw file formats
    - scanpy, anndata version
 
-5. `<adata.uns>` slot: QC Metrics such as mt, n_cells_by_counts, mean_counts, pct_dropout_by_counts & total_counts
+4. `<adata.uns>` slot: QC Metrics such as mt, n_cells_by_counts, mean_counts, pct_dropout_by_counts & total_counts
 
 **1.5 Report**
 
