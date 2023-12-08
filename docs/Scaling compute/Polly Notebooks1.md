@@ -5,9 +5,9 @@ Navigate to the [Polly Workspaces](https://docs.elucidata.io/Getting%20Started/W
 
 You can access Polly Notebooks in three ways:
 
-*   **Create a new notebook:** Go to the *Applications* interface and click on the *Polly Notebooks* button located on the bottom left side of the navigation bar to create a new notebook. You are required to provide a name to the Notebook and select the workspace along with an environment and a machine to run the given notebook.
+*   **Create a new notebook:** Go to the *Applications* interface and click on the *Polly Notebooks* button located on the left side to create a new notebook. You are required to provide a name to the Notebook and select the workspace along with an environment and a machine to run the given notebook.
 
-![New Notebook button to create a new notebook](../img/Notebooks/Create.png) <center>**Figure 2.** *New Notebook* button to create a new notebook</center>
+![New Notebook button to create a new notebook](../img/Notebooks/createnotebook.png) <center>**Figure 2.** *New Notebook* button to create a new notebook</center>
 
 *   **Upload a notebook:** Click on the *Upload icon* at the top of the panel and select the *Upload a Notebook* option.
 
@@ -21,7 +21,7 @@ The notebook can be uploaded via browse files option or from the local system. T
 *   **Open an existing notebook:** Click on the name of any existing notebook to *Edit and Launch* it.
 If you are running the notebook for the first time, the option *Edit and Launch* would appear as a default selection to launch the selected notebook. You are required to select an environment and a machine to run the given notebook, oly after these selections are done you can launch the notebook.
 
-![Opening a notebook](../img/Notebooks/Opennotebook.png)<center>**Figure 5.** Opening a notebook for the first time</center>
+![Opening a notebook](../img/Notebooks/Openingnewnb.png)<center>**Figure 5.** Opening a notebook for the first time</center>
 
 *   **For an older notebook:** You have two options, you can either launch the notebook directly by the Launch button or you can choose to edit it first before launching through the Edit and Launch button. 
 
