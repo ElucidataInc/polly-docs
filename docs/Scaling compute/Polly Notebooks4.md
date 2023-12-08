@@ -1,7 +1,7 @@
 
 Upon selecting a pre-configured docker environment and a computational machine, a Polly Notebook starts launching on a new tab of the browser. Based upon the type of computational machine chosen while launching a Polly Notebook you will see a progress bar which will tell you that your new notebook is opening.
 
-![Progress bar upon launching a Polly Notebook](../img/Notebooks/16.png) <center>**Figure 10.** Progress bar upon launching a Polly Notebook</center>
+![Progress bar upon launching a Polly Notebook](../img/Notebooks/Progressbar.png) <center>**Figure 10.** Progress bar upon launching a Polly Notebook</center>
 
 Once the server is ready, you will see the new notebook gets opened on the browser. The interface is very similar to that of a Jupyter notebook.
 
