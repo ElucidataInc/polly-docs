@@ -10,22 +10,24 @@ Most of the machine configuration are already specified to cover the wide variet
 | Name          | CPU/Cores | RAM   |
 |---------------|-----------|-------|
 | Polly small   | 1         | 2 GB  |
-| Polly medium  | 2         | 4 GB  |
+| PollyN medium | 2         | 4 GB  |
 | Polly large   | 2         | 8 GB  |
-| Polly x-large | 4         | 16 GB |
+| PollyN xlarge | 4         | 16 GB |
 
-*   **Compute Intensive:** Configurations from 16 to 36 CPU cores and 32 to 72 GB RAM fall under this category. The various configurations are:
+*N stands for Notebook
 
-| Name           | CPU/Cores | RAM   |
-|----------------|-----------|-------|
-| Polly 2x-large | 16        | 32 GB |
-| Polly 3x-large | 36        | 72 GB |
-
-*   **Memory-Optimized:** Configurations from 4 to 8 CPU cores and 32 to 64 GB RAM fall under this category. The various configurations are:
+*   **Compute Intensive(CI):** Configurations from 16 to 36 CPU cores and 32 to 72 GB RAM fall under this category. The various configurations are:
 
 | Name           | CPU/Cores | RAM   |
 |----------------|-----------|-------|
-| Polly 2x-large | 4         | 32 GB |
-| Polly 3x-large | 8         | 64 GB |
-| Polly 4x-large | 16        | 120GB |
+| PollyN CI 4x-large | 16        | 32 GB |
+| PollyN CI 9x-large | 36        | 72 GB |
+
+*   **Memory-Optimized(MO):** Configurations from 4 to 8 CPU cores and 32 to 64 GB RAM fall under this category. The various configurations are:
+
+| Name           | CPU/Cores | RAM   |
+|----------------|-----------|-------|
+| PollyN MO x-large | 4         | 32 GB |
+| PollyN MO 2x-large | 8         | 64 GB |
+| PollyN MO 4x-large | 16        | 120GB |
 
