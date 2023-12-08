@@ -4,15 +4,15 @@ The Polly notebook is a Jupyter Polyglot notebook that supports multiple kernels
 
 1\. To begin with the analysis, download the raw data given at the link above and upload it in your workspace through Polly GUI as shown below:
 
-![Gists_Figures](../img/Gists_Figures/Gists_fig7.png) <center>**Figure .7** Polly workspace</center>
+![Gists_Figures](../img/Gists_Figures/SCUpload.png) <center>**Figure .7** Polly workspace</center>
 
 Once the dataset is uploaded, it will be visible in the workspace as shown below:
 
-![Gists_Figures](../img/Gists_Figures/Gists_fig7.2.png) <center>**Figure .7.2** Uploaded data in workspace</center>
+![Gists_Figures](../img/Gists_Figures/SCfile.png) <center>**Figure .7.2** Uploaded data in workspace</center>
 
 2\. Launch a new Polly notebook in your workspace with the desired docker environment and machine type
 
-![Gists_Figures](../img/Gists_Figures/Gists_fig8.png) <center>**Figure .8** Polly notebook</center>
+![Gists_Figures](../img/Gists_Figures/Singlecellnb.png) <center>**Figure .8** Polly notebook</center>
 
 3\. Read the dataset from your workspace to a notebook instance to make it accessible for analysis as below using Polly CLI in Bash kernel:
 
