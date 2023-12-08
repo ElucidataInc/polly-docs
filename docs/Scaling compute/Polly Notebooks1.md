@@ -1,7 +1,7 @@
 
 Navigate to the [Polly Workspaces](https://docs.elucidata.io/Getting%20Started/Workspaces.html) in which the analysis needs to be performed. The notebooks of this workspace can accessed from the middle panel.
 
-![Polly Workspaces](../img/Notebooks/Workspace.png "Polly Workspaces") <center>**Figure 1.** Polly Workspaces</center>
+![Polly Workspaces](../img/Notebooks/workspacee.png) <center>**Figure 1.** Polly Workspaces</center>
 
 You can access Polly Notebooks in three ways:
 
@@ -37,7 +37,7 @@ There are few other useful features as well that might come handy when using a P
     
 *   Click on the kebab menu at the end of the selected notebook. A menu with various options will open.
     
-    ![Edit* button to change machine configuration](../img/Notebooks/Features.png) <center>**Figure 9.** *Edit* button to change machine configuration</center>
+    ![Edit* button to change machine configuration](../img/Notebooks/Features.png) <center>**Figure 7.** *Edit* button to change machine configuration</center>
 
 *   Scroll down in the menu and navigate to the desired option.
 
