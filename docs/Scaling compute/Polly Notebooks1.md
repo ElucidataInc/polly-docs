@@ -9,13 +9,14 @@ You can access Polly Notebooks in three ways:
 
 ![New Notebook button to create a new notebook](../img/Notebooks/Create.png) <center>**Figure 2.** *New Notebook* button to create a new notebook</center>
 
-*   **Upload a notebook:** Click on the *Cloud Upload icon* prsent at the top of the middle panel and select the *Upload a Notebook* option.
+*   **Upload a notebook:** Click on the *Upload icon* at the top of the panel and select the *Upload a Notebook* option.
 
-![Upload Notebook button to upload a notebook](../img/Notebooks/Notebookupload.png) <center>**Figure 3.** *Upload Notebook* button to upload a notebook</center>
+![Upload Notebook button](../img/Notebooks/upload.png) <center>**Figure 3.** *Upload Notebook* </center>
 
-The notebook can be uploaded from the local system as well as from the various cloud storage services (Dropbox, Google Drive and Box). To upload from local system, files can be dragged and dropped. To upload from various cloud storage services, select the relevant option, login to the service and select the files to be uploaded.
+The notebook can be uploaded via browse files option or from the local system. To upload from the local system, files can be dragged and dropped. 
 
-![Window to import notebook from local or other cloud storage services](../img/Notebooks/Upload.png) <center>**Figure 4.** Window to import notebook from local or other cloud storage services</center>
+![Window to import notebook from local](../img/Notebooks/uploadnb.png) <center>**Figure 4.** Window to drop and browse files </center>
+
 
 *   **Open an existing notebook:** Click on the name of any existing notebook to *Edit and Launch* it.
 If you are running the notebook for the first time, the option *Edit and Launch* would appear as a default selection to launch the selected notebook. You are required to select an environment and a machine to run the given notebook, oly after these selections are done you can launch the notebook.
