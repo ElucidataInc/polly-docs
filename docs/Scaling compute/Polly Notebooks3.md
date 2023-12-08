@@ -1,7 +1,7 @@
 
 The size of the data varies from few MBs to hundreds of GBs, and in order to process and analyze this huge data, one would need the computation power from a small machine to a large workstation. Polly Notebook supports configurations having 2 to 72 GB Ram and 1 to 36 CPU cores. The menu to select a machine configuration will pop-up when you creates a new notebook or uploads a notebook and tries to open it for the first time.
 
-![Menu to select various machine configurations](../img/Notebooks/Machineconf.png) <center>**Figure 8.** Menu to select various machine configurations</center>
+![Menu to select various machine configurations](../img/Notebooks/Machineconf.png) <center>**Figure 9.** Menu to select various machine configurations</center>
 
 Most of the machine configuration are already specified to cover the wide variety of use cases. More machine configuration can also be made available on request (contact us at (polly@elucidata.io)) <p><a href="mailto:polly.support@elucidata.io"> </a></p>. The general machine configurations are divided into three broad categories:
 
