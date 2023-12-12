@@ -88,9 +88,9 @@ This format helps replicate the analysis from the associated publication with mi
 More details are in the subsequent sections.
 
 
-### Details
+## Details
 
-**1. Raws unfiltered counts** 
+### **1. Raws unfiltered counts** 
 
 **1.1. Starting Point** 
 
@@ -120,7 +120,7 @@ The pipeline for raw counts includes the following steps:
     - A JSON file with all the required input parameters is created. As per the parameters given in the JSON file, further steps in the pipeline are run
     - In case raw counts are downloaded from the source directly, the file is unzipped and data is arranged in a structured way
 
-4. **Creating h5ad**: With the input as the above JSON file, the pipeline starts to create the initial h5ad.
+3. **Creating h5ad**: With the input as the above JSON file, the pipeline starts to create the initial h5ad.
  
    - Programmatic checks are performed to ensure the data matrix contains raw counts only
    - If the matrix is not found to be in the correct format (as per the raw count acceptable values), the pipeline stops
@@ -129,14 +129,14 @@ The pipeline for raw counts includes the following steps:
    - Feature IDs are converted to Hugo Symbols (or Ensembl IDs where conversion to Hugo symbols is not available or ambiguous)
    - Initial h5ad is created
 
-5. **Metadata Curation**:
+4. **Metadata Curation**:
 
     - The curation pipeline adds curated metadata to the file - sample/cell level metadata is added to the h5ad file
    - The curation pipeline generates dataset metadata
 
-7. **QC metrics**: Scanpy QC metrics are calculated and added to the h5ad file
+5. **QC metrics**: Scanpy QC metrics are calculated and added to the h5ad file
 
-8. **Final h5ad**: The final h5ad file is saved, consisting of QC metrics, curated metadata, raw counts matrix
+6. **Final h5ad**: The final h5ad file is saved, consisting of QC metrics, curated metadata, raw counts matrix
 
 **1.3 Curation and Metadata details**
 
@@ -660,7 +660,7 @@ Eg.
 ![iv](../../img/OmixAtlas-Images/iv.png)
 
 
-**3. Author Processed Data**
+### **3. Author Processed Data**
 
 **3.1. Starting point**
 

@@ -35,14 +35,13 @@ Once the *code cell* is executed, the results which are computed by sending the 
 
 ![Running a code cell](../img/Notebooks/runningcode.png) <center>**Figure 13.** Running a code cell</center>
 
-<br/>
-
 **Terminal**
 
 Once the *Terminal* option is selected, it launches a new tab on the browser and provides access to the command-line interface to execute any sets of commands. You have access to all the file types which are available in the docker environment and those can be managed through the terminal as well. The terminal option also allows you to install Python or R packages (as described later), managing system binaries and system configurations, and helps you working with code repositories hosted on GitHub, Bitbucket, etc.
 
 ![Terminal screen window](../img/Notebooks/terminal.png) <center>
 ![Terminal screen window](../img/Notebooks/21.png) <center>**Figure 15.** Terminal screen window</center>
+
 
 **File Explorer**
 
