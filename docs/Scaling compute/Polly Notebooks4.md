@@ -42,8 +42,9 @@ Once the *Terminal* option is selected, it launches a new tab on the browser and
 ![Terminal screen window](../img/Notebooks/terminal.png) <center>
 ![Terminal screen window](../img/Notebooks/21.png) <center>**Figure 15.** Terminal screen window</center>
 
+<p align="justify">
 
-**File Explorer**
+ **File Explorer**
 
 Similar to the above option, if you select the *File Explorer* option, a new tab opens up in the browser and you can view different file types and directories present in the docker environment. Under the *Files* tab, the list of all the files and directories is available to you and any modification such as delete, upload or modifying by opening a file type can be done.
 **Note**: Access to this page will be unavailable; however, you can still delineate the file format and incorporate it into your code. 
@@ -208,3 +209,4 @@ Another option is also available to install various packages and system binaries
 
 ![Installing System libraries using the Terminal](../img/Notebooks/30.png) <center>**Figure 24.** Installing System libraries using the Terminal</center>
 
+</p> 
