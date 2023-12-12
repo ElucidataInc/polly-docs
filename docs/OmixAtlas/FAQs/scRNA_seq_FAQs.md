@@ -90,7 +90,7 @@ More details are in the subsequent sections.
 
 ## Details
 
-### **1. Raws unfiltered counts** 
+### 1. Raws unfiltered counts
 
 **1.1. Starting Point** 
 
@@ -246,6 +246,7 @@ F ) Data QA Analysis: This section provides a table showing the data-related che
 
    - Metadata QA - Quality checks performed for metadata at the dataset and sample/ &nbsp;&nbsp;cell-level metadata
    - Data matrix QA
+
 
 ### 2. Polly Processed Data
 
@@ -673,7 +674,7 @@ Eg.
 ![iv](../../img/OmixAtlas-Images/iv.png)
 
 
-### **3. Author Processed Data**
+### 3. Author Processed Data
 
 **3.1. Starting point**
 
@@ -888,3 +889,7 @@ However the following will be the cases for custom subcluster annotation
      - Markers will be captured only from the main figure. These may have multiple tissues clustered together for a particular cell type. In cases, where authors have provided sub-cell types in additional figures, those markers are not captured which are specific to the additional UMAP/TSNEs. In order to capture these, it will be considered as a custom annotation.
     
      - If the publication’s marker database already has cell subtypes, then those markers will be used.  If not, then it will be a custom annotation
+
+
+## List of curated fields
+Please find the link to the curated fields [here](https://docs.polly.elucidata.io/OmixAtlas/Curating%20OA/Curating_OA_scRNA.html)
