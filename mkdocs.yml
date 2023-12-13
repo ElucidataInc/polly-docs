@@ -90,6 +90,7 @@ plugins:
       handlers:
         python:
           paths:
+            - ./temp_dir/polly-python
             - ./temp_dir/polly-python/polly
           options:
             show_root_full_path: False
