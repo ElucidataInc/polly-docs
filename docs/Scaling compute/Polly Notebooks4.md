@@ -33,9 +33,6 @@ A *code cell* allows you to edit and write a new code. The *code cell* executes 
 
 Once the *code cell* is executed, the results that are computed by sending the code to the kernel are displayed as an output below the cell. Again to execute a *code cell*, you can click on the “Run” button, and if you want to stop the computation process of a particular *code cell*, then the “Interrupt” button needs to be selected in the toolbar.
 
-![Running a code cell](../img/Notebooks/runningcode.png) <center>**Figure 13.** Running a code cell</center>
-
-
 **Run Button**
 
 The "Run" button triggers the execution of the currently selected code or active cell, facilitating the immediate processing and evaluation of the code for interactive development.
@@ -43,6 +40,9 @@ The "Run" button triggers the execution of the currently selected code or active
 **Interrupt button**
 
 The "Interrupt" button halts the execution of a running code or program, allowing users to stop ongoing processes and regain control.
+
+
+![Running a code cell](../img/Notebooks/runningcode.png) <center>**Figure 13.** Running a code cell</center>
 
 
 **Terminal**
