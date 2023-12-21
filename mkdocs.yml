@@ -31,7 +31,7 @@ nav:
       - FAQs:
         - Bulk RNA Sequencing FAQs: OmixAtlas/FAQs/Bulk_RNA_sequencing_FAQs.md
         - Single Cell RNA Sequencing FAQs: OmixAtlas/FAQs/scRNA_seq_FAQs.md
-  - Polly Python: '!import https://github.com/ElucidataInc/polly-python-code?branch=multirepo_plugin_docs&extra_imports=["polly/*"]'
+  - Polly Python: '!import https://github.com/ElucidataInc/polly-python-code?branch=multirepo_plugin_docs&extra_imports=["polly/*", "polly_services/*"]'
   - Polly Compute:
     - Polly Notebooks:
       - About Polly Notebooks: Scaling compute/Polly Notebooks5.md
@@ -90,6 +90,7 @@ plugins:
       handlers:
         python:
           paths:
+            - ./temp_dir/polly-python
             - ./temp_dir/polly-python/polly
           options:
             show_root_full_path: False
