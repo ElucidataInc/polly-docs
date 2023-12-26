@@ -1,13 +1,13 @@
 
-Upon selecting a pre-configured docker environment and a computational machine, a Polly Notebook starts launching on a new tab of the browser. Based upon the type of computational machine chosen while launching a Polly Notebook you will see a progress bar which will tell you that your new notebook is opening.
+Upon selecting a pre-configured docker environment and a computational machine, a Polly Notebook starts launching on a new tab of the browser. Based on the type of computational machine chosen while launching a Polly Notebook you will see a progress bar that will tell you that your new notebook is opening.
 
-![Progress bar upon launching a Polly Notebook](../img/Notebooks/16.png) <center>**Figure 10.** Progress bar upon launching a Polly Notebook</center>
+![Progress bar upon launching a Polly Notebook](../img/Notebooks/Progressbar.png) <center>**Figure 10.** Progress bar upon launching a Polly Notebook</center>
 
-Once the server is ready, you will see the new notebook gets opened on the browser. The interface is very similar to that of a Jupyter notebook.
+Once the server is ready, you will see the new notebook opened on the browser. The interface is very similar to that of a Jupyter notebook.
 
-![Polly Notebook interface](../img/Notebooks/17.png) <center>**Figure 11.** Polly Notebook interface</center>
+![Polly Notebook interface](../img/Notebooks/nbinterface.png) <center>**Figure 11.** Polly Notebook interface</center>
 
-On the top left, you can see a pre-defined name given to the notebook if in case a new notebook was created. Towards the top right, you can see the Polly Workspace name and below it, you can see the kernel/docker environment selected for opening the notebook.
+On the top left, you can see a pre-defined name given to the notebook in case a new notebook is created. Towards the top right, you can see the Polly Workspace name, and below it, you can see the kernel/docker environment selected for opening the notebook.
 
 *   **Menu bar:** There are multiple tabs present in the menu bar section which can be used to operate various functions in the notebook. For example, under the *File* tab, you can select the Rename option to change the name of the current active notebook.
 
@@ -15,9 +15,9 @@ On the top left, you can see a pre-defined name given to the notebook if in case
 
 ##Structure of Polly Notebook
 
-The Polly notebook comprises of a sequence of cells. There are three types of cells: **markdown cells**, **raw cells**, and **code cells**. In each of these types, you can input multi-line content and each cell can be executed by pressing *Shift+Enter*, or by clicking either the *Run cells* option on *Cell* tab in the menu bar or the “Play” button in the toolbar.
+The Polly notebook comprises a sequence of cells. There are three types of cells: **markdown cells**, **raw cells**, and **code cells**. In each of these types, you can input multi-line content and each cell can be executed by pressing *Shift+Enter*, or by clicking either the *Run cells* option on *Cell* tab in the menu bar or the “Play” button in the toolbar.
 
-![Structure of a Polly Notebook](../img/Notebooks/18.png) <center>**Figure 12.** Structure of a Polly Notebook</center>
+![Structure of a Polly Notebook](../img/Notebooks/Structure.png) <center>**Figure 12.** Structure of a Polly Notebook</center>
 
 **Markdown cells**
 
@@ -31,35 +31,55 @@ You can write output directly in the *raw cells*. A raw cell is not evaluated by
 
 A *code cell* allows you to edit and write a new code. The *code cell* executes the code written by you based on the kernel selected while launching the notebook. The *code cell* can include multiple programming languages as well as seen on the bottom right side of the image above. The above example is of a Pollyglot Docker environment which allows you to select multiple programming languages in the same notebook thus, you can select the type of kernel you prefer to code on.
 
-Once the *code cell* is executed, the results which are computed by sending the code to the kernel are displayed as an output below the cell. Again to execute a *code cell*, you can click on the “Run” button and if you want to stop the computation process of a particular *code cell*, then the “Interrupt” button needs to be selected in the toolbar.
+Once the *code cell* is executed, the results that are computed by sending the code to the kernel are displayed as an output below the cell. Again to execute a *code cell*, you can click on the “Run” button, and if you want to stop the computation process of a particular *code cell*, then the “Interrupt” button needs to be selected in the toolbar.
 
-![Running a code cell](../img/Notebooks/19.png) <center>**Figure 13.** Running a code cell</center>
+**Run Button**
 
-##Polly Offerings
+The "Run" button triggers the execution of the currently selected code or active cell, facilitating the immediate processing and evaluation of the code for interactive development.
 
-Polly Offerings tab in the Menu bar contains the following two options, namely *Terminal* and *File Explorer* which are described below.
+**Interrupt button**
 
-![Polly Offerings tab](../img/Notebooks/20.png) <center>**Figure 14.** Polly Offerings tab</center>
+The "Interrupt" button halts the execution of a running code or program, allowing users to stop ongoing processes and regain control.
+
+
+![Running a code cell](../img/Notebooks/runningcode.png) <center>**Figure 13.** Running a code cell</center>
+
 
 **Terminal**
 
-Once the *Terminal* option is selected, it launches a new tab on the browser and provides access to the command-line interface to execute any sets of commands. You have access to all the file types which are available in the docker environment and those can be managed through the terminal as well. The terminal option also allows you to install Python or R packages (as described later), managing system binaries and system configurations, and helps you working with code repositories hosted on GitHub, Bitbucket, etc.
+Once the *Terminal* option is selected from the toolbar, it launches a new tab on the browser and provides access to the command-line interface to execute any set of commands. You have access to all the file types which are available in the docker environment and those can be managed through the terminal as well. The terminal option also allows you to install Python or R packages (as described later), manage system binaries and system configurations, and help you work with code repositories hosted on GitHub, Bitbucket, etc.
 
+![Terminal screen window](../img/Notebooks/terminal1.png)
 ![Terminal screen window](../img/Notebooks/21.png) <center>**Figure 15.** Terminal screen window</center>
 
-**File Explorer**
+ 
+**Tree**
 
-Similar to the above option, if you select the *File Explorer* option, a new tab opens up in the browser and you can view different file types and directories present in the docker environment. Under the *Files* tab, the list of all the files and directories is available to you and any modification such as delete, upload or modifying by opening a file type can be done.
+This refers to a hierarchy of elements, with a root node and branches connecting various nodes. When discussing file and directory structures, a tree is often used to visualize the organization of files and folders.
+
+ 
+ **File Explorer**
+
+Similar to the above option, if you select the *File Explorer* option, a new tab opens up in the browser and you can view different file types and directories present in the docker environment. Under the *Files* tab, the list of all the files and directories is available to you and any modification such as deleting, uploading, or modifying by opening a file type can be done.
+
+
+**Note**: Access to this page will be unavailable; however, you can still delineate the file format and incorporate it into your code. 
+
 
 ![Demo Data for FirstView](../img/Notebooks/22.png) <center>**Figure 16.** File Explorer window</center>
 
-Additionally, you can also launch a new notebook by selecting the *New* button present on the top right corner of the page in *File Explorer*. The new notebook will open in a new tab and would automatically be made available in the Notebook section of the same Polly Workspace of the original notebook.
 
+You can also launch a new notebook by selecting the *New* button on the top right corner of the page in *File Explorer*. The new notebook will open in a new tab and will be available only till the parent instance is open. Once they close it, it will not be saved anywhere.
+
+
+![Launching a new notebook using File Explorer](../img/Notebooks/filenewnb.png)
 ![Launching a new notebook using File Explorer](../img/Notebooks/23.png) <center>**Figure 17.** Launching a new notebook using *File Explorer*</center>
 
-*File Explorer* window also allows you to view, edit or create various file types in an interactive manner. The *Text File* option in the New button can be used to create a new text file. For viewing or editing a file, you can click on the file and a text editor will open in a new tab of the browser. You can view or edit the file and save the changes made in the file. The text editor also allows you to select a programming language from the Language tab to edit and convert the file format.
+
+*File Explorer* window also allows you to view, edit, or create various file types in an interactive manner. The *Text File* option in the New button can be used to create a new text file. For viewing or editing a file, you can click on the file and a text editor will open in a new tab of the browser. You can view or edit the file and save the changes made in the file. The text editor also allows you to select a programming language from the Language tab to edit and convert the file format.
 
 ![Opening a file using a Text editor](../img/Notebooks/Languages.jpeg) <center>**Figure 18.** Opening a file using a Text editor</center>
+
 
 ##Accessing Workspace files in Notebook
 
@@ -210,78 +230,3 @@ Another option is also available to install various packages and system binaries
 
 ![Installing System libraries using the Terminal](../img/Notebooks/30.png) <center>**Figure 24.** Installing System libraries using the Terminal</center>
 
-##Reusable Scripts
-
-Polly Notebook also allows you to make use of the reusable scripts which are already made available to you in every notebook. The reusable scripts consist of the snippet codes which are required frequently to perform any analysis. The scripts can include data reading, normalization, visualization generic functions/codes and can be added to the notebook *code cell* with just a single click and executed as usual.  The reusable scripts can be found on the left side as a collapsible dialogue box and you can choose the scripts at any time while performing the analysis.
-
-![Reusable scripts on Polly Notebook](../img/Notebooks/31.png) <center>**Figure 25.** Reusable scripts on Polly Notebook</center>
-
-On the right side, another collapsible dialogue box gets opened when you select any reusable script which provides information about the options and usage of that particular reusable script. You can also add your own reusable scripts on the Polly Notebook so as to make use of them in your repeated analysis and save time.
-
-![Options and Information of Reusable scripts](../img/Notebooks/32.png) <center>**Figure 26.** Options and Information of Reusable scripts</center>
-
-#Google Slides Integration
-
-Reports serve as the culmination of each analysis where all plots and insights generated are added in a way that is easy to understand and draw conclusions from when shared with collaborators or even used as a point of reference for something done earlier. Presence of reports for each analysis ordered sequentially promotes reproducibility across the laboratory or the organization and reduces the manual labor involved in knowledge transfer.
-
-To ensure that you do not spend a lot of time downloading plots and arranging them in a pre-defined order with the insights generated each time for a study, we have integrated Polly with Google Slides.
-
-**Note:**
-
-*   The Google Slides integration is only available through Polly Notebooks as of now.
-
-##Using the Integration
-
-To use this integration, click on the *Polly Offerings* tab after you have generated your plots of interest as highlighted below.
-
-![Polly offerings](../img/Notebooks/GSlide_01_Reporting_PollyOfferings.png) <center>**Figure 27.** Polly offerings</center>
-
-Click on *Export Charts to GSlide* as highlighted below.
-
-![Export charts to GSlide integration](../img/Notebooks/GSlide_02_Reporting_ExportChartsToGSlide.png) <center>**Figure 28.** Export charts to GSlides integration</center>
-
-To proceed, this integration will require access to your Google account. This is needed so as to store the slide deck mapped to an account of your choice. Select the account to provide access to and click on *Allow*. 
-
-![Choose an account](../img/Notebooks/GSlide_03_Reporting_Authorization1.png) <center>**Figure 29.** Choose an account</center>
-
-![Confirm access to Google account](../img/Notebooks/GSlide_04_Reporting_Authorization2.png) <center>**Figure 30.** Confirm access to Google account</center>
-
-You will see a loading screen while the charts are being sent to Google Slides. You will automatically be redirected to the specific slide deck created.
-
-![Loading screen](../img/Notebooks/GSlide_05_Reporting_LoadingScreen.png) <center>**Figure 31.** Loading screen</center>
-
-The slide deck created will be named the same as your Polly Notebook. Each chart will be added as an image to a new slide. You can specify themes, add insights as text, resize or crop charts as usual.
-
-![New slide deck created](../img/Notebooks/GSlide_06_Reporting_GSlide1.png) <center>**Figure 32.** New slide deck created</center>
-
-![Charts are added as an image](../img/Notebooks/GSlide_07_Reporting_GSlide2.png) <center>**Figure 33.** Charts are added as an image</center>
-
-![Each slide will contain one chart](../img/Notebooks/GSlide_08_Reporting_GSlide3.png) <center>**Figure 34.** Each slide will contain one chart</center>
-
-**Note:**
-
-*   Any slide decks created using this integration can be accessed by logging into the authorized Google account and going to Google Slides [here](https://www.google.com/slides/about/). 
-
-*   The slide decks can be shared with your collaborators individually or as a publicly accessible link with either view or edit access. For a detailed documentation on Google Slides click [here](https://support.google.com/a/users/answer/9282488).
-
-*   The security and privacy of any such slide deck created is regulated through Google’s access control policies.
-
-##Revoke Access
-
-To revoke the access for this integration, go to your account settings [here](https://www.google.com/account/about/) and click on *Security* on the left panel. You will see the integration listed as *gslideChartsIntegration* under *Third-party apps with account access*. Click on the integration as highlighted below.
-
-![Third-party apps with account access list](../img/Notebooks/GSlide_09_Reporting_RevokeAuthorization1.png) <center>**Figure 35.** Third-party apps with account access list</center>
-
-![gslideChartsIntegration](../img/Notebooks/GSlide_10_Reporting_RevokeAuthorization2.png) <center>**Figure 36.** gslideChartsIntegration</center>
-
-Click on *Revoke Access*.
-
-![Revoke access](../img/Notebooks/GSlide_11_Reporting_RevokeAuthorization3.png) <center>**Figure 37.** Revoke access</center>
-
-Click on *Ok*.
-
-![Confirm revoke access](../img/Notebooks/GSlide_12_Reporting_RevokeAuthorization4.png) <center>**Figure 38.** Confirm revoke access</center>
-
-This will revoke access and as a result you will not be able to use the integration. To use it again, you will have to allow access as mentioned [here](#using-the-integration).
-
-</div>

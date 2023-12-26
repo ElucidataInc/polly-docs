@@ -1,4 +1,38 @@
 # Release Notes
+
+<!--October 20, 2023-->
+
+<details open>
+<summary><font size="+1"><b>October 20, 2023</b></font></summary>
+<br>
+       <p class="Releases-button">Releases</p>
+ <ul> 
+<li>CellxGene VIP
+<ul>
+<li>Users can access the open-source CellxGene visualization plug-in (VIP) tool directly on the Polly platform.
+<li>Users can now maximize the benefits of the interactive web browser-based interface for setting analysis parameters, visualizing data, and utilizing the command line interface functionalities.
+<li>Users can use the Spatial Transcriptomics Visualization Analytical Tool for interactive visualization features like Embedding plots, Multi-tSNE/UMAP plots, Dual-gene plots, Sankey Diagram, Track Plots, Trajectory Analysis Plots, Stacked violin plots, and Dot plots.
+</li></ul>
+</li></ul>
+
+<ul> 
+<li>Polly Discover 
+<ul>
+<li>Polly Discover is a suite of modules enabling users to unravel Complex Biology with expression signatures derived from omics data.
+<li>It features interactive visualizations for the seamless interpretation of expression results, allowing users to enrich these findings with existing knowledge bases or integrate them into meta-analysis methods, ML applications, and more.
+</li></ul>
+</li></ul>      
+  <br>
+      <p class="update-button">Update</p>
+      <ul>
+<li>Polly-Python users can sync the data between a workspace and a local directory, with the added functionality of automatic folder creation if the designated path does not exist.
+<li>The monitoring dashboard now features an upgraded Status filter, allowing users to allocate statuses to runs marked as partially completed or rejected. This enhancement aims to streamline the UX by minimizing the time spent on individually reviewing runs.
+</li></ul>
+</ul>
+</details>
+<hr>
+
+
 <!--August 14, 2023-->
 
 <details open>

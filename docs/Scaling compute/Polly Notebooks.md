@@ -97,9 +97,7 @@ Most of the machine configuration are already specified to cover the wide variet
 |----------------|-----------|-------|
 | Polly 2x-large | 4         | 32 GB |
 | Polly 3x-large | 8         | 64 GB |
-| Polly 4x-large | 16        | 120GB |
-
-##Other Useful Features
+| Polly 4x-large | 16        | 120GB |##Other Useful Features
 
 There are few other useful features as well that might come handy when using a Polly Notebook. 
     
