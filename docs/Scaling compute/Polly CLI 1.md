@@ -1,6 +1,6 @@
 # What is Polly CLI?
 
-Polly CLI (Command Line Interface) is a tool that enables you to interact with Polly services using commands in your command-line shell. Polly CLI lets you upload data and run jobs on the Polly cloud infrastructure by scaling computation resources as per need. You can start and stop jobs, monitor them and view logs. 
+Polly CLI (Command Line Interface) is a tool that enables you to interact with Polly services using commands in your command-line shell. Polly CLI lets you upload data and run jobs on the Polly cloud infrastructure by scaling computation resources as needed. You can start and stop jobs, monitor them and view logs. 
 
 ## Required System Configurations
 
@@ -19,10 +19,19 @@ The following dependencies are required to be installed before installing Polly 
     *   Linux: For installation on Linux, follow the steps mentioned [here](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04).
 
     *   Mac: For installation on Mac, follow the steps mentioned [here](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-and-create-a-local-development-environment-on-macos).
-    *   Windows: For installation on Windows, follow the steps mentioned below - 
+
+    *   Windows: For installation on Windows, follow the steps mentioned below -
 1. Install nodejs from https://nodejs.org/en/download/
 2. Install git from https://git-scm.com/download/win
-3. In the Command Prompt, install polly cli with: <pre><code>npm install -g @elucidatainc/pollycli</code></pre>
+3. In the Command Prompt, install Polly CLI with: <pre><code>npm install -g @elucidatainc/pollycli</code></pre>
+
+**Note:** Before proceeding with the installation of Polly CLI as outlined above, ensure that the Node version is 20 or lower. If not, kindly install Node version 20 using the following commands: 
+
+<pre><code>
+   brew install node@20
+   brew unlink node
+   brew link node@20
+</code></pre>
 
 
 **Commands to install**
