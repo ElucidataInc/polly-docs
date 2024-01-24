@@ -22,8 +22,7 @@ The following dependencies are required to be installed before installing Polly 
 
     *   Windows: For installation on Windows, follow the steps mentioned below -
 1. Install nodejs from https://nodejs.org/en/download/
-2. Install git from https://git-scm.com/download/win
-3. In the Command Prompt, install Polly CLI with: <pre><code>npm install -g @elucidatainc/pollycli</code></pre>
+2. In the Command Prompt, install Polly CLI with: <pre><code>npm install -g @elucidatainc/pollycli</code></pre>
 
 **Note:** Before proceeding with the installation of Polly CLI as outlined above, ensure that the Node version is 20 or lower. If not, kindly install Node version 20 using the following commands: 
 
