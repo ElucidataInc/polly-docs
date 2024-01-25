@@ -10,6 +10,7 @@ There are no specific machine configurations required for Polly CLI. It can work
 
 ## Installation 
 
+
 Before initiating the installation process for Polly CLI, kindly ensure that the **Node version on your system is 20 or lower**.
 
 For instance, On Mac install Node 20 using this command:
