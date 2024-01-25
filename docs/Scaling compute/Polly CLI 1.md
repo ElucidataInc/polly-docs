@@ -10,27 +10,28 @@ There are no specific machine configurations required for Polly CLI. It can work
 
 ## Installation 
 
+Before initiating the installation process for Polly CLI, kindly ensure that the **Node version on your system is 20 or lower**.
+
+For instance, On Mac install Node 20 using this command:
+
+<pre><code>brew install node@20
+brew unlink node
+brew link node@20
+</code></pre>
+
+
 **Dependencies Required for Polly CLI**
 
 The following dependencies are required to be installed before installing Polly CLI:
 
-*   [Node and npm](https://www.npmjs.com/get-npm):  
+*   [Node and npm](https://www.npmjs.com/get-npm)  
 
-    *   Linux: For installation on Linux, follow the steps mentioned [here](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04).
+      *   Linux: For installation on Linux, follow the steps mentioned [here](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04).
 
-    *   Mac: For installation on Mac, follow the steps mentioned [here](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-and-create-a-local-development-environment-on-macos).
+      *   Mac: For installation on Mac, follow the steps mentioned [here](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-and-create-a-local-development-environment-on-macos).
 
-    *   Windows: For installation on Windows, follow the steps mentioned below -
-1. Install nodejs from https://nodejs.org/en/download/
-2. In the Command Prompt, install Polly CLI with: <pre><code>npm install -g @elucidatainc/pollycli</code></pre>
+      *   Windows: For installation on Windows, follow the steps mentioned [here](https://nodejs.org/en/download/).
 
-**Note:** Before proceeding with the installation of Polly CLI as outlined above, ensure that the Node version is 20 or lower. If not, kindly install Node version 20 using the following commands: 
-
-<pre><code>
-   brew install node@20
-   brew unlink node
-   brew link node@20
-</code></pre>
 
 
 **Commands to install**
