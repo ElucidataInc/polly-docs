@@ -1,5 +1,37 @@
 # Release Notes
 
+
+<!--November 17, 2023-->
+
+<details open>
+<summary><font size="+1"><b>November 17, 2023</b></font></summary>
+<br>
+       <p class="Releases-button">Releases</p>
+ <ul> 
+<li>Polly Verified
+<ul> 
+<li>Polly ensures that all available datasets have undergone standardization checks, establishing that every dataset adheres to uniform formats, ontologies, and controlled vocabularies, eliminating inconsistencies.
+<li>Polly’s verified QA ensures that each dataset undergoes rigorous quality checks.
+<li>Metadata Quality Checks include:
+<ul>
+<li>Schema Compliance and Lexical Errors
+<li>Ontology-backed fields validation
+<li>Logical Errors reconciliation
+<li>Completeness Check ensuring no empty fields
+</ul>
+
+</li></ul>
+</li></ul>
+  <br>
+      <p class="update-button">Update</p>
+      <ul>
+<li>Users can now track curation metrics to identify inefficiencies at different points of the curation journey.
+</li></ul>
+</ul>
+</details>
+<hr>
+
+
 <!--October 20, 2023-->
 
 <details open>
@@ -11,7 +43,7 @@
 <ul>
 <li>Users can access the open-source CellxGene visualization plug-in (VIP) tool directly on the Polly platform.
 <li>Users can now maximize the benefits of the interactive web browser-based interface for setting analysis parameters, visualizing data, and utilizing the command line interface functionalities.
-<li>Users can use the Spatial Transcriptomics Visualization Analytical Tool for interactive visualization features like Embedding plots, Multi-tSNE/UMAP plots, Dual-gene plots, Sankey Diagram, Track Plots, Trajectory Analysis Plots, Stacked violin plots, and Dot plots.
+<li>Users can use the Spatial Transcriptomics Visualization Analytical Tool for interactive visualization features like Embedding plots, Multi-tSNE/UMAP plots, Dual-gene plots, Sankey Diagram, Trajectory Analysis Plots, and Stacked violin plots.
 </li></ul>
 </li></ul>
 
@@ -25,8 +57,11 @@
   <br>
       <p class="update-button">Update</p>
       <ul>
-<li>Polly-Python users can sync the data between a workspace and a local directory, with the added functionality of automatic folder creation if the designated path does not exist.
-<li>The monitoring dashboard now features an upgraded Status filter, allowing users to allocate statuses to runs marked as partially completed or rejected. This enhancement aims to streamline the UX by minimizing the time spent on individually reviewing runs.
+<li>Polly-Python:
+<ul>
+<li>Users can sync the data between a workspace and a local directory, with the added functionality of automatic folder creation if the designated path does not exist.
+</ul>
+<li>The monitoring dashboard now features an upgraded Status filter, allowing users to allocate statuses to runs marked as partially completed or rejected. 
 </li></ul>
 </ul>
 </details>
