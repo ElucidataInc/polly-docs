@@ -1,6 +1,6 @@
 Polly CLI can run dockerized jobs on managed Polly infrastructure. Polly infrastructure will scale computational resources with increased usage. All you need to do is submit a job and rest is taken care of by Polly. 
 
-##Create job description JSON file
+## Create job description JSON file
 
 JSON file is needed to describe the job to be run on Polly. This file should contain the information about the computational resources (machine), docker image, the name of the job and specific commands (if required) to be run after the docker has been run, as keys. Text can be copy pasted from the example below to create the JSON file.
 
@@ -45,7 +45,7 @@ Depending on the computational power needed, use the key **“machineType”** i
 *   **command:** Any commands to be executed after the docker has been run can be mentioned in this key.
 
 
-##Polly CLI help
+## Polly CLI help
 
 If help is needed for any command, just type `--help` at the end of the command and execute.
 
