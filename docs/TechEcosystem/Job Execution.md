@@ -17,7 +17,7 @@ Alternatively, users can submit a job using interactive command prompt as shown 
 
 ## Monitor Job status
 
-**Get job status**
+### Get job status
 
 *   The following command can be used to view the status of a particular job.
 
@@ -53,7 +53,7 @@ Alternatively, users can check jobs status using interactive commnd prompt.
 
 ![All Job Statuses in a Workspace](../img/PollyCLI/12a.png "All Job Statuses in a Workspace") <center>**Figure 8.**Job Status in a Workspace</center>
 
-**Get job logs**
+## Get job logs
 
 To view the logs of any job, use the following command:
 
