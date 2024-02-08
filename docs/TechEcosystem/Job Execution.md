@@ -6,7 +6,8 @@ On executing this command, you will be asked to enter the id of the workspace wh
 
 **Note:**   
 
-*   You do not need to create a new Workspace for running a job. You can simply list the older Workspaces and run a job in an already created Workspace.
+*   You do not need to create a new Workspace for running a job.
+*   You can simply list the older Workspaces and run a job in an already created Workspace.
 
 ![Submit Jobs](../img/PollyCLI/4.png "Submit Jobs") <center>**Figure 1.** Submit Jobs</center>
 
@@ -14,9 +15,9 @@ Alternatively, users can submit a job using interactive command prompt as shown 
 
 ![Submit Jobs](../img/PollyCLI/11a.png "Submit Jobs") <center>**Figure 2.** Submit Jobs</center>
 
-##Monitor Job status
+## Monitor Job status
 
-**Get job status **
+**Get job status**
 
 *   The following command can be used to view the status of a particular job.
 
@@ -72,7 +73,7 @@ Alternatively, users can log jobs status using interactive commnd prompt.
 *   User can use any alphanumeric key to exit out of the interactive window. 
 *   Interactive window will exit automatically after displaying the jobs status, if remaining jobs are less then 20.
 
-##Polly CLI help
+## Polly CLI help
 
 If help is needed for any command, just type `--help` at the end of the command and execute.
 
