@@ -14,7 +14,7 @@ JSON file is needed to describe the job to be run on Polly. This file should con
  ]
 }</code></pre>
 
-**machineType**
+**MachineType**
 
 Name of the machine required to run the job needs to be mentioned as per the following table.
 
