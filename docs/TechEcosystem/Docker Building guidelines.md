@@ -1,28 +1,28 @@
-While creating a docker to be run on Polly, the following must be taken care of.
+While creating a docker to execute on Polly, the following must be taken into consideration:
 
-*   Dockers must be present in either Docker Hub or Amazon ECR. 
+*  **Docker location:** Dockers must be present in either Docker Hub or Amazon ECR.
+      * Soon, You will be able to have Dockers directly on Polly.
 
-*   Soon you will be able to have Dockers directly on Polly.
+*   **Docker Requirement:** Only self contained dockers can be run on Polly. A self contained docker is one which has the code to get input files as well as upload output files back contained in the docker.
 
-*   Only self contained dockers can be run on Polly. A self contained docker is one which has the code to get input files as well as upload output files back contained in the docker.
+*   **Public and Private Dockers:** Public as well as private dockers are supported. In order to run private dockers, “secret” should be passed as a key in the JSON file. If your private dockers are on Polly itself, you don't require to generate this secret.
 
-*   Public as well as private dockers are supported. In order to run private dockers, “secret” should be passed as a key in the JSON file. If your private dockers are on Polly itself, you don't require to generate this secret.
+*   **Secret Key for Private Docker:** To get the secret key for the private docker, the following steps need to be followed:
 
-*   To get the secret key for the private docker, the following steps need to be followed.
+    *   For MacOS,
+          * You need to remove the key value pair "credsStore": "osxkeychain" from the config.json file present in the directory `/Users/< username >/.docker`.
 
-    *   For MacOS, you need to remove the key value pair "credsStore": "osxkeychain" from the config.json file present in the directory `/Users/< username >/.docker`.
+          *   You need to be logged in to DockerHub or ECR through the terminal. If not, you will need to log in.
 
-    *   You need to be logged in to DockerHub or ECR through the terminal. If not, you will need to log in.
+          *   Run the command `sudo polly` on the terminal. 
 
-    *   Run the command `sudo polly` on the terminal. 
+          *   Select the option miscellaneous followed by create secret for docker. 
 
-    *   Select the option miscellaneous followed by create secret for docker. 
+          *   Provide the path to the docker config file (the usual path for docker config is `/Users/< username >/.docker/config.json` in Mac and `/home/< username >/.docker/config.json` in Linux). Relative paths are not supported. 
 
-    *   Provide the path to the docker config file (the usual path for docker config is `/Users/< username >/.docker/config.json` in Mac and `/home/< username >/.docker/config.json` in Linux). Relative paths are not supported. 
+          *   Select the account in which the docker to be run is present. 
 
-    *   Select the account in which the docker to be run is present. 
-
-    *   Copy the long text string (secret key) output to the JSON file in the key “secret”.
+          *   Copy the long text string (secret key) output to the JSON file in the key “secret”.
 
 <pre><code>{
   "machineType": "gp",
