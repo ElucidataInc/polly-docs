@@ -1,6 +1,6 @@
 Polly has its own docker repository where dockers can be managed. The advantage of the Polly Docker Repository is that these dockers can also be stored within the same platform as data, code, and analyses and to access the stored dockers all you need is the Polly login credential.
 
-**Docker login and logout**
+## Docker login and logout
 
 In order to login/logout of the docker repository you can run the following command:
 
@@ -9,13 +9,12 @@ In order to login/logout of the docker repository you can run the following comm
 
 The output generated from the above command should then be run on the terminal.
 
-**Note:**
 
-*   Add `sudo` before the command if required according to system settings.
+**Note:**  Add `sudo` before the command if required according to system settings.
 
 ![Example output](../img/PollyCLI/Exampleoutput.png) <center>**Figure 1.** Example output generated from above commands</center>
 
-**Create a Docker Repository**
+## Create a Docker Repository 
 
 Docker repository is a collection of dockers where you can publish and access your docker images. Here you can store one or more versions of your docker image. Every docker can have a tag and if a docker with the same tag is pushed again, it will overwrite the older docker after saving its older version that can still be accessed and used.
 
@@ -32,7 +31,7 @@ Alternatively, users can create a docker repository using interactive command pr
 ![Docker Repository Generation](../img/PollyCLI/14a.png) <center>**Figure 3.** Docker Repository Generation</center>
 
 
-**List docker repositories**
+## List docker repositories
 
 You can list all the stored docker repositories in your organization by using this command. 
 
@@ -44,7 +43,7 @@ Alternatively, users can list all the docker repositories using interactive comm
 
 ![Polly Docker List](../img/PollyCLI/15a.png) <center>**Figure 5.**Polly Docker List</center>
 
-**List docker repositories commits**
+## List docker repositories commits
 
 You can list specific repository to view the various commits or tags stored within it through the Polly docker commit list. 
 
@@ -60,7 +59,7 @@ Alternatively, users can list all the commit-list using interactive command prom
 
 ![Polly Docker List](../img/PollyCLI/16a.png) <center>**Figure 7.**Docker Commit List</center>
 
-**Polly Dockers Path**
+## Polly Dockers Path
 
 Typical path of a docker on Polly is 
 
@@ -82,7 +81,7 @@ The image with the inactive tag can be called by specifying the commit hash.
 
 ![Example Dockers with tags status](../img/PollyCLI/Exampletags.png) <center>**Figure 8.** Example of Docker with different tag status</center>
 
-**Pull/push of dockers**
+## Pull/Push of dockers
 
 The commands for docker’s pull/push are the same commands that you use for pulling and pushing from any other docker registry. The only difference is the path of the docker.
 
@@ -92,12 +91,14 @@ Example commands to pull a docker would be:
 
 <pre><code>docker pull docker.polly.elucidata.io/elucidata/16june@sha256:5747316366b8cc9e3021cd7286f42b2d6d81e3d743e2ab571f55bcd5df788cc8</code></pre>
 
-**Update Docker**
+## Update Docker
 
 Alternatively, users can update the docker using interactive command prompt as shown below.
 
 ![Polly Docker List](../img/PollyCLI/17a.png) <center>**Figure 9.**Update Docker List</center>
-##Polly CLI help
+
+
+## Polly CLI help
 
 If help is needed for any command, just type `--help` at the end of the command and execute.
 
