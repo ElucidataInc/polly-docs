@@ -10,7 +10,7 @@
  <ul> 
 <li> <strong> Support for Multiple File Formats </strong>
 <ul> 
-<li>Users can now select file formats for downloading datasets based on their requirements. This enhancement allow users to choose format that best aligns with their downstream analysis.
+<li>Users can now select file formats for downloading datasets based on their requirements. This enhancement allows users to choose the format that best aligns with their downstream analysis.
 <li>For example: Users can now download single-cell datasets in multiple file formats. With this update, users have the flexibility to directly download either or both h5ad and h5seurat files from the UI.
 </li></ul>
 </li></ul>
