@@ -14,7 +14,6 @@
 <li>For example: Users can now download single-cell datasets in multiple file formats. With this update, users have the flexibility to directly download either or both h5ad and h5seurat files from the UI.
 </li></ul>
 </li></ul>
-  <br>
     <ul> 
 <li> <strong> Single-cell Metadata Attributes </strong>
 <ul> 
@@ -22,12 +21,11 @@
 <li>In this update, we have included a curated disease field alongside curated cell type and the number of cells. Within each of these curated disease fields, users can view the corresponding cell numbers and overlay additional metadata attributes.
 </li></ul>
 </li></ul>
-  <br>
-  </details>
-<hr>    
+<br>
+</details>
+<hr>
 
-
-
+  
 <!--November 17, 2023-->
 
 <details open>
