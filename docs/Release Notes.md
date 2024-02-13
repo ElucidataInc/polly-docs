@@ -23,7 +23,8 @@
 </li></ul>
 </li></ul>
   <br>
-      
+  </details>
+<hr>    
 
 
 
