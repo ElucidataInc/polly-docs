@@ -1,6 +1,32 @@
 # Release Notes
 
 
+<!--February 13, 2024-->
+
+<details open>
+<summary><font size="+1"><b>February 13, 2024</b></font></summary>
+<br>   
+       <p class="update-button">Updates</p>
+ <ul> 
+<li> <strong> Support for Multiple File Formats </strong>
+<ul> 
+<li>Users can now select file formats for downloading datasets based on their requirements. This enhancement allow users to choose format that best aligns with their downstream analysis.
+<li>For example: Users can now download single-cell datasets in multiple file formats. With this update, users have the flexibility to directly download either or both h5ad and h5seurat files from the UI.
+</li></ul>
+</li></ul>
+  <br>
+    <ul> 
+<li> <strong> Single-cell Metadata Attributes </strong>
+<ul> 
+<li>Users can now access enhanced cell type visualization details in the single-cell atlas, where they can overlay one metadata attribute with another, offering comparative analysis between metadata fields.
+<li>In this update, we have included a curated disease field alongside curated cell type and the number of cells. Within each of these curated disease fields, users can view the corresponding cell numbers and overlay additional metadata attributes.
+</li></ul>
+</li></ul>
+  <br>
+      
+
+
+
 <!--November 17, 2023-->
 
 <details open>
