@@ -1,7 +1,7 @@
 
 Upon selecting a pre-configured docker environment and a computational machine, a Polly Notebook starts launching on a new tab of the browser. Based on the type of computational machine chosen while launching a Polly Notebook you will see a progress bar that will tell you that your new notebook is opening.
 
-![Progress bar upon launching a Polly Notebook](../img/Notebooks/Progressbar.png) <center>**Figure 10.** Progress bar upon launching a Polly Notebook</center>
+![Progress bar upon launching a Polly Notebook](../img/Notebooks/Progresssbar.png) <center>**Figure 10.** Progress bar upon launching a Polly Notebook</center>
 
 Once the server is ready, you will see the new notebook opened on the browser. The interface is very similar to that of a Jupyter notebook.
 
@@ -50,7 +50,7 @@ The "Interrupt" button halts the execution of a running code or program, allowin
 Once the *Terminal* option is selected from the toolbar, it launches a new tab on the browser and provides access to the command-line interface to execute any set of commands. You have access to all the file types which are available in the docker environment and those can be managed through the terminal as well. The terminal option also allows you to install Python or R packages (as described later), manage system binaries and system configurations, and help you work with code repositories hosted on GitHub, Bitbucket, etc.
 
 ![Terminal screen window](../img/Notebooks/terminal1.png)
-![Terminal screen window](../img/Notebooks/21.png) <center>**Figure 15.** Terminal screen window</center>
+![Terminal screen window](../img/Notebooks/terminall.png) <center>**Figure 15.** Terminal screen window</center>
 
  
 **Tree**
