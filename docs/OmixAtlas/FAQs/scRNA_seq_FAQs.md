@@ -32,23 +32,6 @@ A Single-cell RNAseq dataset on Polly represents a curated collection of biologi
 | Publication |   -    | Studies for which data is taken from publication directly (not from the above sources) are available with a unique dataset ID as the PMID of the paper  Eg. PMID35664061 | 
 
 
-
-**Split Datasets** 
-
-Some studies are a collection of smaller studies about different experimental conditions. In such cases, studies, and datasets are split based on specific defined categories. A combined study dataset is available on request. Datasets are split based on the following categories:
-
-1. Disease (Normal will not be separated as another dataset, only diseases will be split)
-2. Organism
-3. Tissue
-4. Assay
-   
-For split datasets, the nomenclature of dataset ID is as follows:
-
-Polly dataset ID_Split factor, wherein the Polly dataset ID is the format mentioned above for different sources and split factor is the name of the disease, organism, tissue, or Assay.
-
-Eg. GSE156793_GPL24676_Kidney, GSE156793_GPL24676_Liver
-
-
 ## What are the different options within the Single-cell datasets on Polly
 Based on the needs of the research, Polly can provide a Single-cell dataset as any of the following outputs
 
@@ -72,18 +55,6 @@ ii. Raw counts after filtering out the cells and genes as per consistent Polly�
 iii. Curated sample-level metadata and normalized feature names. 
 
 This format ensures the data is post-processed in a consistent format which makes different datasets comparable. This is particularly useful when similar analyses need to be performed across datasets to get an insight. 
-
-More details are in the subsequent sections.
-
-**3. Author processed counts** 
-
-This format contains 2 H5AD files 
-
-a. One H5AD file is the same as mentioned in the Raw unfiltered counts section (only if raw counts are available at source) 
-
-b. The second one contains counts processed using the publication’s parameters for filtering cells/genes, normalizing the counts, and annotating cell types using the markers from the associated publication. This H5AD file also contains curated sample-level metadata and normalized feature names. 
-
-This format helps replicate the analysis from the associated publication with minimal effort. 
 
 More details are in the subsequent sections.
 
@@ -254,7 +225,7 @@ F ) Data QA Analysis: This section provides a table showing the data-related che
 
 For processing SC datasets using Polly’s standardized pipeline, the starting point is the h5ad file containing raw unfiltered counts created for the raw counts data. The inputs for the processing pipeline are:
 
-Raw h5ad file containing unfiltered counts in X slot, along with sample/cell and feature level metadata (HUGO gene symbols as feature IDs, obs columns specifying batch/sample, and other cell level metadata)
+The H5ad file should contain required sample/cell and feature level metadata. Features should be HUGO gene symbols as feature IDs, obs columns must specify batch/sample that will be used for batch correction.
 
 **2.2. Processing details**
 
@@ -262,8 +233,9 @@ The pipeline includes the following steps:
 
 **1. Preparing files**
 
-- Raw h5ad containing unfiltered counts loaded in X slot, along with sample and feature level metadata
 - A JSON file is created with all the required input parameters and method choices for the processing workflow
+- Marker list provided with positive and negative markers for the cell types of interest
+
 
 **2.Processing Workflow:** Standard pipeline workflow consists of the following stepsguided by best practices recommendations: 
 
@@ -337,7 +309,7 @@ Feature selection is needed to reduce the effective dimensionality of the datase
 
 h. **Batch Effect Correction**
 
-Batch effect is checked in the data using “sample” as the batch variable
+Batch effect is checked in the data using “sample_id” as the batch variable
 
 - In a manual workflow, batch effects in the dataset will be checked visually on a UMAP or tSNE as well as the quantitative metrics of batch effects in the data. 
   - Following quant metrics to be adopted (these are provided through [scib](https://scib.readthedocs.io/en/latest/index.html) and [scib-metrics](https://scib-metrics.readthedocs.io/en/stable/index.html) libraries, which were released along with a [recent](https://scib-metrics.readthedocs.io/en/stable/generated/scib_metrics.ilisi_knn.html) benchmarking study of single-cell data integration methods):
@@ -454,7 +426,7 @@ Annotated information:
    - marker_gene_present: Raw cell type and corresponding present (over-expressed) marker genes corresponding to the assigned cell type against each cell
    - marker_gene_absent: Raw cell type and corresponding absent (under-expressed) marker genes corresponding to the assigned cell type against each cell
 
-b) and c) above are the results of running the raw cell types (curated_cell_type) through the Polly curation library normalizer.
+polly_curated_cell_type and urated_cell_ontology_id above are the results of running the raw cell types (curated_cell_type) through the Polly curation library normalizer.
 
 - Following outputs of the cell annotation step are saved to the uns slot of the anndata object:
   - A table of raw/author cell type predictions by cluster, providing the corresponding ScType scores and confidence values, along with the subset of marker genes for the assigned cell type which are differentially expressed in the annotated cluster.
@@ -648,7 +620,7 @@ Eg.
 
   
 - Statistical test: t-test
-- Log-fold change cutoff
+- Log2-fold change cutoff
 - Adjusted p-value (BH)
 ![i](../../img/OmixAtlas-Images/i.png)
 ![ii](../../img/OmixAtlas-Images/ii.png)
