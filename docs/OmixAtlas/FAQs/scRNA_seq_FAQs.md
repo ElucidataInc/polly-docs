@@ -739,6 +739,7 @@ The following QC metrics will be captured in the report:
 - Number of cells
 
 Internal: We will generate QC reports for the datasets identified in the audit running them through the raw counts pipeline
+
 - These datasets will be populated in an Atlas and provided to the customer (without the option to download the H5AD file)
 - Customers can look at the details of the dataset (along with the QC report) and decide if they want to buy the dataset or not.
 - In case they want to buy, they send us a request along with their preference (raw counts or custom processed or author processed) either through Polly or via CSM
@@ -748,8 +749,11 @@ Internal: We will generate QC reports for the datasets identified in the audit r
 **How will the availability of markers impact the delivery of datasets?**
 
 We will deliver datasets in such cases too. However, markers used for curation will be as follows:
+
 - We will use CellMarkerDB and PanglaoDB to identify canonical markers
+
 - If markers are not available in the databases above,  it'll be custom curation
+   
    - Availability of markers will checked and communicated within a day of the dataset request. Whether the curation required will be standard or custom, this information will also be communicated within a day of request
 
 
@@ -763,9 +767,13 @@ We will deliver datasets in such cases too. However, markers used for curation w
     - Assay
 
 However the following will be the cases for custom subcluster annotation
+
 - If a dataset has splits as per patient or group of samples that don’t follow the above metadata split
+
 - If tissue is annotated with subclusters for eg. Heart Endothelial Cells are subtyped as artery, vein, etc.
+    
     - Markers will be captured only from the main figure. These may have multiple tissues clustered together for a particular cell type. In cases, where authors have provided sub-cell types in additional figures, those markers are not captured which are specific to the additional UMAP/TSNEs. In order to capture these, it will be considered as a custom annotation.
+   
     - If the publication’s marker database already has cell subtypes, then those markers will be used.  If not, then it will be a custom annotation.
 
 
