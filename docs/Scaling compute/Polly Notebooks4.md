@@ -66,19 +66,19 @@ Similar to the above option, if you select the *File Explorer* option, a new tab
 **Note**: Access to this page will be unavailable; however, you can still delineate the file format and incorporate it into your code. 
 
 
-![Demo Data for FirstView](../img/Notebooks/22.png) <center>**Figure 16.** File Explorer window</center>
+![Demo Data for FirstView](../img/Notebooks/Filemanagerr.png) <center>**Figure 16.** File Explorer window</center>
 
 
 You can also launch a new notebook by selecting the *New* button on the top right corner of the page in *File Explorer*. The new notebook will open in a new tab and will be available only till the parent instance is open. Once they close it, it will not be saved anywhere.
 
 
 ![Launching a new notebook using File Explorer](../img/Notebooks/filenewnb.png)
-![Launching a new notebook using File Explorer](../img/Notebooks/23.png) <center>**Figure 17.** Launching a new notebook using *File Explorer*</center>
+![Launching a new notebook using File Explorer](../img/Notebooks/filemanagerr22.png) <center>**Figure 17.** Launching a new notebook using *File Explorer*</center>
 
 
 *File Explorer* window also allows you to view, edit, or create various file types in an interactive manner. The *Text File* option in the New button can be used to create a new text file. For viewing or editing a file, you can click on the file and a text editor will open in a new tab of the browser. You can view or edit the file and save the changes made in the file. The text editor also allows you to select a programming language from the Language tab to edit and convert the file format.
 
-![Opening a file using a Text editor](../img/Notebooks/Languages.jpeg) <center>**Figure 18.** Opening a file using a Text editor</center>
+![Opening a file using a Text editor](../img/Notebooks/texteditorr.png) <center>**Figure 18.** Opening a file using a Text editor</center>
 
 
 ##Accessing Workspace files in Notebook
