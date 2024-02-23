@@ -1,6 +1,4 @@
-Polly Notebook is a scalable analytics platform which allows you to perform data analysis. This Jupyter-like notebook are hosted on AWS Sagemaker. With functionalities designed to boost reliability, scalability, and ease of usage, users can expect a smoother journey through their tasks.
-
-It provides the flexibility to select the compute capacity, the environment according to your need along with the ability to share the analyses with your peers for seamless team collaboration. 
+Polly Notebook is a scalable analytics platform which allows you to perform data analysis. This Jupyter-like notebook are hosted on AWS Sagemaker. With functionalities designed to boost reliability, scalability, and ease of usage, users can expect a smoother journey through their tasks. It provides the flexibility to select the compute capacity, the environment according to your need along with the ability to share the analyses with your peers for seamless team collaboration. 
 
 Polly Notebook provides a Jupyter-like interface on the cloud. Some of the features of Polly Notebooks over other local hosting options are:
 
