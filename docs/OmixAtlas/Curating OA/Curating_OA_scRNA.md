@@ -252,9 +252,7 @@ Based on the marker expression value for each cluster, the cell type is annotate
 - Relative positions of cell types are matching
 - Ontological terms and marker information are added for the cell type
 
-
 2. Ontological terms and marker information:
-   
    - Cell type ontology + ontology ID: Cell-type annotation corresponding to Cell Ontology. This is given as the field named: curated\_cell\_type
    - Marker information: Gene name/names that are differentially expressed in the cluster
       - curated\_marker\_present: Gene name/names that are differentially expressed in the cluster
