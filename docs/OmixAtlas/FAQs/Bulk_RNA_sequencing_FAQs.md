@@ -44,7 +44,7 @@ The data is processed with the following reference genome, annotation, and compl
 
 **Process flow**
 
-![Process flow](../../img/OmixAtlas-Images/Group1.png) <center>**Figure 1.** Process Flow</center>
+![Process flow](../../img/OmixAtlas-Images/Bulk_RNA.jpg) <center>**Figure 1.** Process Flow</center>
 
 #### Details of the processing steps:
 
