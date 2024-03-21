@@ -310,8 +310,7 @@ j. **Saving the data**
 
 The parameter dictionary will be saved to the uns slot, after adding a time stamp as the “time_stamp” key to the params dict. The X matrix will be converted to csc_matrix format and the processed anndata object will be saved in H5AD format and pushed to Polly’s omixatlas. Further, details of the processing performed (parameters/method choices, QC metrics, and associated plots) are bundled as a separate comprehensive HTML report and provided along with the data file.
 
-
-
+![Flow Chart](../../img/OmixAtlas-Images/Spatial.png)
 
 
 **2.3. Curation and Metadata details**
@@ -321,4 +320,79 @@ Metadata curation for Polly annotated data is the same as raw counts data (given
 Details on each metadata field present at the dataset, sample, and feature level are given here.
 
 
+**2.4 Customization**
+
+The tools and parameters for processing datasets as per Polly’s processing pipeline are standard. Any changes will be considered a custom request. There are some guardrails such as:
+
+- QC filter (choice between fixed cutoffs vs best-practices adaptive cutoffs per sample or across all datasets)
+- Gene filter cutoff (# of cells expressed)
+   - Filtering of gene groups (mitochondrial (mito)/ribosomal (ribo)/hemoglobin (hb))
+- Normalization: Size factor (value), log1p (true/false), scaling (true/false)
+- HVG selection: No. of highly variable genes (value), dispersion method
+- Scaling (true/false) and zero centering (true/false)
+- Regressing cell covariates ( none, covariates )
+- Embeddings: # of PCs, # of neighbors for neighborhood graph and clustering
+- Clustering: Resolution parameter, Method (Louvian/Leiden)
+- Spatially Variable genes - autocorrelation method (moran/ geary C)
+
+No customization is currently offered for cell type deconvolution
+
+
+**2.5. Output format and details**
+
+Two H5AD files will be made available to the user.
+
+
+1. Raw unfiltered counts data (Details given above)
+2. Custom Processed data:  <dataset_id>_custom_processed.h5ad
+
+
+
+  The following information will be available in the H5AD file (Dataset_id>_polly_annotated.h5ad)
+
+1. Raw filtered counts in `<adata.raw>` slot: The expression matrix after filtering out the genes and cells as per Polly's standard processing pipeline is available in this slot
+
+      - Integer counts
+      - Sparse matrix
+
+2. Processed filtered counts in `<adata.x>` slot: The expression matrix after filtering out the genes and cells and normalising the counts as per Polly's standard processing is available in this slot as:
+
+      - Float values
+      - Values < 100
+      - Sparse matrices
+
+3. Complete Sample Metadata `<adata.obs>` slot: All the sample/cell level metadata as per the metadata table given above is available in this slot. This includes
+
+      - Polly-Curated Metadata
+      - QC metrics
+      - Source Metadata
+      - Standard Identifier metadata
+      - Spatial Coordinates Metadata 
+
+4. Embedding data in `<adata.obsm>` slot. This includes the following:
+
+      - PCA: Principal components minimum
+      - NN: Nearest Neighbour graph
+      - UMAP: Coordinates of the UMAP plot
+      - Spatial: Pixel Coordinates for each spot
+      - X_Spatial: Copy of Spatial for compatibility with cellxgene visualization
+
+5. Unstructured metadata in Uns <adata.uns> slot: This includes the following:
+
+      - A dictionary containing lowres, hires image arrays and scale factors
+      - A matrix of Spatial_neighbors
+      - moranI dataframe containing I statistic, p-val, p-val-corrected from the SV Genes analysis
+      - Tools/packages along with their versions used to convert the matrix from source to raw counts H5AD file
+      - Tools/packages along with their versions used to convert the raw counts H5AD file to custom processed counts H5AD file
+      - processing pipeline version
+      - curation model version (for eg. PollyBert_v1)
+      - ontology version
+      - squidpy, scanpy, anndata version
+      - Parameters used for processing the data (as a dictionary)
+      - Table of sample-wise QC stats (no. of cells pre/post filtering, along with filtering thresholds applied)
+      - A dataframe of cell type proportions from the deconvolution analysis
+
+6. Pairwise annotation of observations in Obsp slot:
+      - Spatial_connectivities matrix created during SV genes analysis
+      - spatial_distances matrix created during SV genes analysis 
 
