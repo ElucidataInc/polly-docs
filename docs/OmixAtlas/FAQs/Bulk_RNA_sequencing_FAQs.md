@@ -29,17 +29,22 @@ Bulk RNASeq data from FastQ files can be processed using either of the following
 The data is processed with the following reference genome, annotation, and complementary DNA sequence data from Ensembl release 107 for each organism.
 
 1. **Homo Sapiens** Ensembl release 107, 90
-- Genome sequence (fasta)
-- Gene annotation set (GTF)
-- cDNA sequences (fasta)
+   
+    - Genome sequence (fasta)
+    - Gene annotation set (GTF)
+    - cDNA sequences (fasta)
+      
 2. **Mus musculus** Ensembl release 107, 90
-- Genome sequence (fasta)
-- Gene annotation set (GTF)
-- cDNA sequences (fasta)
+   
+    - Genome sequence (fasta)
+    - Gene annotation set (GTF)
+    - cDNA sequences (fasta)
+      
 3. **Rattus norvegicus** Ensembl release 107, 90
-- Genome sequence (fasta)
-- Gene annotation set (GTF)
-- cDNA sequences (fasta)
+   
+   - Genome sequence (fasta)
+   - Gene annotation set (GTF)
+   - cDNA sequences (fasta)
 
 
 **Process flow**
