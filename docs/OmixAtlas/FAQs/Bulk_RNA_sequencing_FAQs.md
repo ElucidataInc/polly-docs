@@ -21,16 +21,27 @@ All datasets are available with raw counts data matrix and associated metadata. 
 
 ### Which pipeline is used for processing the Bulk RNASeq data?
 
-All Bulk RNA-Seq Datasets on Polly are processed using a Kallisto pipeline. The data is processed with the following reference genome, annotation, and complementary DNA sequence data from Ensembl release 107 for each organism. 
+Bulk RNASeq data from FastQ files can be processed using either of the following options:
 
-**Note**: approximately 12% of datasets on the Bulk RNA-Seq OmixAtlas are currently processed with the Ensemble release V90. These will be reprocessed based on the Ensemble release V107 in future versions
+- Kallisto pipeline
+- STAR pipeline
+
+The data is processed with the following reference genome, annotation, and complementary DNA sequence data from Ensembl release 107 for each organism.
 
 1. **Homo Sapiens** Ensembl release 107, 90
 - Genome sequence (fasta)
+- Gene annotation set (GTF)
+- cDNA sequences (fasta)
 2. **Mus musculus** Ensembl release 107, 90
 - Genome sequence (fasta)
+- Gene annotation set (GTF)
+- cDNA sequences (fasta)
 3. **Rattus norvegicus** Ensembl release 107, 90
 - Genome sequence (fasta)
+- Gene annotation set (GTF)
+- cDNA sequences (fasta)
+
+
 **Process flow**
 
 ![Process flow](../../img/OmixAtlas-Images/Group1.png) <center>**Figure 1.** Process Flow</center>
@@ -38,19 +49,28 @@ All Bulk RNA-Seq Datasets on Polly are processed using a Kallisto pipeline. The 
 #### Details of the processing steps:
 
 1. Detect organisms and fetch relevant genome, annotation, and complementary DNA sequence data from Ensembl.
-2. Download the transcriptome sequencing data (.sra files) from SRA using sratoolkit prefetch / AWS S2 URI if publicly available.
+2. Download the transcriptome sequencing data (.sra files) from SRA using sratoolkit prefetch / AWS S2 URI.
 3. Validate the downloaded .sra file using vdb-validate.
-4. Identify if the SRA data is (single-end) or (paired-end)using fastq-dump. Both single-end (SE) and paired-end (PE) sequencing data are processed with the exclusion of color-space sequence data.
-5. Extract fastq files with parallel-fastq-dump.
+4. Identify if the SRA data is (single-end) or (paired-end) using fastq-dump. Both single-end (SE) and paired-end (PE) sequencing data are processed with the exclusion of color-space sequence data.
+5. Extract fastq files with fasterq-dump.
 6. Perform basic quality control checks on the .fastq reads using FastQC. (Diagnose basespace / colorspace, quality encoding, read length)
-7. Trim Bases with phred quality \<10 on the 3′ ends and discarded reads shorter than 18 nucleotides using Skewer.
-8. Transcript-level expression counts are generated using Kallisto by mapping all the reads that pass quality control to the genome. Command: "kallisto quant" . All counts are reported on the gene level by taking a simple sum of Transcript-level counts. (NOTE: Kallisto pseudo counts are rounded to integer values)
-9. A Multiqc report is generated that compiles all fastqc, kallisto and skewer output into a single report. 
-10. For every SRR accession, the generated counts are collected into a single (.gct) file and multiple SRR counts per GSM ID (sample) are aggregated.
-11. At the feature level, the Ensembl gene IDs are mapped to the respective HGNC symbol, MGI Symbol or RGI symbol. Counts for duplicate genes are dropped using Mean Average Deviation Score.
-12. Each sample is then annotated with relevant metadata using Polly’s curation models for a standard fields **disease, tissue, cell line, drug, cell type, organism.** 
-13. If requested, the counts matrix is normalized using DESeq2 VST (Variance Stabilizing Transformation).
-14. GCT having Raw Counts are pushed to the Omix Atlas - Bulk RNASeq OmixAtlas.
+7. Identify all adapters using Minion
+8. Trim Bases with phred quality <10 on the 3′ ends, discard reads shorter than 18 nucleotides, as well as remove the adapters identified by Minion using Skewer.
+9. For the following pipelines:
+    - Kallisto:
+      Transcript-level expression counts are generated using Kallisto by mapping all the reads that pass quality control to the genome
+      All counts are reported at the gene level by taking a simple sum of Transcript-level counts. (NOTE: Kallisto pseudo counts are rounded to       integer values)
+      Optionally, if RSeqQC module is included pseudo BAM files are generated
+    -  STAR:
+      Reference indexes for STAR mapping are selected based on the read_length as detected by FastQC.
+      Gene-level expression counts are generated using STAR by mapping all the reads that pass quality control to the genome.
+      Optionally, if RSeqQC module has been chosen, those checks are performed on the BAM/pseudo BAM file.
+10. A Multiqc report is generated that compiles all FastQC, RSeqQC (only if requested), Kallisto/STAR, and Skewer output into a single report.
+11. For every SRR accession, the generated counts are collected into a single (.gct) file and multiple SRR counts per GSM ID (sample) are aggregated.
+12. At the feature level, the Ensembl gene IDs are mapped to the respective HGNC symbol, MGI Symbol, or RGI symbol. Counts for duplicate genes are dropped using Mean Average Deviation Score.
+13. Each sample is then annotated with relevant metadata using Polly's curation models for fields like disease, tissue, cell line, drug, cell type, and organism.
+14. If requested, the counts matrix is normalized using DESeq2 VST (Variance Stabilizing Transformation).
+15. .GCT files with Raw Counts are pushed to the Bulk RNASeq OmixAtlas.
 
 ### Tools Used for the processing:
 
@@ -63,11 +83,13 @@ All Bulk RNA-Seq Datasets on Polly are processed using a Kallisto pipeline. The 
 | 5 | SRA toolkit |diagnose single or paired-end | fastq-dump |
 | 6 | SRA toolkit |Rapid decompression of sequence data from .sra files | Fasterq-dump |
 | 7 | FastQC | Diagnose basespace / colorspace, quality encoding, read length | fastqc |
-| 8 | Skewer | Trim Bases with phred quality <10 on the 3′ ends and discard reads shorter than 18 nucleotides | skewer |
-| 9 | Kallisto | Transcript-level mapping | Kallisto quant |
-| 10 | Multiqc  | Compiles all fastqc, kallisto and skewer output into a single report | Multiqc |
-| 11 | Internal script for sample aggregation | Collect transcript counts, and sample metadata,  make counts matrix, and then make a GCT file | |
-| 12 | GEO Curation pipeline | Curate sample and dataset level information and attach it to the GCT file | |
+| 8 | Minion | Identify adapters based on sequence patterns | Minion |
+| 9 | Skewer | Trim Bases with phred quality <10 on the 3′ ends and discard reads shorter than 18 nucleotides | skewer |
+| 10 | Kallisto | Transcript-level mapping | Kallisto quant |
+| 11 | STAR | Gene-level mapping | STAR |
+| 12 | Multiqc  | Compiles all fastqc, kallisto and skewer output into a single report | Multiqc |
+| 13 | Internal script for sample aggregation | Collect transcript counts, and sample metadata,  make counts matrix, and then make a GCT file | 
+| 14 | GEO Curation pipeline | Curate sample and dataset level information and attach it to the GCT file | |
 
 ### **Do you currently provide or plan to provide alternatives to bulk RNAseq processing?**
 
