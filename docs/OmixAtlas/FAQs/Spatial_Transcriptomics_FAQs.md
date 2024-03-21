@@ -11,7 +11,6 @@ Polly can bring in SRT data from a variety of public sources as per the needs as
 5. Publications
 
 
-
 # How is a spatial transcriptomics dataset on polly defined?
 
 Spatial Transcriptomics Datasets on Polly represent a curated collection of biologically and statistically comparable samples. Each dataset is denoted using a unique ID, whose nomenclature depends on the public database it was ingested from. 
@@ -172,3 +171,154 @@ H5AD file for raw counts data offering will be available to the user with the fo
 
 
 7. `<adata.uns>` slot: QC Metrics such as mt, n_cells_by_counts, mean_counts, pct_dropout_by_counts & total_counts
+
+
+### 2. Custom Processed Data
+
+
+**2.1. Starting point**
+
+For processing SC datasets using the customizable pipeline, the starting point is a h5ad file containing either raw unfiltered counts, QC filtered counts or normalized counts. The inputs for the processing pipeline are:
+
+- The H5ad file should contain required spatial coordinates, images, and sample/spot and feature level metadata. Features should be HUGO gene symbols as feature IDs.
+  
+- Reference single cell RNA-seq dataset for performing cell type deconvolution. Can be provided as a text file containing links to the raw data and cell label metadata.  
+
+
+**2.2. Processing details**
+
+**1. Preparing files**
+
+- A JSON file is created with all the required input parameters for the processing workflow.
+- This should include a dataset id for the reference single cell dataset to be sourced from sc raw omixatlas and used for deconvolution. 
+
+
+**2.Processing Workflow:** 
+
+Spatial data is treated as single cell data for QC and some downstream analyses. Standard pipeline workflow consists of the following steps guided by following the single cell best practices guide by default with additional customization as options.
+
+a. **Data Checks**
+
+Data checks are done such as
+
+- X contains raw counts
+- X is a sparse matrix in csr_format
+- mt, ribo, and hemo tags  are added to genes
+- Copy of unfiltered counts matrix from X to raw slot
+- obsm contains spatial & X_spatial embeddings
+- uns contains spatial dictionary with image arrays and scalefactors
+
+ b. **Quality Control**
+
+With the gene expression matrix ready (raw counts matrix), the next step is to filter out low-quality cells and genes before further processing. Following the best practices guide, filtering of cells is done using adaptive cutoffs per dataset
+
+- **Spot filtering**
+
+Following the best practices guide, we use ratios instead of hard thresholds. This adapts cutoffs according to the distribution in each dataset. Outlier spots crossing at least one of the following thresholds are removed (MAD is median absolute deviation)
+
+- `log1p_total_counts > or < 5 MAD`,
+- `log1p_n_genes_by_counts > or < 5 MAD`, 
+- `pct_counts_in_top_20_genes > or < 5 MAD`, 
+- `pct_counts_Mt > 3 MAD or > 8%`
+- Gene filtering: genes expressed (counts > 0) in less than 3 cells are removed
+
+c. **QC metrics calculation**
+
+QC metrics are calculated for ribo & hemo genes as well, but genes are not removed based on these metrics.
+
+d. **Normalization** 
+
+Normalization is performed to reduce the technical component of variance in the data, arising from differences in sequencing depth across spots. It is performed based on the following best practices :
+
+- **Method**: library size/total counts normalization (implemented by `scanpy.pp.normalize` function)
+  - **target_sum**: `None` (this is the default option in scanpy and amounts to setting the library size to the median across all cells; [best practices](https://www.sc-best-practices.org/preprocessing_visualization/normalization.html) guide discusses the use of alternate fixed thresholds like 10^4 or 10^6 can introduce over-dispersion)
+  - **log1p**: `True`
+  - **Scaling**: `True, with zero_center=False` (this will be performed after the HVG step)
+
+Note: Before normalization, the filtered counts matrix is saved to a separate “counts” layer (`adata.layers["counts"])`, and X is updated with the normalized counts matrix. A copy of the normalized (and optionally log1p) counts matrix will also be saved in a separate “normalized_counts” layer, this will preserve the normalized data prior to scaling.
+
+e. **HVG identification**
+
+Feature selection is needed to reduce the effective dimensionality of the dataset, and retain the most informative genes for downstream steps like PCA and neighbor graph
+
+- **Highly Variable Genes (HVG)** are identified using the `scanpy.pp.highly_variable_genes` function with the following settings:
+
+  - HVG method: `"Seurat"` (default, uses the log-normalized counts matrix in X)
+  - n_top_genes (# HVGs identified): `2000`
+  - subset: `False` - the expression matrix is not subsetted to the HVGs. All genes are retained and a highly_variable column gets added to the .var slot
+   
+f. **Dimensionality reduction**
+
+This step is necessary to reduce the dimensionality of the data prior to clustering, and to enable visualization for exploratory analysis. Following data embeddings are provided by running the relevant scanpy functions:
+
+- PCA (n_pcs = 50 top PCs ranked by explained variance): `'X_pca'` in obsm, `'PCs'` in varm slot
+- Nearest-neighbor graph in PC space: n_neighbors=50, dimensionality of PC space = 40 or number of top PCs explaining 90% variance, whichever is smaller; `'distances'` and `'connectivities'` in obsp slot
+- Uniform Manifold Approximation and Projection (UMAP): `'X_umap'` in obsm slot
+
+g. **Spot clustering**
+
+Unsupervised clustering is performed on the processed and dimensionally reduced data matrix to identify similar groups of spots, possibly representing distinct cell compositions/states. 
+
+- Leiden graph-based clustering is performed with a fixed resolution (resolution = 0.8)
+  - The nearest-neighbor graph is constructed in the previous dimensionality reduction step. 
+  - Cluster labels are added to the obs slot in a ”clusters” column
+
+h. **Spatially Variable Genes Identification:** 
+
+Spatially variable (SV) genes are genes whose expression distributions display significant dependence on their spatial locations. SV genes are often markers or essential regulators for tissue pattern formation and homeostasis.
+
+- Spatially Variable Genes are identified using the `squidpy.gr.spatial_neighbors` and `squidpy.gr.spatial_autocorr` functions run in that order.
+- The mode parameter in `squidpy.gr.spatial_autocorr` function is set to “moran”.
+- A matrix Spatial_neighbors is added to Uns slot
+- moranI dataframe containing I statistic, p-val, p-val-corrected is added to Uns slot
+- spatial_distances and spatial_connectivites matrices are added to Obsp slot
+
+i. **Cell type Deconvolution of Spots:**
+
+Cell type deconvolution is performed on spatial transcriptomics data in order to dissect the cell type compositions within each spot. 
+
+
+This is done using a reference single cell dataset already annotated with cell type labels using the deconvolution metho - (RCTD)[https://raw.githack.com/dmcable/spacexr/master/vignettes/spatial-transcriptomics.html]. The tool we are using for deconvolution is RCTD. This is a reference based deconvolution tool, i.e. it requires a reference single cell rna seq dataset, which has celltype annotation. The tool was selected as it operates fast, is not computationally intensive, works with raw counts for reference and query (spatial) data, and has been found to be fairly accurate with real data compared to other tools in the same category.
+
+
+- RCTD - Input
+
+   - A reference object is created using RCTD’s Reference function, which requires a cell x gene matrix of raw counts, a named vector of cell type labels, and a named vector of total counts in each cell.
+   - A query object is created using RCTD’s SpatialRNA function, which requires a spot x gene raw counts matrix, a dataframe of spatial coordinates and a named vector of total counts in each spot.
+   - The create.RCTD function is used to create an RCTD object using the reference and query objects
+   - The RCTD object is supplied to the run.RCTD function to perform cell type deconvolution specifying mode = “full”
+
+
+- RCTD - Output
+
+   - run.RCTD returns the RCTD object containing deconvolution results in the @results field. Of particular interest is @results$weights, a data frame of cell type weights for each spot (for full mode).
+   - The @results$weights dataframe is normalized (such that each row sums to one) using the normalize_weights function
+   - The main cell type assigned to each spot is computed as the cell type with the highest proportion in the spot. 
+
+
+- Annotated Tags:
+
+   - Following sample-level metadata columns get added to obs (these would be uniform across all cells in each cluster):
+
+      - polly_curated_cell_type: Raw cell type associated with the cell
+      - polly_curated_cell_ontology:  Cell type associated with the cell, curated with standard ontology
+      - Following outputs of the cell annotation step are saved to the uns slot of the anndata object:
+          - The full dataframe of normalized cell type weights for each spot.
+       
+   
+j. **Saving the data**
+
+The parameter dictionary will be saved to the uns slot, after adding a time stamp as the “time_stamp” key to the params dict. The X matrix will be converted to csc_matrix format and the processed anndata object will be saved in H5AD format and pushed to Polly’s omixatlas. Further, details of the processing performed (parameters/method choices, QC metrics, and associated plots) are bundled as a separate comprehensive HTML report and provided along with the data file.
+
+
+
+
+
+**2.3. Curation and Metadata details**
+
+Metadata curation for Polly annotated data is the same as raw counts data (given above). However, there are some additional fields that are present for custom-processed dataset in addition to the existing fields available for raw unfiltered data.
+
+Details on each metadata field present at the dataset, sample, and feature level are given here.
+
+
+
