@@ -10,7 +10,7 @@
  <ul> 
 <li>Polly Data Model
 <ul> 
-<li>This release introduces a structured framework that integrates disparate data sources, making them interoperable and analysis-ready, and is data type agnostic.
+<li>This release introduces a structured framework that integrates disparate data sources, making them interoperable and analysis-ready.
 <li>The Data Model preserves vital connections between projects, cases, clinical data, and molecular data, ensuring precise linkage to the respective data file objects. It accommodates any number of entities based on complexity and needs. 
 <li>This well-designed data model optimizes data storage and retrieval, enhancing performance and reducing the time required to access and integrate relevant information.
 <ul>
