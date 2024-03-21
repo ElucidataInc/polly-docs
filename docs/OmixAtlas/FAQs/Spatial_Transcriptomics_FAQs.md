@@ -278,7 +278,7 @@ i. **Cell type Deconvolution of Spots:**
 Cell type deconvolution is performed on spatial transcriptomics data in order to dissect the cell type compositions within each spot. 
 
 
-This is done using a reference single cell dataset already annotated with cell type labels using the deconvolution metho - (RCTD)[https://raw.githack.com/dmcable/spacexr/master/vignettes/spatial-transcriptomics.html]. The tool we are using for deconvolution is RCTD. This is a reference based deconvolution tool, i.e. it requires a reference single cell rna seq dataset, which has celltype annotation. The tool was selected as it operates fast, is not computationally intensive, works with raw counts for reference and query (spatial) data, and has been found to be fairly accurate with real data compared to other tools in the same category.
+This is done using a reference single cell dataset already annotated with cell type labels using the deconvolution metho - [RCTD](https://raw.githack.com/dmcable/spacexr/master/vignettes/spatial-transcriptomics.html). The tool we are using for deconvolution is RCTD. This is a reference based deconvolution tool, i.e. it requires a reference single cell rna seq dataset, which has celltype annotation. The tool was selected as it operates fast, is not computationally intensive, works with raw counts for reference and query (spatial) data, and has been found to be fairly accurate with real data compared to other tools in the same category.
 
 
 - RCTD - Input
