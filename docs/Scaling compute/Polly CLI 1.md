@@ -1,6 +1,6 @@
 # What is Polly CLI?
 
-Polly CLI (Command Line Interface) is a tool that enables you to interact with Polly services using commands in your command-line shell. Polly CLI lets you upload data and run jobs on the Polly cloud infrastructure by scaling computation resources as per need. You can start and stop jobs, monitor them and view logs. 
+Polly CLI (Command Line Interface) is a tool that enables you to interact with Polly services using commands in your command-line shell. Polly CLI lets you upload data and run jobs on the Polly cloud infrastructure by scaling computation resources as needed. You can start and stop jobs, monitor them and view logs. 
 
 ## Required System Configurations
 
@@ -10,19 +10,29 @@ There are no specific machine configurations required for Polly CLI. It can work
 
 ## Installation 
 
+
+Before initiating the installation process for Polly CLI, kindly ensure that the **Node version on your system is 20 or lower**.
+
+For instance, On Mac install Node 20 using this command:
+
+<pre><code>brew install node@20
+brew unlink node
+brew link node@20
+</code></pre>
+
+
 **Dependencies Required for Polly CLI**
 
 The following dependencies are required to be installed before installing Polly CLI:
 
-*   [Node and npm](https://www.npmjs.com/get-npm):  
+*   [Node and npm](https://www.npmjs.com/get-npm)  
 
-    *   Linux: For installation on Linux, follow the steps mentioned [here](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04).
+      *   Linux: For installation on Linux, follow the steps mentioned [here](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-on-ubuntu-18-04).
 
-    *   Mac: For installation on Mac, follow the steps mentioned [here](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-and-create-a-local-development-environment-on-macos).
-    *   Windows: For installation on Windows, follow the steps mentioned below - 
-1. Install nodejs from https://nodejs.org/en/download/
-2. Install git from https://git-scm.com/download/win
-3. In the Command Prompt, install polly cli with: <pre><code>npm install -g @elucidatainc/pollycli</code></pre>
+      *   Mac: For installation on Mac, follow the steps mentioned [here](https://www.digitalocean.com/community/tutorials/how-to-install-node-js-and-create-a-local-development-environment-on-macos).
+
+      *   Windows: For installation on Windows, follow the steps mentioned [here](https://nodejs.org/en/download/).
+
 
 
 **Commands to install**
