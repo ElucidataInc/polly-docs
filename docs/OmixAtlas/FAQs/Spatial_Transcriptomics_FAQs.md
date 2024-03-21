@@ -69,32 +69,33 @@ The pipeline for raw counts includes the following steps:
 
 1. **Fetching Raw Counts**: The starting point for the pipeline is getting the raw counts and spatial data from the source by
 
-   - Either downloading data directly from the source  - A text file is created with links for downloading 
-   - Downloading manually
+         - Either downloading data directly from the source
+         - A text file is created with links for downloading 
+         - Downloading manually
 
 
 2. **Preparing Data files**: A JSON file is created for the pipeline to run.
 
-   - A JSON file containing all necessary input parameters is generated. Subsequent steps in the pipeline are executed based on the parameters specified in this JSON file.
+         - A JSON file containing all necessary input parameters is generated. Subsequent steps in the pipeline are executed based on the parameters specified in this JSON file.
 
 
 3. **Creating h5ad**: With the input as the above JSON file, the pipeline starts to create the initial h5ad.
 
 
-   - Programmatic checks are performed to ensure that counts data, spatial coordinates and required image files (tissue_hires and lowres images, scalefactors.json) are available. 
-   - Check that the data matrix contains raw counts only
-   - If the matrix is not found to be in the correct format (as per the raw count acceptable values), the pipeline stops
-   - Pipeline accepts the raw counts as per defined the acceptable values, i.e. integer values 
-   - The index for spot data is “cell id” which is in the form of “sample id : spot barcode” and information with respect to each “cell id” is added
-   - Feature IDs are converted to Hugo Symbols (or Ensembl IDs where conversion to Hugo symbols is not available or ambiguous)
-   - Initial h5ad is created 
-
+         - Programmatic checks are performed to ensure that counts data, spatial coordinates and required image files (tissue_hires and lowres images, scalefactors.json) are available. 
+         - Check that the data matrix contains raw counts only
+         - If the matrix is not found to be in the correct format (as per the raw count acceptable values), the pipeline stops
+         - Pipeline accepts the raw counts as per defined the acceptable values, i.e. integer values 
+         - The index for spot data is “cell id” which is in the form of “sample id : spot barcode” and information with respect to each “cell id” is added
+         - Feature IDs are converted to Hugo Symbols (or Ensembl IDs where conversion to Hugo symbols is not available or ambiguous)
+         - Initial h5ad is created 
+      
 
 4. **Metadata Curation**:
 
 
-   - The curation pipeline adds curated metadata to the file - sample/cell level metadata is added to the h5ad file
-   - The curation pipeline generates dataset metadata
+         - The curation pipeline adds curated metadata to the file - sample/cell level metadata is added to the h5ad file
+         - The curation pipeline generates dataset metadata
 
 
 5. **QC metrics**: Scanpy QC metrics are calculated and added to the h5ad file
