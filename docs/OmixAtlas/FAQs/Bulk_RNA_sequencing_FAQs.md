@@ -42,9 +42,9 @@ The data is processed with the following reference genome, annotation, and compl
       
 3. **Rattus norvegicus** Ensembl release 107, 90
    
-   - Genome sequence (fasta)
-   - Gene annotation set (GTF)
-   - cDNA sequences (fasta)
+    - Genome sequence (fasta)
+    - Gene annotation set (GTF)
+    - cDNA sequences (fasta)
 
 
 **Process flow**
