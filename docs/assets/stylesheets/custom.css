@@ -1,5 +1,11 @@
+:root {
+    --color-orange-dark: #CB6E00;
+    --color-orange-light: #f78e12;
+    --color-white: #FFFFFF;
+  }
+
 .md-search__form {
-    border-radius: 24px;
+    border-radius: 1.2rem;
 }
 
 .md-footer-meta {
@@ -8,19 +14,18 @@
 
 .demo-button {
     align-items: center;
-    background-color: #CB6E00;
-    border-radius: 24px;
-    color: #FFFFFF;
+    background-color: var(--color-orange-dark);
+    border-radius: 1.2rem;
+    color: var(--color-white);
     cursor: pointer;
-    font-family: Inter, sans-serif;
-    font-size: 14px;
-    margin: 6px;
-    padding: 8px 32px;
+    font-size: 0.7rem;
+    margin: 0.3rem;
+    padding: 0.4rem 1.6rem;
     transition: all 0.3s;
 }
 
 .demo-button:hover {
-    background-color: #f78e12;
+    background-color: var(--color-orange-light);
 }
 
 .d-flex {
@@ -28,5 +33,5 @@
 }
 
 .gap-1 {
-    grid-gap: 8px;
+    grid-gap: 0.4rem;
 }
