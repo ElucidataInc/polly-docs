@@ -9,7 +9,7 @@
   {% endif %}
   <header class="{{ class }}" data-md-component="header">
     <nav class="md-header__inner md-grid" aria-label="{{ lang.t('header') }}">
-      <a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}" class="md-header__button md-logo" aria-label="{{ config.site_name }}" data-md-component="logo">
+      <a href="{{ config.extra.homepage | d(nav.homepage.url, true) | url }}" target="_blank" class="md-header__button md-logo" aria-label="{{ config.site_name }}" data-md-component="logo">
         {% include "partials/logo.html" %}
       </a>
       <label class="md-header__button md-icon" for="__drawer">
@@ -59,7 +59,7 @@
             </label>
             {% include "partials/search.html" %}
         {% endif %}
-        <a class="d-flex demo-button" href="https://www.elucidata.io/book-a-demo">Request Demo</a>
+        <a class="d-flex demo-button" href="https://www.elucidata.io/book-a-demo" target="_blank">Request Demo</a>
       </div>
     </nav>
     {% if "navigation.tabs.sticky" in features %}
