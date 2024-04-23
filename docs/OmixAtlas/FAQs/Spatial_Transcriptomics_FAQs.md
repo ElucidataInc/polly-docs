@@ -17,7 +17,7 @@ Polly can bring in SRT data from a variety of public sources as per the needs as
 
 Spatial Transcriptomics Datasets on Polly represent a curated collection of biologically and statistically comparable samples. Each dataset is denoted using a unique ID, whose nomenclature depends on the public database it was ingested from. 
 
-Spatial datasets are stored in a sample-wise fashion, i.e. multiple samples from a series are hosted as individual datasets. This is done as most spatial studies analyze individual samples independently due to lack of a straightforward way to combine spatial coordinates and imaging data from distinct tissue sections. 
+Spatial datasets are stored in a sample-wise fashion, i.e. multiple samples from a series are hosted as individual datasets. This is done as often publications have been observed to analyze individual samples independently due to lack of a straightforward way to combine spatial coordinates and imaging data from distinct tissue sections. 
 
 | Source | Source Format | Polly Format |
 | ------ | ------ | ------ |
@@ -30,7 +30,7 @@ Spatial datasets are stored in a sample-wise fashion, i.e. multiple samples from
 
 ## What are the different options within the Spatial datasets on Polly?
 
-Currently, Polly provides Spatial datasets (generated using the 10X Visium technology) as any of the following outputs. To be noted, the sampled entities for Visium datasets are “spots” (which contain 10-30 single cells) rather than individual cells.  
+Currently, Polly provides Spatial datasets generated using 10X Genomics’ Visium technology. To be noted, the sampled entities for Visium datasets are “spots” (which may contain 10-30 single cells) rather than individual cells. We offer spatial datasets in two formats - Curated raw unprocessed datasets and Curated custom processed datasets 
 
 **Raw unfiltered counts**
 
@@ -220,7 +220,7 @@ Following the best practices guide, we use ratios instead of hard thresholds. Th
 - `log1p_total_counts > or < 5 MAD`,
 - `log1p_n_genes_by_counts > or < 5 MAD`, 
 - `pct_counts_in_top_20_genes > or < 5 MAD`, 
-- `pct_counts_Mt > 3 MAD or > 8%`
+- `pct_counts_Mt > 3 MAD and > 8%`
 - Gene filtering: genes expressed (counts > 0) in less than 3 cells are removed
 
 c. **QC metrics calculation**
