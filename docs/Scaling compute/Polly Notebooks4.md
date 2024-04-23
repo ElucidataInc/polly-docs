@@ -66,19 +66,19 @@ Similar to the above option, if you select the *File Explorer* option, a new tab
 **Note**: Access to this page will be unavailable; however, you can still delineate the file format and incorporate it into your code. 
 
 
-![Demo Data for FirstView](../img/Notebooks/22.png) <center>**Figure 16.** File Explorer window</center>
+![Demo Data for FirstView](../img/Notebooks/filemanager1.png) <center>**Figure 16.** File Explorer window</center>
 
 
 You can also launch a new notebook by selecting the *New* button on the top right corner of the page in *File Explorer*. The new notebook will open in a new tab and will be available only till the parent instance is open. Once they close it, it will not be saved anywhere.
 
 
 ![Launching a new notebook using File Explorer](../img/Notebooks/filenewnb.png)
-![Launching a new notebook using File Explorer](../img/Notebooks/23.png) <center>**Figure 17.** Launching a new notebook using *File Explorer*</center>
+![Launching a new notebook using File Explorer](../img/Notebooks/languages.png) <center>**Figure 17.** Launching a new notebook using *File Explorer*</center>
 
 
 *File Explorer* window also allows you to view, edit, or create various file types in an interactive manner. The *Text File* option in the New button can be used to create a new text file. For viewing or editing a file, you can click on the file and a text editor will open in a new tab of the browser. You can view or edit the file and save the changes made in the file. The text editor also allows you to select a programming language from the Language tab to edit and convert the file format.
 
-![Opening a file using a Text editor](../img/Notebooks/Languages.jpeg) <center>**Figure 18.** Opening a file using a Text editor</center>
+![Opening a file using a Text editor](../img/Notebooks/textfile.png) <center>**Figure 18.** Opening a file using a Text editor</center>
 
 
 ##Accessing Workspace files in Notebook
@@ -161,8 +161,10 @@ You can install the required packages and system binaries by running the usual i
 
 *   **For Python packages:** You can run the following command in the code cell with Python kernel selected to install the required packages.
 
-<pre><code># for installing packages DON'T forget to use sudo. It will not ask for password.
-!sudo pip install <package-name>
+<pre><code>#  Built-in package installer with the following syntax:
+%pip install <package_name>
+%conda install <package_name>
+%yum install <package_name>
 </code></pre>
  
 *   **For R packages:** You can run the following command in the code cell with R kernel selected to install the required packages.
@@ -182,10 +184,8 @@ You can install the required packages and system binaries by running the usual i
 *   **For System binaries:** You can also install the system binaries by running the following command in the *code cell* selecting the *bash* kernel.
 
 <pre><code># System binaries
-sudo apt install <package-name>
- 
-# If the above command outputs package not found, You can run this command to update the system package indices
-sudo apt-get update
+Using the built-in package installer with the following syntax
+>  %conda install <package_name>
 </code></pre>
 
 ![Installing System binaries using the Notebook code cell](../img/Notebooks/27.png) <center>**Figure 21.** Installing System binaries using the Notebook *code cell*</center>
@@ -196,11 +196,10 @@ Another option is also available to install various packages and system binaries
 
 *   **For Python packages:** You can run the following command directly on the terminal to install the required packages. Once the package installation is successful, you can import the package in your notebook.
 
-<pre><code># for installing packages DON'T forget to use sudo. It will not ask for password.
-> sudo pip install <package-name>
+<pre><code> Using the built-in package installer with the following syntax
+>  %pip install <package_name>
 </code></pre>
 
-![Installing Python packages using the Terminal](../img/Notebooks/28.png) <center>**Figure 22.** Installing Python packages using the Terminal</center>
 
 *   **For R packages:** You are required to go to the terminal and open the R Kernel using “sudo R” and then install the required R packages. Once the package installation is successful, you can import the library in your notebook  R kernel as usual.
 
@@ -217,16 +216,10 @@ Another option is also available to install various packages and system binaries
 > install.packages("BiocManager")
 </code></pre>
 
-![Installing R packages using the Terminal](../img/Notebooks/29.png) <center>**Figure 23.** Installing R packages using the Terminal</center>
 
 *   **For System binaries:** You can also install the system binaries by running the following command directly on the terminal itself.
 
 <pre><code># System binaries
-> sudo apt install <package-name>
- 
-# If the above command outputs package not found, You can run this command to update the system package indices
-> sudo apt-get update
-</code></pre>
-
-![Installing System libraries using the Terminal](../img/Notebooks/30.png) <center>**Figure 24.** Installing System libraries using the Terminal</center>
-
+ Using the built-in package installer with the following syntax
+>  yum install <package_name>
+</pre></code>
