@@ -5,23 +5,30 @@
 <!--April 18, 2024-->
 
 <details open>
-<summary><font size="+1"><b>April 17, 2024</b></font></summary>
-<br>
-       <p class="Releases-button">Releases</p>
- <ul> 
-<li>SageMaker
-<ul> 
-<li>We are excited to announce the integration of SageMaker into our platform, replacing the existing Polly notebook infrastructure. SageMaker is a cloud-based platform that enhances the user experience of notebooks, offering reliability, scalability, and ease of usage. This update aims to improve stability and performance, minimize user issues, and contribute to enhanced usability and navigation.
-<ul>
-<li>Major Changes are:
-<ul>
-<li>Machine Options: Machine options on notebooks have been renamed for better categorization.
-<li>Notebook Package and Library Installation Tools in Python
-<li>Docker integration: Build, run, and develop Docker containers directly within Polly Notebooks.
-</ul>
-</li></ul>
-</li></ul>
-  <br>
+    <summary><font size="+1"><b>April 17, 2024</b></font></summary>
+    <br>
+    <p class="Releases-button">Releases</p>
+    <ul> 
+        <li>SageMaker
+            <ul> 
+                <li>We are excited to announce the integration of SageMaker into our platform, replacing the existing Polly notebook infrastructure. SageMaker is a cloud-based platform that enhances the user experience of notebooks, offering reliability, scalability, and ease of usage. This update aims to improve stability and performance, minimize user issues, and contribute to enhanced usability and navigation.
+                    <ul>
+                        <li>Major Changes are:
+                            <ul>
+                                <li>Machine Options: Machine options on notebooks have been renamed for better categorization.</li>
+                                <li>Notebook Package and Library Installation Tools in Python</li>
+                                <li>Docker integration: Build, run, and develop Docker containers directly within Polly Notebooks.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <br>
+</details>
+<hr>
+
 
 
 <!--March 19, 2024-->
