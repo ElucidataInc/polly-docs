@@ -16,16 +16,17 @@
                         <li>Major changes are: 
                             <ul>
                                 <li>Machine Options: Machine options on notebooks have been renamed for better categorization.</li>
-                                <li>Notebook Package and Library Installation Tools in Python</li>
-                                <li>Docker integration: Build, run, and develop Docker containers directly within Polly Notebooks.</li>
+                                  <li>Docker integration: Build, run, and develop Docker containers directly within Polly Notebooks.</li>
+                                <li>Built-in package installers for Notebook packages and library installation in Python.</li>
+                            <li>The terminal and file explorer are now directly available on the toolbox.</li>
                             </ul>
                         </li>
                     </ul>
-                     For details, refer to the Polly notebook section in the documentation.
                 </li>
             </ul>
         </li>
     </ul>
+ <p>For details, refer to the <a href="https://docs.polly.elucidata.io/Scaling%20compute/Polly%20Notebooks3.html">Polly notebook</a> section in the documentation.</p>
     <br>
 </details>
 <hr>
