@@ -9,9 +9,9 @@
     <br>
     <p class="Releases-button">Releases</p>
     <ul> 
-        <li>SageMaker
+        <li>Polly Notebooks
             <ul> 
-                <li>We are excited to announce the integration of SageMaker into our platform, replacing the existing Polly notebook infrastructure. SageMaker is a cloud-based platform that enhances the user experience of notebooks, offering reliability, scalability, and ease of usage. This update aims to improve stability and performance, minimize user issues, and contribute to enhanced usability and navigation.
+                <li>We are excited to announce the integration of SageMaker into our platform, replacing the existing Polly notebook infrastructure. SageMaker is a cloud-based platform that enhances the user experience of notebooks. This update aims at improving the stability and performance of the notebooks and enhance it’s usability.
                     <ul>
                         <li>Major Changes are:
                             <ul>
