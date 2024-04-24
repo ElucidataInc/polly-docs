@@ -164,22 +164,8 @@ You can install the required packages and system binaries by running the usual i
 <pre><code>#  Built-in package installer with the following syntax:
 %pip install <package_name>
 %conda install <package_name>
-%yum install <package_name>
 </code></pre>
  
-*   **For R packages:** You can run the following command in the code cell with R kernel selected to install the required packages.
-
-<pre><code># for installing packages DON'T forget to use sudo. It will not ask for password.
-## Installing CRAN packages
-!sudo  R -e 'install.packages(c("package-name"), repos="https://cloud.r-project.org/")'
-
-## Installing Bioconductor packages
-!sudo R -e 'BiocManager::install(c("package-name"), update = TRUE, ask = FALSE)'
-# If error finding BiocManager then install it first using the following command and re-run the above command.
-!sudo  R -e 'install.packages(c("BiocManager"), repos="https://cloud.r-project.org/")'
-</code></pre>
-
-![Installing R and Python packages](../img/Notebooks/26.png) <center>**Figure 20.** Installing R and Python packages</center>
 
 *   **For System binaries:** You can also install the system binaries by running the following command in the *code cell* selecting the *bash* kernel.
 
@@ -221,5 +207,5 @@ Another option is also available to install various packages and system binaries
 
 <pre><code># System binaries
  Using the built-in package installer with the following syntax
->  yum install <package_name>
+> sudo yum install <package_name>
 </pre></code>
