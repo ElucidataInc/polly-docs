@@ -13,7 +13,7 @@
             <ul> 
                 <li>We are excited to announce the integration of SageMaker into our platform, replacing the existing Polly notebook infrastructure. SageMaker is a cloud-based platform that enhances the user experience of notebooks. This update aims at improving the stability and performance of the notebooks and enhance it’s usability.
                     <ul>
-                        <li>Major Changes are:
+                        <li>Major changes are: 
                             <ul>
                                 <li>Machine Options: Machine options on notebooks have been renamed for better categorization.</li>
                                 <li>Notebook Package and Library Installation Tools in Python</li>
@@ -21,6 +21,7 @@
                             </ul>
                         </li>
                     </ul>
+                     For details, refer to the Polly notebook section in the documentation.
                 </li>
             </ul>
         </li>
@@ -55,25 +56,11 @@
       <ul>
 <li>We've added spatial transcriptomics to our repertoire of offerings. Polly now can import Spatial Transcriptomics (SRT) data from diverse public sources including GEO, Single Cell Portal, Zenodo, CZI-CellxGene, and publications. We can cater to data from these public sources as well as data generated in-house by research groups. To import SRT data successfully, access to essential components such as the raw counts matrix, spatial coordinates, imaging data, and metadata is required.
 <ul>
-<li>Similar to SC RNAseq data, Spatial data can also be requested in two formats : Rw unfiltered counts and Custom processed counts.
+<li>Similar to Single cell RNAseq data, Spatial data can also be requested in two formats : Raw unfiltered counts and Custom processed counts.
 </li></ul> 
 </ul>
 </details>
 <hr>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
