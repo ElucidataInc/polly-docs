@@ -26,9 +26,13 @@ Most of the machine configurations are already specified to cover a wide variety
 |----------------|-----------|-------|
 | PollyN MO x-large | 4         | 32 GB |
 | PollyN MO 2x-large | 8         | 64 GB |
-| PollyN MO 4x-large | 16        | 120GB |
+| PollyN MO 4x-large | 16        | 120 GB |
 
-
+*   **GPU Machines:**
+  
+| Name           | CPU/Cores | RAM   |
+|----------------|-----------|-------|
+| PollyN GPU medium | 100 GPU 8vCPU | 60 GB |
 
 **Note:**
 

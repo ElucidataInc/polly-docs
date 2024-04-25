@@ -1,6 +1,71 @@
 # Release Notes
 
 
+
+<!--April 18, 2024-->
+
+<details open>
+    <summary><font size="+1"><b>April 17, 2024</b></font></summary>
+    <br>
+    <p class="Releases-button">Releases</p>
+    <ul> 
+        <li>Polly Notebooks
+            <ul> 
+                <li>We are excited to announce the integration of SageMaker into our platform, replacing the existing Polly notebook infrastructure. SageMaker is a cloud-based platform that enhances the user experience of notebooks. This update aims at improving the stability and performance of the notebooks and enhance it’s usability.
+                    <ul>
+                        <li>Major changes are: 
+                            <ul>
+                                <li>Machine Options: Machine options on notebooks have been renamed for better categorization.</li>
+                                  <li>Docker integration: Build, run, and develop Docker containers directly within Polly Notebooks.</li>
+                                <li>Built-in package installers for Notebook packages and library installation in Python.</li>
+                            <li>The terminal and file explorer are now directly available on the toolbox.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+ <p>For details, refer to the <a href="https://docs.polly.elucidata.io/Scaling%20compute/Polly%20Notebooks3.html">Polly notebook</a> section in the documentation.</p>
+    <br>
+</details>
+<hr>
+
+
+
+<!--March 19, 2024-->
+
+<details open>
+<summary><font size="+1"><b>March 19, 2024</b></font></summary>
+<br>
+       <p class="Releases-button">Releases</p>
+ <ul> 
+<li>Polly Data Model
+<ul> 
+<li>This release introduces a structured framework that integrates disparate data sources, making them interoperable and analysis-ready.
+<li>The Data Model preserves vital connections between projects, cases, clinical data, and molecular data, ensuring precise linkage to the respective data file objects. It accommodates any number of entities based on complexity and needs. 
+<li>This well-designed data model optimizes data storage and retrieval, enhancing performance and reducing the time required to access and integrate relevant information.
+<ul>
+<li>Data types: We support transcriptomics, proteomics, mutation, copy number, structural variants, single cell, and assay data.
+<li>Intended users: Organizations that generate multiomics data and perform integrative analysis with multiple data types to generate insights.
+</ul>
+
+</li></ul>
+</li></ul>
+  <br>
+      <p class="update-button">Update</p>
+      <ul>
+<li>We've added spatial transcriptomics to our repertoire of offerings. Polly now can import Spatial Transcriptomics (SRT) data from diverse public sources including GEO, Single Cell Portal, Zenodo, CZI-CellxGene, and publications. We can cater to data from these public sources as well as data generated in-house by research groups. To import SRT data successfully, access to essential components such as the raw counts matrix, spatial coordinates, imaging data, and metadata is required.
+<ul>
+<li>Similar to Single cell RNAseq data, Spatial data can also be requested in two formats : Raw unfiltered counts and Custom processed counts.
+</li></ul> 
+</ul>
+</details>
+<hr>
+
+
+
+
 <!--February 13, 2024-->
 
 <details open>
