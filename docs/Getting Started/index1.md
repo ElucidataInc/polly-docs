@@ -29,13 +29,13 @@ Once logged in, you do not get automatically logged out and will have to log out
 
 The Polly Landing page provides access to OmixAtlas - Public Data Atlases and User Data Atlases.
 
-![Homepage](../img/OmixAtlas-Images/OA_1.png)
+![Homepage](../img/Home/Navigatingtheplatform.png)
 
 *   [Manage Data](https://docs.elucidata.io/Getting%20Started/Workspaces.html)
 
     Find comprehensive information about your workspaces, including files, notebooks, apps, analyses, and reports. This page also includes information about the creation date, workspace owner, and collaborators.
 
-![Manage](../img/Home/Workspace1.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
+![Manage](../img/Home/Managedata.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
 
 *   [Use Apps](https://docs.elucidata.io/Apps/Introduction.html)
 
@@ -46,12 +46,12 @@ The Polly Landing page provides access to OmixAtlas - Public Data Atlases and Us
 ## Changing Password 
 Users can change the password by accessing user options and clicking on 'Change Password'.
 
-![Code](../img/Home/Change_password.png)
+![Code](../img/Home/Changepassword.png)
 
 ## Subscription End Date
 Users can check their 'Subscription End Date' by accessing user options.
 
-![Code](../img/Home/Subscription.png)
+![Code](../img/Home/subscription.png)
 
 ## Getting help on the platform
 
