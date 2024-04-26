@@ -1,7 +1,7 @@
 How to filter Datasets?
 -----------------------
 
-After shortlisting the datasets using a search bar, users can further find the desired datasets using the 'Filter Datasets' function on the left. The total number of datasets related to a filter can be seen in the brackets next to it. These filters are configurable and may be different for different OmixAtlasses.
+After shortlisting the datasets using a search bar, users can further find the desired datasets using the 'Filter Datasets' function present on the above. These filters are configurable and may be different for different OmixAtlasses.
 ![Filter](../img/OmixAtlas-Images/filetdatasets.png) 
 
 For a standard OmixAtlas, following filters are available:
