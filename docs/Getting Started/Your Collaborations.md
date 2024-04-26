@@ -16,6 +16,7 @@ There are 2 types of workspace permission you can give to your users.
 
 *    **Writer**: This permission allows the user to only add new files, analysis, code, and reports within the workspace. **They cannot delete anything from within the shared workspace**. They can also restore any analysis within the workspace but does not have the permission to share the workspace with others.
 
+*  **Viewer**: This permission allows the user to only view the files, analysis, code, and reports within the workspace.
 
 On selecting the desired permission, click *Add* to add the user to the list of collaborators. Once all the users are added, click on *Done*. You can check all collaborators for a workspace on the top panel at the right. Each collaborator is represented with a user icon.
 
@@ -30,7 +31,7 @@ You can change the access permission for a user at any point in time. Click on t
 
 ##Removing a collaborator
 
-You can choose to remove a collaborator as well. Click on the cross icon present across the name of the user. Click on *Yes* to permanently remove the user or *No* to disregard the changes.
+You can choose to remove a collaborator as well. Click on the cross icon present across the name of the user. Click on *Done* to permanently remove the user or *No* to disregard the changes.
 
 ![Sharing Workspace](../img/Workspace/removecollab.png) <center>**Figure 20.** Removing a collaborator</center>
 
