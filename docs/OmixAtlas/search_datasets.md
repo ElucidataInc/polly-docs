@@ -3,7 +3,7 @@
 
 ## Search based on operator hints
 
-![Search Bar](../img/OmixAtlas-Images/1a.png) 
+![Search Bar](../img/OmixAtlas-Images/searchoperators.png) 
 
 Elasticsearch powers this search engine, allowing users to look for keywords across:
 
@@ -56,25 +56,21 @@ Some of the Search examples are as follows:-
 
 - (ITIH1 upregulation | FN1 downregulation) & "Fatty liver"
 
-![Example](../img/OmixAtlas-Images/2a.png) 
+![Example](../img/OmixAtlas-Images/fattyliverexample.png) 
 
 - (Hepatocellular carcinoma | HCC) ~ Radiotherapy
 
-![Example](../img/OmixAtlas-Images/3a.png) 
-
-- CDK7 & "CBM signaling pathway" & inhibition
-
-![Example](../img/OmixAtlas-Images/4a.png) 
+![Example](../img/OmixAtlas-Images/Radiotherapy.png)  
 
 - (somatic mutation) & (hepatocellular | renal) & (cancer | carcinoma)
 
-![Example](../img/OmixAtlas-Images/5a.png) 
+![Example](../img/OmixAtlas-Images/somaticmutationexample.png) 
 
 ### Search based on Pubmed ID
 
 All datasets include the PubMed ID for easy access to the publication. Additionally, the search bar allows users to look for datasets based on the PubMed ID.
 
-![Homepage](../img/OmixAtlas-Images/OA_search_5.png)
+![Homepage](../img/OmixAtlas-Images/PubmedID.png)
 
 ### Dataset Ranking Upon Search
 
