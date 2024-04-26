@@ -36,20 +36,20 @@ Other than the search bar, users can filter the datasets using configurable filt
 
 Select the dataset of interest, click on 'Options', and then click on 'Analyze'.
 
-![Selecting dataset](../img/Phantasus/1.png) <center>**Figure 1.** Selecting Dataset</center>
+![Selecting dataset](../img/Phantasus/analyze.png) <center>**Figure 1.** Selecting Dataset</center>
 
 #### Step 2 - Open the Phantasus application
 
 After clicking 'Analyze', a side window opens up. Select 'Phantasus' application and fill in the details about the name and workspace where the analysis is to be saved.
 
-![Opening Phanatsus](../img/Phantasus/2.png) <center>**Figure 2.** Starting the Application</center>
+![Opening Phanatsus](../img/Phantasus/Phantasus.png) <center>**Figure 2.** Starting the Application</center>
 
 
 ## Phantasus Dashboard
 
 ### Preparing the dataset for analysis
 
-![Phantasus Dashboard](../img/Phantasus/3.png) <center>**Figure 3.** Phantasus Dashboard</center>
+![Phantasus Dashboard](../img/Phantasus/Phantasus2.png) <center>**Figure 3.** Phantasus Dashboard</center>
 
 As shown in the above figure, rows on the heatmap correspond to genes. The columns correspond to samples which are annotated titles, GEO sample accession identifiers, and custom curated fields which are annotated when each dataset is ingested into Polly.
 
