@@ -1,6 +1,6 @@
 ## What are workspaces?
 
-Polly workspaces allow you to reduce clutter and organize your data in a folder system of choice. This can be accessed by clicking on the *Workspaces* card.
+Polly workspaces allow you to  declutter and organize your data in a folder system of choice. This can be accessed by clicking on the *Workspaces* card.
 
 ![Homepage](../img/Workspace/Pollyhomepage.png) <p align=center>**Figure 1.** Polly Homepage</p>
 
@@ -12,9 +12,9 @@ Click on the side bar to view workspaces: Workspace card view:
 ![](../img/Workspace/workspacee.png) <p align=center>**Figure 2.** Workspace Cardview</p>
 
 
-2. There are 3 panels on the workspace interface.
+2. There are 2 panels on the workspace interface.
 
-    *    The left panel allows you to create a new workspace and access all your workspaces.
+    *    The panel on the right shows you the details around the content within the workspace.
 
     *    The middle panel shows you all the content within the selected workspace.
 
@@ -24,13 +24,13 @@ Click on the side bar to view workspaces: Workspace card view:
 
 ## Creating a workspace
 
-You can create a new workspace on Polly by clicking on *New Workspace* on the left panel of workspace interface or on the workspace card view page
+You can create a new workspace on Polly by clicking on *New Workspace* on the left panel of the workspace interface.
 
 ![New workspace2](../img/Workspace/createworkspace1.png) <p align=center>**Figure 4.** Creating a New Workspace</p>
 
 Enter the Name of the workspace, custom tags and description (if any) and click on save. Users can add tags while creating a new workspace. These tags can be used later to search and identify workspaces.
 
-The new workspace will be created. You can find the newly created workspace with the list of all your workspaces on the left panel.
+The new workspace will be created. You can find the newly created workspace with the list of all your workspaces.
 
 ![Workspace Information](../img/Workspace/createworkspace.png) <p align=center>**Figure 5.** Add Name, Tags, Description of a Workspace</p>
 
@@ -52,7 +52,7 @@ Users can filter workspace cards of choice using options like:
 
 ![](../img/Workspace/filter.png) <p align=center>**Figure 8.** Filter Workspace cards</p>
 
-The information about the contents of the workspace can be seen on the right panel.
+The overview about the contents of the workspace can be seen on the right panel.
 
 ![](../img/Workspace/workspacepanel.png) <p align=center>**Figure 9.** Workspace Right Panel.</p>
 
@@ -66,7 +66,7 @@ The description of workspace and other information can be accessed through the I
 
 ## Content within a workspace
 
-A workspace contains all your data, [analyses](https://docs.elucidata.io/Apps/Introduction.html),[notebooks](https://docs.elucidata.io/Scaling%20compute/Polly%20Notebooks.html), and [reports](https://docs.elucidata.io/Apps/Introduction.html#reports). They can be accessed through the middle panel.
+A workspace contains all your data, [analyses](https://docs.elucidata.io/Apps/Introduction.html),[notebooks](https://docs.elucidata.io/Scaling%20compute/Polly%20Notebooks.html), and [reports](https://docs.elucidata.io/Apps/Introduction.html#reports). They can be accessed through the center panel.
 
 ![Workspace Content](../img/Workspace/workspacecontent.png) <p align=center>**Figure 11.** Workspace Contents</p>
 
@@ -80,7 +80,7 @@ In order to reduce the clutter, workspaces allow you to filter the content you w
 
 ## Creating a New folder
 
-Polly workspace allows you to organize and manage your data in folders and subfolders. To create a folder, click on the *cloud upload icon* and select *Create a New Folder* from the dropdown menu.
+Polly workspace allows you to organize and manage your data in folders and subfolders. To create a folder, click on the *Create a New Folder* icon.
 
 ![Folder Creation](../img/Workspace/createfolder.png) <p align=center>**Figure 13.**  Create Folder</p>
 
@@ -112,7 +112,7 @@ The menu beside the workspace name shows the menu items to edit your workspace d
 
 ![Edit workspace](../img/Workspace/Edit.png) <p align=center>**Figure 17.** Workspace Edit option</p>
 
-Select *Edit Details* within the menu. Rename the workspace and/or change the description of the workspace and click on *Update*. Click *Cancel* to close the tab without saving any changes.
+Select *Edit Details* within the menu. Rename the workspace and/or change the description of the workspace and click on *save changes* or Click *X* to close the tab without saving any changes.
 
 ![Edit workspace2](../img/Workspace/edit2.png) <p align=center>**Figure 18.** Workspace Edit Update</p>
 
@@ -124,7 +124,7 @@ Users can edit name, add tags and description to a workspace.
 Having unused Workspaces result in unnecessary clutter, inefficiency in looking up things and excess storage costs. Users can hence “**Archive**”  Workspace/s from the list of Workspaces they’ve been working on or no longer need.
 
 
-The “Archive” Option appears in the Kebab Menu beside Workspace Name
+The “Archive” Option appears in the Menu beside Workspace Name
 
 ![](../img/Workspace/archieveworkspace.png)
 ![](../img/Workspace/archieveworkspace2.png) <p align=center>**Figure 20.** Archiving a Workspace</p>
@@ -137,7 +137,7 @@ The “Archive” Option appears in the Kebab Menu beside Workspace Name
 
 ![](../img/Workspace/archieveworkspace3.png)
 
-The drop-down allows users to view, filter and switch between their Active and Archived Workspaces at any point in time.
+User can view the archived and active workspaces on the Home pagea and can switch between their Active and Archived Workspaces at any point in time.
 
 ## Restoring Archived Workspaces
 
