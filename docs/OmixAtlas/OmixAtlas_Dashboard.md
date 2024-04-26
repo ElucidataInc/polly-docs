@@ -47,20 +47,20 @@ Upon clicking, users can choose from the following -
 
 - Analyze - upon choosing 'analyze'; there will be options to open the dataset using different applications to analyze the dataset.
 
-![Analyze](../img/OmixAtlas-Images/12.png) <center>Analyze function under Card View</center>
-
-- Copy to Workspaces - Users can copy the dataset to the desired workspace.
-
-![Copy](../img/OmixAtlas-Images/13.png) <center>Copy to Workspaces Function under Card View</center>
+![Analyze](../img/OmixAtlas-Images/analyze.png) 
+![Analyze](../img/OmixAtlas-Images/Phantasus.png) <center>Analyze function under Card View</center>
 
 - View Report - Users can view the reports attached to the dataset.
 
-![Homepage](../img/OmixAtlas-Images/OA_9.png) <center>View Report</center>
+![Homepage](../img/OmixAtlas-Images/viewreport.png) <center>View Report</center>
 
+- Add Report - Users can add files and folders into the workspace.
+
+![Homepage](../img/OmixAtlas-Images/addreport2.png) <center>Add Report</center>
 
 - Download - Users can download the dataset in case they want to analyze it using a different application.
 
-![Download](../img/OmixAtlas-Images/14.png) <center>Download Function under Card View</center>
+![Download](../img/OmixAtlas-Images/downloadOA.png) <center>Download Function under Card View</center>
 
 
 ### Table View
@@ -68,10 +68,6 @@ Upon clicking, users can choose from the following -
 On the OmixAtlas interface, the results are arranged in a table view with columns representing the metadata fields. Users can sort through the metadata fields, including the dataset id, sample count, description, drugs, cell type, cell line, disease, and more. The results show up in order of relevance to their search query. Alongside the column header is a sorting function that allows the user to see the results of sorting in either ascending or descending order.
 
 ![Homepage](../img/OmixAtlas-Images/tableview.png)
-
-By clicking the "Gear" icon and choosing the necessary columns, users can alter the columns in a table. Additionally, users can adjust columns by selecting the "Pin" icon. 
-
-![Customizable Table](../img/OmixAtlas-Images/columnheader.png) <center> Customizable Table</center>
 
 
 ## Sorting Data
