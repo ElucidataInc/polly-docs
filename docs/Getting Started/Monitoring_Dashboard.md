@@ -27,7 +27,7 @@ For eg:
 
 To select and categorize your runs, utilize these five filters available.
 
-1. It has two options - My Runs/All Runs
+ 1. It has two options - My Runs/All Runs
 <ul>
  <li>**My runs** - is a filter that allows all ingestion runs in the user's pipeline to be displayed.
  <li>**All runs** - view all ingestion runs performed by the organization's employees on the OAs to which the user has access
@@ -36,22 +36,24 @@ To select and categorize your runs, utilize these five filters available.
 
 ![Filter](../img/Monitoring_Dashboard/Runs.png) <center>**Figure 2.** Runs Filter</center>
 
-2. The Priority of the Ingestion Runs are categorized as **All, High, Medium,** and **Low** in the second filter. The urgency with which an ingestion run will be consumed depends on its priority. It will be easier to prepare for potential delays if you are aware of the ingestion run's priority.
+
+ 2. The Priority of the Ingestion Runs are categorized as **All, High, Medium,** and **Low** in the second filter. The urgency with which an ingestion run will be consumed depends on its priority. It will be easier to prepare for potential delays if you are aware of the ingestion run's priority.
 
 ![Filter](../img/Monitoring_Dashboard/Priority.png) <center>**Figure 3.** Priority Filter</center>
 
 
-3. The third filter will classify the results according to status:
 
-- **All** - shows all the jobs that are in progress, pending, errored and completed.
-- **Running** - indicates that one or more jobs have begun running and that the run is literally in progress. Some tasks may have also been completed.
-- **Pending** - This status indicates that the run is still awaiting ingestion to begin (only been registered in-queue)
-- **Errored** - This state denotes that at least one or more ingestion run jobs failed before they could complete; the dataset has otherwise been processed, and nothing is ongoing.
-- **Completed** - This is the optimal status, which means that all tasks in the ingestion run were successfully completed.
+ 3. The third filter will classify the results according to status:
+
+ - **All** - shows all the jobs that are in progress, pending, errored and completed.
+ - **Running** - indicates that one or more jobs have begun running and that the run is literally in progress. Some tasks may have also been completed.
+ - **Pending** - This status indicates that the run is still awaiting ingestion to begin (only been registered in-queue)
+ - **Errored** - This state denotes that at least one or more ingestion run jobs failed before they could complete; the dataset has otherwise been processed, and nothing is ongoing.
+ - **Completed** - This is the optimal status, which means that all tasks in the ingestion run were successfully completed.
 
 ![Filter](../img/Monitoring_Dashboard/Status.png) <center>**Figure 4.** Status Filter</center>
 
-5. The last filter is to use the calendar to list the runs according to when they were triggered.
+ 4. The last filter is to use the calendar to list the runs according to when they were triggered.
 
 ![Filter](../img/Monitoring_Dashboard/Filterdate.png) <center>**Figure .5** Date Filter</center>
 
