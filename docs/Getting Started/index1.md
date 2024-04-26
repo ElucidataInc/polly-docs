@@ -4,7 +4,7 @@ To sign in to the Polly platform, you must have an account. Account credentials 
 
 **Note:**
 
-*    We recommend using Google Chrome for an optimized experience.
+*    We recommend using Google Chrome for an optimized experience we also support Firefox
     
 
 ###   **Login to the platform**
