@@ -34,6 +34,12 @@ Users can filter the datasets by selecting the tissue of interest.
 
 ![Filter](../img/OmixAtlas-Images/Tissue.png)
 
+- Data Matrix Available
+
+Users can select true or false based on the data matrix avaliablity.
+
+![Filter](../img/OmixAtlas-Images/datamatrix.png)
+
 - Organism
 
 Users can filter the datasets by selecting the organism of interest.
