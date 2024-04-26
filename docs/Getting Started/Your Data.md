@@ -2,7 +2,7 @@
 
 ###Using GUI
 
-To add files to your workspaces, click on the *cloud upload icon* present above the middle panel. You can choose the *Upload Files* or *Upload a Notebook* option from within the menu in order to upload the data files and notebooks respectively.
+To add files to your workspaces, click on the *upload icon* present at the left panel. 
 
 **Note:**
 
@@ -18,7 +18,7 @@ You can use PollyCLI as well to import your data directly within Polly. This is 
 
 ##Deleting items within a workspace
 
-Deleting Multiple Files: Select the files that you want to delete through the checkbox. The selection menu will appear on the top right. Click on *Delete icon*.
+Deleting Multiple Files: Select the files that you want to delete through the checkbox. Click on *Delete icon* present on the top of the panel.
 
 ![Deleting Workspace](../img/Workspace/delete.png) <center>**Figure 22.** Deleting Multiple Files</center>
 
@@ -26,14 +26,14 @@ Confirm by clicking inside the checkbox and then click on *Delete* to delete you
 
 ![Deleting Workspace](../img/Workspace/delete2.png) <center>**Figure 23.** Deletion Permission</center>
 
-Deleting a single file: If you need to delete a single file, an alternate option can also be used. Click on the kebab menu present at the right end and choose the *Delete* option.
+Deleting a single file: If you need to delete a single file, an alternate option can also be used. Click on the *Delete* option present on the right panel.
 
 ![Deleting Workspace](../img/Workspace/delete3.png) <center>**Figure 24.** Deleting a single file</center>
 
 
 ##Renaming a file within workspace
 
-Click across the file you want to rename on the kebab menu. Select the *Rename* option.
+Select the *Rename* icon present on the right panel.
 
 ![Renaming Workspace](../img/Workspace/Rename1.png) <center>**Figure 25.** Renaming Workspace</center>
 
@@ -54,7 +54,7 @@ To access and download files from your workspaces, Click on the file to look at 
 
 *    If your file size is greater than **100 MB**, use the Polly CLI option to access and download it.
 
-You can download the file by choosing the *Download* option provided at the bottom of the panel.
+You can download the file by choosing the *Download* option provided at the right of the panel.
 
 ![Accessing and Downloading a file](../img/Workspace/download.png) <center>**Figure 27.** Accessing and Downloading a file</center>
 
@@ -76,15 +76,15 @@ Choose the version through the checkbox and click on the *Restore icon* to resto
 
 Select the Polly Notebook you want to launch. You can look at the notebook details on the right panel. If you are running the notebook for the first time, the option *Edit and Launch* would appear as a default selection to launch the selected notebook. You are required to select an environment and a machine to run the given notebook, once these selections are done you can launch the notebook.
 
-![Accessing and Restoring a Notebook](../img/Workspace/editandlaunch.png) <center>**Figure 33.** Accessing and Restoring a Notebook</center>
+![Accessing and Restoring a Notebook](../img/Workspace/editandlaunch.png) <center>**Figure 29.** Accessing and Restoring a Notebook</center>
 
 Select the desired *Docker Environment* from the drop-down menu.
 
-![Accessing and Restoring a Notebook](../img/Workspace/dockerenv.png) <center>**Figure 34.** Docker Environment Selection</center>
+![Accessing and Restoring a Notebook](../img/Workspace/dockerenv.png) <center>**Figure 30.** Docker Environment Selection</center>
 
 as well as the *Machine Type* required to run the job. Once the selections are done, click on *Launch*.
 
-![Accessing and Restoring a Notebook](../img/Workspace/35.png) <center>**Figure 35.** Machine Type Selection</center>
+![Accessing and Restoring a Notebook](../img/Workspace/machinetype.png) <center>**Figure 31.** Machine Type Selection</center>
 
 For an older notebook: You have two options, you can either launch the notebook directly by the *Launch* button or you can choose to edit it first before launching through the *Edit and Launch* button.
 
@@ -92,18 +92,14 @@ For an older notebook: You have two options, you can either launch the notebook 
 
 *    Under the edit option, you can only change the machine type. The docker environment would remain the same as the one selected when you run the notebook for the first time.
 
-![Accessing and Restoring a Notebook](../img/Workspace/36.png) <center>**Figure 36.** Launch for old notebooks</center>
+![Accessing and Restoring a Notebook](../img/Workspace/launchforold.png) <center>**Figure 32.** Launch for old notebooks</center>
 
 
 ##Starting a New Analysis
 
 Click on the *New Analysis* option provided at the top of the right panel. You will be redirected to the Application interface where you can select an application to launch.
 
-![Starting a New Analysis](../img/Workspace/37.png) <center>**Figure 37.** Starting a New Analysis</center>
+![Starting a New Analysis](../img/Workspace/startnewanalysis.png) <center>**Figure 33.** Starting a New Analysis</center>
 
 
-##Accessing Documentation
 
-Click on the “?” icon present at the bottom left corner to access documentation.
-
-![Accessing Documentation](../img/Workspace/38.png) <center>**Figure 38.** Accessing Documentation</center>
