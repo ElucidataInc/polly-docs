@@ -1,4 +1,4 @@
-# OmixAtlas Dashboard
+# Overview of OmixAtlas
 
 The OmixAtlas landing page offers OmixAtlases under two different sections - Public Data Atlases and User Data Atlases.
 
