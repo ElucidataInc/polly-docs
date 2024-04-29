@@ -11,26 +11,27 @@ All of your ingestions, whether they are running, completed or errored, are disp
 
 Each run displayed on the dashboard will include information such as,
 
-1. Run name - OA to which ingestion was performed, timestamp of when the run began, and number of datasets ingested, in the order respectively
+- Run name - OA to which ingestion was performed, timestamp of when the run began, and number of datasets ingested, in the order respectively
 
 For eg:
 
 ![](../img/Monitoring_Dashboard/9.png)
 
-2. Status - whether run is pending, in progress, completed or errored.
-3. Priority - The urgency with which an ingestion run is introduced depends on its priority.
-4. User name - this essentially refers to the users who started the ingestion run.
-5. Duration - Displays the amount of time that has passed since the run was initiated.
-6. Actions - The action button will lead you to the details page
+- Status - whether run is pending, in progress, completed or errored.
+- Priority - The urgency with which an ingestion run is introduced depends on its priority.
+- User name - this essentially refers to the users who started the ingestion run.
+- Duration - Displays the amount of time that has passed since the run was initiated.
+- Actions - The action button will lead you to the details page
 
 ### Filters:
 
 To select and categorize your runs, utilize these five filters available.
 
  1. It has two options - My Runs/All Runs
+    
 <ul>
- <li>**My runs** - is a filter that allows all ingestion runs in the user's pipeline to be displayed.
- <li>**All runs** - view all ingestion runs performed by the organization's employees on the OAs to which the user has access
+ <li>My runs - is a filter that allows all ingestion runs in the user's pipeline to be displayed.
+ <li>All runs - view all ingestion runs performed by the organization's employees on the OAs to which the user has access
     - The level of access will determine the visibility of the OAs ingestions
 </ul></li>
 
@@ -40,7 +41,6 @@ To select and categorize your runs, utilize these five filters available.
  2. The Priority of the Ingestion Runs are categorized as **All, High, Medium,** and **Low** in the second filter. The urgency with which an ingestion run will be consumed depends on its priority. It will be easier to prepare for potential delays if you are aware of the ingestion run's priority.
 
 ![Filter](../img/Monitoring_Dashboard/Priority.png) <center>**Figure 3.** Priority Filter</center>
-
 
 
  3. The third filter will classify the results according to status:
