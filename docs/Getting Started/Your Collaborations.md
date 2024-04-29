@@ -31,7 +31,7 @@ You can change the access permission for a user at any point in time. Click on t
 
 ##Removing a collaborator
 
-You can choose to remove a collaborator as well. Click on the cross icon present across the name of the user. Click on *Done* to permanently remove the user or *No* to disregard the changes.
+You can choose to remove a collaborator as well. Click on the cross icon present across the name of the user. Click on *Done* to permanently remove the user or *No* to disregard the changes. When a collaborator is added/removed or when permissions are changed/revoked, the user will receive an email notification.
 
 ![Sharing Workspace](../img/Workspace/removecollab.png) <center>**Figure 20.** Removing a collaborator</center>
 
