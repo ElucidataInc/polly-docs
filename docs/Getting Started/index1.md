@@ -4,7 +4,7 @@ To sign in to the Polly platform, you must have an account. Account credentials 
 
 **Note:**
 
-*    We recommend using Google Chrome for an optimized experience we also support Firefox
+*    We recommend using Google Chrome or Firefox for best experience.
     
 
 ###   **Login to the platform**
@@ -57,7 +57,7 @@ Users can check their 'Subscription End Date' by accessing user options.
 
 We firmly believe that our greatest achievement is to enable customers and their success on the platform. The customer success team can be reached anytime on [polly@elucidata.io](mailto:polly@elucidata.io) for queries on the product, data analysis and feature requests. We also offer a detailed on-boarding plan to get your team up and running on Polly as well as library of resources, videos and publications.
 
-## Live Chat
+## Get Help
 
 Our platform uses Intercom as a standard messenger launcher. A text bubble pops up, inquiring if you need help. Polly embeds this support to establish a dedicated customer success manager. Technical support is available from 9 AM to 8 PM EST and CET.
 
