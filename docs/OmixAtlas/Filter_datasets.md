@@ -20,6 +20,10 @@ If users choose a disease, cell lines related to that disease are shown and not 
 
 ![Filter](../img/OmixAtlas-Images/Celline2.png)
 
+Users can perform ontology-based searches for cell lines and refine them using specific options related to cell lines, diseases, and tissues.
+
+![Filter](../img/OmixAtlas-Images/cellinefilter.png)
+
 
 - Disease
 
