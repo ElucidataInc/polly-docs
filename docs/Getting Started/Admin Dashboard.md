@@ -56,9 +56,9 @@ The admin dashboard will update to show the account status as *Inactive*.
 
 ![Updated admin dashboard](../img/Admin_Dashboard/inactive.png) <center>**Figure 8.** Updated admin dashboard</center>
 
-To enable an account click on the meatball menu for the relevant user and then click on *Enable*.
+To enable an account click on *Enable* option from the drop down menu present in the action section.
 
-![Enable user](../img/Admin_Dashboard/editpassword.png) <center>**Figure 9.** Enable user</center> 
+![Enable user](../img/Admin_Dashboard/enable2.0.png) <center>**Figure 9.** Enable user</center> 
 
 **Note:**
 

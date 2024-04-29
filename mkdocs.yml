@@ -15,8 +15,7 @@ nav:
       - Monitoring Dashboard: Getting Started/Monitoring_Dashboard.md
   - OmixAtlas:
       - About OmixAtlas: OmixAtlas/OmixAtlas.md
-      - OmixAtlas Dashboard: OmixAtlas/OmixAtlas_Dashboard.md
-      - Types of OmixAtlas: OmixAtlas/OmixAtlas_types.md
+      - Overview of OmixAtlas: OmixAtlas/Overview_of_OmixAtlas.md
       - Curating OmixAtlas:
         - Curating OmixAtlas: OmixAtlas/Curating OA/Curating_OA.md 
         - Curating OmixAtlas - Bulk RNAseq: OmixAtlas/Curating OA/Curating_OA_BulkRNAseq.md 

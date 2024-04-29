@@ -20,6 +20,10 @@ If users choose a disease, cell lines related to that disease are shown and not 
 
 ![Filter](../img/OmixAtlas-Images/Celline2.png)
 
+Users can perform ontology-based searches for cell lines and refine them using specific options related to cell lines, diseases, and tissues.
+
+![Filter](../img/OmixAtlas-Images/cellinefilter.png)
+
 
 - Disease
 
@@ -34,11 +38,6 @@ Users can filter the datasets by selecting the tissue of interest.
 
 ![Filter](../img/OmixAtlas-Images/Tissue.png)
 
-- Data Matrix Available
-
-Users can select true or false based on the data matrix avaliablity.
-
-![Filter](../img/OmixAtlas-Images/datamatrix.png)
 
 - Organism
 

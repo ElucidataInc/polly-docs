@@ -4,12 +4,12 @@ To sign in to the Polly platform, you must have an account. Account credentials 
 
 **Note:**
 
-*    We recommend using Google Chrome for an optimized experience we also support Firefox
+*    We recommend using Google Chrome or Firefox for best experience.
     
 
 ###   **Login to the platform**
 
-You can sign in Polly with the provided credentials: Username and Password, connected to your account, and then click *Sign in*. When logging in for the first time, you will be prompted to reset your password. If you do not sign out when you leave Polly, you will be automatically authenticated for your next visit.
+You can sign in Polly with the provided credentials: Username and Password, connected to your account, and then click *Sign in*. When logging in for the first time, you will be prompted to reset your password. Once logged in, users remain signed in for extended periods unless they actively choose to log out. You can access your account across multiple devices and platforms with consistent Google SSO credentials.
 
 ![Login](../img/Home/Login1.png)
 
@@ -35,7 +35,7 @@ The Polly Landing page provides access to OmixAtlas - Public Data Atlases and Us
 
     Find comprehensive information about your workspaces, including files, notebooks, apps, analyses, and reports. This page also includes information about the creation date, workspace owner, and collaborators.
 
-![Manage](../img/Home/Managedata.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
+![Manage](../img/Home/Managedataedit.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
 
 *   [Use Apps](https://docs.elucidata.io/Apps/Introduction.html)
 
@@ -57,7 +57,7 @@ Users can check their 'Subscription End Date' by accessing user options.
 
 We firmly believe that our greatest achievement is to enable customers and their success on the platform. The customer success team can be reached anytime on [polly@elucidata.io](mailto:polly@elucidata.io) for queries on the product, data analysis and feature requests. We also offer a detailed on-boarding plan to get your team up and running on Polly as well as library of resources, videos and publications.
 
-## Live Chat
+## Get Help
 
 Our platform uses Intercom as a standard messenger launcher. A text bubble pops up, inquiring if you need help. Polly embeds this support to establish a dedicated customer success manager. Technical support is available from 9 AM to 8 PM EST and CET.
 
