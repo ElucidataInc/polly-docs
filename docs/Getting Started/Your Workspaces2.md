@@ -1,13 +1,12 @@
 ## What are workspaces?
 
-Polly workspaces allow you to  declutter and organize your data in a folder system of choice. This can be accessed by clicking on the *Workspaces* card.
+Polly workspaces allow you to  declutter and organize your data in a folder system of choice. This can be accessed by clicking on the *Workspaces* icon in the side panel.
 
 ![Homepage](../img/Workspace/Pollyhomepage.png) <p align=center>**Figure 1.** Polly Homepage</p>
 
 To access workspaces, 
 
-1. Click on the workspace card:
-Click on the side bar to view workspaces: Workspace card view:
+1. Click on the workspace icon in the sidebar to view your workspace, or click on the new workspace icon at the top to create a new workspace.
 
 ![](../img/Workspace/workspacee.png) <p align=center>**Figure 2.** Workspace Cardview</p>
 
@@ -181,6 +180,3 @@ Workspace constraints for smooth usage are as follows:
    <li>Delete: There will be no impact
       </ul>
 
-### Video
-
-[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/P8TvifgmLf4/0.jpg)](http://www.youtube.com/watch?v=P8TvifgmLf4)
