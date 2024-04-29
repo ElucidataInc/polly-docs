@@ -16,7 +16,6 @@ nav:
   - OmixAtlas:
       - About OmixAtlas: OmixAtlas/OmixAtlas.md
       - Overview of OmixAtlas: OmixAtlas/Overview_of_OmixAtlas.md
-      - Types of OmixAtlas: OmixAtlas/OmixAtlas_types.md
       - Curating OmixAtlas:
         - Curating OmixAtlas: OmixAtlas/Curating OA/Curating_OA.md 
         - Curating OmixAtlas - Bulk RNAseq: OmixAtlas/Curating OA/Curating_OA_BulkRNAseq.md 
