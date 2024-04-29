@@ -9,7 +9,7 @@ To sign in to the Polly platform, you must have an account. Account credentials 
 
 ###   **Login to the platform**
 
-You can sign in Polly with the provided credentials: Username and Password, connected to your account, and then click *Sign in*. When logging in for the first time, you will be prompted to reset your password. If you do not sign out when you leave Polly, you will be automatically authenticated for your next visit.
+You can sign in Polly with the provided credentials: Username and Password, connected to your account, and then click *Sign in*. When logging in for the first time, you will be prompted to reset your password. Once logged in, users remain signed in for extended periods unless they actively choose to log out. You can access your account across multiple devices and platforms with consistent Google SSO credentials.
 
 ![Login](../img/Home/Login1.png)
 
@@ -35,7 +35,7 @@ The Polly Landing page provides access to OmixAtlas - Public Data Atlases and Us
 
     Find comprehensive information about your workspaces, including files, notebooks, apps, analyses, and reports. This page also includes information about the creation date, workspace owner, and collaborators.
 
-![Manage](../img/Home/Managedata.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
+![Manage](../img/Home/Managedataedit.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
 
 *   [Use Apps](https://docs.elucidata.io/Apps/Introduction.html)
 
