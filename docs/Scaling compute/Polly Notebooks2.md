@@ -1,7 +1,7 @@
 
 Polly supports various notebook environments in the form of dockers to cater to the needs of different users. Each of the dockers is built according to various data analytic needs ranging from basic scripting, processing large data or training and testing of ML models. The menu to select the notebook environments will pop-up whenever you create or upload the notebook and opens it for the first time.
 
-![Menu to select various available environments](../img/Notebooks/Preconfigured.png) <center>**Figure 8.** Menu to select various available environments</center>
+![Menu to select various available environments](../img/Notebooks/dockerr.png) <center>**Figure 8.** Menu to select various available environments</center>
 
 The various notebook environments supported are as follows:
 
