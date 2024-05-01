@@ -50,7 +50,7 @@ The "Interrupt" button halts the execution of a running code or program, allowin
 Once the *Terminal* option is selected from the toolbar, it launches a new tab on the browser and provides access to the command-line interface to execute any set of commands. You have access to all the file types which are available in the docker environment and those can be managed through the terminal as well. The terminal option also allows you to install Python or R packages (as described later), manage system binaries and system configurations, and help you work with code repositories hosted on GitHub, Bitbucket, etc.
 
 ![Terminal screen window](../img/Notebooks/terminal1.png)
-![Terminal screen window](../img/Notebooks/terminall.png) <center>**Figure 15.** Terminal screen window</center>
+![Terminal screen window](../img/Notebooks/terminall.png) <center>**Figure 14.** Terminal screen window</center>
 
  
 **Tree**
@@ -66,44 +66,20 @@ Similar to the above option, if you select the *File Explorer* option, a new tab
 **Note**: Access to this page will be unavailable; however, you can still delineate the file format and incorporate it into your code. 
 
 
-![Demo Data for FirstView](../img/Notebooks/filemanager1.png) <center>**Figure 16.** File Explorer window</center>
+![Demo Data for FirstView](../img/Notebooks/filemanager1.png) <center>**Figure 15.** File Explorer window</center>
 
 
 You can also launch a new notebook by selecting the *New* button on the top right corner of the page in *File Explorer*. The new notebook will open in a new tab and will be available only till the parent instance is open. Once they close it, it will not be saved anywhere.
 
 
 ![Launching a new notebook using File Explorer](../img/Notebooks/filenewnb.png)
-![Launching a new notebook using File Explorer](../img/Notebooks/languages.png) <center>**Figure 17.** Launching a new notebook using *File Explorer*</center>
+![Launching a new notebook using File Explorer](../img/Notebooks/languages.png) <center>**Figure 16.** Launching a new notebook using *File Explorer*</center>
 
 
 *File Explorer* window also allows you to view, edit, or create various file types in an interactive manner. The *Text File* option in the New button can be used to create a new text file. For viewing or editing a file, you can click on the file and a text editor will open in a new tab of the browser. You can view or edit the file and save the changes made in the file. The text editor also allows you to select a programming language from the Language tab to edit and convert the file format.
 
-![Opening a file using a Text editor](../img/Notebooks/textfile.png) <center>**Figure 18.** Opening a file using a Text editor</center>
+![Opening a file using a Text editor](../img/Notebooks/textfile.png) <center>**Figure 17.** Opening a file using a Text editor</center>
 
-
-##Accessing Workspace files in Notebook
-
-**Accessing individual files using Python and R functions**
-
-For carrying on analysis, if you require any input files which are available in Polly Workspaces, those files can be fetched using a set of commands. You can list all the files present in the Workspace and then select the individual file by the following command:
-
-<pre><code>## Lists all the files present in the project
-list_project_file()
-## The file will be downloaded in the current working directory
-download_project_file('sample_file.csv')
-</code></pre>
-
-After finishing the analysis, you can push back the newly generated output files again to the Workspace using the following command
-
-<pre><code>## Save the file to the project
-save_file_to_project('sample_file.csv')
-</code></pre>
-
-![Accessing individual files in a notebook](../img/Notebooks/25.png) <center>**Figure 19.** Accessing individual files in a notebook</center>
-
-**Note:**
-
-*    These functions cannot access files within folders in workspace. To access those files, use CLI commands.
 
 
 **Accessing files and directories using CLI commands**
@@ -174,7 +150,7 @@ Using the built-in package installer with the following syntax
 >  %conda install <package_name>
 </code></pre>
 
-![Installing System binaries using the Notebook code cell](../img/Notebooks/27.png) <center>**Figure 21.** Installing System binaries using the Notebook *code cell*</center>
+![Installing System binaries using the Notebook code cell](../img/Notebooks/systempackages.png) <center>**Figure 18.** Installing System binaries using the Notebook *code cell*</center>
 
 **Installing packages and system binaries via Terminal**
 
@@ -209,3 +185,5 @@ Another option is also available to install various packages and system binaries
  Using the built-in package installer with the following syntax
 > sudo yum install <package_name>
 </pre></code>
+
+

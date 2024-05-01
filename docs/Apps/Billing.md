@@ -33,7 +33,7 @@ In the event that an organization exceeds the pre-defined compute limits, Elucid
 
 All organization admins will have access to a cost dashboard on their Polly account, where they can track their organization's total cost incurred and hourly compute usage for a given time period. The dashboard also provides a breakdown of costs incurred based on a number of parameters, including Polly Services\* (Applications, Polly CLI, Notebooks), Machine Type and per user. The cost dashboard is only visible to a designated admin of an organization. Admins can access this dashboard by navigating to the Polly admin panel, as indicated in the figure below.
 
-![Billing](../img/Home/Billing.png)
+![Billing](../img/Home/costdashboard.png)
 
 ## Additional Information
 
