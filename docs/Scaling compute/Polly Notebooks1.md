@@ -35,15 +35,15 @@ If you are running the notebook for the first time, the option *Edit and Launch*
 
 There are few other useful features as well that might come handy when using a Polly Notebook. 
     
-*   Click on the kebab menu at the end of the selected notebook. A menu with various options will open.
+*   Select a notebook from the workspace. A detailed overview side panel will open, providing various options:
     
-    ![Edit* button to change machine configuration](../img/Notebooks/Features.png) <center>**Figure 7.** *Edit* button to change machine configuration</center>
+    ![Edit* button to change machine configuration](../img/Notebooks/otherusefuloptions.png) <center>**Figure 7.** Other options</center>
 
-*   Scroll down in the menu and navigate to the desired option.
+*   Navigate to the desired option.
 
     *   *Rename*: You can rename the file using this option. Provide the new name to the file and click on *Rename* to confirm your changes.   
 
-    *   *Edit*: Polly gives the flexibility to change the machine configuration to allow the usage of the notebook according to the computing power required at each step. You can change the configuration according to the need at each step.
+    *   *Edit & Launch*: Polly gives the flexibility to change the machine configuration to allow the usage of the notebook according to the computing power required at each step. You can change the configuration according to the need at each step.
     A menu with the different machine configuration will open, with the various options available will be displayed under the *Select Machine Type* segment. Select the appropriate option to change the configuration.
     
     *   *Download*: You can select this option to download the selected notebook on your system.
