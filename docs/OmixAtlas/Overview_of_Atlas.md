@@ -1,10 +1,10 @@
-# Overview of OmixAtlas
+# Overview of the Atlas
 
-The OmixAtlas landing page offers OmixAtlases under two different sections - Public Data Atlases and User Data Atlases.
+The Atlas landing page offers Atlases under two different sections - Public Data Atlases and User Data Atlases.
 
-Under public data atlases, there are two source atlases: Bulk RNA-seq and single-cell RNA-seq OmixAtlas. User Data Atlases contain destination atlas and enterprise OmixAtlas.
+Under public data atlases, there are two source atlases: Bulk RNA-seq and single-cell RNA-seq Atlas. User Data Atlases contain destination atlas and enterprise Atlas.
 
-![Homepage](../img/OmixAtlas-Images/OmixatlasHomepage.png) <center> OmixAtlas Homepage</center>
+![Homepage](../img/OmixAtlas-Images/OmixatlasHomepage.png) <center> Atlas Homepage</center>
 
 ## View All Data
 
@@ -12,7 +12,7 @@ Users can view datasets in either the **Card view** or the **Table view** format
 
 ### Card View
 
-Datasets are organized as a list of horizontal cards in this view and each card includes a description of the dataset. Annotations supported by ontologies such as organism, disease, tissue, drug, cell type, and cell line are included in the metadata information. All of the datasets that are queryable and searchable on an OmixAtlas can be seen in card view at one glance. The search bar can be used to search for keywords that are present across source metadata (title, description, etc.) and curated metadata (such as drug, tissue, cell type, etc.). The search results can be narrowed down using the dynamic filtering options on the left side.
+Datasets are organized as a list of horizontal cards in this view and each card includes a description of the dataset. Annotations supported by ontologies such as organism, disease, tissue, drug, cell type, and cell line are included in the metadata information. All of the datasets that are queryable and searchable on an Atlas can be seen in card view at one glance. The search bar can be used to search for keywords that are present across source metadata (title, description, etc.) and curated metadata (such as drug, tissue, cell type, etc.). The search results can be narrowed down using the dynamic filtering options on the left side.
 
 ![Homepage](../img/OmixAtlas-Images/cardview.png) <center>Card View (A - Request a Dataset, B - Search Bar, C - Filter options, D - Collapsable filter, E - Switch between Card View and Table View, F - Sorting Function)</center>
 
@@ -65,7 +65,7 @@ Upon clicking, users can choose from the following -
 
 ### Table View
 
-On the OmixAtlas interface, the results are arranged in a table view with columns representing the metadata fields. Users can sort through the metadata fields, including the dataset id, sample count, description, drugs, cell type, cell line, disease, and more. The results show up in order of relevance to their search query. Alongside the column header is a sorting function that allows the user to see the results of sorting in either ascending or descending order.
+On the Atlas interface, the results are arranged in a table view with columns representing the metadata fields. Users can sort through the metadata fields, including the dataset id, sample count, description, drugs, cell type, cell line, disease, and more. The results show up in order of relevance to their search query. Alongside the column header is a sorting function that allows the user to see the results of sorting in either ascending or descending order.
 
 ![Homepage](../img/OmixAtlas-Images/tableview.png)
 
@@ -87,7 +87,7 @@ Datasets in the table view can be sorted using the sorting function next to the 
 
 ## Request a dataset
 
-If the dataset is not present, users can request a dataset to be added to OmixAtlas by going to the 'Request a Dataset' function on the top right of the OmixAtlas summary page. Users need to fill out a short form to request a dataset that needs to be added.
+If the dataset is not present, users can request a dataset to be added to Atlas by going to the 'Request a Dataset' function on the top right of the Atlas summary page. Users need to fill out a short form to request a dataset that needs to be added.
 
 ![Request](../img/OmixAtlas-Images/Requestdataset.png) <center> Request a Dataset</center>
 
