@@ -1,10 +1,10 @@
 How to filter Datasets?
 -----------------------
 
-After shortlisting the datasets using a search bar, users can further find the desired datasets using the 'Filter Datasets' function present on the above. These filters are configurable and may be different for different OmixAtlasses.
+After shortlisting the datasets using a search bar, users can further find the desired datasets using the 'Filter Datasets' function present on the above. These filters are configurable and may be different for different Atlasses.
 ![Filter](../img/OmixAtlas-Images/filetdatasets.png) 
 
-For a standard OmixAtlas, following filters are available:
+For a standard Atlas, following filters are available:
 
 - Cell Line
 
@@ -63,6 +63,6 @@ Users can filter the datasets by selecting the platform.
 
 ![Filter](../img/OmixAtlas-Images/Platform.png)
 
-## OmixAtlas Searching and Filtering 
+## Atlas Searching and Filtering 
 
 [![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/bHdl6I2YAoc/0.jpg)](https://www.youtube.com/watch?v=bHdl6I2YAoc)
