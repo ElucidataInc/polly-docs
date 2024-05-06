@@ -15,7 +15,7 @@ Each run displayed on the dashboard will include information such as,
 
 For eg:
 
-![](../img/Monitoring_Dashboard/9.png)
+![](../img/Monitoring_Dashboard/Timestamp.png)
 
 - Status - whether run is pending, in progress, completed or errored.
 - Priority - The urgency with which an ingestion run is introduced depends on its priority.
