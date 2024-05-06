@@ -93,7 +93,6 @@ You can click on the same icon again to upload files within the created folder.
 **Note:** 
 
 *    Data files and notebooks can be organized within a folder while analyses are stored outside a folder in the selected workspace. In case of notebook uploads, the notebook are always uploaded in the root directory of the workspace (outside a folder). However, once uploaded, it can be moved to a folder if required.
-*    Users will receive an email notification whenever they are added to a new workspace, their role changes, or they are removed from a workspace.
 
 
 ## Navigating through a folder
