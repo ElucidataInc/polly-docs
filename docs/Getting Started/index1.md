@@ -9,10 +9,14 @@ To sign in to the Polly platform, you must have an account. Account credentials 
 
 ###   **Login to the platform**
 
-You can sign in Polly with the provided credentials: Username and Password, connected to your account, and then click *Sign in*. When logging in for the first time, you will be prompted to reset your password. Once logged in, users remain signed in for extended periods unless they actively choose to log out. You can access your account across multiple devices and platforms with consistent Google SSO credentials - Google, Azure AD, Okta, Microsoft. 
+You can sign in Polly with the provided credentials: Username and Password, connected to your account, and then click *Sign in*. When logging in for the first time, you will be prompted to reset your password. Once logged in, users remain signed in for extended periods unless they actively choose to log out. 
 
+You can access your account across multiple devices and platforms through Google or SSO (Okta, Microsoft).
 
-![Login](../img/Home/Login1.png)
+- Login with Google: Click on "Log in with Google" on the Polly login page. It will be directed to the Google login page for authentication. Enter your Google credentials and log in. After successful authentication, you will be redirected back to the Polly homepage.
+- Login with SSO: Click on "Log in with SSO". It will direct you to a page where you can enter your email address and submit. Based on the email address provided, you will be redirected to either the Okta or Microsoft login page for authentication.
+
+![Login](../img/Home/loginpagee1.png)
 
 *   **Login through [Polly CLI](https://docs.elucidata.io/Scaling%20compute/Polly%20CLI.html)**
 
