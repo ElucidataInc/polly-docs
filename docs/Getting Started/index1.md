@@ -30,7 +30,7 @@ Once logged in, you do not get automatically logged out and will have to log out
 
 ## Navigating through the platform
 
-The Polly Landing page provides access to OmixAtlas - Public Data Atlases and User Data Atlases.
+The Polly Landing page provides access to Atlas - Public Data Atlases and User Data Atlases.
 
 ![Homepage](../img/Home/Navigatingtheplatform.png)
 
@@ -44,7 +44,7 @@ The Polly Landing page provides access to OmixAtlas - Public Data Atlases and Us
 
     Polly enables coding in a range of computational environments with configurable machine sizes and dockerized environments. 
 
-![Code](../img/Home/sagemakerlandingpage.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
+![Code](../img/Home/useapp.png) <!-- <center>**Figure 5.** Sample metadata mapping file</center> -->
 
 ## Changing Password 
 Users can change the password by accessing user options and clicking on 'Change Password'.
