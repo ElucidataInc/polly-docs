@@ -26,6 +26,8 @@ A modal window will open up in the middle. For each new account you will have to
 
 *   While the first name, last name and role can be modified in the future, the email id once assigned cannot be modified. In case there is an error with the email id, delete the user following the steps mentioned [here](#delete-user) and create a new user with the correct details.
 
+  
+
 ## Reset Password
 
 Whenever a new account is created, a temporary password is sent to the associated email address. This temporary password is valid for **30 days**. In case a user does not log in during that time, they will require a fresh password that can be generated using the reset password option.

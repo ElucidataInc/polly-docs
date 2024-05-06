@@ -29,7 +29,8 @@ You can create a new workspace on Polly by clicking on *New Workspace* on the le
 
 Enter the Name of the workspace, custom tags and description (if any) and click on save. Users can add tags while creating a new workspace. These tags can be used later to search and identify workspaces.
 
-The new workspace will be created. You can find the newly created workspace with the list of all your workspaces.
+The new workspace will be created. You can find the newly created workspace with the list of all your workspaces. 
+
 
 ![Workspace Information](../img/Workspace/createworkspace.png) <p align=center>**Figure 5.** Add Name, Tags, Description of a Workspace</p>
 
@@ -93,6 +94,8 @@ You can click on the same icon again to upload files within the created folder.
 
 *    Data files and notebooks can be organized within a folder while analyses are stored outside a folder in the selected workspace. In case of notebook uploads, the notebook are always uploaded in the root directory of the workspace (outside a folder). However, once uploaded, it can be moved to a folder if required.
 
+*    Users will receive an email notification whenever they are added to a new workspace, their role changes, or they are removed from a workspace.
+
 
 ## Navigating through a folder
 
@@ -115,7 +118,7 @@ Select *Edit Details* within the menu. Rename the workspace and/or change the de
 
 ![Edit workspace2](../img/Workspace/edit2.png) <p align=center>**Figure 18.** Workspace Edit Update</p>
 
-Users can edit name, add tags and description to a workspace.
+Users can edit name, add tags and description to a workspace. 
 
 
 ## Archival of Workspace
