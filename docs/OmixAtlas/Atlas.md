@@ -47,7 +47,7 @@ All datasets on Polly go through a 2-step process:
 
 ## How is our Atlas different from available biomedical data repositories?
 
-The data in xAtlas are curated through Polly's ML-based curation workflow that structures different types of data, harmonizes metadata, and makes the data analysis ready. All data available in Atlas can be queried and directly used in downstream statistical or ML-based analyses. With Atlas one can:
+The data in Atlas are curated through Polly's ML-based curation workflow that structures different types of data, harmonizes metadata, and makes the data analysis ready. All data available in Atlas can be queried and directly used in downstream statistical or ML-based analyses. With Atlas one can:
 
 - **Leverage curation infrastructure to standardize data**: Build machine learning applications faster with analysis-ready data. Use Polly's curation models to process public and proprietary data through standard ingestion pipelines.
 - **Query heterogeneous biomolecular data with code**: Perform integrative analysis with powerful code-based querying capabilities across the Atlas data catalog. Use Polly Libraries for exploring data in depth through code.
