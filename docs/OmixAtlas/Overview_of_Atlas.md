@@ -4,7 +4,7 @@ The Atlas landing page offers Atlases under two different sections - Public Data
 
 Under public data atlases, there are two source atlases: Bulk RNA-seq and single-cell RNA-seq Atlas. User Data Atlases contain destination atlas and enterprise Atlas.
 
-![Homepage](../img/OmixAtlas-Images/OmixatlasHomepage.png) <center> Atlas Homepage</center>
+![Homepage](../img/OmixAtlas-Images/Atlasnewimg.png) <center> Atlas Homepage</center>
 
 ## View All Data
 
@@ -89,7 +89,7 @@ Datasets in the table view can be sorted using the sorting function next to the 
 
 If the dataset is not present, users can request a dataset to be added to Atlas by going to the 'Request a Dataset' function on the top right of the Atlas summary page. Users need to fill out a short form to request a dataset that needs to be added.
 
-![Request](../img/OmixAtlas-Images/Requestdataset.png) <center> Request a Dataset</center>
+![Request](../img/OmixAtlas-Images/requestdatasetfinal.png) <center> Request a Dataset</center>
 
 
 ## Downloading DE data from Phantasus
