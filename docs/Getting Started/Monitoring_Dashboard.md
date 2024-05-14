@@ -1,6 +1,6 @@
 ## What is a Monitoring Dashboard?
 
-Polly's Monitoring Dashboard will allow users to track and monitor all ingestions and runs made to the Omix Atlases mapped to your Org. This tool allows you to keep track of all your ingestion runs, view logs in the event of a failure, and categorize your runs.
+Polly's Monitoring Dashboard will allow users to track and monitor all ingestions and runs made to the Atlases mapped to your organisation. This tool allows you to keep track of all your ingestion runs, view logs in the event of a failure, and categorize your runs.
 
 
 ![Accessing the dashboard](../img/Monitoring_Dashboard/Moniteringdashboard.png) <center>**Figure 1.** Dashboard</center> 
@@ -11,7 +11,7 @@ All of your ingestions, whether they are running, completed or errored, are disp
 
 Each run displayed on the dashboard will include information such as,
 
-- Run name - OA to which ingestion was performed, timestamp of when the run began, and number of datasets ingested, in the order respectively
+- Run name - Atlas to which ingestion was performed, timestamp of when the run began, and number of datasets ingested, in the order respectively
 
 For eg:
 
@@ -28,12 +28,10 @@ For eg:
 To select and categorize your runs, utilize these five filters available.
 
  1. It has two options - My Runs/All Runs
-    
-<ul>
- <li>My runs - is a filter that allows all ingestion runs in the user's pipeline to be displayed.
- <li>All runs - view all ingestion runs performed by the organization's employees on the OAs to which the user has access
-    - The level of access will determine the visibility of the OAs ingestions
-</ul></li>
+
+ - My runs: is a filter that allows all ingestion runs in the user's pipeline to be displayed.
+ - All runs: view all ingestion runs performed by the organization's employees on the Atlases to which the user has access. The level of access will determine the visibility of the Atlases ingestions
+
 
 ![Filter](../img/Monitoring_Dashboard/Runs.png) <center>**Figure 2.** Runs Filter</center>
 
@@ -45,11 +43,11 @@ To select and categorize your runs, utilize these five filters available.
 
  3. The third filter will classify the results according to status:
 
- - **All** - shows all the jobs that are in progress, pending, errored and completed.
- - **Running** - indicates that one or more jobs have begun running and that the run is literally in progress. Some tasks may have also been completed.
- - **Pending** - This status indicates that the run is still awaiting ingestion to begin (only been registered in-queue)
- - **Errored** - This state denotes that at least one or more ingestion run jobs failed before they could complete; the dataset has otherwise been processed, and nothing is ongoing.
- - **Completed** - This is the optimal status, which means that all tasks in the ingestion run were successfully completed.
+  - **All** - shows all the jobs that are in progress, pending, errored and completed.
+  - **Running** - indicates that one or more jobs have begun running and that the run is literally in progress. Some tasks may have also been completed.
+  - **Pending** - This status indicates that the run is still awaiting ingestion to begin (only been registered in-queue)
+  - **Errored** - This state denotes that at least one or more ingestion run jobs failed before they could complete; the dataset has otherwise been processed, and nothing is ongoing.
+  - **Completed** - This is the optimal status, which means that all tasks in the ingestion run were successfully completed.
 
 ![Filter](../img/Monitoring_Dashboard/Status.png) <center>**Figure 4.** Status Filter</center>
 
@@ -62,7 +60,7 @@ To select and categorize your runs, utilize these five filters available.
 
 ![View details](../img/Monitoring_Dashboard/Viewdetailspage.png) <center>**Figure 6.** View Details</center>
 
-The top section shows the run name, the number of datasets being added to the OA, who started the run, and the amount of time that has passed ( since the run started )
+The top section shows the run name, the number of datasets being added to the Atlas, who started the run, and the amount of time that has passed ( since the run started )
 
 
 ### To check the logs:

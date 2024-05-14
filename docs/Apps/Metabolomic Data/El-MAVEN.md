@@ -20,9 +20,9 @@ El-MAVEN is now hosted on the Polly platform. This means El-MAVEN and all your P
 
 Select El-MAVEN from Polly Dashboard under the *Metabolomics Data* Tab as shown in Figure 1. Create a *New Workspace* or choose form the existing one from the drop down and provide the *Name of the Session* to be redirected to choose the machine configuration.
 
-![El-MAVEN ](../../img/El-MAVEN/01_Select_Application.png) <center>**Figure 1.** Select Application</center>
+![El-MAVEN ](../../img/El-MAVEN/elmaven1.png) <center>**Figure 1.** Select Application</center>
 
-![Workspace](../../img/El-MAVEN/02_Workspace_Selection.png) <center>**Figure 2.** Workspace selection</center>
+![Workspace](../../img/El-MAVEN/elmavenn.png) <center>**Figure 2.** Workspace selection</center>
 
 The size of the data varies from a few MBs to hundreds of GBs, and in order to process and analyze this huge data, you would need the computation power from a small machine to a large workstation. Polly supports configurations having 16 to 120 GB Ram and 4 to 16 CPU cores as of now. While other machine configurations can be added on customer request.
 

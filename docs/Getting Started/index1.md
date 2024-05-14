@@ -34,7 +34,7 @@ Once logged in, you do not get automatically logged out and will have to log out
 
 The Polly Landing page provides access to Atlas - Public Data Atlases and User Data Atlases.
 
-![Homepage](../img/Home/Navigatingtheplatform.png)
+![Homepage](../img/Home/atlas_img.png)
 
 *   [Manage Data](https://docs.elucidata.io/Getting%20Started/Workspaces.html)
 
@@ -51,12 +51,12 @@ The Polly Landing page provides access to Atlas - Public Data Atlases and User D
 ## Changing Password 
 Users can change the password by accessing user options and clicking on 'Change Password'.
 
-![Code](../img/Home/Changepassword.png)
+![Code](../img/Home/changepassword1234.png)
 
 ## Subscription End Date
 Users can check their 'Subscription End Date' by accessing user options.
 
-![Code](../img/Home/subscription.png)
+![Code](../img/Home/subscriptionenddatee.png)
 
 ## Getting help on the platform
 
