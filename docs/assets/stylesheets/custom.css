@@ -1,0 +1,37 @@
+:root {
+    --color-orange-dark: #CB6E00;
+    --color-orange-light: #f78e12;
+    --color-white: #FFFFFF;
+}
+
+.md-search__form {
+    border-radius: 1.2rem;
+}
+
+.md-footer-meta {
+    display: none;
+}
+
+.demo-button {
+    align-items: center;
+    background-color: var(--color-orange-dark);
+    border-radius: 1.2rem;
+    color: var(--color-white);
+    cursor: pointer;
+    font-size: 0.7rem;
+    margin: 0.3rem;
+    padding: 0.4rem 1.6rem;
+    transition: all 0.3s;
+}
+
+.demo-button:hover {
+    background-color: var(--color-orange-light);
+}
+
+.d-flex {
+    display: flex;
+}
+
+.gap-1 {
+    grid-gap: 0.4rem;
+}
