@@ -99,11 +99,11 @@ Datasets in the table view can be sorted using the sorting function next to the 
 In the summary view, users cannot perform searches, but they can use three filters to explore the overall statistics of the atlas. This includes details such as the total number of datasets, diseases, tissues, organisms, cell types, and samples. Users can use the disease, organism, and tissue filters to compare different aspects. Additionally, the summary view presents the top 10 distributions of diseases, tissues, and cell types for easy reference.
 
 
-![Sorting](../img/OmixAtlas-Images/overallsummary.png) <center> Overview of the Atlas </center>
+![Sorting](../img/OmixAtlas-Images/overallsummary.png) <center> Overview of the Atlas</center>
 
 
 
-![Sorting](../img/OmixAtlas-Images/dieseasesummaryyy.png) <center> Using disease filter for summary view </center>
+![Sorting](../img/OmixAtlas-Images/dieseasesummaryyy.png) <center> Using disease filter for summary view</center>
 
 
 
