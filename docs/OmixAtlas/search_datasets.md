@@ -76,6 +76,4 @@ All datasets include the PubMed ID for easy access to the publication. Additiona
 
 Users can search the dataset by either the Geo dataset ID or the PubMed ID. The search results will highlight the dataset with the exact id while also showing relevant datasets along with it.
 
-## Atlas Searching and Filtering 
-[![IMAGE ALT TEXT HERE](https://img.youtube.com/vi/bHdl6I2YAoc/0.jpg)](https://www.youtube.com/watch?v=bHdl6I2YAoc)
 
