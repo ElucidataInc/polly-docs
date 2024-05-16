@@ -1,12 +1,24 @@
 How to View Dataset Details?
 ============================
 
-Users can click the "view details" button on the dataset in the results page to view the details of a specific dataset.
 
-![Search Bar](../img/OmixAtlas-Images/Viewdetails.png) 
+### View Details
+
+Users can 'view details' of a specific dataset using two methods. 
+
+![Search Bar](../img/OmixAtlas-Images/Overallview.png) 
+
+First, users can click on the card view and select the 'view details' button on the dataset in the results page to see its details. 
+
+![Search Bar](../img/OmixAtlas-Images/Viewdetailscardd.png) 
+
+Alternatively, users can click on the table view and choose the 'view details' option from the action button located on the left side of the panel.
+
+![Search Bar](../img/OmixAtlas-Images/tableview.png) 
 
 
-The top of the page features three main sections, which are described below.
+After clicking on 'view details', it will take you to another page featuring three main sections, which are described below.
+
 
 ### Dataset Overview
 
@@ -37,7 +49,7 @@ Users can see the relative distribution of cell numbers across different cell ty
 
 ### View Report
 
-Users can select file formats for viewing and downloading datasets based on their requirements. This allows users to choose the format that best aligns with their downstream analysis. By clicking the 'View' button on the right, users will be redirected to download the file in PDF, HTML, or JSON format. Users have the option to add files and notebooks, as well as delete reports that are no longer needed.
+Users can select file formats for viewing and downloading datasets based on their requirements. This allows users to choose the format that best aligns with their downstream analysis. By clicking the 'View' button on the right, users will be redirected to download the file in PDF, HTML, or JSON format. Users have the option to add files and notebooks, as well as delete reports that are no longer needed. 
 
 ![Search Bar](../img/OmixAtlas-Images/viereporttt11.png)
 
@@ -46,4 +58,6 @@ Users can select file formats for viewing and downloading datasets based on thei
 ![Search Bar](../img/OmixAtlas-Images/downloadreport1.png) 
 
 
+Users can also view the report under the table view. In the table view, users click on the action button in the right panel and select 'view report', which will display all the reports related to the specific dataset.
 
+![serachbar](../img/OmixAtlas-Images/viewreport1111.png)
