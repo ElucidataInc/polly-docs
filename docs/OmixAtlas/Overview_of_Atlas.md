@@ -6,9 +6,12 @@ Under public data atlases, there are two source atlases: Bulk RNA-seq and single
 
 ![Homepage](../img/OmixAtlas-Images/Atlasnewimg.png) <center> Atlas Homepage</center>
 
-## View All Data
+## View Data
 
-Users can view datasets in either the **Card view** or the **Table view** formats.
+Users can view datasets in either the **Card view** or the **Table view** formats. The **Summary view** is used to display overall statistics of the atlas.
+
+![Homepage](../img/OmixAtlas-Images/Overallview.png)
+
 
 ### Card View
 
@@ -36,6 +39,12 @@ c. Overall Design: This section describes the study design and methodology taken
 d. Abstract: This section provides the abstract directly from the publication. Users can click on the 'more' function to check the full abstract.
 
 ![Homepage](../img/OmixAtlas-Images/Abstract.png) <center> Abstract</center>
+
+e. Sorting:
+
+From the top right drop-down menu in the card view, datasets can be sorted by Dataset ID, Number of Samples, and Recent Datasets.
+
+![Sorting](../img/OmixAtlas-Images/Sortcardview.png) <center> Sorting Function under Card View</center>
 
 #### Options under card view
 
@@ -69,21 +78,37 @@ On the Atlas interface, the results are arranged in a table view with columns re
 
 ![Homepage](../img/OmixAtlas-Images/tableview.png)
 
+#### Options under Table View
 
-## Sorting Data
+Manage Table
 
-### Card view
+Users can customize the table by clicking the 'Manage table' option in the middle panel. This opens a table editor that allows users to select which columns they want to display in the table or hide based on their preference. Users can select or deselect desired columns within the table and save their changes. Only the selected columns will appear in the table after saving. Users can navigate to other curated information using the right arrow key on the keyboard.
 
-From the top right drop-down menu in the card view, datasets can be sorted by Dataset ID, Number of Samples, and Recent Datasets.
+![Homepage](../img/OmixAtlas-Images/tableditorr.png)
 
-![Sorting](../img/OmixAtlas-Images/Sortcardview.png) <center> Sorting Function under Card View</center>
-
-
-### Table View
+Sorting
 
 Datasets in the table view can be sorted using the sorting function next to the column header to see the results in either ascending or descending order.
 
 ![Sorting](../img/OmixAtlas-Images/columnheader.png) <center> Sorting using Column Header</center>
+
+
+
+## Summary View
+
+In the summary view, users cannot perform searches, but they can use three filters to explore the overall statistics of the atlas. This includes details such as the total number of datasets, diseases, tissues, organisms, cell types, and samples. Users can use the disease, organism, and tissue filters to compare different aspects. Additionally, the summary view presents the top 10 distributions of diseases, tissues, and cell types for easy reference.
+
+
+![Sorting](../img/OmixAtlas-Images/overallsummary.png) <center> Overview of the Atlas </center>
+
+
+
+![Sorting](../img/OmixAtlas-Images/dieseasesummaryyy.png) <center> Using disease filter for summary view </center>
+
+
+
+
+
 
 ## Request a dataset
 
@@ -92,6 +117,3 @@ If the dataset is not present, users can request a dataset to be added to Atlas 
 ![Request](../img/OmixAtlas-Images/requestdatasetfinal.png) <center> Request a Dataset</center>
 
 
-## Downloading DE data from Phantasus
-
-After analyzing the dataset using Phantasus, users can now download DE files in GCT format in the destination atlas. This feature is not provided in the source atlas.
