@@ -66,14 +66,20 @@ Ontology-based filters improve search by using standardized terms. Users can spe
 
 Currently, the platform supports ontology-based recommendations for four key fields: cell lines, diseases, tissues, and cell types (for single-cell data). 
 
-It employs standardized terms sourced from established ontologies to ensure consistency and accuracy in search results. For diseases, the Medical Subject Headings (MeSH) ontology is utilized, while the Biological Resources for ANimal and Human Health (BRENDA) ontology is employed for tissues. This utilizes ontology-based algorithms to identify exact matches as well as related matches based on the specified criteria and shortlist the datasets.
+It employs standardized terms sourced from established ontologies to ensure consistency and accuracy in search results. For diseases, the Medical Subject Headings (MeSH) ontology is utilized, while the Biological Resources for ANimal and Human Health (BRENDA) ontology is employed for tissues. 
 
 Users can explore a curated list of recommendations tailored to their search parameters. These recommendations includes relevant datasets of diseases, cell lines, tissues, or cell types based on the ontology-based filtering criteria.
 
-Users can perform ontology-based searches for cell lines and refine them using specific options related to cell lines, diseases, and tissues.
+Users can perform ontology-based searches for cell lines and refine them using specific options related to cell lines, diseases, and tissues. Similarly, can perform for disease, tissue and cell type.
 
-![Filter](../img/OmixAtlas-Images/cellinefilter.png)
+![Filter](../img/OmixAtlas-Images/cellinefilter.png)  <center> Cell Lines</center>
 
 
+![Filter](../img/OmixAtlas-Images/dieaseonto.png)  <center> Disease</center>
 
+
+![Filter](../img/OmixAtlas-Images/tissueonto.png)  <center> Tissue</center>
+
+
+![Filter](../img/OmixAtlas-Images/celltypeonto.png)  <center> Cell Type</center>
 
