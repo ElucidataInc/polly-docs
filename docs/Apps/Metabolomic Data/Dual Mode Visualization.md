@@ -63,9 +63,9 @@ Pathways analysis only works when the data has KEGG Ids within the “compoundId
 
 Select *Dual Mode Data Visualization (Metabolomics App)* from the dashboard under the *Metabolomics Data* Tab as shown in Figure 8. Create a *New Workspace* or choose from the existing one from the dop-down and provide the *Name of the Session* to be redirected to Dual Mode Data Visualisation (Metabolomics App)'s upload page.
 
-![Polly Dashboard and Workspace selection](../../img/DualMode/08_Polly_Dashboard.png)
+![Polly Dashboard and Workspace selection](../../img/DualMode/dualmodedatavis.png)
 
-![Polly Dashboard and Workspace selection](../../img/DualMode/08_Workspace_Selection.png) <center>**Figure 8.** Polly Dashboard and Workspace selection</center>
+![Polly Dashboard and Workspace selection](../../img/DualMode/dualmodee.png) <center>**Figure 8.** Polly Dashboard and Workspace selection</center>
 
 ##Upload Files
 

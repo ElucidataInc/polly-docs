@@ -13,15 +13,13 @@ nav:
   - Dashboard:
       - Admin Dashboard: Getting Started/Admin Dashboard.md
       - Monitoring Dashboard: Getting Started/Monitoring_Dashboard.md
-  - OmixAtlas:
-      - About OmixAtlas: OmixAtlas/OmixAtlas.md
-      - OmixAtlas Dashboard: OmixAtlas/OmixAtlas_Dashboard.md
-      - Types of OmixAtlas: OmixAtlas/OmixAtlas_types.md
-      - Curating OmixAtlas:
-        - Curating OmixAtlas: OmixAtlas/Curating OA/Curating_OA.md 
-        - Curating OmixAtlas - Bulk RNAseq: OmixAtlas/Curating OA/Curating_OA_BulkRNAseq.md 
-        - Curating OmixAtlas - Single Cell: OmixAtlas/Curating OA/Curating_OA_scRNA.md 
-      - Data Workflow - Bulk RNAseq: OmixAtlas/Data_Workflow.md
+  - Atlas:
+      - About Atlas: OmixAtlas/Atlas.md
+      - Overview of Atlas: OmixAtlas/Overview_of_Atlas.md
+      - Curating Atlas:
+        - Curating Atlas: OmixAtlas/Curating OA/Curating_OA.md 
+        - Curating Atlas - Bulk RNAseq: OmixAtlas/Curating OA/Curating_OA_BulkRNAseq.md 
+        - Curating Atlas - Single Cell: OmixAtlas/Curating OA/Curating_OA_scRNA.md 
       - How to Find Datasets?: OmixAtlas/search_datasets.md
       - How to Filter Datasets?: OmixAtlas/Filter_datasets.md
       - How to View Details?: OmixAtlas/View_Details.md

@@ -28,28 +28,26 @@ Some of the Polly applications also provide the ability to upload input files fr
 
 ##Restore Analysis
 
-All Polly <!-- ([El-MAVEN Phi Relative LC-MS](../El-MAVEN Phi Relative LC-MS), [FirstView](../FirstView), [MetScape](../MetScape), [QuantFit](../QuantFit), [CRISPR Screening](../CRISPR Screening) and [IntOmix](../IntOmix)) --> applications <!-- ([Dual Mode Data Visualization](../Dual Mode Data Visualization), [Labeled LC-MS Workflow](../Labeled LC-MS  Workflow), [Labeled LC-MS/MS Workflow](../Labeled LC-MS/MS Workflow), [Untargeted Pipeline](../Untargeted Pipeline), [High Throughput Drug Screening](../High Throughput Drug Screening), [RNA Seq Workflow](../RNA Seq Workflow), [Proteomics Workflow](../Proteomics Workflow) and [Lipidomics Visualization Dashboard](../Lipidomics Visualization Dashboard)) --> contain the restore functionality that allows any analysis to be restored to the last step. Analyses can be restored by navigating to the desired workspace. Click on the specific analysis and select the algorithm you want to restore. Clicking on *Restore* from the right panel will take you back to the application with the same data used before as shown in Figure 7. Restore helps laboratories and organizations with standardization across labs and improves reproducibility.
+All Polly <!-- ([El-MAVEN Phi Relative LC-MS](../El-MAVEN Phi Relative LC-MS), [FirstView](../FirstView), [MetScape](../MetScape), [QuantFit](../QuantFit), [CRISPR Screening](../CRISPR Screening) and [IntOmix](../IntOmix)) --> applications <!-- ([Dual Mode Data Visualization](../Dual Mode Data Visualization), [Labeled LC-MS Workflow](../Labeled LC-MS  Workflow), [Labeled LC-MS/MS Workflow](../Labeled LC-MS/MS Workflow), [Untargeted Pipeline](../Untargeted Pipeline), [High Throughput Drug Screening](../High Throughput Drug Screening), [RNA Seq Workflow](../RNA Seq Workflow), [Proteomics Workflow](../Proteomics Workflow) and [Lipidomics Visualization Dashboard](../Lipidomics Visualization Dashboard)) --> contain the restore functionality that allows any analysis to be restored to the last step. Analyses can be restored by navigating to the desired workspace. Click on the specific analysis and select the algorithm you want to restore. Clicking on *Restore* from the right panel will take you back to the application with the same data. Restore helps laboratories and organizations with standardization across labs and improves reproducibility.
 
-![Restore for Angular applications](../img/AppIntroduction/Restoreangular1.png) <center>**Figure 7.** Restore for Angular applications</center>
 
 Some of the Polly applications also provide the ability to save at that exact moment of your choice using the *Save the State* option.
 
-![Restore for Shiny applications](../img/AppIntroduction/LLCMSRestore.png) <center>**Figure 8.** Saving the states in Shiny applications</center>
+![Restore for Shiny applications](../img/AppIntroduction/LLCMSRestore.png) <center>**Figure 7.** Saving the states in Shiny applications</center>
 
-For the applications providing the *Save the  state* option, you have an additional step to choose which state to restore. Multiple states, if saved are depicted as versions which makes it extremely easy to visually identify the state of interest as shown in Figure 8 and Figure 9.
+For the applications providing the *Save the  state* option, you have an additional step to choose which state to restore. Multiple states, if saved are depicted as versions which makes it extremely easy to visually identify the state of interest as shown in Figure 8.
 
-![Branch structure in case of multiple states saved during a single analysis for Shiny applications](../img/AppIntroduction/Restoreshiny1.png) <center>**Figure 9.** Restoring the saved states</center>
 
 ##Download Plots & Output
 
-All applications on Polly allow you to download processed data and plots when displayed so that if needed you can verify from a third party about exactly how the data is being processed at a specific step. The tabular data can be downloaded as .csv files whereas the plots can be downloaded as .png, .jpeg or .svg files as shown in Figure 10, FIgure 11 and Figure 12.
+All applications on Polly allow you to download processed data and plots when displayed so that if needed you can verify from a third party about exactly how the data is being processed at a specific step. The tabular data can be downloaded as .csv files whereas the plots can be downloaded as .png, .jpeg or .svg files as shown in Figure 8, FIgure 9 and Figure 10.
 
-![Download Pathway Dashboard as an image or the processed data as a .csv file](../img/AppIntroduction/DownloadMS1.png)<center>**Figure 10.** Download Pathway Dashboard as an image or the processed data as a .csv file</center>
-
-
-![Download PCA Plot as an image](../img/AppIntroduction/DownloadMS2.png) <center>**Figure 11.** Download PCA Plot as an image</center>
+![Download Pathway Dashboard as an image or the processed data as a .csv file](../img/AppIntroduction/DownloadMS1.png)<center>**Figure 8.** Download Pathway Dashboard as an image or the processed data as a .csv file</center>
 
 
-![Download the processed data as a .csv file](../img/AppIntroduction/DownloadLLCMS.png) <center>**Figure 12.** Download the processed data as a .csv file</center>
+![Download PCA Plot as an image](../img/AppIntroduction/DownloadMS2.png) <center>**Figure 9.** Download PCA Plot as an image</center>
+
+
+![Download the processed data as a .csv file](../img/AppIntroduction/DownloadLLCMS.png) <center>**Figure 10.** Download the processed data as a .csv file</center>
 
 As with upload, data can be downloaded to local storage for Angular and Shiny apps as well as Polly workspace for Shiny apps.
