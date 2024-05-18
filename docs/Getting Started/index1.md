@@ -14,6 +14,7 @@ You can sign in Polly with the provided credentials: Username and Password, conn
 You can access your account across multiple devices and platforms through Google or SSO (Okta, Microsoft).
 
 - Login with Google: Click on "Log in with Google" on the Polly login page. It will be directed to the Google login page for authentication. Enter your Google credentials and log in. After successful authentication, you will be redirected back to the Polly homepage.
+  
 - Login with SSO: Click on "Log in with SSO". It will direct you to a page where you can enter your email address and submit. Based on the email address provided, you will be redirected to either the Okta or Microsoft login page for authentication.
 
 ![Login](../img/Home/loginpagee1.png)
@@ -34,7 +35,7 @@ Once logged in, you do not get automatically logged out and will have to log out
 
 The Polly Landing page provides access to Atlas - Public Data Atlases and User Data Atlases.
 
-![Homepage](../img/Home/atlas_img.png)
+![Homepage](../img/Home/atlaseess.png)
 
 *   [Manage Data](https://docs.elucidata.io/Getting%20Started/Workspaces.html)
 
