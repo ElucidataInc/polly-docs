@@ -4,7 +4,7 @@ The Atlas landing page offers Atlases under two different sections - Public Data
 
 Under public data atlases, there are two source atlases: Bulk RNA-seq and single-cell RNA-seq Atlas. User Data Atlases contain destination atlas and enterprise Atlas.
 
-![Homepage](../img/OmixAtlas-Images/Atlasnewimg.png) <center> Atlas Homepage</center>
+![Homepage](../img/OmixAtlas-Images/atlashomepagenew.png) <center> Atlas Homepage</center>
 
 ## View Data
 
