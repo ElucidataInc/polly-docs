@@ -2,7 +2,7 @@
 
 Polly workspaces allow you to  declutter and organize your data in a folder system of choice. This can be accessed by clicking on the *Workspaces* icon in the side panel.
 
-![Homepage](../img/Workspace/worspaceatlas.png) <p align=center>**Figure 1.** Polly Homepage</p>
+![Homepage](../img/Workspace/pollyhomepageatlasnew.png) <p align=center>**Figure 1.** Polly Homepage</p>
 
 To access workspaces, 
 
