@@ -52,12 +52,12 @@ The Polly Landing page provides access to Atlas - Public Data Atlases and User D
 ## Changing Password 
 Users can change the password by accessing user options and clicking on 'Change Password'.
 
-![Code](../img/Home/changepassword1234.png)
+![Code](../img/Home/chanepasswordnew11.png)
 
 ## Subscription End Date
 Users can check their 'Subscription End Date' by accessing user options.
 
-![Code](../img/Home/subscriptionenddatee.png)
+![Code](../img/Home/subcriptionenddd.png)
 
 ## Getting help on the platform
 

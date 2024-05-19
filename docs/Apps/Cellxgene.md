@@ -26,7 +26,7 @@ Users can find relevant datasets using the powerful search bar on the OmixAtlas 
 - It allows fuzzy search, for example, if users search for 'transcriptomics', it will show results for 'transcript' and 'transcriptome' as well.
 - There are operators such as 'exact', 'and', 'or', 'not', and 'group' for better search.
 
-Users can filter the datasets using configurable filters beside the search bar. A detailed description of how to find datasets can be found [here]![Homepage](../img/Cellxgene/OmixatlasHomepage.png) <center>**Figure 1.** Single cell OmixAtlas</center>
+Users can filter the datasets using configurable filters beside the search bar. A detailed description of how to find datasets can be found [here]![Homepage](../img/Cellxgene/cellxgeneatlass.png) <center>**Figure 1.** Single cell OmixAtlas</center>
 
 ### Starting Cellxgene
 
@@ -34,7 +34,7 @@ Users can filter the datasets using configurable filters beside the search bar. 
 
 Select the dataset of interest, click on 'Options', and then click on 'Analyze'.
 
-![Homepage](../img/Cellxgene/2a.png) <center>**Figure 2.** Selecting dataset</center>
+![Homepage](../img/Cellxgene/cellxgeneanalyze.png) <center>**Figure 2.** Selecting dataset</center>
 
 
 #### **Step 2 - Open the Cellxgene application**

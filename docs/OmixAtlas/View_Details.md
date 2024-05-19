@@ -6,11 +6,11 @@ How to View Dataset Details?
 
 Users can 'view details' of a specific dataset using two methods. 
 
-![Search Bar](../img/OmixAtlas-Images/Overallview.png) 
+![Search Bar](../img/OmixAtlas-Images/viewdataa.png) 
 
 First, users can click on the card view and select the 'view details' button on the dataset in the results page to see its details. 
 
-![Search Bar](../img/OmixAtlas-Images/Viewdetailscardd.png) 
+![Search Bar](../img/OmixAtlas-Images/cardviewdeatilsnew.png) 
 
 Alternatively, users can click on the table view and choose the 'view details' option from the action button located on the left side of the panel.
 

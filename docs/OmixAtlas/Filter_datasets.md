@@ -1,14 +1,15 @@
+
 # Filter Desired Datasets
 
 
 After shortlisting the datasets using a search bar, users can further find the desired datasets using the 'Filter Datasets' function present on the above. These filters are configurable and may be different for different Atlases.
-![Filter](../img/OmixAtlas-Images/filetdatasets.png) 
+![Filter](../img/OmixAtlas-Images/filterdatasetsnew.png) 
 
 For a standard Atlas, following filters are available:
 
 - Cell Line
 
-![Filter](../img/OmixAtlas-Images/celline.png)
+![Filter](../img/OmixAtlas-Images/cellineneww.png)
 
 Users can filter datasets by searching for desired cell lines using following three options from a drop down menu -
 
@@ -18,46 +19,41 @@ Users can filter datasets by searching for desired cell lines using following th
 
 If users choose a disease, cell lines related to that disease are shown and not the disease itself.
 
-![Filter](../img/OmixAtlas-Images/Celline2.png)
+![Filter](../img/OmixAtlas-Images/cellinefiltersss2.png)
 
 
 - Disease
 
 Users can filter the datasets by selecting the disease of interest.
 
-![Filter](../img/OmixAtlas-Images/disease.png)
+![Filter](../img/OmixAtlas-Images/diseaseneww.png)
 
 
 - Tissue
 
 Users can filter the datasets by selecting the tissue of interest.
 
-![Filter](../img/OmixAtlas-Images/Tissue.png)
+![Filter](../img/OmixAtlas-Images/tissuenewww.png)
 
 
 - Organism
 
 Users can filter the datasets by selecting the organism of interest.
 
-![Filter](../img/OmixAtlas-Images/oragnisms.png)
+![Filter](../img/OmixAtlas-Images/organismsneww.png)
 
-- Data Type
-
-Users can filter the datasets by selecting the data type.
-
-![Filter](../img/OmixAtlas-Images/datatype.png)
 
 - Drug
 
 Users can filter the datasets by selecting the drug of interest.
 
-![Filter](../img/OmixAtlas-Images/drug.png)
+![Filter](../img/OmixAtlas-Images/drugnewww.png)
 
 - Platform
 
 Users can filter the datasets by selecting the platform.
 
-![Filter](../img/OmixAtlas-Images/Platform.png)
+![Filter](../img/OmixAtlas-Images/platformmneww.png)
 
 
 # Ontology-Based Recommendations
@@ -72,10 +68,10 @@ Users can explore a curated list of recommendations tailored to their search par
 
 Users can perform ontology-based searches for cell lines and refine them using specific options related to cell lines, diseases, and tissues. Similarly, can perform for disease, tissue and cell type.
 
-![Filter](../img/OmixAtlas-Images/cellinefilter.png)  <center> Cell Lines</center>
+![Filter](../img/OmixAtlas-Images/cellineonto.png)  <center> Cell Lines</center>
 
 
-![Filter](../img/OmixAtlas-Images/dieaseonto.png)  <center> Disease</center>
+![Filter](../img/OmixAtlas-Images/diseaseonto.png)  <center> Disease</center>
 
 
 ![Filter](../img/OmixAtlas-Images/tissueonto.png)  <center> Tissue</center>
