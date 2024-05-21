@@ -13,6 +13,17 @@ nav:
   - Dashboard:
       - Admin Dashboard: Getting Started/Admin Dashboard.md
       - Monitoring Dashboard: Getting Started/Monitoring_Dashboard.md
+  - Pipelines:
+      - Getting Started: Pipelines/GettingStarted.md
+      - Nextflow vs PWL: Pipelines/NextflowVsPWL.md
+      - Writing Pipelines:
+        - Nextflow:
+          - Quick Start: Pipelines/WritingPipelines/Nextflow/QuickStartNextflow.md
+          - Branching Strategy: Pipelines/BranchingStrategy.md
+        - PWL:
+          - Quick Start: Pipelines/WritingPipelines/PWL/QuickStartPWL.md
+          - Branching Strategy: Pipelines/BranchingStrategy.md
+          - Subflows: Pipelines/WritingPipelines/PWL/Subflows.md
   - OmixAtlas:
       - About OmixAtlas: OmixAtlas/OmixAtlas.md
       - Overview of OmixAtlas: OmixAtlas/Overview_of_OmixAtlas.md
@@ -83,6 +94,8 @@ theme:
   favicon: img/elucidata.ico
   features:
     - navigation.top
+    - content.code.copy
+    - content.code.annotate
   palette:
     primary: deep purple
 plugins:
@@ -103,10 +116,19 @@ extra:
     provider: google
     property: 'G-PQXHC1FNVZ'
 markdown_extensions:
-  - pymdownx.highlight:
-      anchor_linenums: true
+  - admonition
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - tables
+  - attr_list
+  - md_in_html
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.tabbed:
+      alternate_style: true
 extra_css:
   - assets/stylesheets/custom.css
