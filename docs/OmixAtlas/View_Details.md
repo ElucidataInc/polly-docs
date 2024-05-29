@@ -37,7 +37,7 @@ The metadata table includes sample details, protocol information, source metadat
 
 Metadata charts consist of the experimental factors along with a sunburst plot. The Sunburst Plot is used to display a hierarchical structure. Each level of the hierarchy is represented by one ring or circle and all rings show how the outer rings relate to the inner rings. To create a sunburst plot, the user can select the metadata in the rings based on their own criteria.
 
-![Search Bar](../img/OmixAtlas-Images/metadatacharts.png) 
+![Search Bar](../img/OmixAtlas-Images/sunburstploott.png) 
 
 
 ### Cell Type Visualization
@@ -58,6 +58,6 @@ Users can select file formats for viewing and downloading datasets based on thei
 ![Search Bar](../img/OmixAtlas-Images/downloadreport1.png) 
 
 
-Users can also view the report under the table view. In the table view, users click on the action button in the right panel and select 'view report', which will display all the reports related to the specific dataset.
+Users can also view the report under the table view. In the table view, users can click on the action button in the left panel and select 'view report', which will display all the reports related to the specific dataset.
 
 ![serachbar](../img/OmixAtlas-Images/viewreport1111.png)
