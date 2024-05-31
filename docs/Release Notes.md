@@ -4,13 +4,13 @@
 <!--May 20, 2024-->
 
 <details open>
-    <summary><font size="+1"><b>April 17, 2024</b></font></summary>
+    <summary><font size="+1"><b>May 20, 2024</b></font></summary>
     <br>
     <p class="Releases-button">Releases</p>
     <ul> 
         <li>Polly Design System
             <ul> 
-                <li>We are thrilled to announce the release of Polly's new design system, which is based on NG Prime. This system is aimed at enhancing the user experience and providing a more polished visual interface. This release prioritizes enhancements in readability, search functionality, operational efficiency, filter usability, home page layout, dashboard design, and the overall consistency and adaptability of UI components.   
+                <li>We are thrilled to announce the release of Polly's new design system, which is based on NG Prime. This update focuses on improving the user experience without changing existing features, providing a more polished visual interface.
                     <br></br>
                     <ul>
                         <li> <b>Key Features</b>
@@ -65,7 +65,7 @@
             </ul>
         </li>
     </ul>
- <p>For details, refer to the <a href="https://docs.polly.elucidata.io/Scaling%20compute/Polly%20Notebooks3.html">Polly notebook</a> section in the documentation.</p>
+ <p>For details, refer to the <a href="https://docs.polly.elucidata.io/Scaling%20compute/Polly%20Notebooks3.html">Polly notebooks</a> section in the documentation.</p>
     <br>
 </details>
 <hr>
