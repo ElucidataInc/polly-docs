@@ -1,6 +1,45 @@
 # Release Notes
 
 
+<!--May 20, 2024-->
+
+<details open>
+    <summary><font size="+1"><b>May 20, 2024</b></font></summary>
+    <br>
+    <p class="Releases-button">Releases</p>
+    <ul> 
+        <li>Polly Design System
+            <ul> 
+                <li>We are thrilled to announce the release of Polly's new design system. This update focuses on improving the user experience without changing existing features, providing a more polished visual interface.
+                    <br></br>
+                    <ul>
+                        <li> <b>Key Features</b>
+                            <ul>
+                                <li>Responsive and Interactive Design: We have enhanced the responsiveness and interactivity of our platform, ensuring that it adapts seamlessly to various screen sizes. This helps to create an optimal viewing experience for all users.</li>
+                                  <li>Symmetrical and Readable Layout: Our new symmetrical layout creates a balanced and harmonious visual composition, making the interface design feel more organized and easier to navigate. We have also improved readability through typography, font size, and color choices, creating a clear and concise hierarchy of information.</li>
+                                <li>Helpful and Guiding User Experience: We have implemented smart onboarding, guides, helps, and documentation to provide users with a clear path to follow. This helps them understand the basic features and functions of our platform, making it easier for them to get started and achieve their goals.</li>
+                            </ul>
+                        </li>
+                    </ul>
+                     <ul>
+                        <li> <b>Improvements</b>
+                            <ul>
+                                <li>Enhanced User Experience: The new design system is designed to enhance the overall user experience, making it easier and more intuitive for users to navigate and interact with the platform.</li>
+                                  <li>Consistency and Usability: By refining the size, state, and variation of UI components, the design system ensures consistency and improves usability across the platform.</li>
+                                <li>Improved Legibility: Our well-structured text hierarchy improves the overall legibility of the design, making it easier for users to read and comprehend the content.</li>
+                               <li>Improved Visual Appearance: The design system provides a more refined visual appearance, updating the platform's look and feel to a more modern and sophisticated design.</li>
+                            </ul>
+                        </li>
+                    </ul>                   
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <br>
+</details>
+<hr>
+
+
 
 <!--April 18, 2024-->
 
@@ -26,7 +65,7 @@
             </ul>
         </li>
     </ul>
- <p>For details, refer to the <a href="https://docs.polly.elucidata.io/Scaling%20compute/Polly%20Notebooks3.html">Polly notebook</a> section in the documentation.</p>
+ <p>For details, refer to the <a href="https://docs.polly.elucidata.io/Scaling%20compute/Polly%20Notebooks3.html">Polly notebooks</a> section in the documentation.</p>
     <br>
 </details>
 <hr>
