@@ -10,13 +10,13 @@
     <ul> 
         <li>Polly Design System
             <ul> 
-                <li>We are thrilled to announce the release of Polly's new design system, which is based on NG Prime. This update focuses on improving the user experience without changing existing features, providing a more polished visual interface.
+                <li>We are thrilled to announce the release of Polly's new design system. This update focuses on improving the user experience without changing existing features, providing a more polished visual interface.
                     <br></br>
                     <ul>
                         <li> <b>Key Features</b>
                             <ul>
-                                <li>Responsive and Interactive Design: We have enhanced the responsiveness and interactivity of our platform, ensuring that it adapts seamlessly to various screen sizes and devices. This helps to create an optimal viewing experience for all users, regardless of the device they are using.</li>
-                                  <li>Symmetrical and Readable Layout: Our new symmetrical layout creates a balanced and harmonious visual composition, making the design feel more organized and easier to navigate. We have also improved readability through typography, font size, and color choices, creating a clear and concise hierarchy of information.</li>
+                                <li>Responsive and Interactive Design: We have enhanced the responsiveness and interactivity of our platform, ensuring that it adapts seamlessly to various screen sizes. This helps to create an optimal viewing experience for all users.</li>
+                                  <li>Symmetrical and Readable Layout: Our new symmetrical layout creates a balanced and harmonious visual composition, making the interface design feel more organized and easier to navigate. We have also improved readability through typography, font size, and color choices, creating a clear and concise hierarchy of information.</li>
                                 <li>Helpful and Guiding User Experience: We have implemented smart onboarding, guides, helps, and documentation to provide users with a clear path to follow. This helps them understand the basic features and functions of our platform, making it easier for them to get started and achieve their goals.</li>
                             </ul>
                         </li>
