@@ -1,5 +1,3 @@
-Polly is a cloud based Software as a Service (SaaS) solution. Below details out various layers of Polly.
-
 ## Polly Stack
 
 **Data Harmonization & Ingestion**
@@ -32,8 +30,6 @@ It uses managed cloud services like [AWS S3,](https://aws.amazon.com/s3/ "https:
 ### Micro-services & Serverless architecture
 
 Various parts of Polly are built and deployed as micro services. This allows for better fault isolation and resilience. A focus on managed serverless components like API Gateway, Lambda functions, S3, DynamoDB, S3 etc also allows Polly to scale seamlessly under high load.
-
-### Technology Stack
 
 Polly’s micro-services architecture pattern allows the development teams to choose different technologies that are best suited to those parts. Polly has been built ground up using Python3.6, Angular11, NodeJS, R & R-Shiny.
 
