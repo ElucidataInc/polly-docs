@@ -69,7 +69,7 @@ nav:
       - Curation App: Apps/Curation App.md
       - Billing and Usage: Apps/Billing.md 
   - Tech Ecosystem:
-    - Polly Architecture: TechEcosystem/Polly Architecture.md
+    - Polly Stack: TechEcosystem/Polly Stack.md
     - Security and Data Transfer: TechEcosystem/Data Security.md
     - Data Recovery: TechEcosystem/polly_disaster_recovery_mar_2021.md
     - Technical FAQs: TechEcosystem/Technical FAQs.md
