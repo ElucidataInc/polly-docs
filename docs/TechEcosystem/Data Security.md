@@ -4,10 +4,7 @@ It can’t be stressed enough how important Data is. And so protecting it agains
 
 Polly’s infrastructure is hosted on AWS. All AWS compute resources are in a separate Virtual Private Cloud (VPC). VPC’s are logically isolated sections of the AWS cloud which we can define as per our requirements of a virtual cloud. We have complete control over your virtual networking environment, including the selection of your own IP address range, creation of subnets, and configuration of route tables and network gateways.
 
-### The principle of least privilege 
-
-All Resources across our microservices follow the Principle of Least Privilege(POLP). This states that any resource will have only the bare minimum amount of access needed for it to function adequately. The same principle also applies to users who have access to the production systems at Elucidata barring system admins who are responsible to keep these systems in check. 
-
+**- The principle of least privilege** : All Resources across our microservices follow the Principle of Least Privilege(POLP). This states that any resource will have only the bare minimum amount of access needed for it to function adequately. The same principle also applies to users who have access to the production systems at Elucidata barring system admins who are responsible to keep these systems in check. 
 
 **- Encryption at rest** : All data at rest in distributed file systems or in ephemeral storage volumes during processing is encrypted using AES 256 encryption. Also, all other implicit storage volumes are encrypted using AWS encryption keys 
 
@@ -22,17 +19,17 @@ All Resources across our microservices follow the Principle of Least Privilege(P
 
 Polly has been designed by embracing Zero Trust Policy as one of its core security principles. Several safety measures have been put in place even for cases where an attacker might have access to compromised credentials.
 
-- Multi-Factor Authentication (MFA): All Administrators on the production Account for AWS have Multi-Factor Authentication(MFA) enabled to mitigate the possibility of a break-in.
+**- Multi-Factor Authentication (MFA):** All Administrators on the production Account for AWS have Multi-Factor Authentication(MFA) enabled to mitigate the possibility of a break-in.
   
-- Access logs: Upon the users' request and use case, we can provide you with access to AWS logs for both resources and users who had access to the production environment.
+**- Access logs:** Upon the users' request and use case, we can provide you with access to AWS logs for both resources and users who had access to the production environment.
 
-- Encrypted passwords: We do not store users' passwords in our database. They are salted and stored within AWS Cognito wherein no member of Elucidata has the ability to view them. Encryption of secrets like STS tokens(temporary authorisation tokens) is done at rest.
+**- Encrypted passwords:** We do not store users' passwords in our database. They are salted and stored within AWS Cognito wherein no member of Elucidata has the ability to view them. Encryption of secrets like STS tokens(temporary authorisation tokens) is done at rest.
 
-- Role-based access control: To enforce the Principle of Least Privilege Access(POLP) in a more effective way, resources, and operations are managed by a robust Role-based access control system (RBAC). The system allows an admin in an organization to create teams, map Polly components to these teams and assign data access levels depending on user roles.
+**- Role-based access control:** To enforce the Principle of Least Privilege Access(POLP) in a more effective way, resources, and operations are managed by a robust Role-based access control system (RBAC). The system allows an admin in an organization to create teams, map Polly components to these teams and assign data access levels depending on user roles.
 
-- Health monitoring: We use prometheus to monitor our kubernetes clusters, resource usage (RAM, CPU and disk), pods, nodes and kubernetes services. We have also configured alerts for unexpected events on the PollyHealth Dashboard, which is used to learn about the availability and operation status of Polly’s services. AWS is responsible for protecting Polly's infrastructure under their shared Responsibility Model.
+**- Health monitoring:** We use prometheus to monitor our kubernetes clusters, resource usage (RAM, CPU and disk), pods, nodes and kubernetes services. We have also configured alerts for unexpected events on the PollyHealth Dashboard, which is used to learn about the availability and operation status of Polly’s services. AWS is responsible for protecting Polly's infrastructure under their shared Responsibility Model.
 
-- Risk assessment: We do Third Party VAPT (Vulnerability Assessment and Penetration Testing) audits twice in a financial year. Vulnerability Assessments are done every quarter. We also perform third party risk assessment annually to monitor and mitigate risks across the organization.
+**- Risk assessment:** We do Third Party VAPT (Vulnerability Assessment and Penetration Testing) audits twice in a financial year. Vulnerability Assessments are done every quarter. We also perform third party risk assessment annually to monitor and mitigate risks across the organization.
 
 ## Infrastructure security
 
@@ -79,7 +76,7 @@ Yes, Polly uses AWS Config and CloudTrail to create an audit trail for its infra
 
 AWS promises to take care of the infrastructure and its security. Below is the list of the compliances and services that follow those compliances
 
-* **SOC**(1,2,3), **PCI**, **HIPAA**
+* **SOC(1,2,3)**, **PCI**, **HIPAA**
 
 * [AWS VPC](https://aws.amazon.com/vpc/ "https://aws.amazon.com/vpc/")
 
