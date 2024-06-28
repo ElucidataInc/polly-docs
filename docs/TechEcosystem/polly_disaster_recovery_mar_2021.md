@@ -4,7 +4,7 @@ All the data being ingested and/or generated inside Polly is being stored inside
 
 There are majorly 5 data stores in which the data is being stored currently inside AWS:
 
-*   [**RDS**](https://aws.amazon.com/rds/ "https://aws.amazon.com/rds/") **(Postgres)**
+*   [**RDS (Postgres)**](https://aws.amazon.com/rds/ "https://aws.amazon.com/rds/") 
     
 *   [**DynamoDB**](https://aws.amazon.com/dynamodb/ "https://aws.amazon.com/dynamodb/")
     
@@ -24,7 +24,6 @@ There are majorly 5 data stores in which the data is being stored currently insi
 |EFS|**For application state storing** <br/> Applications based on shiny architecture uses EFS for storing application state at a given point in time.|Uses [AWS backup service](https://aws.amazon.com/backup/ "https://aws.amazon.com/backup/") (managed service for automated backups)|Daily|
 |S3 buckets|**For File storage** <br/><br/> S3 contains: <br/> **Static content:** Media, Configurations etc <br/>**Input/Output files:** Files ingested into the platform and/or generated output files <br/> **Logs** Application logs|Custom cron job exectution <br/><br/>The job copies the files every day into a separate account.|Daily|
 
-<br/>
 <br/>
 
 ## Measures for Disaster Recovery and Management
