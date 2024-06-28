@@ -1,4 +1,4 @@
-## Polly Stack
+Polly is a cloud based Software as a Service (SaaS) solution. Below details out various layers of Polly.
 
 **Data Harmonization & Ingestion**
 
