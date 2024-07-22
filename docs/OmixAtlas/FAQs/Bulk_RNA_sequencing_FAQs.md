@@ -49,7 +49,7 @@ The data is processed with the following reference genome, annotation, and compl
 
 **Process flow**
 
-![Process flow](../../img/OmixAtlas-Images/Bulk_RNA.jpg) <center>**Figure 1.** Process Flow</center>
+![Process flow](../../img/OmixAtlas-Images/bulkseqimagg.png) <center>**Figure 1.** Process Flow</center>
 
 #### Details of the processing steps:
 
@@ -96,11 +96,11 @@ The data is processed with the following reference genome, annotation, and compl
 | 13 | Internal script for sample aggregation | Collect transcript counts, and sample metadata,  make counts matrix, and then make a GCT file | 
 | 14 | GEO Curation pipeline | Curate sample and dataset level information and attach it to the GCT file | |
 
-### **Do you currently provide or plan to provide alternatives to bulk RNAseq processing?**
+### Do you currently provide or plan to provide alternatives to bulk RNAseq processing?
 
-We process the bulk RNAseq datasets using the Kallisto pipelines as it is less computationally demanding and has been shown to perform as well as the STAR pipeline [Reference](https://www.nature.com/articles/s41467-018-03751-6#Sec9). If required, we can also process the datasets you purchase using STAR or any other custom pipeline of choice at additional cost. This will be considered a custom pipeline service.
+We process the bulk RNAseq datasets using the Kallisto pipelines as it is less computationally demanding and has been shown to perform as well as the STAR pipeline. If required, we can also process the datasets you purchase using STAR or any other custom pipeline of choice at additional cost. This will be considered a custom pipeline service.
 
-### **Which fields are curated for bulk RNASeq data Data?**
+### Which fields are curated for bulk RNASeq data Data?
 
 Polly's NLP-based curation models are used to curate all datasets and their corresponding samples, which are then harmonised using specific biomedical ontologies. 
 These fields include - Organism, Disease, Tissue, Cell Line, Cell Type and Drug. 
