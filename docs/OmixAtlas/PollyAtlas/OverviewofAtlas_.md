@@ -11,7 +11,7 @@ Users can create an Atlas from scratch by clicking on "Create Atlas" on the righ
 ![create](../../img/PollyAtlas_images/createatlas_.png) 
 ![create](../../img/PollyAtlas_images/createatlas2.png)
 
- Once they click on "Create Atlas," a blank Atlas will be created, allowing users to add a collection of tables with a defined schema.
+ Once user click on "Create Atlas," a blank Atlas will be created, allowing users to add a collection of tables with a defined schema.
  
 ![create](../../img/PollyAtlas_images/createatlas3.png) <center> Create Atlas</center>
 
