@@ -35,9 +35,13 @@ Users can interact with any of the tables in the database. For example, in the p
 
 ![OV](../../img/PollyAtlas_images/tableoverviewithstrings.png) <center> Table Overview with datatypes</center>
 
+**Pin Attributes**
+
 Users can pin attributes by clicking the pin symbol on the right side of each field. Pinned attributes will appear at the beginning of the middle section, as shown with donor_id and project_id in the example. This allows users to keep important attributes visible while scrolling through other fields. Users can also drag and scroll fields to rearrange their positions in the table according to their preferences.
 
 ![Pin](../../img/PollyAtlas_images/pinatlas.png)  <center> Pin attributes</center>
+
+**Sorting**
 
 Users can sort most of the fields in the tables either from A to Z or Z to A. Additionally, you can filter the data by values, allowing for both partial and complete searches to find specific entries within the table.
 
