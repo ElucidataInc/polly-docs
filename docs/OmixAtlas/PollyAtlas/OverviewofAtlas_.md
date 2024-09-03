@@ -24,7 +24,37 @@ For a given Atlas, users can view its information, which includes the title, num
 
 ![overview](../../img/PollyAtlas_images/overviewtable.png) 
 
-### Kebab menu
+
+To access additional options for the atlas, click on the three dots next to the atlas title. A dropdown menu will appear with the following options:
+
+![kebabmenu](../../img/PollyAtlas_images/kababmenu.png) <center> Kebab Menu</center>
+
+
+- **Change Logs:** Click on this option to view all updates made to the atlas. Users can see details of added rows, changes such as renaming, and other modifications. The change logs can be downloaded for further reference.
+
+![Changelogs](../../img/PollyAtlas_images/chnagelogg.png) <center> Change logs</center>
+
+Users can also edit the logs by clicking the right filter icon. This will open a pop-up with Schema Change, Data Change, and Access Change options.
+
+![Changelogs](../../img/PollyAtlas_images/changelogg2.png) <center> Filter in Change logs</center>
+
+
+- **Edit Atlas:** Users can edit the atlas details, including the name and description.
+
+![Editatlas](../../img/PollyAtlas_images/editatlas.png) <center> Edit Atlas</center>
+
+
+- **Manage Users:** Users can add new collaborators by searching for a name in the "Add User" option, selecting the desired permission level, and clicking "Add." This will add the new user as a collaborator. The access permissions can be edited at any time. Users can also view the current list of collaborators and their roles. Click "Done" to save any changes.
+
+![Manageuser](../../img/PollyAtlas_images/manageuserss.png) <center> Manage User</center>
+
+To remove a user, select the user from the collaborator list and delete their access. Once removed, the user will no longer have access to the atlas.
+
+![Manageuser](../../img/PollyAtlas_images/deleteuser.png) <center> Delete User</center>
+
+
+- **Archive:** Users can archive the atlas to hide it from the homepage.
+
 
 ### Table Overview
 
