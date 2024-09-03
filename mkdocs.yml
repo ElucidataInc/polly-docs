@@ -13,6 +13,9 @@ nav:
   - Dashboard:
       - Admin Dashboard: Getting Started/Admin Dashboard.md
       - Monitoring Dashboard: Getting Started/Monitoring_Dashboard.md
+  - Polly Atlas:
+      - About Atlas: PollyAtlas/AboutAtlas.md
+      - Overview of Atlas: PollyAtlas/OverviewofAtlas_.md
   - Atlas:
       - About Atlas: OmixAtlas/Atlas.md
       - Overview of Atlas: OmixAtlas/Overview_of_Atlas.md

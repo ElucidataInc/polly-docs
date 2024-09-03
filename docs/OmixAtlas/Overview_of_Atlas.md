@@ -1,14 +1,12 @@
 # Overview of the Atlas
 
-The Atlas landing page offers Atlases under two different sections - Public Data Atlases and User Data Atlases.
+The Atlas landing page offers lists of all the Atlases under the section **“All Atlases“.** All the atlases are categorized into two different sections based on Public Data and User Data. Users can explore the Atlases by selecting any desired atlas of choice from the available atlas list.
 
-Under public data atlases, there are two source atlases: Bulk RNA-seq and single-cell RNA-seq Atlas. User Data Atlases contain destination atlas and enterprise Atlas.
-
-![Homepage](../img/OmixAtlas-Images/atlashomepagenew.png) <center> Atlas Homepage</center>
+![Homepage](../img/OmixAtlas-Images/newatlaspagee.png) <center> Atlas Homepage</center>
 
 ## View Data
 
-Users can view datasets in either the **Card view** or the **Table view** formats. The **Summary view** is used to display overall statistics of the atlas.
+Click on User data atlas and can view datasets. Users can view datasets in either the **Card view** or the **Table view** formats. The **Summary view** is used to display overall statistics of the atlas.
 
 ![Homepage](../img/OmixAtlas-Images/viewdetailsnewatlas.png)
 

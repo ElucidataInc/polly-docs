@@ -33,9 +33,9 @@ Once logged in, you do not get automatically logged out and will have to log out
 
 ## Navigating through the platform
 
-The Polly Landing page provides access to Atlas - Public Data Atlases and User Data Atlases.
+The Polly Landing page provides access to all the Atlases
 
-![Homepage](../img/Home/atlaseess.png)
+![Homepage](../img/OmixAtlas-Images/newatlaspagee.png)
 
 *   [Manage Data](https://docs.elucidata.io/Getting%20Started/Workspaces.html)
 
