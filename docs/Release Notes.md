@@ -1,6 +1,59 @@
 # Release Notes
 
 
+<!--July 20, 2024-->
+
+<details open>
+    <summary><font size="+1"><b>July 29, 2024</b></font></summary>
+    <br>
+    <p class="Releases-button">Releases</p>
+    <ul> 
+        <li>Atlas
+            <ul> 
+                <li>Atlas combines the flexibility and user experience of spreadsheets with the scalability, data integrity, and queryability of relational databases, designed to handle data management and analysis needs at scale.
+                        <li>Atlas is a powerful tool within the Polly-Python ecosystem that allows you to create and manage collections of tables with user-defined schemas.
+                    <br></br>
+                    <ul>
+                        <li> <b>Key Features</b>
+                            <ul>
+                             <li>Flexible Table Schemas: Customize your data structure to fit your organization's specific workflows.</li>
+                            <li>Programmatic Data Ingestion: Easily import data into your tables using Python code.</li>
+                          <li>Advanced Querying: Perform complex queries across multiple tables within an atlas for granular results.</li>
+                          <li>Multi-omics data: Allows you to create and manage collections of tables with user-defined schemas. It's particularly useful for handling: Omics data, Clinical data, Patient data and Non-omics assay data. </li>
+       </ul>
+        </li>
+        </ul>                            
+   <br>
+</details>
+<hr>
+
+
+
+
+
+
+<!--June 20, 2024-->
+
+<details open>
+    <summary><font size="+1"><b>June 23, 2024</b></font></summary>
+    <br>
+   <p class="update-button">Update</p>
+      <ul>
+<li>We've added CITE-Seq to our repertoire of offerings. Polly now can import CITE-Seq data from diverse public sources including Gene Expression Omnibus, Human Cell Atlas, Single Cell Portal, CZI, and publications. We can cater to data from these public sources and data generated in-house by research groups. The AI-ready CITE-Seq datasets are processed with our standardized processing pipeline, annotated with metadata fields, and quality control with a comprehensive checklist of metrics, specifically defined for single cell and CITE-Seq data.
+<ul>
+    <li>Similar to Single-cell RNAseq data, CITE-Seq data can also be requested in two formats: Raw unfiltered counts and custom-processed counts.
+    <li>CITE-Seq data include two counts matrices (for protein and RNA modalities) and any control antibodies included in the antibody panel used for measuring the surface proteins.
+    <li>These AI-ready datasets are ideal for several downstream use cases, including accurately understanding cell types and cell populations, immune profiling, or Integrative Multi-omics analysis.
+</li></ul> 
+    
+</ul>
+</details>
+<hr>
+
+
+
+
+
 <!--May 20, 2024-->
 
 <details open>
