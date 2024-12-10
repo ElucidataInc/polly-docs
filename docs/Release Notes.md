@@ -1,10 +1,10 @@
 # Release Notes
 
 
-<!--July 20, 2024-->
+<!--October 20, 2024-->
 
 <details open>
-    <summary><font size="+1"><b>July 29, 2024</b></font></summary>
+    <summary><font size="+1"><b>October 29, 2024</b></font></summary>
     <br>
     <p class="Releases-button">Releases</p>
     <ul> 
@@ -32,10 +32,10 @@
 
 
 
-<!--June 20, 2024-->
+<!--Sept 2, 2024-->
 
 <details open>
-    <summary><font size="+1"><b>June 23, 2024</b></font></summary>
+    <summary><font size="+1"><b>September 2, 2024</b></font></summary>
     <br>
    <p class="update-button">Update</p>
       <ul>
@@ -54,10 +54,10 @@
 
 
 
-<!--May 20, 2024-->
+<!--July 5, 2024-->
 
 <details open>
-    <summary><font size="+1"><b>May 20, 2024</b></font></summary>
+    <summary><font size="+1"><b>July 5, 2024</b></font></summary>
     <br>
     <p class="Releases-button">Releases</p>
     <ul> 
@@ -94,10 +94,10 @@
 
 
 
-<!--April 18, 2024-->
+<!--May 18, 2024-->
 
 <details open>
-    <summary><font size="+1"><b>April 17, 2024</b></font></summary>
+    <summary><font size="+1"><b>May 31, 2024</b></font></summary>
     <br>
     <p class="Releases-button">Releases</p>
     <ul> 
@@ -125,10 +125,10 @@
 
 
 
-<!--March 19, 2024-->
+<!--April 19, 2024-->
 
 <details open>
-<summary><font size="+1"><b>March 19, 2024</b></font></summary>
+<summary><font size="+1"><b>April 1, 2024</b></font></summary>
 <br>
        <p class="Releases-button">Releases</p>
  <ul> 
@@ -161,7 +161,7 @@
 <!--February 13, 2024-->
 
 <details open>
-<summary><font size="+1"><b>February 13, 2024</b></font></summary>
+<summary><font size="+1"><b>February 26, 2024</b></font></summary>
 <br>   
        <p class="update-button">Updates</p>
 <ul> 
@@ -178,7 +178,7 @@
 <!--November 17, 2023-->
 
 <details open>
-<summary><font size="+1"><b>November 17, 2023</b></font></summary>
+<summary><font size="+1"><b>November 27, 2023</b></font></summary>
 <br>
        <p class="Releases-button">Releases</p>
  <ul> 
