@@ -72,6 +72,7 @@ workflows:
             branches:
               only:
                 - develop
+                - ftr/polly-py-fix
           
       - testdocs_deploy:
           context: polly-docs
@@ -81,6 +82,7 @@ workflows:
             branches:
               only:
                 - develop
+                - ftr/polly-py-fix
 
       - docs_build:
           filters:
