@@ -25,10 +25,7 @@ jobs:
       - run:
           name: convert markdown to html
           command: |
-            ls
-            export PYTHONPATH=$(pwd)
             mkdocs build --verbose
-            ls
       - persist_to_workspace:
           root: ~/.
           paths: .
@@ -54,19 +51,7 @@ jobs:
           name: Store to bucket
           command: |
             cd site 
-            aws s3 sync . s3://$<< parameters.AWS_CI_BUCKET >> --profile misc 
-
-  list_files:
-    docker:
-      - image: cimg/base:stable
-    steps:
-      - checkout
-      - run:
-          name: Install tree
-          command: sudo apt-get update && sudo apt-get install -y tree
-      - run:
-          name: List directory structure
-          command: tree -a -L 5
+            aws s3 sync . s3://$<< parameters.AWS_CI_BUCKET >> --profile misc
 
   testdocs_build:
     <<: *Build
@@ -85,16 +70,6 @@ workflows:
             branches:
               only:
                 - develop
-                - ftr/polly-py-fix
-
-      - list_files:
-          requires:
-            - testdocs_build
-          filters:
-            branches:
-              only:
-                - develop
-                - ftr/polly-py-fix
           
       - testdocs_deploy:
           context: polly-docs
@@ -104,7 +79,6 @@ workflows:
             branches:
               only:
                 - develop
-                - ftr/polly-py-fix
 
       - docs_build:
           filters:

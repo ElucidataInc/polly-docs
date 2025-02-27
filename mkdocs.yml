@@ -93,12 +93,9 @@ plugins:
             - ./temp_dir/polly-python
             - ./temp_dir/polly-python/polly
             - ./temp_dir/polly-python
-            - ./
           options:
             show_root_full_path: False
-  - multirepo:
-      cleanup: false
-      keep_docs_dir: true
+  - multirepo
 extra:
   homepage: https://www.elucidata.io/
   analytics:
