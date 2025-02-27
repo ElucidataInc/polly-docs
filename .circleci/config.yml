@@ -95,8 +95,6 @@ workflows:
               only:
                 - develop
                 - ftr/polly-py-fix
-          # Run always, even if testdocs_build fails
-          conditional: always()
           
       - testdocs_deploy:
           context: polly-docs
