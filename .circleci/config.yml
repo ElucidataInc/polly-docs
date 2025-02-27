@@ -20,7 +20,7 @@ jobs:
             pip install 'jinja2==3.0.0'
             pip install 'mkdocs==1.6.1'
             pip install 'mkdocs-material==8.5.10'
-            pip install 'mkdocstrings[python]==1.13.0'
+            pip install 'mkdocstrings[python]==0.27.0'
             pip install 'mkdocs-multirepo-plugin==0.8.3'
       - run:
           name: convert markdown to html
