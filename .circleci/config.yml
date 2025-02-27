@@ -88,11 +88,15 @@ workflows:
                 - ftr/polly-py-fix
 
       - list_files:
+          requires:
+            - testdocs_build
           filters:
             branches:
               only:
                 - develop
                 - ftr/polly-py-fix
+          # Run always, even if testdocs_build fails
+          conditional: always()
           
       - testdocs_deploy:
           context: polly-docs
