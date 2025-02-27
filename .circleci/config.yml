@@ -25,7 +25,9 @@ jobs:
       - run:
           name: convert markdown to html
           command: |
-            mkdocs build
+            ls
+            export PYTHONPATH=$(pwd)
+            mkdocs build --verbose
       - persist_to_workspace:
           root: ~/.
           paths: .
