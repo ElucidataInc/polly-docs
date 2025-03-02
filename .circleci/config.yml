@@ -18,14 +18,14 @@ jobs:
           name: Installing all Dependencies
           command: |
             pip install 'jinja2==3.0.0'
-            pip install 'mkdocs==1.3.0'
+            pip install 'mkdocs==1.6.1'
             pip install 'mkdocs-material==8.5.10'
-            pip install 'mkdocstrings[python]'
-            pip install 'mkdocs-multirepo-plugin'
+            pip install 'mkdocstrings[python]==0.27.0'
+            pip install 'mkdocs-multirepo-plugin==0.8.3'
       - run:
           name: convert markdown to html
           command: |
-            mkdocs build
+            mkdocs build --verbose
       - persist_to_workspace:
           root: ~/.
           paths: .
@@ -51,7 +51,7 @@ jobs:
           name: Store to bucket
           command: |
             cd site 
-            aws s3 sync . s3://$<< parameters.AWS_CI_BUCKET >> --profile misc 
+            aws s3 sync . s3://$<< parameters.AWS_CI_BUCKET >> --profile misc
 
   testdocs_build:
     <<: *Build
