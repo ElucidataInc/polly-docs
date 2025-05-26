@@ -30,9 +30,6 @@ nav:
         - Bulk RNA Sequencing FAQs: OmixAtlas/FAQs/Bulk_RNA_sequencing_FAQs.md
         - Single Cell RNA Sequencing FAQs: OmixAtlas/FAQs/scRNA_seq_FAQs.md
         - Spatial Transcriptomics FAQs: OmixAtlas/FAQs/Spatial_Transcriptomics_FAQs.md
-  - Polly KG Explorer: 
-        - About Polly KG: KnowledgeGraph/About_KG.md
-        - Getting Started: KnowledgeGraph/Getting Started.md
   - Polly Python: '!import https://github.com/ElucidataInc/polly-python-code?branch=multirepo_plugin_docs&extra_imports=["polly/*", "polly_services/*"]'
   - Polly Compute:
     - Polly Notebooks:
@@ -42,6 +39,9 @@ nav:
       - Computational Machines Available: Scaling compute/Polly Notebooks3.md
       - Getting Started With Notebooks: Scaling compute/Polly Notebooks4.md
       - Gists: TechEcosystem/Gists1.md
+  - Polly KG Explorer: 
+      - About Polly KG: KnowledgeGraph/About_KG.md
+      - Getting Started: KnowledgeGraph/Getting Started.md
     - Polly CLI:
       - Getting Started with Polly CLI: Scaling compute/Polly CLI 1.md
       - Docker Building Guidelines: TechEcosystem/Docker Building guidelines.md
