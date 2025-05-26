@@ -39,9 +39,6 @@ nav:
       - Computational Machines Available: Scaling compute/Polly Notebooks3.md
       - Getting Started With Notebooks: Scaling compute/Polly Notebooks4.md
       - Gists: TechEcosystem/Gists1.md
-  - Polly KG Explorer: 
-      - About Polly KG: KnowledgeGraph/About_KG.md
-      - Getting Started: KnowledgeGraph/Getting Started.md
     - Polly CLI:
       - Getting Started with Polly CLI: Scaling compute/Polly CLI 1.md
       - Docker Building Guidelines: TechEcosystem/Docker Building guidelines.md
@@ -71,6 +68,9 @@ nav:
       - Untargeted Pipeline: Apps/Metabolomic Data/Untargeted Pipeline.md
       - Curation App: Apps/Curation App.md
       - Billing and Usage: Apps/Billing.md 
+  - Polly KG Explorer: 
+    - About Polly KG: KnowledgeGraph/About_KG.md
+    - Getting Started: KnowledgeGraph/Getting Started.md
   - Tech Ecosystem:
     - Polly Stack: TechEcosystem/Polly Stack.md
     - Security and Data Transfer: TechEcosystem/Data Security.md
