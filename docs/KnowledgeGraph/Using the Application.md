@@ -50,7 +50,7 @@ The Polly KG Explorer application interface is divided into key areas designed t
 
 ![edgedetail](../img/KG/edgedetail.png) <center> The edge details are shown hovering over the edges. Here it indicates that the JAK1 gene ( dark green node) encodes the JAK1 protein (light green node).</center>
 
-**Note:**: If a searched node has no interactions with the other node(s), it would be shown as a separate node with just its neighbour interactions (hop of 1).
+**Note:** If a searched node has no interactions with the other node(s), it would be shown as a separate node with just its neighbour interactions (hop of 1).
 
 #### Exploring the Sub Graph
 
@@ -67,6 +67,23 @@ The Polly KG Explorer application interface is divided into key areas designed t
 
 - All paths between the searched nodes are shown with a hop of 1.  
 - The immediate first neighbours of the searched nodes are also shown.
+
+
+### Downloading & Exporting Data
+
+#### Downloading Subgraph Data
+- Click the **Download** button in the node selection area to export the subgraph data as a TSV file.  
+- The TSV file contains information on the selected nodes and their relationships (edges) within the subgraph.  
+
+**Note**: The data related to the sub graph generated would be downloaded.
+
+#### Exporting the Sub-Graph
+- To save a static image of the graph, click the **Download** button in the top right corner of the sub graph visualisation area. This downloads the graph as a **PNG** image.
+
+### KG Data and Supported Resources
+
+- As per this version of the application, **PollyKG (v0.1.0)** is being supported.  
+- Please note that the Polly KG can be updated irrespective of the application update.  
 
 
 
