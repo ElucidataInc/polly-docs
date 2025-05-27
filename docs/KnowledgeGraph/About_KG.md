@@ -17,23 +17,24 @@ The **Polly KG Explorer Application** is an interactive tool and a part of the *
 
 ### What Can Users Do with the Polly KG Explorer Application?
 
-- **Explore Relationships** – Select specific genes, proteins, diseases, or drugs and visualize their connections within a structured knowledge graph.
-- **Filter Views** – Use interactive filtering to refine queries and focus on relevant data.
+- **Explore Relationships**: Select specific genes, proteins, diseases, or drugs and visualize their connections within a structured knowledge graph.
+- **Filter Views**: Use interactive filtering to refine queries and focus on relevant data.
 
 ### Additional Features of the Polly KG Explorer Application
 
-- **Generate and Download Subgraphs** – Extract specific portions of the KG, visualize them dynamically.
-- **Navigate the KG with Ease** – Zoom, reset views, and switch between 2D and 3D visualizations for better insights.
-- **Save & Share Insights** – Export graph images and download structured relationship data for further analysis.
+- **Generate and Download Subgraphs**: Extract specific portions of the KG, visualize them dynamically.
+- **Navigate the KG with Ease**: Zoom, reset views, and switch between 2D and 3D visualizations for better insights.
+- **Save & Share Insights**: Export graph images and download structured relationship data for further analysis.
 
 ### Who Should Use This Application?
 
-- **Pharma R&D Teams** – Investigating potential drug targets and indications.
-- **Multi-Omics Researchers** – Integrating and exploring diverse biological datasets to gain insights.
-- **Bioinformatics Teams** – Conducting literature mining and entity linking to support discovery.
+- **Pharma R&D Teams**: Investigating potential drug targets and indications.
+- **Multi-Omics Researchers**: Integrating and exploring diverse biological datasets to gain insights.
+- **Bioinformatics Teams**: Conducting literature mining and entity linking to support discovery.
 
 By offering a seamless, interactive experience, this application enables users to navigate complex biological relationships, extract meaningful insights, and accelerate hypothesis generation using the Polly KG Explorer framework.
 
+---
 
 ### Terminology in the Polly KG Explorer Application
 
@@ -61,9 +62,9 @@ This section provides definitions of key terms used in the Polly KG Explorer App
 
 - **Case Sensitivity in Node Search:** The application requires specific casing for different node types:
 
-    - **Drugs**: All uppercase (e.g., `ASPIRIN`)
-    - **Genes**: All uppercase (e.g., `ALPK1`)
+    - **Drugs**: All uppercase (e.g., ASPIRIN)
+    - **Genes**: All uppercase (e.g., ALPK1)
     - **Diseases**: Follow standard terminologies (as per MONDO)
     - **GO Terms & Pathways**: Follow standard terminologies (e.g., as per Gene Ontology or Reactome)
-    - **Phenotypes**: First letter capitalized (e.g., `Calcified ovarian cyst`)
-    - **Proteins**: All uppercase (e.g., `TP53`)
+    - **Phenotypes**: First letter capitalized (e.g., Calcified ovarian cyst)
+    - **Proteins**: All uppercase (e.g., TP53)
