@@ -4,7 +4,7 @@
 
 ### Prerequisites
 
-To access the **Polly KG Explorer** application hosted on the Polly Platform, users must have an **Elucidata account**. The following are required:
+To access the **Polly KG Explorer** application hosted on the Polly Platform, users must have an **Polly account**. The following are required:
 
 - Login credentials provided by the Solution Manager.
 - Active Polly credentials for authentication.
