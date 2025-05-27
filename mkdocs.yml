@@ -30,12 +30,6 @@ nav:
         - Bulk RNA Sequencing FAQs: OmixAtlas/FAQs/Bulk_RNA_sequencing_FAQs.md
         - Single Cell RNA Sequencing FAQs: OmixAtlas/FAQs/scRNA_seq_FAQs.md
         - Spatial Transcriptomics FAQs: OmixAtlas/FAQs/Spatial_Transcriptomics_FAQs.md
-  - Polly KG Explorer: 
-      - About Polly KG: KnowledgeGraph/About_KG.md
-      - Getting Started: KnowledgeGraph/Getting Started.md
-      - About the Application: KnowledgeGraph/About the Application.md
-      - Polly Co-Scientist: KnowledgeGraph/Polly Co-Scientist.md
-      - FAQs: KnowledgeGraph/FAQ.md
   - Polly Python: '!import https://github.com/ElucidataInc/polly-python-code?branch=multirepo_plugin_docs&extra_imports=["polly/*", "polly_services/*"]'
   - Polly Compute:
     - Polly Notebooks:
@@ -74,6 +68,12 @@ nav:
       - Untargeted Pipeline: Apps/Metabolomic Data/Untargeted Pipeline.md
       - Curation App: Apps/Curation App.md
       - Billing and Usage: Apps/Billing.md 
+  - Polly KG Explorer: 
+    - About Polly KG: KnowledgeGraph/About_KG.md
+    - Getting Started: KnowledgeGraph/Getting Started.md
+    - About the Application: KnowledgeGraph/About the Application.md
+    - Polly Co-Scientist: KnowledgeGraph/Polly Co-Scientist.md
+    - FAQs: KnowledgeGraph/FAQ.md
   - Tech Ecosystem:
     - Polly Stack: TechEcosystem/Polly Stack.md
     - Security and Data Transfer: TechEcosystem/Data Security.md
