@@ -7,18 +7,19 @@
 ### Key Challenges Addressed
 
 - **Manual Data Sifting**: Traditionally, researchers manually search through internal data and external literature to validate hypotheses, which is time-consuming and inefficient.
-- **Siloed Knowledge Bases**: The lack of structured relationships between biological entities (e.g., genes, diseases, drugs) leads to fragmented and inaccessible data.
+- **Siloed Knowledge Bases**: The lack of structured relationships between biological entities (e.g., genes, diseases, drugs) leads to fragmented information.
 - **Limited Holistic Insights**: Researchers struggle to gather and integrate multi-modal evidence to support their biological questions.
 
 
 ## The Polly KG Explorer Application
 
-The **Polly KG Explorer Application** is an interactive tool and a part of the **Polly KG Explorer ecosystem** on Polly. It is designed to help researchers explore and analyze the Polly Knowledge Base, which consists of harmonized biomedical data. It enables users to uncover relationships between biological entities and generate data-driven hypotheses.
+The **Polly KG Explorer Application** is an interactive tool and a part of the **Polly KG ecosystem** on Polly. It is designed to help researchers explore and analyze the Polly Knowledge Base, which consists of harmonized biomedical data. It enables users to uncover relationships between biological entities and generate data-driven hypotheses.
 
 ### What Can Users Do with the Polly KG Explorer Application?
 
 - **Explore Relationships**: Select specific genes, proteins, diseases, or drugs and visualize their connections within a structured knowledge graph.
 - **Filter Views**: Use interactive filtering to refine queries and focus on relevant data.
+- **Querying using Natural Language**: Query the Knowledge Graph using simple English, no need for Cypher or Python expertise.
 
 ### Additional Features of the Polly KG Explorer Application
 
@@ -57,6 +58,7 @@ This section provides definitions of key terms used in the Polly KG Explorer App
 - **Graph Legend**: A reference guide within the application that explains the color coding for different node categories.
 - **2D/3D Toggle**: A feature allowing users to switch between two-dimensional and three-dimensional visual representations of the knowledge graph.
 - **Generate Button**: The action button that creates or updates the subgraph based on the selected nodes.
+- **Polly Co-Scientist**: AI-powered research assistant that transforms natural language queries into Cypher commands to interact with Polly's KG, without writing a single line of code.
 
 #### Data & Case Sensitivity Terms
 
