@@ -61,9 +61,9 @@ This section provides definitions of key terms used in the Polly KG Explorer App
 
 - **Case Sensitivity in Node Search:** The application requires specific casing for different node types:
 
-    - **Drugs**: All uppercase (e.g., `ASPIRIN`)
-    - **Genes**: All uppercase (e.g., `ALPK1`)
+    - **Drugs**: All uppercase (e.g., ASPIRIN)
+    - **Genes**: All uppercase (e.g., ALPK1)
     - **Diseases**: Follow standard terminologies (as per MONDO)
     - **GO Terms & Pathways**: Follow standard terminologies (e.g., as per Gene Ontology or Reactome)
-    - **Phenotypes**: First letter capitalized (e.g., `Calcified ovarian cyst`)
-    - **Proteins**: All uppercase (e.g., `TP53`)
+    - **Phenotypes**: First letter capitalized (e.g., Calcified ovarian cyst)
+    - **Proteins**: All uppercase (e.g., TP53)
