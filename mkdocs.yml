@@ -71,7 +71,8 @@ nav:
   - Polly KG Explorer: 
     - About Polly KG: KnowledgeGraph/About_KG.md
     - Getting Started: KnowledgeGraph/Getting Started.md
-    - Using the Application: KnowledgeGraph/Using the Application.md
+    - About the Application: KnowledgeGraph/About the Application.md
+    - Polly Co-Scientist: KnowledgeGraph/Polly Co-Scientist.md
     - FAQs: KnowledgeGraph/FAQ.md
   - Tech Ecosystem:
     - Polly Stack: TechEcosystem/Polly Stack.md
