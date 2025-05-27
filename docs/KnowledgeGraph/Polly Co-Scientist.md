@@ -21,7 +21,7 @@ Polly KG integrates data from multiple open-source and authoritative biomedical 
 | OpenTargets | [OpenTargets Platform](https://platform.opentargets.org/downloads) <br> - associationByDatatypeDirect: target-disease associations <br> - diseaseToPhenotype: disease-phenotype mappings <br> - diseases: disease names and IDs <br> - indication: clinical trial indications <br> - interaction: target interactions <br> - targets: target info and tractability | v24.9       |
 | UniProt     | [UniProtKB](https://www.uniprot.org/uniprotkb)                                                | 2021_03     |
 
-  <center>Supported Databases <center>
+
 
 
 ## Key Capabilities
