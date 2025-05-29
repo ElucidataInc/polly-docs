@@ -19,11 +19,11 @@ The **Polly KG Explorer Application** is an interactive tool and a part of the *
 
 - **Explore Relationships**: Select specific genes, proteins, diseases, or drugs and visualize their connections within a structured knowledge graph.
 - **Filter Views**: Use interactive filtering to refine queries and focus on relevant data.
-- **Querying using Natural Language**: Query the Knowledge Graph using simple English, no need for Cypher or Python expertise.
+- **Querying using Natural Language**: Query the Knowledge Graph using simple English, no need for Cypher or Python expertise. (Polly Co-Scientist)
 
 ### Additional Features of the Polly KG Explorer Application
 
-- **Generate and Download Subgraphs**: Extract specific portions of the KG, visualize them dynamically.
+- **Generate and Download knowledge graphs**: Extract specific portions of the KG, visualize them dynamically.
 - **Navigate the KG with Ease**: Zoom, reset views, and switch between 2D and 3D visualizations for better insights.
 - **Save & Share Insights**: Export graph images and download structured relationship data for further analysis.
 
@@ -46,7 +46,6 @@ This section provides definitions of key terms used in the Polly KG Explorer App
 - **Knowledge Graph (KG)**: A structured representation of relationships between biological entities such as genes, proteins, diseases, and drugs. It enables data integration and discovery of new insights.
 - **Node**: A fundamental unit in the knowledge graph representing a biological entity (e.g., a gene, protein, disease, or drug).
 - **Edge**: A connection between two nodes that represents a relationship between them (e.g., a gene encodes a protein).
-- **Subgraph**: A smaller, extracted portion of the knowledge graph that focuses on selected nodes and their relationships.
 - **Hops**: The number of steps (edges) between two nodes in the graph. A 1-hop relationship means nodes are directly connected, while a 2-hop relationship means they are connected through an intermediate node.
 - **Searched Node**: The primary node that the user searches for in the application. This node serves as the central point for exploring relationships within the knowledge graph.
 - **Immediate Neighbors**: Nodes that share a direct edge with the Searched Node. These nodes represent entities that have a direct relationship with the searched entity (e.g., a drug directly linked to a target protein).
@@ -54,19 +53,8 @@ This section provides definitions of key terms used in the Polly KG Explorer App
 #### Application-Specific Terms
 
 - **Node Selection Panel**: The section of the interface where users can select node categories and specific values for visualization.
-- **Subgraph Visualization Area**: The main workspace where the selected nodes and their relationships are displayed as an interactive graph.
+- **Knowledge graph Visualization Area**: The main workspace where the selected nodes and their relationships are displayed as an interactive graph.
 - **Graph Legend**: A reference guide within the application that explains the color coding for different node categories.
 - **2D/3D Toggle**: A feature allowing users to switch between two-dimensional and three-dimensional visual representations of the knowledge graph.
-- **Generate Button**: The action button that creates or updates the subgraph based on the selected nodes.
+- **Generate Button**: The action button that creates or updates the knowledge graph based on the selected nodes.
 - **Polly Co-Scientist**: AI-powered research assistant that transforms natural language queries into Cypher commands to interact with Polly's KG, without writing a single line of code.
-
-#### Data & Case Sensitivity Terms
-
-- **Case Sensitivity in Node Search:** The application requires specific casing for different node types:
-
-    - **Drugs**: All uppercase (e.g., ASPIRIN)
-    - **Genes**: All uppercase (e.g., ALPK1)
-    - **Diseases**: Follow standard terminologies (as per MONDO)
-    - **GO Terms & Pathways**: Follow standard terminologies (e.g., as per Gene Ontology or Reactome)
-    - **Phenotypes**: First letter capitalized (e.g., Calcified ovarian cyst)
-    - **Proteins**: All uppercase (e.g., TP53)

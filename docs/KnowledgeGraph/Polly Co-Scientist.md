@@ -70,7 +70,7 @@ RETURN t.name AS tissue_name, t.tpm_median AS tpm_median_value
 ![JSON](../img/KG/JSONoutput.png) <center> Cypher Query</center>
 
 
-### Step 3: View the Results
+#### Step 3: View the Results
 
 The output is generated in 2 parts:
 
