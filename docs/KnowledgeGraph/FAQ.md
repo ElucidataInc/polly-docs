@@ -25,21 +25,29 @@ Ensure that your browser allows pop-ups and downloads. You may also need to disa
 Refer to the _KG Data and Supported Resources_ section of this document for a complete list.
 
 ### 2. Can I access KG data programmatically?
-Yes. KG data can be accessed in read-only mode using the `polly-python` package, either locally or within Polly Notebooks.  
-More details are available [here](https://docs.polly.elucidata.io/polly-python/PollyKG.html).
+Yes. KG data can be accessed in read-only mode using the `polly-python` package, either locally or within Polly Notebooks. More details are available [here](https://docs.polly.elucidata.io/polly-python/PollyKG.html).
 
 ### 3. I don’t see my entity of interest or a specific category in the dropdown. Why?
-This could be due to:
+This could be due to the entity or category not being available in the KG data.
 
-- The entity or category not being available in the KG data.
-- Case-sensitive search. Ensure correct letter casing.
-
-Refer to the _Selecting Nodes & Generating a Subgraph_ section for more details.
+Refer to the _Selecting Nodes & Generating a Knowledge graph section_ for more details.
 
 ### 4. Is there a limit to how many hops are shown in the graph?
 Yes. Currently, the graph displays a maximum of **1-hop** relationships.
 
-### 5. Are there any browser or hardware requirements for using this application?
+### 5. How can I edit the Cypher query in Polly Co-Scientist?
+Currently, Polly Co-Scientist does not support direct in-place editing of Cypher queries. However, User can copy the generated Cypher query from the output, make desired edits, paste the modified query into the input box, and submit it. Polly will recognize it as a Cypher query and execute it.
+
+### 6. How can I download the data generated in Polly Co-Scientist?
+You can download the results of your query in two formats: **CSV** and **JSON**.  
+- Simply use the download option provided on the right side of the output section to get the data.
+
+### 7. Can I continue my search from a previous query or session?  
+Currently, Polly Co-Scientist does not support session memory or query chaining. Each query is treated as a standalone input, so:
+- Previous queries and their results are **not retained**, and
+- New queries cannot reference earlier ones.
+
+### 8. Are there any browser or hardware requirements for using this application?
 Yes. For the best experience:
 
 - Use the latest version of **Chrome** or **Firefox**. Some features may not function correctly in other browsers.
