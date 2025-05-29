@@ -2,7 +2,7 @@
 
 ## Overview
 
-**Polly KG** is a cutting-edge knowledge graph designed to help researchers efficiently access and analyze internal and published data. It enables users to generate hypotheses and gain a comprehensive understanding of data related to specific targets, indications, and drug classes. By structuring relationships between biological entities, Polly KG eliminates siloed knowledge bases and streamlines data retrieval, empowering researchers to explore multi-modal evidence with ease.
+**Polly KG** is a cutting-edge knowledge graph designed to help researchers efficiently access and analyze internal and published data. It enables users to generate hypotheses and gain a comprehensive understanding of data related to specific targets, indications, and drug classes. By structuring relationships between biological entities, Polly KG eliminates siloed knowledge bases and streamlines data retrieval, empowering researchers to explore multi-modal evidence with  ease.
 
 ### Key Challenges Addressed
 
