@@ -12,7 +12,7 @@ The Polly KG Explorer interface is designed for intuitive navigation and knowled
 
 ![startingimage](../img/KG/startingimage.png) <center> Screenshot showing 1. Node selection Panel, 2. Knowledge-graph Visualisation Area, and 3. Controls and Settings.</center>
 
- **Note:** The Download icon in the Node selection panel exports the node and edges information. The download icon in the Controls and Settings in the knowledge graph visualisation area exports the generated knowledge graph as PNG. 
+ **Note:** The Download icon in the Node selection panel exports the node and edges information. The download icon in the Controls and Settings in the knowledge graph visualisation area exports the generated knowledge graph as PNG, CSV and JSON. 
 
 ---
 
@@ -28,9 +28,10 @@ The Polly KG Explorer interface is designed for intuitive navigation and knowled
 
 ![ALPK1](../img/KG/U2.png) <center> Type in the required node value and select from the dropdown. For example, in the above screenshot, ALPK1 gene is being searched and selected from the list.</center>
 
-3. Click “Generate” to create or update the knowledge graph in the knowledge-graph Visualization Area.
 
-![U3](../img/KG/U3.png) <center> On clicking the “Generate” button the knowledge-graph showing the interactions between the selected nodes is rendered.</center>
+3. Click “Generate” to create or update the knowledge graph in the knowledge graph Visualization Area.
+
+![U3](../img/KG/U3.png) <center> On clicking the “Generate” button the knowledge graph showing the interactions between the selected nodes is rendered.</center>
 
 ---
 
@@ -53,7 +54,7 @@ The Polly KG Explorer interface is designed for intuitive navigation and knowled
 
 #### Edge Details
 
-- Hover over any edge to view the edge label, indicating the type of relationship.
+- Hover over any edge to view the edge label and score, indicating the type of relationship.
 
 ![edgedetail](../img/KG/U5.png) <center> The edge details are shown hovering over the edges.</center>
 
