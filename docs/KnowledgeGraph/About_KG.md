@@ -19,7 +19,7 @@ The **Polly KG Explorer Application** is an interactive tool and a part of the *
 
 - **Explore Relationships**: Select specific genes, proteins, diseases, or drugs and visualize their connections within a structured knowledge graph.
 - **Filter Views**: Use interactive filtering to refine queries and focus on relevant data.
-- **Querying using Natural Language**: Query the Knowledge Graph using simple English, no need for Cypher or Python expertise.
+- **Querying using Natural Language**: Query the Knowledge Graph using simple English, no need for Cypher or Python expertise. (Polly Co-Scientist)
 
 ### Additional Features of the Polly KG Explorer Application
 
@@ -59,14 +59,3 @@ This section provides definitions of key terms used in the Polly KG Explorer App
 - **2D/3D Toggle**: A feature allowing users to switch between two-dimensional and three-dimensional visual representations of the knowledge graph.
 - **Generate Button**: The action button that creates or updates the subgraph based on the selected nodes.
 - **Polly Co-Scientist**: AI-powered research assistant that transforms natural language queries into Cypher commands to interact with Polly's KG, without writing a single line of code.
-
-#### Data & Case Sensitivity Terms
-
-- **Case Sensitivity in Node Search:** The application requires specific casing for different node types:
-
-    - **Drugs**: All uppercase (e.g., ASPIRIN)
-    - **Genes**: All uppercase (e.g., ALPK1)
-    - **Diseases**: Follow standard terminologies (as per MONDO)
-    - **GO Terms & Pathways**: Follow standard terminologies (e.g., as per Gene Ontology or Reactome)
-    - **Phenotypes**: First letter capitalized (e.g., Calcified ovarian cyst)
-    - **Proteins**: All uppercase (e.g., TP53)
