@@ -1,10 +1,86 @@
 # Release Notes
 
 
-<!--October 20, 2024-->
+
+
+
+<!--May 30, 2025-->
 
 <details open>
-    <summary><font size="+1"><b>October 29, 2024</b></font></summary>
+  <summary><font size="+1"><b>May 30, 2025</b></font></summary>
+  <br>
+  <p class="Releases-button">Releases</p>
+  <ul> 
+    <li>Polly Knowledge Graph (Polly KG)
+      <ul> 
+        <li>Polly KG is a cutting-edge knowledge graph-based solution that organizes biological data into a structured, interconnected framework. Using this, users can generate hypotheses and gain a comprehensive understanding of data related to specific targets, indications, and drug classes. 
+          <br><br>
+          <ul>
+            <li><b>Key Features</b>
+              <ul>
+                <li>Unified Knowledge Base: Combines internal and public biomedical data into a harmonized graph model.</li>
+                <li>Entity Linking & Relationship Mapping: Connects genes, proteins, diseases, and drugs in a queryable network.</li>
+                <li>Multi-Modal Support: Integrates evidence from omics, clinical trials, and literature.</li>
+                <li>Querying using Natural Language:
+                  <ul>
+                    <li><b>Polly Co-Scientist,</b> an AI-driven assistant designed to simplify complex biomedical data analysis by converting natural language queries into Cypher commands to interact with Polly's Knowledge Graph, without writing a single line of code.
+          <br><br></li>
+                </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>                            
+    </li>
+  </ul>
+  <br>
+</details>
+<hr>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--April 8, 2025-->
+
+<details open>
+    <summary><font size="+1"><b>April 8, 2025</b></font></summary>
+    <br>
+    <p class="Releases-button">Releases</p>
+    <ul> 
+        <li>Atlas
+            <ul> 
+                <li>This release brings major improvements to the Atlas service of Polly python, enhancing flexibility, data integrity, and relational modeling capabilities. The focus is on enabling better schema design and support for a wider range of data types, making Atlas more powerful for structured data use cases.
+                    <br></br>
+                    <ul>
+                        <li> <b>Key Features</b>
+                            <ul>
+                             <li>Expanded Data Type Support: Atlas now supports a broader range of data types. Numeric, Character, Boolean, Date/Time, JSON, Monetary. This enables more expressive and flexible data modeling. </li>
+                          <li>Foreign Key Relationships: Support for one-to-one, many-to-one, and many-to-many relationships enables more powerful relational querying and ensures consistency across tables.</li>
+       </ul>
+        </li>
+        </ul>                            
+   <br>
+</details>
+<hr>
+
+
+
+
+
+<!--November 20, 2024-->
+
+<details open>
+    <summary><font size="+1"><b>November 29, 2024</b></font></summary>
     <br>
     <p class="Releases-button">Releases</p>
     <ul> 
