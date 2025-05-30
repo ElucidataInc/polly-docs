@@ -89,10 +89,6 @@ The Polly KG Explorer interface is designed for intuitive navigation and knowled
 - To save a static image of the graph, click the **Download** button in the top right corner of the knowledge graph visualisation area. This downloads the graph as a **PNG** image.
 
 
-**KG Data and Supported Resources**
-
-- As per this version of the application, **PollyKG (v1.0.0)** is being supported.  
-- Please note that the Polly KG can be updated irrespective of the application update.  
 
 
 
