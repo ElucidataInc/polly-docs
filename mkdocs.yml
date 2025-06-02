@@ -68,12 +68,12 @@ nav:
       - Untargeted Pipeline: Apps/Metabolomic Data/Untargeted Pipeline.md
       - Curation App: Apps/Curation App.md
       - Billing and Usage: Apps/Billing.md 
-  # - Polly KG Explorer: 
-  #   - About Polly KG: KnowledgeGraph/About_KG.md
-  #   - Getting Started: KnowledgeGraph/Getting Started.md
-  #   - About the Application: KnowledgeGraph/About the Application.md
-  #   - Polly Co-Scientist: KnowledgeGraph/Polly Co-Scientist.md
-  #   - FAQs: KnowledgeGraph/FAQ.md
+  - Polly KG Explorer: 
+    - About Polly KG: KnowledgeGraph/About_KG.md
+    - Getting Started: KnowledgeGraph/Getting Started.md
+    - About the Application: KnowledgeGraph/About the Application.md
+    - Polly Co-Scientist: KnowledgeGraph/Polly Co-Scientist.md
+    - FAQs: KnowledgeGraph/FAQ.md
   - Tech Ecosystem:
     - Polly Stack: TechEcosystem/Polly Stack.md
     - Security and Data Transfer: TechEcosystem/Data Security.md
