@@ -2,7 +2,7 @@
 
 **Polly Co-Scientist** is an AI-powered research assistant developed to help scientists transform complex biomedical data into actionable scientific insights with ease. It transforms natural language queries into Cypher commands to interact with Polly's Knowledge Graph, allowing users to explore relationships, simulate biological reasoning, and generate hypotheses, without **writing a single line of code.**
 
-![PollyKG](../img/KG/PollyKG.png) <center> Polly Co-Scientist</center>
+![PollyKG](../img/KG/StartCoP.png) <center> Polly Co-Scientist</center>
 
 
 ## Data Distribution and Sources Used
@@ -44,8 +44,6 @@ You can choose from two options:
 - **Use Predefined Templates**: Select from templatized queries available directly within the Polly Co-Scientist interface to quickly explore common biomedical relationships.
 - **Run Custom Queries**: Type your own questions in plain English to retrieve insights tailored to your specific research needs.
 
-![PollyKG](../img/KG/predefined.png) <center> Pre-defined questions</center>
-
 
 ### Running Custom Queries on the Knowledge Graph Using Natural Language
 
@@ -53,9 +51,9 @@ You can choose from two options:
 Use the chat interface to enter your research question in natural language.
 
 **Example**:  
-`Which tissue express the gene PDE4B, and what are the associated TPM median and cPKG score?`
+`Which tissue expresses the gene HBB, and what are the associated TPM median values?`
 
-![Query](../img/KG/customquery.png) <center> Query Example</center>
+![Query](../img/KG/CoS1.png) <center> Query Example</center>
 
 
 #### Step 2: Review the Auto-Generated Cypher Query
@@ -63,11 +61,10 @@ Polly Co-Scientist automatically translates your natural language input into a C
 
 **Example**:
 ```cypher
-MATCH (t:Tissue)-[:EXPRESSES]->(g:Gene {name: 'PDE4B'})
-RETURN t.name AS tissue_name, t.tpm_median AS tpm_median_value
+MATCH (g:Gene)<-[:EXPRESSES]-(t:Tissue) WHERE g.name = 'HBB' RETURN g.name AS Gene, t.name AS Tissue, t.tpm_median AS Tissue_tpm_median
 ```
 
-![JSON](../img/KG/JSONoutput.png) <center> Cypher Query</center>
+![JSON](../img/KG/CoS2.png) <center> Cypher Query</center>
 
 
 #### Step 3: View the Results
@@ -78,16 +75,16 @@ The output is generated in 2 parts:
 A simple readable summary of the query results is displayed.
 
   Example:
-  `The gene PDE4B is expressed in a wide range of tissues including various glands (adrenal, pituitary, prostate), parts of the brain (amygdala, cerebral cortex, hippocampal formation), and major organs such as the heart, liver, and lungs. Additionally, it is found in the thyroid, uterus, bladder, and various regions of the colon and stomach. Unfortunately, the median TPM values for these tissues are not available in the data provided. There is also no cPKG score information available for these tissues.`
+  `The gene HBB is expressed in a wide range of tissues including the adrenal gland, breast, thyroid gland, uterus, prostate gland, bladder, and various parts of the brain and gastrointestinal tract, among others. However, the median TPM (transcripts per million) values for HBB expression in these tissues are not available in the data provided. This suggests that while the gene is present across diverse tissues, specific expression levels were not measured or reported in this dataset.`
 
 
 - **Graph Output:**
 A visual representation of the results is displayed on the Knowledge Graph viewer.
 
-![Output](../img/KG/output.png) <center> Output of the Query</center>
+![Output](../img/KG/CoS3.png) <center> Output of the Query</center>
 
 User can click the zoom icon on the right to expand the Knowledge Graph view for easier exploration and full-screen display.
 
-![Output](../img/KG/KGoutput.png) <center> Entire Knowledge Graph Window</center>
+![Output](../img/KG/CoS4.png) <center> Entire Knowledge Graph Window</center>
 
 
