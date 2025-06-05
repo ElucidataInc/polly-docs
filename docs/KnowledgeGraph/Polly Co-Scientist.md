@@ -51,9 +51,9 @@ You can choose from two options:
 Use the chat interface to enter your research question in natural language.
 
 **Example**:  
-`Which tissue expresses the gene HBB, and what are the associated TPM median values?`
+`List drugs associated with non-small cell lung carcinoma`
 
-![Query](../img/KG/CoS1.png) <center> Query Example</center>
+![Query](../img/KG/1.png) <center> Query Example</center>
 
 
 #### Step 2: Review the Auto-Generated Cypher Query
@@ -61,10 +61,10 @@ Polly Co-Scientist automatically translates your natural language input into a C
 
 **Example**:
 ```cypher
-MATCH (g:Gene)<-[:EXPRESSES]-(t:Tissue) WHERE g.name = 'HBB' RETURN g.name AS Gene, t.name AS Tissue, t.tpm_median AS Tissue_tpm_median
+MATCH (d:Disease)-[:has_indication]->(drug:Drug) WHERE toLower(d.name) = 'non-small cell lung carcinoma' RETURN DISTINCT d.name AS Disease, drug.pref_name AS Drug
 ```
 
-![JSON](../img/KG/CoS2.png) <center> Cypher Query</center>
+![JSON](../img/KG/2.png) <center> Cypher Query</center>
 
 
 #### Step 3: View the Results
@@ -75,16 +75,16 @@ The output is generated in 2 parts:
 A simple readable summary of the query results is displayed.
 
   Example:
-  `The gene HBB is expressed in a wide range of tissues including the adrenal gland, breast, thyroid gland, uterus, prostate gland, bladder, and various parts of the brain and gastrointestinal tract, among others. However, the median TPM (transcripts per million) values for HBB expression in these tissues are not available in the data provided. This suggests that while the gene is present across diverse tissues, specific expression levels were not measured or reported in this dataset.`
+  `There are 349 drugs associated with the treatment of non-small cell lung carcinoma. This extensive list reflects the significant research and development efforts aimed at managing this common type of lung cancer. Each drug targets different aspects of the disease, offering a range of therapeutic options to tailor treatment plans to individual patient needs. This diversity in treatment options helps in managing the disease more effectively, improving patient outcomes.`
 
 
 - **Graph Output:**
 A visual representation of the results is displayed on the Knowledge Graph viewer.
 
-![Output](../img/KG/CoS3.png) <center> Output of the Query</center>
+![Output](../img/KG/3.png) <center> Output of the Query</center>
 
 User can click the zoom icon on the right to expand the Knowledge Graph view for easier exploration and full-screen display.
 
-![Output](../img/KG/CoS4.png) <center> Entire Knowledge Graph Window</center>
+![Output](../img/KG/4.png) <center> Entire Knowledge Graph Window</center>
 
 
