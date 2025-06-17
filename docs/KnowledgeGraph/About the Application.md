@@ -10,7 +10,7 @@ The Polly KG Explorer interface is designed for intuitive navigation and knowled
 - **Knowledge Graph Visualization Area**: Displays the generated knowledge graph based on the selected filters, allowing users to explore relationships between entities.
 - **Controls & Settings**: Provides tools to customize the visualization and adjust display preferences for a more tailored user experience.
 
-![startingimage](../img/KG/FinalOverview.png) <center> Screenshot showing 1. Node selection Panel, 2. Knowledge-graph Visualisation Area, and 3. Controls and Settings.</center>
+![startingimage](../img/KG/CFTRfinalllll.png) <center> Screenshot showing 1. Node selection Panel, 2. Knowledge-graph Visualisation Area, and 3. Controls and Settings.</center>
 
  **Note:** The Download icon in the Node selection panel exports the node and edges information. The download icon in the Controls and Settings in the knowledge graph visualisation area exports the generated knowledge graph as PNG, CSV and JSON. 
 
