@@ -2,7 +2,7 @@
 
 **Polly Co-Scientist** is an AI-powered research assistant developed to help scientists transform complex biomedical data into actionable scientific insights with ease. It transforms natural language queries into Cypher commands to interact with Polly's Knowledge Graph, allowing users to explore relationships, simulate biological reasoning, and generate hypotheses, without **writing a single line of code.**
 
-![PollyKG](../img/KG/StartCoP.png) <center> Polly Co-Scientist</center>
+
 
 
 ## Data Distribution and Sources Used
