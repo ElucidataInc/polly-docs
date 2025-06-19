@@ -27,4 +27,3 @@ If the required credentials are not available, or you are unable to log in or ac
 ![Polly KG](../img/KG/Polly_KG_Tab.png)
 
 - **Step 4:** Launch the Application: Click the **Polly KG Explorer** application tile. The application will open in a new tab.  
-
