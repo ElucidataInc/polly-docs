@@ -22,7 +22,7 @@ If the required credentials are not available, or you are unable to log in or ac
  
 ![Applications](../img/KG/KGGettingstart.png) <center> Knowledge Graph Tab</center>
 
-- **Step 3:** Knowledge Graph Application: The application will open in a same browser tab automatically.
+- **Step 3:** Knowledge Graph Application: The application will open in the same tab automatically.
 
 ![Polly KG](../img/KG/mainKG.png) <center> Knowledge Graph View</center>
 
