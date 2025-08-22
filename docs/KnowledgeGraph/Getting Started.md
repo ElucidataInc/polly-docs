@@ -18,12 +18,12 @@ If the required credentials are not available, or you are unable to log in or ac
   
 ![Polly-KG-Explorer](../img/KG/Login_to_PollyKG.png) <center> Polly Login</center>
 
-- **Step 2:**  Go to Applications: Click on the **"Applications"** tab in the left sidebar.
+- **Step 2:**  Go to Knowledge Graph: Click on the **"Knowledge Graph"** tab in the left sidebar.
  
-![Applications](../img/KG/Application_tab.png) <center> Applications Tab</center>
+![Applications](../img/KG/KGGettingstart.png) <center> Knowledge Graph Tab</center>
 
-- **Step 3:** Search for Polly KG: Use the search bar to find the **"Polly KG"** tile in Applications. 
+- **Step 3:** Knowledge Graph Application: You will be directed to the Knowledge Graph tab. The application will open in a new browser tab automatically.
 
-![Polly KG](../img/KG/Polly_KG_Tab.png)
+![Polly KG](../img/KG/mainKG.png) <center> Knowledge Graph View</center>
 
-- **Step 4:** Launch the Application: Click the **Polly KG Explorer** application tile. The application will open in a new tab.  
+- **Step 4:** Explore the Application.
