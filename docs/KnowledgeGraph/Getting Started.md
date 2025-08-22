@@ -20,7 +20,7 @@ If the required credentials are not available, or you are unable to log in or ac
 
 - **Step 2:**  Go to Knowledge Graph: Click on the **"Knowledge Graph"** tab in the left sidebar.
  
-![Applications](../img/KG/KGGettingstart.png) <center> Knowledge Graph Tab</center>
+![Applications](../img/KG/A.png) <center> Knowledge Graph Tab</center>
 
 - **Step 3:** Knowledge Graph Application: The application will open in the same tab automatically.
 
