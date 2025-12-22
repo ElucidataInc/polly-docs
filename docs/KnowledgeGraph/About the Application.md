@@ -28,9 +28,13 @@ Select the database icon in the top-right corner to open the schema view.
 ![schema](../img/KG/ViewSchema.png) <center> View Schema</center>
 
 The schema panel displays:
+
 - All available **node types** along with the count of their incoming and outgoing relationships
+  
 - The different **relationship types** present in the Knowledge Graph
+  
 - The **properties and data types** associated with each relationship
+
 
 This view provides a clear understanding of the Knowledge Graph structure, helping users navigate data confidently and explore relationships more effectively.
 
@@ -41,8 +45,11 @@ The Shortest Path feature helps you identify the most direct connection between 
 Within the Polly KG Explorer, this feature is powered by Neo4j’s native shortest path algorithms.
 
 **Key Distinction:**
+
 - `shortestPath(...)` → returns one shortest path
+  
 - `allShortestPaths(...)` → returns all paths tied for minimum hop length
+
 
 Detailed technical documentation for these methods is available in the Neo4j Cypher manual:  
 https://neo4j.com/docs/cypher-manual/current/patterns/shortest-paths/
@@ -56,8 +63,11 @@ https://neo4j.com/docs/cypher-manual/current/patterns/shortest-paths/
 - Click **Find Path** to generate the result
 
 Once the graph is rendered, you can:
+
 - Click **View Query** to see the Cypher query used
+  
 - Use the **Reset** button to clear selections and start a new search
+
 
 An example output graph is shown below for reference.
 
@@ -66,13 +76,19 @@ An example output graph is shown below for reference.
 ![sche](../img/KG/QueryC.png) <center> Cypher Query used to calculate Shortest Path for the selected nodes</center>
 
 To discover all possible shortest connections between two nodes:
+
 - Click on **Advanced Options**
+  
 - Click on **Find all Shortest Path**, or
+  
 - Limit the search depth (maximum of 10 hops)
+  
 - Click **Find Path**
 
 Once the graph is rendered, users can:
+
 - Click **View Query** to verify the Cypher query used
+  
 - Use the **Reset** button to clear previous selections and start a new search
 
 Shown below is an example graph with all shortest paths.
@@ -92,7 +108,7 @@ The Node Explorer allows you to visualize a selected node and interactively expa
 - Click on the **Node Explorer** tab
 - Select the node type from the dropdown
 - Choose the target node and the relationship (edge) you want to explore
-- Only first-degree (immediate) neighbors are displayed
+  - Only first-degree (immediate) neighbors are displayed
 
 This makes it easy to quickly examine direct connections and gain focused insights without navigating the entire graph.
 
@@ -118,9 +134,13 @@ You can dynamically grow the graph by expanding connections from any visible nod
 
 - Click on any node within the subgraph
 - A side panel opens on the right, displaying the node’s first-degree neighbors
+  
 - Choose how you want to refine the expansion:
+  
   - Click **Filter & Expand** to apply filters based on relationship (edge) properties
+    
   - Click **View Nodes** to search and expand using specific terms
+ 
 - Apply your selections by selecting or deselecting values and clicking **Apply**
 - Use the **Previous** button to remove the most recent node expansion
 - Use the **Next** button to redo the most recent expansion
