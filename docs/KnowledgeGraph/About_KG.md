@@ -39,22 +39,25 @@ By offering a seamless, interactive experience, this application enables users t
 
 ### Terminology in the Polly KG Explorer Application
 
-This section provides definitions of key terms used in the Polly KG Explorer Application. Understanding these terms will help users navigate and utilize the tool more effectively.
+This section provides definitions of key terms used in the Polly KG Explorer application. Understanding these terms will help users navigate and utilize the tool more effectively.
 
-#### General Terms
+### General Terms
 
-- **Knowledge Graph (KG)**: A structured representation of relationships between biological entities such as genes, proteins, diseases, and drugs. It enables data integration and discovery of new insights.
-- **Node**: A fundamental unit in the knowledge graph representing a biological entity (e.g., a gene, protein, disease, or drug).
-- **Edge**: A connection between two nodes that represents a relationship between them (e.g., a gene encodes a protein).
-- **Hops**: The number of steps (edges) between two nodes in the graph. A 1-hop relationship means nodes are directly connected, while a 2-hop relationship means they are connected through an intermediate node.
-- **Searched Node**: The primary node that the user searches for in the application. This node serves as the central point for exploring relationships within the knowledge graph.
-- **Immediate Neighbors**: Nodes that share a direct edge with the Searched Node. These nodes represent entities that have a direct relationship with the searched entity (e.g., a drug directly linked to a target protein).
+- **Knowledge Graph (KG):** A structured representation of relationships between biological entities such as genes, proteins, diseases, and drugs. It enables data integration and the discovery of new insights.
+- **Node:** A fundamental unit in the knowledge graph representing a biological entity (e.g., a gene, protein, disease, or drug).
+- **Edge:** A connection between two nodes that represents a relationship between them (e.g., a gene encodes a protein).
+- **Hops:** The number of steps (edges) between two nodes in the graph. A 1-hop relationship indicates that nodes are directly connected, while a 2-hop relationship indicates a connection through an intermediate node.
+- **Searched Node:** The primary node that the user searches for in the application. This node serves as the central point for exploring relationships within the knowledge graph.
+- **Immediate Neighbors:** Nodes that share a direct edge with the searched node. These nodes represent entities that have a direct relationship with the searched entity (e.g., a drug directly linked to a target protein).
 
-#### Application-Specific Terms
+### Application-Specific Terms
 
-- **Node Selection Panel**: The section of the interface where users can select node categories and specific values for visualization.
-- **Knowledge graph Visualization Area**: The main workspace where the selected nodes and their relationships are displayed as an interactive graph.
-- **Graph Legend**: A reference guide within the application that explains the color coding for different node categories.
-- **2D/3D Toggle**: A feature allowing users to switch between two-dimensional and three-dimensional visual representations of the knowledge graph.
-- **Generate Button**: The action button that creates or updates the knowledge graph based on the selected nodes.
-- **Polly Co-Scientist**: AI-powered research assistant that transforms natural language queries into Cypher commands to interact with Polly's KG, without writing a single line of code.
+- **Node Selection Panel:** The section of the interface where users can select node categories and specific values for visualization.
+- **Knowledge Graph Visualization Area:** The main workspace where selected nodes and their relationships are displayed as an interactive graph.
+- **Polly Co-Scientist:** An AI-powered research assistant that transforms natural language queries into Cypher commands to interact with Polly’s Knowledge Graph, without requiring users to write Cypher code.
+
+---
+
+## Support
+
+For additional assistance or questions related to the Knowledge Graph Query API, please contact the Elucidata support team.
