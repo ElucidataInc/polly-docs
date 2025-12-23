@@ -1,94 +1,150 @@
 # About the Application
 
-## Navigating the Interface
+## Polly KG Explorer
 
-### Interface Overview
-
-The Polly KG Explorer interface is designed for intuitive navigation and knowledge graph exploration. It consists of three main sections:
-
-- **Node Selection Panel**: Allows users to define search criteria by selecting entity categories and values. It also provides an option to download node and edge information for the filtered data.
-- **Knowledge Graph Visualization Area**: Displays the generated knowledge graph based on the selected filters, allowing users to explore relationships between entities.
-- **Controls & Settings**: Provides tools to customize the visualization and adjust display preferences for a more tailored user experience.
-
-![startingimage](../img/KG/CFTR_Editlatest.jpg) <center> Screenshot showing 1. Node selection Panel, 2. Knowledge-graph Visualisation Area, and 3. Controls and Settings.</center>
-
- **Note:** The Download icon in the Node selection panel exports the node and edges information. The download icon in the Controls and Settings in the knowledge graph visualisation area exports the generated knowledge graph as PNG, CSV and JSON. 
-
----
+**Polly KG Explorer** is an interactive tool and a part of the Polly KG ecosystem on Polly. It is designed to help researchers explore and analyze the Polly Knowledge Base, which consists of harmonized biomedical data. It enables users to uncover relationships between biological entities and generate data-driven hypotheses.
 
 
-## Using the Application
+## Layout of Polly KG Explorer
 
-### Selecting Nodes & Generating a Knowledge Graph
+The Polly KG Explorer interface is organized into distinct regions, each serving a specific functional role in the exploration workflow.
 
-1. In the Node selection area, users must select at least two nodes by choosing a category (e.g., Genes, Proteins, Diseases) and specifying values.
-2. Additional nodes can be added if needed. Users can search up to 3 nodes.
+| S. No. | Region            | Purpose                                                                 |
+|------:|-------------------|-------------------------------------------------------------------------|
+| 1     | Top Left Tabs     | Select the exploration mode: **Shortest Path** or **Node Explorer**     |
+| 2     | Left Panel        | Configure inputs such as node type and associations, and access CTAs    |
+| 3     | Centre Canvas     | Display graph results and interactive visualizations                    |
+| 4     | Top Right Buttons | Access download options and the Knowledge Graph schema tools            |
 
-![U1](../img/KG/finalgene.png) <center> Use the dropdown to select the needed node types.</center>
+**Table 1. Components of Polly KG Explorer**
 
-![STAT3](../img/KG/finalnames.png) <center> Type in the required node value and select from the dropdown. For example, in the above screenshot, STAT3 gene is being searched and selected from the list.</center>
-
-
-3. Click “Generate” to create or update the knowledge graph in the knowledge graph Visualization Area.
-
-![U3](../img/KG/finalSTAT3.png) <center> On clicking the “Generate” button the knowledge graph showing the interactions between the selected nodes is rendered.</center>
-
----
+![layout](../img/KG/LayoutofPollyKGExplorerr.png) <center> Layout of Polly KG Explorer</center>
 
 
-## Navigating & Interacting with the Knowledge Graph
+### 1. View Schema
 
-### Exploring the Generated Graph
+Select the database icon in the top-right corner to open the schema view.
 
-#### Node Details
+![schema](../img/KG/ViewSchema.png) <center> View Schema</center>
 
-- Each node displays a name with a six-character limit. The full name and corresponding source-based ID are visible on hover.  
-- Node colors indicate their respective categories, which can be referenced in the graph legend.  
-- Searched nodes appear visibly larger than other nodes for easy identification.  
-- The graph displays both:
-    - **Direct interactions** between searched nodes
-    - **1-hop neighbor interactions** for each node
-- Nodes can be selected and repositioned to adjust spacing and explore relationships more effectively.
+The schema panel displays:
 
-![Nodedetail](../img/KG/finalnode.png) <center> The node details - node name (ID) will be shown on hover over the respective node.  The node colour is based on the node category. The colour code for node is reflected in the categories legend on the top left corner.</center>
-
-#### Edge Details
-
-- Hover over any edge to view the edge label and score, indicating the type of relationship.
-
-![edgedetail](../img/KG/finaledge.png) <center> The edge details are shown hovering over the edges.</center>
+- All available **node types** along with the count of their incoming and outgoing relationships
+  
+- The different **relationship types** present in the Knowledge Graph
+  
+- The **properties and data types** associated with each relationship
 
 
-#### Knowledge Graph Navigation
+This view provides a clear understanding of the Knowledge Graph structure, helping users navigate data confidently and explore relationships more effectively.
 
-- **Zoom & Reset**: Use the zoom controls or mouse scroll to zoom in/out. Click Reset View to restore the default position.  
-- **Graph Legend**: The legend displays the different node categories present in the knowledge graph displayed.  
-- **2D/3D Toggle**: Click Toggle View to switch between 2D and 3D visualizations.  
-- **Saving the Graph**: The generated knowledge graph can be exported using the download button.  
-- The graph title displays the searched node names, separated by a hyphen ("-").
+### 2. Shortest Path
 
-![U6](../img/KG/finaltool.png) <center> On the right side, The navigation tools has 1 - to toggle between 2D and 3D,  2 - reset the graph post zoom operations, 3 - full screen view, 4 - Export graph in CSV or JSON</center>
+The Shortest Path feature helps you identify the most direct connection between two entities in the Knowledge Graph. In graph theory, a shortest path represents the route between two nodes that minimizes the total distance (or number of connecting steps).
 
+Within the Polly KG Explorer, this feature is powered by Neo4j’s native shortest path algorithms.
 
-**Things to Know When Exploring the Knowledge Graph Generated**
+**Key Distinction:**
 
-- All paths between the searched nodes are shown with a hop of 1.  
-- The immediate first neighbours of the searched nodes are also shown.
-
----
-
-### Downloading & Exporting Data
-
-#### Downloading Knowledge Graph Data
-- Click the **Download** button in the node selection area to export the knowledge graph data as a CSV file.  
-- The CSV file contains information on the selected nodes and their relationships (edges) within the knowledge graph.  
-
-**Note**: The data related to the knowledge graph generated would be downloaded.
-
-#### Exporting the Graph Image
-- To save a static image of the graph, click the **Download** button in the top right corner of the knowledge graph visualisation area. This downloads the graph as a **PNG** image.
+- `shortestPath(...)` → returns one shortest path
+  
+- `allShortestPaths(...)` → returns all paths tied for minimum hop length
 
 
+Detailed technical documentation for these methods is available in the [Neo4j Cypher manual](https://neo4j.com/docs/cypher-manual/current/patterns/shortest-paths/).
+
+
+
+#### How to Use Shortest Path
+- Open the **Shortest Path** tab
+- Select the start node type from the dropdown
+- Enter the search term for the start node
+- Select the end node type from the dropdown
+- Enter the search term for the end node
+- Click **Find Path** to generate the result
+
+Once the graph is rendered, you can:
+
+- Click **View Query** to see the Cypher query used
+  
+- Use the **Reset** button to clear selections and start a new search
+
+
+An example output graph is shown below for reference.
+
+![schem](../img/KG/Shortestpath.png) <center> Shortest Path</center>
+
+![sche](../img/KG/QueryC.png) <center> Cypher Query used to calculate Shortest Path for the selected nodes</center>
+
+To discover all possible shortest connections between two nodes:
+
+- Click on **Advanced Options**
+  
+- Click on **Find all Shortest Path**, or
+  
+- Limit the search depth (maximum of 10 hops)
+  
+- Click **Find Path**
+
+Once the graph is rendered, users can:
+
+- Click **View Query** to verify the Cypher query used
+  
+- Use the **Reset** button to clear previous selections and start a new search
+
+Shown below is an example graph with all shortest paths.
+
+![sch](../img/KG/Allshortestpath.png) <center> All Shortest Path</center>
+
+The All Shortest path query that was executed - 
+
+![schh](../img/KG/cyperallshortest.png) <center>  Cypher Query used for All Shortest Path Calculation</center>
+
+
+### 3. Node Explorer
+
+The Node Explorer allows you to visualize a selected node and interactively expand its immediate neighbors. You can also apply filters based on properties stored on relationships to refine what is displayed in the graph.
+
+#### 3.1 How to Use Node Explorer
+- Click on the **Node Explorer** tab
+- Select the node type from the dropdown
+- Choose the target node and the relationship (edge) you want to explore
+  - Only first-degree (immediate) neighbors are displayed
+
+This makes it easy to quickly examine direct connections and gain focused insights without navigating the entire graph.
+
+![scm](../img/KG/nodeexplorr.png) <center>  Node Explorer</center>
+
+- Select the association that you are interested in
+- A modal opens, allowing users to apply filters based on edge properties
+- After filtering, the next screen displays all filtered values, where users can:
+  - Deselect values
+  - Select only the specific values of interest
+  - Apply all filtered values
+- On the final screen, users can view the Cypher query executed in the backend to fetch the results
+
+**Note:**  
+The number of edges fetched for a given node term is determined by the underlying schema. As a result, some associations may not have a target node available and may not be displayed in the UI.
+
+![shn](../img/KG/edgefiltterpath.png) 
+
+
+#### 3.2 Expand Network
+
+You can dynamically grow the graph by expanding connections from any visible node.
+
+- Click on any node within the subgraph
+- A side panel opens on the right, displaying the node’s first-degree neighbors
+  
+- Choose how you want to refine the expansion:
+  
+  - Click **Filter & Expand** to apply filters based on relationship (edge) properties
+    
+  - Click **View Nodes** to search and expand using specific terms
+ 
+- Apply your selections by selecting or deselecting values and clicking **Apply**
+- Use the **Previous** button to remove the most recent node expansion
+- Use the **Next** button to redo the most recent expansion
 
 
 
