@@ -3,27 +3,6 @@
 **Polly Co-Scientist** is an AI-powered research assistant developed to help scientists transform complex biomedical data into actionable scientific insights with ease. It transforms natural language queries into Cypher commands to interact with Polly's Knowledge Graph, allowing users to explore relationships, simulate biological reasoning, and generate hypotheses, without **writing a single line of code.**
 
 
-
-
-## Data Distribution and Sources Used
-
-Polly KG integrates data from multiple open-source and authoritative biomedical databases. Below is a list of sources and their versions:
-
-
-| DB Name     | Source                                                                                           | Version     |
-|-------------|------------------------------------------------------------------------------------------------|-------------|
-| MONDO       | [MONDO Ontology](https://mondo.org)                                                            | v2025-02-04 |
-| HPO         | [HPO Ontology](https://hpo.jax.org/app/download)                                               | v2025-01-16 |
-| NCBI        | [NCBI Download](https://www.ncbi.nlm.nih.gov/home/download/)                                  | release-113 |
-| GO          | [Gene Ontology](https://geneontology.org/docs/download-ontology/)                              | v2025-02-06 |
-| Reactome    | [Reactome Data](https://reactome.org/download-data)                                            | v91         |
-| ChEMBL      | [ChEMBL Downloads](https://chembl.gitbook.io/chembl-interface-documentation/downloads)         | ChEMBL35    |
-| OpenTargets | [OpenTargets Platform](https://platform.opentargets.org/downloads) <br> - associationByDatatypeDirect: target-disease associations <br> - diseaseToPhenotype: disease-phenotype mappings <br> - diseases: disease names and IDs <br> - indication: clinical trial indications <br> - interaction: target interactions <br> - targets: target info and tractability | v24.9       |
-| UniProt     | [UniProtKB](https://www.uniprot.org/uniprotkb)                                                | 2021_03     |
-
-
-
-
 ## Key Capabilities
 
 - **Ease of Use**: Designed with a user-friendly interface that simplifies KG exploration. 
