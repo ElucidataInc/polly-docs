@@ -51,8 +51,9 @@ Within the Polly KG Explorer, this feature is powered by Neo4j’s native shorte
 - `allShortestPaths(...)` → returns all paths tied for minimum hop length
 
 
-Detailed technical documentation for these methods is available in the Neo4j Cypher manual:  
-https://neo4j.com/docs/cypher-manual/current/patterns/shortest-paths/
+Detailed technical documentation for these methods is available in the [Neo4j Cypher manual](https://neo4j.com/docs/cypher-manual/current/patterns/shortest-paths/).
+
+
 
 #### How to Use Shortest Path
 - Open the **Shortest Path** tab
