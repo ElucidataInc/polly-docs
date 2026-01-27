@@ -39,7 +39,11 @@ The schema panel displays:
 This view provides a clear understanding of the Knowledge Graph structure, helping users navigate data confidently and explore relationships more effectively.
 
 **Video on User interaction**
-![schema](../img/KG/Video1.mp4)
+
+<video width="100%" controls>
+  <source src="../img/KG/Video1.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 
 ---
@@ -112,7 +116,11 @@ RETURN path,
 ```
 
 **Video on User interaction**
-![V](../img/KG/Video2.mp4)
+
+<video width="100%" controls>
+  <source src="../img/KG/Video2.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 
 **Scientifc Literature connecting Depressive Disorder & graft versus host disease to Acetylcysteine**
@@ -200,8 +208,12 @@ RETURN path,
 ```
 
        
- **Video on User interaction** 
-![VV](../img/KG/video3.mp4)
+**Video on User interaction**
+
+<video width="100%" controls>
+  <source src="../img/KG/video3.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 ---
 
@@ -223,7 +235,11 @@ The Node Explorer allows you to visualize a selected node and interactively expa
 - In the last page, users can see the cypher query that run in the backend to fetch the results 
 
 **Video on User interaction**
-![Vv](../img/KG/video4.mp4)
+
+<video width="100%" controls>
+  <source src="../img/KG/video4.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 
 **Note:** Please note that the number of edges fetched given a Node term is based on schema and therefore, some associations may not have a Target node that will be shown on the UI as 
@@ -232,7 +248,11 @@ The Node Explorer allows you to visualize a selected node and interactively expa
 
 
 **Video on how to see properties of Nodes and Edges**
-![V1](../img/KG/video5.mp4)
+
+<video width="100%" controls>
+  <source src="../img/KG/video5.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 
 **Expand Network**
@@ -250,9 +270,12 @@ Interacting with Nodes in the Subgraph:
 5. Navigate Changes: Use the **Previous** button to remove the most recent node expansion. Use the **Next** button to undo the change and reapply the expansion.
 
 
- **Video on User interaction**
- 
-![V6](../img/KG/video6.mp4)
+**Video on User interaction**
+
+<video width="100%" controls>
+  <source src="../img/KG/video6.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 Users can use this Journey to keep expanding the network iteratively.
 
 
