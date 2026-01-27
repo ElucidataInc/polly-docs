@@ -16,7 +16,7 @@ The Polly KG Explorer interface is organized into distinct regions, each serving
 | 3     | Centre Canvas     | Display graph results and interactive visualizations                    |
 | 4     | Top Right Buttons | Access download options and the Knowledge Graph schema tools            |
 
-**Table 1. Components of Polly KG Explorer**
+<center> Table 1. Components of Polly KG Explorer</center>
 
 ![layout](../img/KG/LayoutofPollyKGExplorerr.png) <center> Layout of Polly KG Explorer</center>
 
@@ -38,7 +38,7 @@ The schema panel displays:
 
 This view provides a clear understanding of the Knowledge Graph structure, helping users navigate data confidently and explore relationships more effectively.
 
-### Video on User interaction 
+**Video on User interaction**
 ![schema](../img/KG/Video1.mp4)
 
 
@@ -85,32 +85,21 @@ The shortest path query that was executed:
 
 ### Query Explanation for Shortest Path
 
-<details> <summary>Click to expand</summary>
+```
 
-<br>
-
-**MATCH (start), (end)**
+MATCH (start), (end)
 
 any node in the graph as  `start`
 any node in the graph as `end`
 
-**WHERE id(start) = 17721 AND id(end) = 17378**
+WHERE id(start) = 17721 AND id(end) = 17378
 internal db ids for the node terms as specified by the user
 
-**MATCH path = shortestPath((start)-[*1..5]-(end))**
-
-| Syntax        | What it does                                  |
-|---------------|-----------------------------------------------|
-| `shortestPath`| Finds the minimum-hop path                    |
-| `(start)`     | Starting node                                 |
-| `[*1..5]`     | Any relationship type, 1 to 5 hops             |
-| `-`           | Undirected (can go either way)                |
-| `(end)`       | Ending node                                   |
-
-**RETURN path,
+MATCH path = shortestPath((start)-[*1..5]-(end))
+RETURN path,
        nodes(path) as pathNodes,
        relationships(path) as pathRels,
-       length(path) as pathLength**
+       length(path) as pathLength
 
 | Output               | What it will fetch                          |
 |----------------------|----------------------------------------------|
@@ -120,17 +109,15 @@ internal db ids for the node terms as specified by the user
 | `length(path)`       | Number of edges in the path                  |
 
 
-</details>
+```
 
-### Video on User interaction 
+**Video on User interaction**
 ![V](../img/KG/Video2.mp4)
 
 
 **Scientifc Literature connecting Depressive Disorder & graft versus host disease to Acetylcysteine**
 
-<details> <summary>Click to expand</summary>
-
-<br>
+```
 
 - Depressive Disorder:
 [ScienceDirect article](https://www.sciencedirect.com/science/article/abs/pii/S0163834324002238)
@@ -140,7 +127,7 @@ An immune system disorder that occurs after allogeneic hematopoietic stem cell t
 
 Literature review shows studies done in both Depressive disorder and graft versus host disease involving NAC
 
-</details>
+```
 
 
 ### For All Shortest Path 
@@ -173,17 +160,17 @@ Users can Select All and render all shortest path and reset using the Reset butt
 
 ### Query Explanation for All Shortest Path
 
-<details> <summary>Click to expand</summary>
+```
 
-<br>
-
-**MATCH (start), (end)**
+MATCH (start), (end)
 
 any node in the graph as start
 any node in the graph as end
-**WHERE id(start) = 17721 AND id(end) = 17378**
+
+WHERE id(start) = 17721 AND id(end) = 17378
 internal db ids for the node terms as specified by the user
-**MATCH path = allShortestPaths((start)-[*1..5]-(end))**
+
+MATCH path = allShortestPaths((start)-[*1..5]-(end))
 
 | Syntax               | What it does                                      |
 |----------------------|---------------------------------------------------|
@@ -194,14 +181,14 @@ internal db ids for the node terms as specified by the user
 | `(end)`              | End node (ID `17378`)                              |
 
 
-**WITH path LIMIT 100**
+WITH path LIMIT 100
 
-Caps the result set to **at most 100 shortest paths** to prevent UI crashes
+Caps the result set to at most 100 shortest paths to prevent UI crashes
 
-**RETURN path,
+RETURN path,
        nodes(path) AS pathNodes,
        relationships(path) AS pathRels,
-       length(path) AS pathLength**
+       length(path) AS pathLength
 
 | Output                | What it will fetch              |
 |-----------------------|----------------------------------|
@@ -210,10 +197,10 @@ Caps the result set to **at most 100 shortest paths** to prevent UI crashes
 | `relationships(path)` | Ordered list of relationships    |
 | `length(path)`        | Hop count                        |
 
-</details>
+```
 
        
-#### Video on User interaction 
+ **Video on User interaction** 
 ![VV](../img/KG/video3.mp4)
 
 ---
@@ -235,7 +222,7 @@ The Node Explorer allows you to visualize a selected node and interactively expa
 - Upon filtering, a next page shows all the filtered values that users can Deselect and only select the specific one they are interested in or apply all
 - In the last page, users can see the cypher query that run in the backend to fetch the results 
 
-### Video on User interaction 
+**Video on User interaction**
 ![Vv](../img/KG/video4.mp4)
 
 
@@ -244,7 +231,7 @@ The Node Explorer allows you to visualize a selected node and interactively expa
 ![scm](../img/KG/edgefilters1.png) <center>  Edge Filters</center>
 
 
-### Video on how to see properties of Nodes and Edges
+**Video on how to see properties of Nodes and Edges**
 ![V1](../img/KG/video5.mp4)
 
 
@@ -263,7 +250,8 @@ Interacting with Nodes in the Subgraph:
 5. Navigate Changes: Use the **Previous** button to remove the most recent node expansion. Use the **Next** button to undo the change and reapply the expansion.
 
 
-#### Video on User interaction 
+ **Video on User interaction**
+ 
 ![V6](../img/KG/video6.mp4)
 Users can use this Journey to keep expanding the network iteratively.
 
