@@ -11,17 +11,17 @@ The Polly KG Explorer interface is organized into distinct regions, each serving
 
 | S. No. | Region            | Purpose                                                                 |
 |------:|-------------------|-------------------------------------------------------------------------|
-| 1     | Top Left Tabs     | Select the exploration mode: **Shortest Path** or **Node Explorer**     |
-| 2     | Left Panel        | Configure inputs such as node type and associations, and access CTAs    |
+| 1     | Top Left Tabs     | Choose the exploration mode: **Shortest Path** or **Node Explorer**   |
+| 2     | Left Panel        | Input selection (node type, select associations) and CTA buttons   |
 | 3     | Centre Canvas     | Display graph results and interactive visualizations                    |
 | 4     | Top Right Buttons | Access download options and the Knowledge Graph schema tools            |
 
-**Table 1. Components of Polly KG Explorer**
+<center> Table 1. Components of Polly KG Explorer</center>
 
 ![layout](../img/KG/LayoutofPollyKGExplorerr.png) <center> Layout of Polly KG Explorer</center>
 
 
-### 1. View Schema
+## 1. View Schema
 
 Select the database icon in the top-right corner to open the schema view.
 
@@ -29,18 +29,28 @@ Select the database icon in the top-right corner to open the schema view.
 
 The schema panel displays:
 
-- All available **node types** along with the count of their incoming and outgoing relationships
+- All available **node types** along with the count of their incoming and outgoing associations
   
 - The different **relationship types** present in the Knowledge Graph
   
-- The **properties and data types** associated with each relationship
+- The **properties and data types** of each property in a given associations
 
 
 This view provides a clear understanding of the Knowledge Graph structure, helping users navigate data confidently and explore relationships more effectively.
 
-### 2. Shortest Path
+**Video on User interaction**
 
-The Shortest Path feature helps you identify the most direct connection between two entities in the Knowledge Graph. In graph theory, a shortest path represents the route between two nodes that minimizes the total distance (or number of connecting steps).
+<video width="100%" controls>
+  <source src="../img/KG/Video1.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
+---
+
+## 2. Shortest Path
+
+The Shortest Path feature helps you identify the most direct connection between two entities in the Knowledge Graph. In graph theory, a shortest path problem is the problem of finding a path between two nodes in a graph such that the sum of the weights of its constituent edges is minimized.
 
 Within the Polly KG Explorer, this feature is powered by Neo4j’s native shortest path algorithms.
 
@@ -54,8 +64,7 @@ Within the Polly KG Explorer, this feature is powered by Neo4j’s native shorte
 Detailed technical documentation for these methods is available in the [Neo4j Cypher manual](https://neo4j.com/docs/cypher-manual/current/patterns/shortest-paths/).
 
 
-
-#### How to Use Shortest Path
+### How to Use Shortest Path
 - Open the **Shortest Path** tab
 - Select the start node type from the dropdown
 - Enter the search term for the start node
@@ -72,81 +81,202 @@ Once the graph is rendered, you can:
 
 An example output graph is shown below for reference.
 
-![schem](../img/KG/Shortestpath.png) <center> Shortest Path</center>
+![schem](../img/KG/shortestpath1.png) <center> Shortest Path</center>
 
-![sche](../img/KG/QueryC.png) <center> Cypher Query used to calculate Shortest Path for the selected nodes</center>
+The shortest path query that was executed:
+![sche](../img/KG/shortestpathquery.png) <center> Cypher Query used to calculate Shortest Path for the selected nodes</center>
 
+
+### Query Explanation for Shortest Path
+
+```
+
+MATCH (start), (end)
+
+any node in the graph as  `start`
+any node in the graph as `end`
+
+WHERE id(start) = 17721 AND id(end) = 17378
+internal db ids for the node terms as specified by the user
+
+MATCH path = shortestPath((start)-[*1..5]-(end))
+RETURN path,
+       nodes(path) as pathNodes,
+       relationships(path) as pathRels,
+       length(path) as pathLength
+
+| Output               | What it will fetch                          |
+|----------------------|----------------------------------------------|
+| `path`               | Full visual path                             |
+| `nodes(path)`        | Ordered list of all nodes in the path        |
+| `relationships(path)`| Ordered list of all relationships            |
+| `length(path)`       | Number of edges in the path                  |
+
+
+```
+
+**Video on User interaction**
+
+<video width="100%" controls>
+  <source src="../img/KG/Video2.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
+**Scientifc Literature connecting Depressive Disorder & graft versus host disease to Acetylcysteine**
+
+```
+
+- Depressive Disorder:
+[ScienceDirect article](https://www.sciencedirect.com/science/article/abs/pii/S0163834324002238)
+
+- Graft-Versus-Host Disease (GVHD)
+An immune system disorder that occurs after allogeneic hematopoietic stem cell transplant and is a reaction of donor immune cells against host tissues. Activated donor T cells damage host epithelial cells after an inflammatory cascade that begins with the preparative regimen. [NCBI](https://www.ncbi.nlm.nih.gov/) 
+
+Literature review shows studies done in both Depressive disorder and graft versus host disease involving NAC
+
+```
+
+
+### For All Shortest Path 
 To discover all possible shortest connections between two nodes:
 
 - Click on **Advanced Options**
   
 - Click on **Find all Shortest Path**, or
   
-- Limit the search depth (maximum of 10 hops)
+- Limit the search depth (maximum of 5 hops)
   
 - Click **Find Path**
 
-Once the graph is rendered, users can:
+- Users are shown a table with all paths as a dataframe. Scroll and identify the path you are interested in to visualize as a sub-graph. 
 
-- Click **View Query** to verify the Cypher query used
-  
-- Use the **Reset** button to clear previous selections and start a new search
+- Users can also verify the query by clicking on **View Query** once the graph is rendered
+
+- Use the **Reset Button** to remove your previous selections and start afresh
+
 
 Shown below is an example graph with all shortest paths.
 
-![sch](../img/KG/Allshortestpath.png) <center> All Shortest Path</center>
-
-The All Shortest path query that was executed - 
-
-![schh](../img/KG/cyperallshortest.png) <center>  Cypher Query used for All Shortest Path Calculation</center>
+![sch](../img/KG/allshortestpath1.png) <center> All Shortest Path</center>
 
 
-### 3. Node Explorer
+Users can Select All and render all shortest path and reset using the Reset button  
+
+![schh](../img/KG/allshortestpath2.png) <center>  Cypher Query used for All Shortest Path Calculation</center>
+
+
+### Query Explanation for All Shortest Path
+
+```
+
+MATCH (start), (end)
+
+any node in the graph as start
+any node in the graph as end
+
+WHERE id(start) = 17721 AND id(end) = 17378
+internal db ids for the node terms as specified by the user
+
+MATCH path = allShortestPaths((start)-[*1..5]-(end))
+
+| Syntax               | What it does                                      |
+|----------------------|---------------------------------------------------|
+| `allShortestPaths`   | Returns every path with the minimum possible length |
+| `(start)`            | Starting node (ID `17721`)                         |
+| `[*1..5]`            | Any relationship type, 1 to 5 hops                 |
+| `-`                  | Undirected                                        |
+| `(end)`              | End node (ID `17378`)                              |
+
+
+WITH path LIMIT 100
+
+Caps the result set to at most 100 shortest paths to prevent UI crashes
+
+RETURN path,
+       nodes(path) AS pathNodes,
+       relationships(path) AS pathRels,
+       length(path) AS pathLength
+
+| Output                | What it will fetch              |
+|-----------------------|----------------------------------|
+| `path`                | Visual graph path                |
+| `nodes(path)`         | Ordered list of nodes            |
+| `relationships(path)` | Ordered list of relationships    |
+| `length(path)`        | Hop count                        |
+
+```
+
+       
+**Video on User interaction**
+
+<video width="100%" controls>
+  <source src="../img/KG/video3.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+---
+
+## 3. Node Explorer
 
 The Node Explorer allows you to visualize a selected node and interactively expand its immediate neighbors. You can also apply filters based on properties stored on relationships to refine what is displayed in the graph.
 
-#### 3.1 How to Use Node Explorer
+### How to Use Node Explorer
 - Click on the **Node Explorer** tab
 - Select the node type from the dropdown
-- Choose the target node and the relationship (edge) you want to explore
-  - Only first-degree (immediate) neighbors are displayed
+- Select the target Node and a modal opens showing additional properties for that node that enables users to select nodes of interest
 
-This makes it easy to quickly examine direct connections and gain focused insights without navigating the entire graph.
+![scm](../img/KG/nodeexplorerrr1.png) <center>  Node Explorer</center>
 
-![scm](../img/KG/nodeexplorr.png) <center>  Node Explorer</center>
-
+- Select the node you are interested in
 - Select the association that you are interested in
-- A modal opens, allowing users to apply filters based on edge properties
-- After filtering, the next screen displays all filtered values, where users can:
-  - Deselect values
-  - Select only the specific values of interest
-  - Apply all filtered values
-- On the final screen, users can view the Cypher query executed in the backend to fetch the results
+- A modal opens that allows users to filter based on the edge properties and also see the description of each edge property that lets users to select edge properties intuitively for filtering
+- Upon filtering, a next page shows all the filtered values that users can Deselect and only select the specific one they are interested in or apply all
+- In the last page, users can see the cypher query that run in the backend to fetch the results 
 
-**Note:**  
-The number of edges fetched for a given node term is determined by the underlying schema. As a result, some associations may not have a target node available and may not be displayed in the UI.
+**Video on User interaction**
 
-![shn](../img/KG/edgefiltterpath.png) 
-
-
-#### 3.2 Expand Network
-
-You can dynamically grow the graph by expanding connections from any visible node.
-
-- Click on any node within the subgraph
-- A side panel opens on the right, displaying the node’s first-degree neighbors
-  
-- Choose how you want to refine the expansion:
-  
-  - Click **Filter & Expand** to apply filters based on relationship (edge) properties
-    
-  - Click **View Nodes** to search and expand using specific terms
- 
-- Apply your selections by selecting or deselecting values and clicking **Apply**
-- Use the **Previous** button to remove the most recent node expansion
-- Use the **Next** button to redo the most recent expansion
+<video width="100%" controls>
+  <source src="../img/KG/video4.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
 
 
+**Note:** Please note that the number of edges fetched given a Node term is based on schema and therefore, some associations may not have a Target node that will be shown on the UI as 
+
+![scm](../img/KG/edgefilters1.png) <center>  Edge Filters</center>
+
+
+**Video on how to see properties of Nodes and Edges**
+
+<video width="100%" controls>
+  <source src="../img/KG/video5.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+
+
+**Expand Network**
+
+Interacting with Nodes in the Subgraph:
+
+1. Select a Node: Click on any node within the subgraph to begin exploration.
+
+2. View First-Degree Neighbors: A modal panel opens on the right, displaying the **first-degree neighbors** of the selected node.
+
+3. Filter and Expand: Click **Filter & Expand** to apply filters based on **edge properties**. Alternatively, click **View Nodes** to search for and explore specific terms.
+
+4. Apply Filters: Select or deselect the desired filter options. Click **Apply** to update the subgraph view.
+
+5. Navigate Changes: Use the **Previous** button to remove the most recent node expansion. Use the **Next** button to undo the change and reapply the expansion.
+
+
+**Video on User interaction**
+
+<video width="100%" controls>
+  <source src="../img/KG/video6.mp4" type="video/mp4">
+  Your browser does not support the video tag.
+</video>
+Users can use this Journey to keep expanding the network iteratively.
 
 
 
