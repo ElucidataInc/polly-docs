@@ -1,18 +1,12 @@
 # Polly Co-Scientist
 
 **Polly Co-Scientist** is an AI-powered research assistant developed to help scientists transform complex biomedical data into actionable scientific insights with ease. It transforms natural language queries into Cypher commands to interact with Polly's Knowledge Graph, allowing users to explore relationships, simulate biological reasoning, and generate hypotheses, without **writing a single line of code.**
-By abstracting away query syntax and graph complexity, Co-Scientist allows scientists to focus on scientific reasoning rather than technical execution.
-
-
-## Key Capabilities
-
-- **Ease of Use**: Designed with a user-friendly interface that simplifies KG exploration. 
-- **Natural Language Interface**: Query the Knowledge Graph using simple English, no need to learn Cypher or write Python code.   
-- **Dual Output**: View results in both text (summary and Cypher) and graphical (node-edge) formats. 
+By abstracting away query syntax and graph complexity, Co-Scientist allows scientists to focus on scientific reasoning rather than technical execution.  
 
 ![KG1](../img/KG/EKG1.png) <center> Polly Co-Scientist Interface</center>
 
-## New Feature: Interactive Intent Recognition
+## Working Flow of Polly Co-Scientist
+
 Co-Scientist now collaborates with you to construct queries instead of executing them immediately. Each request follows a structured, five-step workflow designed to ensure accurate intent interpretation and precise Knowledge Graph execution:
 
 - **Intent Parsing**: Automatically extracts key entities, relationships, and filtering criteria from natural language input.
@@ -96,13 +90,14 @@ Once executed, results are presented in the most appropriate format based on the
 A concise, human-readable summary of the results.
 
 ![KG9](../img/KG/EKG9.png) <center> Table view</center>
-![KG10](../img/KG/EKG10.png) 
+
 
 **Visual Output**
 An interactive visualization (table, sub-graph, or chart) rendered in the Knowledge Graph viewer for exploration and analysis.
 
 ![KG12](../img/KG/EKG12.png) <center> Graph View</center>
 
+![KG10](../img/KG/EKG10.png) <center> Table View</center>
 
 
 

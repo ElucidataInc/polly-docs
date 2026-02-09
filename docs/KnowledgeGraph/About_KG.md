@@ -10,34 +10,21 @@
 - **Siloed Knowledge Bases**: The lack of structured relationships between biological entities (e.g., genes, diseases, drugs) leads to fragmented information.
 - **Limited Holistic Insights**: Researchers struggle to gather and integrate multi-modal evidence to support their biological questions.
 
+## Key Components
 
-## The Polly KG Explorer Application
+**Polly Co-Scientist**
 
-The **Polly KG Explorer Application** is an interactive tool and a part of the **Polly KG ecosystem** on Polly. It is designed to help researchers explore and analyze the Polly Knowledge Base, which consists of harmonized biomedical data. It enables users to uncover relationships between biological entities and generate data-driven hypotheses.
+Polly Co-Scientist is an AI-powered research assistant that converts natural language questions into Cypher queries to interact with the Knowledge Graph. It allows users to query, explore relationships, and extract insights without requiring knowledge of Cypher or programming.
 
-### What Can Users Do with the Polly KG Explorer Application?
+**Polly KG Explorer**
 
-- **Explore Relationships**: Select specific genes, proteins, diseases, or drugs and visualize their connections within a structured knowledge graph.
-- **Filter Views**: Use interactive filtering to refine queries and focus on relevant data.
-- **Querying using Natural Language**: Query the Knowledge Graph using simple English, no need for Cypher or Python expertise. (Polly Co-Scientist)
+Polly KG Explorer is an interactive application within the Polly ecosystem designed to explore and analyze the Knowledge Graph. It enables users to visualize relationships between biological entities, apply filters, extract subgraphs, and generate data-driven hypotheses from harmonized biomedical data.
 
-### Additional Features of the Polly KG Explorer Application
+**Polly Python**
 
-- **Generate and Download knowledge graphs**: Extract specific portions of the KG, visualize them dynamically.
-- **Navigate the KG with Ease**: Zoom, reset views, and switch between 2D and 3D visualizations for better insights.
-- **Save & Share Insights**: Export graph images and download structured relationship data for further analysis.
+Polly Python is the programmatic interface for interacting with Polly, enabling users to access data, query Knowledge Graph resources, manage datasets, and run analyses using Python. It provides a flexible environment for automation, advanced querying, and integration into bioinformatics workflows.
 
-### Who Should Use This Application?
-
-- **Pharma R&D Teams**: Investigating potential drug targets and indications.
-- **Multi-Omics Researchers**: Integrating and exploring diverse biological datasets to gain insights.
-- **Bioinformatics Teams**: Conducting literature mining and entity linking to support discovery.
-
-By offering a seamless, interactive experience, this application enables users to navigate complex biological relationships, extract meaningful insights, and accelerate hypothesis generation using the Polly KG Explorer framework.
-
----
-
-### Terminology in the Polly KG Explorer Application
+### Terminology in the Polly KG Application
 
 This section provides definitions of key terms used in the Polly KG Explorer application. Understanding these terms will help users navigate and utilize the tool more effectively.
 
