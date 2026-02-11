@@ -22,22 +22,11 @@ If the required credentials are not available, or you are unable to log in or ac
  
 ![Applications](../img/KG/GKG1.png) <center> Knowledge Graph Tab</center>
 
-- **Step 3:** Knowledge Graph Application: The application will open in the same tab automatically.
-  
-![Applications](../img/KG/GKG2.png) <center> Knowledge Graph Interface</center>
-
-- **Step 4:** Polly Co-Scientist: The initial tab will have **Polly Co-Scientist icon** on right and user can click and open the Co-scientist page on the same tab .
-
-![Polly KG](../img/KG/GkG3.png) <center> Polly Co-Scientist Icon</center>
+- **Step 3:** Polly Co-Scientist: This opens the default Polly Co-Scientist tab. Users can use it to interact with Polly’s Knowledge Graph using natural language queries (NLQ).
 
 ![Polly KG](../img/KG/GKG4.png) <center> Polly Co-Scientist Interface</center>
 
-- **Step 5:** Open Polly KG Explorer:User can switch from Co-Scientist to KG Explorer. Click the **interactive Polly KG Explorer** panel on the extreme right. When prompted to switch to the KG Explorer GUI, click Continue. The full KG Explorer interface will open in the same tab.
+- **Step 4:** View Entity Relationship Diagram: Click the ERD icon located on the far-right panel to open the interactive Entity Relationship Diagram within the Co-Scientist tab. 
 
-![Polly KG](../img/KG/GKGGG.png) <center> Switching to Polly KG Explorer View from Polly Co-Scientist View </center>
-
-
-- **Step 6:** View Entity Relationship Diagram: Select the ERD icon located on the far right panel to launch the interactive Entity Relationship Diagram.
-
-![Polly KG](../img/KG/GKG5.png) <center> ERD Diagram Icon</center>
+![Polly KG](../img/KG/ERDD.png) <center> ERD Diagram Icon</center>
 

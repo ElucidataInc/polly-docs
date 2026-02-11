@@ -19,6 +19,8 @@ Co-Scientist now collaborates with you to construct queries instead of executing
 
 - **User Confirmation (Human-in-the-Loop)**: Presents the complete reasoning and execution plan for review before execution. Users can approve or modify any step, with instant recalibration applied.
 
+- **Execution & Results:** Once confirmed, the query is executed and the results are presented in both textual and visual formats for easy interpretation and exploration.
+
 
 ## Core Enhancements & Optimizations
 
@@ -29,9 +31,12 @@ Co-Scientist now collaborates with you to construct queries instead of executing
 - **Enhanced Consistency**: A set process ensures that the same query yields the same high-quality output every time, regardless of the session.
   
 - **Expanded Toolset**: Co-Scientist is now equipped with specialized tools to:
-  - Extract specific nodes/edges and their counts from the Knowledge Graph (KG).
-  - Run exploratory queries to understand data distribution.
-  - Write more efficient, high-performance Cypher queries.
+  
+    - Extract specific nodes/edges and their counts from the Knowledge Graph (KG).
+    
+    - Run exploratory queries to understand data distribution.
+    
+    - Write more efficient, high-performance Cypher queries.
 
 
 ---
@@ -84,12 +89,10 @@ Any change triggers instant recalibration of the execution plan and Cypher query
 #### Step 5: View the Results
 Once executed, results are presented in the most appropriate format based on the query intent:
 
-![KG8](../img/KG/EKG8.png) <center> Result</center>
-
 **Text Output**
 A concise, human-readable summary of the results.
 
-![KG9](../img/KG/EKG9.png) <center> Table view</center>
+![KG8](../img/KG/EKG8.png) <center> Result</center>
 
 
 **Visual Output**
@@ -97,7 +100,7 @@ An interactive visualization (table, sub-graph, or chart) rendered in the Knowle
 
 ![KG12](../img/KG/EKG12.png) <center> Graph View</center>
 
-![KG10](../img/KG/EKG10.png) <center> Table View</center>
+![KG9](../img/KG/EKG9.png) <center> Table view</center>
 
 
 
