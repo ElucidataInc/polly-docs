@@ -6,7 +6,7 @@
 
 **How to Open Polly KG Explorer**
 
-Click the Polly KG Explorer icon located on the far-right panel of the default Co-Scientist page. A confirmation dialog will appear indicating that you are switching from Co-Scientist to KG Explorer. Click Continue to proceed to the Polly KG Explorer page. It will open KG Explorer Landing page. 
+Click the **Polly KG Explorer icon** located on the far-right panel of the **default Co-Scientist page**. A confirmation dialog will appear indicating that you are switching from Co-Scientist to KG Explorer. Click Continue to proceed to the Polly KG Explorer page. It will **open KG Explorer Landing page**. 
 
 ![Page](../img/KG/KGEE1.png) <center> Polly KG Explorer Button</center>
 
