@@ -4,10 +4,21 @@
 
 **Polly KG Explorer** is an interactive tool and a part of the Polly KG ecosystem on Polly. It is designed to help researchers explore and analyze the Polly Knowledge Base, which consists of harmonized biomedical data. It enables users to uncover relationships between biological entities and generate data-driven hypotheses.
 
+**How to Open Polly KG Explorer**
+
+Click the Polly KG Explorer icon located on the far-right panel of the default Co-Scientist page. A confirmation dialog will appear indicating that you are switching from Co-Scientist to KG Explorer. Click Continue to proceed to the Polly KG Explorer page. It will open KG Explorer Landing page. 
+
+![Page](../img/KG/KGEE1.png) <center> Polly KG Explorer Button</center>
+
+![Page](../img/KG/KGEE2.png) <center> Polly KG Explorer Switch Tab</center>
 
 ## Layout of Polly KG Explorer
 
 The Polly KG Explorer interface is organized into distinct regions, each serving a specific functional role in the exploration workflow.
+
+![layout](../img/KG/LayoutofPollyKGExplorerr.png) <center> Layout of Polly KG Explorer</center>
+
+<center> Table 1. Components of Polly KG Explorer</center>
 
 | S. No. | Region            | Purpose                                                                 |
 |------:|-------------------|-------------------------------------------------------------------------|
@@ -16,9 +27,8 @@ The Polly KG Explorer interface is organized into distinct regions, each serving
 | 3     | Centre Canvas     | Display graph results and interactive visualizations                    |
 | 4     | Top Right Buttons | Access download options and the Knowledge Graph schema tools            |
 
-<center> Table 1. Components of Polly KG Explorer</center>
 
-![layout](../img/KG/LayoutofPollyKGExplorerr.png) <center> Layout of Polly KG Explorer</center>
+
 
 
 ## 1. View Schema
