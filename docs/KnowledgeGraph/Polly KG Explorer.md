@@ -16,7 +16,7 @@ Click the **Polly KG Explorer icon** located on the far-right panel of the **def
 
 The Polly KG Explorer interface is organized into distinct regions, each serving a specific functional role in the exploration workflow.
 
-![layout](../img/KG/LayoutofPollyKGExplorerr.png) <center> Layout of Polly KG Explorer</center>
+![layout](../img/KG/ViewKGexplorer.png) <center> Layout of Polly KG Explorer</center>
 
 <center> Table 1. Components of Polly KG Explorer</center>
 
@@ -25,7 +25,7 @@ The Polly KG Explorer interface is organized into distinct regions, each serving
 | 1     | Top Left Tabs     | Choose the exploration mode: **Shortest Path** or **Node Explorer**   |
 | 2     | Left Panel        | Input selection (node type, select associations) and CTA buttons   |
 | 3     | Centre Canvas     | Display graph results and interactive visualizations                    |
-| 4     | Top Right Buttons | Access download options and the Knowledge Graph schema tools            |
+| 4     | Top Right Buttons | Access share, download, view schema and view ERD tools            |
 
 
 
@@ -225,6 +225,7 @@ RETURN path,
   Your browser does not support the video tag.
 </video>
 
+
 ---
 
 ## 3. Node Explorer
@@ -289,5 +290,13 @@ Interacting with Nodes in the Subgraph:
 Users can use this Journey to keep expanding the network iteratively.
 
 
+## 4. Shareable State of Knowledge Graph
+
+The KG Explorer allows you to easily share your current workspace state with others.
+
+Click the **Share icon** located in the top-right corner of the KG Explorer interface. A confirmation message “KG link copied successfully” will appear, indicating that a unique, shareable link has been copied to your clipboard. This shareable state preserves your active configuration and is available across both the Shortest Path and Node Explorer tabs.
+
+You can share this link with collaborators to provide direct access to the same Knowledge Graph view and state for seamless collaboration and reproducibility.
 
 
+![share](../img/KG/shareablestate.png) <center> Share Current State</center>
