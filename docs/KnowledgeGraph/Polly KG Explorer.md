@@ -290,11 +290,13 @@ Interacting with Nodes in the Subgraph:
 Users can use this Journey to keep expanding the network iteratively.
 
 
-## 4.Shareable State of Knowledge Graph
+## 4. Shareable State of Knowledge Graph
 
 The KG Explorer allows you to easily share your current workspace state with others.
 
-Click the **Share icon** located in the top-right corner of the KG Explorer interface. A confirmation message “KG link copied successfully” will appear, indicating that a unique, shareable link has been copied to your clipboard. You can share this link with collaborators to provide direct access to the same Knowledge Graph view and state for seamless collaboration and reproducibility.
+Click the **Share icon** located in the top-right corner of the KG Explorer interface. A confirmation message “KG link copied successfully” will appear, indicating that a unique, shareable link has been copied to your clipboard. This shareable state preserves your active configuration and is available across both the Shortest Path and Node Explorer tabs.
+
+You can share this link with collaborators to provide direct access to the same Knowledge Graph view and state for seamless collaboration and reproducibility.
 
 
-![share](../img/KG/shareablestate.png) <center> Share workspace</center>
+![share](../img/KG/shareablestate.png) <center> Share Current State</center>
