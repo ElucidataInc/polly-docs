@@ -298,5 +298,17 @@ Click the **Share icon** located in the top-right corner of the KG Explorer inte
 
 You can share this link with collaborators to provide direct access to the same Knowledge Graph view and state for seamless collaboration and reproducibility.
 
-
 ![share](../img/KG/shareablestate.png) <center> Share Current State</center>
+
+
+## 5. View Entity Relationship Diagram (ERD)
+
+To view the Entity Relationship Diagram (ERD) in Polly KG Explorer:
+
+Click the ERD icon located on the far right of the interface. The Entity Relationship Diagram (ERD) will open in the main canvas. Explore entities and their relationships directly within the interactive diagram.
+
+The ERD functionality in KG Explorer works identically to the ERD available in Co-Scientist, ensuring a consistent and seamless exploration experience across both modules.
+
+![ERD](../img/KG/KGtoERDD.png) <center> Entity Relationship Diagram (ERD)</center>
+
+
