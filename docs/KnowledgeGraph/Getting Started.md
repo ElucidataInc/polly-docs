@@ -24,9 +24,9 @@ If the required credentials are not available, or you are unable to log in or ac
 
 - **Step 3:** Polly Co-Scientist: This opens the default Polly Co-Scientist tab. Users can use it to interact with Polly’s Knowledge Graph using natural language queries (NLQ).
 
-![Polly KG](../img/KG/GKG4.png) <center> Polly Co-Scientist Interface</center>
+![Polly KG](../img/KG/PollyCoScientistInterface.png) <center> Polly Co-Scientist Interface</center>
 
 - **Step 4:** View Entity Relationship Diagram: Click the ERD icon located on the far-right panel to open the interactive Entity Relationship Diagram within the Co-Scientist tab. 
 
-![Polly KG](../img/KG/ERDD.png) <center> ERD Diagram Icon</center>
+![Polly KG](../img/KG/viewERDD.png) <center> ERD Diagram Icon</center>
 
