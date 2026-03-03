@@ -8,9 +8,9 @@
 
 Click the **Polly KG Explorer icon** located on the far-right panel of the **default Co-Scientist page**. A confirmation dialog will appear indicating that you are switching from Co-Scientist to KG Explorer. Click Continue to proceed to the Polly KG Explorer page. It will **open KG Explorer Landing page**. 
 
-![Page](../img/KG/KGEE1.png) <center> Polly KG Explorer Button</center>
+![Page](../img/KG/KGexplorernewww.png) <center> Polly KG Explorer Button</center>
 
-![Page](../img/KG/KGEE2.png) <center> Polly KG Explorer Switch Tab</center>
+![Page](../img/KG/SwitchTabKGexpll.png) <center> Polly KG Explorer Switch Tab</center>
 
 ## Layout of Polly KG Explorer
 
@@ -91,10 +91,10 @@ Once the graph is rendered, you can:
 
 An example output graph is shown below for reference.
 
-![schem](../img/KG/shortestpath1.png) <center> Shortest Path</center>
+![schem](../img/KG/ShortestPathnewww.png) <center> Shortest Path</center>
 
 The shortest path query that was executed:
-![sche](../img/KG/shortestpathquery.png) <center> Cypher Query used to calculate Shortest Path for the selected nodes</center>
+![sche](../img/KG/CypherQueryshortestpath.png) <center> Cypher Query used to calculate Shortest Path for the selected nodes</center>
 
 
 ### Query Explanation for Shortest Path
@@ -168,12 +168,12 @@ To discover all possible shortest connections between two nodes:
 
 Shown below is an example graph with all shortest paths.
 
-![sch](../img/KG/allshortestpath1.png) <center> All Shortest Path</center>
+![sch](../img/KG/AllShortestPathneww.png) <center> All Shortest Path</center>
 
 
 Users can Select All and render all shortest path and reset using the Reset button  
 
-![schh](../img/KG/allshortestpath2.png) <center>  Cypher Query used for All Shortest Path Calculation</center>
+![schh](../img/KG/cyperqueryforall.png) <center>  Cypher Query used for All Shortest Path Calculation</center>
 
 
 ### Query Explanation for All Shortest Path
@@ -237,7 +237,7 @@ The Node Explorer allows you to visualize a selected node and interactively expa
 - Select the node type from the dropdown
 - Select the target Node and a modal opens showing additional properties for that node that enables users to select nodes of interest
 
-![scm](../img/KG/nodeexplorerrr1.png) <center>  Node Explorer</center>
+![scm](../img/KG/NodeExplorernewww.png) <center>  Node Explorer</center>
 
 - Select the node you are interested in
 - Select the association that you are interested in
