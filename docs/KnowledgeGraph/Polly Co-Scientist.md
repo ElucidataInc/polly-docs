@@ -109,19 +109,13 @@ Follow the steps below to access and interact with the ERD:
 
 Click the **View ERD icon** located on the far right of the interface. The Entity Relationship Diagram (ERD) will open in the main canvas.
 
-![KG01](../img/KG/viewERDDneww.png) <center> View ERD icon</center>
-
 ![KG02](../img/KG/ERDDViewwhome.png) <center> ERD complete view</center>
 
-Use the entity panel on the left to control visibility:
-
-     - Select or deselect entities to dynamically update the ERD view. The diagram refreshes automatically based on your selection.
+Use the entity panel on the left to control visibility. Select or deselect entities to dynamically update the ERD view. The diagram refreshes automatically based on your selection.
      
-![KG03](../img/KG/selectdeselectentities.png) <center> Deselected Entities</center>  
+![KG03](../img/KG/selectdeselectentities.png) <center> Select/Deselect Entities</center>  
 
-Customize the diagram layout for better readability:
-
-    - Drag and reposition entities directly on the canvas. Adjust their placement to create a clearer and more structured view.
+User can customize the diagram layout for better readability. Drag and reposition entities directly on the canvas. Adjust their placement to create a clearer and more structured view.
 
   ![KG04](../img/KG/dragandadjust.png) <center> Drag and View</center>  
 
