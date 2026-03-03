@@ -89,13 +89,13 @@ Any change triggers instant recalibration of the execution plan and Cypher query
 #### Step 5: View the Results
 Once executed, results are presented in the most appropriate format based on the query intent:
 
-**Text Output**
+**Text Output**:
 A concise, human-readable summary of the results.
 
 ![KG8](../img/KG/textoutputnew.png) <center> Result</center>
 
 
-**Visual Output**
+**Visual Output**:
 An interactive visualization (table, sub-graph, or chart) rendered in the Knowledge Graph viewer for exploration and analysis.
 
 ![KG12](../img/KG/Visualoutputnew.png) <center> Graph View</center>
@@ -107,32 +107,33 @@ An interactive visualization (table, sub-graph, or chart) rendered in the Knowle
 
 Follow the steps below to access and interact with the ERD:
 
-1. Click the **View ERD icon** located on the far right of the interface. The Entity Relationship Diagram (ERD) will open in the main canvas.
+Click the **View ERD icon** located on the far right of the interface. The Entity Relationship Diagram (ERD) will open in the main canvas.
 
 ![KG01](../img/KG/viewERDDneww.png) <center> View ERD icon</center>
+
 ![KG02](../img/KG/ERDDViewwhome.png) <center> ERD complete view</center>
 
-2. Use the entity panel on the left to control visibility:
+Use the entity panel on the left to control visibility:
 
      - Select or deselect entities to dynamically update the ERD view. The diagram refreshes automatically based on your selection.
      
 ![KG03](../img/KG/selectdeselectentities.png) <center> Deselected Entities</center>  
 
-3. Customize the diagram layout for better readability:
+Customize the diagram layout for better readability:
 
     - Drag and reposition entities directly on the canvas. Adjust their placement to create a clearer and more structured view.
 
   ![KG04](../img/KG/dragandadjust.png) <center> Drag and View</center>  
 
-4. Use the zoom controls present on the bottom left to adjust the diagram scale. Click + to zoom in. Click – to zoom out. Click Fit to reset and automatically adjust the diagram to its original view.
+Use the zoom controls present on the bottom left to adjust the diagram scale. Click + to zoom in. Click – to zoom out. Click Fit to reset and automatically adjust the diagram to its original view.
 
  ![KG05](../img/KG/clickfittoreset.png) <center> Zoom Controls</center>
 
-5. Click on any entity (node) within the diagram to view its detailed node properties.
+Click on any entity (node) within the diagram to view its detailed node properties.
 
  ![KG06](../img/KG/genenodepropertiesERD.png) <center> Node Properties</center>
 
-6. Click on the relationship count associated with an entity to view all connected relationships. Select a specific relationship from the list to inspect its detailed edge properties.
+Click on the relationship count associated with an entity to view all connected relationships. Select a specific relationship from the list to inspect its detailed edge properties.
 
  ![KG07](../img/KG/relationshiperdd.png) 
 
