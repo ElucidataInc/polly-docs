@@ -3,7 +3,7 @@
 **Polly Co-Scientist** is an AI-powered research assistant developed to help scientists transform complex biomedical data into actionable scientific insights with ease. It transforms natural language queries into Cypher commands to interact with Polly's Knowledge Graph, allowing users to explore relationships, simulate biological reasoning, and generate hypotheses, without **writing a single line of code.**
 By abstracting away query syntax and graph complexity, Co-Scientist allows scientists to focus on scientific reasoning rather than technical execution.  
 
-![KG1](../img/KG/EKG1.png) <center> Polly Co-Scientist Interface</center>
+![KG1](../img/KG/PollyCoScInterface2.png) <center> Polly Co-Scientist Interface</center>
 
 ## Working Flow of Polly Co-Scientist
 
@@ -54,7 +54,7 @@ Use the chat interface to enter your research question in natural language.
 **Example**:  
 `What are the approved drugs for COPD?`
 
-![KG2](../img/KG/EKG2.png) <center> Query</center>
+![KG2](../img/KG/Querynew.png) <center> Query</center>
 
 #### Step 2: Review the Interpreted Query Strategy
 Co-Scientist analyzes your question and presents a structured interpretation, including:
@@ -70,39 +70,70 @@ Co-Scientist analyzes your question and presents a structured interpretation, in
 
 You can review, accept, remove, or refine these suggestions before proceeding.
 
-![KG4](../img/KG/EKG4.png) <center> Query Strategy</center>
+![KG4](../img/KG/QueryStrategynew.png) <center> Query Strategy</center>
 
-![KG5](../img/KG/EKG5.png) 
+![KG5](../img/KG/Querystrategynew2.png) 
 
 
 #### Step 3: Inspect the Execution Plan and Generated Cypher Query
 After confirmation, Co-Scientist generates and displays the complete execution plan along with the exact Cypher query derived from the approved strategy. This ensures full visibility into how your question will be executed on the Knowledge Graph.
 
-![KG6](../img/KG/EKG6.png) <center> Execution Plan and Cypher Query</center>
+![KG6](../img/KG/ExecutionPlannew.png) <center> Execution Plan and Cypher Query</center>
 
 #### Step 4: Confirm or Refine (Human-in-the-Loop)
 Before execution, Co-Scientist presents its full reasoning and query logic. You can approve the plan as-is or modify any step.
 Any change triggers instant recalibration of the execution plan and Cypher query.
 
-![KG7](../img/KG/EKG7.png) 
+![KG7](../img/KG/ViewResultsnew.png) 
 
 #### Step 5: View the Results
 Once executed, results are presented in the most appropriate format based on the query intent:
 
-**Text Output**
+**Text Output**:
 A concise, human-readable summary of the results.
 
-![KG8](../img/KG/EKG8.png) <center> Result</center>
+![KG8](../img/KG/textoutputnew.png) <center> Result</center>
 
 
-**Visual Output**
+**Visual Output**:
 An interactive visualization (table, sub-graph, or chart) rendered in the Knowledge Graph viewer for exploration and analysis.
 
-![KG12](../img/KG/EKG12.png) <center> Graph View</center>
+![KG12](../img/KG/Visualoutputnew.png) <center> Graph View</center>
 
-![KG9](../img/KG/EKG9.png) <center> Table view</center>
-
-
+![KG9](../img/KG/Tableviewnew.png) <center> Table view</center>
 
 
+## Exploring the Entity Relationship Diagram (ERD)
+
+Follow the steps below to access and interact with the ERD:
+
+Click the **View ERD icon** located on the far right of the interface. The Entity Relationship Diagram (ERD) will open in the main canvas.
+
+![KG02](../img/KG/ERDDViewwhome.png) <center> ERD complete view</center>
+
+Use the **entity panel** on the left to control visibility. Select or deselect entities to dynamically update the ERD view. The diagram refreshes automatically based on your selection.
+     
+![KG03](../img/KG/selectdeselectentities.png) <center> Select/Deselect Entities</center>  
+
+User can customize the diagram layout for better readability. **Drag and reposition entities** directly on the canvas. Adjust their placement to create a clearer and more structured view.
+
+  ![KG04](../img/KG/dragandadjust.png) <center> Drag and View</center>  
+
+Use the **zoom control**s available at the bottom left of the canvas to adjust the diagram scale. Click + to zoom in and – to zoom out. Click Fit to adjust the current view so that the last arranged nodes and relationships are proportionally fitted within the screen, without altering their layout. Click the Reset to Initial View (circle back icon) to restore the ERD to its original orientation and layout as it appeared when the diagram was first loaded.
+
+ ![KG05](../img/KG/clickfittoreset.png) <center> Zoom Controls</center>
+
+Click on any **entity (node)** within the diagram to view its detailed information. Upon selection, the Information Box (right sidebar) opens automatically and displays node properties and description.
+
+ ![KG06](../img/KG/genenodepropertiesERD.png) <center> Node Properties</center>
+
+Click on the **relationship count** associated with an entity to view all connected relationships. A dialog will open displaying the complete list of relationships, with names **alphabetically ordered** for easy navigation. If the total number of edges is large, use the **Search** option within the dialog to quickly locate specific relationship names. 
+
+ ![KG07](../img/KG/relationshipss.png) 
+
+ Select a relationship from the list to view its detailed edge properties. Upon selection, the Information Box (right sidebar) will open, displaying the relationship path along with all associated edge properties.
+
+ ![KG08](../img/KG/edgeprop.png) <center> Edge Properties</center>
+
+ This interactive ERD view enables structured exploration of entities, relationships, and their associated properties within the system.
 
