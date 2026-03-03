@@ -111,27 +111,29 @@ Click the **View ERD icon** located on the far right of the interface. The Entit
 
 ![KG02](../img/KG/ERDDViewwhome.png) <center> ERD complete view</center>
 
-Use the entity panel on the left to control visibility. Select or deselect entities to dynamically update the ERD view. The diagram refreshes automatically based on your selection.
+Use the **entity panel** on the left to control visibility. Select or deselect entities to dynamically update the ERD view. The diagram refreshes automatically based on your selection.
      
 ![KG03](../img/KG/selectdeselectentities.png) <center> Select/Deselect Entities</center>  
 
-User can customize the diagram layout for better readability. Drag and reposition entities directly on the canvas. Adjust their placement to create a clearer and more structured view.
+User can customize the diagram layout for better readability. **Drag and reposition entities** directly on the canvas. Adjust their placement to create a clearer and more structured view.
 
   ![KG04](../img/KG/dragandadjust.png) <center> Drag and View</center>  
 
-Use the zoom controls present on the bottom left to adjust the diagram scale. Click + to zoom in. Click – to zoom out. Click Fit to reset and automatically adjust the diagram to its original view.
+Use the **zoom control**s available at the bottom left of the canvas to adjust the diagram scale. Click + to zoom in and – to zoom out. Click Fit to adjust the current view so that the last arranged nodes and relationships are proportionally fitted within the screen, without altering their layout. Click the Reset to Initial View (circle back icon) to restore the ERD to its original orientation and layout as it appeared when the diagram was first loaded.
 
  ![KG05](../img/KG/clickfittoreset.png) <center> Zoom Controls</center>
 
-Click on any entity (node) within the diagram to view its detailed node properties.
+Click on any **entity (node)** within the diagram to view its detailed information. Upon selection, the Information Box (right sidebar) opens automatically and displays node properties and description.
 
  ![KG06](../img/KG/genenodepropertiesERD.png) <center> Node Properties</center>
 
-Click on the relationship count associated with an entity to view all connected relationships. Select a specific relationship from the list to inspect its detailed edge properties.
+Click on the **relationship count** associated with an entity to view all connected relationships. A dialog will open displaying the complete list of relationships, with names **alphabetically ordered** for easy navigation. If the total number of edges is large, use the **Search** option within the dialog to quickly locate specific relationship names. 
 
- ![KG07](../img/KG/relationshiperdd.png) 
+ ![KG07](../img/KG/relationshipss.png) 
 
- ![KG08](../img/KG/clickonrelationshiptoprop.png) <center> Edge Properties</center>
+ Select a relationship from the list to view its detailed edge properties. Upon selection, the Information Box (right sidebar) will open, displaying the relationship path along with all associated edge properties.
+
+ ![KG08](../img/KG/edgeprop.png) <center> Edge Properties</center>
 
  This interactive ERD view enables structured exploration of entities, relationships, and their associated properties within the system.
 
