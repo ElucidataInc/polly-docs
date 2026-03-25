@@ -86,7 +86,7 @@ Any change triggers instant recalibration of the execution plan and Cypher query
 
 ![KG7](../img/KG/ViewResultsnew.png) 
 
-#### Step 5: View the Results
+#### Step 5: View and Share the Results
 Once executed, results are presented in the most appropriate format based on the query intent:
 
 **Text Output**:
@@ -102,6 +102,11 @@ An interactive visualization (table, sub-graph, or chart) rendered in the Knowle
 
 ![KG9](../img/KG/Tableviewnew.png) <center> Table view</center>
 
+**Share the Results**:
+
+Users can now share their chat conversations with Co-Scientist on KG using the Share button available at the top right of the screen. This option is available at any point during the conversation, allowing users to share chats seamlessly at any moment. On clicking the button, a shareable URL is copied to the clipboard. This link can be used by another user within the same organization to access the complete conversation in view-only mode.
+
+![KG002](../img/KG/shareKG.png) <center> Share Button</center>
 
 ## Exploring the Entity Relationship Diagram (ERD)
 
