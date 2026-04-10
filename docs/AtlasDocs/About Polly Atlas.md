@@ -10,7 +10,6 @@ Polly Atlas provides two complementary interfaces: **GUI** and **Code** designed
 
 This Polly Atlas provides an interface for basic exploration of the data, schema management and access management. Designed for intuitive, no-code interaction:
 
-- **Schema Management:** Define and manage table structures and metadata  
 - **Data Exploration & Querying:** Filter, search, and explore datasets with ease  
 - **Data Management:** Perform basic data operations through UI workflows  
 - **Access Management:** Configure roles and permissions for secure data access  
@@ -20,7 +19,8 @@ This Polly Atlas provides an interface for basic exploration of the data, schema
 Built for advanced users requiring flexibility and control via [Polly Python](https://docs.polly.elucidata.io/polly-python/Atlas/Atlas.html):
 
 - **Data Management:** Programmatic handling of datasets at scale  
-- **SQL Querying:** Advanced querying for complex analysis and transformations  
+- **SQL Querying:** Advanced querying for complex analysis and transformations
+- **Schema Management:** Define and manage table structures and metadata  
 
 
 ## Key Advantages
@@ -36,18 +36,6 @@ Built for advanced users requiring flexibility and control via [Polly Python](ht
 - **Role-Based Access Control:** Granular permissions (Manager → Consumer) ensure secure and controlled data access.  
 - **Improved User Experience:** Replaces fragmented workflows (download → script → filter) with a streamlined process: **Explore → Filter → Query → Download**
 
-
-## What Advantage Does Polly Atlas Create?
-
-Polly Atlas addresses key limitations of traditional file-based data systems and enables efficient, scalable, and user-friendly data exploration.
-
-| Feature        | OmixAtlas           | Polly Atlas        |
-|----------------|--------------------|--------------------|
-| Data Access    | File-based (S3/FTP) | Table-based        |
-| Filtering      | Manual scripting    | Built-in filters   |
-| Relationships  | None                | Relational tables  |
-| Export         | Limited             | One-click CSV      |
-| Traceability   | Not available       | Full audit logs    |
 
 
 
