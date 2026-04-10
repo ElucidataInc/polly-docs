@@ -8,18 +8,28 @@ Polly Atlas provides built-in controls to help users manage, monitor, and govern
 
 Users can access Atlas-level actions by clicking the **three-dot menu** located next to the Atlas name at the top-left of the interface.
 
+![Homepage](../img/OmixAtlas-Images/viewatlaschange.png) <center> View Atlas–Level Options</center>
+
 From the dropdown:
 
 - **Change Logs**: Users can view a complete history of changes made to the Atlas, including schema updates and edits. Change logs can also be downloaded for auditing and traceability.
-<img>
+
+![Homepage](../img/OmixAtlas-Images/changelog1.png) 
 
 - **Edit Atlas**: Users can update the Atlas name and description to maintain accurate documentation and context.
-<img>
+
+![Homepage](../img/OmixAtlas-Images/editatlas1.png) 
+
 
 - **Manage Users**: Users can view and manage who has access to the Atlas, including assigning roles and permissions.
-<img>
+
+![Homepage](../img/OmixAtlas-Images/changelog1.png) 
+
 
 - **Archive Atlas**: Archiving an Atlas restricts access for all users. Once archived, the Atlas will no longer be accessible to you or other users until it is unarchived.
+
+![Homepage](../img/OmixAtlas-Images/Archieveatlas1.png) 
+
 
 ## User Roles in Polly Atlas
 
