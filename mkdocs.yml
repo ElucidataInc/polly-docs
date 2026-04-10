@@ -13,13 +13,18 @@ nav:
   - Dashboard:
       - Admin Dashboard: Getting Started/Admin Dashboard.md
       - Monitoring Dashboard: Getting Started/Monitoring_Dashboard.md
-  - Atlas:
-      - About Atlas: OmixAtlas/Atlas.md
-      - Overview of Atlas: OmixAtlas/Overview_of_Atlas.md
-      - Curating Atlas:
-        - Curating Atlas: OmixAtlas/Curating OA/Curating_OA.md 
-        - Curating Atlas - Bulk RNAseq: OmixAtlas/Curating OA/Curating_OA_BulkRNAseq.md 
-        - Curating Atlas - Single Cell: OmixAtlas/Curating OA/Curating_OA_scRNA.md 
+  - Polly Atlas:
+      - About Polly Atlas: AtlasDocs/About Polly Atlas.md
+      - Overview of Polly Atlas: AtlasDocs/Overview of the Polly Atlas.md
+      - View Polly Atlas Options: AtlasDocs/View Atlas Options.md
+      - Polly Co-Scientist: AtlasDocs/Atlas_Polly Co-Scientist.md
+  - OmixAtlas:
+      - About OmixAtlas: OmixAtlas/OmixAtlas.md
+      - Overview of OmixAtlas: OmixAtlas/Overview_of_OmixAtlas.md
+      - Curating OmixAtlas:
+        - Curating OmixAtlas: OmixAtlas/Curating OA/Curating_OA.md 
+        - Curating OmixAtlas - Bulk RNAseq: OmixAtlas/Curating OA/Curating_OA_BulkRNAseq.md 
+        - Curating OmixAtlas - Single Cell: OmixAtlas/Curating OA/Curating_OA_scRNA.md 
       - How to Find Datasets?: OmixAtlas/search_datasets.md
       - How to Filter Datasets?: OmixAtlas/Filter_datasets.md
       - How to View Details?: OmixAtlas/View_Details.md
@@ -30,7 +35,7 @@ nav:
         - Bulk RNA Sequencing FAQs: OmixAtlas/FAQs/Bulk_RNA_sequencing_FAQs.md
         - Single Cell RNA Sequencing FAQs: OmixAtlas/FAQs/scRNA_seq_FAQs.md
         - Spatial Transcriptomics FAQs: OmixAtlas/FAQs/Spatial_Transcriptomics_FAQs.md
-  - Polly Python: '!import https://github.com/ElucidataInc/polly-python-code?branch=multirepo_plugin_docs&extra_imports=["polly/*", "polly_services/*"]'
+  - Polly Python: '!import https://github.com/ElucidataInc/polly-python-code?branch=multirepo_plugin_docs_develop&extra_imports=["polly/*", "polly_services/*"]'
   - Polly Compute:
     - Polly Notebooks:
       - About Polly Notebooks: Scaling compute/Polly Notebooks5.md
