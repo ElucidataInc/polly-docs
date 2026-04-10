@@ -1,8 +1,8 @@
 # Overview of the OmixAtlas
 
-The OmixAtlas landing page offers OmixAtlases under two different sections - Public Data OmixAtlases and User Data OmixAtlases.
+The OmixAtlas landing page offers OmixAtlases under two different sections - Public Data Atlases and User Data Atlases.
 
-Under public data OmixAtlases, there are two source atlases: Bulk RNA-seq and single-cell RNA-seq Atlas. User Data OmixAtlases contain destination atlas and enterprise Atlas.
+Under public data Atlases, there are two source atlases: Bulk RNA-seq and single-cell RNA-seq Atlas. User Data OmixAtlases contain destination atlas and enterprise Atlas.
 
 ![Homepage](../img/OmixAtlas-Images/atlashomepagenew.png) <center> OmixAtlas Homepage</center>
 
