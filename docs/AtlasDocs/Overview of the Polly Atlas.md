@@ -46,16 +46,16 @@ For omics datasets:
 This relational structure enables users to join tables and analyze data across datasets and samples seamlessly. In table overview, schema view can also be repositioned by dragging the elements and adjusting them according to the desired view for better and understanding.
 
 
-###  Filter Table Data
+###  Sort and Filter Table Data
 
-In the main table grid, each column header has a filter icon (funnel). Users can filter the columns alphabetically: **A to Z** to filter the field names in ascending order and **Z to A** to filter the field names in descending order. The table updates instantly to reflect the selected sorting order.
+In the main table grid, each column header has a funnel icon. Users can Sort the columns alphabetically: **A to Z** to sort the field names in ascending order and **Z to A** to sort the field names in descending order. The table updates instantly to reflect the selected sorting order.
 
-![T](../img/OmixAtlas-Images/tablefilterr.png) <center> Filter Table Data</center>
+![T](../img/OmixAtlas-Images/tablefilterr.png) <center> Sort Table Data</center>
 
-![V](../img/OmixAtlas-Images/filteratoz.png) <center> Filtering Table Data by A to Z </center>
+![V](../img/OmixAtlas-Images/filteratoz.png) <center> Sorting Table Data by A to Z </center>
 
 
-Users can also filter the table based on specific values within a column. This enables users to quickly locate and analyze relevant subsets of data within large tables.
+Users can also **filter the table** based on specific values within a column. This enables users to quickly locate and analyze relevant subsets of data within large tables.
 
 - Search for and select the desired value  
 - The table dynamically filters and displays all rows associated with that value  
@@ -106,30 +106,7 @@ This feature is particularly useful when table-level filters are not sufficient,
 ![S](../img/OmixAtlas-Images/sqlll.png) <center> Example of SQL Run</center>
 
 
-## Polly Co-Scientist
 
-Polly Co-Scientist enables users to interact with Atlas data using **natural language queries (NLQ)**, eliminating the need for writing SQL.
-
-Users can simply type a question or request in plain English to explore datasets, retrieve specific information, or understand table contents.
-
-For example, users can ask:
-- “Show details for dataset curated_cell_line”
-- “List all samples for a specific dataset”
-
-Before execution, Polly Co-Scientist presents its **reasoning and query logic**, allowing users to review how the query is interpreted and ensuring transparency in the results. Users can click on **Reasoning** to view detailed steps behind how the query is constructed.
-
-![P](../img/OmixAtlas-Images/costatlas.png) 
-
-Once confirmed, it executes the query and returns relevant results directly from the Atlas, making data exploration faster and more intuitive.
-
-![P](../img/OmixAtlas-Images/coscietatlas.png) <center> Polly Co-Scientist</center>
-
-Users can also enhance their experience by:
-- Switching to **full-screen mode** for better visibility and focus  
-- Starting a **new session** to reset context and initiate a fresh query flow
-
-For more details, refer to the official documentation of Polly Co-Scientist:  
-[Polly Co-Scientist Documentation](https://docs.polly.elucidata.io/KnowledgeGraph/Polly%20Co-Scientist.html)
 
 
 
