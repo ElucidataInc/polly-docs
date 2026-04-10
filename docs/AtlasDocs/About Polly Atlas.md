@@ -1,4 +1,4 @@
-# What is an Polly Atlas?
+## What is an Polly Atlas?
 
 Polly Atlas is a user-defined collection of tables that integrates spreadsheet-style data with relational database structures. Each table is organized around a predefined set of metadata fields or clinical annotations, and provides unified access to linked datasets, QC reports, and other associated files or folders in a unified table.
 
@@ -23,7 +23,7 @@ Built for advanced users requiring flexibility and control via [Polly Python](ht
 - **Schema Management:** Define and manage table structures and metadata  
 
 
-## Key Advantages
+### Key Advantages
 
 - **Eliminates Manual File Handling:** No need to browse S3/FTP folders or download files to explore data; everything is accessible within structured tables.  
 - **Instant Data Discovery:** Search and filter datasets using column-level filters instead of scrolling through long file lists.  
