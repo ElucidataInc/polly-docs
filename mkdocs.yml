@@ -14,15 +14,16 @@ nav:
       - Admin Dashboard: Getting Started/Admin Dashboard.md
       - Monitoring Dashboard: Getting Started/Monitoring_Dashboard.md
   - Polly Atlas:
-      - About Atlas: OmixAtlas/PollyAtlas/AboutAtlas.md
-      - Overview of Atlas: OmixAtlas/PollyAtlas/OverviewofAtlas_.md
-  - Atlas:
-      - About Atlas: OmixAtlas/Atlas.md
-      - Overview of Atlas: OmixAtlas/Overview_of_Atlas.md
-      - Curating Atlas:
-        - Curating Atlas: OmixAtlas/Curating OA/Curating_OA.md 
-        - Curating Atlas - Bulk RNAseq: OmixAtlas/Curating OA/Curating_OA_BulkRNAseq.md 
-        - Curating Atlas - Single Cell: OmixAtlas/Curating OA/Curating_OA_scRNA.md 
+      - About Polly Atlas: AtlasDocs/About Polly Atlas.md
+      - Overview of Polly Atlas: AtlasDocs/Overview of the Polly Atlas.md
+      - View Polly Atlas Options: AtlasDocs/View Atlas Options.md
+  - OmixAtlas:
+      - About OmixAtlas: OmixAtlas/OmixAtlas.md
+      - Overview of OmixAtlas: OmixAtlas/Overview_of_OmixAtlas.md
+      - Curating OmixAtlas:
+        - Curating OmixAtlas: OmixAtlas/Curating OA/Curating_OA.md 
+        - Curating OmixAtlas - Bulk RNAseq: OmixAtlas/Curating OA/Curating_OA_BulkRNAseq.md 
+        - Curating OmixAtlas - Single Cell: OmixAtlas/Curating OA/Curating_OA_scRNA.md 
       - How to Find Datasets?: OmixAtlas/search_datasets.md
       - How to Filter Datasets?: OmixAtlas/Filter_datasets.md
       - How to View Details?: OmixAtlas/View_Details.md
