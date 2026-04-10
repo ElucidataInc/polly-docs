@@ -6,7 +6,8 @@ Upon selecting an Atlas, users can explore its underlying tables and associated 
 The GUI enables intuitive interaction with the data, allowing users to browse, filter, and examine datasets without requiring manual file handling or external tools.
 This streamlined experience ensures efficient data discovery and exploration within a unified, user-friendly interface.
 
-![Homepage](../img/OmixAtlas-Images/atlashomepagenew.png) <center> Atlas Homepage</center>
+![Homepage](../img/OmixAtlas-Images/Pollyatlasoverview.png) <center> Polly Atlas Homepage</center>
+
 
 
 ## Exploring Polly Atlas
@@ -22,7 +23,8 @@ The left-hand panel lists all available tables within the selected Atlas. Typica
 
 Users can switch between tables to explore different levels of data granularity.
 
-<img>
+![H](../img/OmixAtlas-Images/InsidePollyAtlas.png) <center> Navigating Between Tables</center>
+
 
 ### Understanding Table Schema
 
@@ -32,29 +34,26 @@ Each table provides a **Table Overview**, which displays its schema, including:
 - Identification of **Primary Keys** and **Foreign Keys**  
 - Structural relationships between tables  
 
-<img>
-
 For omics datasets:
 
 - In the **Dataset Table**, `dataset_id` serves as the **primary key**  
-- In the **Sample Table**, `sample_id` is the **primary key**, while `dataset_id` acts as a **foreign key**  
+- In the **Sample Table**, `sample_id` is the **primary key**, while `dataset_id` acts as a **foreign key**
 
-This relational structure enables users to join tables and analyze data across datasets and samples seamlessly. In able overview, schema view can be repositioned by dragging the elements and adjusting them according to the desired view for better and understanding.
+![D](../img/OmixAtlas-Images/datasetprimarykey.png) <center> Table Overview of Dataset Table</center>
 
-<img>
+![S](../img/OmixAtlas-Images/sampleidprimary.png) <center> Table Overview of Sample Table</center>
 
-
-### Downloading Data
-
-Users can download data directly from the interface: User can download the entire CSV for that particular table by linking on the **Download CSV** option. This enables quick access to structured data for downstream analysis.  
-
-<img>
+This relational structure enables users to join tables and analyze data across datasets and samples seamlessly. In table overview, schema view can also be repositioned by dragging the elements and adjusting them according to the desired view for better and understanding.
 
 
 ###  Filter Table Data
 
 In the main table grid, each column header has a filter icon (funnel). Users can filter the columns alphabetically: **A to Z** to filter the field names in ascending order and **Z to A** to filter the field names in descending order. The table updates instantly to reflect the selected sorting order.
-<img>
+
+![T](../img/OmixAtlas-Images/tablefilterr.png) <center> Filter Table Data</center>
+
+![V](../img/OmixAtlas-Images/filteratoz.png) <center> Filtering Table Data by A to Z </center>
+
 
 Users can also filter the table based on specific values within a column. This enables users to quickly locate and analyze relevant subsets of data within large tables.
 
@@ -62,15 +61,76 @@ Users can also filter the table based on specific values within a column. This e
 - The table dynamically filters and displays all rows associated with that value  
 - All related fields and metadata for the selected value are shown in context  
 
-<img>
+![I](../img/OmixAtlas-Images/filterbyvalue.png) <center> Filter Table Data by Value</center>
+
+
+### Pagination and Rows per Page
+
+Users can adjust the number of rows displayed by using the **“Rows per page”** option located at the bottom-left of the table. This allows customization of how many records are visible at once (e.g., 25 rows per page).
+
+To navigate through the dataset, users can use the **page navigation controls** to move between different pages of results. This ensures smooth browsing and efficient access to large volumes of data.
+
+
+### Download Filtered Data as CSV
+
+Once the table is filtered to the desired subset, users can download the data by clicking **Download CSV** located at the top-right of the table.
+
+The exported file will include only the **current table** and will reflect the **active filters and visible result set**, ensuring that the downloaded data matches the on-screen view.
+
+This functionality enables users to seamlessly move data into external tools such as Python, R, or Excel for further analysis, and to easily share curated subsets of data with collaborators.
+
+![V](../img/OmixAtlas-Images/downloadcsv.png) <center> Download CSV</center>
+
 
 ## Explore the Schema: View ERD
 
 Polly Atlas provides an **Entity Relationship Diagram (ERD)** view to help users understand the structure and relationships within an Atlas. Users can access this view by clicking on **View ERD**, which opens a visual representation of all tables and their connections within the selected Atlas.
 
+The ERD view enables users to clearly understand how data is organized across tables and how different entities are linked. This is particularly useful for planning joins and downstream analysis, such as identifying the appropriate keys to use when combining dataset- and sample-level information.
+
 The ERD is interactive and designed for ease of use. Users can drag and reposition tables to adjust the layout for better visibility and understanding. Additionally, zoom controls are available at the bottom-right corner of the screen, allowing users to zoom in (**+**) and zoom out (**−**) as needed.
 
-The diagram clearly illustrates how tables are related. For example, it highlights the relationship between the **Dataset** and **Sample** tables, where `dataset_id` acts as the primary key in the Dataset table and as a foreign key in the Sample table. This makes it easy to understand how data is linked across tables and supports more efficient data exploration and querying.
+![E](../img/OmixAtlas-Images/erdatlas.png) <center> Entity Relationship Diagram</center>
+
+
+## Run Custom Queries: SQL Query
+
+Polly Atlas provides a built-in SQL editor for advanced data exploration and analysis.
+
+Users can access this feature by clicking **SQL Query** located at the top-right of the interface. This opens the SQL editor for the selected Atlas, enabling users to write and execute custom queries directly within the UI.
+
+Using the SQL editor, users can filter, aggregate, and join data across multiple tables. Query results can be executed and previewed instantly, allowing for iterative analysis without leaving the platform.
+
+This feature is particularly useful when table-level filters are not sufficient, or when more complex logic—such as multi-table joins or aggregations—is required.
+
+![S](../img/OmixAtlas-Images/sqlll.png) <center> Example of SQL Run</center>
+
+
+## Polly Co-Scientist
+
+Polly Co-Scientist enables users to interact with Atlas data using **natural language queries (NLQ)**, eliminating the need for writing SQL.
+
+Users can simply type a question or request in plain English to explore datasets, retrieve specific information, or understand table contents.
+
+For example, users can ask:
+- “Show details for dataset curated_cell_line”
+- “List all samples for a specific dataset”
+
+Before execution, Polly Co-Scientist presents its **reasoning and query logic**, allowing users to review how the query is interpreted and ensuring transparency in the results. Users can click on **Reasoning** to view detailed steps behind how the query is constructed.
+
+![P](../img/OmixAtlas-Images/costatlas.png) 
+
+Once confirmed, it executes the query and returns relevant results directly from the Atlas, making data exploration faster and more intuitive.
+
+![P](../img/OmixAtlas-Images/coscietatlas.png) <center> Polly Co-Scientist</center>
+
+Users can also enhance their experience by:
+- Switching to **full-screen mode** for better visibility and focus  
+- Starting a **new session** to reset context and initiate a fresh query flow
+
+For more details, refer to the official documentation of Polly Co-Scientist:  
+[Polly Co-Scientist Documentation](https://docs.polly.elucidata.io/KnowledgeGraph/Polly%20Co-Scientist.html)
+
 
 
 
