@@ -241,14 +241,12 @@ Follow these steps to start exploring:
 3. Use the **additional filters** to narrow down to the node of interest. These filters are sourced from the backend and need to be specified at the time of ingestion.
 4. Apply the filters to view matching results, then click on a result to select your **target node**.
 5. Once the node is selected, a modal opens displaying additional properties for that node, eabling users to select nodes of interest.
-   
-   ![Search Node](../img/KG/SearchNode.png) <center> Search Node with multi-field filters </center>
-   
-    ![Search Results](../img/KG/SearchNode_Results.png) <center> Filtered search results </center>
-7. Select the **association (edge type)** you are interested in.
-8. A new modal opens that lets you filter based on **edge properties**. Each property includes a description, so you can intuitively choose which ones to filter on.
-9. After applying filters, the next page lists all matching values. You can **deselect** values you don't need, **select** specific values, or **apply all** to include everything.
-10. On the final page, you can review the **Cypher query** that runs in the backend to fetch the results.
+![Search Node](../img/KG/SearchNode.png) <center> Search Node with multi-field filters </center>
+![Search Results](../img/KG/SearchNode_Results.png) <center> Filtered search results </center>
+6. Select the **association (edge type)** you are interested in.
+7. A new modal opens that lets you filter based on **edge properties**. Each property includes a description, so you can intuitively choose which ones to filter on.
+8. After applying filters, the next page lists all matching values. You can **deselect** values you don't need, **select** specific values, or **apply all** to include everything.
+9. On the final page, you can review the **Cypher query** that runs in the backend to fetch the results.
 
 **Video on User Interaction**
  
