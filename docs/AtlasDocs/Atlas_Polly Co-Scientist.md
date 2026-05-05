@@ -12,12 +12,7 @@ The results are displayed directly in the interface. Users can further inspect h
 
 The Query is executed and returns relevant results directly from the Atlas, making data exploration faster and more intuitive.
 
-Users can also enhance their experience by:
-- Switching to **full-screen mode** for better visibility and focus  
-- Starting a **new session** to reset context and initiate a fresh query flow
-
-For more details, refer to the official documentation of Polly Co-Scientist:  [Polly Co-Scientist Documentation](https://docs.polly.elucidata.io/KnowledgeGraph/Polly%20Co-Scientist.html)
-
+Users can also enhance their experience by switching to **full-screen mode** for better visibility and focus and can also start a **new session** to reset context and initiate a fresh query flow
 
 ![P](../img/OmixAtlas-Images/coscietatlas.png) <center> Polly Co-Scientist</center>
 

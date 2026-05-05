@@ -229,66 +229,64 @@ RETURN path,
 ---
 
 ## 3. Node Explorer
-
-The Node Explorer allows you to visualize a selected node and interactively expand its immediate neighbors. You can also apply filters based on properties stored on relationships to refine what is displayed in the graph.
-
+ 
+The **Node Explorer** lets you visualize a selected node and interactively expand its immediate neighbors. You can also apply filters based on properties stored on relationships (edges) to refine what is displayed in the graph.
+ 
 ### How to Use Node Explorer
-- Click on the **Node Explorer** tab
-- Select the node type from the dropdown
-- Select the target Node and a modal opens showing additional properties for that node that enables users to select nodes of interest
-
-![scm](../img/KG/NodeExplorernewww.png) <center>  Node Explorer</center>
-
-- Select the node you are interested in
-- Select the association that you are interested in
-- A modal opens that allows users to filter based on the edge properties and also see the description of each edge property that lets users to select edge properties intuitively for filtering
-- Upon filtering, a next page shows all the filtered values that users can Deselect and only select the specific one they are interested in or apply all
-- In the last page, users can see the cypher query that run in the backend to fetch the results 
-
-**Video on User interaction**
-
+ 
+Follow these steps to start exploring:
+ 
+1. Click on the **Node Explorer** tab.
+2. From the **Node Type** dropdown, select the type of node you want to explore.
+3. Use the **additional filters** to narrow down to the node of interest. These filters are sourced from the backend and need to be specified at the time of ingestion. They let you search across multiple fields at once (for example, `name`, `full_name`, `id`, `synonyms`, `tax_id`).
+    ![Search Node](../img/KG/SearchNode.png) <center>Search Node with multi-field filters </center>
+4. Apply the filters to view matching results, then click on a result to select your **starting node**.
+    ! [Search Results](../img/KG/SearchNode_Results.png) <center>Filtered search results</center>
+5. Once the node is selected, a modal opens displaying additional properties for that node, helping you confirm you have picked the right one.
+6. Select the **association (edge type)** you are interested in.
+7. A new modal opens that lets you filter based on **edge properties**. Each property includes a description, so you can intuitively choose which ones to filter on.
+8. After applying filters, the next page lists all matching values. You can **deselect** specific values you don't need, or **apply all** to include everything.
+9. On the final page, you can review the **Cypher query** that runs in the backend to fetch the results, giving you full transparency into the data being retrieved.
+**Video on User Interaction**
+ 
 <video width="100%" controls>
-  <source src="../img/KG/video4.mp4" type="video/mp4">
+  <source src="../img/KG/KGUserInteraction.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-
-**Note:** Please note that the number of edges fetched given a Node term is based on schema and therefore, some associations may not have a Target node that will be shown on the UI as 
-
-![scm](../img/KG/edgefilters1.png) <center>  Edge Filters</center>
-
-
-**Video on how to see properties of Nodes and Edges**
-
+**Note** The number of edges fetched for a given node term is determined by the schema. As a result, some associations may not have a target node available, and will appear in the UI as shown below:
+ 
+![Edge Filters](../img/KG/EdgeFilters.png) <center>Edge Filters</center>
+ 
+**Video on How to See Properties of Nodes and Edges**
+ 
 <video width="100%" controls>
-  <source src="../img/KG/video5.mp4" type="video/mp4">
+  <source src="../img/KG/ViewProperties.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-
-**Expand Network**
-
-Interacting with Nodes in the Subgraph:
-
-1. Select a Node: Click on any node within the subgraph to begin exploration.
-
-2. View First-Degree Neighbors: A modal panel opens on the right, displaying the **first-degree neighbors** of the selected node.
-
-3. Filter and Expand: Click **Filter & Expand** to apply filters based on **edge properties**. Alternatively, click **View Nodes** to search for and explore specific terms.
-
-4. Apply Filters: Select or deselect the desired filter options. Click **Apply** to update the subgraph view.
-
-5. Navigate Changes: Use the **Previous** button to remove the most recent node expansion. Use the **Next** button to undo the change and reapply the expansion.
-
-
-**Video on User interaction**
-
+### Expand Network
+ 
+Once a subgraph is rendered, you can expand it iteratively by interacting with any node in the view:
+ 
+1. **Select a node**: Click on any node within the subgraph to begin exploration.
+2. **View first-degree neighbors**: A side panel opens on the right, displaying the **first-degree neighbors** of the selected node.
+3. **Choose how to expand**:
+    - Click **Filter & Expand** to apply filters based on **edge properties**.
+    - Click **View Nodes** to search for and explore specific terms.
+4. **Apply filters**: Select or deselect the desired filter options, then click **Apply** to update the subgraph view.
+5. **Navigate your changes**:
+    - Use the **Previous** button to remove the most recent node expansion.
+    - Use the **Next** button to undo the removal and reapply the expansion.
+      
+**Video on User Interaction**
+ 
 <video width="100%" controls>
-  <source src="../img/KG/video6.mp4" type="video/mp4">
+  <source src="../img/KG/ExpandNetwork.mp4" type="video/mp4">
   Your browser does not support the video tag.
+ 
 </video>
-Users can use this Journey to keep expanding the network iteratively.
-
+You can repeat this journey as many times as needed to keep expanding the network iteratively and uncover the relationships you care about.
 
 ## 4. Shareable State of Knowledge Graph
 

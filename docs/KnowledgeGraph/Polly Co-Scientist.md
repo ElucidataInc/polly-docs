@@ -130,15 +130,19 @@ Use the **zoom control**s available at the bottom left of the canvas to adjust t
 
 Click on any **entity (node)** within the diagram to view its detailed information. Upon selection, the Information Box (right sidebar) opens automatically and displays node properties and description.
 
- ![KG06](../img/KG/genenodepropertiesERD.png) <center> Node Properties</center>
+ ![KG06](../img/KG/node26.png) <center> Node Properties</center>
 
 Click on the **relationship count** associated with an entity to view all connected relationships. A dialog will open displaying the complete list of relationships, with names **alphabetically ordered** for easy navigation. If the total number of edges is large, use the **Search** option within the dialog to quickly locate specific relationship names. 
 
- ![KG07](../img/KG/relationshipss.png) 
+ ![KG07](../img/KG/node266.png) 
 
  Select a relationship from the list to view its detailed edge properties. Upon selection, the Information Box (right sidebar) will open, displaying the relationship path along with all associated edge properties.
 
- ![KG08](../img/KG/edgeprop.png) <center> Edge Properties</center>
+ ![KG08](../img/KG/edge26.png) <center> Edge Properties</center>
+
+ On the extreme right, the counts represent the total number of nodes (entities) and relationships (edges) present in the knowledge graph.
+
+ ![KG09](../img/KG/counts.png) <center> Counts</center>
 
  This interactive ERD view enables structured exploration of entities, relationships, and their associated properties within the system.
 
