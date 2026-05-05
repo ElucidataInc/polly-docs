@@ -230,7 +230,7 @@ RETURN path,
 
 ## 3. Node Explorer
  
-The **Node Explorer** lets you visualize a selected node and interactively expand its immediate neighbors. You can also apply filters based on properties stored on relationships (edges) to refine what is displayed in the graph.
+The **Node Explorer** lets you visualize a selected node and interactively expand its immediate neighbors. Users can also apply filters based on properties stored on relationships (edges) to refine what is displayed in the graph.
  
 ### How to Use Node Explorer
  
@@ -238,15 +238,15 @@ Follow these steps to start exploring:
  
 1. Click on the **Node Explorer** tab.
 2. From the **Node Type** dropdown, select the type of node you want to explore.
-3. Use the **additional filters** to narrow down to the node of interest. These filters are sourced from the backend and need to be specified at the time of ingestion. They let you search across multiple fields at once (for example, `name`, `full_name`, `id`, `synonyms`, `tax_id`).
-    ![Search Node](../img/KG/SearchNode.png) <center>Search Node with multi-field filters </center>
-4. Apply the filters to view matching results, then click on a result to select your **starting node**.
-    ! [Search Results](../img/KG/SearchNode_Results.png) <center>Filtered search results</center>
-5. Once the node is selected, a modal opens displaying additional properties for that node, helping you confirm you have picked the right one.
+3. Use the **additional filters** to narrow down to the node of interest. These filters are sourced from the backend and need to be specified at the time of ingestion.
+4. Apply the filters to view matching results, then click on a result to select your **target node**.
+5. Once the node is selected, a modal opens displaying additional properties for that node, eabling users to select nodes of interest.
+   ![Search Node](../img/KG/SearchNode.png) <center>Search Node with multi-field filters </center>
+    ![Search Results](../img/KG/SearchNode_Results.png) <center>Filtered search results</center>
 6. Select the **association (edge type)** you are interested in.
 7. A new modal opens that lets you filter based on **edge properties**. Each property includes a description, so you can intuitively choose which ones to filter on.
-8. After applying filters, the next page lists all matching values. You can **deselect** specific values you don't need, or **apply all** to include everything.
-9. On the final page, you can review the **Cypher query** that runs in the backend to fetch the results, giving you full transparency into the data being retrieved.
+8. After applying filters, the next page lists all matching values. You can **deselect** values you don't need, **select** specific values, or **apply all** to include everything.
+9. On the final page, you can review the **Cypher query** that runs in the backend to fetch the results.
 **Video on User Interaction**
  
 <video width="100%" controls>
@@ -277,7 +277,7 @@ Once a subgraph is rendered, you can expand it iteratively by interacting with a
 4. **Apply filters**: Select or deselect the desired filter options, then click **Apply** to update the subgraph view.
 5. **Navigate your changes**:
     - Use the **Previous** button to remove the most recent node expansion.
-    - Use the **Next** button to undo the removal and reapply the expansion.
+    - Use the **Next** button to undo changes
       
 **Video on User Interaction**
  
@@ -286,7 +286,7 @@ Once a subgraph is rendered, you can expand it iteratively by interacting with a
   Your browser does not support the video tag.
  
 </video>
-You can repeat this journey as many times as needed to keep expanding the network iteratively and uncover the relationships you care about.
+Users can repeat this journey as many times as needed to keep expanding the network iteratively and uncover the relationships you care about.
 
 ## 4. Shareable State of Knowledge Graph
 
