@@ -249,6 +249,7 @@ Follow these steps to start exploring:
 8. A new modal opens that lets you filter based on **edge properties**. Each property includes a description, so you can intuitively choose which ones to filter on.
 9. After applying filters, the next page lists all matching values. You can **deselect** values you don't need, **select** specific values, or **apply all** to include everything.
 10. On the final page, you can review the **Cypher query** that runs in the backend to fetch the results.
+
 **Video on User Interaction**
  
 <video width="100%" controls>
