@@ -12,7 +12,7 @@ To use Scout, sign in to your Polly account. Scout automatically uses your Polly
 
 3. **Get started**: You will be taken directly to the Scout Home Dashboard.
 
-![Sign in to Scout](../img/1.Login_page.png) <center>Sign in to continue</center>
+![Sign in to Scout](../img/Polly-Scout/1.Login.png) <center>Sign in to continue</center>
 
 ## 2. Submit a Query
 
