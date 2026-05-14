@@ -13,6 +13,7 @@ nav:
   - Dashboard:
       - Admin Dashboard: Getting Started/Admin Dashboard.md
       - Monitoring Dashboard: Getting Started/Monitoring_Dashboard.md
+  - Polly Scout: polly_scout.md
   - Polly Atlas:
       - About Polly Atlas: AtlasDocs/About Polly Atlas.md
       - Overview of Polly Atlas: AtlasDocs/Overview of the Polly Atlas.md
