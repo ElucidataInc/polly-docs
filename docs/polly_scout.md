@@ -9,9 +9,11 @@ To use Scout, sign in to your Polly account. Scout automatically uses your Polly
 - **Sign in to Polly**: Open the Polly platform and sign in to your account.
 
 - **Launch Scout**: Navigate to Scout from the Polly applications menu.
-![Sign in to Scout](../img/Polly-Scout/1.Login.png) <center>Sign in to continue</center>
+
+![Sign in to Scout](../img/Polly-Scout/1.Login.png) <center>Access Scout via Polly Applications</center>
+
 - **Get started**: You will be taken directly to the Scout Home Dashboard.
-![Sign in to Scout](../img/Polly-Scout/1.Landing.png) <center>Sign in to continue</center>
+![Scout Landing Page](../img/Polly-Scout/1.Landing.png) <center>Scout Landing Page</center>
 
 ## 2. Submit Your Search Criteria
 
