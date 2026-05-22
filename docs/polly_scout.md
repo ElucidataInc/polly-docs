@@ -27,7 +27,7 @@ Scout eliminates the need for complex database queries by allowing you to look f
 
 ## 3. Reviewing & Approving Search Intent
 
-Before running a search across entire databases, Scout's AI breaks down your query to show you exactly how it intends to filter the information. It automatically captures and groups all relevant biological entities for your confirmation.
+Before running a search across entire databases, Polly Scout breaks down your query to show you exactly how it intends to filter the information. It automatically captures and groups all relevant biological entities for your confirmation.
 
 ![Review Intent](./img/Polly-Scout/review_intent.png) <center>Review Intent</center>
 
@@ -69,3 +69,13 @@ To inspect any specific finding closer, simply click on its row inside the resul
 * **Metadata Summaries:** A clean overview of the study design, sample count details, publication year, and compiled supportive observations or analytical constraints.
 * **Direct External Linking:** Access deep links out to the official source records on **GEO** or **PubMed** for rapid validation and deep research.
 ![Metadata & External Linking](./img/Polly-Scout/results_viewdataset2.png) <center>Metadata & External Linking</center>
+
+## 5. Query Pipeline Stages
+
+* **New Scout Project:** The initial landing state of a freshly created project. The search interface is active, but natural language criteria and target repositories have not yet been defined or submitted.
+* **Intent Extracted:** The AI engine has successfully parsed your unstructured text prompt. The structured biological criteria and filters are fully populated and visible on the interface for user review and approval.
+* **Searching Datasets:** Your intent has been reviewed and approved. The discovery tool is actively executing the query background task: scanning, mapping, and scoring data repositories against your criteria.
+* **Final Results:** The pipeline has completed its run across all selected data sources. The final compiled list of datasets has been scored, finalized, and is ready for exploration, refining, or export.
+* **Cancelled:** The active background pipeline processing sequence was manually aborted by the user before completion.
+* **Low Relevance Studies:** The pipeline successfully completed execution, but all discovered biological entries generated an overall alignment score of less than **60%**.
+* **No Studies Found:** The search engine completely scanned your chosen data repositories but returned no matches for your criteria.
