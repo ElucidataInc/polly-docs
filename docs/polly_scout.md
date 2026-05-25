@@ -9,7 +9,6 @@ To use Scout, you must have an active session with your main Polly account. Scou
 
 - **Sign In to Polly:** Open your Polly platform interface and log into your account.
 - **Launch Scout:** Navigate to the applications menu inside Polly and select the **Scout** application card. 
-
 ![Launch Polly Scout](./img/Polly-Scout/polly_application.png) <center>Launch Polly Scout</center>
 - **Access the Dashboard:** Once selected, you will be taken directly to the Scout Home Dashboard to begin your data discovery.
 
