@@ -20,7 +20,6 @@ To use Scout, you must have an active session with your main Polly account. Scou
 Scout eliminates the need for complex database queries by allowing you to look for datasets using plain, conversational language.
 
 - **Write Your Query:** Type your search criteria naturally in the main search bar. For example: *"Human liver cancer RNA-seq studies with at least 50 samples"*.
-
 ![Extract Intent](./img/Polly-Scout/extract_intent.png) <center>Extract Intent</center>
 - **Select Data Sources:** Choose where you want to search by selecting from available data repositories like **GEO**, **ClinicalTrials**, or other integrated sources.
 - **Extract Intent:** Click the **"Extract Intent"** button. Polly Scout will immediately begin parsing your natural language query into clear, structured criteria.
