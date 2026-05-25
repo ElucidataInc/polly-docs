@@ -53,7 +53,6 @@ Manage and customize your dataset views using the control suite built directly i
 | Control Tool | Function & Description |
 | :--- | :--- |
 | **Column Picker** | Click **"Columns"** on the top right to toggle metadata fields on and off. This list is scrollable when multiple columns are available. |
-| **Sorting** | Click on any column header to instantly sort your datasets based on that specific field. |
 | **Fetch More Datasets** | Click the **"Fetch More"** button to load the next batch of scored datasets into your view. *Note: Highly relevant datasets appear on the first page, and result relevance decreases with subsequent datasets.* |
 | **CSV Export** | Click the **"CSV"** icon to instantly download your current filtered view as a standalone spreadsheet. |
 | **View Query** | Click **"View Query"** to expand a sidebar audit showing your original text prompt and the parsed intent layout. |
